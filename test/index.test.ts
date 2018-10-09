@@ -88,3 +88,16 @@ describe('reduce', () => {
     }, '')).toBe('xyz2')
   })
 })
+
+describe('isFunction', () => {
+  test('是函数', () => {
+    expect(vtils.isFunction(() => ({}))).toBeTruthy()
+    expect(vtils.isFunction(now.getDate)).toBeTruthy()
+  })
+  test('不是函数', () => {
+    expect(vtils.isFunction({})).toBeFalsy()
+    expect(vtils.isFunction(2)).toBeFalsy()
+    expect(vtils.isFunction(/.+/)).toBeFalsy()
+    expect(vtils.isFunction(null)).toBeFalsy()
+  })
+})
