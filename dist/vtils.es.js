@@ -1,5 +1,5 @@
 /*!
- * vtils v0.0.1
+ * vtils v0.1.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -46,6 +46,10 @@ var inBrowser = typeof window === 'object'
     && typeof document === 'object'
     && document.nodeType === 9;
 
+function isFunction(value) {
+    return typeof value === 'function';
+}
+
 function noop() { }
 
 function reduce(data, fn, accumulator) {
@@ -59,4 +63,4 @@ function reduce(data, fn, accumulator) {
     }
 }
 
-export { bindEvent, castArray, clamp, Disposer, inBrowser, noop, reduce };
+export { bindEvent, castArray, clamp, Disposer, inBrowser, isFunction, noop, reduce };
