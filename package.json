@@ -1,0 +1,68 @@
+{
+  "name": "vtils",
+  "version": "0.0.1",
+  "description": "一些常用的 JavaScript 工具库。",
+  "main": "dist/vtils.cjs.js",
+  "module": "dist/vtils.es.js",
+  "unpkg": "dist/vtils.min.js",
+  "jsdelivr": "dist/vtils.min.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/fjc0k/vtils",
+  "license": "MIT",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fjc0k/vtils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fjc0k/vtils/issues"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "Jay Fong",
+    "email": "fjc0kb@gmail.com",
+    "url": "https://github.com/fjc0k"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "tsc --emitDeclarationOnly & bdr build",
+    "release": "standard-version -a",
+    "postrelease": "git push --follow-tags origin master && npm publish"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "yarn build && git add -A"
+    }
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.4",
+    "@types/sinon": "^5.0.5",
+    "bdr": "^1.6.1",
+    "codecov": "^3.1.0",
+    "jest": "^23.6.0",
+    "sinon": "^6.3.5",
+    "standard-version": "^4.4.0",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.1"
+  }
+}

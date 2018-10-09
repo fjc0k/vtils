@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "tslint:latest"
+  ],
+  "rules": {
+    "quotemark": [true, "single"],
+    "semicolon": [true, "never"],
+    "object-literal-key-quotes": false,
+    "no-conditional-assignment": false,
+    "max-line-length": false,
+    "no-bitwise": false,
+    "no-console": false,
+    "object-literal-sort-keys": false,
+    "no-implicit-dependencies": false,
+    "indent": [true, "spaces", 4],
+    "eofline": true,
+    "align": false,
+    "no-trailing-whitespace": true,
+    "curly": [true, "ignore-same-line"],
+    "triple-equals": [true, "allow-null-check"],
+    "trailing-comma": [true, {
+      "multiline": "never",
+      "singleline": "never"
+    }],
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "interface-name": false,
+    "no-this-assignment": false,
+    "forin": false,
+    "prefer-template": true
+  }
+}

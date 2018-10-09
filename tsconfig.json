@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "strictNullChecks": false,
+    "target": "es5",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": true,
+    "outDir": "./dist",
+    "lib": [
+      "esnext",
+      "dom"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
