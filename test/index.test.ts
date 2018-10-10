@@ -225,3 +225,33 @@ describe('isNil', () => {
     expect(vtils.isNil(/X/)).toBeFalsy()
   })
 })
+
+describe('forOwn', () => {
+  test('普通对象', () => {
+    const arr: Array<[any, any]> = []
+    vtils.forOwn({ x: 1, y: 2, 3: 3 }, (value, key) => {
+      arr.push([key, value])
+    })
+    expect(arr).toContainEqual(['y', 2])
+    expect(arr).toContainEqual(['x', 1])
+    expect(arr).toContainEqual(['3', 3])
+  })
+  test('Object.create(null)', () => {
+    const obj: { [key: string]: number } = Object.create(null)
+    obj.x = 1
+    obj.y = 2
+    const arr: Array<[any, any]> = []
+    vtils.forOwn(obj, (value, key) => {
+      arr.push([key, value])
+    })
+    expect(arr).toContainEqual(['y', 2])
+    expect(arr).toContainEqual(['x', 1])
+  })
+  test('返回 false 退出遍历', () => {
+    const arr: Array<[any, any]> = []
+    vtils.forOwn({ x: 1, y: 2, 3: 3 }, (value, key) => {
+      return false
+    })
+    expect(arr).toEqual([])
+  })
+})
