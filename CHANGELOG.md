@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/fjc0k/vtils/compare/v0.2.2...v0.3.0) (2018-10-10)
+
+
+### Features
+
+* **tsconfig:** keep comments ([15a0638](https://github.com/fjc0k/vtils/commit/15a0638))
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/fjc0k/vtils/compare/v0.2.1...v0.2.2) (2018-10-10)
 
