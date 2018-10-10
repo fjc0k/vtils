@@ -1,5 +1,5 @@
 /*!
- * vtils v0.5.2
+ * vtils v0.6.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -164,6 +164,22 @@ var Disposer = /** @class */ (function () {
 }());
 
 /**
+ * 遍历对象的可枚举属性。若回调函数返回 false，遍历会提前退出。
+ *
+ * @param obj 要遍历的对象
+ * @param callback 回调函数
+ */
+function forOwn(obj, callback) {
+    for (var key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+            if (callback(obj[key], key, obj) === false) {
+                break;
+            }
+        }
+    }
+}
+
+/**
  * 检查 value 是否是一个函数。
  *
  * @param value 要检查的值
@@ -226,6 +242,7 @@ exports.bindEvent = bindEvent;
 exports.castArray = castArray;
 exports.clamp = clamp;
 exports.Disposer = Disposer;
+exports.forOwn = forOwn;
 exports.inBrowser = inBrowser;
 exports.isFunction = isFunction;
 exports.isNil = isNil;
