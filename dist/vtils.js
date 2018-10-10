@@ -1,5 +1,5 @@
 /*!
- * vtils v0.2.0
+ * vtils v0.2.1
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -25,9 +25,8 @@
 
     function repeat(str, n) {
         if (n === void 0) { n = 1; }
-        n = Math.round(n <= 0 ? 1 : n);
         var result = '';
-        while (n--) {
+        while (n-- > 0) {
             result += str;
         }
         return result;
