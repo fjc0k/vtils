@@ -95,19 +95,6 @@ describe('reduce', () => {
   })
 })
 
-describe('isFunction', () => {
-  test('是函数', () => {
-    expect(vtils.isFunction(() => ({}))).toBeTruthy()
-    expect(vtils.isFunction(now.getDate)).toBeTruthy()
-  })
-  test('不是函数', () => {
-    expect(vtils.isFunction({})).toBeFalsy()
-    expect(vtils.isFunction(2)).toBeFalsy()
-    expect(vtils.isFunction(/.+/)).toBeFalsy()
-    expect(vtils.isFunction(null)).toBeFalsy()
-  })
-})
-
 describe('repeat', () => {
   test('空字符串', () => {
     expect(vtils.repeat('')).toBe('')
@@ -198,5 +185,33 @@ describe('Disposer', () => {
     expect(dispose2.calledOnce).toBeTruthy()
     expect(dispose3.calledOnce).toBeTruthy()
     expect((disposer as any).jar).toEqual({})
+  })
+})
+
+describe('isFunction', () => {
+  test('是', () => {
+    expect(vtils.isFunction(() => ({}))).toBeTruthy()
+    expect(vtils.isFunction(now.getDate)).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isFunction({})).toBeFalsy()
+    expect(vtils.isFunction(2)).toBeFalsy()
+    expect(vtils.isFunction(/.+/)).toBeFalsy()
+    expect(vtils.isFunction(null)).toBeFalsy()
+  })
+})
+
+describe('isNil', () => {
+  test('是', () => {
+    expect(vtils.isNil(null)).toBeTruthy()
+    expect(vtils.isNil(undefined)).toBeTruthy()
+    expect(vtils.isNil(void 0)).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isNil('')).toBeFalsy()
+    expect(vtils.isNil(0)).toBeFalsy()
+    expect(vtils.isNil(false)).toBeFalsy()
+    expect(vtils.isNil({})).toBeFalsy()
+    expect(vtils.isNil(/X/)).toBeFalsy()
   })
 })
