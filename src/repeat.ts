@@ -6,9 +6,8 @@
  * @returns 结果字符串
  */
 export default function repeat(str: string | number, n: number = 1) {
-  n = Math.round(n <= 0 ? 1 : n)
   let result = ''
-  while (n--) {
+  while (n-- > 0) {
     result += str
   }
   return result
