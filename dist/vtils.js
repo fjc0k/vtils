@@ -1,5 +1,5 @@
 /*!
- * vtils v0.2.1
+ * vtils v0.2.2
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
