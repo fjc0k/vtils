@@ -8,6 +8,7 @@ export { default as clamp } from './clamp';
 export { default as Disposer } from './Disposer';
 export { default as inBrowser } from './inBrowser';
 export { default as isFunction } from './isFunction';
+export { default as isNil } from './isNil';
 export { default as noop } from './noop';
 export { default as reduce } from './reduce';
 export { default as repeat } from './repeat';

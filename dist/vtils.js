@@ -1,5 +1,5 @@
 /*!
- * vtils v0.3.1
+ * vtils v0.4.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -183,6 +183,16 @@
     }
 
     /**
+     * 检查 value 是否是 null 或 undefined。
+     *
+     * @param value 要检查的值
+     * @returns 是（true）或否（false）
+     */
+    function isNil(value) {
+        return value == null;
+    }
+
+    /**
      * 无操作函数。
      */
     function noop() { } // tslint:disable-line
@@ -208,6 +218,7 @@
     exports.Disposer = Disposer;
     exports.inBrowser = inBrowser;
     exports.isFunction = isFunction;
+    exports.isNil = isNil;
     exports.noop = noop;
     exports.reduce = reduce;
     exports.repeat = repeat;
