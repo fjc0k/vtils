@@ -1,5 +1,4 @@
-import { SinonApi } from 'sinon'
-const sinon: SinonApi = require('sinon') // tslint:disable-line
+import sinon from 'sinon'
 import * as vtils from '../src'
 
 const now = new Date()
