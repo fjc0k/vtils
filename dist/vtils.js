@@ -1,5 +1,5 @@
 /*!
- * vtils v0.4.0
+ * vtils v0.5.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -166,13 +166,6 @@
     }());
 
     /**
-     * 是否在浏览器环境中。
-     */
-    var inBrowser = typeof window === 'object'
-        && typeof document === 'object'
-        && document.nodeType === 9;
-
-    /**
      * 检查 value 是否是一个函数。
      *
      * @param value 要检查的值
@@ -180,6 +173,25 @@
      */
     function isFunction(value) {
         return typeof value === 'function';
+    }
+
+    var isInBrowser;
+    /**
+     * 检查是否在浏览器环境中。
+     *
+     * @param [callback] 在浏览器环境中执行的回调
+     * @returns 是（true）或否（false）
+     */
+    function inBrowser(callback) {
+        if (isInBrowser === undefined) {
+            isInBrowser = typeof window === 'object'
+                && typeof document === 'object'
+                && document.nodeType === 9;
+        }
+        if (isFunction(callback) && isInBrowser) {
+            callback();
+        }
+        return isInBrowser;
     }
 
     /**
