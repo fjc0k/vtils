@@ -4,6 +4,12 @@ import * as vtils from '../src'
 
 const now = new Date()
 
+describe('noop', () => {
+  test('noop', () => {
+    expect(vtils.noop()).toBeUndefined()
+  })
+})
+
 describe('bindEvent', () => {
   test(`'click'`, () => {
     const div = document.createElement('div')
@@ -159,5 +165,38 @@ describe('base64', () => {
     data.forEach(([str, encodedStr, encodedUrlStr]) => {
       expect(vtils.base64UrlDecode(encodedUrlStr)).toBe(String(str))
     })
+  })
+})
+
+describe('Disposer', () => {
+  const disposer = new vtils.Disposer()
+  const helloDispose1 = sinon.fake()
+  const helloDispose2 = sinon.fake()
+  const helloDispose3 = sinon.fake()
+  test('add', () => {
+    disposer.add('hello', helloDispose1)
+    expect((disposer as any).jar.hello).toEqual([helloDispose1])
+    disposer.add('hello', [helloDispose2, helloDispose3])
+    expect((disposer as any).jar.hello).toEqual([helloDispose1, helloDispose2, helloDispose3])
+  })
+  test('dispose', () => {
+    disposer.dispose('hello')
+    expect(helloDispose1.calledOnce).toBeTruthy()
+    expect(helloDispose2.calledOnce).toBeTruthy()
+    expect(helloDispose3.calledOnce).toBeTruthy()
+    expect((disposer as any).jar.hello).toBeUndefined()
+  })
+  test('disposeAll', () => {
+    const dispose1 = sinon.fake()
+    const dispose2 = sinon.fake()
+    const dispose3 = sinon.fake()
+    disposer.add('1', dispose1)
+    disposer.add('2', dispose2)
+    disposer.add('3', dispose3)
+    disposer.disposeAll()
+    expect(dispose1.calledOnce).toBeTruthy()
+    expect(dispose2.calledOnce).toBeTruthy()
+    expect(dispose3.calledOnce).toBeTruthy()
+    expect((disposer as any).jar).toEqual({})
   })
 })
