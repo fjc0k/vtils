@@ -188,6 +188,17 @@ describe('Disposer', () => {
   })
 })
 
+describe('inBrowser', () => {
+  test('无回调', () => {
+    expect(vtils.inBrowser()).toBeTruthy()
+  })
+  test('有回调', () => {
+    const callback = sinon.fake()
+    expect(vtils.inBrowser(callback)).toBeTruthy()
+    expect(callback.calledOnce).toBeTruthy()
+  })
+})
+
 describe('isFunction', () => {
   test('是', () => {
     expect(vtils.isFunction(() => ({}))).toBeTruthy()
