@@ -1,5 +1,5 @@
 /*!
- * vtils v0.5.0
+ * vtils v0.5.1
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -188,7 +188,7 @@
                 && typeof document === 'object'
                 && document.nodeType === 9;
         }
-        if (isFunction(callback) && isInBrowser) {
+        if (isInBrowser && isFunction(callback)) {
             callback();
         }
         return isInBrowser;
