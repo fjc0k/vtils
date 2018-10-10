@@ -4,8 +4,5 @@ module.exports = {
   },
   format: 'es,cjs,umd,umd-min',
   typescript: require('typescript'),
-  external: {
-    vue: 'Vue'
-  },
   clear: false
 }
