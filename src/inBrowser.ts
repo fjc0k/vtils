@@ -14,7 +14,7 @@ export default function inBrowser(callback?: () => void): boolean {
       && typeof document === 'object'
       && document.nodeType === 9
   }
-  if (isFunction(callback) && isInBrowser) {
+  if (isInBrowser && isFunction(callback)) {
     callback()
   }
   return isInBrowser
