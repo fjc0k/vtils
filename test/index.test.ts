@@ -101,3 +101,63 @@ describe('isFunction', () => {
     expect(vtils.isFunction(null)).toBeFalsy()
   })
 })
+
+describe('repeat', () => {
+  test('空字符串', () => {
+    expect(vtils.repeat('')).toBe('')
+    expect(vtils.repeat('', 20)).toBe('')
+  })
+  test('字符串', () => {
+    expect(vtils.repeat('我们')).toBe('我们')
+    expect(vtils.repeat('我们', 2)).toBe('我们我们')
+  })
+  test('数字', () => {
+    expect(vtils.repeat(1)).toBe('1')
+    expect(vtils.repeat(1, 2)).toBe('11')
+  })
+  test('负数、0、1', () => {
+    expect(vtils.repeat(1, -1)).toBe('1')
+    expect(vtils.repeat('我们', -2)).toBe('我们')
+    expect(vtils.repeat(1, 0)).toBe('1')
+    expect(vtils.repeat('我们', 0)).toBe('我们')
+    expect(vtils.repeat(1, 1)).toBe('1')
+    expect(vtils.repeat('我们', 1)).toBe('我们')
+  })
+})
+
+describe('base64', () => {
+  const data: Array<[string | number, string, string]> = [
+    ['', '', ''],
+    ['v', 'dg==', 'dg'],
+    ['vtils', 'dnRpbHM=', 'dnRpbHM'],
+    ['vtils.base64Encode', 'dnRpbHMuYmFzZTY0RW5jb2Rl', 'dnRpbHMuYmFzZTY0RW5jb2Rl'],
+    ['JavaScript 工具库', 'SmF2YVNjcmlwdCDlt6XlhbflupM=', 'SmF2YVNjcmlwdCDlt6XlhbflupM'],
+    ['JavaScript\n工具库', 'SmF2YVNjcmlwdArlt6XlhbflupM=', 'SmF2YVNjcmlwdArlt6XlhbflupM'],
+    ['\0', 'AA==', 'AA'],
+    [1, 'MQ==', 'MQ'],
+    [-1, 'LTE=', 'LTE'],
+    ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#0^&*();:<>,. []{}', 'YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWjAxMjM0NTY3ODkhQCMwXiYqKCk7Ojw+LC4gW117fQ==', 'YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWjAxMjM0NTY3ODkhQCMwXiYqKCk7Ojw-LC4gW117fQ'],
+    ['😁😎=-#@`.,?/|{*+😁', '8J+YgfCfmI49LSNAYC4sPy98eyor8J+YgQ==', '8J-YgfCfmI49LSNAYC4sPy98eyor8J-YgQ'],
+    ['❥(ゝω・✿ฺ)※▓●²♠⑲Ⅲ∵molÇùㄡεətsフぽㅚ㉢д╢┉(๑╹◡╹)ﾉ"""', '4p2lKOOCnc+J44O74py/4Li6KeKAu+KWk+KXj8Ky4pmg4pGy4oWi4oi1bW9sw4fDueOEoc61yZl0c+ODleOBveOFmuOJotC04pWi4pSJKOC5keKVueKXoeKVuSnvvokiIiI=', '4p2lKOOCnc-J44O74py_4Li6KeKAu-KWk-KXj8Ky4pmg4pGy4oWi4oi1bW9sw4fDueOEoc61yZl0c-ODleOBveOFmuOJotC04pWi4pSJKOC5keKVueKXoeKVuSnvvokiIiI']
+  ]
+  test('encode', () => {
+    data.forEach(([str, encodedStr]) => {
+      expect(vtils.base64Encode(str)).toBe(encodedStr)
+    })
+  })
+  test('decode', () => {
+    data.forEach(([str, encodedStr]) => {
+      expect(vtils.base64Decode(encodedStr)).toBe(String(str))
+    })
+  })
+  test('url encode', () => {
+    data.forEach(([str, encodedStr, encodedUrlStr]) => {
+      expect(vtils.base64UrlEncode(str)).toBe(encodedUrlStr)
+    })
+  })
+  test('url decode', () => {
+    data.forEach(([str, encodedStr, encodedUrlStr]) => {
+      expect(vtils.base64UrlDecode(encodedUrlStr)).toBe(String(str))
+    })
+  })
+})
