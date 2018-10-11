@@ -1,5 +1,5 @@
 /*!
- * vtils v0.7.0
+ * vtils v0.8.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -293,6 +293,24 @@
     }
 
     /**
+     * 检查 value 是否是一个普通对象。
+     *
+     * @param value 要检查的值
+     * @returns 是（true）或否（false）
+     */
+    function isPlainObject(value) {
+        if (!value || typeof value !== 'object') {
+            return false;
+        }
+        var proto = Object.getPrototypeOf(value);
+        if (proto === null) {
+            return true;
+        }
+        var Ctor = proto.constructor;
+        return typeof Ctor === 'function' && Ctor instanceof Ctor;
+    }
+
+    /**
      * 检查 value 是否是一个正则表达式。
      *
      * @param value 要检查的值
@@ -357,6 +375,7 @@
     exports.isNull = isNull;
     exports.isNumber = isNumber;
     exports.isObject = isObject;
+    exports.isPlainObject = isPlainObject;
     exports.isRegExp = isRegExp;
     exports.isString = isString;
     exports.isUndefined = isUndefined;
