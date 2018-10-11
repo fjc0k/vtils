@@ -240,6 +240,47 @@ describe('isNumber', () => {
   })
 })
 
+describe('isFinite', () => {
+  test('是', () => {
+    expect(vtils.isFinite(0)).toBeTruthy()
+    expect(vtils.isFinite(-99999999)).toBeTruthy()
+    expect(vtils.isFinite(6666666666)).toBeTruthy()
+    expect(vtils.isFinite(Number.MIN_VALUE)).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isFinite(Infinity)).toBeFalsy()
+    expect(vtils.isFinite(Number.NEGATIVE_INFINITY)).toBeFalsy()
+    expect(vtils.isFinite(NaN)).toBeFalsy()
+  })
+})
+
+describe('isInteger', () => {
+  test('是', () => {
+    expect(vtils.isInteger(0)).toBeTruthy()
+    expect(vtils.isInteger(-99999999)).toBeTruthy()
+    expect(vtils.isInteger(6666666666)).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isInteger(1.2)).toBeFalsy()
+    expect(vtils.isInteger(Infinity)).toBeFalsy()
+    expect(vtils.isInteger(Number.NEGATIVE_INFINITY)).toBeFalsy()
+    expect(vtils.isInteger(NaN)).toBeFalsy()
+  })
+})
+
+describe('isNaN', () => {
+  test('是', () => {
+    expect(vtils.isNaN(NaN)).toBeTruthy()
+    expect(vtils.isNaN(1 / ('x' as any))).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isNaN(0)).toBeFalsy()
+    expect(vtils.isNaN(1.2)).toBeFalsy()
+    expect(vtils.isNaN(Infinity)).toBeFalsy()
+    expect(vtils.isNaN(Number.NEGATIVE_INFINITY)).toBeFalsy()
+  })
+})
+
 describe('isBoolean', () => {
   test('是', () => {
     expect(vtils.isBoolean(true)).toBeTruthy()
