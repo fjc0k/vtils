@@ -198,6 +198,74 @@ describe('inBrowser', () => {
   })
 })
 
+describe('getType', () => {
+  test('正确返回类型', () => {
+    expect(vtils.getType('')).toBe('String')
+    expect(vtils.getType(1)).toBe('Number')
+    expect(vtils.getType({})).toBe('Object')
+    expect(vtils.getType(Object.create(null))).toBe('Object')
+    expect(vtils.getType(new Date())).toBe('Date')
+    expect(vtils.getType(/X/)).toBe('RegExp')
+    expect(vtils.getType(false)).toBe('Boolean')
+    expect(vtils.getType(null)).toBe('Null')
+    expect(vtils.getType(undefined)).toBe('Undefined')
+  })
+})
+
+describe('isString', () => {
+  test('是', () => {
+    expect(vtils.isString('')).toBeTruthy()
+    expect(vtils.isString('hello')).toBeTruthy()
+    expect(vtils.isString(String(1))).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isString({})).toBeFalsy()
+    expect(vtils.isString(2)).toBeFalsy()
+    expect(vtils.isString(/.+/)).toBeFalsy()
+    expect(vtils.isString(null)).toBeFalsy()
+  })
+})
+
+describe('isNumber', () => {
+  test('是', () => {
+    expect(vtils.isNumber(0)).toBeTruthy()
+    expect(vtils.isNumber(Infinity)).toBeTruthy()
+    expect(vtils.isNumber(NaN)).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isNumber('3')).toBeFalsy()
+    expect(vtils.isNumber({})).toBeFalsy()
+    expect(vtils.isNumber(/.+/)).toBeFalsy()
+    expect(vtils.isNumber(null)).toBeFalsy()
+  })
+})
+
+describe('isBoolean', () => {
+  test('是', () => {
+    expect(vtils.isBoolean(true)).toBeTruthy()
+    expect(vtils.isBoolean(false)).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isBoolean('3')).toBeFalsy()
+    expect(vtils.isBoolean({})).toBeFalsy()
+    expect(vtils.isBoolean(/.+/)).toBeFalsy()
+    expect(vtils.isBoolean(null)).toBeFalsy()
+  })
+})
+
+describe('isArray', () => {
+  test('是', () => {
+    expect(vtils.isArray([])).toBeTruthy()
+    expect(vtils.isArray(Array(1))).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isArray({})).toBeFalsy()
+    expect(vtils.isArray(2)).toBeFalsy()
+    expect(vtils.isArray(/.+/)).toBeFalsy()
+    expect(vtils.isArray(null)).toBeFalsy()
+  })
+})
+
 describe('isFunction', () => {
   test('是', () => {
     expect(vtils.isFunction(() => ({}))).toBeTruthy()
@@ -208,6 +276,75 @@ describe('isFunction', () => {
     expect(vtils.isFunction(2)).toBeFalsy()
     expect(vtils.isFunction(/.+/)).toBeFalsy()
     expect(vtils.isFunction(null)).toBeFalsy()
+  })
+})
+
+describe('isObject', () => {
+  test('是', () => {
+    expect(vtils.isObject({})).toBeTruthy()
+    expect(vtils.isObject(() => ({}))).toBeTruthy()
+    expect(vtils.isObject(Date)).toBeTruthy()
+    expect(vtils.isObject(/X/)).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isObject('str')).toBeFalsy()
+    expect(vtils.isObject(2)).toBeFalsy()
+    expect(vtils.isObject(null)).toBeFalsy()
+  })
+})
+
+describe('isDate', () => {
+  test('是', () => {
+    expect(vtils.isDate(now)).toBeTruthy()
+    expect(vtils.isDate(new Date())).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isDate('str')).toBeFalsy()
+    expect(vtils.isDate(2)).toBeFalsy()
+    expect(vtils.isDate(null)).toBeFalsy()
+    expect(vtils.isDate({})).toBeFalsy()
+  })
+})
+
+describe('isRegExp', () => {
+  test('是', () => {
+    expect(vtils.isRegExp(/x/)).toBeTruthy()
+    expect(vtils.isRegExp(new RegExp('xxx'))).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isRegExp('str')).toBeFalsy()
+    expect(vtils.isRegExp(2)).toBeFalsy()
+    expect(vtils.isRegExp(null)).toBeFalsy()
+    expect(vtils.isRegExp({})).toBeFalsy()
+  })
+})
+
+describe('isNull', () => {
+  test('是', () => {
+    expect(vtils.isNull(null)).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isNull(undefined)).toBeFalsy()
+    expect(vtils.isNull('')).toBeFalsy()
+    expect(vtils.isNull(0)).toBeFalsy()
+    expect(vtils.isNull(false)).toBeFalsy()
+    expect(vtils.isNull({})).toBeFalsy()
+    expect(vtils.isNull(/X/)).toBeFalsy()
+  })
+})
+
+describe('isUndefined', () => {
+  test('是', () => {
+    expect(vtils.isUndefined(undefined)).toBeTruthy()
+    expect(vtils.isUndefined(void 0)).toBeTruthy()
+  })
+  test('不是', () => {
+    expect(vtils.isUndefined('')).toBeFalsy()
+    expect(vtils.isUndefined(0)).toBeFalsy()
+    expect(vtils.isUndefined(false)).toBeFalsy()
+    expect(vtils.isUndefined({})).toBeFalsy()
+    expect(vtils.isUndefined(/X/)).toBeFalsy()
+    expect(vtils.isUndefined(null)).toBeFalsy()
   })
 })
 
