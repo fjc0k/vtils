@@ -293,6 +293,24 @@ describe('isObject', () => {
   })
 })
 
+describe('isPlainObject', () => {
+  test('是', () => {
+    expect(vtils.isPlainObject({})).toBeTruthy()
+    expect(vtils.isPlainObject({ x: 1 })).toBeTruthy()
+    expect(vtils.isPlainObject(Object.create(null))).toBeTruthy()
+    expect(vtils.isPlainObject(Object({ x: 1 }))).toBeTruthy()
+  })
+  test('不是', () => {
+    const MyCls = class Cls {}
+    expect(vtils.isPlainObject('str')).toBeFalsy()
+    expect(vtils.isPlainObject(2)).toBeFalsy()
+    expect(vtils.isPlainObject(null)).toBeFalsy()
+    expect(vtils.isPlainObject(Date)).toBeFalsy()
+    expect(vtils.isPlainObject(() => ({}))).toBeFalsy()
+    expect(vtils.isPlainObject(MyCls)).toBeFalsy()
+  })
+})
+
 describe('isDate', () => {
   test('是', () => {
     expect(vtils.isDate(now)).toBeTruthy()
