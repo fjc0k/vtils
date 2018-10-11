@@ -1,5 +1,5 @@
 /*!
- * vtils v0.10.0
+ * vtils v0.10.1
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -187,7 +187,7 @@ function forOwn(obj, callback) {
  * @returns 检测值的类型
  */
 function getType(value) {
-    return Object.prototype.toString.call(value).split(' ')[1].replace(']', '');
+    return Object.prototype.toString.call(value).slice(8, -1);
 }
 
 /**
