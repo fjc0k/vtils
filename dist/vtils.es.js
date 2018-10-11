@@ -1,5 +1,5 @@
 /*!
- * vtils v0.9.1
+ * vtils v0.10.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -246,6 +246,36 @@ function isDate(value) {
 }
 
 /**
+ * 检查 value 是否是原始有限数值。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isFinite(value) {
+    return Number.isFinite(value);
+}
+
+/**
+ * 检查 value 是否是一个整数。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isInteger(value) {
+    return Number.isInteger(value);
+}
+
+/**
+ * 检查 value 是否是 NaN。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isNaN(value) {
+    return value !== value;
+}
+
+/**
  * 检查 value 是否是 null 或 undefined。
  *
  * @param value 要检查的值
@@ -380,4 +410,4 @@ function supportPassiveEventListener() {
     return isSupportPassiveEventListener;
 }
 
-export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, Disposer, forOwn, getType, inBrowser, isArray, isBoolean, isDate, isFunction, isNil, isNull, isNumber, isObject, isPlainObject, isRegExp, isString, isUndefined, noop, reduce, repeat, supportPassiveEventListener };
+export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, Disposer, forOwn, getType, inBrowser, isArray, isBoolean, isDate, isFinite, isFunction, isInteger, isNaN, isNil, isNull, isNumber, isObject, isPlainObject, isRegExp, isString, isUndefined, noop, reduce, repeat, supportPassiveEventListener };
