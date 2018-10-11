@@ -1,5 +1,5 @@
 /*!
- * vtils v0.6.0
+ * vtils v0.7.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -176,6 +176,17 @@ function forOwn(obj, callback) {
 }
 
 /**
+ * 检测 value 值的类型。
+ *
+ * @export
+ * @param value 要检测的值
+ * @returns 检测值的类型
+ */
+function getType(value) {
+    return Object.prototype.toString.call(value).split(' ')[1].replace(']', '');
+}
+
+/**
  * 检查 value 是否是一个函数。
  *
  * @param value 要检查的值
@@ -205,6 +216,36 @@ function inBrowser(callback) {
 }
 
 /**
+ * 检查 value 是否是一个数组。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isArray(value) {
+    return Array.isArray(value);
+}
+
+/**
+ * 检查 value 是否是一个布尔值。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isBoolean(value) {
+    return typeof value === 'boolean';
+}
+
+/**
+ * 检查 value 是否是一个日期。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isDate(value) {
+    return getType(value) === 'Date';
+}
+
+/**
  * 检查 value 是否是 null 或 undefined。
  *
  * @param value 要检查的值
@@ -212,6 +253,67 @@ function inBrowser(callback) {
  */
 function isNil(value) {
     return value == null;
+}
+
+/**
+ * 检查 value 是否等于 null。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isNull(value) {
+    return value === null;
+}
+
+/**
+ * 检查 value 是否是一个数值。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isNumber(value) {
+    return typeof value === 'number';
+}
+
+/**
+ * 检查 value 是否是一个对象。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isObject(value) {
+    var type = typeof value;
+    return value != null && (type === 'object' || type === 'function');
+}
+
+/**
+ * 检查 value 是否是一个正则表达式。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isRegExp(value) {
+    return getType(value) === 'RegExp';
+}
+
+/**
+ * 检查 value 是否是一个字符串。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isString(value) {
+    return typeof value === 'string';
+}
+
+/**
+ * 检查 value 是否等于 undefined。
+ *
+ * @param value 要检查的值
+ * @returns 是（true）或否（false）
+ */
+function isUndefined(value) {
+    return value === void 0;
 }
 
 /**
@@ -230,4 +332,4 @@ function reduce(data, fn, accumulator) {
     }
 }
 
-export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, Disposer, forOwn, inBrowser, isFunction, isNil, noop, reduce, repeat };
+export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, Disposer, forOwn, getType, inBrowser, isArray, isBoolean, isDate, isFunction, isNil, isNull, isNumber, isObject, isRegExp, isString, isUndefined, noop, reduce, repeat };
