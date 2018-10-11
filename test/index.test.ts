@@ -410,3 +410,9 @@ describe('forOwn', () => {
     expect(arr).toEqual([])
   })
 })
+
+describe('supportPassiveEventListener', () => {
+  test('不支持', () => {
+    expect(vtils.supportPassiveEventListener()).toBeFalsy()
+  })
+})
