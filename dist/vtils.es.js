@@ -1,5 +1,5 @@
 /*!
- * vtils v0.8.0
+ * vtils v0.9.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -337,7 +337,7 @@ function isUndefined(value) {
 /**
  * 无操作函数。
  */
-function noop() { } // tslint:disable-line
+function noop() { }
 
 function reduce(data, fn, accumulator) {
     if (Array.isArray(data)) {
@@ -350,4 +350,26 @@ function reduce(data, fn, accumulator) {
     }
 }
 
-export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, Disposer, forOwn, getType, inBrowser, isArray, isBoolean, isDate, isFunction, isNil, isNull, isNumber, isObject, isPlainObject, isRegExp, isString, isUndefined, noop, reduce, repeat };
+var isSupportPassiveEventListener;
+/**
+ * 检测是否支持 passive 模式的事件监听。
+ *
+ * @returns 是（true）或否（false）
+ */
+function supportPassiveEventListener() {
+    if (isSupportPassiveEventListener === undefined) {
+        isSupportPassiveEventListener = false;
+        try {
+            var options = Object.defineProperty({}, 'passive', {
+                get: function () {
+                    isSupportPassiveEventListener = true;
+                }
+            });
+            window.addEventListener('test', null, options);
+        }
+        catch (err) { }
+    }
+    return isSupportPassiveEventListener;
+}
+
+export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, Disposer, forOwn, getType, inBrowser, isArray, isBoolean, isDate, isFunction, isNil, isNull, isNumber, isObject, isPlainObject, isRegExp, isString, isUndefined, noop, reduce, repeat, supportPassiveEventListener };
