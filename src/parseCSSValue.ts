@@ -1,3 +1,8 @@
+export interface CSSValue {
+  value: number,
+  unit: string
+}
+
 /**
  * 解析 CSS 值的数值和单位。
  *
@@ -8,7 +13,7 @@
 export default function parseCSSValue(
   value: string | number,
   defaultUnit: string = 'px'
-): { value: number, unit: string } {
+): CSSValue {
   if (typeof value === 'number') {
     return {
       value,
