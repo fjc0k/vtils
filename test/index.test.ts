@@ -458,53 +458,53 @@ describe('supportPassiveEventListener', () => {
   })
 })
 
-describe('parseCSSValue', () => {
+describe('parseCssValue', () => {
   test('数字', () => {
-    expect(vtils.parseCSSValue(12)).toEqual({
+    expect(vtils.parseCssValue(12)).toEqual({
       value: 12,
       unit: 'px'
     })
-    expect(vtils.parseCSSValue(-4)).toEqual({
+    expect(vtils.parseCssValue(-4)).toEqual({
       value: -4,
       unit: 'px'
     })
-    expect(vtils.parseCSSValue('12')).toEqual({
+    expect(vtils.parseCssValue('12')).toEqual({
       value: 12,
       unit: 'px'
     })
-    expect(vtils.parseCSSValue('-4')).toEqual({
+    expect(vtils.parseCssValue('-4')).toEqual({
       value: -4,
       unit: 'px'
     })
   })
   test('CSS 值', () => {
-    expect(vtils.parseCSSValue('12px')).toEqual({
+    expect(vtils.parseCssValue('12px')).toEqual({
       value: 12,
       unit: 'px'
     })
-    expect(vtils.parseCSSValue('-4px')).toEqual({
+    expect(vtils.parseCssValue('-4px')).toEqual({
       value: -4,
       unit: 'px'
     })
-    expect(vtils.parseCSSValue('10%')).toEqual({
+    expect(vtils.parseCssValue('10%')).toEqual({
       value: 10,
       unit: '%'
     })
-    expect(vtils.parseCSSValue('2.5em')).toEqual({
+    expect(vtils.parseCssValue('2.5em')).toEqual({
       value: 2.5,
       unit: 'em'
     })
-    expect(vtils.parseCSSValue('.399999rem')).toEqual({
+    expect(vtils.parseCssValue('.399999rem')).toEqual({
       value: .399999,
       unit: 'rem'
     })
   })
   test('默认单位', () => {
-    expect(vtils.parseCSSValue(12, 'em')).toEqual({
+    expect(vtils.parseCssValue(12, 'em')).toEqual({
       value: 12,
       unit: 'em'
     })
-    expect(vtils.parseCSSValue('12', 'em')).toEqual({
+    expect(vtils.parseCssValue('12', 'em')).toEqual({
       value: 12,
       unit: 'em'
     })
@@ -524,5 +524,19 @@ describe('isEqualArray', () => {
   test('数组 != 其他', () => {
     expect(vtils.isEqualArray([], false as any)).toBeFalsy()
     expect(vtils.isEqualArray(['1', '2', '3'], '123' as any)).toBeFalsy()
+  })
+})
+
+describe('cssTransform', () => {
+  const el = document.createElement('div')
+  document.body.appendChild(el)
+  test('cssTransform', () => {
+    vtils.cssTransform(el, 'translateX(100px)', '.3s ease')
+    expect(el.style.transform).toBe('translateX(100px)')
+    expect(el.style.transition).toBe('transform .3s ease')
+  })
+  test('cssTransform.stop', () => {
+    vtils.cssTransform.stop(el)
+    expect(el.style.transition).toBe('none')
   })
 })
