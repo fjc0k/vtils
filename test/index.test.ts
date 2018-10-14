@@ -457,3 +457,56 @@ describe('supportPassiveEventListener', () => {
     expect(vtils.supportPassiveEventListener()).toBeFalsy()
   })
 })
+
+describe('parseCSSValue', () => {
+  test('数字', () => {
+    expect(vtils.parseCSSValue(12)).toEqual({
+      value: 12,
+      unit: 'px'
+    })
+    expect(vtils.parseCSSValue(-4)).toEqual({
+      value: -4,
+      unit: 'px'
+    })
+    expect(vtils.parseCSSValue('12')).toEqual({
+      value: 12,
+      unit: 'px'
+    })
+    expect(vtils.parseCSSValue('-4')).toEqual({
+      value: -4,
+      unit: 'px'
+    })
+  })
+  test('CSS 值', () => {
+    expect(vtils.parseCSSValue('12px')).toEqual({
+      value: 12,
+      unit: 'px'
+    })
+    expect(vtils.parseCSSValue('-4px')).toEqual({
+      value: -4,
+      unit: 'px'
+    })
+    expect(vtils.parseCSSValue('10%')).toEqual({
+      value: 10,
+      unit: '%'
+    })
+    expect(vtils.parseCSSValue('2.5em')).toEqual({
+      value: 2.5,
+      unit: 'em'
+    })
+    expect(vtils.parseCSSValue('.399999rem')).toEqual({
+      value: .399999,
+      unit: 'rem'
+    })
+  })
+  test('默认单位', () => {
+    expect(vtils.parseCSSValue(12, 'em')).toEqual({
+      value: 12,
+      unit: 'em'
+    })
+    expect(vtils.parseCSSValue('12', 'em')).toEqual({
+      value: 12,
+      unit: 'em'
+    })
+  })
+})
