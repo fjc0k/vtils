@@ -6,11 +6,13 @@ let isSupportPassiveEventListener: boolean | undefined
  * @returns 是（true）或否（false）
  */
 export default function supportPassiveEventListener(): boolean {
+  /* istanbul ignore else */
   if (isSupportPassiveEventListener === undefined) {
     isSupportPassiveEventListener = false
     try {
       const options = Object.defineProperty({}, 'passive', {
         get() {
+          /* istanbul ignore next */
           isSupportPassiveEventListener = true
         }
       })

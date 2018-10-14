@@ -33,7 +33,7 @@ export default class Disposer {
    * @param name 欲处置项目名称
    */
   public dispose(name: DisposerItemName): void {
-    (this.jar[name] || []).forEach(dispose => dispose())
+    (this.jar[name] || /* istanbul ignore next */ []).forEach(dispose => dispose())
     delete this.jar[name]
   }
 
