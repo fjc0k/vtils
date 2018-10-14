@@ -2,11 +2,11 @@
   "name": "vtils",
   "version": "0.13.2",
   "description": "一些常用的 JavaScript 工具库。",
-  "main": "dist/vtils.cjs.js",
-  "module": "dist/vtils.es.js",
-  "unpkg": "dist/vtils.min.js",
-  "jsdelivr": "dist/vtils.min.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/vtils.cjs.js",
+  "module": "lib/vtils.es.js",
+  "unpkg": "lib/vtils.min.js",
+  "jsdelivr": "lib/vtils.min.js",
+  "types": "lib/index.d.ts",
   "homepage": "https://github.com/fjc0k/vtils",
   "license": "MIT",
   "sideEffects": false,
@@ -21,7 +21,7 @@
     "utils"
   ],
   "files": [
-    "dist"
+    "lib"
   ],
   "author": {
     "name": "Jay Fong",
