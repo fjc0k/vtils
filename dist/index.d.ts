@@ -25,6 +25,7 @@ export { default as isRegExp } from './isRegExp';
 export { default as isString } from './isString';
 export { default as isUndefined } from './isUndefined';
 export { default as noop } from './noop';
+export { default as parseCSSValue } from './parseCSSValue';
 export { default as reduce } from './reduce';
 export { default as repeat } from './repeat';
 export { default as supportPassiveEventListener } from './supportPassiveEventListener';

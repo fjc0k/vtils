@@ -1,5 +1,5 @@
 /*!
- * vtils v0.10.1
+ * vtils v0.11.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -149,7 +149,7 @@ var Disposer = /** @class */ (function () {
      * @param name 欲处置项目名称
      */
     Disposer.prototype.dispose = function (name) {
-        (this.jar[name] || []).forEach(function (dispose) { return dispose(); });
+        (this.jar[name] || /* istanbul ignore next */ []).forEach(function (dispose) { return dispose(); });
         delete this.jar[name];
     };
     /**
@@ -171,6 +171,7 @@ var Disposer = /** @class */ (function () {
  */
 function forOwn(obj, callback) {
     for (var key in obj) {
+        /* istanbul ignore else */
         if (Object.prototype.hasOwnProperty.call(obj, key)) {
             if (callback(obj[key], key, obj) === false) {
                 break;
@@ -374,6 +375,33 @@ function isUndefined(value) {
 function noop() { }
 
 /**
+ * 解析 CSS 值的数值和单位。
+ *
+ * @param value 要解析的值
+ * @param [defaultUnit='px'] 默认单位
+ * @returns 解析结果
+ */
+function parseCSSValue(value, defaultUnit) {
+    if (defaultUnit === void 0) { defaultUnit = 'px'; }
+    if (typeof value === 'number') {
+        return {
+            value: value,
+            unit: defaultUnit
+        };
+    }
+    var matches = value.trim().match(/^(-?[\d+.-]+)([a-z]+|%)$/i);
+    return matches !== null
+        ? {
+            value: Number(matches[1]),
+            unit: matches[2]
+        }
+        : {
+            value: Number(value),
+            unit: defaultUnit
+        };
+}
+
+/**
  * 将一个数组或一个对象归纳为一个值。
  *
  * @param data 待归纳的数组或对象
@@ -399,11 +427,13 @@ var isSupportPassiveEventListener;
  * @returns 是（true）或否（false）
  */
 function supportPassiveEventListener() {
+    /* istanbul ignore else */
     if (isSupportPassiveEventListener === undefined) {
         isSupportPassiveEventListener = false;
         try {
             var options = Object.defineProperty({}, 'passive', {
                 get: function () {
+                    /* istanbul ignore next */
                     isSupportPassiveEventListener = true;
                 }
             });
@@ -441,6 +471,7 @@ exports.isRegExp = isRegExp;
 exports.isString = isString;
 exports.isUndefined = isUndefined;
 exports.noop = noop;
+exports.parseCSSValue = parseCSSValue;
 exports.reduce = reduce;
 exports.repeat = repeat;
 exports.supportPassiveEventListener = supportPassiveEventListener;
