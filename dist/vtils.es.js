@@ -1,5 +1,5 @@
 /*!
- * vtils v0.11.1
+ * vtils v0.12.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -247,6 +247,28 @@ function isDate(value) {
 }
 
 /**
+ * 检查给定的数组是否相等。
+ *
+ * @param arr1 数组1
+ * @param arr2 数组2
+ * @returns 是（true）或否（false）
+ */
+function isEqualArray(arr1, arr2) {
+    if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+        return false;
+    }
+    if (arr1.length !== arr2.length) {
+        return false;
+    }
+    for (var i = 0, len = arr1.length; i < len; i++) {
+        if (arr1[i] !== arr2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
  * 检查 value 是否是原始有限数值。
  *
  * @param value 要检查的值
@@ -440,4 +462,4 @@ function supportPassiveEventListener() {
     return isSupportPassiveEventListener;
 }
 
-export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, Disposer, forOwn, getType, inBrowser, isArray, isBoolean, isDate, isFinite, isFunction, isInteger, isNaN, isNil, isNull, isNumber, isObject, isPlainObject, isRegExp, isString, isUndefined, noop, parseCSSValue, reduce, repeat, supportPassiveEventListener };
+export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, Disposer, forOwn, getType, inBrowser, isArray, isBoolean, isDate, isEqualArray, isFinite, isFunction, isInteger, isNaN, isNil, isNull, isNumber, isObject, isPlainObject, isRegExp, isString, isUndefined, noop, parseCSSValue, reduce, repeat, supportPassiveEventListener };

@@ -12,6 +12,7 @@ export { default as inBrowser } from './inBrowser';
 export { default as isArray } from './isArray';
 export { default as isBoolean } from './isBoolean';
 export { default as isDate } from './isDate';
+export { default as isEqualArray } from './isEqualArray';
 export { default as isFinite } from './isFinite';
 export { default as isFunction } from './isFunction';
 export { default as isInteger } from './isInteger';
