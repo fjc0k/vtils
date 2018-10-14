@@ -510,3 +510,19 @@ describe('parseCSSValue', () => {
     })
   })
 })
+
+describe('isEqualArray', () => {
+  test('数组 == 数组', () => {
+    expect(vtils.isEqualArray([], [])).toBeTruthy()
+    expect(vtils.isEqualArray([1, now, '+'], [1, now, '+'])).toBeTruthy()
+  })
+  test('数组 != 数组', () => {
+    expect(vtils.isEqualArray([], [1])).toBeFalsy()
+    expect(vtils.isEqualArray([1, now, '+'], [1, now, '-'])).toBeFalsy()
+    expect(vtils.isEqualArray([1, now, '+', '-'], [1, now, '+'])).toBeFalsy()
+  })
+  test('数组 != 其他', () => {
+    expect(vtils.isEqualArray([], false as any)).toBeFalsy()
+    expect(vtils.isEqualArray(['1', '2', '3'], '123' as any)).toBeFalsy()
+  })
+})
