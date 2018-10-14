@@ -1,5 +1,5 @@
 /*!
- * vtils v0.12.0
+ * vtils v0.13.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -116,6 +116,30 @@ function clamp(value, min, max) {
         : value >= max ? max
             : value;
 }
+
+/**
+ * CSS 变换。
+ *
+ * @param el 要变换的元素
+ * @param transformRule 变换规则
+ * @param transitionRule 过渡规则
+ */
+function cssTransform(el, transformRule, transitionRule) {
+    el.style.webkitTransform = transformRule;
+    el.style.transform = transformRule;
+    el.style.webkitTransition = "-webkit-transform " + transitionRule;
+    el.style.transition = "transform " + transitionRule;
+}
+/**
+ * 停止 CSS 变换。
+ *
+ * @param el 要停止变换的元素
+ */
+function stop(el) {
+    el.style.webkitTransition = 'none';
+    el.style.transition = 'none';
+}
+cssTransform.stop = stop;
 
 /**
  * 处置器。
@@ -462,4 +486,4 @@ function supportPassiveEventListener() {
     return isSupportPassiveEventListener;
 }
 
-export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, Disposer, forOwn, getType, inBrowser, isArray, isBoolean, isDate, isEqualArray, isFinite, isFunction, isInteger, isNaN, isNil, isNull, isNumber, isObject, isPlainObject, isRegExp, isString, isUndefined, noop, parseCSSValue, reduce, repeat, supportPassiveEventListener };
+export { base64Decode, base64Encode, base64UrlDecode, base64UrlEncode, bindEvent, castArray, clamp, cssTransform, Disposer, forOwn, getType, inBrowser, isArray, isBoolean, isDate, isEqualArray, isFinite, isFunction, isInteger, isNaN, isNil, isNull, isNumber, isObject, isPlainObject, isRegExp, isString, isUndefined, noop, parseCSSValue as parseCssValue, reduce, repeat, supportPassiveEventListener };

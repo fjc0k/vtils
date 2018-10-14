@@ -1,6 +1,6 @@
 {
   "name": "vtils",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "一些常用的 JavaScript 工具库。",
   "main": "dist/vtils.cjs.js",
   "module": "dist/vtils.es.js",

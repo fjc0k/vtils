@@ -1,5 +1,5 @@
 /*!
- * vtils v0.12.0
+ * vtils v0.13.0
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -120,6 +120,30 @@ function clamp(value, min, max) {
         : value >= max ? max
             : value;
 }
+
+/**
+ * CSS 变换。
+ *
+ * @param el 要变换的元素
+ * @param transformRule 变换规则
+ * @param transitionRule 过渡规则
+ */
+function cssTransform(el, transformRule, transitionRule) {
+    el.style.webkitTransform = transformRule;
+    el.style.transform = transformRule;
+    el.style.webkitTransition = "-webkit-transform " + transitionRule;
+    el.style.transition = "transform " + transitionRule;
+}
+/**
+ * 停止 CSS 变换。
+ *
+ * @param el 要停止变换的元素
+ */
+function stop(el) {
+    el.style.webkitTransition = 'none';
+    el.style.transition = 'none';
+}
+cssTransform.stop = stop;
 
 /**
  * 处置器。
@@ -473,6 +497,7 @@ exports.base64UrlEncode = base64UrlEncode;
 exports.bindEvent = bindEvent;
 exports.castArray = castArray;
 exports.clamp = clamp;
+exports.cssTransform = cssTransform;
 exports.Disposer = Disposer;
 exports.forOwn = forOwn;
 exports.getType = getType;
@@ -494,7 +519,7 @@ exports.isRegExp = isRegExp;
 exports.isString = isString;
 exports.isUndefined = isUndefined;
 exports.noop = noop;
-exports.parseCSSValue = parseCSSValue;
+exports.parseCssValue = parseCSSValue;
 exports.reduce = reduce;
 exports.repeat = repeat;
 exports.supportPassiveEventListener = supportPassiveEventListener;
