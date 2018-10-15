@@ -1,4 +1,7 @@
-type UnbindFn = () => void
+export type BindEventTypes = string | string[]
+export type BindEventListener = EventListenerOrEventListenerObject
+export type BindEventOptions = boolean | AddEventListenerOptions
+export type UnbindEventListener = () => void
 
 /**
  * 将指定类型的事件绑定在指定的目标上并返回解绑函数。
@@ -10,10 +13,10 @@ type UnbindFn = () => void
  */
 export default function bindEvent(
   target: EventTarget,
-  types: string | string[],
+  types: BindEventTypes,
   listener: EventListenerOrEventListenerObject,
-  options?: boolean | AddEventListenerOptions
-): UnbindFn {
+  options?: BindEventOptions
+): UnbindEventListener {
   const disposes: Array<() => void> = [];
   (Array.isArray(types) ? types : types.split(/\s+/)).forEach(eventType => {
     target.addEventListener(eventType, listener, options)
