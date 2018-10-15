@@ -12,7 +12,7 @@ export default function bindEvent(
   target: EventTarget,
   types: string | string[],
   listener: EventListenerOrEventListenerObject,
-  options?: AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions
 ): UnbindFn {
   const disposes: Array<() => void> = [];
   (Array.isArray(types) ? types : types.split(/\s+/)).forEach(eventType => {
