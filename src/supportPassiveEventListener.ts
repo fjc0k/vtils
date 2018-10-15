@@ -1,3 +1,5 @@
+import inBrowser from './inBrowser'
+
 let isSupportPassiveEventListener: boolean | undefined
 
 /**
@@ -16,7 +18,9 @@ export default function supportPassiveEventListener(): boolean {
           isSupportPassiveEventListener = true
         }
       })
-      window.addEventListener('test', null, options)
+      inBrowser(() => {
+        window.addEventListener('test', null, options)
+      })
     } catch (err) {}
   }
   return isSupportPassiveEventListener
