@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.15.0"></a>
+# [0.15.0](https://github.com/fjc0k/vtils/compare/v0.14.4...v0.15.0) (2018-10-15)
+
+
+### Features
+
+* add shuffle ([d8b50a7](https://github.com/fjc0k/vtils/commit/d8b50a7))
+
+
+
 <a name="0.14.4"></a>
 ## [0.14.4](https://github.com/fjc0k/vtils/compare/v0.14.3...v0.14.4) (2018-10-15)
 
