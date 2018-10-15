@@ -1,6 +1,6 @@
 export type BindEventTypes = string | string[]
 export type BindEventListener = EventListenerOrEventListenerObject
-export type BindEventOptions = boolean | AddEventListenerOptions
+export type BindEventListenerOptions = boolean | AddEventListenerOptions
 export type UnbindEventListener = () => void
 
 /**
@@ -15,7 +15,7 @@ export default function bindEvent(
   target: EventTarget,
   types: BindEventTypes,
   listener: EventListenerOrEventListenerObject,
-  options?: BindEventOptions
+  options?: BindEventListenerOptions
 ): UnbindEventListener {
   const disposes: Array<() => void> = [];
   (Array.isArray(types) ? types : types.split(/\s+/)).forEach(eventType => {
