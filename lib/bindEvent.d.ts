@@ -7,5 +7,5 @@ declare type UnbindFn = () => void;
  * @param listener 事件监听器
  * @param [options] 事件选项
  */
-export default function bindEvent(target: EventTarget, types: string | string[], listener: EventListenerOrEventListenerObject, options?: AddEventListenerOptions): UnbindFn;
+export default function bindEvent(target: EventTarget, types: string | string[], listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): UnbindFn;
 export {};
