@@ -540,3 +540,26 @@ describe('cssTransform', () => {
     expect(el.style.transition).toBe('none')
   })
 })
+
+describe('shuffle', () => {
+  test('非数组原样返回', () => {
+    expect(vtils.shuffle(1 as any)).toEqual(1)
+    expect(vtils.shuffle({} as any)).toEqual({})
+    expect(vtils.shuffle(false as any)).toEqual(false)
+  })
+  test('打乱数组', () => {
+    const arr1 = [1, 2, 3]
+    for (let i = 0; i < 1000; i++) {
+      expect([
+        [1, 2, 3],
+        [1, 3, 2],
+        [2, 1, 3],
+        [2, 3, 1],
+        [3, 1, 2],
+        [3, 2, 1]
+      ]).toContainEqual(vtils.shuffle(arr1))
+    }
+    const arr2 = [1, 2, 3, '&', null, /x/, () => {}]
+    expect(vtils.shuffle(arr2).sort()).toEqual(arr2.sort())
+  })
+})
