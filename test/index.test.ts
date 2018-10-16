@@ -611,3 +611,18 @@ describe('fill', () => {
     expect(vtils.fill(emptyArr, '*', -2, -3)).toEqual([undefined, undefined, undefined])
   })
 })
+
+describe('has', () => {
+  test('应只检查自身属性', () => {
+    const obj: any = { x: 1, y: null }
+    const fn = () => {}
+    fn.x = 1
+    Object.setPrototypeOf(fn, obj)
+    expect(vtils.has(obj, 'x')).toBeTruthy()
+    expect(vtils.has(obj, 'y')).toBeTruthy()
+    expect(vtils.has(obj, 'toString')).toBeFalsy()
+    expect(vtils.has(fn, 'x')).toBeTruthy()
+    expect((fn as any).y).toBeNull()
+    expect(vtils.has(fn, 'y')).toBeFalsy()
+  })
+})
