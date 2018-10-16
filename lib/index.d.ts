@@ -10,6 +10,7 @@ export { default as Disposer } from './Disposer';
 export { default as fill } from './fill';
 export { default as forOwn } from './forOwn';
 export { default as getType } from './getType';
+export { default as has } from './has';
 export { default as inBrowser } from './inBrowser';
 export { default as isArray } from './isArray';
 export { default as isBoolean } from './isBoolean';

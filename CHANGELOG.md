@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.17.0"></a>
+# [0.17.0](https://github.com/fjc0k/vtils/compare/v0.16.0...v0.17.0) (2018-10-16)
+
+
+### Features
+
+* add has ([e99c75c](https://github.com/fjc0k/vtils/commit/e99c75c))
+
+
+
 <a name="0.16.0"></a>
 # [0.16.0](https://github.com/fjc0k/vtils/compare/v0.15.1...v0.16.0) (2018-10-16)
 
