@@ -563,3 +563,51 @@ describe('shuffle', () => {
     expect(vtils.shuffle(arr2).sort()).toEqual(arr2.sort())
   })
 })
+
+describe('fill', () => {
+  const emptyArr = Array(3)
+  const arr4 = [1, 2, 3, 4]
+  test('默认 start 为 0，end 为 arr.length', () => {
+    expect(vtils.fill(emptyArr, '*')).toEqual(['*', '*', '*'])
+    expect(vtils.fill(arr4, '*')).toEqual(['*', '*', '*', '*'])
+  })
+  test('value 未指定则为 undefined', () => {
+    expect(vtils.fill(emptyArr)).toEqual([undefined, undefined, undefined])
+    expect(vtils.fill(arr4)).toEqual([undefined, undefined, undefined, undefined])
+  })
+  test('start 为正数', () => {
+    expect(vtils.fill(emptyArr, '*', 1)).toEqual([undefined, '*', '*'])
+    expect(vtils.fill(arr4, '*', 1)).toEqual([1, '*', '*', '*'])
+  })
+  test('start 为正数且大于或等于 arr.length', () => {
+    expect(vtils.fill(arr4, '*', 4)).toEqual(arr4)
+    expect(vtils.fill(arr4, '*', 5)).toEqual(arr4)
+    expect(vtils.fill(arr4, '*', 60)).toEqual(arr4)
+  })
+  test('start 为负数', () => {
+    expect(vtils.fill(emptyArr, '*', -1)).toEqual([undefined, undefined, '*'])
+    expect(vtils.fill(arr4, '*', -2)).toEqual([1, 2, '*', '*'])
+  })
+  test('start 为负数且小于或等于 -arr.length', () => {
+    expect(vtils.fill(emptyArr, '*', -3)).toEqual(['*', '*', '*'])
+    expect(vtils.fill(arr4, '*', -4)).toEqual(['*', '*', '*', '*'])
+    expect(vtils.fill(arr4, '*', -5)).toEqual(['*', '*', '*', '*'])
+  })
+  test('end 为正数', () => {
+    expect(vtils.fill(emptyArr, '*', 1, 2)).toEqual([undefined, '*', undefined])
+    expect(vtils.fill(arr4, '*', 1, 2)).toEqual([1, '*', 3, 4])
+  })
+  test('end 为正数且大于或等于 arr.length', () => {
+    expect(vtils.fill(arr4, '*', 1, 4)).toEqual([1, '*', '*', '*'])
+    expect(vtils.fill(arr4, '*', 1, 7)).toEqual([1, '*', '*', '*'])
+    expect(vtils.fill(arr4, '*', 1, Infinity)).toEqual([1, '*', '*', '*'])
+  })
+  test('end 为负数', () => {
+    expect(vtils.fill(emptyArr, '*', -2, -1)).toEqual([undefined, '*', undefined])
+    expect(vtils.fill(arr4, '*', 1, -1)).toEqual([1, '*', '*', 4])
+  })
+  test('end 小于或等于 start', () => {
+    expect(vtils.fill(emptyArr, '*', 3, 2)).toEqual([undefined, undefined, undefined])
+    expect(vtils.fill(emptyArr, '*', -2, -3)).toEqual([undefined, undefined, undefined])
+  })
+})
