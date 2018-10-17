@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.18.0"></a>
+# [0.18.0](https://github.com/fjc0k/vtils/compare/v0.17.0...v0.18.0) (2018-10-17)
+
+
+### Features
+
+* add preventEventDefault, stopEventPropagation ([e61b23c](https://github.com/fjc0k/vtils/commit/e61b23c))
+
+
+
 <a name="0.16.0"></a>
 # [0.16.0](https://github.com/fjc0k/vtils/compare/v0.15.1...v0.16.0) (2018-10-17)
 <a name="0.17.0"></a>
