@@ -563,3 +563,29 @@ describe('shuffle', () => {
     expect(vtils.shuffle(arr2).sort()).toEqual(arr2.sort())
   })
 })
+
+describe('preventEventDefault', () => {
+  test('阻止成功', done => {
+    const div = document.createElement('div')
+    div.onclick = e => {
+      expect(e.defaultPrevented).toBeFalsy()
+      vtils.preventEventDefault(e)
+      expect(e.defaultPrevented).toBeTruthy()
+      done()
+    }
+    div.click()
+  })
+})
+
+describe('stopEventPropagation', () => {
+  test('阻止成功', done => {
+    const div = document.createElement('div')
+    div.onclick = e => {
+      expect(e.cancelBubble).toBeFalsy()
+      vtils.stopEventPropagation(e)
+      expect(e.cancelBubble).toBeTruthy()
+      done()
+    }
+    div.click()
+  })
+})
