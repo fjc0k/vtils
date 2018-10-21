@@ -652,3 +652,19 @@ describe('has', () => {
     expect(vtils.has(fn, 'y')).toBeFalsy()
   })
 })
+
+describe('values', () => {
+  test('对象', () => {
+    expect(vtils.values({ now })).toEqual([now])
+    expect(
+      vtils.values({ 1: 2, x: 'y', t: null, ok: undefined }).sort()
+    ).toEqual(
+      [2, 'y', null, undefined].sort()
+    )
+  })
+  test('函数', () => {
+    const fn = () => {}
+    fn.x = 1
+    expect(vtils.values(fn)).toEqual([1])
+  })
+})
