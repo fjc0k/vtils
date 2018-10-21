@@ -668,3 +668,12 @@ describe('values', () => {
     expect(vtils.values(fn)).toEqual([1])
   })
 })
+
+describe('mapValues', () => {
+  test('mapValues', () => {
+    expect(vtils.mapValues({ x: 1, y: 2 }, value => ++value)).toEqual({
+      x: 2,
+      y: 3
+    })
+  })
+})
