@@ -677,3 +677,12 @@ describe('mapValues', () => {
     })
   })
 })
+
+describe('inWechatMiniProgram', () => {
+  test('inWechatMiniProgram', () => {
+    const callback = sinon.fake()
+    expect(vtils.inWechatMiniProgram()).toBeFalsy()
+    expect(vtils.inWechatMiniProgram(callback)).toBeFalsy()
+    expect(callback.notCalled).toBeTruthy()
+  })
+})
