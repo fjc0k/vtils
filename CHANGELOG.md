@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.21.0"></a>
+# [0.21.0](https://github.com/fjc0k/vtils/compare/v0.20.1...v0.21.0) (2018-10-23)
+
+
+### Features
+
+* add inWechatMiniProgram ([3a24ee6](https://github.com/fjc0k/vtils/commit/3a24ee6))
+
+
+
 <a name="0.20.1"></a>
 ## [0.20.1](https://github.com/fjc0k/vtils/compare/v0.20.0...v0.20.1) (2018-10-21)
 
