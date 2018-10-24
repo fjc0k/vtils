@@ -686,3 +686,9 @@ describe('inWechatMiniProgram', () => {
     expect(callback.notCalled).toBeTruthy()
   })
 })
+
+describe('inWechatWebview', () => {
+  test('不在', () => {
+    expect(vtils.inWechatWebview()).toBeFalsy()
+  })
+})

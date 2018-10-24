@@ -1,5 +1,6 @@
 import inBrowser from './inBrowser'
 import isFunction from './isFunction'
+import isObject from './isObject'
 
 declare const wx: any
 
@@ -13,7 +14,7 @@ let isInWechatMiniProgram: boolean | undefined
  */
 export default function inWechatMiniProgram(callback?: () => void): boolean {
   if (isInWechatMiniProgram === undefined) {
-    isInWechatMiniProgram = !inBrowser() && typeof wx === 'object' && isFunction(wx.getSystemInfo)
+    isInWechatMiniProgram = !inBrowser() && isObject(wx) && isFunction((wx as any).getSystemInfo)
   }
   /* istanbul ignore if */
   if (isInWechatMiniProgram && isFunction(callback)) {
