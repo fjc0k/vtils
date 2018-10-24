@@ -1,6 +1,6 @@
 import forOwn from './forOwn'
 
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
 /**
  * 创建一个从 obj 中剔除选中的属性的对象。
