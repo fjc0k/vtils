@@ -692,3 +692,31 @@ describe('inWechatWebview', () => {
     expect(vtils.inWechatWebview()).toBeFalsy()
   })
 })
+
+describe('pick', () => {
+  test('pick', () => {
+    const obj = {
+      x: 1,
+      y: 2,
+      z: 'hello'
+    }
+    expect(vtils.pick(obj, [])).toEqual({})
+    expect(vtils.pick(obj, ['x'])).toEqual({ x: 1 })
+    expect(vtils.pick(obj, ['x', 'y'])).toEqual({ x: 1, y: 2 })
+    expect(vtils.pick(obj, ['x', 'y', 'z'])).toEqual({ x: 1, y: 2, z: 'hello' })
+  })
+})
+
+describe('omit', () => {
+  test('omit', () => {
+    const obj = {
+      x: 1,
+      y: 2,
+      z: 'hello'
+    }
+    expect(vtils.omit(obj, [])).toEqual(obj)
+    expect(vtils.omit(obj, ['x'])).toEqual({ y: 2, z: 'hello' })
+    expect(vtils.omit(obj, ['x', 'y'])).toEqual({ z: 'hello' })
+    expect(vtils.omit(obj, ['x', 'y', 'z'])).toEqual({})
+  })
+})

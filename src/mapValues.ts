@@ -1,6 +1,6 @@
-import forOwn, { ForOwnCallback, ForOwnObj } from './forOwn'
+import forOwn, { ForOwnCallback } from './forOwn'
 
-export type MapValuesResult<T> = { [key in Extract<keyof T, string>]: any }
+export type MapValuesResult<T> = { [key in keyof T]: any }
 
 /**
  * 映射对象的可枚举属性值为一个新的值。
@@ -9,7 +9,7 @@ export type MapValuesResult<T> = { [key in Extract<keyof T, string>]: any }
  * @param callback 回调函数
  * @returns 映射后的新对象
  */
-export default function mapValues<T extends ForOwnObj>(obj: T, callback: ForOwnCallback<T>): MapValuesResult<T> {
+export default function mapValues<T extends object>(obj: T, callback: ForOwnCallback<T>): MapValuesResult<T> {
   const newObj: MapValuesResult<T>  = {} as any
   forOwn(obj, (value, key, source) => {
     newObj[key] = callback(value, key, source)
