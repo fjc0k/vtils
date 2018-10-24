@@ -4,3 +4,4 @@ node_modules
 *.stackdump
 .rpt2_cache
 coverage
+lib
