@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.22.0"></a>
+# [0.22.0](https://github.com/fjc0k/vtils/compare/v0.21.0...v0.22.0) (2018-10-24)
+
+
+### Features
+
+* add inWechatWebview ([e8c6761](https://github.com/fjc0k/vtils/commit/e8c6761))
+
+
+
 <a name="0.21.0"></a>
 # [0.21.0](https://github.com/fjc0k/vtils/compare/v0.20.1...v0.21.0) (2018-10-23)
 
