@@ -11,11 +11,11 @@ export default function pick<
   T extends object,
   K extends keyof T
 >(obj: T, props: K[]): Pick<T, K> {
-  const newObj: Pick<T, K> = {} as any
-  forOwn(obj, (value, key) => {
-    if (props.indexOf(key as any) > -1) {
-      (newObj as any)[key] = value
+  const newObj: any = {}
+  forOwn(obj, (value: T[K], key: K) => {
+    if (props.indexOf(key) > -1) {
+      newObj[key] = value
     }
   })
-  return newObj
+  return newObj as Pick<T, K>
 }
