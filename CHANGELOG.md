@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.25.0"></a>
+# [0.25.0](https://github.com/fjc0k/vtils/compare/v0.23.6...v0.25.0) (2018-10-27)
+
+
+
+<a name="0.24.0"></a>
+# [0.24.0](https://github.com/fjc0k/vtils/compare/v0.23.5...v0.24.0) (2018-10-26)
+
+
+### Features
+
+* **fill:** support function value ([af268c8](https://github.com/fjc0k/vtils/commit/af268c8))
+
+
+
+<a name="0.23.5"></a>
+## [0.23.5](https://github.com/fjc0k/vtils/compare/v0.23.4...v0.23.5) (2018-10-25)
+
+
+
 <a name="0.23.6"></a>
 ## [0.23.6](https://github.com/fjc0k/vtils/compare/v0.23.4...v0.23.6) (2018-10-27)
 <a name="0.24.0"></a>
