@@ -638,6 +638,9 @@ describe('fill', () => {
     expect(vtils.fill(emptyArr, '*', 3, 2)).toEqual([undefined, undefined, undefined])
     expect(vtils.fill(emptyArr, '*', -2, -3)).toEqual([undefined, undefined, undefined])
   })
+  test('value 为函数', () => {
+    expect(vtils.fill(emptyArr, (value, i) => i + 1)).toEqual([1, 2, 3])
+  })
 })
 
 describe('has', () => {

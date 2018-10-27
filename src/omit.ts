@@ -13,11 +13,11 @@ export default function omit<
   T extends object,
   K extends keyof T
 >(obj: T, props: K[]): Omit<T, K> {
-  const newObj: Omit<T, K> = {} as any
-  forOwn(obj, (value, key) => {
-    if (props.indexOf(key as any) === -1) {
-      (newObj as any)[key] = value
+  const newObj: any = {}
+  forOwn(obj, (value: T[K], key: K) => {
+    if (props.indexOf(key) === -1) {
+      newObj[key] = value
     }
   })
-  return newObj
+  return newObj as Omit<T, K>
 }

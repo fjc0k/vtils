@@ -9,7 +9,7 @@ export type MapValuesResult<T> = { [key in keyof T]: any }
  * @param callback 回调函数
  * @returns 映射后的新对象
  */
-export default function mapValues<T extends object>(obj: T, callback: ForOwnCallback<T>): MapValuesResult<T> {
+export default function mapValues<T extends object>(obj: T, callback: ForOwnCallback<T, keyof T>): MapValuesResult<T> {
   const newObj: MapValuesResult<T>  = {} as any
   forOwn(obj, (value, key, source) => {
     newObj[key] = callback(value, key, source)
