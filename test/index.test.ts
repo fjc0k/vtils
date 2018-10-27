@@ -207,8 +207,10 @@ describe('getType', () => {
     expect(vtils.getType(new Date())).toBe('Date')
     expect(vtils.getType(/X/)).toBe('RegExp')
     expect(vtils.getType(false)).toBe('Boolean')
+    expect(vtils.getType(new Error('err'))).toBe('Error')
     expect(vtils.getType(null)).toBe('Null')
     expect(vtils.getType(undefined)).toBe('Undefined')
+    expect(vtils.getType((function test() { return arguments })())).toBe('Arguments')
   })
 })
 
