@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.26.0"></a>
+# [0.26.0](https://github.com/fjc0k/vtils/compare/v0.25.1...v0.26.0) (2018-10-28)
+
+
+### Features
+
+* add upperCaseFirst ([5be204a](https://github.com/fjc0k/vtils/commit/5be204a))
+
+
+
 <a name="0.25.1"></a>
 ## [0.25.1](https://github.com/fjc0k/vtils/compare/v0.25.0...v0.25.1) (2018-10-27)
 
