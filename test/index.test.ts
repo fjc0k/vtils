@@ -725,3 +725,20 @@ describe('omit', () => {
     expect(vtils.omit(obj, ['x', 'y', 'z'])).toEqual({})
   })
 })
+
+describe('upperCaseFirst', () => {
+  test('非字符串原样返回', () => {
+    [null, undefined, 0, false, true, NaN, {}, [], /ff/, () => {}].forEach(value => {
+      expect(vtils.upperCaseFirst(value as any)).toBe(value)
+    })
+  })
+  test('字符串首字母大写后返回', () => {
+    expect(vtils.upperCaseFirst('ok')).toBe('Ok')
+    expect(vtils.upperCaseFirst('Ok')).toBe('Ok')
+    expect(vtils.upperCaseFirst('OK')).toBe('OK')
+    expect(vtils.upperCaseFirst('ok no')).toBe('Ok no')
+    expect(vtils.upperCaseFirst('1ok')).toBe('1ok')
+    expect(vtils.upperCaseFirst('_ok')).toBe('_ok')
+    expect(vtils.upperCaseFirst('')).toBe('')
+  })
+})
