@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.27.0"></a>
+# [0.27.0](https://github.com/fjc0k/vtils/compare/v0.26.0...v0.27.0) (2018-10-29)
+
+
+### Features
+
+* add isPromise ([ad4398f](https://github.com/fjc0k/vtils/commit/ad4398f))
+
+
+
 <a name="0.26.0"></a>
 # [0.26.0](https://github.com/fjc0k/vtils/compare/v0.25.1...v0.26.0) (2018-10-28)
 
