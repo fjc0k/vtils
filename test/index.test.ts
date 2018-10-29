@@ -742,3 +742,20 @@ describe('upperCaseFirst', () => {
     expect(vtils.upperCaseFirst('')).toBe('')
   })
 })
+
+describe('isPromise', () => {
+  test('是对象且有 then 方法就是', () => {
+    expect(vtils.isPromise(new Promise(() => {}))).toBeTruthy();
+    [{}, [], /f/, Date, () => {}].forEach(item => {
+      (item as any).then = () => {}
+      expect(vtils.isPromise(item)).toBeTruthy()
+    })
+  })
+  test('不是', () => {
+    expect(vtils.isPromise(null)).toBeFalsy()
+    expect(vtils.isPromise(1)).toBeFalsy()
+    expect(vtils.isPromise({ Then: () => {} })).toBeFalsy()
+    expect(vtils.isPromise(Promise)).toBeFalsy()
+    expect(vtils.isPromise(/ddd/)).toBeFalsy()
+  })
+})
