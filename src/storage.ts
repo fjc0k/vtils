@@ -45,6 +45,7 @@ const storage = {
       storageDriver.set(key, JSON.stringify(value))
     }
   },
+
   /**
    * 获取本地存储的值。
    *
@@ -58,6 +59,7 @@ const storage = {
     } catch (err) {}
     return value
   },
+
   /**
    * 移除本地存储的值。
    *
@@ -66,6 +68,7 @@ const storage = {
   remove(key: string): void {
     storageDriver.remove(key)
   },
+
   /**
    * 清空本地存储中的所有值。
    */
