@@ -792,3 +792,16 @@ describe('currencyFormat', () => {
     expect(vtils.currencyFormat(840224, { decimal: false })).toBe('840,224')
   })
 })
+
+describe('isNumeric', () => {
+  test('是', () => {
+    [123, -22, '223', '-244.3', 0xFF, '0xFF', '8e5', 0o144, '0144'].forEach(item => {
+      expect(vtils.isNumeric(item)).toBeTruthy()
+    })
+  })
+  test('不是', () => {
+    [undefined, Infinity, true, null, NaN, {}, '', '7.2acdgs', '-0x42'].forEach(item => {
+      expect(vtils.isNumeric(item)).toBeFalsy()
+    })
+  })
+})
