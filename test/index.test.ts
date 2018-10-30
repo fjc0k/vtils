@@ -829,3 +829,27 @@ describe('storage', () => {
     expect(vtils.storage.get('hello')).toBeNull()
   })
 })
+
+describe('randomString', () => {
+  test('ok', () => {
+    const r: string[] = []
+    for (let i = 0; i < 10000; i++) {
+      const str = vtils.randomString()
+      expect(r.indexOf(str) === -1).toBeTruthy()
+      r.push(str)
+    }
+  })
+})
+
+// describe('jsonp', () => {
+//   test('ok', done => {
+//     vtils.jsonp('https://jsonplaceholder.typicode.com/todos/1')
+//       .then(obj => {
+//         expect(obj).toContainEqual({
+//           userId: 1,
+//           id: 1
+//         })
+//         done()
+//       })
+//   })
+// })
