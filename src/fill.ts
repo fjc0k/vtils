@@ -1,6 +1,6 @@
 function fill<T>(
   arr: T[],
-  value?: (value?: T, index?: number) => any,
+  value?: (value: T, index: number) => any,
   start?: number,
   end?: number
 ): any[]
