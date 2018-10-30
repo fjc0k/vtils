@@ -1,8 +1,11 @@
 export type CurrencyFormatValue = number | string
 
 export interface CurrencyFormatOptions {
+  /** 是否启用千分位逗号分隔 */
   thousands?: boolean,
+  /** 是否处理小数点 */
   decimal?: boolean,
+  /** 保留小数点位数 */
   decimalDigits?: number
 }
 
