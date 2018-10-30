@@ -759,3 +759,36 @@ describe('isPromise', () => {
     expect(vtils.isPromise(/ddd/)).toBeFalsy()
   })
 })
+
+describe('currencyFormat', () => {
+  test('默认选项：千分位逗号分隔，保留两位小数，四舍五入', () => {
+    expect(vtils.currencyFormat(20.1)).toBe('20.10')
+    expect(vtils.currencyFormat(2320.121)).toBe('2,320.12')
+    expect(vtils.currencyFormat(2320.126)).toBe('2,320.13')
+    expect(vtils.currencyFormat(840224)).toBe('840,224.00')
+  })
+  test('禁用千分位逗号分隔', () => {
+    expect(vtils.currencyFormat(20.1, { thousands: false })).toBe('20.10')
+    expect(vtils.currencyFormat(2320.121, { thousands: false })).toBe('2320.12')
+    expect(vtils.currencyFormat(2320.126, { thousands: false })).toBe('2320.13')
+    expect(vtils.currencyFormat(840224, { thousands: false })).toBe('840224.00')
+  })
+  test('保留 3 位小数', () => {
+    expect(vtils.currencyFormat(20.1, { decimalDigits: 3 })).toBe('20.100')
+    expect(vtils.currencyFormat(2320.121, { decimalDigits: 3 })).toBe('2,320.121')
+    expect(vtils.currencyFormat(2320.126, { decimalDigits: 3 })).toBe('2,320.126')
+    expect(vtils.currencyFormat(840224, { decimalDigits: 3 })).toBe('840,224.000')
+  })
+  test('不保留小数', () => {
+    expect(vtils.currencyFormat(20.1, { decimalDigits: 0 })).toBe('20')
+    expect(vtils.currencyFormat(2320.121, { decimalDigits: 0 })).toBe('2,320')
+    expect(vtils.currencyFormat(2320.126, { decimalDigits: 0 })).toBe('2,320')
+    expect(vtils.currencyFormat(840224, { decimalDigits: 0 })).toBe('840,224')
+  })
+  test('不处理小数', () => {
+    expect(vtils.currencyFormat(20.1, { decimal: false })).toBe('20.1')
+    expect(vtils.currencyFormat(2320.121, { decimal: false })).toBe('2,320.121')
+    expect(vtils.currencyFormat(2320.126, { decimal: false })).toBe('2,320.126')
+    expect(vtils.currencyFormat(840224, { decimal: false })).toBe('840,224')
+  })
+})
