@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.30.0"></a>
+# [0.30.0](https://github.com/fjc0k/vtils/compare/v0.29.0...v0.30.0) (2018-10-30)
+
+
+### Features
+
+* add storage ([029ccf1](https://github.com/fjc0k/vtils/commit/029ccf1))
+
+
+
 <a name="0.29.0"></a>
 # [0.29.0](https://github.com/fjc0k/vtils/compare/v0.28.1...v0.29.0) (2018-10-30)
 
