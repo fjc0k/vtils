@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.28.0"></a>
+# [0.28.0](https://github.com/fjc0k/vtils/compare/v0.27.2...v0.28.0) (2018-10-30)
+
+
+### Features
+
+* add currencyFormat ([72b1d59](https://github.com/fjc0k/vtils/commit/72b1d59))
+
+
+
 <a name="0.27.2"></a>
 ## [0.27.2](https://github.com/fjc0k/vtils/compare/v0.27.1...v0.27.2) (2018-10-30)
 
