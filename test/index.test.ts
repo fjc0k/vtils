@@ -828,6 +828,22 @@ describe('storage', () => {
     vtils.storage.clear()
     expect(vtils.storage.get('hello')).toBeNull()
   })
+  test('过期时间', done => {
+    expect(vtils.storage.get('time')).toBeNull()
+    vtils.storage.set('time', '123')
+    expect(vtils.storage.get('time')).toBe('123')
+    const time = new Date()
+    time.setMilliseconds(time.getMilliseconds() + 1000)
+    vtils.storage.set('time', '1234', time)
+    expect(vtils.storage.get('time')).toBe('1234')
+    setTimeout(() => {
+      expect(vtils.storage.get('time')).toBe('1234')
+    }, 900)
+    setTimeout(() => {
+      expect(vtils.storage.get('time')).toBeNull()
+      done()
+    }, 1001)
+  })
 })
 
 describe('randomString', () => {
@@ -845,7 +861,7 @@ describe('jsonp', () => {
   test('ok', () => {
     expect(
       vtils.isPromise(
-        vtils.jsonp('https://jsonplaceholder.typicode.com/todos/1')
+        vtils.jsonp('https://jsonplaceholder.typicode.com/todos/1', { test: 1 })
       )
     ).toBeTruthy()
   })

@@ -39,10 +39,14 @@ const storage = {
    *
    * @param key 键名
    * @param value 键值
+   * @param expire 过期时间
    */
-  set(key: string, value: any): void {
+  set(key: string, value: any, expire?: Date): void {
     if (value != null) {
-      storageDriver.set(key, JSON.stringify(value))
+      storageDriver.set(key, JSON.stringify({
+        expire: expire && expire.getTime(),
+        value
+      }))
     }
   },
 
@@ -53,11 +57,16 @@ const storage = {
    * @returns 获取到的键值
    */
   get(key: string): any {
-    let value = null
     try {
-      value = JSON.parse(storageDriver.get(key))
-    } catch (err) {}
-    return value
+      const { expire, value = null } = JSON.parse(storageDriver.get(key))
+      if (expire && expire < new Date().getTime()) {
+        storage.remove(key)
+        return null
+      }
+      return value
+    } catch (_) {
+      return null
+    }
   },
 
   /**
