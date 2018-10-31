@@ -3,16 +3,16 @@ export type CurrencyFormatValue = number | string
 export interface CurrencyFormatOptions {
   /** 是否启用千分位逗号分隔 */
   thousands?: boolean,
-  /** 是否处理小数点 */
+  /** 是否处理小数 */
   decimal?: boolean,
-  /** 保留小数点位数 */
-  decimalDigits?: number
+  /** 保留小数位数 */
+  precision?: number
 }
 
 const defaultOptions: CurrencyFormatOptions = {
   thousands: true,
   decimal: true,
-  decimalDigits: 2
+  precision: 2
 }
 
 /**
@@ -29,7 +29,7 @@ export default function currencyFormat(value: CurrencyFormatValue, options?: Cur
     ...options
   }
   if (options.decimal) {
-    value = value.toFixed(options.decimalDigits)
+    value = value.toFixed(options.precision)
   }
   if (options.thousands) {
     let [integer, decimal = ''] = value.toString().split('.') // tslint:disable-line
