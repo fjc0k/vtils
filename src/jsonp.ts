@@ -18,7 +18,7 @@ export default function jsonp(url: string, data?: string | object, callbackParam
       ? (resolve, reject) => {
           let script: HTMLScriptElement
 
-          const callbackFunctionName = `jsonp${randomString()}`
+          const callbackFunctionName = `__jsonp__${randomString()}`
           const queryString = `${
             isObject(data) ? objectToQueryString(data) : (data != null ? String(data) : '')
           }&${

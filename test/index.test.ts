@@ -841,15 +841,12 @@ describe('randomString', () => {
   })
 })
 
-// describe('jsonp', () => {
-//   test('ok', done => {
-//     vtils.jsonp('https://jsonplaceholder.typicode.com/todos/1')
-//       .then(obj => {
-//         expect(obj).toContainEqual({
-//           userId: 1,
-//           id: 1
-//         })
-//         done()
-//       })
-//   })
-// })
+describe('jsonp', () => {
+  test('ok', () => {
+    expect(
+      vtils.isPromise(
+        vtils.jsonp('https://jsonplaceholder.typicode.com/todos/1')
+      )
+    ).toBeTruthy()
+  })
+})
