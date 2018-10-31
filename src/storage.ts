@@ -1,6 +1,7 @@
 import inBrowser from './inBrowser'
 import inWechatMiniProgram from './inWechatMiniProgram'
 import noop from './noop'
+import result from './result'
 
 export interface StorageDriver {
   get(key: string): any,
@@ -38,14 +39,14 @@ const storage = {
    * 设置本地存储的值。
    *
    * @param key 键名
-   * @param value 键值
+   * @param value 键值，当为函数时，取函数执行后的返回值
    * @param expire 过期时间
    */
   set(key: string, value: any, expire?: Date): void {
     if (value != null) {
       storageDriver.set(key, JSON.stringify({
         expire: expire && expire.getTime(),
-        value
+        value: result(value)
       }))
     }
   },
@@ -54,18 +55,19 @@ const storage = {
    * 获取本地存储的值。
    *
    * @param key 要获取的键名
+   * @param defaultValue 默认值，当为函数时，取函数执行后的返回值
    * @returns 获取到的键值
    */
-  get(key: string): any {
+  get(key: string, defaultValue: any = null): any {
     try {
-      const { expire, value = null } = JSON.parse(storageDriver.get(key))
+      const { expire, value = defaultValue } = JSON.parse(storageDriver.get(key))
       if (expire && expire < new Date().getTime()) {
         storage.remove(key)
-        return null
+        return result(defaultValue)
       }
-      return value
-    } catch (_) {
-      return null
+      return result(value)
+    } catch (err) {
+      return result(defaultValue)
     }
   },
 

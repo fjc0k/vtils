@@ -844,6 +844,23 @@ describe('storage', () => {
       done()
     }, 1001)
   })
+  test('get 可设置默认值', () => {
+    [
+      vtils.randomString(),
+      vtils.randomString(),
+      vtils.randomString(),
+      vtils.randomString(),
+      vtils.randomString()
+    ].forEach(item => {
+      expect(vtils.storage.get(item)).toBeNull()
+      expect(vtils.storage.get(item, item)).toBe(item)
+    })
+  })
+  test('值支持函数返回值', () => {
+    vtils.storage.set('===', () => 120)
+    expect(vtils.storage.get('===')).toBe(120)
+    expect(vtils.storage.get('====', () => 110)).toBe(110)
+  })
 })
 
 describe('randomString', () => {
@@ -864,5 +881,23 @@ describe('jsonp', () => {
         vtils.jsonp('https://jsonplaceholder.typicode.com/todos/1', { test: 1 })
       )
     ).toBeTruthy()
+  })
+})
+
+describe('result', () => {
+  test('非函数返回原值', () => {
+    [null, undefined, 1, false, {}, [], /ddd/, new Date()].forEach(item => {
+      expect(vtils.result(item)).toBe(item)
+    })
+  })
+  test('函数返回函数执行结果', () => {
+    [() => {}, (): any[] => [], () => 1, () => Date].forEach(item => {
+      expect(vtils.result(item)).toEqual(item())
+    })
+  })
+  test('函数可传参', () => {
+    [(x: number): number => x, (x: number, y: number): number => x + y].forEach(item => {
+      expect(vtils.result(item, 1, 2)).toEqual((item as any)(1, 2))
+    })
   })
 })
