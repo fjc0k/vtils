@@ -1,0 +1,1 @@
+import 'typed-we-app'
