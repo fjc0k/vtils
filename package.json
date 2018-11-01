@@ -59,6 +59,7 @@
     "bili": "^3.1.2",
     "codecov": "^3.1.0",
     "jest": "^23.6.0",
+    "moment": "^2.22.2",
     "rollup-plugin-typescript2": "^0.17.2",
     "sinon": "^6.3.5",
     "standard-version": "^4.4.0",
@@ -66,8 +67,5 @@
     "tslint": "^5.11.0",
     "typed-we-app": "^1.7.0-update.6",
     "typescript": "^3.1.1"
-  },
-  "dependencies": {
-    "date-fns": "^2.0.0-alpha.25"
   }
 }

@@ -1,4 +1,4 @@
-import { toDate } from 'date-fns'
+import moment from 'moment'
 import sinon from 'sinon'
 import * as vtils from '../src'
 
@@ -902,12 +902,31 @@ describe('result', () => {
 })
 
 describe('toDate', () => {
-  test('ok', () => {
-    ['2018-12-11', '2018-12-1 20:22', new Date(), 1541038495345].forEach(item => {
+  console.warn = vtils.noop
+  test('不传参则返回当前时间', () => {
+    expect(vtils.toDate().getTime()).toBe(new Date().getTime())
+  })
+  test('传 null 返回非法时间', () => {
+    expect(vtils.toDate(null).getTime()).toBeNaN()
+  })
+  test('传 Date 实例原样返回', () => {
+    expect(vtils.toDate(now)).toBe(now)
+  })
+  test('解析字符串', () => {
+    ['2018-11-1', '2218-05-02', '1995-1-3 3:6', '1995-1-3 3:6:32', '1995-1-3 3:6:32.232'].forEach(item => {
       expect(
         vtils.toDate(item).getTime()
       ).toBe(
-        toDate(item).getTime()
+        moment(item).toDate().getTime()
+      )
+    })
+  })
+  test('解析时间戳，兼容 unix 时间戳', () => {
+    ['1541049425978', 1541049425978, '1541049383', 1541049383].forEach(item => {
+      expect(
+        vtils.toDate(item).getTime()
+      ).toBe(
+        moment(String(item).length === 10 ? +item * 1000 : +item).toDate().getTime()
       )
     })
   })
