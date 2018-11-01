@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.36.0"></a>
+# [0.36.0](https://github.com/fjc0k/vtils/compare/v0.35.0...v0.36.0) (2018-11-01)
+
+
+### Features
+
+* add toPath ([a769c68](https://github.com/fjc0k/vtils/commit/a769c68))
+
+
+
 <a name="0.35.0"></a>
 # [0.35.0](https://github.com/fjc0k/vtils/compare/v0.34.2...v0.35.0) (2018-11-01)
 
