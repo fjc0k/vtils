@@ -3,7 +3,7 @@ import isNull from './isNull'
 import isString from './isString'
 import isUndefined from './isUndefined'
 
-//                     1. 年     2. 月      3. 日              4. 时      5. 分          6. 秒          7. 毫秒
+//                     1. 年     2. 月      3. 日          4. 时         5. 分          6. 秒          7. 毫秒
 const REGEX_PARSE = /^(\d{4})-?(\d{1,2})-?(\d{0,2}).*?(?:(\d{1,2})(?::(\d{1,2}))?(?::(\d{1,2}))?(?:\.(\d{1,3}))?)?$/
 
 /**
