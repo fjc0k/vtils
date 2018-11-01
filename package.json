@@ -66,5 +66,8 @@
     "tslint": "^5.11.0",
     "typed-we-app": "^1.7.0-update.6",
     "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "date-fns": "^2.0.0-alpha.25"
   }
 }

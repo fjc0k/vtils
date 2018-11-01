@@ -1,3 +1,4 @@
+import { toDate } from 'date-fns'
 import sinon from 'sinon'
 import * as vtils from '../src'
 
@@ -832,9 +833,7 @@ describe('storage', () => {
     expect(vtils.storage.get('time')).toBeNull()
     vtils.storage.set('time', '123')
     expect(vtils.storage.get('time')).toBe('123')
-    const time = new Date()
-    time.setMilliseconds(time.getMilliseconds() + 1000)
-    vtils.storage.set('time', '1234', time)
+    vtils.storage.set('time', '1234', new Date().getTime() + 1000)
     expect(vtils.storage.get('time')).toBe('1234')
     setTimeout(() => {
       expect(vtils.storage.get('time')).toBe('1234')
@@ -897,7 +896,19 @@ describe('result', () => {
   })
   test('函数可传参', () => {
     [(x: number): number => x, (x: number, y: number): number => x + y].forEach(item => {
-      expect(vtils.result(item, 1, 2)).toEqual((item as any)(1, 2))
+      expect(vtils.result(item, 1, 2)).toEqual(item(1, 2))
+    })
+  })
+})
+
+describe('toDate', () => {
+  test('ok', () => {
+    ['2018-12-11', '2018-12-1 20:22', new Date(), 1541038495345].forEach(item => {
+      expect(
+        vtils.toDate(item).getTime()
+      ).toBe(
+        toDate(item).getTime()
+      )
     })
   })
 })

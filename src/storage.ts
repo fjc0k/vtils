@@ -2,6 +2,7 @@ import inBrowser from './inBrowser'
 import inWechatMiniProgram from './inWechatMiniProgram'
 import noop from './noop'
 import result from './result'
+import toDate from './toDate'
 
 export interface StorageDriver {
   get(key: string): any,
@@ -40,12 +41,12 @@ const storage = {
    *
    * @param key 键名
    * @param value 键值，当为函数时，取函数执行后的返回值
-   * @param expire 过期时间
+   * @param expire 过期时间，内部会使用 `toDate` 格式化
    */
-  set(key: string, value: any, expire?: Date): void {
+  set(key: string, value: any, expire?: string | number | Date): void {
     if (value != null) {
       storageDriver.set(key, JSON.stringify({
-        expire: expire && expire.getTime(),
+        expire: (expire != null && toDate(expire).getTime()) || undefined,
         value: result(value)
       }))
     }
