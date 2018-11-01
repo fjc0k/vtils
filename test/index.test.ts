@@ -935,3 +935,11 @@ describe('toDate', () => {
     })
   })
 })
+
+describe('toPath', () => {
+  test('ok', () => {
+    expect(vtils.toPath('ss.dee.3.dew.22')).toEqual(['ss', 'dee', '3', 'dew', '22'])
+    expect(vtils.toPath('ss.dee[3].dew.22[we]')).toEqual(['ss', 'dee', '3', 'dew', '22', 'we'])
+    expect(vtils.toPath('dee[3.2][hello.333]')).toEqual(['dee', '3.2', 'hello.333'])
+  })
+})
