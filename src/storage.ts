@@ -1,5 +1,7 @@
 import inBrowser from './inBrowser'
 import inWechatMiniProgram from './inWechatMiniProgram'
+import isNil from './isNil'
+import isUndefined from './isUndefined'
 import noop from './noop'
 import result from './result'
 import toDate from './toDate'
@@ -44,10 +46,11 @@ const storage = {
    * @param expire 过期时间，内部会使用 `toDate` 格式化
    */
   set(key: string, value: any, expire?: string | number | Date): void {
-    if (value != null) {
+    value = result(value)
+    if (!isUndefined(value)) {
       storageDriver.set(key, JSON.stringify({
-        expire: (expire != null && toDate(expire).getTime()) || undefined,
-        value: result(value)
+        expire: (!isNil(expire) && toDate(expire).getTime()) || undefined,
+        value
       }))
     }
   },
