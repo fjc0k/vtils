@@ -43,7 +43,7 @@ const storage = {
    *
    * @param key 键名
    * @param value 键值，当为函数时，取函数执行后的返回值
-   * @param expire 过期时间，内部会使用 `toDate` 格式化
+   * @param [expire] 过期时间，内部会使用 `toDate` 格式化
    */
   set(key: string, value: any, expire?: string | number | Date): void {
     value = result(value)
@@ -73,6 +73,20 @@ const storage = {
     } catch (err) {
       return result(defaultValue)
     }
+  },
+
+  /**
+   * 获取并设置本地存储的值。
+   *
+   * @param key 要获取和设置的键名
+   * @param defaultValue 获取时的默认值，当为函数时，取函数执行后的返回值
+   * @param [expire] 设置时的过期时间，内部会使用 `toDate` 格式化
+   * @returns 获取到的键值
+   */
+  getRemember(key: string, defaultValue: any, expire?: string | number | Date): any {
+    const value = storage.get(key, defaultValue)
+    storage.set(key, value, expire)
+    return value
   },
 
   /**

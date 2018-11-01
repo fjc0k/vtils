@@ -860,6 +860,10 @@ describe('storage', () => {
     expect(vtils.storage.get('===')).toBe(120)
     expect(vtils.storage.get('====', () => 110)).toBe(110)
   })
+  test('remember', () => {
+    expect(vtils.storage.getRemember('jjj', () => 1)).toBe(1)
+    expect(vtils.storage.get('jjj')).toBe(1)
+  })
 })
 
 describe('randomString', () => {
