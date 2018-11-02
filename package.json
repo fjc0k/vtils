@@ -29,6 +29,7 @@
     "url": "https://github.com/fjc0k"
   },
   "scripts": {
+    "testOnly": "jest",
     "test": "jest --coverage",
     "build": "bili",
     "release": "standard-version -a",

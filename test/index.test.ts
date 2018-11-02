@@ -943,3 +943,29 @@ describe('toPath', () => {
     expect(vtils.toPath('dee[3.2][hello.333]')).toEqual(['dee', '3.2', 'hello.333'])
   })
 })
+
+describe('isChineseIDCardNumber', () => {
+  test('是', () => {
+    [
+      '110101881101231',
+      '110101198811014398',
+      '11010119881101331X',
+      '469001199208187005',
+      '46900119920818180x'
+    ].forEach(item => {
+      expect(vtils.isChineseIDCardNumber(item)).toBeTruthy()
+    })
+  })
+  test('不是', () => {
+    [
+      '110101881301231',
+      '110101198811214398',
+      '11010119881101331a',
+      '469001399208187005',
+      '46900119925818180x',
+      '530627199508918277'
+    ].forEach(item => {
+      expect(vtils.isChineseIDCardNumber(item)).toBeFalsy()
+    })
+  })
+})
