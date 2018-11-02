@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.39.0"></a>
+# [0.39.0](https://github.com/fjc0k/vtils/compare/v0.38.0...v0.39.0) (2018-11-02)
+
+
+### Features
+
+* **isChineseIDCardNumber:** more checks ([774cdf1](https://github.com/fjc0k/vtils/commit/774cdf1))
+
+
+
 <a name="0.38.0"></a>
 # [0.38.0](https://github.com/fjc0k/vtils/compare/v0.37.0...v0.38.0) (2018-11-02)
 
