@@ -955,6 +955,8 @@ describe('isChineseIDCardNumber', () => {
   })
   test('不是', () => {
     [
+      '2000',
+      '190101881101231',
       '110101881301231',
       '110101198811214398',
       '11010119881101331a',
@@ -980,5 +982,29 @@ describe('formatDate', () => {
     expect(vtils.formatDate(now, 'yyyy年m月d日 h:i:s')).toBe(
       moment(now).format('YYYY年M月D日 H:m:s')
     )
+  })
+})
+
+describe('startsWith', () => {
+  test('是', () => {
+    expect(vtils.startsWith('hello', 'he')).toBeTruthy()
+    expect(vtils.startsWith('☺===', '☺')).toBeTruthy()
+    expect(vtils.startsWith('455', '455')).toBeTruthy()
+  })
+  test('否', () => {
+    expect(vtils.startsWith('hello', 'o')).toBeFalsy()
+    expect(vtils.startsWith('☺===', '☺-')).toBeFalsy()
+  })
+})
+
+describe('endsWith', () => {
+  test('是', () => {
+    expect(vtils.endsWith('hello', 'o')).toBeTruthy()
+    expect(vtils.endsWith('☺===', '===')).toBeTruthy()
+    expect(vtils.endsWith('455', '455')).toBeTruthy()
+  })
+  test('否', () => {
+    expect(vtils.endsWith('hello', 'll')).toBeFalsy()
+    expect(vtils.endsWith('☺===', '=.=')).toBeFalsy()
   })
 })
