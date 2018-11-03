@@ -1,6 +1,6 @@
-export type CurrencyFormatValue = number | string
+export type FormatCurrencyValue = number | string
 
-export interface CurrencyFormatOptions {
+export interface FormatCurrencyOptions {
   /** 是否启用千分位逗号分隔 */
   thousands?: boolean,
   /** 是否处理小数 */
@@ -9,7 +9,7 @@ export interface CurrencyFormatOptions {
   precision?: number
 }
 
-const defaultOptions: CurrencyFormatOptions = {
+const defaultOptions: FormatCurrencyOptions = {
   thousands: true,
   decimal: true,
   precision: 2
@@ -22,7 +22,7 @@ const defaultOptions: CurrencyFormatOptions = {
  * @param options 选项
  * @returns 格式化后的值
  */
-export default function currencyFormat(value: CurrencyFormatValue, options?: CurrencyFormatOptions): string {
+export default function formatCurrency(value: FormatCurrencyValue, options?: FormatCurrencyOptions): string {
   value = Number(value)
   options = {
     ...defaultOptions,

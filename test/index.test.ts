@@ -761,36 +761,36 @@ describe('isPromise', () => {
   })
 })
 
-describe('currencyFormat', () => {
+describe('formatCurrency', () => {
   test('默认选项：千分位逗号分隔，保留两位小数，四舍五入', () => {
-    expect(vtils.currencyFormat(20.1)).toBe('20.10')
-    expect(vtils.currencyFormat(2320.121)).toBe('2,320.12')
-    expect(vtils.currencyFormat(2320.126)).toBe('2,320.13')
-    expect(vtils.currencyFormat(840224)).toBe('840,224.00')
+    expect(vtils.formatCurrency(20.1)).toBe('20.10')
+    expect(vtils.formatCurrency(2320.121)).toBe('2,320.12')
+    expect(vtils.formatCurrency(2320.126)).toBe('2,320.13')
+    expect(vtils.formatCurrency(840224)).toBe('840,224.00')
   })
   test('禁用千分位逗号分隔', () => {
-    expect(vtils.currencyFormat(20.1, { thousands: false })).toBe('20.10')
-    expect(vtils.currencyFormat(2320.121, { thousands: false })).toBe('2320.12')
-    expect(vtils.currencyFormat(2320.126, { thousands: false })).toBe('2320.13')
-    expect(vtils.currencyFormat(840224, { thousands: false })).toBe('840224.00')
+    expect(vtils.formatCurrency(20.1, { thousands: false })).toBe('20.10')
+    expect(vtils.formatCurrency(2320.121, { thousands: false })).toBe('2320.12')
+    expect(vtils.formatCurrency(2320.126, { thousands: false })).toBe('2320.13')
+    expect(vtils.formatCurrency(840224, { thousands: false })).toBe('840224.00')
   })
   test('保留 3 位小数', () => {
-    expect(vtils.currencyFormat(20.1, { precision: 3 })).toBe('20.100')
-    expect(vtils.currencyFormat(2320.121, { precision: 3 })).toBe('2,320.121')
-    expect(vtils.currencyFormat(2320.126, { precision: 3 })).toBe('2,320.126')
-    expect(vtils.currencyFormat(840224, { precision: 3 })).toBe('840,224.000')
+    expect(vtils.formatCurrency(20.1, { precision: 3 })).toBe('20.100')
+    expect(vtils.formatCurrency(2320.121, { precision: 3 })).toBe('2,320.121')
+    expect(vtils.formatCurrency(2320.126, { precision: 3 })).toBe('2,320.126')
+    expect(vtils.formatCurrency(840224, { precision: 3 })).toBe('840,224.000')
   })
   test('不保留小数', () => {
-    expect(vtils.currencyFormat(20.1, { precision: 0 })).toBe('20')
-    expect(vtils.currencyFormat(2320.121, { precision: 0 })).toBe('2,320')
-    expect(vtils.currencyFormat(2320.126, { precision: 0 })).toBe('2,320')
-    expect(vtils.currencyFormat(840224, { precision: 0 })).toBe('840,224')
+    expect(vtils.formatCurrency(20.1, { precision: 0 })).toBe('20')
+    expect(vtils.formatCurrency(2320.121, { precision: 0 })).toBe('2,320')
+    expect(vtils.formatCurrency(2320.126, { precision: 0 })).toBe('2,320')
+    expect(vtils.formatCurrency(840224, { precision: 0 })).toBe('840,224')
   })
   test('不处理小数', () => {
-    expect(vtils.currencyFormat(20.1, { decimal: false })).toBe('20.1')
-    expect(vtils.currencyFormat(2320.121, { decimal: false })).toBe('2,320.121')
-    expect(vtils.currencyFormat(2320.126, { decimal: false })).toBe('2,320.126')
-    expect(vtils.currencyFormat(840224, { decimal: false })).toBe('840,224')
+    expect(vtils.formatCurrency(20.1, { decimal: false })).toBe('20.1')
+    expect(vtils.formatCurrency(2320.121, { decimal: false })).toBe('2,320.121')
+    expect(vtils.formatCurrency(2320.126, { decimal: false })).toBe('2,320.126')
+    expect(vtils.formatCurrency(840224, { decimal: false })).toBe('840,224')
   })
 })
 
@@ -967,5 +967,19 @@ describe('isChineseIDCardNumber', () => {
     ].forEach(item => {
       expect(vtils.isChineseIDCardNumber(item)).toBeFalsy()
     })
+  })
+})
+
+describe('formatDate', () => {
+  test('ok', () => {
+    expect(vtils.formatDate('2018-09-20', 'yyyy年m月d日')).toBe('2018年9月20日')
+    expect(vtils.formatDate('2018-09-20', 'yyyy年mm月d日')).toBe('2018年09月20日')
+    expect(vtils.formatDate('2018-09-20', 'yyyy年mm月dd日')).toBe('2018年09月20日')
+    expect(vtils.formatDate('2018-09-20', 'yy年mm月dd日')).toBe('18年09月20日')
+    expect(vtils.formatDate('2018-09-20 3:12:9', 'yy年mm月dd日 hh:ii:ss')).toBe('18年09月20日 03:12:09')
+    expect(vtils.formatDate(1541211914, 'yyyy年m月d日 h:i')).toBe('2018年11月3日 10:25')
+    expect(vtils.formatDate(now, 'yyyy年m月d日 h:i:s')).toBe(
+      moment(now).format('YYYY年M月D日 H:m:s')
+    )
   })
 })
