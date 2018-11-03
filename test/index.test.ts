@@ -974,7 +974,9 @@ describe('formatDate', () => {
     expect(vtils.formatDate('2018-09-20', 'yyyy年mm月dd日')).toBe('2018年09月20日')
     expect(vtils.formatDate('2018-09-20', 'yy年mm月dd日')).toBe('18年09月20日')
     expect(vtils.formatDate('2018-09-20 3:12:9', 'yy年mm月dd日 hh:ii:ss')).toBe('18年09月20日 03:12:09')
-    expect(vtils.formatDate(1541211914, 'yyyy年m月d日 h:i')).toBe('2018年11月3日 10:25')
+    expect(vtils.formatDate(1541211914, 'yyyy年m月d日 h:i')).toBe(
+      moment(1541211914 * 1000).format('YYYY年M月D日 H:m')
+    )
     expect(vtils.formatDate(now, 'yyyy年m月d日 h:i:s')).toBe(
       moment(now).format('YYYY年M月D日 H:m:s')
     )
