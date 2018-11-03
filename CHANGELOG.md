@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.41.0"></a>
+# [0.41.0](https://github.com/fjc0k/vtils/compare/v0.40.2...v0.41.0) (2018-11-03)
+
+
+### Features
+
+* add startsWith, endsWith ([43826a0](https://github.com/fjc0k/vtils/commit/43826a0))
+
+
+
 <a name="0.40.2"></a>
 ## [0.40.2](https://github.com/fjc0k/vtils/compare/v0.40.1...v0.40.2) (2018-11-03)
 
