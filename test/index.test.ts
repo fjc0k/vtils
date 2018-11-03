@@ -907,9 +907,6 @@ describe('result', () => {
 
 describe('toDate', () => {
   console.warn = vtils.noop
-  test('不传参则返回当前时间', () => {
-    expect(vtils.toDate().getTime()).toBe(new Date().getTime())
-  })
   test('传 null 返回非法时间', () => {
     expect(vtils.toDate(null).getTime()).toBeNaN()
   })
