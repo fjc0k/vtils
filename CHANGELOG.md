@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.42.0"></a>
+# [0.42.0](https://github.com/fjc0k/vtils/compare/v0.41.0...v0.42.0) (2018-11-03)
+
+
+### Features
+
+* add isUrl, isEmail ([1870e8e](https://github.com/fjc0k/vtils/commit/1870e8e))
+* add Validator ([3b4149c](https://github.com/fjc0k/vtils/commit/3b4149c))
+
+
+
 <a name="0.41.0"></a>
 # [0.41.0](https://github.com/fjc0k/vtils/compare/v0.40.2...v0.41.0) (2018-11-03)
 
