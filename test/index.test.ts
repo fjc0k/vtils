@@ -1008,3 +1008,49 @@ describe('endsWith', () => {
     expect(vtils.endsWith('☺===', '=.=')).toBeFalsy()
   })
 })
+
+describe('isUrl', () => {
+  test('是', () => {
+    [
+      'http://foo.bar',
+      'http://foo.bar:80',
+      'http://foo.bar:8878878',
+      'http://foo.bar/oop?ddd#cc',
+      'https://foo.bar',
+      'ftp://foo.bar'
+    ].forEach(item => {
+      expect(vtils.isUrl(item)).toBeTruthy()
+    })
+  })
+  test('不是', () => {
+    [
+      'wx://foo.bar',
+      'foo.bar',
+      'http://',
+      'https://'
+    ].forEach(item => {
+      expect(vtils.isUrl(item)).toBeFalsy()
+    })
+  })
+})
+
+describe('isEmail', () => {
+  test('是', () => {
+    [
+      'ee@foo.bar',
+      'ee@foo.bar.ye',
+      'ee.0@foo.1.xx.qq'
+    ].forEach(item => {
+      expect(vtils.isEmail(item)).toBeTruthy()
+    })
+  })
+  test('不是', () => {
+    [
+      'ee@foo.bar.y',
+      '@foo.bar',
+      'foo.bar'
+    ].forEach(item => {
+      expect(vtils.isEmail(item)).toBeFalsy()
+    })
+  })
+})
