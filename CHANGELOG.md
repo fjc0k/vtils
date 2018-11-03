@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.40.0"></a>
+# [0.40.0](https://github.com/fjc0k/vtils/compare/v0.39.0...v0.40.0) (2018-11-03)
+
+
+### Features
+
+* add formatDate ([e74fb0b](https://github.com/fjc0k/vtils/commit/e74fb0b))
+
+
+
 <a name="0.39.0"></a>
 # [0.39.0](https://github.com/fjc0k/vtils/compare/v0.38.0...v0.39.0) (2018-11-02)
 
