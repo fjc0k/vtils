@@ -1054,3 +1054,141 @@ describe('isEmail', () => {
     })
   })
 })
+
+describe('Validator', () => {
+  test('基本可用', async () => {
+    const v = new vtils.Validator({
+      phone: { type: 'mobile' }
+    })
+    expect(await v.validate({ phone: '18087030178' })).toMatchObject({
+      valid: true
+    })
+    expect(await v.validate({ phone: '10086' })).toMatchObject({
+      valid: false,
+      key: 'phone',
+      type: 'mobile'
+    })
+  })
+  test('多个验证条件1', async () => {
+    const v = new vtils.Validator({
+      phone: [
+        { type: 'mobile' },
+        { custom: ({ value }) => value === '18087030178', message: '错啦' }
+      ]
+    })
+    expect(await v.validate({ phone: '18087030178' })).toMatchObject({
+      valid: true
+    })
+    expect(await v.validate({ phone: '18087030179' })).toMatchObject({
+      valid: false,
+      key: 'phone',
+      message: '错啦'
+    })
+  })
+  test('多个验证条件2', async () => {
+    const v = new vtils.Validator({
+      phone: { type: 'mobile', custom: ({ value }) => value === '18087030178', message: '错啦' }
+    })
+    expect(await v.validate({ phone: '18087030178' })).toMatchObject({
+      valid: true
+    })
+    expect(await v.validate({ phone: '18087030179' })).toMatchObject({
+      valid: false,
+      key: 'phone',
+      message: '错啦'
+    })
+  })
+  test('多个验证参数', async () => {
+    const v = new vtils.Validator({
+      phone: { type: 'mobile' },
+      age: { custom: ({ value }) => value > 18, message: '18禁' }
+    })
+    expect(await v.validate({ phone: '18087030178' })).toMatchObject({
+      valid: true
+    })
+    expect(await v.validate({ age: 12 })).toMatchObject({
+      valid: false,
+      key: 'age',
+      message: '18禁'
+    })
+    expect(await v.validate({ phone: '18087030178', age: 16 })).toMatchObject({
+      valid: false,
+      key: 'age',
+      message: '18禁'
+    })
+    expect(await v.validate({ phone: '18087030178', age: 19 })).toMatchObject({
+      valid: true
+    })
+  })
+  test('联合校验，如：两次密码一致', async () => {
+    const v = new vtils.Validator({
+      pass1: { required: true, message: '密码不能为空' },
+      pass2: [
+        { required: true, message: '重复密码不能为空' },
+        { custom: ({ value, data }) => value === data.pass1, message: '两次密码不一致' }
+      ]
+    })
+    expect(await v.validate({ pass1: 'hello', pass2: 'hell0' })).toMatchObject({
+      valid: false,
+      key: 'pass2',
+      message: '两次密码不一致'
+    })
+    expect(await v.validate({ pass1: 'hello', pass2: 'hello' })).toMatchObject({
+      valid: true
+    })
+  })
+  test('多余的 data 无影响', async () => {
+    const v = new vtils.Validator({
+      phone: { type: 'mobile' }
+    })
+    expect(await v.validate({ phone: '18087030178', name: 'Jack', x: 'f' } as any)).toMatchObject({
+      valid: true
+    })
+  })
+  test('综合测试', async () => {
+    const v = new vtils.Validator({
+      min: { min: 10 },
+      max: { max: 100 },
+      len: { len: 4 },
+      re: { custom: /^\d+$/ },
+      int: { type: 'integer' },
+      required: { required: true },
+      async: { custom: () => new Promise(resolve => setTimeout(() => resolve(true), 500)) }
+    })
+    expect(await v.validate({ min: vtils.repeat(1, 9) })).toMatchObject({ valid: false })
+    expect(await v.validate({ min: vtils.repeat(1, 10) })).toMatchObject({ valid: true })
+    expect(await v.validate({ min: vtils.repeat(1, 11) })).toMatchObject({ valid: true })
+
+    expect(await v.validate({ min: vtils.repeat(1, 9).split('') })).toMatchObject({ valid: false })
+    expect(await v.validate({ min: vtils.repeat(1, 10).split('') })).toMatchObject({ valid: true })
+    expect(await v.validate({ min: vtils.repeat(1, 11).split('') })).toMatchObject({ valid: true })
+
+    expect(await v.validate({ max: vtils.repeat(1, 99) })).toMatchObject({ valid: true })
+    expect(await v.validate({ max: vtils.repeat(1, 100) })).toMatchObject({ valid: true })
+    expect(await v.validate({ max: vtils.repeat(1, 101) })).toMatchObject({ valid: false })
+
+    expect(await v.validate({ max: vtils.repeat(1, 99).split('') })).toMatchObject({ valid: true })
+    expect(await v.validate({ max: vtils.repeat(1, 100).split('') })).toMatchObject({ valid: true })
+    expect(await v.validate({ max: vtils.repeat(1, 101).split('') })).toMatchObject({ valid: false })
+
+    expect(await v.validate({ len: vtils.repeat(1, 4) })).toMatchObject({ valid: true })
+    expect(await v.validate({ len: vtils.repeat(1, 3) })).toMatchObject({ valid: false })
+
+    expect(await v.validate({ len: vtils.repeat(1, 4).split('') })).toMatchObject({ valid: true })
+    expect(await v.validate({ len: vtils.repeat(1, 3).split('') })).toMatchObject({ valid: false })
+
+    expect(await v.validate({ re: '123' })).toMatchObject({ valid: true })
+    expect(await v.validate({ re: '1233r' })).toMatchObject({ valid: false })
+
+    expect(await v.validate({ int: 12 })).toMatchObject({ valid: true })
+    expect(await v.validate({ int: '123' })).toMatchObject({ valid: true })
+    expect(await v.validate({ int: '123.5' })).toMatchObject({ valid: false })
+    expect(await v.validate({ int: 'hello' })).toMatchObject({ valid: false })
+
+    expect(await v.validate({ required: '' })).toMatchObject({ valid: false })
+    expect(await v.validate({ required: [] })).toMatchObject({ valid: false })
+    expect(await v.validate({ required: '-' })).toMatchObject({ valid: true })
+
+    expect(await v.validate({ async: ';;;;' })).toMatchObject({ valid: true })
+  })
+})
