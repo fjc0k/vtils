@@ -8,8 +8,8 @@ import forOwn from './forOwn'
  * @returns 结果对象
  */
 export default function pick<
-  T extends object,
-  K extends keyof T
+  T extends { [key: string]: any },
+  K extends Extract<keyof T, string>
 >(obj: T, props: K[]): Pick<T, K> {
   const newObj: any = {}
   forOwn(obj, (value: T[K], key: K) => {
@@ -17,5 +17,5 @@ export default function pick<
       newObj[key] = value
     }
   })
-  return newObj as Pick<T, K>
+  return newObj
 }

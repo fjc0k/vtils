@@ -1,14 +1,5 @@
 import isObject from './isObject'
 
-export type ForOwnCallback<
-  T,
-  K extends keyof T
-> = (
-  value: T[K],
-  key: K,
-  obj: T
-) => any
-
 /**
  * 遍历对象的可枚举属性。若回调函数返回 false，遍历会提前退出。
  *
@@ -16,15 +7,13 @@ export type ForOwnCallback<
  * @param callback 回调函数
  */
 export default function forOwn<
-  T extends object,
-  K extends keyof T
->(obj: T, callback: ForOwnCallback<T, K>): void {
+  T extends { [key: string]: any },
+  K extends Extract<keyof T, string>
+>(obj: T, callback: (value: T[K], key: K, obj: T) => any): void {
   if (isObject(obj)) {
-    let key: K // tslint:disable-line
-    for ((key as any) in obj) {
-      /* istanbul ignore else */
+    for (const key in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        if (callback(obj[key], key, obj) === false) {
+        if (callback(obj[key], key as K, obj) === false) {
           break
         }
       }

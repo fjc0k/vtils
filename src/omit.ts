@@ -10,8 +10,8 @@ export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
  * @returns 结果对象
  */
 export default function omit<
-  T extends object,
-  K extends keyof T
+  T extends { [key: string]: any },
+  K extends Extract<keyof T, string>
 >(obj: T, props: K[]): Omit<T, K> {
   const newObj: any = {}
   forOwn(obj, (value: T[K], key: K) => {
@@ -19,5 +19,5 @@ export default function omit<
       newObj[key] = value
     }
   })
-  return newObj as Omit<T, K>
+  return newObj
 }
