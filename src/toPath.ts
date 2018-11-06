@@ -7,6 +7,9 @@ const cache = Object.create(null)
  * @returns 包含属性路径的数组
  */
 export default function toPath(value: string): string[] {
+  if (value in cache) {
+    return cache[value].slice()
+  }
   const path: string[] = []
   for (
     let prev = 0, cur = 0, stop = null, len = value.length;
@@ -29,5 +32,5 @@ export default function toPath(value: string): string[] {
     }
     cur++
   }
-  return path
+  return cache[value] = path
 }

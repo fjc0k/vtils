@@ -910,8 +910,9 @@ describe('toDate', () => {
   test('传 null 返回非法时间', () => {
     expect(vtils.toDate(null).getTime()).toBeNaN()
   })
-  test('传 Date 实例原样返回', () => {
-    expect(vtils.toDate(now)).toBe(now)
+  test('传 Date 实例返回其克隆', () => {
+    expect(vtils.toDate(now) === now).toBeFalsy()
+    expect(vtils.toDate(now)).toEqual(now)
   })
   test('解析字符串', () => {
     ['2018-11-1', '2218-05-02', '1995-1-3 3:6', '1995-1-3 3:6:32', '1995-1-3 3:6:32.232'].forEach(item => {
