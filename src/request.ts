@@ -10,7 +10,7 @@ export interface RequestOptions {
   header?: { [key: string]: string },
   method?: 'GET' | 'POST',
   requestDataType?: 'json' | 'querystring',
-  responseDataType?: 'json' | 'text' | 'jsonp',
+  responseDataType?: 'json' | 'text',
   withCredentials?: boolean
 }
 
@@ -26,12 +26,28 @@ const defaultRequestOptions: Partial<RequestOptions> = {
   responseDataType: 'json'
 }
 
-const request = (options: RequestOptions) => {
-  return new Promise((resolve, reject) => {
+export class RequestFile {
+  private file: string | File
+  constructor(file: string | File) {
+    this.file = file
+  }
+  public output(): string | File {
+    return this.file
+  }
+}
+
+export default function request<T extends RequestOptions>(options: T): Promise<{
+  data: T['responseDataType'] extends 'json' ? any : string,
+  status: number
+}> {
+  return new Promise<{
+    data: any,
+    status: number
+  }>((resolve, reject) => {
     // 设置默认参数
     options = {
       ...defaultRequestOptions,
-      ...options
+      ...(options as any)
     }
 
     // 解析文件参数
@@ -62,8 +78,8 @@ const request = (options: RequestOptions) => {
           formData: options.data,
           success: res => {
             resolve({
-              data: res.data as string,
-              statusCode: res.statusCode as number
+              data: res.data,
+              status: res.statusCode
             })
           },
           fail: reject
@@ -79,8 +95,7 @@ const request = (options: RequestOptions) => {
           success: res => {
             resolve({
               data: res.data as string,
-              statusCode: res.statusCode as number,
-              header: res.header as object
+              status: res.statusCode
             })
           },
           fail: reject
@@ -91,26 +106,40 @@ const request = (options: RequestOptions) => {
     // 浏览器请求
     if (inBrowser()) {
       const isGet = options.method === 'GET'
+      const queryString = objectToQueryString(options.data)
       const url = options.url + (
-        isGet ? (options.url.indexOf('?') > -1 ? '&' : '?') + objectToQueryString(options.data) : ''
+        isGet ? (options.url.indexOf('?') > -1 ? '&' : '?') + queryString : ''
       )
       const xhr = new XMLHttpRequest()
       xhr.open(options.method, url)
+      xhr.responseType = 'text'
       try {
-        forOwn(options.header, (head, key) => {
-          xhr.setRequestHeader(key, head)
+        forOwn(options.header, (value, name) => {
+          xhr.setRequestHeader(name, value)
         })
       } catch (err) {}
+      if (options.withCredentials) {
+        xhr.withCredentials = true
+      }
+      xhr.onload = () => {
+        resolve({
+          data: xhr.responseText,
+          status: xhr.status
+        })
+      }
+      xhr.onerror = reject
+      xhr.ontimeout = reject
+      xhr.onabort = reject
+      xhr.send(isGet ? null : queryString)
     }
+  }).then(res => {
+    if (options.responseDataType === 'json') {
+      try {
+        res.data = JSON.parse(res.data)
+      } catch (err) {
+        res.data = {}
+      }
+    }
+    return res
   })
-}
-
-export class RequestFile {
-  private file: string | File
-  constructor(file: string | File) {
-    this.file = file
-  }
-  public output(): string | File {
-    return this.file
-  }
 }
