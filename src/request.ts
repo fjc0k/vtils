@@ -1,5 +1,8 @@
 import forOwn from './forOwn'
+import inBrowser from './inBrowser'
 import inWechatMiniProgram from './inWechatMiniProgram'
+import { objectToQueryString } from './jsonp'
+import omit from './omit'
 
 export interface RequestOptions {
   url: string,
@@ -25,12 +28,13 @@ const defaultRequestOptions: Partial<RequestOptions> = {
 
 const request = (options: RequestOptions) => {
   return new Promise((resolve, reject) => {
+    // 设置默认参数
     options = {
       ...defaultRequestOptions,
       ...options
     }
-    options.header['Content-Type'] = options.header['Content-Type'] || requestDataTypeToContentType[options.requestDataType]
 
+    // 解析文件参数
     let file: { key: string, value: RequestFile }
     forOwn(options.data, (value, key) => {
       if (value instanceof RequestFile) {
@@ -38,17 +42,65 @@ const request = (options: RequestOptions) => {
         return false
       }
     })
+    if (file) {
+      options.data = omit(options.data, [file.key])
+    }
 
+    // 设置 Content-Type
+    options.header['Content-Type'] = options.header['Content-Type'] || (
+      file ? 'multipart/form-data' : requestDataTypeToContentType[options.requestDataType]
+    )
+
+    // 小程序请求
     if (inWechatMiniProgram()) {
-      wx.request({
-        ...options,
-        success: () => {
-          resolve()
-        },
-        fail: () => {
-          reject()
-        }
-      })
+      if (file) {
+        wx.uploadFile({
+          url: options.url,
+          filePath: file.value.output() as string,
+          name: file.key,
+          header: options.header,
+          formData: options.data,
+          success: res => {
+            resolve({
+              data: res.data as string,
+              statusCode: res.statusCode as number
+            })
+          },
+          fail: reject
+        })
+      } else {
+        wx.request({
+          url: options.url,
+          data: options.data,
+          header: options.header,
+          method: options.method,
+          dataType: 'text',
+          responseType: 'text',
+          success: res => {
+            resolve({
+              data: res.data as string,
+              statusCode: res.statusCode as number,
+              header: res.header as object
+            })
+          },
+          fail: reject
+        })
+      }
+    }
+
+    // 浏览器请求
+    if (inBrowser()) {
+      const isGet = options.method === 'GET'
+      const url = options.url + (
+        isGet ? (options.url.indexOf('?') > -1 ? '&' : '?') + objectToQueryString(options.data) : ''
+      )
+      const xhr = new XMLHttpRequest()
+      xhr.open(options.method, url)
+      try {
+        forOwn(options.header, (head, key) => {
+          xhr.setRequestHeader(key, head)
+        })
+      } catch (err) {}
     }
   })
 }

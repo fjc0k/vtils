@@ -4,7 +4,7 @@ import noop from './noop'
 import randomString from './randomString'
 import reduce from './reduce'
 
-const objectToQueryString = (obj: object): string => {
+export const objectToQueryString = (obj: object): string => {
   return reduce(
     obj,
     (str, value, key) => str += `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`,
