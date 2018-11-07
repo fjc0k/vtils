@@ -1193,3 +1193,16 @@ describe('Validator', () => {
     expect(await v.validate({ async: ';;;;' })).toMatchObject({ valid: true })
   })
 })
+
+describe('isEmpty', () => {
+  test('是', () => {
+    [undefined, null, '', false, true, [], {}, Object.create(null)].forEach(item => {
+      expect(vtils.isEmpty(item)).toBeTruthy()
+    })
+  })
+  test('不是', () => {
+    [0, -1, ' ', /d/, () => {}, { x: null }, { y: undefined }, [undefined]].forEach(item => {
+      expect(vtils.isEmpty(item)).toBeFalsy()
+    })
+  })
+})
