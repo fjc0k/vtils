@@ -21,6 +21,7 @@ const requestDataTypeToContentType: { [key in RequestOptions['requestDataType']]
 
 const defaultRequestOptions: Partial<RequestOptions> = {
   data: {},
+  header: {},
   method: 'GET',
   requestDataType: 'json',
   responseDataType: 'json'
