@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.44.0"></a>
+# [0.44.0](https://github.com/fjc0k/vtils/compare/v0.43.0...v0.44.0) (2018-11-07)
+
+
+### Features
+
+* add isEmpty ([482ac55](https://github.com/fjc0k/vtils/commit/482ac55))
+
+
+
 <a name="0.43.0"></a>
 # [0.43.0](https://github.com/fjc0k/vtils/compare/v0.42.0...v0.43.0) (2018-11-06)
 
