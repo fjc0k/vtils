@@ -1207,12 +1207,33 @@ describe('isEmpty', () => {
   })
 })
 
-describe('request', () => {
-  test('ok', async () => {
-    const data: any = await vtils.request({
-      url: 'https://jsonplaceholder.typicode.com/todos/1'
-    })
-    expect(data.status).toBe(200)
-    expect(data.data.id).toBe(1)
+// describe('request', () => {
+//   test('ok', async () => {
+//     const data: any = await vtils.request({
+//       url: 'https://jsonplaceholder.typicode.com/todos/1'
+//     })
+//     expect(data.status).toBe(200)
+//     expect(data.data.id).toBe(1)
+//   })
+// })
+
+describe('get', () => {
+  test('ok', () => {
+    const obj: any = {
+      x: 1,
+      y: [1, 2, { z: null }],
+      z: { we: 'hello' },
+      '1.2': 1.2
+    }
+    expect(vtils.get(obj, 'x')).toBe(1)
+    expect(vtils.get(obj, 'y[1]')).toBe(2)
+    expect(vtils.get(obj, 'y[2].z')).toBe(null)
+    expect(vtils.get(obj, 'z.we')).toBe('hello')
+    expect(vtils.get(obj, 'z.we[1]')).toBe('e')
+    expect(vtils.get(obj, 'z.we[1].xxx')).toBe(undefined)
+    expect(vtils.get(obj, 'yyy')).toBe(undefined)
+    expect(vtils.get(obj, 'yyy', 2013)).toBe(2013)
+    expect(vtils.get(obj, '[1.2]')).toBe(1.2)
+    expect(vtils.get(obj, '1.2')).toBe(undefined)
   })
 })
