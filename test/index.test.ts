@@ -1214,11 +1214,5 @@ describe('request', () => {
     })
     expect(data.status).toBe(200)
     expect(data.data.id).toBe(1)
-    const data2: any = await vtils.request({
-      url: 'https://jsonplaceholder.typicode.com/todos/1',
-      method: 'POST'
-    })
-    expect(data2.status).toBe(200)
-    expect(data2.data.id).toBe(1)
   })
 })
