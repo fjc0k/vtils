@@ -1271,3 +1271,12 @@ describe('set', () => {
     })
   })
 })
+
+describe('range', () => {
+  test('ok', () => {
+    expect(vtils.range(2)).toEqual([0, 1])
+    expect(vtils.range(2, 5)).toEqual([2, 3, 4])
+    expect(vtils.range(5, 10, 2)).toEqual([5, 7, 9])
+    expect(vtils.range(-3)).toEqual([-3, -2, -1])
+  })
+})
