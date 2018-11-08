@@ -1237,3 +1237,37 @@ describe('get', () => {
     expect(vtils.get(obj, '1.2')).toBe(undefined)
   })
 })
+
+describe('set', () => {
+  test('ok', () => {
+    const fn = () => {}
+    const obj: any = {
+      x: 1,
+      y: [1, 2, { z: null }],
+      z: { we: 'hello' },
+      '1.2': 1.2,
+      fn
+    }
+    vtils.set(obj, 'x', 2)
+    vtils.set(obj, 'y[1]', '88')
+    vtils.set(obj, 'y[2].z', [9])
+    vtils.set(obj, 'z.we', {})
+    vtils.set(obj, 'z.we[1]', null)
+    vtils.set(obj, 'z.we[1].xxx', undefined)
+    vtils.set(obj, 'yyy', '?')
+    vtils.set(obj, '[1.2]', [])
+    vtils.set(obj, '1.2', ' ')
+    vtils.set(obj, 'fn.hello', 'world')
+    expect(obj).toEqual({
+      x: 2,
+      y: [1, '88', { z: [9] }],
+      z: { we: { 1: { xxx: undefined } } },
+      yyy: '?',
+      '1.2': [],
+      1: {
+        2: ' '
+      },
+      fn
+    })
+  })
+})
