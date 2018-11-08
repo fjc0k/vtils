@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.46.0"></a>
+# [0.46.0](https://github.com/fjc0k/vtils/compare/v0.45.0...v0.46.0) (2018-11-08)
+
+
+### Features
+
+* add set ([8bb14d3](https://github.com/fjc0k/vtils/commit/8bb14d3))
+
+
+
 <a name="0.45.0"></a>
 # [0.45.0](https://github.com/fjc0k/vtils/compare/v0.44.0...v0.45.0) (2018-11-07)
 
