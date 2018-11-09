@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.49.0"></a>
+# [0.49.0](https://github.com/fjc0k/vtils/compare/v0.47.1...v0.49.0) (2018-11-09)
+
+
+### Bug Fixes
+
+* yarn ([534b2f0](https://github.com/fjc0k/vtils/commit/534b2f0))
+
+
+### Features
+
+* add times, sample ([6d70aee](https://github.com/fjc0k/vtils/commit/6d70aee))
+
+
+
 <a name="0.47.1"></a>
 ## [0.47.1](https://github.com/fjc0k/vtils/compare/v0.47.0...v0.47.1) (2018-11-09)
 
