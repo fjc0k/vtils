@@ -1280,3 +1280,26 @@ describe('range', () => {
     expect(vtils.range(-3)).toEqual([-3, -2, -1])
   })
 })
+
+describe('times', () => {
+  test('ok', () => {
+    expect(vtils.times(4, () => 1)).toEqual([1, 1, 1, 1])
+    expect(vtils.times(4, index => index)).toEqual([0, 1, 2, 3])
+    expect(vtils.times(0, index => index)).toEqual([])
+  })
+})
+
+describe('sample', () => {
+  test('数组', () => {
+    const arr: any[] = [1, '', false, null]
+    vtils.times(1000, () => {
+      expect(arr).toContainEqual(vtils.sample(arr))
+    })
+  })
+  test('对象', () => {
+    const obj: object = { 1: '3', x: null, '-': '@' }
+    vtils.times(1000, () => {
+      expect(Object.values(obj)).toContainEqual(vtils.sample(obj))
+    })
+  })
+})

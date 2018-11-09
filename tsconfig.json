@@ -15,6 +15,7 @@
     ]
   },
   "include": [
+    "test",
     "src",
     "global.d.ts"
   ],
