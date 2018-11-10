@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="el-tooltip" color-interpolation-filters="sRGB" style="margin:auto" version="1" viewBox="0 0 340 250">
+  <g fill="#1A1A1A" class="initialiconsvg">
+    <g class="tp-name">
+      <g transform="translate(72.1 111)">
+        <path fill="none" d="M0 0h56v46H0z"/>
+        <svg width="56" height="46" class="imagesvg-svg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.1 35.9">
+            <g data-name="图层 2">
+              <path fill="#009245" d="M0 0h16.6l-6 6.2 11.5 22.2L33.3 6.2l-6-6.2h16.8L26 36h-7.8z" data-name="Layer 1"/>
+            </g>
+          </svg>
+        </svg>
+      </g>
+      <path d="M140 99.1v12.1H131v7.9h8.9v22.2c0 10.4 5.3 16.3 15.1 16a22 22 0 0 0 8.8-2.1l-2.6-7.6c-1.9 1-3.8 1.5-5.7 1.5-4.6 0-6.6-3-6.6-7.8V119h13.5v-7.9H149v-13zm41.2 4.4c3 0 5.7-2 5.7-5.6 0-3.8-2.7-5.9-5.7-5.9s-5.7 2-5.7 5.7 2.8 5.8 5.7 5.8zm-11.6 7.4v8h6.9v29.6h-7.1v8.2h23v-8.2h-6.8v-37.6zm28.8-10.7h7v48.3H198v8.2h23.1v-8.2h-6.8V92h-16zm67 13.3c-5-2.6-11.7-4-17.6-4-8.4 0-19 4.2-19 14.3 0 9.8 9.3 12.1 18.6 13.3 6.8.7 11.6 2.1 11.5 6.4-.3 5.3-6.7 6-10.6 6-3.8 0-7.5-.8-11.1-2.5l-.4-6.6h-8l-.2 12c6.4 3.9 12 5.6 19.5 5.6 11 0 19.5-5 19.8-14.1.1-11.8-11.4-13.5-20-14.5-5-.5-10.1-1.7-10.2-5.6 0-4.2 4.5-6.7 10.2-6.5 2.2 0 7.3.5 9.2 1.5l.5 6.6h7.8z"/>
+    </g>
+  </g>
+</svg>
