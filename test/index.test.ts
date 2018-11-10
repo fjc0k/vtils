@@ -1303,3 +1303,12 @@ describe('sample', () => {
     })
   })
 })
+
+describe('inNode', () => {
+  test('ok', () => {
+    expect(vtils.inNode()).toBeTruthy()
+    const cb = sinon.fake()
+    vtils.inNode(cb)
+    expect(cb.calledOnce).toBeTruthy()
+  })
+})
