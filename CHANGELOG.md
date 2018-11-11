@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.50.5"></a>
+## [0.50.5](https://github.com/fjc0k/vtils/compare/v0.50.4...v0.50.5) (2018-11-11)
+
+
+### Bug Fixes
+
+* toPath ([82ab40a](https://github.com/fjc0k/vtils/commit/82ab40a))
+
+
+
 <a name="0.50.4"></a>
 ## [0.50.4](https://github.com/fjc0k/vtils/compare/v0.50.3...v0.50.4) (2018-11-11)
 
