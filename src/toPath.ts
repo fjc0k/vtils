@@ -1,4 +1,4 @@
-import { isArray } from 'util'
+import isArray from './isArray'
 
 export type ToPathValue = string | Array<string | number>
 export type ToPathResult = Array<string | number>
