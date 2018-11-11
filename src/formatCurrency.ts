@@ -38,6 +38,7 @@ export default function formatCurrency(value: FormatCurrencyValue, options?: For
       value = `,${integer.slice(-3)}${value}`
       integer = integer.slice(0, integer.length - 3)
     }
+    /* istanbul ignore else */
     if (integer) {
       value = integer + value
     }

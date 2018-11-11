@@ -63,15 +63,16 @@ const storage = {
    * @returns 获取到的键值
    */
   get(key: string, defaultValue: any = null): any {
+    const rawValue: string = storageDriver.get(key)
     try {
-      const { expire, value = defaultValue } = JSON.parse(storageDriver.get(key))
+      const { expire, value = defaultValue } = JSON.parse(rawValue)
       if (expire && expire < new Date().getTime()) {
         storage.remove(key)
         return result(defaultValue)
       }
       return result(value)
     } catch (err) {
-      return result(defaultValue)
+      return result(rawValue != null ? rawValue : defaultValue)
     }
   },
 

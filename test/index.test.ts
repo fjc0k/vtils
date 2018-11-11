@@ -864,6 +864,10 @@ describe('storage', () => {
     expect(vtils.storage.getRemember('jjj', () => 1)).toBe(1)
     expect(vtils.storage.get('jjj')).toBe(1)
   })
+  test('获取非预期的值返回原始值', () => {
+    window.localStorage.setItem('unexpected', 'undefined')
+    expect(vtils.storage.get('unexpected')).toBe('undefined')
+  })
 })
 
 describe('randomString', () => {
@@ -907,6 +911,13 @@ describe('result', () => {
 
 describe('toDate', () => {
   console.warn = vtils.noop
+  test('不传值返回当前时间', () => {
+    expect(
+      Math.round(vtils.toDate().getTime() / 1000)
+    ).toBe(
+      Math.round(new Date().getTime() / 1000)
+    )
+  })
   test('传 null 返回非法时间', () => {
     expect(vtils.toDate(null).getTime()).toBeNaN()
   })
@@ -1150,12 +1161,15 @@ describe('Validator', () => {
     const v = new vtils.Validator({
       min: { min: 10 },
       max: { max: 100 },
+      numRange: { type: 'number', min: 5, max: 10 },
       len: { len: 4 },
       re: { custom: /^\d+$/ },
       int: { type: 'integer' },
       required: { required: true },
+      fn: { custom: ({ value }) => value > 20 },
       async: { custom: () => new Promise(resolve => setTimeout(() => resolve(true), 500)) }
     })
+    expect(await v.validate({ min: vtils.repeat(1, 9) })).toMatchObject({ valid: false })
     expect(await v.validate({ min: vtils.repeat(1, 9) })).toMatchObject({ valid: false })
     expect(await v.validate({ min: vtils.repeat(1, 10) })).toMatchObject({ valid: true })
     expect(await v.validate({ min: vtils.repeat(1, 11) })).toMatchObject({ valid: true })
@@ -1171,6 +1185,15 @@ describe('Validator', () => {
     expect(await v.validate({ max: vtils.repeat(1, 99).split('') })).toMatchObject({ valid: true })
     expect(await v.validate({ max: vtils.repeat(1, 100).split('') })).toMatchObject({ valid: true })
     expect(await v.validate({ max: vtils.repeat(1, 101).split('') })).toMatchObject({ valid: false })
+
+    expect(await v.validate({ numRange: 1 })).toMatchObject({ valid: false })
+    expect(await v.validate({ numRange: '1' })).toMatchObject({ valid: false })
+    expect(await v.validate({ numRange: 11 })).toMatchObject({ valid: false })
+    expect(await v.validate({ numRange: '11' })).toMatchObject({ valid: false })
+    await Promise.all(vtils.range(5, 11).map(async item => {
+      expect(await v.validate({ numRange: item })).toMatchObject({ valid: true })
+      expect(await v.validate({ numRange: String(item) })).toMatchObject({ valid: true })
+    }))
 
     expect(await v.validate({ len: vtils.repeat(1, 4) })).toMatchObject({ valid: true })
     expect(await v.validate({ len: vtils.repeat(1, 3) })).toMatchObject({ valid: false })
@@ -1189,6 +1212,9 @@ describe('Validator', () => {
     expect(await v.validate({ required: '' })).toMatchObject({ valid: false })
     expect(await v.validate({ required: [] })).toMatchObject({ valid: false })
     expect(await v.validate({ required: '-' })).toMatchObject({ valid: true })
+
+    expect(await v.validate({ fn: 1 })).toMatchObject({ valid: false })
+    expect(await v.validate({ fn: 21 })).toMatchObject({ valid: true })
 
     expect(await v.validate({ async: ';;;;' })).toMatchObject({ valid: true })
   })
@@ -1235,6 +1261,7 @@ describe('get', () => {
     expect(vtils.get(obj, 'yyy', 2013)).toBe(2013)
     expect(vtils.get(obj, '[1.2]')).toBe(1.2)
     expect(vtils.get(obj, '1.2')).toBe(undefined)
+    expect(vtils.get(obj, ['y', 1])).toBe(2)
   })
 })
 

@@ -1,5 +1,5 @@
 import has from './has'
-import toPath from './toPath'
+import toPath, { ToPathValue } from './toPath'
 
 /**
  * 根据 obj 对象的路径 path 获取值。
@@ -9,12 +9,12 @@ import toPath from './toPath'
  * @param [defaultValue] 默认值
  * @returns 检索结果
  */
-export default function get(obj: object, path: string | string[], defaultValue?: any): any {
-  path = Array.isArray(path) ? path : toPath(path)
+export default function get(obj: object, path: ToPathValue, defaultValue?: any): any {
+  const normalizedPath = toPath(path)
   let last: any = obj
-  for (let i = 0, len = path.length; i < len; i++) {
-    if (has(last, path[i])) {
-      last = last[path[i]]
+  for (let i = 0, len = normalizedPath.length; i < len; i++) {
+    if (has(last, normalizedPath[i] as string)) {
+      last = last[normalizedPath[i]]
       if (i === len - 1) {
         return last
       }

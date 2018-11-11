@@ -10,6 +10,7 @@ export default function upperCaseFirst(str: string): string {
   if (!str || typeof str !== 'string') {
     return str
   }
+  /* istanbul ignore else */
   if (!(str in cache)) {
     cache[str] = str.charAt(0).toUpperCase() + str.slice(1)
   }

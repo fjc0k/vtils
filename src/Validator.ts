@@ -85,6 +85,7 @@ function validate<D>(data: D, key: keyof D, rule: ValidatorRule): Promise<boolea
 
     // custom
     if (custom) {
+      /* istanbul ignore else */
       if (isRegExp(custom)) {
         return resolve(custom.test(value))
       } else if (isFunction(custom)) {
@@ -123,7 +124,8 @@ export default class Validator<R extends ValidatorRules> {
     { valid: true } | (
       ValidatorRule & {
         valid: false,
-        key: keyof D
+        key: keyof D,
+        value: D[keyof D]
       }
     )
   > {
@@ -142,7 +144,8 @@ export default class Validator<R extends ValidatorRules> {
                   } else {
                     rejectRule({
                       ...rule,
-                      key
+                      key,
+                      value: data[key]
                     })
                   }
                 })

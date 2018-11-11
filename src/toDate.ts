@@ -29,7 +29,7 @@ export default function toDate(value?: string | number | Date): Date {
   if (isString(value) && (/.*[^Z]$/i.test(value)) && (reg = value.match(REGEX_PARSE))) {
     const regNum: number[] = reg.slice(1, 8).map(s => parseInt(s, 10))
     return new Date(
-      regNum[0], regNum[1] - 1, regNum[2] || 1,
+      regNum[0], regNum[1] - 1, regNum[2],
       regNum[3] || 0, regNum[4] || 0, regNum[5] || 0,
       regNum[6] || 0
     )
