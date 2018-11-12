@@ -881,16 +881,6 @@ describe('randomString', () => {
   })
 })
 
-describe('jsonp', () => {
-  test('ok', () => {
-    expect(
-      vtils.isPromise(
-        vtils.jsonp('https://jsonplaceholder.typicode.com/todos/1', { test: 1 })
-      )
-    ).toBeTruthy()
-  })
-})
-
 describe('result', () => {
   test('非函数返回原值', () => {
     [null, undefined, 1, false, {}, [], /ddd/, new Date()].forEach(item => {
@@ -1232,16 +1222,6 @@ describe('isEmpty', () => {
     })
   })
 })
-
-// describe('request', () => {
-//   test('ok', async () => {
-//     const data: any = await vtils.request({
-//       url: 'https://jsonplaceholder.typicode.com/todos/1'
-//     })
-//     expect(data.status).toBe(200)
-//     expect(data.data.id).toBe(1)
-//   })
-// })
 
 describe('get', () => {
   test('ok', () => {

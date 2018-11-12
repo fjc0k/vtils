@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import inBrowser from './inBrowser'
 import isObject from './isObject'
 import noop from './noop'

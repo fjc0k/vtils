@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import forOwn from './forOwn'
 import inBrowser from './inBrowser'
 import inWechatMiniProgram from './inWechatMiniProgram'
