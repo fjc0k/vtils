@@ -1339,3 +1339,28 @@ describe('inNode', () => {
     expect(cb.calledOnce).toBeTruthy()
   })
 })
+
+describe('keyBy', () => {
+  const users = vtils.range(1, 100).map(i => ({
+    id: i,
+    name: 'name',
+    age: i,
+    likes: [
+      'like1',
+      'like2'
+    ]
+  }))
+  test('键路径', () => {
+    const userById = vtils.keyBy(users, 'id')
+    expect(Object.keys(userById).map(Number).sort()).toEqual(vtils.range(1, 100).sort())
+    expect(vtils.values(userById).sort()).toEqual(users.sort())
+    const userByLike1 = vtils.keyBy(users, 'likes[0]')
+    expect(userByLike1).toEqual({ like1: users[users.length - 1] })
+  })
+  test('函数', () => {
+    const userByNamePlusId = vtils.keyBy(users, item => `${item.name}${item.id}`)
+    Object.keys(userByNamePlusId).forEach(namePlusId => {
+      expect(namePlusId).toMatch(/^name([1-9]|[1-9][0-9])$/)
+    })
+  })
+})
