@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.51.0"></a>
+# [0.51.0](https://github.com/fjc0k/vtils/compare/v0.50.6...v0.51.0) (2018-11-12)
+
+
+### Features
+
+* add keyBy ([6e839fe](https://github.com/fjc0k/vtils/commit/6e839fe))
+
+
+
 <a name="0.50.6"></a>
 ## [0.50.6](https://github.com/fjc0k/vtils/compare/v0.50.5...v0.50.6) (2018-11-11)
 
