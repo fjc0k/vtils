@@ -1306,7 +1306,7 @@ describe('sample', () => {
   test('对象', () => {
     const obj: object = { 1: '3', x: null, '-': '@' }
     vtils.times(1000, () => {
-      expect(Object.values(obj)).toContainEqual(vtils.sample(obj))
+      expect(vtils.values(obj)).toContainEqual(vtils.sample(obj))
     })
   })
 })
