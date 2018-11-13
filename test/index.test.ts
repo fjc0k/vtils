@@ -903,10 +903,10 @@ describe('toDate', () => {
   console.warn = vtils.noop
   test('不传值返回当前时间', () => {
     expect(
-      Math.round(vtils.toDate().getTime() / 1000)
-    ).toBe(
-      Math.round(new Date().getTime() / 1000)
-    )
+      Math.abs(
+        Math.round(vtils.toDate().getTime() / 1000) - Math.round(new Date().getTime() / 1000)
+      ) < 5
+    ).toBeTruthy()
   })
   test('传 null 返回非法时间', () => {
     expect(vtils.toDate(null).getTime()).toBeNaN()
