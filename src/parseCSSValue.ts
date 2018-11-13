@@ -1,5 +1,7 @@
 export interface CSSValue {
+  /** CSS 数值 */
   value: number,
+  /** CSS 单位 */
   unit: string
 }
 
@@ -30,4 +32,11 @@ export default function parseCSSValue(
       value: Number(value),
       unit: defaultUnit
     }
+}
+
+export interface CSSValue {
+  /** CSS 数值 */
+  value: number,
+  /** CSS 单位 */
+  unit: string
 }

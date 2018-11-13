@@ -461,53 +461,53 @@ describe('supportPassiveEventListener', () => {
   })
 })
 
-describe('parseCssValue', () => {
+describe('parseCSSValue', () => {
   test('数字', () => {
-    expect(vtils.parseCssValue(12)).toEqual({
+    expect(vtils.parseCSSValue(12)).toEqual({
       value: 12,
       unit: 'px'
     })
-    expect(vtils.parseCssValue(-4)).toEqual({
+    expect(vtils.parseCSSValue(-4)).toEqual({
       value: -4,
       unit: 'px'
     })
-    expect(vtils.parseCssValue('12')).toEqual({
+    expect(vtils.parseCSSValue('12')).toEqual({
       value: 12,
       unit: 'px'
     })
-    expect(vtils.parseCssValue('-4')).toEqual({
+    expect(vtils.parseCSSValue('-4')).toEqual({
       value: -4,
       unit: 'px'
     })
   })
   test('CSS 值', () => {
-    expect(vtils.parseCssValue('12px')).toEqual({
+    expect(vtils.parseCSSValue('12px')).toEqual({
       value: 12,
       unit: 'px'
     })
-    expect(vtils.parseCssValue('-4px')).toEqual({
+    expect(vtils.parseCSSValue('-4px')).toEqual({
       value: -4,
       unit: 'px'
     })
-    expect(vtils.parseCssValue('10%')).toEqual({
+    expect(vtils.parseCSSValue('10%')).toEqual({
       value: 10,
       unit: '%'
     })
-    expect(vtils.parseCssValue('2.5em')).toEqual({
+    expect(vtils.parseCSSValue('2.5em')).toEqual({
       value: 2.5,
       unit: 'em'
     })
-    expect(vtils.parseCssValue('.399999rem')).toEqual({
+    expect(vtils.parseCSSValue('.399999rem')).toEqual({
       value: .399999,
       unit: 'rem'
     })
   })
   test('默认单位', () => {
-    expect(vtils.parseCssValue(12, 'em')).toEqual({
+    expect(vtils.parseCSSValue(12, 'em')).toEqual({
       value: 12,
       unit: 'em'
     })
-    expect(vtils.parseCssValue('12', 'em')).toEqual({
+    expect(vtils.parseCSSValue('12', 'em')).toEqual({
       value: 12,
       unit: 'em'
     })
@@ -534,12 +534,12 @@ describe('cssTransform', () => {
   const el = document.createElement('div')
   document.body.appendChild(el)
   test('cssTransform', () => {
-    vtils.cssTransform(el, 'translateX(100px)', '.3s ease')
+    vtils.transformElement(el, 'translateX(100px)', '.3s ease')
     expect(el.style.transform).toBe('translateX(100px)')
     expect(el.style.transition).toBe('transform .3s ease')
   })
   test('stopCssTransform', () => {
-    vtils.stopCssTransform(el)
+    vtils.transformElement(el, 'stop')
     expect(el.style.transition).toBe('none')
   })
 })
