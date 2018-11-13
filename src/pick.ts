@@ -1,7 +1,7 @@
 import forOwn from './forOwn'
 
 /**
- * 创建一个从 obj 中选中的属性的对象。
+ * 创建一个从 `obj` 中选中的属性的对象。
  *
  * @param obj 来源对象
  * @param props 选中的属性

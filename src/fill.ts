@@ -13,7 +13,7 @@ function fill(
 ): any[]
 
 /**
- * 使用 value 来填充（替换） arr，从 start 位置开始, 到 end 位置结束（但不包括 end 位置）。
+ * 使用 `value` 来填充（替换） `arr`，从 `start` 位置开始, 到 `end` 位置结束（但不包括 `end` 位置）。
  *
  * @param arr 要填充改变的数组
  * @param [value] 填充（替换）值

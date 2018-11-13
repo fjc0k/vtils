@@ -1,7 +1,7 @@
 const cache: { [key: string]: string } = Object.create(null)
 
 /**
- * 转换 str 的首字母为大写。
+ * 转换 `str` 的首字母为大写。
  *
  * @param str 要转换的字符串
  * @returns 转换后的字符串

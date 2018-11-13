@@ -13,6 +13,14 @@ export const objectToQueryString = (obj: object): string => {
   )
 }
 
+/**
+ * 发起 jsonp 请求。
+ *
+ * @param url 请求地址
+ * @param [data] 请求数据
+ * @param [callbackParameter='callback'] 携带回调函数名的参数
+ * @returns 携带返回结果的 Promise 值
+ */
 export default function jsonp(url: string, data?: string | object, callbackParameter = 'callback'): Promise<any> {
   return new Promise(
     inBrowser()

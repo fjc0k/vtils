@@ -1,7 +1,7 @@
 import isObject from './isObject'
 
 /**
- * 检查 value 是否像一个 Promise。
+ * 检查 `value` 是否像一个 `Promise`。
  *
  * @param value 要检查的值
  * @returns 是（true）或否（false）

@@ -8,7 +8,7 @@ export type ValueType = (
 )
 
 /**
- * 检测 value 值的类型。
+ * 检测 `value` 值的类型。
  *
  * @param value 要检测的值
  * @returns 检测值的类型

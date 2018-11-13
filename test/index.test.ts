@@ -530,7 +530,7 @@ describe('isEqualArray', () => {
   })
 })
 
-describe('cssTransform', () => {
+describe('transformElement', () => {
   const el = document.createElement('div')
   document.body.appendChild(el)
   test('cssTransform', () => {

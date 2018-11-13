@@ -1,5 +1,5 @@
 /**
- * 创建一个包含从 start 到 end，但不包含 end 本身范围数字的数组。
+ * 创建一个包含从 `start` 到 `end`，但不包含 `end` 本身范围数字的数组。
  *
  * @param start 开始数字
  * @param [end] 结束数字

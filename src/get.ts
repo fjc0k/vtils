@@ -2,7 +2,7 @@ import has from './has'
 import toPath, { ToPathValue } from './toPath'
 
 /**
- * 根据 obj 对象的路径 path 获取值。
+ * 根据 `obj` 对象的路径 `path` 获取值。
  *
  * @param obj 要检索的对象
  * @param path 属性路径

@@ -1,5 +1,5 @@
 /**
- * 检查 key 是否是 obj 自身的属性。
+ * 检查 `key` 是否是 `obj` 自身的属性。
  *
  * @param obj 要检查的对象
  * @param key 要检查的键
