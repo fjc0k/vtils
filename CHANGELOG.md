@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.53.0"></a>
+# [0.53.0](https://github.com/fjc0k/vtils/compare/v0.52.0...v0.53.0) (2018-11-13)
+
+
+### Features
+
+* divide cssTransform into cssTransform & stopCssTransform ([197d44b](https://github.com/fjc0k/vtils/commit/197d44b))
+
+
+
 <a name="0.52.0"></a>
 # [0.52.0](https://github.com/fjc0k/vtils/compare/v0.51.0...v0.52.0) (2018-11-13)
 
