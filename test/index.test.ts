@@ -140,6 +140,9 @@ describe('base64', () => {
   })
   test('decode', () => {
     data.forEach(([str, encodedStr]) => {
+      if (str === 'v') {
+        console.log(str, vtils.base64Decode(encodedStr).length, String(str).length)
+      }
       expect(vtils.base64Decode(encodedStr)).toBe(String(str))
     })
   })
