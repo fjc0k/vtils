@@ -1,4 +1,4 @@
-import { base64Encode as localBase64Encode } from './_utils/base64'
+import { base64Encode as localBase64Encode } from './libs/base64'
 
 /**
  * 返回 base64 编码后的字符串。
