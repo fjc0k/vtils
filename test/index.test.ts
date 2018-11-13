@@ -140,9 +140,6 @@ describe('base64', () => {
   })
   test('decode', () => {
     data.forEach(([str, encodedStr]) => {
-      if (str === 'v') {
-        console.log(str, vtils.base64Decode(encodedStr).length, String(str).length)
-      }
       expect(vtils.base64Decode(encodedStr)).toBe(String(str))
     })
   })
@@ -541,8 +538,8 @@ describe('cssTransform', () => {
     expect(el.style.transform).toBe('translateX(100px)')
     expect(el.style.transition).toBe('transform .3s ease')
   })
-  test('cssTransform.stop', () => {
-    vtils.cssTransform.stop(el)
+  test('stopCssTransform', () => {
+    vtils.stopCssTransform(el)
     expect(el.style.transition).toBe('none')
   })
 })

@@ -1,13 +1,3 @@
-interface CssTransform {
-  (el: HTMLElement, transformRule: string, transitionRule: string): void,
-  /**
-   * 停止 CSS 变换。
-   *
-   * @param el 要停止变换的元素
-   */
-  stop(el: HTMLElement): void
-}
-
 /**
  * CSS 变换。
  *
@@ -15,16 +5,16 @@ interface CssTransform {
  * @param transformRule 变换规则
  * @param transitionRule 过渡规则
  */
-const cssTransform: CssTransform = (el: HTMLElement, transformRule: string, transitionRule: string): void => {
-  el.style.webkitTransform = transformRule
-  el.style.transform = transformRule
-  el.style.webkitTransition = `-webkit-transform ${transitionRule}`
+export default function cssTransform(el: HTMLElement, transformRule: string, transitionRule: string): void {
+  el.style.transform
+    = (el.style as any).msTransform
+    = (el.style as any).OTransform
+    = (el.style as any).MozTransform
+    = (el.style as any).webkitTransform
+    = transformRule;
+  (el.style as any).webkitTransition = `-webkit-transform ${transitionRule}`;
+  (el.style as any).mozTransition = `-moz-transform ${transitionRule}`;
+  (el.style as any).oTransition = `-o-transform ${transitionRule}`;
+  (el.style as any).msTransition = `-ms-transform ${transitionRule}`
   el.style.transition = `transform ${transitionRule}`
 }
-
-cssTransform.stop = (el: HTMLElement): void => {
-  el.style.webkitTransition = 'none'
-  el.style.transition = 'none'
-}
-
-export default cssTransform
