@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.52.0"></a>
+# [0.52.0](https://github.com/fjc0k/vtils/compare/v0.51.0...v0.52.0) (2018-11-13)
+
+
+### Features
+
+* use base64.js instead of atob, btoa ([a4c77e1](https://github.com/fjc0k/vtils/commit/a4c77e1))
+
+
+
 <a name="0.51.0"></a>
 # [0.51.0](https://github.com/fjc0k/vtils/compare/v0.50.6...v0.51.0) (2018-11-12)
 
