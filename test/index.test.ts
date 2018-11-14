@@ -1344,3 +1344,48 @@ describe('keyBy', () => {
     })
   })
 })
+
+describe('EventBus', () => {
+  const bus = new vtils.EventBus<{
+    clickUrl: () => string,
+    add: (a: number, b: number) => number,
+    onceFn: () => void
+  }>()
+
+  test('publish 触发事件监听器且返回其值', () => {
+    const onClickUrl = jest.fn(() => 'clicked')
+    bus.subscribe('clickUrl', onClickUrl)
+    vtils.range(0, 1000).forEach(i => {
+      expect(onClickUrl).toBeCalledTimes(i)
+      expect(bus.publish('clickUrl')).toEqual(['clicked'])
+    })
+  })
+
+  test('subscribeOnce 绑定的事件监听器只会触发一次', () => {
+    const onceFn = jest.fn()
+    expect(onceFn).toBeCalledTimes(0)
+    bus.subscribeOnce('onceFn', onceFn)
+    vtils.range(0, 1000).forEach(i => {
+      bus.publish('onceFn')
+    })
+    expect(onceFn).toBeCalledTimes(1)
+  })
+
+  test('可对同一事件绑定多个监听器，但相同的监听器只会绑定一次', () => {
+    bus.subscribe('add', (a, b) => {
+      return a + b
+    })
+    const minus = (a: number, b: number): number => {
+      return a - b
+    }
+    bus.subscribe('add', minus)
+    bus.subscribe('add', minus)
+    vtils.range(0, 1000).forEach(i => {
+      expect(bus.publish('add', i, i + 1)).toEqual([i + i + 1, i - (i + 1)])
+    })
+  })
+
+  test('未绑定的事件监听器返回空数组', () => {
+    expect(bus.publish('notFound' as any)).toEqual([])
+  })
+})
