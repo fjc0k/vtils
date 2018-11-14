@@ -26,7 +26,7 @@ export default class EventBus<
    * @param listener 监听器
    * @returns 取消订阅函数
    */
-  public subscribe<X extends K>(eventName: X, listener: T[X]): EventBusUnsubscribe {
+  public on<X extends K>(eventName: X, listener: T[X]): EventBusUnsubscribe {
     if (!this.listeners[eventName]) {
       this.listeners[eventName] = []
     }
@@ -34,15 +34,7 @@ export default class EventBus<
     if (listeners.indexOf(listener) === -1) {
       listeners.push(listener)
     }
-    return () => {
-      if (listener) {
-        const index = listeners.indexOf(listener)
-        if (index > -1) {
-          listeners.splice(index, 1)
-          listener = null
-        }
-      }
-    }
+    return () => this.off(eventName, listener)
   }
 
   /**
@@ -52,12 +44,31 @@ export default class EventBus<
    * @param listener 监听器
    * @returns 取消订阅函数
    */
-  public subscribeOnce<X extends K>(eventName: X, listener: T[X]): EventBusUnsubscribe {
-    const unsubscribe = this.subscribe(eventName, (...args: any[]) => {
+  public once<X extends K>(eventName: X, listener: T[X]): EventBusUnsubscribe {
+    const unsubscribe = this.on(eventName, (...args: any[]) => {
       unsubscribe()
       listener(...args)
     })
     return unsubscribe
+  }
+
+  /**
+   * 取消订阅事件，若没有指定监听器，则取消所有监听器。
+   *
+   * @param eventName 事件名称
+   * @param [listener] 监听器
+   */
+  public off<X extends K>(eventName: X, listener?: T[X]): void {
+    if (listener) {
+      const listeners = this.listeners[eventName]
+      const index = listeners.indexOf(listener)
+      /* istanbul ignore else */
+      if (index > -1) {
+        listeners.splice(index, 1)
+      }
+    } else {
+      delete this.listeners[eventName]
+    }
   }
 
   /**
@@ -67,7 +78,7 @@ export default class EventBus<
    * @param args 传给监听器的参数
    * @returns 各监听器的返回结果组成的数组
    */
-  public publish<X extends K>(eventName: X, ...args: ArgumentsType<T[X]>): Array<ReturnType<T[X]>> {
+  public emit<X extends K>(eventName: X, ...args: ArgumentsType<T[X]>): Array<ReturnType<T[X]>> {
     return (this.listeners[eventName] || []).map(listener => {
       return listener(...args)
     })
