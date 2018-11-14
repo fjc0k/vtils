@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.55.0"></a>
+# [0.55.0](https://github.com/fjc0k/vtils/compare/v0.54.0...v0.55.0) (2018-11-14)
+
+
+### Features
+
+* **EventBus:** add off method ([1c43d87](https://github.com/fjc0k/vtils/commit/1c43d87))
+
+
+
 <a name="0.54.0"></a>
 # [0.54.0](https://github.com/fjc0k/vtils/compare/v0.53.2...v0.54.0) (2018-11-14)
 
