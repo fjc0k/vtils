@@ -21,7 +21,7 @@ const isValidDate = (year: number, month: number, day: number): boolean => {
  * @see https://my.oschina.net/labrusca/blog/306116
  * @see http://developer.51cto.com/art/201803/568755.htm
  */
-export default function isChineseIDCardNumber(value: string): boolean {
+export default function isChineseIDCardNumber (value: string): boolean {
   const len = value.length
 
   // 长度错误
@@ -51,7 +51,7 @@ export default function isChineseIDCardNumber(value: string): boolean {
 
   // 校验码
   const sum = value.split('').slice(0, 17).reduce((s, num, index) => {
-    return s += +num * weightMap[index]
+    return (s += +num * weightMap[index])
   }, 0)
   return codeMap[sum % 11] === value[17].toUpperCase()
 }

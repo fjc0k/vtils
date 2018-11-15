@@ -11,18 +11,16 @@ export type UnbindEventListener = () => void
  * @param listener 事件监听器
  * @param [options] 事件选项
  */
-export default function bindEvent(
+export default function bindEvent (
   target: EventTarget,
   types: BindEventTypes,
   listener: EventListenerOrEventListenerObject,
   options?: BindEventListenerOptions
 ): UnbindEventListener {
-  const disposes: Array<() => void> = [];
-  (Array.isArray(types) ? types : types.split(/\s+/)).forEach(eventType => {
+  const disposes: Array<() => void> = []
+  ;(Array.isArray(types) ? types : types.split(/\s+/)).forEach(eventType => {
     target.addEventListener(eventType, listener, options)
-    disposes.push(
-      () => target.removeEventListener(eventType, listener, options)
-    )
+    disposes.push(() => target.removeEventListener(eventType, listener, options))
   })
   return () => disposes.forEach(dispose => dispose())
 }

@@ -7,7 +7,7 @@
 export default function forOwn<
   T extends { [key: string]: any },
   K extends Extract<keyof T, string>
->(obj: T, callback: (value: T[K], key: K, obj: T) => any): void {
+> (obj: T, callback: (value: T[K], key: K, obj: T) => any): void {
   for (const key in obj) {
     /* istanbul ignore else */
     if (Object.prototype.hasOwnProperty.call(obj, key)) {

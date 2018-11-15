@@ -7,16 +7,16 @@ let isSupportPassiveEventListener: boolean | undefined
  *
  * @returns 是（true）或否（false）
  */
-export default function supportPassiveEventListener(): boolean {
+export default function supportPassiveEventListener (): boolean {
   /* istanbul ignore else */
   if (isSupportPassiveEventListener === undefined) {
     isSupportPassiveEventListener = false
     try {
       const options = Object.defineProperty({}, 'passive', {
-        get() {
+        get () { // eslint-disable-line
           /* istanbul ignore next */
           isSupportPassiveEventListener = true
-        }
+        },
       })
       inBrowser(() => {
         window.addEventListener('test', null, options)

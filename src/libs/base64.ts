@@ -18,16 +18,15 @@ const fcc = String.fromCharCode
 const cbUtob = (c: string): string => {
   if (c.length < 2) {
     const cc = c.charCodeAt(0)
-    return cc < 0x80 ? c :
-      cc < 0x800 ? (fcc(0xc0 | (cc >>> 6)) + fcc(0x80 | (cc & 0x3f))) :
-      (fcc(0xe0 | ((cc >>> 12) & 0x0f)) + fcc(0x80 | ((cc >>> 6) & 0x3f)) + fcc(0x80 | (cc & 0x3f)))
-  } else {
-    const cc = 0x10000 + (c.charCodeAt(0) - 0xD800) * 0x400 + (c.charCodeAt(1) - 0xDC00)
-    return (fcc(0xf0 | ((cc >>> 18) & 0x07))
-      + fcc(0x80 | ((cc >>> 12) & 0x3f))
-      + fcc(0x80 | ((cc >>> 6) & 0x3f))
-      + fcc(0x80 | (cc & 0x3f)))
+    return cc < 0x80 ? c
+      : cc < 0x800 ? (fcc(0xc0 | (cc >>> 6)) + fcc(0x80 | (cc & 0x3f)))
+        : (fcc(0xe0 | ((cc >>> 12) & 0x0f)) + fcc(0x80 | ((cc >>> 6) & 0x3f)) + fcc(0x80 | (cc & 0x3f)))
   }
+  const cc = 0x10000 + (c.charCodeAt(0) - 0xD800) * 0x400 + (c.charCodeAt(1) - 0xDC00)
+  return (fcc(0xf0 | ((cc >>> 18) & 0x07))
+    + fcc(0x80 | ((cc >>> 12) & 0x3f))
+    + fcc(0x80 | ((cc >>> 6) & 0x3f))
+    + fcc(0x80 | (cc & 0x3f)))
 }
 const reUtob = /[\uD800-\uDBFF][\uDC00-\uDFFFF]|[^\x00-\x7F]/g
 const utob = (u: string): string => {
@@ -43,7 +42,7 @@ const cbEncode = (ccc: string): string => {
     b64chars.charAt(ord >>> 18),
     b64chars.charAt((ord >>> 12) & 63),
     padlen >= 2 ? '=' : b64chars.charAt((ord >>> 6) & 63),
-    padlen >= 1 ? '=' : b64chars.charAt(ord & 63)
+    padlen >= 1 ? '=' : b64chars.charAt(ord & 63),
   ]
   return chars.join('')
 }
@@ -55,7 +54,7 @@ const reBtou = new RegExp(
   [
     '[\xC0-\xDF][\x80-\xBF]',
     '[\xE0-\xEF][\x80-\xBF]{2}',
-    '[\xF0-\xF7][\x80-\xBF]{3}'
+    '[\xF0-\xF7][\x80-\xBF]{3}',
   ].join('|'),
   'g'
 )
@@ -64,7 +63,7 @@ const cbBtou = (cccc: string): string => {
     case 4:
       const cp = ((0x07 & cccc.charCodeAt(0)) << 18)
         | ((0x3f & cccc.charCodeAt(1)) << 12)
-        | ((0x3f & cccc.charCodeAt(2)) <<  6)
+        | ((0x3f & cccc.charCodeAt(2)) << 6)
         | (0x3f & cccc.charCodeAt(3))
       const offset = cp - 0x10000
       return (fcc((offset >>> 10) + 0xD800) + fcc((offset & 0x3FF) + 0xDC00))
@@ -95,7 +94,7 @@ const cbDecode = (cccc: string): string => {
   const chars = [
     fcc(n >>> 16),
     fcc((n >>> 8) & 0xff),
-    fcc(n & 0xff)
+    fcc(n & 0xff),
   ]
   chars.length -= cbDecodeTmp[padlen]
   return chars.join('')

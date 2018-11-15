@@ -11,7 +11,7 @@ const cache = Object.create(null)
  * @param value 要转换的值
  * @returns 包含属性路径的数组
  */
-export default function toPath(value: ToPathValue): ToPathResult {
+export default function toPath (value: ToPathValue): ToPathResult {
   if (isArray(value)) {
     return value
   }
@@ -25,20 +25,20 @@ export default function toPath(value: ToPathValue): ToPathResult {
   ) {
     const curChar = value[cur]
     if (
-      (cur === len - 1) ||
-      (stop === null ? (curChar === '.' || curChar === '[') : curChar === stop)
+      (cur === len - 1)
+      || (stop === null ? (curChar === '.' || curChar === '[') : curChar === stop)
     ) {
       if (cur === len - 1) {
         path.push(value.substring(prev, curChar === ']' ? cur : cur + 1))
       } else if (prev !== cur) {
         path.push(value.substring(prev, cur))
       }
-      stop = curChar === '.' ? null :
-        curChar === '[' ? ']' :
-        null
+      stop = curChar === '.' ? null
+        : curChar === '[' ? ']'
+          : null
       prev = cur + 1
     }
     cur++
   }
-  return cache[value] = path
+  return (cache[value] = path)
 }

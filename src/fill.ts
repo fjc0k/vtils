@@ -21,7 +21,7 @@ function fill(
  * @param [end=arr.length] 结束位置
  * @returns 填充改变后的数组
  */
-function fill(
+function fill (
   arr: any[],
   value?: any,
   start: number = 0,

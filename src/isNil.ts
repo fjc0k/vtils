@@ -4,6 +4,6 @@
  * @param value 要检查的值
  * @returns 是（true）或否（false）
  */
-export default function isNil(value: any): value is null | undefined {
+export default function isNil (value: any): value is null | undefined {
   return value == null
 }

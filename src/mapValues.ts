@@ -10,7 +10,7 @@ import forOwn from './forOwn'
 export default function mapValues<
   T extends { [key: string]: any },
   K extends Extract<keyof T, string>
->(
+> (
   obj: T,
   callback: (value: T[K], key: K, obj: T) => any
 ): { [key in K]: any } {

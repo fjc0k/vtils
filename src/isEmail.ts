@@ -7,6 +7,6 @@ const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9
  * @returns 是（true）或否（false）
  * @see http://emailregex.com/
  */
-export default function isEmail(value: string): boolean {
+export default function isEmail (value: string): boolean {
   return re.test(value)
 }

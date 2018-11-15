@@ -6,7 +6,7 @@ const cache: { [key: string]: string } = Object.create(null)
  * @param str 要转换的字符串
  * @returns 转换后的字符串
  */
-export default function upperCaseFirst(str: string): string {
+export default function upperCaseFirst (str: string): string {
   if (!str || typeof str !== 'string') {
     return str
   }

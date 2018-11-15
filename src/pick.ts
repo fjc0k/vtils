@@ -10,7 +10,7 @@ import forOwn from './forOwn'
 export default function pick<
   T extends { [key: string]: any },
   K extends Extract<keyof T, string>
->(obj: T, props: K[]): Pick<T, K> {
+> (obj: T, props: K[]): Pick<T, K> {
   const newObj: any = {}
   forOwn(obj, (value: T[K], key: K) => {
     if (props.indexOf(key) > -1) {

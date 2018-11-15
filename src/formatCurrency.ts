@@ -6,13 +6,13 @@ export interface FormatCurrencyOptions {
   /** 是否处理小数 */
   decimal?: boolean,
   /** 保留小数位数 */
-  precision?: number
+  precision?: number,
 }
 
 const defaultOptions: FormatCurrencyOptions = {
   thousands: true,
   decimal: true,
-  precision: 2
+  precision: 2,
 }
 
 /**
@@ -22,17 +22,17 @@ const defaultOptions: FormatCurrencyOptions = {
  * @param options 选项
  * @returns 格式化后的值
  */
-export default function formatCurrency(value: FormatCurrencyValue, options?: FormatCurrencyOptions): string {
+export default function formatCurrency (value: FormatCurrencyValue, options?: FormatCurrencyOptions): string {
   value = Number(value)
   options = {
     ...defaultOptions,
-    ...options
+    ...options,
   }
   if (options.decimal) {
     value = value.toFixed(options.precision)
   }
   if (options.thousands) {
-    let [integer, decimal = ''] = value.toString().split('.') // tslint:disable-line
+    let [integer, decimal = ''] = value.toString().split('.') // eslint-disable-line
     value = ''
     while (integer.length > 3) {
       value = `,${integer.slice(-3)}${value}`

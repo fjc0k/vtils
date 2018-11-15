@@ -131,7 +131,7 @@ describe('base64', () => {
     [-1, 'LTE=', 'LTE'],
     ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#0^&*();:<>,. []{}', 'YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWjAxMjM0NTY3ODkhQCMwXiYqKCk7Ojw+LC4gW117fQ==', 'YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWjAxMjM0NTY3ODkhQCMwXiYqKCk7Ojw-LC4gW117fQ'],
     ['😁😎=-#@`.,?/|{*+😁', '8J+YgfCfmI49LSNAYC4sPy98eyor8J+YgQ==', '8J-YgfCfmI49LSNAYC4sPy98eyor8J-YgQ'],
-    ['❥(ゝω・✿ฺ)※▓●²♠⑲Ⅲ∵molÇùㄡεətsフぽㅚ㉢д╢┉(๑╹◡╹)ﾉ"""', '4p2lKOOCnc+J44O74py/4Li6KeKAu+KWk+KXj8Ky4pmg4pGy4oWi4oi1bW9sw4fDueOEoc61yZl0c+ODleOBveOFmuOJotC04pWi4pSJKOC5keKVueKXoeKVuSnvvokiIiI=', '4p2lKOOCnc-J44O74py_4Li6KeKAu-KWk-KXj8Ky4pmg4pGy4oWi4oi1bW9sw4fDueOEoc61yZl0c-ODleOBveOFmuOJotC04pWi4pSJKOC5keKVueKXoeKVuSnvvokiIiI']
+    ['❥(ゝω・✿ฺ)※▓●²♠⑲Ⅲ∵molÇùㄡεətsフぽㅚ㉢д╢┉(๑╹◡╹)ﾉ"""', '4p2lKOOCnc+J44O74py/4Li6KeKAu+KWk+KXj8Ky4pmg4pGy4oWi4oi1bW9sw4fDueOEoc61yZl0c+ODleOBveOFmuOJotC04pWi4pSJKOC5keKVueKXoeKVuSnvvokiIiI=', '4p2lKOOCnc-J44O74py_4Li6KeKAu-KWk-KXj8Ky4pmg4pGy4oWi4oi1bW9sw4fDueOEoc61yZl0c-ODleOBveOFmuOJotC04pWi4pSJKOC5keKVueKXoeKVuSnvvokiIiI'],
   ]
   test('encode', () => {
     data.forEach(([str, encodedStr]) => {
@@ -211,7 +211,7 @@ describe('getType', () => {
     expect(vtils.getType(new Error('err'))).toBe('Error')
     expect(vtils.getType(null)).toBe('Null')
     expect(vtils.getType(undefined)).toBe('Undefined')
-    expect(vtils.getType((function test() { return arguments })())).toBe('Arguments')
+    expect(vtils.getType((function test () { return arguments })())).toBe('Arguments')
   })
 })
 
@@ -465,51 +465,51 @@ describe('parseCSSValue', () => {
   test('数字', () => {
     expect(vtils.parseCSSValue(12)).toEqual({
       value: 12,
-      unit: 'px'
+      unit: 'px',
     })
     expect(vtils.parseCSSValue(-4)).toEqual({
       value: -4,
-      unit: 'px'
+      unit: 'px',
     })
     expect(vtils.parseCSSValue('12')).toEqual({
       value: 12,
-      unit: 'px'
+      unit: 'px',
     })
     expect(vtils.parseCSSValue('-4')).toEqual({
       value: -4,
-      unit: 'px'
+      unit: 'px',
     })
   })
   test('CSS 值', () => {
     expect(vtils.parseCSSValue('12px')).toEqual({
       value: 12,
-      unit: 'px'
+      unit: 'px',
     })
     expect(vtils.parseCSSValue('-4px')).toEqual({
       value: -4,
-      unit: 'px'
+      unit: 'px',
     })
     expect(vtils.parseCSSValue('10%')).toEqual({
       value: 10,
-      unit: '%'
+      unit: '%',
     })
     expect(vtils.parseCSSValue('2.5em')).toEqual({
       value: 2.5,
-      unit: 'em'
+      unit: 'em',
     })
     expect(vtils.parseCSSValue('.399999rem')).toEqual({
-      value: .399999,
-      unit: 'rem'
+      value: 0.399999,
+      unit: 'rem',
     })
   })
   test('默认单位', () => {
     expect(vtils.parseCSSValue(12, 'em')).toEqual({
       value: 12,
-      unit: 'em'
+      unit: 'em',
     })
     expect(vtils.parseCSSValue('12', 'em')).toEqual({
       value: 12,
-      unit: 'em'
+      unit: 'em',
     })
   })
 })
@@ -559,7 +559,7 @@ describe('shuffle', () => {
         [2, 1, 3],
         [2, 3, 1],
         [3, 1, 2],
-        [3, 2, 1]
+        [3, 2, 1],
       ]).toContainEqual(vtils.shuffle(arr1))
     }
     const arr2 = [1, 2, 3, '&', null, /x/, () => {}]
@@ -647,7 +647,7 @@ describe('fill', () => {
 describe('has', () => {
   test('应只检查自身属性', () => {
     const obj: any = { x: 1, y: null }
-    const fn = () => {}
+    const fn = (): void => {}
     fn.x = 1
     Object.setPrototypeOf(fn, obj)
     expect(vtils.has(obj, 'x')).toBeTruthy()
@@ -662,14 +662,10 @@ describe('has', () => {
 describe('values', () => {
   test('对象', () => {
     expect(vtils.values({ now })).toEqual([now])
-    expect(
-      vtils.values({ 1: 2, x: 'y', t: null, ok: undefined }).sort()
-    ).toEqual(
-      [2, 'y', null, undefined].sort()
-    )
+    expect(vtils.values({ 1: 2, x: 'y', t: null, ok: undefined }).sort()).toEqual([2, 'y', null, undefined].sort())
   })
   test('函数', () => {
-    const fn = () => {}
+    const fn = (): void => {}
     fn.x = 1
     expect(vtils.values(fn)).toEqual([1])
   })
@@ -679,7 +675,7 @@ describe('mapValues', () => {
   test('mapValues', () => {
     expect(vtils.mapValues({ x: 1, y: 2 }, value => ++value)).toEqual({
       x: 2,
-      y: 3
+      y: 3,
     })
   })
 })
@@ -704,7 +700,7 @@ describe('pick', () => {
     const obj = {
       x: 1,
       y: 2,
-      z: 'hello'
+      z: 'hello',
     }
     expect(vtils.pick(obj, [])).toEqual({})
     expect(vtils.pick(obj, ['x'])).toEqual({ x: 1 })
@@ -718,7 +714,7 @@ describe('omit', () => {
     const obj = {
       x: 1,
       y: 2,
-      z: 'hello'
+      z: 'hello',
     }
     expect(vtils.omit(obj, [])).toEqual(obj)
     expect(vtils.omit(obj, ['x'])).toEqual({ y: 2, z: 'hello' })
@@ -746,8 +742,8 @@ describe('upperCaseFirst', () => {
 
 describe('isPromise', () => {
   test('是对象且有 then 方法就是', () => {
-    expect(vtils.isPromise(new Promise(() => {}))).toBeTruthy();
-    [{}, [], /f/, Date, () => {}].forEach(item => {
+    expect(vtils.isPromise(new Promise(() => {}))).toBeTruthy()
+    ;[{}, [], /f/, Date, () => {}].forEach(item => {
       (item as any).then = () => {}
       expect(vtils.isPromise(item)).toBeTruthy()
     })
@@ -849,7 +845,7 @@ describe('storage', () => {
       vtils.randomString(),
       vtils.randomString(),
       vtils.randomString(),
-      vtils.randomString()
+      vtils.randomString(),
     ].forEach(item => {
       expect(vtils.storage.get(item)).toBeNull()
       expect(vtils.storage.get(item, item)).toBe(item)
@@ -902,11 +898,7 @@ describe('result', () => {
 describe('toDate', () => {
   console.warn = vtils.noop
   test('不传值返回当前时间', () => {
-    expect(
-      Math.abs(
-        Math.round(vtils.toDate().getTime() / 1000) - Math.round(new Date().getTime() / 1000)
-      ) < 5
-    ).toBeTruthy()
+    expect(Math.abs(Math.round(vtils.toDate().getTime() / 1000) - Math.round(new Date().getTime() / 1000)) < 5).toBeTruthy()
   })
   test('传 null 返回非法时间', () => {
     expect(vtils.toDate(null).getTime()).toBeNaN()
@@ -917,20 +909,12 @@ describe('toDate', () => {
   })
   test('解析字符串', () => {
     ['2018-11-1', '2218-05-02', '1995-1-3 3:6', '1995-1-3 3:6:32', '1995-1-3 3:6:32.232'].forEach(item => {
-      expect(
-        vtils.toDate(item).getTime()
-      ).toBe(
-        moment(item).toDate().getTime()
-      )
+      expect(vtils.toDate(item).getTime()).toBe(moment(item).toDate().getTime())
     })
   })
   test('解析时间戳，兼容 unix 时间戳', () => {
     ['1541049425978', 1541049425978, '1541049383', 1541049383].forEach(item => {
-      expect(
-        vtils.toDate(item).getTime()
-      ).toBe(
-        moment(String(item).length === 10 ? +item * 1000 : +item).toDate().getTime()
-      )
+      expect(vtils.toDate(item).getTime()).toBe(moment(String(item).length === 10 ? +item * 1000 : +item).toDate().getTime())
     })
   })
 })
@@ -950,7 +934,7 @@ describe('isChineseIDCardNumber', () => {
       '110101198811014398',
       '11010119881101331X',
       '469001199208187005',
-      '46900119920818180x'
+      '46900119920818180x',
     ].forEach(item => {
       expect(vtils.isChineseIDCardNumber(item)).toBeTruthy()
     })
@@ -964,7 +948,7 @@ describe('isChineseIDCardNumber', () => {
       '11010119881101331a',
       '469001399208187005',
       '46900119925818180x',
-      '530627199508918277'
+      '530627199508918277',
     ].forEach(item => {
       expect(vtils.isChineseIDCardNumber(item)).toBeFalsy()
     })
@@ -978,12 +962,8 @@ describe('formatDate', () => {
     expect(vtils.formatDate('2018-09-20', 'yyyy年mm月dd日')).toBe('2018年09月20日')
     expect(vtils.formatDate('2018-09-20', 'yy年mm月dd日')).toBe('18年09月20日')
     expect(vtils.formatDate('2018-09-20 3:12:9', 'yy年mm月dd日 hh:ii:ss')).toBe('18年09月20日 03:12:09')
-    expect(vtils.formatDate(1541211914, 'yyyy年m月d日 h:i')).toBe(
-      moment(1541211914 * 1000).format('YYYY年M月D日 H:m')
-    )
-    expect(vtils.formatDate(now, 'yyyy年m月d日 h:i:s')).toBe(
-      moment(now).format('YYYY年M月D日 H:m:s')
-    )
+    expect(vtils.formatDate(1541211914, 'yyyy年m月d日 h:i')).toBe(moment(1541211914 * 1000).format('YYYY年M月D日 H:m'))
+    expect(vtils.formatDate(now, 'yyyy年m月d日 h:i:s')).toBe(moment(now).format('YYYY年M月D日 H:m:s'))
   })
 })
 
@@ -1019,7 +999,7 @@ describe('isUrl', () => {
       'http://foo.bar:8878878',
       'http://foo.bar/oop?ddd#cc',
       'https://foo.bar',
-      'ftp://foo.bar'
+      'ftp://foo.bar',
     ].forEach(item => {
       expect(vtils.isUrl(item)).toBeTruthy()
     })
@@ -1029,7 +1009,7 @@ describe('isUrl', () => {
       'wx://foo.bar',
       'foo.bar',
       'http://',
-      'https://'
+      'https://',
     ].forEach(item => {
       expect(vtils.isUrl(item)).toBeFalsy()
     })
@@ -1041,7 +1021,7 @@ describe('isEmail', () => {
     [
       'ee@foo.bar',
       'ee@foo.bar.ye',
-      'ee.0@foo.1.xx.qq'
+      'ee.0@foo.1.xx.qq',
     ].forEach(item => {
       expect(vtils.isEmail(item)).toBeTruthy()
     })
@@ -1050,7 +1030,7 @@ describe('isEmail', () => {
     [
       'ee@foo.bar.y',
       '@foo.bar',
-      'foo.bar'
+      'foo.bar',
     ].forEach(item => {
       expect(vtils.isEmail(item)).toBeFalsy()
     })
@@ -1059,93 +1039,73 @@ describe('isEmail', () => {
 
 describe('Validator', () => {
   test('基本可用', async () => {
-    const v = new vtils.Validator({
-      phone: { type: 'mobile' }
-    })
-    expect(await v.validate({ phone: '18087030178' })).toMatchObject({
-      valid: true
-    })
+    const v = new vtils.Validator({ phone: { type: 'mobile' } })
+    expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
     expect(await v.validate({ phone: '10086' })).toMatchObject({
       valid: false,
       key: 'phone',
-      type: 'mobile'
+      type: 'mobile',
     })
   })
   test('多个验证条件1', async () => {
     const v = new vtils.Validator({
       phone: [
         { type: 'mobile' },
-        { custom: ({ value }) => value === '18087030178', message: '错啦' }
-      ]
+        { custom: ({ value }) => value === '18087030178', message: '错啦' },
+      ],
     })
-    expect(await v.validate({ phone: '18087030178' })).toMatchObject({
-      valid: true
-    })
+    expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
     expect(await v.validate({ phone: '18087030179' })).toMatchObject({
       valid: false,
       key: 'phone',
-      message: '错啦'
+      message: '错啦',
     })
   })
   test('多个验证条件2', async () => {
-    const v = new vtils.Validator({
-      phone: { type: 'mobile', custom: ({ value }) => value === '18087030178', message: '错啦' }
-    })
-    expect(await v.validate({ phone: '18087030178' })).toMatchObject({
-      valid: true
-    })
+    const v = new vtils.Validator({ phone: { type: 'mobile', custom: ({ value }) => value === '18087030178', message: '错啦' } })
+    expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
     expect(await v.validate({ phone: '18087030179' })).toMatchObject({
       valid: false,
       key: 'phone',
-      message: '错啦'
+      message: '错啦',
     })
   })
   test('多个验证参数', async () => {
     const v = new vtils.Validator({
       phone: { type: 'mobile' },
-      age: { custom: ({ value }) => value > 18, message: '18禁' }
+      age: { custom: ({ value }) => value > 18, message: '18禁' },
     })
-    expect(await v.validate({ phone: '18087030178' })).toMatchObject({
-      valid: true
-    })
+    expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
     expect(await v.validate({ age: 12 })).toMatchObject({
       valid: false,
       key: 'age',
-      message: '18禁'
+      message: '18禁',
     })
     expect(await v.validate({ phone: '18087030178', age: 16 })).toMatchObject({
       valid: false,
       key: 'age',
-      message: '18禁'
+      message: '18禁',
     })
-    expect(await v.validate({ phone: '18087030178', age: 19 })).toMatchObject({
-      valid: true
-    })
+    expect(await v.validate({ phone: '18087030178', age: 19 })).toMatchObject({ valid: true })
   })
   test('联合校验，如：两次密码一致', async () => {
     const v = new vtils.Validator({
       pass1: { required: true, message: '密码不能为空' },
       pass2: [
         { required: true, message: '重复密码不能为空' },
-        { custom: ({ value, data }) => value === data.pass1, message: '两次密码不一致' }
-      ]
+        { custom: ({ value, data }) => value === data.pass1, message: '两次密码不一致' },
+      ],
     })
     expect(await v.validate({ pass1: 'hello', pass2: 'hell0' })).toMatchObject({
       valid: false,
       key: 'pass2',
-      message: '两次密码不一致'
+      message: '两次密码不一致',
     })
-    expect(await v.validate({ pass1: 'hello', pass2: 'hello' })).toMatchObject({
-      valid: true
-    })
+    expect(await v.validate({ pass1: 'hello', pass2: 'hello' })).toMatchObject({ valid: true })
   })
   test('多余的 data 无影响', async () => {
-    const v = new vtils.Validator({
-      phone: { type: 'mobile' }
-    })
-    expect(await v.validate({ phone: '18087030178', name: 'Jack', x: 'f' } as any)).toMatchObject({
-      valid: true
-    })
+    const v = new vtils.Validator({ phone: { type: 'mobile' } })
+    expect(await v.validate({ phone: '18087030178', name: 'Jack', x: 'f' } as any)).toMatchObject({ valid: true })
   })
   test('综合测试', async () => {
     const v = new vtils.Validator({
@@ -1157,7 +1117,7 @@ describe('Validator', () => {
       int: { type: 'integer' },
       required: { required: true },
       fn: { custom: ({ value }) => value > 20 },
-      async: { custom: () => new Promise(resolve => setTimeout(() => resolve(true), 500)) }
+      async: { custom: () => new Promise(resolve => setTimeout(() => resolve(true), 500)) },
     })
     expect(await v.validate({ min: vtils.repeat(1, 9) })).toMatchObject({ valid: false })
     expect(await v.validate({ min: vtils.repeat(1, 9) })).toMatchObject({ valid: false })
@@ -1229,7 +1189,7 @@ describe('get', () => {
       x: 1,
       y: [1, 2, { z: null }],
       z: { we: 'hello' },
-      '1.2': 1.2
+      1.2: 1.2,
     }
     expect(vtils.get(obj, 'x')).toBe(1)
     expect(vtils.get(obj, 'y[1]')).toBe(2)
@@ -1247,13 +1207,13 @@ describe('get', () => {
 
 describe('set', () => {
   test('ok', () => {
-    const fn = () => {}
+    const fn = (): void => {}
     const obj: any = {
       x: 1,
       y: [1, 2, { z: null }],
       z: { we: 'hello' },
-      '1.2': 1.2,
-      fn
+      1.2: 1.2,
+      fn,
     }
     vtils.set(obj, 'x', 2)
     vtils.set(obj, 'y[1]', '88')
@@ -1270,11 +1230,9 @@ describe('set', () => {
       y: [1, '88', { z: [9] }],
       z: { we: { 1: { xxx: undefined } } },
       yyy: '?',
-      '1.2': [],
-      1: {
-        2: ' '
-      },
-      fn
+      1.2: [],
+      1: { 2: ' ' },
+      fn,
     })
   })
 })
@@ -1304,7 +1262,7 @@ describe('sample', () => {
     })
   })
   test('对象', () => {
-    const obj: object = { 1: '3', x: null, '-': '@' }
+    const obj: object = { '1': '3', 'x': null, '-': '@' }
     vtils.times(1000, () => {
       expect(vtils.values(obj)).toContainEqual(vtils.sample(obj))
     })
@@ -1327,8 +1285,8 @@ describe('keyBy', () => {
     age: i,
     likes: [
       'like1',
-      'like2'
-    ]
+      'like2',
+    ],
   }))
   test('键路径', () => {
     const userById = vtils.keyBy(users, 'id')
@@ -1346,11 +1304,12 @@ describe('keyBy', () => {
 })
 
 describe('EventBus', () => {
-  const bus = new vtils.EventBus<{
+  type EventBusList = {
     clickUrl: () => string,
     add: (a: number, b: number) => number,
-    onceFn: () => void
-  }>()
+    onceFn: () => void,
+  }
+  const bus = new vtils.EventBus<EventBusList>()
 
   test('emit 触发事件监听器且返回其值', () => {
     const onClickUrl = jest.fn(() => 'clicked')

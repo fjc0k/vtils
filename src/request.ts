@@ -12,12 +12,12 @@ export interface RequestOptions {
   method?: 'GET' | 'POST',
   requestDataType?: 'json' | 'querystring',
   responseDataType?: 'json' | 'text',
-  withCredentials?: boolean
+  withCredentials?: boolean,
 }
 
 const requestDataTypeToContentType: { [key in RequestOptions['requestDataType']]: string } = {
   json: 'application/json',
-  querystring: 'application/x-www-form-urlencoded'
+  querystring: 'application/x-www-form-urlencoded',
 }
 
 const defaultRequestOptions: Partial<RequestOptions> = {
@@ -25,31 +25,33 @@ const defaultRequestOptions: Partial<RequestOptions> = {
   header: {},
   method: 'GET',
   requestDataType: 'json',
-  responseDataType: 'json'
+  responseDataType: 'json',
 }
 
 export class RequestFile {
   private file: string | File
-  constructor(file: string | File) {
+
+  public constructor (file: string | File) {
     this.file = file
   }
-  public output(): string | File {
+
+  public output (): string | File {
     return this.file
   }
 }
 
-export default function request<T extends RequestOptions>(options: T): Promise<{
+export default function request<T extends RequestOptions> (options: T): Promise<{
   data: T['responseDataType'] extends 'json' ? any : string,
-  status: number
+  status: number,
 }> {
   return new Promise<{
-    data: any,
-    status: number
+  data: any,
+  status: number
   }>((resolve, reject) => {
     // 设置默认参数
     options = {
       ...defaultRequestOptions,
-      ...(options as any)
+      ...(options as any),
     }
 
     // 解析文件参数
@@ -81,10 +83,10 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
           success: res => {
             resolve({
               data: res.data,
-              status: res.statusCode
+              status: res.statusCode,
             })
           },
-          fail: reject
+          fail: reject,
         })
       } else {
         wx.request({
@@ -97,10 +99,10 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
           success: res => {
             resolve({
               data: res.data as string,
-              status: res.statusCode
+              status: res.statusCode,
             })
           },
-          fail: reject
+          fail: reject,
         })
       }
     }
@@ -126,7 +128,7 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
       xhr.onload = () => {
         resolve({
           data: xhr.responseText,
-          status: xhr.status
+          status: xhr.status,
         })
       }
       xhr.onerror = reject
@@ -149,13 +151,13 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
 request.get = (options: RequestOptions) => {
   return request({
     ...options,
-    method: 'GET'
+    method: 'GET',
   })
 }
 
 request.post = (options: RequestOptions) => {
   return request({
     ...options,
-    method: 'POST'
+    method: 'POST',
   })
 }

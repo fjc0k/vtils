@@ -8,7 +8,7 @@ import toPath, { ToPathValue } from './toPath'
  * @param path 属性路径
  * @param value 要设置的值
  */
-export default function set(obj: object, path: ToPathValue, value: any): void {
+export default function set (obj: object, path: ToPathValue, value: any): void {
   const normalizedPath = toPath(path)
   let last: any = obj
   for (let i = 0, len = normalizedPath.length; i < len; i++) {
