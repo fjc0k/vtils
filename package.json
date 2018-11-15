@@ -65,7 +65,7 @@
     "bili": "^3.3.4",
     "codecov": "^3.1.0",
     "eslint": "^5.9.0",
-    "eslint-config-io": "^0.0.4",
+    "eslint-config-io": "^0.0.6",
     "jest": "^23.6.0",
     "moment": "^2.22.2",
     "rollup-plugin-typescript2": "^0.17.2",
