@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.56.0"></a>
+# [0.56.0](https://github.com/fjc0k/vtils/compare/v0.55.0...v0.56.0) (2018-11-15)
+
+
+### Features
+
+* use eslint instead of tslint ([5066fd8](https://github.com/fjc0k/vtils/commit/5066fd8))
+
+
+
 <a name="0.55.0"></a>
 # [0.55.0](https://github.com/fjc0k/vtils/compare/v0.54.0...v0.55.0) (2018-11-14)
 
