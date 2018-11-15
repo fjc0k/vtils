@@ -12,7 +12,7 @@ export interface CSSValue {
  * @param [defaultUnit='px'] 默认单位
  * @returns 解析结果
  */
-export default function parseCSSValue (
+export default function parseCSSValue(
   value: string | number,
   defaultUnit: string = 'px'
 ): CSSValue {

@@ -5,7 +5,7 @@
  * @param fn 调用函数
  * @returns 调用结果的数组
  */
-export default function times<T extends (index: number) => any> (n: number, fn: T): Array<ReturnType<T>> {
+export default function times<T extends(index: number) => any> (n: number, fn: T): Array<ReturnType<T>> {
   const result: any[] = []
   for (let i = 0; i < n; i++) {
     result.push(fn(i))

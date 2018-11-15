@@ -11,7 +11,7 @@ export type UnbindEventListener = () => void
  * @param listener 事件监听器
  * @param [options] 事件选项
  */
-export default function bindEvent (
+export default function bindEvent(
   target: EventTarget,
   types: BindEventTypes,
   listener: EventListenerOrEventListenerObject,

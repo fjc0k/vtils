@@ -8,7 +8,7 @@ import { ToPathValue } from './toPath'
  * @param iteratee 迭代值，字符串或数字表示键路径，函数表示以该函数生成 `key`
  * @returns 分组结果
  */
-export default function keyBy<T> (
+export default function keyBy<T>(
   arr: T[],
   iteratee: ToPathValue | ((item: T, index: number) => any)
 ): { [key: string]: T } {

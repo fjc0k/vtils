@@ -21,7 +21,7 @@ const isValidDate = (year: number, month: number, day: number): boolean => {
  * @see https://my.oschina.net/labrusca/blog/306116
  * @see http://developer.51cto.com/art/201803/568755.htm
  */
-export default function isChineseIDCardNumber (value: string): boolean {
+export default function isChineseIDCardNumber(value: string): boolean {
   const len = value.length
 
   // 长度错误

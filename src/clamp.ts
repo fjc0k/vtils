@@ -6,7 +6,7 @@
  * @param max 最大值
  * @returns 结果值
  */
-export default function clamp (value: number, min: number, max: number): number {
+export default function clamp(value: number, min: number, max: number): number {
   return value <= min ? min
     : value >= max ? max
       : value

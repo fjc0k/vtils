@@ -46,7 +46,7 @@ const typeValidators: { [key in ValidatorRuleType]: ValidatorRuleTypePredicate }
   email: isEmail,
 }
 
-function validate<D> (data: D, key: keyof D, rule: ValidatorRule): Promise<boolean> {
+function validate<D>(data: D, key: keyof D, rule: ValidatorRule): Promise<boolean> {
   return new Promise(resolve => {
     const value = data[key] as any
     const { required, type, len, min, max, custom } = rule
@@ -110,7 +110,7 @@ export default class Validator<R extends ValidatorRules> {
    *
    * @param rules 验证规则
    */
-  public constructor (rules: R) {
+  public constructor(rules: R) {
     this.rules = rules
   }
 
@@ -120,7 +120,7 @@ export default class Validator<R extends ValidatorRules> {
    * @param data 要验证的数据
    * @returns 验证结果
    */
-  public validate<D extends { [key in keyof R]: any }> (data: Partial<D>): Promise<
+  public validate<D extends { [key in keyof R]: any }>(data: Partial<D>): Promise<
     { valid: true } | (
       ValidatorRule & {
         valid: false,

@@ -26,7 +26,7 @@ function reduce<T extends object, K extends keyof T, R>(
   accumulator: R
 ): R
 
-function reduce (data: any, fn: any, accumulator: any): any {
+function reduce(data: any, fn: any, accumulator: any): any {
   if (Array.isArray(data)) {
     return data.reduce(fn, accumulator)
   }

@@ -9,7 +9,7 @@ import toDate from './toDate'
  * @param template 格式化模板
  * @returns 格式化后的值
  */
-export default function formatDate (value: string | number | Date, template: string): string {
+export default function formatDate(value: string | number | Date, template: string): string {
   const date = toDate(value)
   const patterns: { [key: string]: number } = {
     y: date.getFullYear(), // 年

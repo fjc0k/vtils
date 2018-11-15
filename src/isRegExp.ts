@@ -6,6 +6,6 @@ import getType from './getType'
  * @param value 要检查的值
  * @returns 是（true）或否（false）
  */
-export default function isRegExp (value: any): value is RegExp {
+export default function isRegExp(value: any): value is RegExp {
   return getType(value) === 'RegExp'
 }

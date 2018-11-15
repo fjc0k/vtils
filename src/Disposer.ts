@@ -19,7 +19,7 @@ export default class Disposer {
    * @param name 待处置项目名称
    * @param dispose 处置行为
    */
-  public add (name: DisposerItemName, dispose: Dispose | Dispose[]): void {
+  public add(name: DisposerItemName, dispose: Dispose | Dispose[]): void {
     dispose = Array.isArray(dispose) ? dispose : [dispose]
     this.jar[name] = [
       ...(this.jar[name] || []),
@@ -32,7 +32,7 @@ export default class Disposer {
    *
    * @param name 欲处置项目名称
    */
-  public dispose (name: DisposerItemName): void {
+  public dispose(name: DisposerItemName): void {
     (this.jar[name] || /* istanbul ignore next */ []).forEach(dispose => dispose())
     delete this.jar[name]
   }
@@ -40,7 +40,7 @@ export default class Disposer {
   /**
    * 处置所有未处置项目。
    */
-  public disposeAll (): void {
+  public disposeAll(): void {
     for (const key in this.jar) {
       this.dispose(key)
     }

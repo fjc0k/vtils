@@ -5,7 +5,7 @@
  * @param arr2 数组2
  * @returns 是（true）或否（false）
  */
-export default function isEqualArray (arr1: any[], arr2: any[]): boolean {
+export default function isEqualArray(arr1: any[], arr2: any[]): boolean {
   if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
     return false
   }

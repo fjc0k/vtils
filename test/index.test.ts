@@ -211,7 +211,7 @@ describe('getType', () => {
     expect(vtils.getType(new Error('err'))).toBe('Error')
     expect(vtils.getType(null)).toBe('Null')
     expect(vtils.getType(undefined)).toBe('Undefined')
-    expect(vtils.getType((function test () { return arguments })())).toBe('Arguments')
+    expect(vtils.getType((function test() { return arguments })())).toBe('Arguments')
   })
 })
 

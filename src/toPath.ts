@@ -11,7 +11,7 @@ const cache = Object.create(null)
  * @param value 要转换的值
  * @returns 包含属性路径的数组
  */
-export default function toPath (value: ToPathValue): ToPathResult {
+export default function toPath(value: ToPathValue): ToPathResult {
   if (isArray(value)) {
     return value
   }

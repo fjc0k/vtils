@@ -19,7 +19,7 @@ function result<T extends (...args: any[]) => any>(value: T, ...args: ArgumentsT
  */
 function result<T>(value: T): T
 
-function result (value: any, ...args: any[]): any {
+function result(value: any, ...args: any[]): any {
   return isFunction(value) ? value.apply(null, args) : value
 }
 

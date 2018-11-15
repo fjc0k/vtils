@@ -2096,9 +2096,9 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-io@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-io/-/eslint-config-io-0.0.3.tgz#5006d51452854654087611a3ec82b386ec86b3e4"
+eslint-config-io@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-io/-/eslint-config-io-0.0.4.tgz#f332fafd3e2bdb400fd867a38bd1a5303abd8267"
   dependencies:
     babel-eslint "^10.0.1"
     eslint-plugin-import "^2.14.0"

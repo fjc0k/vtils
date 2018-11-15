@@ -9,7 +9,7 @@ import toPath, { ToPathValue } from './toPath'
  * @param [defaultValue] 默认值
  * @returns 检索结果
  */
-export default function get (obj: object, path: ToPathValue, defaultValue?: any): any {
+export default function get(obj: object, path: ToPathValue, defaultValue?: any): any {
   const normalizedPath = toPath(path)
   let last: any = obj
   for (let i = 0, len = normalizedPath.length; i < len; i++) {

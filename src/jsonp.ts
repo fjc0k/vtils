@@ -21,7 +21,7 @@ export const objectToQueryString = (obj: object): string => {
  * @param [callbackParameter='callback'] 携带回调函数名的参数
  * @returns 携带返回结果的 Promise 值
  */
-export default function jsonp (url: string, data?: string | object, callbackParameter = 'callback'): Promise<any> {
+export default function jsonp(url: string, data?: string | object, callbackParameter = 'callback'): Promise<any> {
   return new Promise(
     inBrowser()
       ? (resolve, reject) => {

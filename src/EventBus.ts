@@ -26,7 +26,7 @@ export default class EventBus<
    * @param listener 监听器
    * @returns 取消订阅函数
    */
-  public on<X extends K> (eventName: X, listener: T[X]): EventBusUnsubscribe {
+  public on<X extends K>(eventName: X, listener: T[X]): EventBusUnsubscribe {
     if (!this.listeners[eventName]) {
       this.listeners[eventName] = []
     }
@@ -44,7 +44,7 @@ export default class EventBus<
    * @param listener 监听器
    * @returns 取消订阅函数
    */
-  public once<X extends K> (eventName: X, listener: T[X]): EventBusUnsubscribe {
+  public once<X extends K>(eventName: X, listener: T[X]): EventBusUnsubscribe {
     const unsubscribe = this.on(eventName, (...args: any[]) => {
       unsubscribe()
       listener(...args)
@@ -58,7 +58,7 @@ export default class EventBus<
    * @param eventName 事件名称
    * @param [listener] 监听器
    */
-  public off<X extends K> (eventName: X, listener?: T[X]): void {
+  public off<X extends K>(eventName: X, listener?: T[X]): void {
     if (listener) {
       const listeners = this.listeners[eventName]
       const index = listeners.indexOf(listener)
@@ -78,7 +78,7 @@ export default class EventBus<
    * @param args 传给监听器的参数
    * @returns 各监听器的返回结果组成的数组
    */
-  public emit<X extends K> (eventName: X, ...args: ArgumentsType<T[X]>): Array<ReturnType<T[X]>> {
+  public emit<X extends K>(eventName: X, ...args: ArgumentsType<T[X]>): Array<ReturnType<T[X]>> {
     return (this.listeners[eventName] || []).map(listener => {
       return listener(...args)
     })

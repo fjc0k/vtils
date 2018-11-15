@@ -31,16 +31,16 @@ const defaultRequestOptions: Partial<RequestOptions> = {
 export class RequestFile {
   private file: string | File
 
-  public constructor (file: string | File) {
+  public constructor(file: string | File) {
     this.file = file
   }
 
-  public output (): string | File {
+  public output(): string | File {
     return this.file
   }
 }
 
-export default function request<T extends RequestOptions> (options: T): Promise<{
+export default function request<T extends RequestOptions>(options: T): Promise<{
   data: T['responseDataType'] extends 'json' ? any : string,
   status: number,
 }> {

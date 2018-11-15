@@ -6,7 +6,7 @@ import isPlainObject from './isPlainObject'
  * @param value 要检查的值
  * @returns 是（true）或否（false）
  */
-export default function isEmpty (value: any): boolean {
+export default function isEmpty(value: any): boolean {
   return [undefined, null, '', false, true].some(item => item === value)
     || (Array.isArray(value) && value.length === 0)
     || (isPlainObject(value) && (() => {

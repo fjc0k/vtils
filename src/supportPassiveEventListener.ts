@@ -7,7 +7,7 @@ let isSupportPassiveEventListener: boolean | undefined
  *
  * @returns 是（true）或否（false）
  */
-export default function supportPassiveEventListener (): boolean {
+export default function supportPassiveEventListener(): boolean {
   /* istanbul ignore else */
   if (isSupportPassiveEventListener === undefined) {
     isSupportPassiveEventListener = false
