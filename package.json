@@ -1,6 +1,6 @@
 {
   "name": "vtils",
-  "version": "0.56.1",
+  "version": "0.56.4",
   "description": "一些常用的 JavaScript 工具库。",
   "main": "lib/vtils.cjs.js",
   "module": "lib/vtils.es.js",
@@ -62,13 +62,13 @@
   "devDependencies": {
     "@types/jest": "^23.3.4",
     "@types/sinon": "^5.0.5",
-    "bili": "^3.3.4",
+    "bili": "^3.4.1",
     "codecov": "^3.1.0",
     "eslint": "^5.9.0",
     "eslint-config-io": "^0.0.6",
     "jest": "^23.6.0",
     "moment": "^2.22.2",
-    "rollup-plugin-typescript2": "^0.17.2",
+    "rollup-plugin-typescript2": "^0.18.0",
     "sinon": "^6.3.5",
     "standard-version": "^4.4.0",
     "ts-jest": "^23.10.4",
