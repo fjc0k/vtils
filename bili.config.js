@@ -4,5 +4,5 @@ module.exports = {
   input: 'src/index.ts',
   outDir: 'lib',
   format: ['es', 'cjs', 'umd', 'umd-min'],
-  banner: true
+  banner: true,
 }

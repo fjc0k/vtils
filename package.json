@@ -40,6 +40,7 @@
     "root": true,
     "extends": "io"
   },
+  "eslistIgnore": ["lib"],
   "standard-version": {
     "scripts": {
       "postbump": "yarn build && git add -A"
