@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.57.0"></a>
+# [0.57.0](https://github.com/fjc0k/vtils/compare/v0.56.4...v0.57.0) (2018-11-22)
+
+
+### Features
+
+* add isHan, isChineseName ([3aafede](https://github.com/fjc0k/vtils/commit/3aafede))
+* **Validator:** add name type ([6bcfed7](https://github.com/fjc0k/vtils/commit/6bcfed7))
+
+
+
 <a name="0.56.4"></a>
 ## [0.56.4](https://github.com/fjc0k/vtils/compare/v0.56.1...v0.56.4) (2018-11-17)
 
