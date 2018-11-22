@@ -1,6 +1,6 @@
 {
   "name": "vtils",
-  "version": "0.56.5",
+  "version": "0.57.0",
   "description": "一些常用的 JavaScript 工具库。",
   "main": "lib/vtils.cjs.js",
   "module": "lib/vtils.es.js",
@@ -40,6 +40,9 @@
     "root": true,
     "extends": "io"
   },
+  "eslistIgnore": [
+    "lib"
+  ],
   "standard-version": {
     "scripts": {
       "postbump": "yarn build && git add -A"

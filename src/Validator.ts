@@ -11,8 +11,9 @@ import isNumeric from './isNumeric'
 import isPromise from './isPromise'
 import isRegExp from './isRegExp'
 import isUrl from './isUrl'
+import isChineseName from './isChineseName'
 
-export type ValidatorRuleType = 'number' | 'integer' | 'phone' | 'mobile' | 'landline' | 'id' | 'url' | 'email'
+export type ValidatorRuleType = 'number' | 'integer' | 'phone' | 'mobile' | 'landline' | 'id' | 'url' | 'email' | 'name'
 export type ValidatorRuleTypePredicate = (value: any) => boolean
 export type ValidatorRuleCustom = (
   <D extends { [key: string]: any }>(payload: {
@@ -44,6 +45,7 @@ const typeValidators: { [key in ValidatorRuleType]: ValidatorRuleTypePredicate }
   id: isChineseIDCardNumber,
   url: isUrl,
   email: isEmail,
+  name: isChineseName,
 }
 
 function validate<D>(data: D, key: keyof D, rule: ValidatorRule): Promise<boolean> {

@@ -1353,3 +1353,36 @@ describe('EventBus', () => {
     expect(bus.emit('add', 1, 2)).toEqual([])
   })
 })
+
+describe('isHan', () => {
+  test('是', () => {
+    expect(vtils.isHan('我')).toBeTruthy()
+    expect(vtils.isHan('我们')).toBeTruthy()
+    expect(vtils.isHan('我的家')).toBeTruthy()
+    expect(vtils.isHan('畫羣飃姉')).toBeTruthy()
+  })
+  test('否', () => {
+    expect(vtils.isHan('我1')).toBeFalsy()
+    expect(vtils.isHan('我,们')).toBeFalsy()
+    expect(vtils.isHan('我，的家')).toBeFalsy()
+    expect(vtils.isHan('畫羣飃#姉')).toBeFalsy()
+  })
+})
+
+describe('isChineseName', () => {
+  test('是', () => {
+    expect(vtils.isChineseName('我们')).toBeTruthy()
+    expect(vtils.isChineseName('我的家')).toBeTruthy()
+    expect(vtils.isChineseName('畫羣飃姉')).toBeTruthy()
+    expect(vtils.isChineseName('阿·不多')).toBeTruthy()
+  })
+  test('否', () => {
+    expect(vtils.isChineseName('我')).toBeFalsy()
+    expect(vtils.isChineseName('我1')).toBeFalsy()
+    expect(vtils.isChineseName('我,们')).toBeFalsy()
+    expect(vtils.isChineseName('我，的家')).toBeFalsy()
+    expect(vtils.isChineseName('畫羣飃#姉')).toBeFalsy()
+    expect(vtils.isChineseName('阿··不多')).toBeFalsy()
+    expect(vtils.isChineseName('·不多')).toBeFalsy()
+  })
+})
