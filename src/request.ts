@@ -11,7 +11,7 @@ export interface RequestOptions {
   header?: { [key: string]: string },
   method?: 'GET' | 'POST',
   requestDataType?: 'json' | 'querystring',
-  responseDataType?: 'json' | 'text',
+  responseDataType?: 'json' | 'text' | 'arraybuffer',
   withCredentials?: boolean,
 }
 
@@ -41,13 +41,16 @@ export class RequestFile {
 }
 
 export default function request<T extends RequestOptions>(options: T): Promise<{
-  data: T['responseDataType'] extends 'json' ? any : string,
+  data: (
+    T['responseDataType'] extends 'json'
+      ? any
+      : T['responseDataType'] extends 'string'
+        ? string
+        : ArrayBuffer
+  ),
   status: number,
 }> {
-  return new Promise<{
-  data: any,
-  status: number
-  }>((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     // 设置默认参数
     options = {
       ...defaultRequestOptions,
@@ -94,13 +97,13 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
           data: options.data,
           header: options.header,
           method: options.method,
-          dataType: 'text',
-          responseType: 'text',
+          dataType: options.responseDataType,
+          responseType: options.responseDataType === 'arraybuffer' ? 'arraybuffer' : 'text',
           success: res => {
             resolve({
-              data: res.data as string,
+              data: res.data,
               status: res.statusCode,
-            })
+            } as any)
           },
           fail: reject,
         })
@@ -116,7 +119,7 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
       )
       const xhr = new XMLHttpRequest()
       xhr.open(options.method, url)
-      xhr.responseType = 'text'
+      xhr.responseType = options.responseDataType
       try {
         forOwn(options.header, (value, name) => {
           xhr.setRequestHeader(name, value)
@@ -127,7 +130,7 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
       }
       xhr.onload = () => {
         resolve({
-          data: xhr.responseText,
+          data: xhr.response,
           status: xhr.status,
         })
       }
@@ -136,15 +139,6 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
       xhr.onabort = reject
       xhr.send(isGet ? null : queryString)
     }
-  }).then(res => {
-    if (options.responseDataType === 'json') {
-      try {
-        res.data = JSON.parse(res.data)
-      } catch (err) {
-        res.data = {}
-      }
-    }
-    return res
   })
 }
 
