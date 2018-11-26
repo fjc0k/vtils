@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.59.1"></a>
+## [0.59.1](https://github.com/fjc0k/vtils/compare/v0.59.0...v0.59.1) (2018-11-26)
+
+
+### Bug Fixes
+
+* **storage:** 微信小程序无值时返回空字符串 ([2257472](https://github.com/fjc0k/vtils/commit/2257472))
+
+
+
 <a name="0.59.0"></a>
 # [0.59.0](https://github.com/fjc0k/vtils/compare/v0.58.0...v0.59.0) (2018-11-24)
 
