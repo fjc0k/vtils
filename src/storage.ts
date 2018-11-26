@@ -72,7 +72,11 @@ const storage = {
       }
       return result(value)
     } catch (err) {
-      return result(rawValue != null ? rawValue : defaultValue)
+      return result(
+        rawValue != null && /** 微信小程序无值时返回空字符串 */ rawValue !== ''
+          ? rawValue
+          : defaultValue
+      )
     }
   },
 
