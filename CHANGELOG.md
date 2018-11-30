@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.60.4"></a>
+## [0.60.4](https://github.com/fjc0k/vtils/compare/v0.60.3...v0.60.4) (2018-11-30)
+
+
+### Bug Fixes
+
+* request file ([7b2e4d4](https://github.com/fjc0k/vtils/commit/7b2e4d4))
+
+
+
 <a name="0.60.3"></a>
 ## [0.60.3](https://github.com/fjc0k/vtils/compare/v0.60.0...v0.60.3) (2018-11-30)
 
