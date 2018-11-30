@@ -130,17 +130,3 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
     }
   })
 }
-
-request.get = (options: RequestOptions) => {
-  return request({
-    ...options,
-    method: 'GET',
-  })
-}
-
-request.post = (options: RequestOptions) => {
-  return request({
-    ...options,
-    method: 'POST',
-  })
-}
