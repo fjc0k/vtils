@@ -4,6 +4,7 @@ import inBrowser from './inBrowser'
 import inWechatMiniProgram from './inWechatMiniProgram'
 import { objectToQueryString } from './jsonp'
 import omit from './omit'
+import FileData from './FileData'
 
 export interface RequestOptions {
   url: string,
@@ -28,18 +29,6 @@ const defaultRequestOptions: Partial<RequestOptions> = {
   responseDataType: 'json',
 }
 
-export class RequestFile {
-  private file: string | File
-
-  public constructor(file: string | File) {
-    this.file = file
-  }
-
-  public output(): string | File {
-    return this.file
-  }
-}
-
 export default function request<T extends RequestOptions>(options: T): Promise<{
   data: (
     T['responseDataType'] extends 'json'
@@ -58,9 +47,9 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
     }
 
     // 解析文件参数
-    let file: { key: string, value: RequestFile }
+    let file: { key: string, value: FileData }
     forOwn(options.data, (value, key) => {
-      if (value instanceof RequestFile) {
+      if (value instanceof FileData) {
         file = { key, value }
         return false
       }
@@ -79,7 +68,7 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
       if (file) {
         wx.uploadFile({
           url: options.url,
-          filePath: file.value.output() as string,
+          filePath: file.value.get() as string,
           name: file.key,
           header: options.header,
           formData: options.data,

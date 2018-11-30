@@ -1386,3 +1386,11 @@ describe('isChineseName', () => {
     expect(vtils.isChineseName('·不多')).toBeFalsy()
   })
 })
+
+describe('FileData', () => {
+  test('ok', () => {
+    [1, true, /x/, {}].forEach(item => {
+      expect(new vtils.FileData(item).get()).toBe(item)
+    })
+  })
+})
