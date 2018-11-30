@@ -9,6 +9,13 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * add FileData ([20b7cc3](https://github.com/fjc0k/vtils/commit/20b7cc3))
+<a name="0.59.1"></a>
+## [0.59.1](https://github.com/fjc0k/vtils/compare/v0.59.0...v0.59.1) (2018-11-26)
+
+
+### Bug Fixes
+
+* **storage:** 微信小程序无值时返回空字符串 ([2257472](https://github.com/fjc0k/vtils/commit/2257472))
 
 
 
