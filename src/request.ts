@@ -73,8 +73,14 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
           header: options.header,
           formData: options.data,
           success: res => {
+            let data = res.data
+            if (options.responseDataType === 'json') {
+              try {
+                data = JSON.parse(data)
+              } catch (e) {}
+            }
             resolve({
-              data: res.data,
+              data: data,
               status: res.statusCode,
             })
           },
