@@ -107,11 +107,18 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
 
     // 浏览器请求
     if (inBrowser()) {
-      const isGet = options.method === 'GET'
-      const queryString = objectToQueryString(options.data)
-      const url = options.url + (
-        isGet ? (options.url.indexOf('?') > -1 ? '&' : '?') + queryString : ''
-      )
+      let requestBody: string = null
+      let url = options.url
+      if (options.requestDataType === 'json') {
+        requestBody = JSON.stringify(options.data)
+      } else {
+        const queryString = objectToQueryString(options.data)
+        if (options.method === 'GET') {
+          url += (url.indexOf('?') > -1 ? '&' : '?') + queryString
+        } else {
+          requestBody = queryString
+        }
+      }
       const xhr = new XMLHttpRequest()
       xhr.open(options.method, url)
       xhr.responseType = options.responseDataType
@@ -132,7 +139,7 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
       xhr.onerror = reject
       xhr.ontimeout = reject
       xhr.onabort = reject
-      xhr.send(isGet ? null : queryString)
+      xhr.send(requestBody)
     }
   })
 }
