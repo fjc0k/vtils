@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.62.0"></a>
+# [0.62.0](https://github.com/fjc0k/vtils/compare/v0.61.1...v0.62.0) (2018-12-01)
+
+
+### Features
+
+* add sleep ([1f5caf0](https://github.com/fjc0k/vtils/commit/1f5caf0))
+
+
+
 <a name="0.61.1"></a>
 ## [0.61.1](https://github.com/fjc0k/vtils/compare/v0.61.0...v0.61.1) (2018-12-01)
 
