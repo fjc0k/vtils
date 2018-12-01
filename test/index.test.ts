@@ -1390,7 +1390,10 @@ describe('isChineseName', () => {
 describe('FileData', () => {
   test('ok', () => {
     [1, true, /x/, {}].forEach(item => {
-      expect(new vtils.FileData(item).get()).toBe(item)
+      expect(vtils.FileData.isFileData(item)).toBeFalsy()
+      const fileData = new vtils.FileData(item)
+      expect(fileData.get()).toBe(item)
+      expect(vtils.FileData.isFileData(fileData)).toBeTruthy()
     })
   })
 })

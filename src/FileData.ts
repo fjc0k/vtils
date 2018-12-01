@@ -1,4 +1,10 @@
+import isObject from './isObject'
+
+const flag = 0x666
+
 export default class FileData<T = any> {
+  private readonly $$instanceOf = flag
+
   private content: T
 
   /**
@@ -17,5 +23,15 @@ export default class FileData<T = any> {
    */
   public get(): T {
     return this.content
+  }
+
+  /**
+   * 检查值是否是 FileData。
+   *
+   * @param value 要检查的值
+   * @returns 是（true）或否（false）
+   */
+  public static isFileData(value: any): boolean {
+    return isObject(value) && (value as any).$$instanceOf === flag
   }
 }
