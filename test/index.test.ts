@@ -1397,3 +1397,12 @@ describe('FileData', () => {
     })
   })
 })
+
+describe('sleep', () => {
+  test('ok', async () => {
+    const time1 = new Date().getTime()
+    await vtils.sleep(1000)
+    const time2 = new Date().getTime()
+    expect(time2 - time1 >= 1000).toBeTruthy()
+  })
+})
