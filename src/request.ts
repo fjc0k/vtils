@@ -5,6 +5,7 @@ import inWechatMiniProgram from './inWechatMiniProgram'
 import { objectToQueryString } from './jsonp'
 import omit from './omit'
 import FileData from './FileData'
+import defaultValue from './defaultValue'
 
 export interface RequestOptions {
   url: string,
@@ -21,14 +22,6 @@ const requestDataTypeToContentType: { [key in RequestOptions['requestDataType']]
   querystring: 'application/x-www-form-urlencoded',
 }
 
-const defaultRequestOptions: Partial<RequestOptions> = {
-  data: {},
-  header: {},
-  method: 'GET',
-  requestDataType: 'json',
-  responseDataType: 'json',
-}
-
 export default function request<T extends RequestOptions>(options: T): Promise<{
   data: (
     T['responseDataType'] extends 'json'
@@ -41,10 +34,13 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
 }> {
   return new Promise((resolve, reject) => {
     // 设置默认参数
-    options = {
-      ...defaultRequestOptions,
-      ...(options as any),
-    }
+    options = defaultValue(() => ({
+      data: {},
+      header: {},
+      method: 'GET',
+      requestDataType: 'json',
+      responseDataType: 'json',
+    }), options) as any
 
     // 解析文件参数
     let file: { key: string, value: any }

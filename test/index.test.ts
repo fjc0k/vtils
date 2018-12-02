@@ -1406,3 +1406,18 @@ describe('sleep', () => {
     expect(time2 - time1 >= 1000).toBeTruthy()
   })
 })
+
+describe('defaultValue', () => {
+  test('ok', () => {
+    expect(vtils.defaultValue(
+      () => ({
+        x: 1,
+        y: 2,
+      }),
+      {
+        x: 2,
+        y: null,
+      }
+    )).toEqual({ x: 2, y: 2 })
+  })
+})

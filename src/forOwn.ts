@@ -1,3 +1,5 @@
+import isObject from './isObject'
+
 /**
  * 遍历对象的可枚举属性。若回调函数返回 false，遍历会提前退出。
  *
@@ -8,6 +10,7 @@ export default function forOwn<
   T extends { [key: string]: any },
   K extends Extract<keyof T, string>
 >(obj: T, callback: (value: T[K], key: K, obj: T) => any): void {
+  if (!isObject(obj)) return
   for (const key in obj) {
     /* istanbul ignore else */
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
