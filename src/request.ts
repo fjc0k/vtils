@@ -55,9 +55,11 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
     })
 
     // 设置 Content-Type
-    options.header['Content-Type'] = options.header['Content-Type'] || (
-      file ? 'multipart/form-data' : requestDataTypeToContentType[options.requestDataType]
-    )
+    if (file) {
+      delete options.header['Content-Type']
+    } else {
+      options.header['Content-Type'] = options.header['Content-Type'] || requestDataTypeToContentType[options.requestDataType]
+    }
 
     // 小程序请求
     if (inWechatMiniProgram()) {
