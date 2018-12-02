@@ -47,16 +47,16 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
     }
 
     // 解析文件参数
-    let file: { key: string, value: FileData }
+    let file: { key: string, value: any }
     forOwn(options.data, (value, key) => {
-      if (value instanceof FileData) {
-        file = { key, value }
+      if (value instanceof FileData || (inBrowser() && value instanceof File)) {
+        file = {
+          key: key,
+          value: value instanceof FileData ? value.get() : value,
+        }
         return false
       }
     })
-    if (file) {
-      options.data = omit(options.data, [file.key])
-    }
 
     // 设置 Content-Type
     options.header['Content-Type'] = options.header['Content-Type'] || (
@@ -66,9 +66,10 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
     // 小程序请求
     if (inWechatMiniProgram()) {
       if (file) {
+        options.data = omit(options.data, [file.key])
         wx.uploadFile({
           url: options.url,
-          filePath: file.value.get() as string,
+          filePath: file.value,
           name: file.key,
           header: options.header,
           formData: options.data,
@@ -107,16 +108,23 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
 
     // 浏览器请求
     if (inBrowser()) {
-      let requestBody: string = null
       let url = options.url
-      if (options.requestDataType === 'json') {
-        requestBody = JSON.stringify(options.data)
+      let requestBody: string | FormData = null
+      if (file) {
+        requestBody = Object.keys(options.data).reduce((fd, key) => {
+          fd.append(key, file.key === key ? file.value : options.data[key])
+          return fd
+        }, new FormData())
       } else {
-        const queryString = objectToQueryString(options.data)
-        if (options.method === 'GET') {
-          url += (url.indexOf('?') > -1 ? '&' : '?') + queryString
+        if (options.requestDataType === 'json') {
+          requestBody = JSON.stringify(options.data)
         } else {
-          requestBody = queryString
+          const queryString = objectToQueryString(options.data)
+          if (options.method === 'GET') {
+            url += (url.indexOf('?') > -1 ? '&' : '?') + queryString
+          } else {
+            requestBody = queryString
+          }
         }
       }
       const xhr = new XMLHttpRequest()
