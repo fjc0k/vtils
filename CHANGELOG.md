@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.63.0"></a>
+# [0.63.0](https://github.com/fjc0k/vtils/compare/v0.62.0...v0.63.0) (2018-12-02)
+
+
+### Features
+
+* **request:** support upload file in browser ([4513e54](https://github.com/fjc0k/vtils/commit/4513e54))
+
+
+
 <a name="0.62.0"></a>
 # [0.62.0](https://github.com/fjc0k/vtils/compare/v0.61.1...v0.62.0) (2018-12-01)
 
