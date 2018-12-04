@@ -1421,3 +1421,13 @@ describe('defaultValue', () => {
     )).toEqual({ x: 2, y: 2 })
   })
 })
+
+describe('objectToQueryString', () => {
+  test('ok', () => {
+    expect(vtils.objectToQueryString({ x: 11 })).toBe('x=11')
+    expect(vtils.objectToQueryString({ '?': '.%/hello' })).toBe('%3F=.%25%2Fhello')
+    const str = vtils.objectToQueryString({ 'x': 11, '?': '.%/hello' })
+    expect(/x=11/.test(str)).toBeTruthy()
+    expect(/%3F=\.%25%2Fhello/.test(str)).toBeTruthy()
+  })
+})

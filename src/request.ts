@@ -2,10 +2,10 @@
 import forOwn from './forOwn'
 import inBrowser from './inBrowser'
 import inWechatMiniProgram from './inWechatMiniProgram'
-import { objectToQueryString } from './jsonp'
 import omit from './omit'
 import FileData from './FileData'
 import defaultValue from './defaultValue'
+import objectToQueryString from './objectToQueryString'
 
 export interface RequestOptions {
   url: string,

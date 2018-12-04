@@ -3,15 +3,7 @@ import inBrowser from './inBrowser'
 import isObject from './isObject'
 import noop from './noop'
 import randomString from './randomString'
-import reduce from './reduce'
-
-export const objectToQueryString = (obj: object): string => {
-  return reduce(
-    obj,
-    (str, value, key) => (str += `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`),
-    ''
-  )
-}
+import objectToQueryString from './objectToQueryString'
 
 /**
  * 发起 jsonp 请求。
