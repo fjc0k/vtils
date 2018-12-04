@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.64.0"></a>
+# [0.64.0](https://github.com/fjc0k/vtils/compare/v0.63.2...v0.64.0) (2018-12-04)
+
+
+### Features
+
+* add last ([694e252](https://github.com/fjc0k/vtils/commit/694e252))
+* add objectToQueryString ([13ee7fa](https://github.com/fjc0k/vtils/commit/13ee7fa))
+
+
+
 <a name="0.63.2"></a>
 ## [0.63.2](https://github.com/fjc0k/vtils/compare/v0.63.1...v0.63.2) (2018-12-02)
 
