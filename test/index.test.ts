@@ -1431,3 +1431,11 @@ describe('objectToQueryString', () => {
     expect(/%3F=\.%25%2Fhello/.test(str)).toBeTruthy()
   })
 })
+
+describe('last', () => {
+  test('ok', () => {
+    expect(vtils.last([1, 2, 3])).toBe(3)
+    expect(vtils.last([1])).toBe(1)
+    expect(vtils.last([])).toBe(undefined)
+  })
+})
