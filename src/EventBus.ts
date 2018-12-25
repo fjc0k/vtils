@@ -45,10 +45,10 @@ export default class EventBus<
    * @returns 取消订阅函数
    */
   public once<X extends K>(eventName: X, listener: T[X]): EventBusUnsubscribe {
-    const unsubscribe = this.on(eventName, (...args: any[]) => {
+    const unsubscribe = this.on(eventName, ((...args: any[]) => {
       unsubscribe()
       listener(...args)
-    })
+    }) as any)
     return unsubscribe
   }
 
