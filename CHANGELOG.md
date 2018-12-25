@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.64.1"></a>
+## [0.64.1](https://github.com/fjc0k/vtils/compare/v0.64.0...v0.64.1) (2018-12-25)
+
+
+### Bug Fixes
+
+* **inWechatMiniProgram:** 更健壮的检测 ([dae974b](https://github.com/fjc0k/vtils/commit/dae974b))
+
+
+
 <a name="0.64.0"></a>
 # [0.64.0](https://github.com/fjc0k/vtils/compare/v0.63.2...v0.64.0) (2018-12-04)
 
