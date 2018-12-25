@@ -12,7 +12,7 @@ let isInWechatMiniProgram: boolean | undefined
  */
 export default function inWechatMiniProgram(callback?: () => void): boolean {
   if (isInWechatMiniProgram === undefined) {
-    isInWechatMiniProgram = !inBrowser() && isObject(wx) && isFunction(wx.getSystemInfo)
+    isInWechatMiniProgram = !inBrowser() && typeof wx !== 'undefined' && isObject(wx) && isFunction(wx.getSystemInfo)
   }
   /* istanbul ignore if */
   if (isInWechatMiniProgram && isFunction(callback)) {
