@@ -1439,3 +1439,10 @@ describe('last', () => {
     expect(vtils.last([])).toBe(undefined)
   })
 })
+
+describe('placeKitten', () => {
+  test('ok', () => {
+    expect(vtils.placeKitten(100)).toMatch(/100\/100/)
+    expect(vtils.placeKitten(200, 100)).toMatch(/200\/100/)
+  })
+})
