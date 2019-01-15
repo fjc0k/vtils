@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.65.0"></a>
+# [0.65.0](https://github.com/fjc0k/vtils/compare/v0.64.1...v0.65.0) (2019-01-15)
+
+
+### Features
+
+* add placeKitten ([442ba11](https://github.com/fjc0k/vtils/commit/442ba11))
+
+
+
 <a name="0.64.1"></a>
 ## [0.64.1](https://github.com/fjc0k/vtils/compare/v0.64.0...v0.64.1) (2018-12-25)
 
