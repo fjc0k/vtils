@@ -1446,3 +1446,21 @@ describe('placeKitten', () => {
     expect(vtils.placeKitten(200, 100)).toMatch(/200\/100/)
   })
 })
+
+describe('padStart', () => {
+  test('ok', () => {
+    expect(vtils.padStart('1', 3, '0')).toBe('001')
+    expect(vtils.padStart('abc', 6)).toBe('   abc')
+    expect(vtils.padStart('abc', 6, '_-')).toBe('_-_abc')
+    expect(vtils.padStart('abc', 3)).toBe('abc')
+  })
+})
+
+describe('padEnd', () => {
+  test('ok', () => {
+    expect(vtils.padEnd('1', 3, '0')).toBe('100')
+    expect(vtils.padEnd('abc', 6)).toBe('abc   ')
+    expect(vtils.padEnd('abc', 6, '_-')).toBe('abc_-_')
+    expect(vtils.padEnd('abc', 3)).toBe('abc')
+  })
+})

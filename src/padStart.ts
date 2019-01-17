@@ -1,0 +1,18 @@
+import repeat from './repeat'
+
+/**
+ * 在 str 左侧填充字符。
+ *
+ * @param str 要填充的字符串
+ * @param [length=0] 目标长度
+ * @param [chars=' '] 填充字符
+ * @returns 填充后的字符串
+ */
+export default function padStart(str: string, length: number = 0, chars: string = ' '): string {
+  let prefix = ''
+  if (length > str.length) {
+    const prefixLength = length - str.length
+    prefix = repeat(chars, length - str.length).slice(0, prefixLength)
+  }
+  return prefix + str
+}
