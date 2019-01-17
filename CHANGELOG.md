@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.66.0"></a>
+# [0.66.0](https://github.com/fjc0k/vtils/compare/v0.65.0...v0.66.0) (2019-01-17)
+
+
+### Features
+
+* add padStart, padEnd ([7a2cc5d](https://github.com/fjc0k/vtils/commit/7a2cc5d))
+
+
+
 <a name="0.65.0"></a>
 # [0.65.0](https://github.com/fjc0k/vtils/compare/v0.64.1...v0.65.0) (2019-01-15)
 
