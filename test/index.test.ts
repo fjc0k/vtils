@@ -1464,3 +1464,13 @@ describe('padEnd', () => {
     expect(vtils.padEnd('abc', 3)).toBe('abc')
   })
 })
+
+describe('pad', () => {
+  test('ok', () => {
+    expect(vtils.pad('1', 3, '0')).toBe('010')
+    expect(vtils.pad('1', 4, '0')).toBe('0100')
+    expect(vtils.pad('abc', 8)).toBe('  abc   ')
+    expect(vtils.pad('abc', 8, '_-')).toBe('_-abc_-_')
+    expect(vtils.pad('abc', 3)).toBe('abc')
+  })
+})

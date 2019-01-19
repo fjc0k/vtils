@@ -12,7 +12,7 @@ export default function padEnd(str: string, length: number = 0, chars: string = 
   let suffix = ''
   if (length > str.length) {
     const suffixLength = length - str.length
-    suffix = repeat(chars, length - str.length).slice(0, suffixLength)
+    suffix = repeat(chars, suffixLength).slice(0, suffixLength)
   }
   return str + suffix
 }

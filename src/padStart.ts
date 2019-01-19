@@ -12,7 +12,7 @@ export default function padStart(str: string, length: number = 0, chars: string 
   let prefix = ''
   if (length > str.length) {
     const prefixLength = length - str.length
-    prefix = repeat(chars, length - str.length).slice(0, prefixLength)
+    prefix = repeat(chars, prefixLength).slice(0, prefixLength)
   }
   return prefix + str
 }
