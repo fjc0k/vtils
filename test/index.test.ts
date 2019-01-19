@@ -1474,3 +1474,39 @@ describe('pad', () => {
     expect(vtils.pad('abc', 3)).toBe('abc')
   })
 })
+
+describe('onResize', () => {
+  test('resize', () => {
+    const fn = jest.fn()
+    const off = vtils.onResize(fn)
+    window.dispatchEvent(new Event('resize'))
+    window.dispatchEvent(new Event('orientationchange'))
+    expect(fn).toBeCalled()
+    expect(fn).toBeCalledTimes(1)
+    off()
+    window.dispatchEvent(new Event('resize'))
+    expect(fn).toBeCalled()
+    expect(fn).toBeCalledTimes(1)
+  })
+  test('orientationchange', () => {
+    (window as any).orientationchange = true
+    const fn = jest.fn()
+    const off = vtils.onResize(fn)
+    window.dispatchEvent(new Event('orientationchange'))
+    window.dispatchEvent(new Event('resize'))
+    expect(fn).toBeCalled()
+    expect(fn).toBeCalledTimes(1)
+    off()
+    window.dispatchEvent(new Event('orientationchange'))
+    expect(fn).toBeCalled()
+    expect(fn).toBeCalledTimes(1)
+    delete (window as any).orientationchange
+  })
+})
+
+describe('flexible', () => {
+  test('ok', () => {
+    vtils.flexible()
+    document.documentElement.style.fontSize = `${document.documentElement.clientWidth / 10}px`
+  })
+})
