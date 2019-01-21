@@ -1510,3 +1510,12 @@ describe('flexible', () => {
     document.documentElement.style.fontSize = `${document.documentElement.clientWidth / 10}px`
   })
 })
+
+describe('sum', () => {
+  test('ok', () => {
+    expect(vtils.sum([4, 2, 8, 6])).toBe(20)
+    expect(vtils.sum(4, 2, 8, 6)).toBe(20)
+    expect(vtils.sum([4, 2], 8, [6])).toBe(20)
+    expect(vtils.sum([4, 2], 8, [6], [])).toBe(20)
+  })
+})
