@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.68.0"></a>
+# [0.68.0](https://github.com/fjc0k/vtils/compare/v0.67.0...v0.68.0) (2019-01-21)
+
+
+### Features
+
+* add inRange ([f7a1b78](https://github.com/fjc0k/vtils/commit/f7a1b78))
+* add sum ([c7fc3e5](https://github.com/fjc0k/vtils/commit/c7fc3e5))
+* add sumBy ([1154786](https://github.com/fjc0k/vtils/commit/1154786))
+
+
+
 <a name="0.67.0"></a>
 # [0.67.0](https://github.com/fjc0k/vtils/compare/v0.66.0...v0.67.0) (2019-01-19)
 
