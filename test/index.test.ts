@@ -1527,3 +1527,26 @@ describe('sumBy', () => {
     expect(vtils.sumBy([vtils.range(0, 10), vtils.range(0, 5)], item => item.length)).toBe(15)
   })
 })
+
+describe('inRange', () => {
+  test('开区间', () => {
+    expect(vtils.inRange(5, 2, 6)).toBeTruthy()
+    expect(vtils.inRange(2, 2, 6)).toBeFalsy()
+    expect(vtils.inRange(6, 2, 6)).toBeFalsy()
+    expect(vtils.inRange(7, 2, 6)).toBeFalsy()
+    expect(vtils.inRange(2.0001, 2, 6)).toBeTruthy()
+    expect(vtils.inRange(5.9999, 2, 6)).toBeTruthy()
+  })
+  test('闭区间', () => {
+    expect(vtils.inRange(5, 2, 6, '[]')).toBeTruthy()
+    expect(vtils.inRange(2, 2, 6, '[]')).toBeTruthy()
+    expect(vtils.inRange(6, 2, 6, '[]')).toBeTruthy()
+    expect(vtils.inRange(2.0001, 2, 6, '[]')).toBeTruthy()
+    expect(vtils.inRange(5.9999, 2, 6, '[]')).toBeTruthy()
+  })
+  test('半开半闭区间', () => {
+    expect(vtils.inRange(2, 2, 6, '(]')).toBeFalsy()
+    expect(vtils.inRange(2, 2, 6, '[)')).toBeTruthy()
+    expect(vtils.inRange(6, 2, 6, '(]')).toBeTruthy()
+  })
+})
