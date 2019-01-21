@@ -1519,3 +1519,11 @@ describe('sum', () => {
     expect(vtils.sum([4, 2], 8, [6], [])).toBe(20)
   })
 })
+
+describe('sumBy', () => {
+  test('ok', () => {
+    expect(vtils.sumBy([4, 2, 8, 6], item => item)).toBe(20)
+    expect(vtils.sumBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], item => item.n)).toBe(20)
+    expect(vtils.sumBy([vtils.range(0, 10), vtils.range(0, 5)], item => item.length)).toBe(15)
+  })
+})
