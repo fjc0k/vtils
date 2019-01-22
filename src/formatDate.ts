@@ -2,6 +2,8 @@ import reduce from './reduce'
 import repeat from './repeat'
 import toDate from './toDate'
 
+export type FormatDateValue = string | number | Date
+
 /**
  * 格式化日期显示。
  *
@@ -9,7 +11,7 @@ import toDate from './toDate'
  * @param template 格式化模板
  * @returns 格式化后的值
  */
-export default function formatDate(value: string | number | Date, template: string): string {
+export default function formatDate(value: FormatDateValue, template: string): string {
   const date = toDate(value)
   const patterns: { [key: string]: number } = {
     y: date.getFullYear(), // 年
