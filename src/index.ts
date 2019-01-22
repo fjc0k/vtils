@@ -84,6 +84,7 @@ export { default as supportPassiveEventListener } from './supportPassiveEventLis
 export { default as times } from './times'
 export { default as toDate } from './toDate'
 export { default as toPath } from './toPath'
+export { default as toUnixTimestamp } from './toUnixTimestamp'
 export { default as transformElement } from './transformElement'
 export { default as upperCaseFirst } from './upperCaseFirst'
 export { default as values } from './values'

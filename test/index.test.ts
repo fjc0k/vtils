@@ -1550,3 +1550,11 @@ describe('inRange', () => {
     expect(vtils.inRange(6, 2, 6, '(]')).toBeTruthy()
   })
 })
+
+describe('toUnixTimestamp', () => {
+  test('ok', () => {
+    [undefined, new Date(), '2018-2-2 5:3', 1548142169979].forEach(date => {
+      expect(vtils.toUnixTimestamp(date)).toBe(moment(date).unix())
+    })
+  })
+})

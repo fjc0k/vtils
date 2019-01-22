@@ -2,6 +2,7 @@ import isDate from './isDate'
 import isNull from './isNull'
 import isString from './isString'
 import isUndefined from './isUndefined'
+import { FormatDateValue } from './formatDate'
 
 const cache = Object.create(null)
 
@@ -15,7 +16,7 @@ const REGEX_PARSE = /^(\d{4})-?(\d{1,2})-?(\d{0,2}).*?(?:(\d{1,2})(?::(\d{1,2}))
  * @returns 转换后的 `Date` 实例
  * @see https://github.com/iamkun/dayjs/blob/master/src/index.js#L46
  */
-export default function toDate(value?: string | number | Date): Date {
+export default function toDate(value?: FormatDateValue): Date {
   let reg: RegExpMatchArray
   if (isNull(value)) return new Date(NaN)
   if (isUndefined(value)) return new Date()
