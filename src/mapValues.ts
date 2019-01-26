@@ -9,11 +9,12 @@ import forOwn from './forOwn'
  */
 export default function mapValues<
   T extends { [key: string]: any },
-  K extends Extract<keyof T, string>
+  K extends Extract<keyof T, string>,
+  C extends any
 >(
   obj: T,
-  callback: (value: T[K], key: K, obj: T) => any
-): { [key in K]: any } {
+  callback: (value: T[K], key: K, obj: T) => C
+): { [key in K]: C } {
   const newObj: any = {}
   forOwn(obj, (value, key, source) => {
     newObj[key] = callback(value, key as K, source)

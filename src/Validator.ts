@@ -13,8 +13,15 @@ import isRegExp from './isRegExp'
 import isUrl from './isUrl'
 import isChineseName from './isChineseName'
 
-export type ValidatorRuleType = 'number' | 'integer' | 'phone' | 'mobile' | 'landline' | 'id' | 'url' | 'email' | 'name'
-export type ValidatorRuleTypePredicate = (value: any) => boolean
+export type ValidatorRuleType = 'number'
+  | 'integer'
+  | 'phone'
+  | 'mobile'
+  | 'landline'
+  | 'id'
+  | 'url'
+  | 'email'
+  | 'name'
 export type ValidatorRuleCustom = (
   <D extends { [key: string]: any }>(payload: {
     key: keyof D,
@@ -29,14 +36,15 @@ export interface ValidatorRule {
   len?: number,
   min?: number,
   max?: number,
-  message?: any,
   custom?: RegExp | ValidatorRuleCustom,
+  message: any,
 }
+
 export interface ValidatorRules {
   [key: string]: ValidatorRule | ValidatorRule[],
 }
 
-const typeValidators: { [key in ValidatorRuleType]: ValidatorRuleTypePredicate } = {
+const typeValidators: { [key in ValidatorRuleType]: (value: any) => boolean } = {
   number: isNumeric,
   integer: value => isNumeric(value) && isInteger(+value),
   phone: isChinesePhoneNumber,

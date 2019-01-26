@@ -1039,7 +1039,12 @@ describe('isEmail', () => {
 
 describe('Validator', () => {
   test('基本可用', async () => {
-    const v = new vtils.Validator({ phone: { type: 'mobile' } })
+    const v = new vtils.Validator({
+      phone: {
+        type: 'mobile',
+        message: 'err',
+      },
+    })
     expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
     expect(await v.validate({ phone: '10086' })).toMatchObject({
       valid: false,
@@ -1050,8 +1055,14 @@ describe('Validator', () => {
   test('多个验证条件1', async () => {
     const v = new vtils.Validator({
       phone: [
-        { type: 'mobile' },
-        { custom: ({ value }) => value === '18087030178', message: '错啦' },
+        {
+          type: 'mobile',
+          message: 'err',
+        },
+        {
+          custom: ({ value }) => value === '18087030178',
+          message: '错啦',
+        },
       ],
     })
     expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
@@ -1072,7 +1083,7 @@ describe('Validator', () => {
   })
   test('多个验证参数', async () => {
     const v = new vtils.Validator({
-      phone: { type: 'mobile' },
+      phone: { type: 'mobile', message: 'err' },
       age: { custom: ({ value }) => value > 18, message: '18禁' },
     })
     expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
@@ -1104,20 +1115,20 @@ describe('Validator', () => {
     expect(await v.validate({ pass1: 'hello', pass2: 'hello' })).toMatchObject({ valid: true })
   })
   test('多余的 data 无影响', async () => {
-    const v = new vtils.Validator({ phone: { type: 'mobile' } })
+    const v = new vtils.Validator({ phone: { type: 'mobile', message: 'err' } })
     expect(await v.validate({ phone: '18087030178', name: 'Jack', x: 'f' } as any)).toMatchObject({ valid: true })
   })
   test('综合测试', async () => {
     const v = new vtils.Validator({
-      min: { min: 10 },
-      max: { max: 100 },
-      numRange: { type: 'number', min: 5, max: 10 },
-      len: { len: 4 },
-      re: { custom: /^\d+$/ },
-      int: { type: 'integer' },
-      required: { required: true },
-      fn: { custom: ({ value }) => value > 20 },
-      async: { custom: () => new Promise(resolve => setTimeout(() => resolve(true), 500)) },
+      min: { min: 10, message: 'err' },
+      max: { max: 100, message: 'err' },
+      numRange: { type: 'number', min: 5, max: 10, message: 'err' },
+      len: { len: 4, message: 'err' },
+      re: { custom: /^\d+$/, message: 'err' },
+      int: { type: 'integer', message: 'err' },
+      required: { required: true, message: 'err' },
+      fn: { custom: ({ value }) => value > 20, message: 'err' },
+      async: { custom: () => new Promise(resolve => setTimeout(() => resolve(true), 500)), message: 'err' },
     })
     expect(await v.validate({ min: vtils.repeat(1, 9) })).toMatchObject({ valid: false })
     expect(await v.validate({ min: vtils.repeat(1, 9) })).toMatchObject({ valid: false })
@@ -1384,17 +1395,6 @@ describe('isChineseName', () => {
     expect(vtils.isChineseName('畫羣飃#姉')).toBeFalsy()
     expect(vtils.isChineseName('阿··不多')).toBeFalsy()
     expect(vtils.isChineseName('·不多')).toBeFalsy()
-  })
-})
-
-describe('FileData', () => {
-  test('ok', () => {
-    [1, true, /x/, {}].forEach(item => {
-      expect(vtils.FileData.isFileData(item)).toBeFalsy()
-      const fileData = new vtils.FileData(item)
-      expect(fileData.get()).toBe(item)
-      expect(vtils.FileData.isFileData(fileData)).toBeTruthy()
-    })
   })
 })
 
