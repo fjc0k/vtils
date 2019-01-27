@@ -186,6 +186,18 @@ describe('Disposer', () => {
     expect(dispose3.calledOnce).toBeTruthy()
     expect((disposer as any).jar).toEqual({})
   })
+  test('匿名项目', () => {
+    const dispose1 = sinon.fake()
+    const dispose2 = sinon.fake()
+    const dispose3 = sinon.fake()
+    disposer.add(dispose1)
+    disposer.add([dispose2, dispose3])
+    disposer.dispose()
+    expect(dispose1.calledOnce).toBeTruthy()
+    expect(dispose2.calledOnce).toBeTruthy()
+    expect(dispose3.calledOnce).toBeTruthy()
+    expect((disposer as any).jar).toEqual({})
+  })
 })
 
 describe('inBrowser', () => {
