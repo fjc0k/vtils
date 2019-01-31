@@ -1570,3 +1570,15 @@ describe('toUnixTimestamp', () => {
     })
   })
 })
+
+describe('formatDateDiff', () => {
+  test('ok', () => {
+    [
+      ['2019-1-3', '2019-1-4', 'y年|m月|d日|h时|i分|s秒', '1日'],
+      ['2018-1-3', '2019-1-4', 'y年|m月|d日|h时|i分|s秒', '1年1日'],
+      // ['2018-1-3', '2019-1-4', 'd日', '366日'],
+    ].map(([startDate, endDate, template, result]) => {
+      expect(vtils.formatDateDiff(startDate, endDate, template)).toBe(result)
+    })
+  })
+})
