@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.71.0"></a>
+# [0.71.0](https://github.com/fjc0k/vtils/compare/v0.70.0...v0.71.0) (2019-01-31)
+
+
+### Features
+
+* add formatDateDiff (需优化) ([0a283d4](https://github.com/fjc0k/vtils/commit/0a283d4))
+
+
+
 <a name="0.70.0"></a>
 # [0.70.0](https://github.com/fjc0k/vtils/compare/v0.69.1...v0.70.0) (2019-01-27)
 
