@@ -1,6 +1,5 @@
 *.log
 node_modules
-.vscode
 *.stackdump
 .rpt2_cache
 coverage
