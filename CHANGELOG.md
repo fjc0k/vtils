@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.73.0"></a>
+# [0.73.0](https://github.com/fjc0k/vtils/compare/v0.72.0...v0.73.0) (2019-02-12)
+
+
+### Features
+
+* add groupBy ([0aee8ac](https://github.com/fjc0k/vtils/commit/0aee8ac))
+
+
+
 <a name="0.72.0"></a>
 # [0.72.0](https://github.com/fjc0k/vtils/compare/v0.71.0...v0.72.0) (2019-01-31)
 
