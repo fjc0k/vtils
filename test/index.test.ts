@@ -1591,3 +1591,11 @@ describe('chunk', () => {
     expect(vtils.chunk([1, 2, 3], 2, 4)).toEqual([[1, 2], [3, 4]])
   })
 })
+
+describe('groupBy', () => {
+  test('ok', () => {
+    expect(vtils.groupBy([6.1, 4.2, 6.3], Math.floor)).toEqual({ 4: [4.2], 6: [6.1, 6.3] })
+    expect(vtils.groupBy(['one', 'two', 'three'], 'length')).toEqual({ 3: ['one', 'two'], 5: ['three'] })
+    expect(vtils.groupBy([{ i: 1 }, { i: 2 }, { i: 2, x: 0 }], 'i')).toEqual({ 1: [{ i: 1 }], 2: [{ i: 2 }, { i: 2, x: 0 }] })
+  })
+})
