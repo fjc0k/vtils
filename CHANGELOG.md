@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.75.0"></a>
+# [0.75.0](https://github.com/fjc0k/vtils/compare/v0.74.0...v0.75.0) (2019-02-15)
+
+
+### Features
+
+* add column ([329fd9f](https://github.com/fjc0k/vtils/commit/329fd9f))
+
+
+
 <a name="0.74.0"></a>
 # [0.74.0](https://github.com/fjc0k/vtils/compare/v0.73.0...v0.74.0) (2019-02-15)
 
