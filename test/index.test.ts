@@ -1608,3 +1608,20 @@ describe('compareVersion', () => {
     expect(vtils.compareVersion('10.1.1-alpha2', '10.1.1-alpha5')).toEqual(-1)
   })
 })
+
+describe('column', () => {
+  test('ok', () => {
+    const records = [
+      { id: 1, name: 'Jay', age: 20 },
+      { id: 2, name: 'Baby', age: 1 },
+      { id: 5, name: 'Yoyo', age: 100 },
+    ]
+    expect(vtils.column(records, 'id')).toEqual([1, 2, 5])
+    expect(vtils.column(records, 'name')).toEqual(['Jay', 'Baby', 'Yoyo'])
+    expect(vtils.column(records, 'name', 'id')).toEqual({
+      1: 'Jay',
+      2: 'Baby',
+      5: 'Yoyo',
+    })
+  })
+})
