@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.76.0"></a>
+# [0.76.0](https://github.com/fjc0k/vtils/compare/v0.75.0...v0.76.0) (2019-02-19)
+
+
+### Features
+
+* add assign ([151c2b7](https://github.com/fjc0k/vtils/commit/151c2b7))
+
+
+
 <a name="0.75.0"></a>
 # [0.75.0](https://github.com/fjc0k/vtils/compare/v0.74.0...v0.75.0) (2019-02-15)
 
