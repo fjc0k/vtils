@@ -7,7 +7,11 @@
  * @returns 结果值
  */
 export default function clamp(value: number, min: number, max: number): number {
-  return value <= min ? min
-    : value >= max ? max
-      : value
+  return (
+    value <= min
+      ? min
+      : value >= max
+        ? max
+        : value
+  )
 }

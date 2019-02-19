@@ -1625,3 +1625,18 @@ describe('column', () => {
     })
   })
 })
+
+describe('assign', () => {
+  test('ok', () => {
+    const target = {}
+    const source1 = { x: 1 }
+    const source2 = { y: 2 }
+    expect(vtils.assign(target, source1)).toEqual({ x: 1 })
+    expect(target).toEqual({ x: 1 })
+    expect(vtils.assign(source1, source2)).toEqual({ x: 1, y: 2 })
+    expect(source1).toEqual({ x: 1, y: 2 })
+    expect(vtils.assign(source2)).toEqual({ y: 2 })
+    expect(vtils.assign(source2)).toBe(source2)
+    expect(vtils.assign(source2, undefined)).toBe(source2)
+  })
+})
