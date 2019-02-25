@@ -8,13 +8,13 @@ import isObject from './isObject'
  */
 export default function forOwn<
   T extends { [key: string]: any },
-  K extends Extract<keyof T, string>
+  K extends keyof T,
 >(obj: T, callback: (value: T[K], key: K, obj: T) => any): void {
   if (!isObject(obj)) return
   for (const key in obj) {
     /* istanbul ignore else */
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      if (callback(obj[key], key as K, obj) === false) {
+      if (callback(obj[key], key as any, obj) === false) {
         break
       }
     }

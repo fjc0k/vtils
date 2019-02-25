@@ -47,7 +47,7 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
     forOwn(options.data, (value, key) => {
       if (value instanceof FileData || (inBrowser() && value instanceof File)) {
         file = {
-          key: key,
+          key: key as any,
           value: value instanceof FileData ? value.get() : value,
         }
         return false
@@ -130,7 +130,7 @@ export default function request<T extends RequestOptions>(options: T): Promise<{
       xhr.responseType = options.responseDataType
       try {
         forOwn(options.header, (value, name) => {
-          xhr.setRequestHeader(name, value)
+          xhr.setRequestHeader(name as any, value)
         })
       } catch (err) {}
       if (options.withCredentials) {

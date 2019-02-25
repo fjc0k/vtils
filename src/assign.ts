@@ -11,7 +11,7 @@ import forOwn from './forOwn'
 export default function assign<T extends Record<string, any>>(target: T, ...sources: any[]): T {
   sources.forEach(source => {
     forOwn(source, (value, key) => {
-      target[key] = value
+      target[key as any] = value
     })
   })
   return target

@@ -7,7 +7,7 @@ export default function defaultValue<
   const defaultValue = getDefaultValue(obj)
   forOwn(obj, (value, key) => {
     if (value != null) {
-      defaultValue[key] = value
+      defaultValue[key as any] = value
     }
   })
   return defaultValue
