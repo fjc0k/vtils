@@ -43,6 +43,6 @@ export default function jsonp(url: string, data?: string | object, callbackParam
 
         document.body.appendChild(script)
       }
-      : noop
+      : noop,
   )
 }

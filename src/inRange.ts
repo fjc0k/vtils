@@ -13,7 +13,7 @@ export default function inRange(
   value: number,
   start: number,
   end: number,
-  interval: InRangeInterval = '()'
+  interval: InRangeInterval = '()',
 ): boolean {
   const leftEqual = interval[0] === '['
   const rightEqual = interval[1] === ']'

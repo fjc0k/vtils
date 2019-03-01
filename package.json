@@ -68,7 +68,7 @@
     "bili": "^3.4.1",
     "codecov": "^3.1.0",
     "eslint": "^5.9.0",
-    "eslint-config-io": "^0.0.6",
+    "eslint-config-io": "^0.1.1",
     "jest": "^23.6.0",
     "moment": "^2.22.2",
     "rollup-plugin-typescript2": "^0.18.0",
@@ -77,7 +77,7 @@
     "ts-jest": "^23.10.4",
     "ts-node": "^8.0.2",
     "typed-we-app": "^1.7.0-update.6",
-    "typescript": "^3.1.6"
+    "typescript": "^3.3.3333"
   },
   "dependencies": {
     "compare-versions": "^3.4.0",

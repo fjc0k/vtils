@@ -75,7 +75,7 @@ const storage = {
       return result(
         rawValue != null && /** 微信小程序无值时返回空字符串 */ rawValue !== ''
           ? rawValue
-          : defaultValue
+          : defaultValue,
       )
     }
   },

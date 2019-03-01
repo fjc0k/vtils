@@ -13,7 +13,7 @@ export default function mapValues<
   C extends any
 >(
   obj: T,
-  callback: (value: T[K], key: K, obj: T) => C
+  callback: (value: T[K], key: K, obj: T) => C,
 ): { [key in K]: C } {
   const newObj: any = {}
   forOwn(obj, (value, key, source) => {

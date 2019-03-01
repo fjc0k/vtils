@@ -32,7 +32,7 @@ export default function toDate(value?: FormatDateValue): Date {
     return new Date(
       regNum[0], regNum[1] - 1, regNum[2],
       regNum[3] || 0, regNum[4] || 0, regNum[5] || 0,
-      regNum[6] || 0
+      regNum[6] || 0,
     )
   }
   return (cache[value] = new Date(value))

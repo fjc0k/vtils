@@ -22,7 +22,7 @@ const YEAR = DAY * 365
 export default function formatDateDiff(
   startDate: FormatDateValue,
   endDate: FormatDateValue,
-  template: string
+  template: string,
 ): string {
   template = `|${template}|`
   const startTime = toDate(startDate).getTime()

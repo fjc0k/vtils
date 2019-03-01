@@ -25,7 +25,7 @@ function fill(
   arr: any[],
   value?: any,
   start: number = 0,
-  end: number = arr.length
+  end: number = arr.length,
 ): any[] {
   const valueIsFunction = typeof value === 'function'
   const newArr = arr.slice()

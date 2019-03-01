@@ -14,7 +14,7 @@ export interface CSSValue {
  */
 export default function parseCSSValue(
   value: string | number,
-  defaultUnit: string = 'px'
+  defaultUnit: string = 'px',
 ): CSSValue {
   if (typeof value === 'number') {
     return {

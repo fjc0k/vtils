@@ -14,20 +14,20 @@ import isUrl from './isUrl'
 import isChineseName from './isChineseName'
 
 export type ValidatorRuleType = 'number'
-  | 'integer'
-  | 'phone'
-  | 'mobile'
-  | 'landline'
-  | 'id'
-  | 'url'
-  | 'email'
-  | 'name'
+| 'integer'
+| 'phone'
+| 'mobile'
+| 'landline'
+| 'id'
+| 'url'
+| 'email'
+| 'name'
 export type ValidatorRuleCustom = (
   <D extends { [key: string]: any }>(payload: {
     key: keyof D,
     value: any,
     data: D,
-    rule: ValidatorRule
+    rule: ValidatorRule,
   }) => boolean | Promise<boolean>
 )
 export interface ValidatorRule {
@@ -164,7 +164,7 @@ export default class Validator<R extends ValidatorRules> {
         })
       })).then(
         () => resolve({ valid: true }),
-        result => resolve({ ...result, valid: false })
+        result => resolve({ ...result, valid: false }),
       )
     })
   }

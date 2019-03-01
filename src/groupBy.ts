@@ -10,7 +10,7 @@ import { ToPathValue } from './toPath'
  */
 export default function groupBy<T>(
   arr: T[],
-  iteratee: ToPathValue | ((item: T, index: number) => any)
+  iteratee: ToPathValue | ((item: T, index: number) => any),
 ): { [key: string]: T[] } {
   const iterateeIsFunction = typeof iteratee === 'function'
   return arr.reduce<{ [key: string]: T[] }>((res, item, index) => {

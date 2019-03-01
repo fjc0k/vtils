@@ -56,7 +56,7 @@ const reBtou = new RegExp(
     '[\xE0-\xEF][\x80-\xBF]{2}',
     '[\xF0-\xF7][\x80-\xBF]{3}',
   ].join('|'),
-  'g'
+  'g',
 )
 const cbBtou = (cccc: string): string => {
   switch (cccc.length) {
@@ -71,12 +71,12 @@ const cbBtou = (cccc: string): string => {
       return fcc(
         ((0x0f & cccc.charCodeAt(0)) << 12)
           | ((0x3f & cccc.charCodeAt(1)) << 6)
-          | (0x3f & cccc.charCodeAt(2))
+          | (0x3f & cccc.charCodeAt(2)),
       )
     default:
       return fcc(
         ((0x1f & cccc.charCodeAt(0)) << 6)
-          | (0x3f & cccc.charCodeAt(1))
+          | (0x3f & cccc.charCodeAt(1)),
       )
   }
 }

@@ -15,7 +15,7 @@ export default function bindEvent(
   target: EventTarget,
   types: BindEventTypes,
   listener: EventListenerOrEventListenerObject,
-  options?: BindEventListenerOptions
+  options?: BindEventListenerOptions,
 ): UnbindEventListener {
   const disposes: Array<() => void> = []
   ;(Array.isArray(types) ? types : types.split(/\s+/)).forEach(eventType => {

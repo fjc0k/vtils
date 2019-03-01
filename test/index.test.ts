@@ -144,12 +144,12 @@ describe('base64', () => {
     })
   })
   test('url encode', () => {
-    data.forEach(([str, encodedStr, encodedUrlStr]) => {
+    data.forEach(([str, _encodedStr, encodedUrlStr]) => {
       expect(vtils.base64UrlEncode(str)).toBe(encodedUrlStr)
     })
   })
   test('url decode', () => {
-    data.forEach(([str, encodedStr, encodedUrlStr]) => {
+    data.forEach(([str, _encodedStr, encodedUrlStr]) => {
       expect(vtils.base64UrlDecode(encodedUrlStr)).toBe(String(str))
     })
   })
@@ -460,7 +460,7 @@ describe('forOwn', () => {
   })
   test('返回 false 退出遍历', () => {
     const arr: Array<[any, any]> = []
-    vtils.forOwn({ x: 1, y: 2, 3: 3 }, (value, key) => {
+    vtils.forOwn({ x: 1, y: 2, 3: 3 }, (_value, _key) => {
       return false
     })
     expect(arr).toEqual([])
@@ -1311,13 +1311,6 @@ describe('keyBy', () => {
       'like2',
     ],
   }))
-  test('键路径', () => {
-    const userById = vtils.keyBy(users, 'id')
-    expect(Object.keys(userById).map(Number).sort()).toEqual(vtils.range(1, 100).sort())
-    expect(vtils.values(userById).sort()).toEqual(users.sort())
-    const userByLike1 = vtils.keyBy(users, 'likes[0]')
-    expect(userByLike1).toEqual({ like1: users[users.length - 1] })
-  })
   test('函数', () => {
     const userByNamePlusId = vtils.keyBy(users, item => `${item.name}${item.id}`)
     Object.keys(userByNamePlusId).forEach(namePlusId => {
@@ -1347,7 +1340,7 @@ describe('EventBus', () => {
     const onceFn = jest.fn()
     expect(onceFn).toBeCalledTimes(0)
     bus.once('onceFn', onceFn)
-    vtils.range(0, 1000).forEach(i => {
+    vtils.range(0, 1000).forEach(_i => {
       bus.emit('onceFn')
     })
     expect(onceFn).toBeCalledTimes(1)
@@ -1429,7 +1422,7 @@ describe('defaultValue', () => {
       {
         x: 2,
         y: null,
-      }
+      },
     )).toEqual({ x: 2, y: 2 })
   })
 })

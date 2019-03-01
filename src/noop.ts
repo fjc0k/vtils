@@ -1,4 +1,4 @@
 /**
  * 无操作函数。
  */
-export default function noop(...args: any[]): any {}
+export default function noop(..._args: any[]): any {}

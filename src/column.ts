@@ -13,13 +13,13 @@ export default function column<
 >(
   arr: O[],
   columnKey: CK,
-  indexKey?: IK
+  indexKey?: IK,
 ): IK extends undefined ? Array<O[CK]> : Record<O[IK], O[CK]> {
   return arr.reduce<any>(
     (res, item, index) => {
       res[indexKey ? item[indexKey] : index] = item[columnKey]
       return res
     },
-    indexKey ? {} : []
+    indexKey ? {} : [],
   )
 }

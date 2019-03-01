@@ -13,6 +13,6 @@ export default function objectToQueryString(obj: object): string {
       result.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
       return result
     },
-    []
+    [],
   ).join('&')
 }

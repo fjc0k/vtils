@@ -34,7 +34,7 @@ export default function formatDate(value: FormatDateValue, template: string): st
             : n < len ? patternValueStr.substr(len - n) // n<len: 截取后n位
               : repeat(0, n - len) + patternValueStr // n>len: 前填充0到n位
         )
-      }
+      },
     )
   }, template)
 }

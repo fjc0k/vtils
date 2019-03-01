@@ -1,10 +1,10 @@
 export type ValueType = (
   'Undefined' | 'Null' | 'Array'
-    | 'String' | 'Arguments' | 'Function'
-    | 'Error' | 'Boolean' | 'Number'
-    | 'Date' | 'RegExp' | 'Object'
-    // ES5 中还有以下两个类型，ES6 中它们都是 Object 类型
-    | 'JSON' | 'Math'
+  | 'String' | 'Arguments' | 'Function'
+  | 'Error' | 'Boolean' | 'Number'
+  | 'Date' | 'RegExp' | 'Object'
+  // ES5 中还有以下两个类型，ES6 中它们都是 Object 类型
+  | 'JSON' | 'Math'
 )
 
 /**
