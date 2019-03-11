@@ -1633,3 +1633,12 @@ describe('assign', () => {
     expect(vtils.assign(source2, undefined)).toBe(source2)
   })
 })
+
+describe('wait', () => {
+  test('ok', async () => {
+    const time1 = new Date().getTime()
+    await vtils.wait(1000)
+    const time2 = new Date().getTime()
+    expect(time2 - time1 >= 1000).toBeTruthy()
+  })
+})
