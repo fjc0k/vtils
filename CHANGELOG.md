@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.78.0"></a>
+# [0.78.0](https://github.com/fjc0k/vtils/compare/v0.77.0...v0.78.0) (2019-03-11)
+
+
+### Features
+
+* add wait ([868acfb](https://github.com/fjc0k/vtils/commit/868acfb))
+
+
+
 <a name="0.77.0"></a>
 # [0.77.0](https://github.com/fjc0k/vtils/compare/v0.76.1...v0.77.0) (2019-03-01)
 
