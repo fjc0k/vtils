@@ -1,4 +1,4 @@
-// @index(.ts$)
+// @index('./*.ts', pp => `export { default as ${pp.name} } from '${pp.path}'`)
 export { default as Disposer } from './Disposer'
 export { default as EventBus } from './EventBus'
 export { default as FileData } from './FileData'
