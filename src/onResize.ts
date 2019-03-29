@@ -1,5 +1,5 @@
-import inBrowser from './inBrowser'
-import noop from './noop'
+import { inBrowser } from './inBrowser'
+import { noop } from './noop'
 
 /**
  * 监听窗口大小变动。
@@ -7,7 +7,7 @@ import noop from './noop'
  * @param cb 回调函数
  * @returns 取消监听函数
  */
-export default function onResize(cb: (e: Event) => void): () => void {
+export function onResize(cb: (e: Event) => void): () => void {
   if (!inBrowser()) {
     return noop
   }

@@ -5,7 +5,7 @@
  * @param iteratee 迭代函数
  * @returns 总和
  */
-export default function sumBy<T>(array: T[], iteratee: (item: T) => number): number {
+export function sumBy<T>(array: T[], iteratee: (item: T) => number): number {
   return array.reduce<number>((total, item) => {
     total += iteratee(item)
     return total

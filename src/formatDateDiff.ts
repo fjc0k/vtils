@@ -1,5 +1,5 @@
 import { FormatDateValue } from './formatDate'
-import toDate from './toDate'
+import { toDate } from './toDate'
 
 const MINUTE = 60
 const HOUR = MINUTE * 60
@@ -19,7 +19,7 @@ const YEAR = DAY * 365
  * @param template 格式化模板
  * @returns 格式化后的字符串
  */
-export default function formatDateDiff(
+export function formatDateDiff(
   startDate: FormatDateValue,
   endDate: FormatDateValue,
   template: string,

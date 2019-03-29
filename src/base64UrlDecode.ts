@@ -1,4 +1,4 @@
-import base64Decode from './base64Decode'
+import { base64Decode } from './base64Decode'
 
 /**
  * 返回 base64url 解码后的字符串。
@@ -7,6 +7,6 @@ import base64Decode from './base64Decode'
  * @returns 解码后的字符串
  * @see http://www.ietf.org/rfc/rfc4648.txt
  */
-export default function base64UrlDecode(str: string): string {
+export function base64UrlDecode(str: string): string {
   return base64Decode(str.replace(/-/g, '+').replace(/_/g, '/'))
 }

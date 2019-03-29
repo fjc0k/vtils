@@ -1,4 +1,4 @@
-import isFunction from './isFunction'
+import { isFunction } from './isFunction'
 
 export type ArgumentsType<T> = T extends (...args: infer U) => any ? U: never
 
@@ -23,4 +23,4 @@ function result(value: any, ...args: any[]): any {
   return isFunction(value) ? value.apply(null, args) : value
 }
 
-export default result
+export { result }

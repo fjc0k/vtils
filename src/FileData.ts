@@ -1,8 +1,8 @@
-import isObject from './isObject'
+import { isObject } from './isObject'
 
 const flag = 0x666
 
-export default class FileData<T = any> {
+export class FileData<T = any> {
   private readonly $$instanceOf = flag
 
   private content: T

@@ -7,6 +7,6 @@ const hanRe = /* /^\p{Script=Han}+$/u */ /^(?:[\u2E80-\u2E99\u2E9B-\u2EF3\u2F00-
  * @param value 要检查的值
  * @returns 是（true）或否（false）
  */
-export default function isHan(value: string): boolean {
+export function isHan(value: string): boolean {
   return hanRe.test(value)
 }

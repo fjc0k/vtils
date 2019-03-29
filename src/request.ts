@@ -1,11 +1,11 @@
 /* istanbul ignore file */
-import forOwn from './forOwn'
-import inBrowser from './inBrowser'
-import inWechatMiniProgram from './inWechatMiniProgram'
-import omit from './omit'
-import FileData from './FileData'
-import defaultValue from './defaultValue'
-import objectToQueryString from './objectToQueryString'
+import { forOwn } from './forOwn'
+import { inBrowser } from './inBrowser'
+import { inWechatMiniProgram } from './inWechatMiniProgram'
+import { omit } from './omit'
+import { FileData } from './FileData'
+import { defaultValue } from './defaultValue'
+import { objectToQueryString } from './objectToQueryString'
 
 export interface RequestOptions {
   url: string,
@@ -22,7 +22,7 @@ const requestDataTypeToContentType: { [key in RequestOptions['requestDataType']]
   querystring: 'application/x-www-form-urlencoded',
 }
 
-export default function request<T extends RequestOptions>(options: T): Promise<{
+export function request<T extends RequestOptions>(options: T): Promise<{
   data: (
     T['responseDataType'] extends 'json'
       ? any

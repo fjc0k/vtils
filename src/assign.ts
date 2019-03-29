@@ -1,4 +1,4 @@
-import forOwn from './forOwn'
+import { forOwn } from './forOwn'
 
 /**
  * 分配来源对象的可枚举属性到目标对象上。
@@ -8,7 +8,7 @@ import forOwn from './forOwn'
  * @param sources 来源对象
  * @returns 目标对象
  */
-export default function assign<T extends Record<string, any>>(target: T, ...sources: any[]): T {
+export function assign<T extends Record<string, any>>(target: T, ...sources: any[]): T {
   sources.forEach(source => {
     forOwn(source, (value, key) => {
       target[key as any] = value

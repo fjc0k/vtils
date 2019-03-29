@@ -1,4 +1,4 @@
-import isHan from './isHan'
+import { isHan } from './isHan'
 
 /**
  * 检测 `value` 是否是中国人姓名，支持少数名族姓名中间的 `·` 号。
@@ -6,7 +6,7 @@ import isHan from './isHan'
  * @param value 要检测的值
  * @returns 是（true）或否（false）
  */
-export default function isChineseName(value: string): boolean {
+export function isChineseName(value: string): boolean {
   return (
     value
       && value.length > 1

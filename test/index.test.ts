@@ -1593,15 +1593,6 @@ describe('groupBy', () => {
   })
 })
 
-describe('compareVersion', () => {
-  test('ok', () => {
-    expect(vtils.compareVersion('10.1.8', '10.0.4')).toEqual(1)
-    expect(vtils.compareVersion('10.0.1', '10.0.1')).toEqual(0)
-    expect(vtils.compareVersion('10.1.1', '10.2.2')).toEqual(-1)
-    expect(vtils.compareVersion('10.1.1-alpha2', '10.1.1-alpha5')).toEqual(-1)
-  })
-})
-
 describe('column', () => {
   test('ok', () => {
     const records = [

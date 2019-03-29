@@ -80,7 +80,6 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "compare-versions": "^3.4.0",
     "is-chinese-phone-number": "^0.1.9"
   }
 }

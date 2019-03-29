@@ -1,6 +1,6 @@
-import forOwn from './forOwn'
+import { forOwn } from './forOwn'
 
-export default function defaultValue<
+export function defaultValue<
   T extends { [key: string]: any },
   X extends Partial<T>,
 >(getDefaultValue: (obj: X) => T, obj: X): T {

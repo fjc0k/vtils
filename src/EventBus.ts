@@ -8,7 +8,7 @@ export type EventBusUnsubscribe = () => void
  *
  * @template T 事件名称及其对应的监听器描述
  */
-export default class EventBus<
+export class EventBus<
   T extends { [key: string]: (...args: any[]) => any } = { [key: string]: (...args: any[]) => any },
   K extends Extract<keyof T, string> = Extract<keyof T, string>
 > {

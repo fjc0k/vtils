@@ -1,4 +1,4 @@
-import forOwn from './forOwn'
+import { forOwn } from './forOwn'
 
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
@@ -9,7 +9,7 @@ export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
  * @param props 要剔除的属性
  * @returns 结果对象
  */
-export default function omit<
+export function omit<
   T extends { [key: string]: any },
   K extends Extract<keyof T, string>
 >(obj: T, props: K[]): Omit<T, K> {

@@ -35,4 +35,4 @@ function reduce(data: any, fn: any, accumulator: any): any {
   }, accumulator)
 }
 
-export default reduce
+export { reduce }

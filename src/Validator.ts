@@ -1,17 +1,17 @@
-import castArray from './castArray'
-import isArray from './isArray'
-import isChineseIDCardNumber from './isChineseIDCardNumber'
-import isChinesePhoneNumber from './isChinesePhoneNumber'
-import isEmail from './isEmail'
-import isFunction from './isFunction'
-import isInteger from './isInteger'
-import isNil from './isNil'
-import isNumber from './isNumber'
-import isNumeric from './isNumeric'
-import isPromise from './isPromise'
-import isRegExp from './isRegExp'
-import isUrl from './isUrl'
-import isChineseName from './isChineseName'
+import { castArray } from './castArray'
+import { isArray } from './isArray'
+import { isChineseIDCardNumber } from './isChineseIDCardNumber'
+import { isChinesePhoneNumber } from './isChinesePhoneNumber'
+import { isEmail } from './isEmail'
+import { isFunction } from './isFunction'
+import { isInteger } from './isInteger'
+import { isNil } from './isNil'
+import { isNumber } from './isNumber'
+import { isNumeric } from './isNumeric'
+import { isPromise } from './isPromise'
+import { isRegExp } from './isRegExp'
+import { isUrl } from './isUrl'
+import { isChineseName } from './isChineseName'
 
 export type ValidatorRuleType = 'number'
 | 'integer'
@@ -112,7 +112,7 @@ function validate<D>(data: D, key: keyof D, rule: ValidatorRule): Promise<boolea
   })
 }
 
-export default class Validator<R extends ValidatorRules> {
+export class Validator<R extends ValidatorRules> {
   private rules: R = {} as any
 
   /**

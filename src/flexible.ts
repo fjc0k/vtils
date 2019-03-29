@@ -1,12 +1,12 @@
-import inBrowser from './inBrowser'
-import onResize from './onResize'
+import { inBrowser } from './inBrowser'
+import { onResize } from './onResize'
 
 /**
  * 移动端屏幕适配。
  *
  * @param [options] 选项
  */
-export default function flexible(options: { getViewWidth?: () => number } = {}): void {
+export function flexible(options: { getViewWidth?: () => number } = {}): void {
   inBrowser(() => {
     const docEl = document.documentElement
     const dpr = window.devicePixelRatio || 1

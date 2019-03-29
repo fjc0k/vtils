@@ -5,7 +5,7 @@
  * @param iteratee 生成 `key` 的迭代函数
  * @returns 分组结果
  */
-export default function keyBy<T extends any, K extends keyof any>(
+export function keyBy<T extends any, K extends keyof any>(
   arr: T[],
   iteratee: (item: T, index: number) => K,
 ): { [key in K]: T } {

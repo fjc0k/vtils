@@ -1,4 +1,4 @@
-import inBrowser from './inBrowser'
+import { inBrowser } from './inBrowser'
 
 let isSupportPassiveEventListener: boolean | undefined
 
@@ -7,7 +7,7 @@ let isSupportPassiveEventListener: boolean | undefined
  *
  * @returns 是（true）或否（false）
  */
-export default function supportPassiveEventListener(): boolean {
+export function supportPassiveEventListener(): boolean {
   /* istanbul ignore else */
   if (isSupportPassiveEventListener === undefined) {
     isSupportPassiveEventListener = false

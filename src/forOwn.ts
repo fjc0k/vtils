@@ -1,4 +1,4 @@
-import isObject from './isObject'
+import { isObject } from './isObject'
 
 /**
  * 遍历对象的可枚举属性。若回调函数返回 false，遍历会提前退出。
@@ -6,7 +6,7 @@ import isObject from './isObject'
  * @param obj 要遍历的对象
  * @param callback 回调函数
  */
-export default function forOwn<
+export function forOwn<
   T extends { [key: string]: any },
   K extends keyof T,
 >(obj: T, callback: (value: T[K], key: K, obj: T) => any): void {

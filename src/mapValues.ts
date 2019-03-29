@@ -1,4 +1,4 @@
-import forOwn from './forOwn'
+import { forOwn } from './forOwn'
 
 /**
  * 映射对象的可枚举属性值为一个新的值。
@@ -7,7 +7,7 @@ import forOwn from './forOwn'
  * @param callback 回调函数
  * @returns 映射后的新对象
  */
-export default function mapValues<
+export function mapValues<
   T extends { [key: string]: any },
   K extends Extract<keyof T, string>,
   C extends any

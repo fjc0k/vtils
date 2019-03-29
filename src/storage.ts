@@ -1,10 +1,10 @@
-import inBrowser from './inBrowser'
-import inWechatMiniProgram from './inWechatMiniProgram'
-import isNil from './isNil'
-import isUndefined from './isUndefined'
-import noop from './noop'
-import result from './result'
-import toDate from './toDate'
+import { inBrowser } from './inBrowser'
+import { inWechatMiniProgram } from './inWechatMiniProgram'
+import { isNil } from './isNil'
+import { isUndefined } from './isUndefined'
+import { noop } from './noop'
+import { result } from './result'
+import { toDate } from './toDate'
 
 export interface StorageDriver {
   get(key: string): any,
@@ -111,4 +111,4 @@ const storage = {
   },
 }
 
-export default storage
+export { storage }

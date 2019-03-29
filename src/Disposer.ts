@@ -1,6 +1,6 @@
 /* eslint-disable lines-between-class-members */
 /* eslint-disable no-dupe-class-members */
-import randomString from './randomString'
+import { randomString } from './randomString'
 
 export type Dispose = () => void
 
@@ -9,7 +9,7 @@ const anonymousKey: string = `__anonymous_${randomString()}__`
 /**
  * 处置器。
  */
-export default class Disposer<N extends string | number = string | number> {
+export class Disposer<N extends string | number = string | number> {
   /**
    * 待处置项目存放容器。
    *

@@ -1,4 +1,4 @@
-import repeat from './repeat'
+import { repeat } from './repeat'
 
 /**
  * 在 str 两侧填充字符。
@@ -8,7 +8,7 @@ import repeat from './repeat'
  * @param [chars=' '] 填充字符
  * @returns 填充后的字符串
  */
-export default function pad(str: string, length: number = 0, chars: string = ' '): string {
+export function pad(str: string, length: number = 0, chars: string = ' '): string {
   let suffix = ''
   let prefix = ''
   if (length > str.length) {

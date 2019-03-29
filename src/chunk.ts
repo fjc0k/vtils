@@ -7,7 +7,7 @@
  * @param [filler] 填充物
  * @returns 拆分后的新数组
  */
-export default function chunk<T, F = never>(array: T[], size: number, filler?: F): (T | F)[][] {
+export function chunk<T, F = never>(array: T[], size: number, filler?: F): (T | F)[][] {
   size = Math.max(size, 1)
   const result: (T | F)[][] = []
   const rows = Math.ceil(array.length / size)

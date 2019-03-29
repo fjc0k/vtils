@@ -1,4 +1,4 @@
-import isArray from './isArray'
+import { isArray } from './isArray'
 
 export type ToPathValue = string | Array<string | number>
 export type ToPathResult = Array<string | number>
@@ -11,7 +11,7 @@ const cache = Object.create(null)
  * @param value 要转换的值
  * @returns 包含属性路径的数组
  */
-export default function toPath(value: ToPathValue): ToPathResult {
+export function toPath(value: ToPathValue): ToPathResult {
   if (isArray(value)) {
     return value
   }

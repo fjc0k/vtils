@@ -6,7 +6,7 @@
  * @param [indexKey] 作为返回对象的键的列，若不设置，则返回数组
  * @returns 列对象或数组
  */
-export default function column<
+export function column<
   O extends Record<string, any>,
   CK extends keyof O,
   IK extends keyof O,

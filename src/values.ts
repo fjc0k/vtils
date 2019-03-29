@@ -1,4 +1,4 @@
-import forOwn from './forOwn'
+import { forOwn } from './forOwn'
 
 export type ValuesResult<T> = Array<T[keyof T]>
 
@@ -8,7 +8,7 @@ export type ValuesResult<T> = Array<T[keyof T]>
  * @param obj 要检索的对象
  * @returns 结果数组
  */
-export default function values<T extends { [key: string]: any }>(obj: T): ValuesResult<T> {
+export function values<T extends { [key: string]: any }>(obj: T): ValuesResult<T> {
   const result: ValuesResult<T> = []
   forOwn(obj, value => result.push(value))
   return result

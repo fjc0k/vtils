@@ -22,7 +22,7 @@ const defaultOptions: FormatCurrencyOptions = {
  * @param options 选项
  * @returns 格式化后的值
  */
-export default function formatCurrency(value: FormatCurrencyValue, options?: FormatCurrencyOptions): string {
+export function formatCurrency(value: FormatCurrencyValue, options?: FormatCurrencyOptions): string {
   value = Number(value)
   options = {
     ...defaultOptions,

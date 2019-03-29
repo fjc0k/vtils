@@ -3,7 +3,7 @@
  *
  * @param e 要阻止的事件
  */
-export default function preventEventDefault(e: { preventDefault: (...args: any[]) => any }): void {
+export function preventEventDefault(e: { preventDefault: (...args: any[]) => any }): void {
   /* istanbul ignore else */
   e.preventDefault()
 }

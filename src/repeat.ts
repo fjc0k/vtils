@@ -5,7 +5,7 @@
  * @param [n=1] 重复的次数
  * @returns 结果字符串
  */
-export default function repeat(str: string | number, n: number = 1): string {
+export function repeat(str: string | number, n: number = 1): string {
   let result = ''
   while (n-- > 0) {
     result += str

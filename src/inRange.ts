@@ -9,7 +9,7 @@ export type InRangeInterval = '()' | '(]' | '[)' | '[]'
  * @param [interval='()'] 区间符号
  * @returns `value` 在区间内，返回 `true`；`value` 在区间外，返回 `false`。
  */
-export default function inRange(
+export function inRange(
   value: number,
   start: number,
   end: number,

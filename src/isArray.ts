@@ -4,6 +4,6 @@
  * @param value 要检查的值
  * @returns 是（true）或否（false）
  */
-export default function isArray(value: any): value is any[] {
+export function isArray(value: any): value is any[] {
   return Array.isArray(value)
 }

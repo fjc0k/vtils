@@ -1,5 +1,5 @@
-import inBrowser from './inBrowser'
-import isFunction from './isFunction'
+import { inBrowser } from './inBrowser'
+import { isFunction } from './isFunction'
 
 let isInWechatWebview: boolean | undefined
 
@@ -9,7 +9,7 @@ let isInWechatWebview: boolean | undefined
  * @param [callback] 在微信浏览器环境中执行的回调
  * @returns 是（true）或否（false）
  */
-export default function inWechatWebview(callback?: () => void): boolean {
+export function inWechatWebview(callback?: () => void): boolean {
   if (isInWechatWebview === undefined) {
     isInWechatWebview = inBrowser() && /micromessenger/.test(navigator.userAgent.toLowerCase())
   }

@@ -6,7 +6,7 @@
  * @param [step] 步进值
  * @returns 开始到结束范围内数字组成的数组
  */
-export default function range(start: number, end?: number, step?: number): number[] {
+export function range(start: number, end?: number, step?: number): number[] {
   if (arguments.length === 1) {
     if (start > 0) {
       end = start

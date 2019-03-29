@@ -39,4 +39,4 @@ function fill(
   return newArr
 }
 
-export default fill
+export { fill }

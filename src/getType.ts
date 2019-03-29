@@ -15,6 +15,6 @@ export type ValueType = (
  * @see https://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring
  * @see https://www.ecma-international.org/ecma-262/5.1/#sec-8.6.2
  */
-export default function getType(value: any): ValueType {
+export function getType(value: any): ValueType {
   return Object.prototype.toString.call(value).slice(8, -1) as any
 }

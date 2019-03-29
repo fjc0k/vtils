@@ -4,6 +4,6 @@
  * @param value 要检查的值
  * @returns 是（true）或否（false）
  */
-export default function isFunction(value: any): value is (...args: any) => any {
+export function isFunction(value: any): value is (...args: any) => any {
   return typeof value === 'function'
 }

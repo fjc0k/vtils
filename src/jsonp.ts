@@ -1,9 +1,9 @@
 /* istanbul ignore file */
-import inBrowser from './inBrowser'
-import isObject from './isObject'
-import noop from './noop'
-import randomString from './randomString'
-import objectToQueryString from './objectToQueryString'
+import { inBrowser } from './inBrowser'
+import { isObject } from './isObject'
+import { noop } from './noop'
+import { randomString } from './randomString'
+import { objectToQueryString } from './objectToQueryString'
 
 /**
  * 发起 jsonp 请求。
@@ -13,7 +13,7 @@ import objectToQueryString from './objectToQueryString'
  * @param [callbackParameter='callback'] 携带回调函数名的参数
  * @returns 携带返回结果的 Promise 值
  */
-export default function jsonp(url: string, data?: string | object, callbackParameter = 'callback'): Promise<any> {
+export function jsonp(url: string, data?: string | object, callbackParameter = 'callback'): Promise<any> {
   return new Promise(
     inBrowser()
       ? (resolve, reject) => {

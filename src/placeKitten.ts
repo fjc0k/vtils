@@ -18,4 +18,4 @@ function placeKitten(width: number, height?: number): string {
   return `https://placekitten.com/${width}/${height}`
 }
 
-export default placeKitten
+export { placeKitten }

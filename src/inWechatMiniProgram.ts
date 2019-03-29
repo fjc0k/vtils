@@ -1,6 +1,6 @@
-import inBrowser from './inBrowser'
-import isFunction from './isFunction'
-import isObject from './isObject'
+import { inBrowser } from './inBrowser'
+import { isFunction } from './isFunction'
+import { isObject } from './isObject'
 
 let isInWechatMiniProgram: boolean | undefined
 
@@ -10,7 +10,7 @@ let isInWechatMiniProgram: boolean | undefined
  * @param [callback] 在微信小程序环境中执行的回调
  * @returns 是（true）或否（false）
  */
-export default function inWechatMiniProgram(callback?: () => void): boolean {
+export function inWechatMiniProgram(callback?: () => void): boolean {
   if (isInWechatMiniProgram === undefined) {
     isInWechatMiniProgram = !inBrowser() && typeof wx !== 'undefined' && isObject(wx) && isFunction(wx.getSystemInfo)
   }

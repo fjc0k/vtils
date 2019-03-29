@@ -1,5 +1,5 @@
 import { FormatDateValue } from './formatDate'
-import toDate from './toDate'
+import { toDate } from './toDate'
 
 /**
  * 将 `value` 转换为 unix 时间戳。
@@ -7,6 +7,6 @@ import toDate from './toDate'
  * @param [value] 要转换的值
  * @returns unix 时间戳
  */
-export default function toUnixTimestamp(value?: FormatDateValue): number {
+export function toUnixTimestamp(value?: FormatDateValue): number {
   return Math.floor(toDate(value).getTime() / 1000)
 }
