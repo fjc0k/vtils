@@ -1,3 +1,9 @@
+/**
+ * 顺序执行异步任务。
+ *
+ * @param tasks 要执行的任务列表
+ * @returns 全部任务执行结果组成的数组
+ */
 export function promiseSeries<
   // eslint-disable-next-line space-before-function-paren
   T extends (...args: any) => Promise<any>,
