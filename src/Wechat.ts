@@ -150,7 +150,7 @@ export type WechatNonBaseMenuItem = (
   'menuItem:share:brand'
 )
 
-export class WeChat {
+export class Wechat {
   private ready: boolean = false
 
   private bus = new EventBus<{
