@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.80.3"></a>
+## [0.80.3](https://github.com/fjc0k/vtils/compare/v0.80.2...v0.80.3) (2019-03-30)
+
+
+### Bug Fixes
+
+* Wechat ([fdd415d](https://github.com/fjc0k/vtils/commit/fdd415d))
+
+
+
 <a name="0.80.2"></a>
 ## [0.80.2](https://github.com/fjc0k/vtils/compare/v0.80.0...v0.80.2) (2019-03-30)
 
