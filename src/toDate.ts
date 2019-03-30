@@ -1,8 +1,8 @@
+import { FormatDateValue } from './formatDate'
 import { isDate } from './isDate'
 import { isNull } from './isNull'
 import { isString } from './isString'
 import { isUndefined } from './isUndefined'
-import { FormatDateValue } from './formatDate'
 
 const cache = Object.create(null)
 

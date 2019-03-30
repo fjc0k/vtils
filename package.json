@@ -40,7 +40,7 @@
     "root": true,
     "extends": "io"
   },
-  "eslistIgnore": [
+  "eslintIgnore": [
     "lib"
   ],
   "standard-version": {
@@ -68,7 +68,7 @@
     "bili": "^3.4.1",
     "codecov": "^3.1.0",
     "eslint": "^5.9.0",
-    "eslint-config-io": "^0.1.1",
+    "eslint-config-io": "^0.5.0",
     "jest": "^23.6.0",
     "moment": "^2.22.2",
     "rollup-plugin-typescript2": "^0.18.0",

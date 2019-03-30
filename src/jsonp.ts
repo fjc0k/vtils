@@ -2,8 +2,8 @@
 import { inBrowser } from './inBrowser'
 import { isObject } from './isObject'
 import { noop } from './noop'
-import { randomString } from './randomString'
 import { objectToQueryString } from './objectToQueryString'
+import { randomString } from './randomString'
 
 /**
  * 发起 jsonp 请求。

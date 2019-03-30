@@ -1,6 +1,6 @@
+import * as vtils from '../src'
 import moment from 'moment'
 import sinon from 'sinon'
-import * as vtils from '../src'
 
 const now = new Date()
 

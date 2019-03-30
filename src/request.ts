@@ -1,11 +1,11 @@
 /* istanbul ignore file */
+import { defaultValue } from './defaultValue'
+import { FileData } from './FileData'
 import { forOwn } from './forOwn'
 import { inBrowser } from './inBrowser'
 import { inWechatMiniProgram } from './inWechatMiniProgram'
-import { omit } from './omit'
-import { FileData } from './FileData'
-import { defaultValue } from './defaultValue'
 import { objectToQueryString } from './objectToQueryString'
+import { omit } from './omit'
 
 export interface RequestOptions {
   url: string,
