@@ -1,4 +1,5 @@
 import { EventBus } from './EventBus'
+import { promiseSeries } from './promiseSeries'
 
 declare const wx: any
 
@@ -191,11 +192,12 @@ export class Wechat {
       ...params,
     }
     // 必须顺序调用分享接口，否则会失败！
-    return this.invoke('updateAppMessageShareData', params)
-      .then(() => this.invoke('updateTimelineShareData', params))
-      .then(() => {
-        this.prevShareParams = params
-      })
+    return promiseSeries([
+      () => this.invoke('updateAppMessageShareData', params),
+      () => this.invoke('updateTimelineShareData', params),
+    ]).then(() => {
+      this.prevShareParams = params
+    })
   }
 
   chooseImage(params?: WechatChooseImageParams): Promise<string[]> {

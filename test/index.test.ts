@@ -1633,3 +1633,16 @@ describe('wait', () => {
     expect(time2 - time1 >= 1000).toBeTruthy()
   })
 })
+
+describe('promiseSeries', () => {
+  test('ok', async () => {
+    const a = (): Promise<number> => Promise.resolve(1)
+    const b = (): Promise<string> => Promise.resolve('2')
+    const c = (): Promise<boolean> => Promise.resolve(false)
+    const d = (): Promise<boolean> => Promise.reject('error')
+    const pList = [a, b, c]
+    expect(vtils.isPromise(vtils.promiseSeries(pList))).toBeTruthy()
+    expect(await vtils.promiseSeries(pList)).toEqual([1, '2', false])
+    expect(vtils.promiseSeries(pList.concat(d))).rejects.toBe('error')
+  })
+})
