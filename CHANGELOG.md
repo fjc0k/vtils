@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.81.0"></a>
+# [0.81.0](https://github.com/fjc0k/vtils/compare/v0.80.4...v0.81.0) (2019-03-30)
+
+
+### Features
+
+* add promiseSeries ([3843fba](https://github.com/fjc0k/vtils/commit/3843fba))
+
+
+
 <a name="0.80.4"></a>
 ## [0.80.4](https://github.com/fjc0k/vtils/compare/v0.80.3...v0.80.4) (2019-03-30)
 
