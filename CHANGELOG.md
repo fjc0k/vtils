@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.80.4"></a>
+## [0.80.4](https://github.com/fjc0k/vtils/compare/v0.80.3...v0.80.4) (2019-03-30)
+
+
+### Bug Fixes
+
+* **Wechat:** 必须顺序调用分享接口，否则会失败 ([716541a](https://github.com/fjc0k/vtils/commit/716541a))
+
+
+
 <a name="0.80.3"></a>
 ## [0.80.3](https://github.com/fjc0k/vtils/compare/v0.80.2...v0.80.3) (2019-03-30)
 
