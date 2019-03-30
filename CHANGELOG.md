@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.79.0"></a>
+# [0.79.0](https://github.com/fjc0k/vtils/compare/v0.78.0...v0.79.0) (2019-03-30)
+
+
+### Features
+
+* add Wechat ([12258e1](https://github.com/fjc0k/vtils/commit/12258e1))
+* 删除 compareVersions 并使用具名导出 ([a896699](https://github.com/fjc0k/vtils/commit/a896699))
+
+
+
 <a name="0.78.0"></a>
 # [0.78.0](https://github.com/fjc0k/vtils/compare/v0.77.0...v0.78.0) (2019-03-11)
 
