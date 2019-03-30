@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.80.0"></a>
+# [0.80.0](https://github.com/fjc0k/vtils/compare/v0.79.0...v0.80.0) (2019-03-30)
+
+
+### Features
+
+* **Wechat:** 支持延后 config ([99e5cd6](https://github.com/fjc0k/vtils/commit/99e5cd6))
+
+
+
 <a name="0.79.0"></a>
 # [0.79.0](https://github.com/fjc0k/vtils/compare/v0.78.0...v0.79.0) (2019-03-30)
 
