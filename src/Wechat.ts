@@ -154,34 +154,27 @@ export class WeChat {
   private ready: boolean = false
 
   private bus = new EventBus<{
+    ready: () => void,
     error: WechatErrorCallback,
   }>()
 
   private prevShareParams: WechatUpdateShareDataParams = {}
 
-  constructor(params: WechatConfigParams) {
+  constructor(params?: WechatConfigParams) {
+    this.config(params)
+  }
+
+  config(params: WechatConfigParams) {
     if (typeof wx === 'undefined') {
       throw new Error('请先引入微信 JSSDK')
     }
     wx.config(params)
     wx.ready(() => {
       this.ready = true
+      this.bus.emit('ready')
     })
     wx.error((err: any) => {
       this.bus.emit('error', err)
-    })
-  }
-
-  private invoke(jsApi: WechatJsApi, params: Record<string, any> = {}): Promise<any> {
-    return new Promise((resolve, reject) => {
-      if (!wx[jsApi]) reject(`wx.${jsApi} 不可用`)
-      params.success = resolve
-      params.fail = reject
-      if (this.ready) {
-        wx[jsApi](params)
-      } else {
-        wx.ready(() => wx[jsApi](params))
-      }
     })
   }
 
@@ -244,5 +237,19 @@ export class WeChat {
 
   onError(callback: WechatErrorCallback) {
     this.bus.on('error', callback)
+  }
+
+  private invoke(jsApi: WechatJsApi, params: Record<string, any> = {}): Promise<any> {
+    return new Promise((resolve, reject) => {
+      if (typeof wx === 'undefined') return reject('请先引入微信 JSSDK')
+      if (!wx[jsApi]) return reject(`wx.${jsApi} 不可用`)
+      params.success = resolve
+      params.fail = reject
+      if (this.ready) {
+        wx[jsApi](params)
+      } else {
+        this.bus.once('ready', () => wx[jsApi](params))
+      }
+    })
   }
 }
