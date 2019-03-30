@@ -161,7 +161,9 @@ export class Wechat {
   private prevShareParams: WechatUpdateShareDataParams = {}
 
   constructor(params?: WechatConfigParams) {
-    this.config(params)
+    if (params) {
+      this.config(params)
+    }
   }
 
   config(params: WechatConfigParams) {
