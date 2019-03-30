@@ -245,12 +245,17 @@ export class Wechat {
     return new Promise((resolve, reject) => {
       if (typeof wx === 'undefined') return reject('请先引入微信 JSSDK')
       if (!wx[jsApi]) return reject(`wx.${jsApi} 不可用`)
-      params.success = resolve
-      params.fail = reject
+      const invoke = () => {
+        wx[jsApi]({
+          ...params,
+          success: resolve,
+          fail: reject,
+        })
+      }
       if (this.ready) {
-        wx[jsApi](params)
+        invoke()
       } else {
-        this.bus.once('ready', () => wx[jsApi](params))
+        this.bus.once('ready', invoke)
       }
     })
   }
