@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.84.0"></a>
+# [0.84.0](https://github.com/fjc0k/vtils/compare/v0.83.2...v0.84.0) (2019-04-01)
+
+
+### Features
+
+* **Wechat:** 支持 sharable 参数 ([a44162d](https://github.com/fjc0k/vtils/commit/a44162d))
+
+
+
 <a name="0.83.2"></a>
 ## [0.83.2](https://github.com/fjc0k/vtils/compare/v0.83.1...v0.83.2) (2019-04-01)
 
