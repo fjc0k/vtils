@@ -224,12 +224,12 @@ export class Wechat {
       ...params,
     }
     this.prevShareParams = params
+    this.invoke('updateAppMessageShareData', params)
+    this.invoke('updateTimelineShareData', params)
     this.invoke('onMenuShareAppMessage', params)
     this.invoke('onMenuShareTimeline', params)
     this.invoke('onMenuShareQQ', params)
     this.invoke('onMenuShareQZone', params)
-    this.invoke('updateAppMessageShareData', params)
-    this.invoke('updateTimelineShareData', params)
     return Promise.resolve()
   }
 
