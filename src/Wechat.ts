@@ -1,4 +1,5 @@
 import { EventBus } from './EventBus'
+import { isBoolean } from './isBoolean'
 import { promiseSeries } from './promiseSeries'
 
 declare const wx: any
@@ -72,8 +73,18 @@ export interface WechatConfigParams {
   signature: string,
   /**
    * 需要使用的JS接口列表。
+   *
+   * @default []
    */
-  jsApiList: WechatJsApi[],
+  jsApiList?: WechatJsApi[],
+  /**
+   * 是否可分享。
+   *
+   * 设置为 `true` 将把分享系列接口自动加入 `jsApiList`。
+   *
+   * @default true
+   */
+  sharable?: boolean,
 }
 
 export type WechatErrorCallback = (err: any) => void
@@ -175,7 +186,25 @@ export class Wechat {
     if (typeof wx === 'undefined') {
       throw new Error('请先引入微信 JSSDK')
     }
-    wx.config(params)
+    const sharable = isBoolean(params.sharable) ? params.sharable : true
+    wx.config({
+      ...params,
+      jsApiList: [
+        ...(params.jsApiList || []),
+        ...(
+          sharable
+            ? [
+              'updateAppMessageShareData',
+              'updateTimelineShareData',
+              'onMenuShareAppMessage',
+              'onMenuShareTimeline',
+              'onMenuShareQQ',
+              'onMenuShareQZone',
+            ]
+            : []
+        ) as WechatJsApi[],
+      ],
+    })
     wx.ready(() => {
       this.ready = true
       this.bus.emit('ready')
