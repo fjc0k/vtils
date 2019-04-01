@@ -7,6 +7,10 @@ export type WechatJsApi = (
   'checkJsApi' |
   'updateAppMessageShareData' |
   'updateTimelineShareData' |
+  'onMenuShareTimeline' |
+  'onMenuShareAppMessage' |
+  'onMenuShareQQ' |
+  'onMenuShareQZone' |
   'startRecord' |
   'stopRecord' |
   'onVoiceRecordEnd' |
@@ -195,6 +199,11 @@ export class Wechat {
     return promiseSeries([
       () => this.invoke('updateAppMessageShareData', params),
       () => this.invoke('updateTimelineShareData', params),
+      // 兼容低版本微信
+      () => this.invoke('onMenuShareAppMessage', params),
+      () => this.invoke('onMenuShareTimeline', params),
+      () => this.invoke('onMenuShareQQ', params),
+      () => this.invoke('onMenuShareQZone', params),
     ]).then(() => {
       this.prevShareParams = params
     })
