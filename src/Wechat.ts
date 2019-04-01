@@ -1,5 +1,6 @@
 import { EventBus } from './EventBus'
 import { isBoolean } from './isBoolean'
+import { promiseSeries } from './promiseSeries'
 
 declare const wx: any
 
@@ -165,6 +166,15 @@ export type WechatNonBaseMenuItem = (
   'menuItem:share:brand'
 )
 
+const shareJsApiList: WechatJsApi[] = [
+  'updateAppMessageShareData',
+  'updateTimelineShareData',
+  'onMenuShareAppMessage',
+  'onMenuShareTimeline',
+  'onMenuShareQQ',
+  'onMenuShareQZone',
+]
+
 export class Wechat {
   private ready: boolean = false
 
@@ -190,18 +200,7 @@ export class Wechat {
       ...params,
       jsApiList: [
         ...(params.jsApiList || []),
-        ...(
-          sharable
-            ? [
-              'updateAppMessageShareData',
-              'updateTimelineShareData',
-              'onMenuShareAppMessage',
-              'onMenuShareTimeline',
-              'onMenuShareQQ',
-              'onMenuShareQZone',
-            ]
-            : []
-        ) as WechatJsApi[],
+        ...(sharable ? shareJsApiList : []),
       ],
     })
     wx.ready(() => {
@@ -224,13 +223,11 @@ export class Wechat {
       ...params,
     }
     this.prevShareParams = params
-    this.invoke('updateAppMessageShareData', params)
-    this.invoke('updateTimelineShareData', params)
-    this.invoke('onMenuShareAppMessage', params)
-    this.invoke('onMenuShareTimeline', params)
-    this.invoke('onMenuShareQQ', params)
-    this.invoke('onMenuShareQZone', params)
-    return Promise.resolve()
+    return promiseSeries(
+      shareJsApiList.map(
+        jsApi => () => this.invoke(jsApi, params),
+      ),
+    )
   }
 
   chooseImage(params?: WechatChooseImageParams): Promise<string[]> {
