@@ -1,6 +1,5 @@
 import { EventBus } from './EventBus'
 import { isBoolean } from './isBoolean'
-import { promiseSeries } from './promiseSeries'
 
 declare const wx: any
 
@@ -225,17 +224,13 @@ export class Wechat {
       ...params,
     }
     this.prevShareParams = params
-    // 必须顺序调用分享接口，否则会失败！
-    return promiseSeries([
-      // 兼容低版本微信
-      () => this.invoke('onMenuShareAppMessage', params),
-      () => this.invoke('onMenuShareTimeline', params),
-      () => this.invoke('onMenuShareQQ', params),
-      () => this.invoke('onMenuShareQZone', params),
-      // 最新的接口
-      () => this.invoke('updateAppMessageShareData', params),
-      () => this.invoke('updateTimelineShareData', params),
-    ])
+    this.invoke('onMenuShareAppMessage', params)
+    this.invoke('onMenuShareTimeline', params)
+    this.invoke('onMenuShareQQ', params)
+    this.invoke('onMenuShareQZone', params)
+    this.invoke('updateAppMessageShareData', params)
+    this.invoke('updateTimelineShareData', params)
+    return Promise.resolve()
   }
 
   chooseImage(params?: WechatChooseImageParams): Promise<string[]> {
