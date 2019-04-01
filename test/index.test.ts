@@ -1667,3 +1667,7 @@ describe('includes', () => {
     expect(vtils.includes({ 1: 1, r: 2, 5: '4' }, 4)).toBeFalsy()
   })
 })
+
+describe('isIOS', () => {
+  expect(vtils.isIOS()).toBeFalsy()
+})
