@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.83.1"></a>
+## [0.83.1](https://github.com/fjc0k/vtils/compare/v0.83.0...v0.83.1) (2019-04-01)
+
+
+### Bug Fixes
+
+* **Wechat:** 兼容低版本微信 ([acae30d](https://github.com/fjc0k/vtils/commit/acae30d))
+
+
+
 <a name="0.83.0"></a>
 # [0.83.0](https://github.com/fjc0k/vtils/compare/v0.82.0...v0.83.0) (2019-03-30)
 
