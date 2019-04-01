@@ -190,23 +190,23 @@ export class Wechat {
       .then(res => res.checkResult)
   }
 
-  updateShareData(params: WechatUpdateShareDataParams): Promise<void> {
+  updateShareData(params: WechatUpdateShareDataParams): Promise<any> {
     params = {
       ...this.prevShareParams,
       ...params,
     }
+    this.prevShareParams = params
     // 必须顺序调用分享接口，否则会失败！
     return promiseSeries([
-      () => this.invoke('updateAppMessageShareData', params),
-      () => this.invoke('updateTimelineShareData', params),
       // 兼容低版本微信
       () => this.invoke('onMenuShareAppMessage', params),
       () => this.invoke('onMenuShareTimeline', params),
       () => this.invoke('onMenuShareQQ', params),
       () => this.invoke('onMenuShareQZone', params),
-    ]).then(() => {
-      this.prevShareParams = params
-    })
+      // 最新的接口
+      () => this.invoke('updateAppMessageShareData', params),
+      () => this.invoke('updateTimelineShareData', params),
+    ])
   }
 
   chooseImage(params?: WechatChooseImageParams): Promise<string[]> {
