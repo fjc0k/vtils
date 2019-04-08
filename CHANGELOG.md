@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.86.0"></a>
+# [0.86.0](https://github.com/fjc0k/vtils/compare/v0.85.0...v0.86.0) (2019-04-08)
+
+
+### Features
+
+* add isLeapYear & getDaysInMonth ([0962fdf](https://github.com/fjc0k/vtils/commit/0962fdf))
+
+
+
 <a name="0.85.0"></a>
 # [0.85.0](https://github.com/fjc0k/vtils/compare/v0.84.3...v0.85.0) (2019-04-01)
 
