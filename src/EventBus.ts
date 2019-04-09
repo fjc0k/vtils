@@ -1,3 +1,4 @@
+import { AnyFunction } from './isFunction'
 import { ArgumentsType } from './result'
 
 /** 取消订阅 */
@@ -9,8 +10,8 @@ export type EventBusUnsubscribe = () => void
  * @template T 事件名称及其对应的监听器描述
  */
 export class EventBus<
-  T extends { [key: string]: (...args: any[]) => any } = { [key: string]: (...args: any[]) => any },
-  K extends Extract<keyof T, string> = Extract<keyof T, string>
+  T extends Record<string | number, AnyFunction> = Record<string | number, AnyFunction>,
+  K extends keyof T = keyof T,
 > {
   /**
    * 监听器列表。

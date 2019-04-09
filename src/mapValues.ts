@@ -1,4 +1,4 @@
-import { forOwn } from './forOwn'
+import { AnyObject, EnumerableKey, forOwn } from './forOwn'
 
 /**
  * 映射对象的可枚举属性值为一个新的值。
@@ -8,16 +8,16 @@ import { forOwn } from './forOwn'
  * @returns 映射后的新对象
  */
 export function mapValues<
-  T extends { [key: string]: any },
-  K extends Extract<keyof T, string>,
-  C extends any
+  T extends AnyObject,
+  K extends EnumerableKey<keyof T>,
+  C
 >(
   obj: T,
   callback: (value: T[K], key: K, obj: T) => C,
-): { [key in K]: C } {
-  const newObj: any = {}
-  forOwn(obj, (value, key, source) => {
-    newObj[key] = callback(value, key as K, source)
+) {
+  const newObj: { [key in K]: C } = {} as any
+  forOwn(obj, (value: T[K], key: K, source: T) => {
+    newObj[key] = callback(value, key, source)
   })
   return newObj
 }

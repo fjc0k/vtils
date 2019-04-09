@@ -1,3 +1,4 @@
+import { AnyObject } from './forOwn'
 import { reduce } from './reduce'
 
 /**
@@ -6,11 +7,11 @@ import { reduce } from './reduce'
  * @param obj 要转换的对象
  * @returns 查询字符串
  */
-export function objectToQueryString(obj: object): string {
+export function objectToQueryString(obj: AnyObject): string {
   return reduce(
     obj,
     (result, value, key) => {
-      result.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+      result.push(`${encodeURIComponent(key.toString())}=${encodeURIComponent(value)}`)
       return result
     },
     [],

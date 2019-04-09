@@ -8,7 +8,7 @@
 export function keyBy<T extends any, K extends keyof any>(
   arr: T[],
   iteratee: (item: T, index: number) => K,
-): { [key in K]: T } {
+) {
   return arr.reduce<{ [key in K]: T }>(
     (res, item, index) => {
       const key = iteratee(item, index)

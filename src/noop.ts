@@ -1,4 +1,5 @@
 /**
  * 无操作函数。
  */
-export function noop(..._args: any[]): any {}
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function noop(...args: any[]): any {}

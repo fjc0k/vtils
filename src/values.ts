@@ -1,6 +1,4 @@
-import { forOwn } from './forOwn'
-
-export type ValuesResult<T> = Array<T[keyof T]>
+import { AnyObject, EnumerableKey, forOwn } from './forOwn'
 
 /**
  * 返回 `obj` 自身可枚举属性的值为数组。
@@ -8,8 +6,10 @@ export type ValuesResult<T> = Array<T[keyof T]>
  * @param obj 要检索的对象
  * @returns 结果数组
  */
-export function values<T extends { [key: string]: any }>(obj: T): ValuesResult<T> {
-  const result: ValuesResult<T> = []
-  forOwn(obj, value => result.push(value))
+export function values<T extends AnyObject>(obj: T) {
+  const result: Array<T[EnumerableKey<keyof T>]> = []
+  forOwn(obj, value => {
+    result.push(value)
+  })
   return result
 }

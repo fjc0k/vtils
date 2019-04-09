@@ -1,3 +1,5 @@
+import { AnyObject, EnumerableKey } from './forOwn'
+
 /**
  * 将一个数组归纳为一个值。
  *
@@ -20,7 +22,7 @@ function reduce<T, K extends number, R>(
  * @param initialValue 归纳初始值
  * @returns 归纳最终值
  */
-function reduce<T extends object, K extends keyof T, R>(
+function reduce<T extends AnyObject, K extends EnumerableKey<keyof T>, R>(
   data: T,
   fn: (accumulator: R, currentValue: T[K], currentKey: K) => R,
   accumulator: R
@@ -30,9 +32,12 @@ function reduce(data: any, fn: any, accumulator: any): any {
   if (Array.isArray(data)) {
     return data.reduce(fn, accumulator)
   }
-  return Object.keys(data).reduce((localAccumulator, key) => {
-    return fn(localAccumulator, data[key], key)
-  }, accumulator)
+  return Object.keys(data).reduce(
+    (localAccumulator, key) => {
+      return fn(localAccumulator, data[key], key)
+    },
+    accumulator,
+  )
 }
 
 export { reduce }
