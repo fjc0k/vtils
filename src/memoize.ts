@@ -7,7 +7,7 @@ export interface MemoizeOptions<T extends AnyFunction = AnyFunction> {
     get(key: string): any,
     has(key: string): boolean,
   },
-  serializer?(args: Parameters<T>): string,
+  serializer?(...args: Parameters<T>): string,
 }
 
 /**
@@ -27,7 +27,7 @@ export function memoize<T extends AnyFunction>(fn: T, options?: MemoizeOptions<T
       } as any
     }
     if (options.serializer) {
-      fastMemoizeOptions.serializer = options.serializer as any
+      fastMemoizeOptions.serializer = args => options.serializer.apply(null, args as any)
     }
   }
   return fastMemoize(fn, fastMemoizeOptions)
