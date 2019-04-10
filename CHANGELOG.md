@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.87.0"></a>
+# [0.87.0](https://github.com/fjc0k/vtils/compare/v0.86.1...v0.87.0) (2019-04-10)
+
+
+### Features
+
+* **chunk:** filler can be a function ([8451f6c](https://github.com/fjc0k/vtils/commit/8451f6c))
+
+
+
 <a name="0.86.1"></a>
 ## [0.86.1](https://github.com/fjc0k/vtils/compare/v0.86.0...v0.86.1) (2019-04-09)
 
