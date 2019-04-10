@@ -1,5 +1,4 @@
 import { AnyFunction } from './isFunction'
-import { ArgumentsType } from './result'
 
 /** 取消订阅 */
 export type EventBusUnsubscribe = () => void
@@ -79,7 +78,7 @@ export class EventBus<
    * @param args 传给监听器的参数
    * @returns 各监听器的返回结果组成的数组
    */
-  public emit<X extends K>(eventName: X, ...args: ArgumentsType<T[X]>): Array<ReturnType<T[X]>> {
+  public emit<X extends K>(eventName: X, ...args: Parameters<T[X]>): Array<ReturnType<T[X]>> {
     return (this.listeners[eventName] || []).map(listener => {
       return listener(...args)
     })
