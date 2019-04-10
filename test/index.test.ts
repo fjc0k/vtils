@@ -1732,3 +1732,15 @@ describe('formatTemplate', () => {
     expect(vtils.formatTemplate('hello', { e: 'pyyy' })).toBe('hpyyyllo')
   })
 })
+
+describe('memoize', () => {
+  test('ok', () => {
+    const fn = jest.fn(() => 'ok')
+    const memoizedFn = vtils.memoize(fn)
+    expect(memoizedFn()).toBe('ok')
+    expect(memoizedFn()).toBe('ok')
+    expect(fn).toBeCalledTimes(1)
+    expect(memoizedFn('hello')).toBe('ok')
+    expect(fn).toBeCalledTimes(2)
+  })
+})
