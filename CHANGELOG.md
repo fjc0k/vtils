@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.88.0"></a>
+# [0.88.0](https://github.com/fjc0k/vtils/compare/v0.87.1...v0.88.0) (2019-04-10)
+
+
+### Features
+
+* add formatTemplate ([bcfe631](https://github.com/fjc0k/vtils/commit/bcfe631))
+
+
+
 <a name="0.87.1"></a>
 ## [0.87.1](https://github.com/fjc0k/vtils/compare/v0.87.0...v0.87.1) (2019-04-10)
 
