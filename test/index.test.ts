@@ -1581,7 +1581,10 @@ describe('chunk', () => {
     expect(vtils.chunk([1, 2], 0)).toEqual([[1], [2]])
     expect(vtils.chunk([1, 2], 1)).toEqual([[1], [2]])
     expect(vtils.chunk([1, 2, 3], 2)).toEqual([[1, 2], [3]])
+  })
+  test('filler ok', () => {
     expect(vtils.chunk([1, 2, 3], 2, 4)).toEqual([[1, 2], [3, 4]])
+    expect(vtils.chunk([1, 2, 3], 2, index => index)).toEqual([[1, 2], [3, 0]])
   })
 })
 
