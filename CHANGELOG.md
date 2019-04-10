@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.90.0"></a>
+# [0.90.0](https://github.com/fjc0k/vtils/compare/v0.89.1...v0.90.0) (2019-04-10)
+
+
+### Features
+
+* rewrite memoize ([9da18a9](https://github.com/fjc0k/vtils/commit/9da18a9))
+
+
+
 <a name="0.89.1"></a>
 ## [0.89.1](https://github.com/fjc0k/vtils/compare/v0.89.0...v0.89.1) (2019-04-10)
 
