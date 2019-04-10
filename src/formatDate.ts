@@ -1,5 +1,4 @@
-import { reduce } from './reduce'
-import { repeat } from './repeat'
+import { formatTemplate, FormatTemplatePatternToValue } from './formatTemplate'
 import { toDate } from './toDate'
 
 export type FormatDateValue = string | number | Date
@@ -13,7 +12,7 @@ export type FormatDateValue = string | number | Date
  */
 export function formatDate(value: FormatDateValue, template: string): string {
   const date = toDate(value)
-  const patterns: { [key: string]: number } = {
+  const patternToValue: FormatTemplatePatternToValue = {
     y: date.getFullYear(), // 年
     m: date.getMonth() + 1, // 月
     d: date.getDate(), // 日
@@ -22,19 +21,5 @@ export function formatDate(value: FormatDateValue, template: string): string {
     s: date.getSeconds(), // 秒
     l: date.getMilliseconds(), // 毫秒
   }
-  return reduce(patterns, (result, patternValue, patternKey) => {
-    const patternValueStr = String(patternValue)
-    const len = patternValueStr.length
-    return result.replace(
-      new RegExp(`(${patternKey}+)`, 'g'),
-      $0 => {
-        const n = $0.length
-        return (
-          n === 1 || n === len ? patternValueStr // n=1或n=len: 直接返回
-            : n < len ? patternValueStr.substr(len - n) // n<len: 截取后n位
-              : repeat(0, n - len) + patternValueStr // n>len: 前填充0到n位
-        )
-      },
-    )
-  }, template)
+  return formatTemplate(template, patternToValue)
 }

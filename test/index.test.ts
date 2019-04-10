@@ -1725,3 +1725,10 @@ describe('getDaysInMonth', () => {
     }
   })
 })
+
+describe('formatTemplate', () => {
+  test('ok', () => {
+    expect(vtils.formatTemplate('hello', { h: 78, l: '=-', o: '0' })).toBe('78e=-0')
+    expect(vtils.formatTemplate('hello', { e: 'pyyy' })).toBe('hpyyyllo')
+  })
+})
