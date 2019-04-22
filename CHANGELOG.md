@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.92.0"></a>
+# [0.92.0](https://github.com/fjc0k/vtils/compare/v0.91.0...v0.92.0) (2019-04-22)
+
+
+### Features
+
+* **formatDate:** 支持汉字的周几, 用 z 表示 ([ac66f0d](https://github.com/fjc0k/vtils/commit/ac66f0d))
+
+
+
 <a name="0.91.0"></a>
 # [0.91.0](https://github.com/fjc0k/vtils/compare/v0.90.0...v0.91.0) (2019-04-10)
 
