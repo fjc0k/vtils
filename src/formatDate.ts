@@ -3,6 +3,17 @@ import { toDate } from './toDate'
 
 export type FormatDateValue = string | number | Date
 
+export const dayToZhou: Record<number, string> = {
+  0: '日',
+  1: '一',
+  2: '二',
+  3: '三',
+  4: '四',
+  5: '五',
+  6: '六',
+  7: '日',
+}
+
 /**
  * 格式化日期显示。
  *
@@ -20,6 +31,7 @@ export function formatDate(value: FormatDateValue, template: string): string {
     i: date.getMinutes(), // 分
     s: date.getSeconds(), // 秒
     l: date.getMilliseconds(), // 毫秒
+    z: dayToZhou[date.getDay()], // 汉字的周几
   }
   return formatTemplate(template, patternToValue)
 }

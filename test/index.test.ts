@@ -977,6 +977,11 @@ describe('formatDate', () => {
     expect(vtils.formatDate(1541211914, 'yyyy年m月d日 h:i')).toBe(moment(1541211914 * 1000).format('YYYY年M月D日 H:m'))
     expect(vtils.formatDate(now, 'yyyy年m月d日 h:i:s')).toBe(moment(now).format('YYYY年M月D日 H:m:s'))
   })
+  test('周几', () => {
+    vtils.range(0, 7).forEach(i => {
+      expect(vtils.formatDate(`2019-4-${22 + i}`, '周z')).toBe(`周${vtils.dayToZhou[i + 1]}`)
+    })
+  })
 })
 
 describe('startsWith', () => {
