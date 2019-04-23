@@ -1,13 +1,32 @@
-import fastMemoize, { Options } from 'fast-memoize'
 import { AnyFunction } from './isFunction'
 
 export interface MemoizeOptions<T extends AnyFunction = AnyFunction> {
+  /**
+   * 创建缓存容器。
+   */
   createCache?(): {
+    /** 设置缓存 */
     set(key: string, value: any): void,
-    get(key: string): any,
+    /** 是否存在缓存 */
     has(key: string): boolean,
+    /** 获取缓存 */
+    get(key: string): any,
+    /** 删除缓存 */
+    delete(key: string): void,
+    /** 清空缓存 */
+    clear(): void,
   },
+  /**
+   * 序列化函数实参。
+   */
   serializer?(...args: Parameters<T>): string,
+}
+
+export type MemoizeReturn<T extends AnyFunction = AnyFunction> = T & {
+  /** 上一次执行函数时的缓存键名 */
+  lastCacheKey: string,
+  /** 缓存容器 */
+  cache: ReturnType<MemoizeOptions['createCache']>,
 }
 
 /**
@@ -17,18 +36,48 @@ export interface MemoizeOptions<T extends AnyFunction = AnyFunction> {
  * @param [options] 选项
  * @returns 缓存化后的函数
  */
-export function memoize<T extends AnyFunction>(fn: T, options?: MemoizeOptions<T>): T {
-  let fastMemoizeOptions: Options<T> = undefined
-  if (options) {
-    fastMemoizeOptions = {}
-    if (options.createCache) {
-      fastMemoizeOptions.cache = {
-        create: options.createCache,
-      } as any
+export function memoize<T extends AnyFunction>(
+  fn: T,
+  {
+    createCache = () => {
+      if (typeof Map === 'function' && Map.prototype.hasOwnProperty('clear')) {
+        return new Map()
+      }
+      const cache = Object.create(null)
+      return {
+        set(k, v) {
+          cache[k] = v
+        },
+        has(k) {
+          return (k in cache)
+        },
+        get(k) {
+          return cache[k]
+        },
+        delete(k) {
+          delete cache[k]
+        },
+        clear() {
+          Object.keys(cache).forEach(k => {
+            delete cache[k]
+          })
+        },
+      }
+    },
+    serializer = (...args) => {
+      return args.join(')`(')
+    },
+  }: MemoizeOptions<T> = {},
+): MemoizeReturn<T> {
+  const cache = createCache()
+  const memoizedFn: any = (...args: Parameters<T>) => {
+    const cacheKey = serializer(...args)
+    memoizedFn.lastCacheKey = cacheKey
+    if (!cache.has(cacheKey)) {
+      cache.set(cacheKey, fn(...args))
     }
-    if (options.serializer) {
-      fastMemoizeOptions.serializer = args => options.serializer.apply(null, args as any)
-    }
+    return cache.get(cacheKey)
   }
-  return fastMemoize(fn, fastMemoizeOptions)
+  memoizedFn.cache = cache
+  return memoizedFn
 }
