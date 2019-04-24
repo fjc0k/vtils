@@ -82,7 +82,7 @@ export interface WechatConfigParams {
    *
    * 设置为 `true` 将把分享系列接口自动加入 `jsApiList`。
    *
-   * @default true
+   * @default false
    */
   sharable?: boolean,
 }
@@ -195,7 +195,7 @@ export class Wechat {
     if (typeof wx === 'undefined') {
       throw new Error('请先引入微信 JSSDK')
     }
-    const sharable = isBoolean(params.sharable) ? params.sharable : true
+    const sharable = isBoolean(params.sharable) ? params.sharable : false
     wx.config({
       ...params,
       jsApiList: [
