@@ -33,8 +33,7 @@
     "testOnly": "jest",
     "test": "jest --coverage",
     "build": "bili",
-    "release": "standard-version -a",
-    "postrelease": "git push --follow-tags origin master && npm publish"
+    "release": "standard-version -a && git push --follow-tags origin master && yarn build && npm publish"
   },
   "eslintConfig": {
     "root": true,
@@ -43,11 +42,6 @@
   "eslintIgnore": [
     "lib"
   ],
-  "standard-version": {
-    "scripts": {
-      "postbump": "yarn build && git add -A"
-    }
-  },
   "jest": {
     "transform": {
       "^.+\\.ts$": "ts-jest"
