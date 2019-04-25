@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.93.0"></a>
+# [0.93.0](https://github.com/fjc0k/vtils/compare/v0.92.0...v0.93.0) (2019-04-25)
+
+
+### Bug Fixes
+
+* **chunk:** array 为空时应直接返回空数组 ([99f177b](https://github.com/fjc0k/vtils/commit/99f177b))
+
+
+### Features
+
+* **forOwn:** EnumerableKey 类型的泛型 T 拥有默认值 ([de987a5](https://github.com/fjc0k/vtils/commit/de987a5))
+* **memoize:** 重写实现，支持操作缓存 ([fa6fbac](https://github.com/fjc0k/vtils/commit/fa6fbac))
+* **Wechat:** sharable 默认为 false ([8970621](https://github.com/fjc0k/vtils/commit/8970621))
+
+
+
 <a name="0.92.0"></a>
 # [0.92.0](https://github.com/fjc0k/vtils/compare/v0.91.0...v0.92.0) (2019-04-22)
 
