@@ -10,6 +10,9 @@ import { isFunction } from './isFunction'
  * @returns 拆分后的新数组
  */
 export function chunk<T, F = never>(array: T[], size: number, filler?: ((index: number) => F) | F): (T | F)[][] {
+  if (array.length === 0) {
+    return []
+  }
   size = Math.max(size, 1)
   const result: (T | F)[][] = []
   const rows = Math.ceil(array.length / size)
