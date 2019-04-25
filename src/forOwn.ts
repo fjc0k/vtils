@@ -2,7 +2,7 @@ import { isObject } from './isObject'
 
 export type AnyObject = Record<keyof any, any>
 
-export type EnumerableKey<T extends keyof any> = Extract<T, string | number>
+export type EnumerableKey<T extends keyof any = keyof any> = Extract<T, string | number>
 
 /**
  * 遍历对象的可枚举属性。若回调函数返回 `false`，遍历会提前退出。
