@@ -191,6 +191,11 @@ export class Wechat {
     }
   }
 
+  /**
+   * 注入微信 `JSSDK` 的权限验证配置。
+   *
+   * @param params 配置参数
+   */
   config(params: WechatConfigParams) {
     if (typeof wx === 'undefined') {
       throw new Error('请先引入微信 JSSDK')
@@ -212,11 +217,22 @@ export class Wechat {
     })
   }
 
+  /**
+   * 判断当前客户端版本是否支持指定 JS 接口。
+   *
+   * @param jsApiList 需要检测的 JS 接口列表
+   * @returns 以键值对的形式返回，可用的 `api` 值 `true`，不可用为 `false`
+   */
   checkJsApi<T extends WechatJsApi>(jsApiList: T[]): Promise<Record<T, boolean>> {
     return this.invoke('checkJsApi', { jsApiList })
       .then(res => res.checkResult)
   }
 
+  /**
+   * 设置分享数据。
+   *
+   * @param params 分享数据
+   */
   updateShareData(params: WechatUpdateShareDataParams): Promise<any> {
     params = {
       ...this.prevShareParams,
@@ -230,11 +246,22 @@ export class Wechat {
     )
   }
 
+  /**
+   * 选择图片。
+   *
+   * @param [params] 参数
+   * @returns 选定照片的本地 ID 列表
+   */
   chooseImage(params?: WechatChooseImageParams): Promise<string[]> {
     return this.invoke('chooseImage', params)
       .then(res => res.localIds)
   }
 
+  /**
+   * 预览图片。
+   *
+   * @param params 参数
+   */
   previewImage(params: WechatPreviewImageParams): Promise<any> {
     return this.invoke('previewImage', {
       urls: params.urls,
@@ -242,33 +269,67 @@ export class Wechat {
     })
   }
 
-  uploadImage(params: WechatUploadImageParams): Promise<string[]> {
+  /**
+   * 上传图片。
+   *
+   * **备注：** 上传图片有效期3天，
+   * 可用微信多媒体接口下载图片到自己的服务器，
+   * 此处获得的服务器端 ID 即 `media_id`。
+   *
+   * @param params 参数
+   * @returns 图片的服务器端 ID
+   */
+  uploadImage(params: WechatUploadImageParams): Promise<string> {
     return this.invoke('uploadImage', {
       localId: params.localId,
       isShowProgressTips: params.isShowProgressTips ? 1 : 0,
-    })
+    }).then(res => res.serverId)
   }
 
+  /**
+   * 关闭当前网页窗口。
+   */
   closeWindow(): Promise<any> {
     return this.invoke('closeWindow')
   }
 
+  /**
+   * 批量隐藏非基础菜单项。
+   *
+   * @param menuList 要隐藏的非基础菜单项列表
+   */
   hideNonBaseMenuItems(menuList: WechatNonBaseMenuItem[]): Promise<any> {
     return this.invoke('hideMenuItems', { menuList })
   }
 
+  /**
+   * 批量显示非基础菜单项。
+   *
+   * @param menuList 要显示的非基础菜单项列表
+   */
   showNonBaseMenuItems(menuList: WechatNonBaseMenuItem[]): Promise<any> {
     return this.invoke('showMenuItems', { menuList })
   }
 
+  /**
+   * 隐藏所有的非基础菜单项。
+   */
   hideAllNonBaseMenuItems(): Promise<any> {
     return this.invoke('hideAllNonBaseMenuItem')
   }
 
+  /**
+   * 显示所有的非基础菜单项。
+   */
   showAllNonBaseMenuItems(): Promise<any> {
     return this.invoke('showAllNonBaseMenuItem')
   }
 
+  /**
+   * 错误处理。
+   *
+   * @param callback 出错时的回调函数
+   */
   onError(callback: WechatErrorCallback) {
     this.bus.on('error', callback)
   }
