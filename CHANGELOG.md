@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/fjc0k/vtils/compare/v0.93.0...v1.0.0) (2019-05-06)
+
+
+### Features
+
+* 完善 Wechat 注释 ([815bdd2](https://github.com/fjc0k/vtils/commit/815bdd2))
+* 新增 Storage ([6db1404](https://github.com/fjc0k/vtils/commit/6db1404))
+* 移除 storage ([ef49132](https://github.com/fjc0k/vtils/commit/ef49132))
+
+
+
 <a name="0.93.0"></a>
 # [0.93.0](https://github.com/fjc0k/vtils/compare/v0.92.0...v0.93.0) (2019-04-25)
 
