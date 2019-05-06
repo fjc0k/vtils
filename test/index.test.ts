@@ -815,66 +815,61 @@ describe('isNumeric', () => {
   })
 })
 
-describe('storage', () => {
-  test('ok', () => {
-    expect(vtils.storage.get('hello')).toBeNull()
-    vtils.storage.set('hello', 'world')
-    expect(vtils.storage.get('hello')).toBe('world')
-    vtils.storage.set('hello', null)
-    expect(vtils.storage.get('hello')).toBeNull()
-    vtils.storage.set('hello', undefined)
-    expect(vtils.storage.get('hello')).toBeNull()
-    vtils.storage.set('hello', [1, 2, 3])
-    expect(vtils.storage.get('hello')).toEqual([1, 2, 3])
-    vtils.storage.set('hello', false)
-    expect(vtils.storage.get('hello')).toBe(false)
-    vtils.storage.set('hello', 0)
-    expect(vtils.storage.get('hello')).toBe(0)
-    vtils.storage.remove('hello')
-    expect(vtils.storage.get('hello')).toBeNull()
-    vtils.storage.set('hello', '@-3-54=-3💮=-=')
-    expect(vtils.storage.get('hello')).toBe('@-3-54=-3💮=-=')
-    vtils.storage.clear()
-    expect(vtils.storage.get('hello')).toBeNull()
+describe('Storage', () => {
+  type StorageValues = {
+    str: string,
+    num: number,
+    bool: boolean,
+    obj: object,
+    arr: any[],
+  }
+  type StorageKey = keyof StorageValues
+
+  const storage = new vtils.Storage<StorageValues>(vtils.getBrowserLocalStorageDriver)
+
+  const storageKeys: StorageKey[] = ['str', 'num', 'bool', 'obj', 'arr']
+
+  test('键值不存在时返回 null', async () => {
+    await Promise.all(
+      storageKeys.map(async key => {
+        expect(await storage.get(key)).toBeNull()
+        expect(storage.getSync(key)).toBeNull()
+      }),
+    )
   })
-  test('过期时间', done => {
-    expect(vtils.storage.get('time')).toBeNull()
-    vtils.storage.set('time', '123')
-    expect(vtils.storage.get('time')).toBe('123')
-    vtils.storage.set('time', '1234', new Date().getTime() + 1000)
-    expect(vtils.storage.get('time')).toBe('1234')
-    setTimeout(() => {
-      expect(vtils.storage.get('time')).toBe('1234')
-    }, 900)
-    setTimeout(() => {
-      expect(vtils.storage.get('time')).toBeNull()
-      done()
-    }, 1001)
+
+  test('键值不存在且设置了默认值时返回默认值', async () => {
+    await Promise.all(
+      storageKeys.map(async key => {
+        expect(await storage.get(key, 'dv')).toBe('dv')
+        expect(storage.getSync(key, 'dv')).toBe('dv')
+      }),
+    )
   })
-  test('get 可设置默认值', () => {
-    [
-      vtils.randomString(),
-      vtils.randomString(),
-      vtils.randomString(),
-      vtils.randomString(),
-      vtils.randomString(),
-    ].forEach(item => {
-      expect(vtils.storage.get(item)).toBeNull()
-      expect(vtils.storage.get(item, item)).toBe(item)
-    })
-  })
-  test('值支持函数返回值', () => {
-    vtils.storage.set('===', () => 120)
-    expect(vtils.storage.get('===')).toBe(120)
-    expect(vtils.storage.get('====', () => 110)).toBe(110)
-  })
-  test('remember', () => {
-    expect(vtils.storage.getRemember('jjj', () => 1)).toBe(1)
-    expect(vtils.storage.get('jjj')).toBe(1)
-  })
-  test('获取非预期的值返回原始值', () => {
-    window.localStorage.setItem('unexpected', 'undefined')
-    expect(vtils.storage.get('unexpected')).toBe('undefined')
+
+  test('键值存在时正确返回其值', async () => {
+    const storageValues: StorageValues = {
+      str: 'str',
+      num: 100,
+      bool: true,
+      obj: { x: 1, y: '3' },
+      arr: [3, { 2: 4 }, false, 'hello'],
+    }
+    await Promise.all(
+      storageKeys.map(async (key, index) => {
+        if (index % 2) {
+          await storage.set({ [key]: storageValues[key] })
+        } else {
+          storage.setSync({ [key]: storageValues[key] })
+        }
+      }),
+    )
+    await Promise.all(
+      storageKeys.map(async key => {
+        expect(await storage.get(key)).toEqual(storageValues[key])
+        expect(storage.getSync(key)).toEqual(storageValues[key])
+      }),
+    )
   })
 })
 
