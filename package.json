@@ -1,7 +1,7 @@
 {
   "name": "vtils",
   "version": "1.0.0",
-  "description": "一些常用的 JavaScript 工具库。",
+  "description": "一些常用的 JavaScript 工具函数。",
   "main": "lib/vtils.cjs.js",
   "module": "lib/vtils.es.js",
   "unpkg": "lib/vtils.min.js",
@@ -29,11 +29,12 @@
     "url": "https://github.com/fjc0k"
   },
   "scripts": {
+    "docs": "typedoc --ignoreCompilerErrors --out docs --theme minimal --mode file src/index.ts && gh-pages -d docs",
     "lint": "eslint --fix --ext .ts src/",
     "testOnly": "jest",
     "test": "jest --coverage",
     "build": "bili",
-    "release": "standard-version -a && git push --follow-tags origin master && yarn build && npm publish"
+    "release": "standard-version -a && git push --follow-tags origin master && yarn build && yarn docs && npm publish"
   },
   "eslintConfig": {
     "root": true,
@@ -63,6 +64,7 @@
     "codecov": "^3.1.0",
     "eslint": "^5.9.0",
     "eslint-config-io": "^0.5.0",
+    "gh-pages": "^2.0.1",
     "jest": "^23.6.0",
     "moment": "^2.22.2",
     "rollup-plugin-typescript2": "^0.18.0",
@@ -71,6 +73,7 @@
     "ts-jest": "^23.10.4",
     "ts-node": "^8.0.2",
     "typed-we-app": "^1.7.0-update.6",
+    "typedoc": "^0.14.2",
     "typescript": "^3.3.3333"
   },
   "dependencies": {
