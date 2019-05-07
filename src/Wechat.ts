@@ -4,6 +4,9 @@ import { promiseSeries } from './promiseSeries'
 
 declare const wx: any
 
+/**
+ * 微信 JSSDK 支持的 API。
+ */
 export type WechatJsApi = (
   'checkJsApi' |
   'updateAppMessageShareData' |
@@ -185,6 +188,11 @@ export class Wechat {
 
   private prevShareParams: WechatUpdateShareDataParams = {}
 
+  /**
+   * 构造函数。
+   *
+   * @param [params] 注入微信 `JSSDK` 的权限验证配置参数
+   */
   constructor(params?: WechatConfigParams) {
     if (params) {
       this.config(params)
