@@ -150,6 +150,9 @@ export interface WechatUploadImageParams {
   isShowProgressTips?: boolean,
 }
 
+/**
+ * 微信内网页的非基础菜单列表。
+ */
 export type WechatNonBaseMenuItem = (
   'menuItem:share:appMessage' |
   'menuItem:share:timeline' |
@@ -169,6 +172,9 @@ export type WechatNonBaseMenuItem = (
   'menuItem:share:brand'
 )
 
+/**
+ * 微信 JSSDK 支持的分享 API 列表。
+ */
 const shareJsApiList: WechatJsApi[] = [
   'updateAppMessageShareData',
   'updateTimelineShareData',
@@ -178,20 +184,38 @@ const shareJsApiList: WechatJsApi[] = [
   'onMenuShareQZone',
 ]
 
+/**
+ * 对微信 JSSDK 的封装。
+ */
 export class Wechat {
+  /**
+   * 微信 JSSDK 是否已准备完成。
+   */
   private ready: boolean = false
 
+  /**
+   * 消息巴士。
+   */
   private bus = new EventBus<{
+    /**
+     * 微信 JSSDK 准备完成时触发。
+     */
     ready: () => void,
+    /**
+     * 调用微信 JSSDK 出错时时触发。
+     */
     error: WechatErrorCallback,
   }>()
 
+  /**
+   * 上一次设置分享时的参数。
+   */
   private prevShareParams: WechatUpdateShareDataParams = {}
 
   /**
    * 构造函数。
    *
-   * @param [params] 注入微信 `JSSDK` 的权限验证配置参数
+   * @param params 注入微信 `JSSDK` 的权限验证配置参数
    */
   constructor(params?: WechatConfigParams) {
     if (params) {
@@ -257,7 +281,7 @@ export class Wechat {
   /**
    * 选择图片。
    *
-   * @param [params] 参数
+   * @param params 参数
    * @returns 选定照片的本地 ID 列表
    */
   chooseImage(params?: WechatChooseImageParams): Promise<string[]> {
@@ -342,6 +366,13 @@ export class Wechat {
     this.bus.on('error', callback)
   }
 
+  /**
+   * 调用 JSSDK 的 API 方法。
+   *
+   * @param jsApi 要调用的 API 名称
+   * @param params 传给 API 的参数
+   * @returns 调用结果
+   */
   private invoke(jsApi: WechatJsApi, params: Record<string, any> = {}): Promise<any> {
     return new Promise((resolve, reject) => {
       if (typeof wx === 'undefined') return reject('请先引入微信 JSSDK')
