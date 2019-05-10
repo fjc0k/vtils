@@ -1,5 +1,26 @@
+import * as http from 'http'
+import * as Taro from '@tarojs/taro-h5'
 import * as vtils from '../src'
 import moment from 'moment'
+
+(function patchWX() {
+  const rawTaroGetStorage = Taro.getStorage
+
+  // @ts-ignore
+  Taro.getStorage = (...args: any[]) => rawTaroGetStorage(...args).catch(() => {})
+
+  // @ts-ignore
+  Taro.clearStorage = (options: { success: vtils.AnyFunction }) => {
+    localStorage.clear()
+    options.success && options.success()
+  }
+
+  ;(global as any).wx = Taro
+})()
+
+function typedExpectEqual<T>(from: T, to: T) {
+  return expect(from).toEqual(to)
+}
 
 const now = new Date()
 
@@ -778,51 +799,82 @@ describe('Storage', () => {
   }
   type StorageKey = keyof StorageValues
 
-  const storage = new vtils.Storage<StorageValues>(vtils.getBrowserLocalStorageDriver)
-
   const storageKeys: StorageKey[] = ['str', 'num', 'bool', 'obj', 'arr']
 
-  test('键值不存在时返回 null', async () => {
-    await Promise.all(
-      storageKeys.map(async key => {
-        expect(await storage.get(key)).toBeNull()
-        expect(storage.getSync(key)).toBeNull()
-      }),
-    )
-  })
+  const storages = [
+    new vtils.Storage<StorageValues>(vtils.browserLocalStorageDriver),
+    new vtils.Storage<StorageValues>(vtils.browserSessionStorageDriver),
+    new vtils.Storage<StorageValues>(vtils.memoryStorageDriver),
+    new vtils.Storage<StorageValues>(vtils.weappStorageDriver),
+  ]
 
-  test('键值不存在且设置了默认值时返回默认值', async () => {
-    await Promise.all(
-      storageKeys.map(async key => {
-        expect(await storage.get(key, 'dv')).toBe('dv')
-        expect(storage.getSync(key, 'dv')).toBe('dv')
-      }),
-    )
-  })
+  storages.forEach(storage => {
+    test('键值不存在时返回 null', async () => {
+      await Promise.all(
+        storageKeys.map(async key => {
+          expect(await storage.get(key)).toBeNull()
+          expect(storage.getSync(key)).toBeNull()
+        }),
+      )
+    })
 
-  test('键值存在时正确返回其值', async () => {
-    const storageValues: StorageValues = {
-      str: 'str',
-      num: 100,
-      bool: true,
-      obj: { x: 1, y: '3' },
-      arr: [3, { 2: 4 }, false, 'hello'],
-    }
-    await Promise.all(
-      storageKeys.map(async (key, index) => {
-        if (index % 2) {
-          await storage.set({ [key]: storageValues[key] })
-        } else {
-          storage.setSync({ [key]: storageValues[key] })
-        }
-      }),
-    )
-    await Promise.all(
-      storageKeys.map(async key => {
-        expect(await storage.get(key)).toEqual(storageValues[key])
-        expect(storage.getSync(key)).toEqual(storageValues[key])
-      }),
-    )
+    test('键值不存在且设置了默认值时返回默认值', async () => {
+      await Promise.all(
+        storageKeys.map(async key => {
+          expect(await storage.get(key, 'dv')).toBe('dv')
+          expect(storage.getSync(key, 'dv')).toBe('dv')
+        }),
+      )
+    })
+
+    test('键值存在时正确返回其值', async () => {
+      const storageValues: StorageValues = {
+        str: 'str',
+        num: 100,
+        bool: true,
+        obj: { x: 1, y: '3' },
+        arr: [3, { 2: 4 }, false, 'hello'],
+      }
+      await Promise.all(
+        storageKeys.map(async (key, index) => {
+          if (index % 2) {
+            await storage.set({ [key]: storageValues[key] })
+          } else {
+            storage.setSync({ [key]: storageValues[key] })
+          }
+        }),
+      )
+      await Promise.all(
+        storageKeys.map(async key => {
+          expect(await storage.get(key)).toEqual(storageValues[key])
+          expect(storage.getSync(key)).toEqual(storageValues[key])
+        }),
+      )
+    })
+
+    test('可删除存储的值', async () => {
+      await Promise.all(
+        storageKeys.map(async (key, index) => {
+          if (index % 2) {
+            await storage.remove(key)
+          } else {
+            storage.removeSync(key)
+          }
+          expect(await storage.get(key)).toBeNull()
+        }),
+      )
+    })
+
+    test('可清空存储的值', async () => {
+      await storage.set({ str: 'test' })
+      expect(await storage.get('str')).toBe('test')
+      await storage.clear()
+      expect(await storage.get('str')).toBeNull()
+      storage.setSync({ str: 'test' })
+      expect(storage.getSync('str')).toBe('test')
+      storage.clearSync()
+      expect(storage.getSync('str')).toBeNull()
+    })
   })
 })
 
@@ -1659,12 +1711,14 @@ describe('memoize', () => {
 
 describe('urlJoin', () => {
   test('ok', () => {
-    expect(
+    typedExpectEqual(
       vtils.urlJoin('http://foo.bar', 'hello', '/world', '?id=1', '?q=hi&from=china', '&name=fjc', '#home'),
-    ).toBe('http://foo.bar/hello/world?id=1&q=hi&from=china&name=fjc#home')
-    expect(
+      'http://foo.bar/hello/world?id=1&q=hi&from=china&name=fjc#home',
+    )
+    typedExpectEqual(
       vtils.urlJoin('http://www.google.com', 'a', '/b/cd', '?foo=123', '?bar=foo'),
-    ).toBe('http://www.google.com/a/b/cd?foo=123&bar=foo')
+      'http://www.google.com/a/b/cd?foo=123&bar=foo',
+    )
   })
 })
 
@@ -1690,5 +1744,57 @@ describe('isChinesePhoneNumber', () => {
     expect(vtils.isChinesePhoneNumber('01-87654321')).toBe(false)
     expect(vtils.isChinesePhoneNumber('010-987654321')).toBe(false)
     expect(vtils.isChinesePhoneNumber('010-654321')).toBe(false)
+  })
+})
+
+describe('request', () => {
+  type ServerResponse = {
+    method: string,
+    test: string,
+  }
+
+  const server = http
+    .createServer((request, response) => {
+      response.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      })
+      response.end(JSON.stringify({
+        method: request.method,
+        test: 'ok',
+      } as ServerResponse))
+    })
+    .listen(2345)
+
+  test('ok', async () => {
+    typedExpectEqual(
+      await vtils.request<ServerResponse>({
+        url: 'http://127.0.0.1:2345',
+      }),
+      {
+        status: 200,
+        data: {
+          method: 'GET',
+          test: 'ok',
+        },
+      },
+    )
+    const res = await vtils.request<string>({
+      url: 'http://127.0.0.1:2345',
+      responseBodyType: vtils.ResponseBodyType.text,
+    })
+    expect(typeof res.data === 'string').toBeTruthy()
+    res.data = JSON.parse(res.data)
+    typedExpectEqual(
+      res,
+      {
+        status: 200,
+        data: {
+          method: 'GET',
+          test: 'ok',
+        } as any,
+      },
+    )
+    server.close()
   })
 })

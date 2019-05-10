@@ -1,36 +1,28 @@
 import { inBrowser } from './inBrowser'
+import { isArray } from './isArray'
 import { isFunction } from './isFunction'
 import { isObject } from './isObject'
 import { reduce } from './reduce'
 
-export interface StorageDriver {
+export interface StorageDriverReturn {
   set(k: string, v: any): Promise<void>,
   setSync(k: string, v: any): void,
-  has(k: string): Promise<boolean>,
-  hasSync(k: string): boolean,
   get(k: string): Promise<any>,
   getSync(k: string): any,
   remove(k: string): Promise<void>,
   removeSync(k: string): void,
   clear(): Promise<void>,
   clearSync(): void,
-  count(): Promise<number>,
-  countSync(): number,
-  keys(): Promise<string[]>,
-  keysSync(): string[],
 }
 
-export type GetStorageDriver = () => StorageDriver
+export type StorageDriver = () => StorageDriverReturn
 
-const getNoopStorageDriver: GetStorageDriver = () => ([
+const noopStorageDriver: StorageDriver = () => ([
   ['set', undefined],
-  ['has', false],
   ['get', null],
   ['remove', undefined],
   ['clear', undefined],
-  ['count', 0],
-  ['keys', []],
-] as Array<[keyof StorageDriver, any]>).reduce<StorageDriver>(
+] as Array<[keyof StorageDriverReturn, any]>).reduce<StorageDriverReturn>(
   (res, [action, defaultValue]) => {
     res[action] = () => Promise.resolve(defaultValue)
     ;(res as any)[`${action}Sync`] = () => defaultValue
@@ -39,10 +31,10 @@ const getNoopStorageDriver: GetStorageDriver = () => ([
   {} as any,
 )
 
-const getBrowserStorageDriver = (type: 'local' | 'session'): StorageDriver => {
-  if (!inBrowser()) return getNoopStorageDriver()
+const browserStorageDriver = (type: 'local' | 'session'): StorageDriverReturn => {
+  if (!inBrowser()) return noopStorageDriver()
   const storage = type === 'local' ? localStorage : sessionStorage
-  const driver: StorageDriver = {
+  const driver: StorageDriverReturn = {
     set(k, v) {
       return Promise.resolve(driver.setSync(k, v))
     },
@@ -50,12 +42,6 @@ const getBrowserStorageDriver = (type: 'local' | 'session'): StorageDriver => {
       if (v != null) {
         storage.setItem(k, JSON.stringify(v))
       }
-    },
-    has(k) {
-      return Promise.resolve(driver.hasSync(k))
-    },
-    hasSync(k) {
-      return storage.getItem(k) != null
     },
     get(k) {
       return Promise.resolve(driver.getSync(k))
@@ -79,126 +65,84 @@ const getBrowserStorageDriver = (type: 'local' | 'session'): StorageDriver => {
     clearSync() {
       storage.clear()
     },
-    count() {
-      return Promise.resolve(driver.countSync())
-    },
-    countSync() {
-      return storage.length
-    },
-    keys() {
-      return Promise.resolve(driver.keysSync())
-    },
-    keysSync() {
-      const keys = []
-      for (let i = 0, len = storage.length; i < len; i++) {
-        keys.push(storage.key(i))
-      }
-      return keys
-    },
   }
   return driver
 }
 
-export const getBrowserLocalStorageDriver: GetStorageDriver = () => getBrowserStorageDriver('local')
+export const browserLocalStorageDriver: StorageDriver = () => browserStorageDriver('local')
 
-export const getBrowserSessionStorageDriver: GetStorageDriver = () => getBrowserStorageDriver('session')
+export const browserSessionStorageDriver: StorageDriver = () => browserStorageDriver('session')
 
-export const getWeappStorageDriver: GetStorageDriver = () => ({
-  set(k, v) {
-    return new Promise((resolve, reject) => {
-      wx.setStorage({
-        key: k,
-        data: v,
-        success: resolve,
-        fail: reject,
+export const weappStorageDriver: StorageDriver = () => {
+  const flag = '&#+^vtils^%_$'
+  return {
+    set(k, v) {
+      return new Promise((resolve, reject) => {
+        wx.setStorage({
+          key: k,
+          data: [flag, v],
+          success: resolve,
+          fail: reject,
+        })
       })
-    })
-  },
-  setSync(k, v) {
-    if (v != null) {
-      wx.setStorageSync(k, v)
-    }
-  },
-  has(k) {
-    return new Promise((resolve, reject) => {
-      wx.getStorage({
-        key: k,
-        success: res => {
-          resolve(res.data != null)
-        },
-        fail: reject,
+    },
+    setSync(k, v) {
+      if (v != null) {
+        wx.setStorageSync(k, [flag, v])
+      }
+    },
+    get(k) {
+      return new Promise(resolve => {
+        wx.getStorage({
+          key: k,
+          success: res => {
+            resolve(
+              isArray(res.data) && res.data[0] === flag
+                ? res.data[1]
+                : null,
+            )
+          },
+          fail: () => resolve(null),
+        })
       })
-    })
-  },
-  hasSync(k) {
-    return wx.getStorageSync(k) != null
-  },
-  get(k) {
-    return new Promise((resolve, reject) => {
-      wx.getStorage({
-        key: k,
-        success: res => {
-          resolve(res.data)
-        },
-        fail: reject,
+    },
+    getSync(k) {
+      try {
+        const v = wx.getStorageSync(k)
+        return isArray(v) && v[0] === flag
+          ? v[1]
+          : null
+      } catch (e) {
+        return null
+      }
+    },
+    remove(k) {
+      return new Promise((resolve, reject) => {
+        wx.removeStorage({
+          key: k,
+          success: resolve as any,
+          fail: reject,
+        })
       })
-    })
-  },
-  getSync(k) {
-    return wx.getStorageSync(k)
-  },
-  remove(k) {
-    return new Promise((resolve, reject) => {
-      wx.removeStorage({
-        key: k,
-        success: resolve as any,
-        fail: reject,
+    },
+    removeSync(k) {
+      wx.removeStorageSync(k)
+    },
+    clear() {
+      return new Promise((resolve, reject) => {
+        (wx.clearStorage as any)({
+          success: resolve as any,
+          fail: reject,
+        })
       })
-    })
-  },
-  removeSync(k) {
-    wx.removeStorageSync(k)
-  },
-  clear() {
-    return new Promise((resolve, reject) => {
-      (wx.clearStorage as any)({
-        success: resolve as any,
-        fail: reject,
-      })
-    })
-  },
-  clearSync() {
-    wx.clearStorageSync()
-  },
-  count() {
-    return new Promise((resolve, reject) => {
-      wx.getStorageInfo({
-        success: res => {
-          resolve(res.data.keys.length)
-        },
-        fail: reject,
-      })
-    })
-  },
-  countSync() {
-    return wx.getStorageInfoSync().keys.length
-  },
-  keys() {
-    return new Promise((resolve, reject) => {
-      wx.getStorageInfo({
-        success: res => {
-          resolve(res.data.keys)
-        },
-        fail: reject,
-      })
-    })
-  },
-  keysSync() {
-    return wx.getStorageInfoSync().keys
-  },
-})
+    },
+    clearSync() {
+      wx.clearStorageSync()
+    },
+  }
+}
 
-export const getMemoryStorageDriver: GetStorageDriver = () => {
+export const memoryStorageDriver: StorageDriver = () => {
   const storage = Object.create(null)
   return reduce(
     {
@@ -206,9 +150,6 @@ export const getMemoryStorageDriver: GetStorageDriver = () => {
         if (v != null) {
           storage[k] = v
         }
-      },
-      hasSync(k) {
-        return (k in storage)
       },
       getSync(k) {
         return (k in storage) ? storage[k] : null
@@ -221,13 +162,7 @@ export const getMemoryStorageDriver: GetStorageDriver = () => {
           delete storage[k]
         })
       },
-      countSync() {
-        return Object.keys(storage).length
-      },
-      keysSync() {
-        return Object.keys(storage)
-      },
-    } as Partial<StorageDriver>,
+    } as Partial<StorageDriverReturn>,
     (res, action, actionName) => {
       res[actionName] = action
       res[actionName.slice(0, -4)] = (...args: any[]) => Promise.resolve((action as any)(...args))
@@ -245,12 +180,12 @@ export class Storage<
   T extends Record<string, any> = Record<string, any>,
   K extends Extract<keyof T, string> = Extract<keyof T, string>,
 > {
-  private driver: StorageDriver
+  private driver: StorageDriverReturn
 
-  constructor(private driverGetterOrOptions: GetStorageDriver | StorageOptions) {
-    this.driver = (isObject(driverGetterOrOptions) && isObject((driverGetterOrOptions as StorageOptions).driver))
-      ? (driverGetterOrOptions as StorageOptions).driver
-      : (driverGetterOrOptions as GetStorageDriver)()
+  constructor(private driverOrOptions: StorageDriver | StorageOptions) {
+    this.driver = (isObject(driverOrOptions) && isObject((driverOrOptions as StorageOptions).driver))
+      ? (driverOrOptions as StorageOptions).driver()
+      : (driverOrOptions as StorageDriver)()
   }
 
   set(kv: Partial<Record<K, T[K]>>): Promise<any> {
@@ -293,5 +228,21 @@ export class Storage<
       value = isFunction(defaultValue) ? defaultValue() : defaultValue
     }
     return value
+  }
+
+  remove(key: K) {
+    return this.driver.remove(key)
+  }
+
+  removeSync(key: K) {
+    return this.driver.removeSync(key)
+  }
+
+  clear() {
+    return this.driver.clear()
+  }
+
+  clearSync() {
+    return this.driver.clearSync()
   }
 }
