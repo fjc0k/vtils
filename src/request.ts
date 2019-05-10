@@ -138,11 +138,6 @@ export function request<T = any>(options: RequestOptions) {
       })
     }
 
-    // 解析请求地址
-    const requestUrl = method === RequestMethod.GET
-      ? urlJoin(url, `?${objectToQueryString(normalData)}`)
-      : url
-
     // 设置 Content-Type
     if (method === RequestMethod.POST) {
       header['Content-Type'] = (
@@ -158,7 +153,7 @@ export function request<T = any>(options: RequestOptions) {
       if (method === RequestMethod.POST && !isEmpty(fileData)) {
         const fileName = Object.keys(fileData)[0]
         wx.uploadFile({
-          url: requestUrl,
+          url: url,
           header: header,
           name: fileName,
           filePath: fileData[fileName],
@@ -179,10 +174,10 @@ export function request<T = any>(options: RequestOptions) {
         })
       } else {
         wx.request({
-          url: requestUrl,
+          url: url,
           method: method,
           header: header,
-          data: method === RequestMethod.GET ? {} : normalData,
+          data: normalData,
           responseType: responseBodyType === ResponseBodyType.arraybuffer ? 'arraybuffer' : 'text',
           dataType: responseBodyType === ResponseBodyType.json ? 'json' : '',
           success: res => {
@@ -194,9 +189,12 @@ export function request<T = any>(options: RequestOptions) {
           fail: reject,
         })
       }
-    }
+    } else if (inBrowser()) {
+      // 解析请求地址
+      const requestUrl = method === RequestMethod.GET
+        ? urlJoin(url, `?${objectToQueryString(normalData)}`)
+        : url
 
-    if (inBrowser()) {
       // 解析请求主体
       let requestBody: string | FormData | null = null
       if (method === RequestMethod.POST) {
