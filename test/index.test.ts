@@ -936,20 +936,25 @@ describe('isUrl', () => {
     [
       'http://foo.bar',
       'http://foo.bar:80',
-      'http://foo.bar:8878878',
       'http://foo.bar/oop?ddd#cc',
       'https://foo.bar',
-      'ftp://foo.bar',
+      'http://39.137.107.98:22/hello',
     ].forEach(item => {
       expect(vtils.isUrl(item)).toBeTruthy()
     })
   })
   test('不是', () => {
     [
+      'http://127.0.0.1',
+      'http://foo.bar:8878878',
       'wx://foo.bar',
       'foo.bar',
       'http://',
       'https://',
+      'ftp://foo.bar',
+      'http://1111.0.1.22',
+      '大口大口http://foo.bar',
+      'http://foo.bar:80得到了',
     ].forEach(item => {
       expect(vtils.isUrl(item)).toBeFalsy()
     })
@@ -1450,8 +1455,8 @@ describe('chunk', () => {
 describe('groupBy', () => {
   test('ok', () => {
     expect(vtils.groupBy([6.1, 4.2, 6.3], Math.floor)).toEqual({ 4: [4.2], 6: [6.1, 6.3] })
-    expect(vtils.groupBy(['one', 'two', 'three'], 'length')).toEqual({ 3: ['one', 'two'], 5: ['three'] })
-    expect(vtils.groupBy([{ i: 1 }, { i: 2 }, { i: 2, x: 0 }], 'i')).toEqual({ 1: [{ i: 1 }], 2: [{ i: 2 }, { i: 2, x: 0 }] })
+    expect(vtils.groupBy(['one', 'two', 'three'], item => item.length)).toEqual({ 3: ['one', 'two'], 5: ['three'] })
+    expect(vtils.groupBy([{ i: 1 }, { i: 2 }, { i: 2, x: 0 }], item => item.i)).toEqual({ 1: [{ i: 1 }], 2: [{ i: 2 }, { i: 2, x: 0 }] })
   })
 })
 

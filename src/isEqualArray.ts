@@ -11,7 +11,7 @@ export function isEqualArray(...arrs: any[][]): boolean {
     }
 
     if (arrs[i] === arrs[0]) {
-      return true
+      continue
     }
 
     if (arrs[i].length !== arrs[0].length) {
