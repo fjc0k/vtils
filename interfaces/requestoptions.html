@@ -922,10 +922,10 @@ img { max-width: 100%; }
 					<a href="requestoptions.html#method" class="tsd-kind-icon">method</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="requestoptions.html#requestdatatype" class="tsd-kind-icon">request<wbr>Data<wbr>Type</a>
+					<a href="requestoptions.html#requestbodytype" class="tsd-kind-icon">request<wbr>Body<wbr>Type</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="requestoptions.html#responsedatatype" class="tsd-kind-icon">response<wbr>Data<wbr>Type</a>
+					<a href="requestoptions.html#responsebodytype" class="tsd-kind-icon">response<wbr>Body<wbr>Type</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a href="requestoptions.html#url" class="tsd-kind-icon">url</a>
@@ -957,8 +957,8 @@ img { max-width: 100%; }
 							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestoptions.html#data" class="tsd-kind-icon">data</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestoptions.html#header" class="tsd-kind-icon">header</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestoptions.html#method" class="tsd-kind-icon">method</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestoptions.html#requestdatatype" class="tsd-kind-icon">request<wbr>Data<wbr>Type</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestoptions.html#responsedatatype" class="tsd-kind-icon">response<wbr>Data<wbr>Type</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestoptions.html#requestbodytype" class="tsd-kind-icon">request<wbr>Body<wbr>Type</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestoptions.html#responsebodytype" class="tsd-kind-icon">response<wbr>Body<wbr>Type</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestoptions.html#url" class="tsd-kind-icon">url</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestoptions.html#withcredentials" class="tsd-kind-icon">with<wbr>Credentials</a></li>
 						</ul>
@@ -971,66 +971,50 @@ img { max-width: 100%; }
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 				<a name="data" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagOptional">Optional</span> data</h3>
-				<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/request.ts#L12">request.ts:12</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L91">request.ts:91</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-index-signature">
-							<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
-						</li>
-					</ul>
-				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 				<a name="header" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagOptional">Optional</span> header</h3>
-				<div class="tsd-signature tsd-kind-icon">header<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<div class="tsd-signature tsd-kind-icon">header<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#requestheaderfield" class="tsd-signature-type">RequestHeaderField</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/request.ts#L13">request.ts:13</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L89">request.ts:89</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-index-signature">
-							<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span></h5>
-						</li>
-					</ul>
-				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 				<a name="method" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagOptional">Optional</span> method</h3>
-				<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"GET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POST"</span></div>
+				<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <a href="../enums/requestmethod.html" class="tsd-signature-type">RequestMethod</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/request.ts#L14">request.ts:14</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L90">request.ts:90</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="requestdatatype" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> request<wbr>Data<wbr>Type</h3>
-				<div class="tsd-signature tsd-kind-icon">request<wbr>Data<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"json"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"querystring"</span></div>
+				<a name="requestbodytype" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> request<wbr>Body<wbr>Type</h3>
+				<div class="tsd-signature tsd-kind-icon">request<wbr>Body<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/requestbodytype.html" class="tsd-signature-type">RequestBodyType</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/request.ts#L15">request.ts:15</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L92">request.ts:92</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="responsedatatype" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> response<wbr>Data<wbr>Type</h3>
-				<div class="tsd-signature tsd-kind-icon">response<wbr>Data<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"json"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"text"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"arraybuffer"</span></div>
+				<a name="responsebodytype" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> response<wbr>Body<wbr>Type</h3>
+				<div class="tsd-signature tsd-kind-icon">response<wbr>Body<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/responsebodytype.html" class="tsd-signature-type">ResponseBodyType</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/request.ts#L16">request.ts:16</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L93">request.ts:93</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1040,7 +1024,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/request.ts#L11">request.ts:11</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L88">request.ts:88</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1050,7 +1034,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">with<wbr>Credentials<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/request.ts#L17">request.ts:17</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L94">request.ts:94</a></li>
 					</ul>
 				</aside>
 			</section>

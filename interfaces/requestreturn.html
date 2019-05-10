@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CSSValue | vtils</title>
+	<title>RequestReturn | vtils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -909,14 +909,14 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-interface tsd-is-external">
-			<a href="cssvalue.html" class="tsd-kind-icon">CSSValue</a>
+		<li class="current tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+			<a href="requestreturn.html" class="tsd-kind-icon">Request<wbr>Return</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="cssvalue.html#unit" class="tsd-kind-icon">unit</a>
+					<a href="requestreturn.html#data" class="tsd-kind-icon">data</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="cssvalue.html#value" class="tsd-kind-icon">value</a>
+					<a href="requestreturn.html#status" class="tsd-kind-icon">status</a>
 				</li>
 			</ul>
 		</li>
@@ -924,11 +924,19 @@ img { max-width: 100%; }
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-type-parameters">
+			<h3>Type parameters</h3>
+			<ul class="tsd-type-parameters">
+				<li>
+					<h4>T</h4>
+				</li>
+			</ul>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">CSSValue</span>
+					<span class="target">RequestReturn</span>
 				</li>
 			</ul>
 		</section>
@@ -939,8 +947,8 @@ img { max-width: 100%; }
 					<section class="tsd-index-section tsd-is-external">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cssvalue.html#unit" class="tsd-kind-icon">unit</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cssvalue.html#value" class="tsd-kind-icon">value</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestreturn.html#data" class="tsd-kind-icon">data</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="requestreturn.html#status" class="tsd-kind-icon">status</a></li>
 						</ul>
 					</section>
 				</div>
@@ -949,34 +957,24 @@ img { max-width: 100%; }
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="unit" class="tsd-anchor"></a>
-				<h3>unit</h3>
-				<div class="tsd-signature tsd-kind-icon">unit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="data" class="tsd-anchor"></a>
+				<h3>data</h3>
+				<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/parseCSSValue.ts#L5">parseCSSValue.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L98">request.ts:98</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>CSS 单位</p>
-					</div>
-				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="value" class="tsd-anchor"></a>
-				<h3>value</h3>
-				<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<a name="status" class="tsd-anchor"></a>
+				<h3>status</h3>
+				<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/parseCSSValue.ts#L3">parseCSSValue.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L99">request.ts:99</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>CSS 数值</p>
-					</div>
-				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">

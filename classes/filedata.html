@@ -916,10 +916,7 @@ img { max-width: 100%; }
 					<a href="filedata.html#constructor" class="tsd-kind-icon">constructor</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="filedata.html#get" class="tsd-kind-icon">get</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-					<a href="filedata.html#isfiledata" class="tsd-kind-icon">is<wbr>File<wbr>Data</a>
+					<a href="filedata.html#getfiledata" class="tsd-kind-icon">get<wbr>File<wbr>Data</a>
 				</li>
 			</ul>
 		</li>
@@ -956,8 +953,7 @@ img { max-width: 100%; }
 					<section class="tsd-index-section tsd-is-external">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="filedata.html#get" class="tsd-kind-icon">get</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="filedata.html#isfiledata" class="tsd-kind-icon">is<wbr>File<wbr>Data</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="filedata.html#getfiledata" class="tsd-kind-icon">get<wbr>File<wbr>Data</a></li>
 						</ul>
 					</section>
 				</div>
@@ -969,29 +965,19 @@ img { max-width: 100%; }
 				<a name="constructor" class="tsd-anchor"></a>
 				<h3>constructor</h3>
 				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">new <wbr>File<wbr>Data<span class="tsd-signature-symbol">(</span>content<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="filedata.html" class="tsd-signature-type">FileData</a></li>
+					<li class="tsd-signature tsd-kind-icon">new <wbr>File<wbr>Data<span class="tsd-signature-symbol">(</span>fileData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="filedata.html" class="tsd-signature-type">FileData</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/FileData.ts#L8">FileData.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L102">request.ts:102</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>创建一个文件数据。</p>
-							</div>
-						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>content: <span class="tsd-signature-type">T</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>文件内容，依平台而不同，如 web 上为 File 实例，微信小程序里是文件路径字符串</p>
-									</div>
-								</div>
+								<h5>fileData: <span class="tsd-signature-type">T</span></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="filedata.html" class="tsd-signature-type">FileData</a></h4>
@@ -1002,57 +988,19 @@ img { max-width: 100%; }
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
 			<h2>Methods</h2>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="get" class="tsd-anchor"></a>
-				<h3>get</h3>
+				<a name="getfiledata" class="tsd-anchor"></a>
+				<h3>get<wbr>File<wbr>Data</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					<li class="tsd-signature tsd-kind-icon">get<wbr>File<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/FileData.ts#L24">FileData.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6ed3346/src/request.ts#L105">request.ts:105</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>获取文件内容。</p>
-							</div>
-						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-						<p>文件内容</p>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-				<a name="isfiledata" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>File<wbr>Data</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">is<wbr>File<wbr>Data<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/b7cbc4b/src/FileData.ts#L34">FileData.ts:34</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>检查值是否是 FileData。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>value: <span class="tsd-signature-type">any</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>要检查的值</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						<p>是（true）或否（false）</p>
 					</li>
 				</ul>
 			</section>
