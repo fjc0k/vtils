@@ -1,6 +1,5 @@
 import * as vtils from '../src'
 import moment from 'moment'
-import sinon from 'sinon'
 
 const now = new Date()
 
@@ -13,46 +12,46 @@ describe('noop', () => {
 describe('bindEvent', () => {
   test(`'click'`, () => {
     const div = document.createElement('div')
-    const listener = sinon.fake()
+    const listener = jest.fn()
     vtils.bindEvent(div, 'click', listener)
-    expect(listener.called).toBeFalsy()
+    expect(listener).toBeCalledTimes(0)
     div.click()
-    expect(listener.callCount).toBe(1)
+    expect(listener).toBeCalledTimes(1)
     div.click()
-    expect(listener.callCount).toBe(2)
+    expect(listener).toBeCalledTimes(2)
   })
   test(`'click tap'`, () => {
     const div = document.createElement('div')
-    const listener = sinon.fake()
+    const listener = jest.fn()
     vtils.bindEvent(div, 'click tap', listener)
-    expect(listener.called).toBeFalsy()
+    expect(listener).toBeCalledTimes(0)
     div.click()
-    expect(listener.callCount).toBe(1)
+    expect(listener).toBeCalledTimes(1)
     div.dispatchEvent(new CustomEvent('tap'))
-    expect(listener.callCount).toBe(2)
+    expect(listener).toBeCalledTimes(2)
   })
   test(`['click', 'tap']`, () => {
     const div = document.createElement('div')
-    const listener = sinon.fake()
+    const listener = jest.fn()
     vtils.bindEvent(div, ['click', 'tap'], listener)
-    expect(listener.called).toBeFalsy()
+    expect(listener).toBeCalledTimes(0)
     div.click()
-    expect(listener.callCount).toBe(1)
+    expect(listener).toBeCalledTimes(1)
     div.dispatchEvent(new CustomEvent('tap'))
-    expect(listener.callCount).toBe(2)
+    expect(listener).toBeCalledTimes(2)
   })
   test(`解绑`, () => {
     const div = document.createElement('div')
-    const listener = sinon.fake()
+    const listener = jest.fn()
     const unbind = vtils.bindEvent(div, 'click', listener)
-    expect(listener.called).toBeFalsy()
+    expect(listener).toBeCalledTimes(0)
     div.click()
-    expect(listener.callCount).toBe(1)
+    expect(listener).toBeCalledTimes(1)
     div.click()
-    expect(listener.callCount).toBe(2)
+    expect(listener).toBeCalledTimes(2)
     unbind()
     div.click()
-    expect(listener.callCount).toBe(2)
+    expect(listener).toBeCalledTimes(2)
   })
 })
 
@@ -157,9 +156,9 @@ describe('base64', () => {
 
 describe('Disposer', () => {
   const disposer = new vtils.Disposer()
-  const helloDispose1 = sinon.fake()
-  const helloDispose2 = sinon.fake()
-  const helloDispose3 = sinon.fake()
+  const helloDispose1 = jest.fn()
+  const helloDispose2 = jest.fn()
+  const helloDispose3 = jest.fn()
   test('add', () => {
     disposer.add('hello', helloDispose1)
     expect((disposer as any).jar.hello).toEqual([helloDispose1])
@@ -168,34 +167,34 @@ describe('Disposer', () => {
   })
   test('dispose', () => {
     disposer.dispose('hello')
-    expect(helloDispose1.calledOnce).toBeTruthy()
-    expect(helloDispose2.calledOnce).toBeTruthy()
-    expect(helloDispose3.calledOnce).toBeTruthy()
+    expect(helloDispose1).toBeCalledTimes(1)
+    expect(helloDispose2).toBeCalledTimes(1)
+    expect(helloDispose3).toBeCalledTimes(1)
     expect((disposer as any).jar.hello).toBeUndefined()
   })
   test('disposeAll', () => {
-    const dispose1 = sinon.fake()
-    const dispose2 = sinon.fake()
-    const dispose3 = sinon.fake()
+    const dispose1 = jest.fn()
+    const dispose2 = jest.fn()
+    const dispose3 = jest.fn()
     disposer.add('1', dispose1)
     disposer.add('2', dispose2)
     disposer.add('3', dispose3)
     disposer.disposeAll()
-    expect(dispose1.calledOnce).toBeTruthy()
-    expect(dispose2.calledOnce).toBeTruthy()
-    expect(dispose3.calledOnce).toBeTruthy()
+    expect(helloDispose1).toBeCalledTimes(1)
+    expect(helloDispose2).toBeCalledTimes(1)
+    expect(helloDispose3).toBeCalledTimes(1)
     expect((disposer as any).jar).toEqual({})
   })
   test('匿名项目', () => {
-    const dispose1 = sinon.fake()
-    const dispose2 = sinon.fake()
-    const dispose3 = sinon.fake()
+    const dispose1 = jest.fn()
+    const dispose2 = jest.fn()
+    const dispose3 = jest.fn()
     disposer.add(dispose1)
     disposer.add([dispose2, dispose3])
     disposer.dispose()
-    expect(dispose1.calledOnce).toBeTruthy()
-    expect(dispose2.calledOnce).toBeTruthy()
-    expect(dispose3.calledOnce).toBeTruthy()
+    expect(helloDispose1).toBeCalledTimes(1)
+    expect(helloDispose2).toBeCalledTimes(1)
+    expect(helloDispose3).toBeCalledTimes(1)
     expect((disposer as any).jar).toEqual({})
   })
 })
@@ -205,9 +204,9 @@ describe('inBrowser', () => {
     expect(vtils.inBrowser()).toBeTruthy()
   })
   test('有回调', () => {
-    const callback = sinon.fake()
+    const callback = jest.fn()
     expect(vtils.inBrowser(callback)).toBeTruthy()
-    expect(callback.calledOnce).toBeTruthy()
+    expect(callback).toBeCalledTimes(1)
   })
 })
 
@@ -648,10 +647,10 @@ describe('mapValues', () => {
 
 describe('inWechatMiniProgram', () => {
   test('inWechatMiniProgram', () => {
-    const callback = sinon.fake()
+    const callback = jest.fn()
     expect(vtils.inWechatMiniProgram()).toBeFalsy()
     expect(vtils.inWechatMiniProgram(callback)).toBeFalsy()
-    expect(callback.notCalled).toBeTruthy()
+    expect(callback).toBeCalledTimes(0)
   })
 })
 
@@ -1174,9 +1173,9 @@ describe('sample', () => {
 describe('inNode', () => {
   test('ok', () => {
     expect(vtils.inNode()).toBeTruthy()
-    const cb = sinon.fake()
+    const cb = jest.fn()
     vtils.inNode(cb)
-    expect(cb.calledOnce).toBeTruthy()
+    expect(cb).toBeCalledTimes(1)
   })
 })
 
@@ -1633,5 +1632,63 @@ describe('memoize', () => {
     memoizedFn.cache.clear()
     expect(memoizedFn()).toBe('ok')
     expect(fn).toBeCalledTimes(3)
+  })
+
+  test('环境不支持 Map 时依然可用', () => {
+    (window as any).Map = null
+    const fn = jest.fn(() => 'ok')
+    const memoizedFn = vtils.memoize(fn)
+    expect(memoizedFn()).toBe('ok')
+    expect(fn).toBeCalledTimes(1)
+    expect(memoizedFn()).toBe('ok')
+    expect(fn).toBeCalledTimes(1)
+    memoizedFn.cache.set(memoizedFn.lastCacheKey, 'hello')
+    expect(memoizedFn()).toBe('hello')
+    expect(fn).toBeCalledTimes(1)
+    expect(memoizedFn.cache.get(memoizedFn.lastCacheKey)).toBe('hello')
+    memoizedFn.cache.delete(memoizedFn.lastCacheKey)
+    expect(memoizedFn()).toBe('ok')
+    expect(fn).toBeCalledTimes(2)
+    expect(memoizedFn()).toBe('ok')
+    expect(fn).toBeCalledTimes(2)
+    memoizedFn.cache.clear()
+    expect(memoizedFn()).toBe('ok')
+    expect(fn).toBeCalledTimes(3)
+  })
+})
+
+describe('urlJoin', () => {
+  test('ok', () => {
+    expect(
+      vtils.urlJoin('http://foo.bar', 'hello', '/world', '?id=1', '?q=hi&from=china', '&name=fjc', '#home'),
+    ).toBe('http://foo.bar/hello/world?id=1&q=hi&from=china&name=fjc#home')
+    expect(
+      vtils.urlJoin('http://www.google.com', 'a', '/b/cd', '?foo=123', '?bar=foo'),
+    ).toBe('http://www.google.com/a/b/cd?foo=123&bar=foo')
+  })
+})
+
+describe('isChinesePhoneNumber', () => {
+  test('ok', () => {
+    expect(vtils.isChinesePhoneNumber('110')).toBe(false)
+    expect(vtils.isChinesePhoneNumber('120')).toBe(false)
+    expect(vtils.isChinesePhoneNumber('10086')).toBe(false)
+    expect(vtils.isChinesePhoneNumber('180800300800')).toBe(false)
+    expect(vtils.isChinesePhoneNumber('16080030080')).toBe(true)
+    expect(vtils.isChinesePhoneNumber('16080030080', true)).toBe(false)
+    expect(vtils.isChineseMobilePhoneNumber('16080030080')).toBe(true)
+    expect(vtils.isChineseMobilePhoneNumber('16080030080', true)).toBe(false)
+    expect(vtils.isChinesePhoneNumber('12345678')).toBe(false)
+    expect(vtils.isChinesePhoneNumber('87654321')).toBe(true)
+    expect(vtils.isChinesePhoneNumber('87654321', true)).toBe(false)
+    expect(vtils.isChineseLandlinePhoneNumber('87654321')).toBe(true)
+    expect(vtils.isChineseLandlinePhoneNumber('87654321', true)).toBe(false)
+    expect(vtils.isChinesePhoneNumber('10-87654321')).toBe(false)
+    expect(vtils.isChinesePhoneNumber('010-87654321')).toBe(true)
+    expect(vtils.isChinesePhoneNumber('010-7654321')).toBe(true)
+    expect(vtils.isChineseMobilePhoneNumber('010-7654321')).toBe(false)
+    expect(vtils.isChinesePhoneNumber('01-87654321')).toBe(false)
+    expect(vtils.isChinesePhoneNumber('010-987654321')).toBe(false)
+    expect(vtils.isChinesePhoneNumber('010-654321')).toBe(false)
   })
 })
