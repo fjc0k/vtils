@@ -7,7 +7,7 @@ export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
  *
  * @param obj 来源对象
  * @param props 要剔除的可枚举属性
- * @returns 结果对象
+ * @returns 返回结果对象
  */
 export function omit<
   T extends AnyObject,

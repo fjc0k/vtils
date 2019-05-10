@@ -29,7 +29,8 @@
     "url": "https://github.com/fjc0k"
   },
   "scripts": {
-    "docs": "typedoc --ignoreCompilerErrors --excludeNotExported --excludePrivate --excludeProtected --out docs --theme minimal --mode file src/index.ts && gh-pages -d docs",
+    "docsOnly": "typedoc --ignoreCompilerErrors --excludeNotExported --excludePrivate --excludeProtected --out docs --theme minimal --mode file src/index.ts",
+    "docs": "yarn docsOnly && gh-pages -d docs",
     "lint": "eslint --fix --ext .ts src/",
     "testOnly": "jest",
     "test": "jest --coverage",
@@ -75,8 +76,5 @@
     "typed-we-app": "^1.7.0-update.6",
     "typedoc": "^0.14.2",
     "typescript": "^3.3.3333"
-  },
-  "dependencies": {
-    "is-chinese-phone-number": "^0.1.9"
   }
 }

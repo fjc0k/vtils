@@ -1,8 +1,8 @@
 /**
- * 检查 `value` 是否等于 `null`。
+ * 检查 `value` 是否是 `null`。
  *
  * @param value 要检查的值
- * @returns 是（true）或否（false）
+ * @returns `value` 是 `null` 返回 `true`，否则返回 `false`
  */
 export function isNull(value: any): value is null {
   return value === null

@@ -1,12 +1,21 @@
 import { inBrowser } from './inBrowser'
 import { onResize } from './onResize'
 
+export interface FlexibleOptions {
+  /**
+   * 获取浏览器视图宽度。
+   *
+   * @default () => document.documentElement.clientWidth
+   */
+  getViewWidth?: () => number,
+}
+
 /**
  * 移动端屏幕适配。
  *
- * @param [options] 选项
+ * @param options 选项
  */
-export function flexible(options: { getViewWidth?: () => number } = {}): void {
+export function flexible(options: FlexibleOptions = {}): void {
   inBrowser(() => {
     const docEl = document.documentElement
     const dpr = window.devicePixelRatio || 1

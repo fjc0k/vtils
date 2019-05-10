@@ -9,7 +9,8 @@ export type UnbindEventListener = () => void
  * @param target 事件目标
  * @param types 事件类型
  * @param listener 事件监听器
- * @param [options] 事件选项
+ * @param options 事件选项
+ * @returns 事件解绑函数
  */
 export function bindEvent(
   target: EventTarget,

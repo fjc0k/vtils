@@ -5,7 +5,7 @@ import { AnyObject, EnumerableKey, forOwn } from './forOwn'
  *
  * @param obj 要遍历的对象
  * @param callback 回调函数
- * @returns 映射后的新对象
+ * @returns 返回映射后的新对象
  */
 export function mapValues<
   T extends AnyObject,

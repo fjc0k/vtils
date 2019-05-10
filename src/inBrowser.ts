@@ -1,21 +1,21 @@
 import { isFunction } from './isFunction'
 
-let isInBrowser: boolean | undefined
-
 /**
  * 检查是否在浏览器环境中。
  *
- * @param [callback] 在浏览器环境中执行的回调
- * @returns 是（true）或否（false）
+ * @param callback 在浏览器环境中执行的回调
+ * @returns 在浏览器环境中返回 `true`，否则返回 `false`
  */
 export function inBrowser(callback?: () => void): boolean {
-  if (isInBrowser === undefined) {
-    isInBrowser = typeof window === 'object'
+  if (inBrowser.__FLAG__ === undefined) {
+    inBrowser.__FLAG__ = typeof window === 'object'
       && typeof document === 'object'
       && document.nodeType === 9
   }
-  if (isInBrowser && isFunction(callback)) {
+  if (inBrowser.__FLAG__ && isFunction(callback)) {
     callback()
   }
-  return isInBrowser
+  return inBrowser.__FLAG__ as boolean
 }
+
+inBrowser.__FLAG__ = undefined as boolean | void

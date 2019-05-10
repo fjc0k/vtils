@@ -2,8 +2,8 @@
  * 检查 `value` 是否等于 `undefined`。
  *
  * @param value 要检查的值
- * @returns 是（true）或否（false）
+ * @returns `value` 是 `undefined` 返回 `true`，否则返回 `false`
  */
 export function isUndefined(value: any): value is undefined {
-  return value === void 0
+  return value === undefined
 }

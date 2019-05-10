@@ -1,21 +1,23 @@
 import { AnyFunction } from './isFunction'
 
+export interface MemoizeCache {
+  /** 设置缓存 */
+  set(key: string, value: any): void,
+  /** 是否存在缓存 */
+  has(key: string): boolean,
+  /** 获取缓存 */
+  get(key: string): any,
+  /** 删除缓存 */
+  delete(key: string): void,
+  /** 清空缓存 */
+  clear(): void,
+}
+
 export interface MemoizeOptions<T extends AnyFunction = AnyFunction> {
   /**
    * 创建缓存容器。
    */
-  createCache?(): {
-    /** 设置缓存 */
-    set(key: string, value: any): void,
-    /** 是否存在缓存 */
-    has(key: string): boolean,
-    /** 获取缓存 */
-    get(key: string): any,
-    /** 删除缓存 */
-    delete(key: string): void,
-    /** 清空缓存 */
-    clear(): void,
-  },
+  createCache?(): MemoizeCache,
   /**
    * 序列化函数实参。
    */
@@ -30,48 +32,49 @@ export type MemoizeReturn<T extends AnyFunction = AnyFunction> = T & {
 }
 
 /**
- * 函数参数结果缓存。
+ * 函数结果缓存。
  *
  * @param fn 要缓存的函数
- * @param [options] 选项
- * @returns 缓存化后的函数
+ * @param options 选项
+ * @returns 返回缓存化后的函数
  */
 export function memoize<T extends AnyFunction>(
   fn: T,
-  {
-    createCache = () => {
-      if (typeof Map === 'function' && Map.prototype.hasOwnProperty('clear')) {
-        return new Map()
-      }
-      const cache = Object.create(null)
-      return {
-        set(k, v) {
-          cache[k] = v
-        },
-        has(k) {
-          return (k in cache)
-        },
-        get(k) {
-          return cache[k]
-        },
-        delete(k) {
-          delete cache[k]
-        },
-        clear() {
-          Object.keys(cache).forEach(k => {
-            delete cache[k]
-          })
-        },
-      }
-    },
-    serializer = (...args) => {
-      return args.join(')`(')
-    },
-  }: MemoizeOptions<T> = {},
+  options: MemoizeOptions<T> = {},
 ): MemoizeReturn<T> {
-  const cache = createCache()
+  const cache = (
+    options.createCache
+      || (() => {
+        if (typeof Map === 'function' && Map.prototype.hasOwnProperty('clear')) {
+          return new Map()
+        }
+        const cache = Object.create(null)
+        return {
+          set(k, v) {
+            cache[k] = v
+          },
+          has(k) {
+            return (k in cache)
+          },
+          get(k) {
+            return cache[k]
+          },
+          delete(k) {
+            delete cache[k]
+          },
+          clear() {
+            Object.keys(cache).forEach(k => {
+              delete cache[k]
+            })
+          },
+        }
+      })
+  )()
   const memoizedFn: any = (...args: Parameters<T>) => {
-    const cacheKey = serializer(...args)
+    const cacheKey = (
+      options.serializer
+      || ((...args) => args.join(')`('))
+    )(...args)
     memoizedFn.lastCacheKey = cacheKey
     if (!cache.has(cacheKey)) {
       cache.set(cacheKey, fn(...args))

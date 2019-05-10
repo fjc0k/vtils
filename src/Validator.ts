@@ -1,8 +1,8 @@
 import { castArray } from './castArray'
 import { isArray } from './isArray'
 import { isChineseIDCardNumber } from './isChineseIDCardNumber'
+import { isChineseLandlinePhoneNumber, isChineseMobilePhoneNumber, isChinesePhoneNumber } from './isChinesePhoneNumber'
 import { isChineseName } from './isChineseName'
-import { isChinesePhoneNumber } from './isChinesePhoneNumber'
 import { isEmail } from './isEmail'
 import { isFunction } from './isFunction'
 import { isInteger } from './isInteger'
@@ -48,8 +48,8 @@ const typeValidators: { [key in ValidatorRuleType]: (value: any) => boolean } = 
   number: isNumeric,
   integer: value => isNumeric(value) && isInteger(+value),
   phone: isChinesePhoneNumber,
-  mobile: isChinesePhoneNumber.mobile,
-  landline: isChinesePhoneNumber.landline,
+  mobile: isChineseMobilePhoneNumber,
+  landline: isChineseLandlinePhoneNumber,
   id: isChineseIDCardNumber,
   url: isUrl,
   email: isEmail,

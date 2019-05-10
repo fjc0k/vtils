@@ -4,12 +4,12 @@ import { AnyFunction } from './isFunction'
 export type EventBusUnsubscribe = () => void
 
 /**
- * 事件总线，管理事件的发布与订阅。
+ * 事件巴士，管理事件的发布与订阅。
  *
  * @template T 事件名称及其对应的监听器描述
  */
 export class EventBus<
-  T extends Record<string | number, AnyFunction> = Record<string | number, AnyFunction>,
+  T extends Record<string, AnyFunction> = Record<string, AnyFunction>,
   K extends keyof T = keyof T,
 > {
   /**
@@ -56,7 +56,7 @@ export class EventBus<
    * 取消订阅事件，若没有指定监听器，则取消所有监听器。
    *
    * @param eventName 事件名称
-   * @param [listener] 监听器
+   * @param listener 监听器
    */
   public off<X extends K>(eventName: X, listener?: T[X]): void {
     if (listener) {

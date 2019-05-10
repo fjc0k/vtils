@@ -17,7 +17,7 @@ const isValidDate = (year: number, month: number, day: number): boolean => {
  * 检测 `value` 是否是中国大陆身份证号码。
  *
  * @param value 要检测的值
- * @returns 是（true）或否（false）
+ * @returns `value` 是中国大陆身份证号码返回 `true`，否则返回 `false`
  * @see https://my.oschina.net/labrusca/blog/306116
  * @see http://developer.51cto.com/art/201803/568755.htm
  */
@@ -41,17 +41,29 @@ export function isChineseIDCardNumber(value: string): boolean {
 
   // 15 位
   if (len === 15) {
-    return isValidDate(+`19${value.substr(6, 2)}`, +value.substr(8, 2), +value.substr(10, 2))
+    return isValidDate(
+      +`19${value.substr(6, 2)}`,
+      +value.substr(8, 2),
+      +value.substr(10, 2),
+    )
   }
 
   // 18 位
-  if (!isValidDate(+value.substr(6, 4), +value.substr(10, 2), +value.substr(12, 2))) {
+  if (!isValidDate(
+    +value.substr(6, 4),
+    +value.substr(10, 2),
+    +value.substr(12, 2),
+  )) {
     return false
   }
 
   // 校验码
-  const sum = value.split('').slice(0, 17).reduce((s, num, index) => {
-    return (s += +num * weightMap[index])
-  }, 0)
+  const sum = value.split('').slice(0, 17).reduce(
+    (s, num, index) => {
+      s += +num * weightMap[index]
+      return s
+    },
+    0,
+  )
   return codeMap[sum % 11] === value[17].toUpperCase()
 }

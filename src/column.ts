@@ -3,7 +3,7 @@
  *
  * @param arr 要操作的对象数组
  * @param columnKey 列的键值
- * @param [indexKey] 作为返回对象的键的列，若不设置，则返回数组
+ * @param indexKey 作为返回对象的键的列，若不设置，则返回数组
  * @returns 列对象或数组
  */
 export function column<

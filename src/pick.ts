@@ -5,7 +5,7 @@ import { AnyObject, EnumerableKey, forOwn } from './forOwn'
  *
  * @param obj 来源对象
  * @param props 选中的可枚举属性
- * @returns 结果对象
+ * @returns 返回结果对象
  */
 export function pick<
   T extends AnyObject,

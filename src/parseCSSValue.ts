@@ -6,11 +6,11 @@ export interface CSSValue {
 }
 
 /**
- * 解析 CSS 值的数值和单位。
+ * 解析 `CSS` 值的数值和单位。
  *
  * @param value 要解析的值
- * @param [defaultUnit='px'] 默认单位
- * @returns 解析结果
+ * @param defaultUnit 默认单位
+ * @returns 返回解析结果
  */
 export function parseCSSValue(
   value: string | number,

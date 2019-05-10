@@ -12,8 +12,6 @@ const anonymousKey: string = `__anonymous_${randomString()}__`
 export class Disposer<N extends string | number = string | number> {
   /**
    * 待处置项目存放容器。
-   *
-   * @private
    */
   private jar: { [name in N]: Dispose[] } = Object.create(null)
 
@@ -45,7 +43,7 @@ export class Disposer<N extends string | number = string | number> {
   /**
    * 处置项目。
    *
-   * @param [name] 欲处置项目名称，不设置表示匿名项目
+   * @param name 欲处置项目名称，不设置表示匿名项目
    */
   public dispose(name?: N): void {
     name = name != null ? name : anonymousKey as any

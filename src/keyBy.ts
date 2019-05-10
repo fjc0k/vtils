@@ -3,7 +3,7 @@
  *
  * @param arr 要分组的数据
  * @param iteratee 生成 `key` 的迭代函数
- * @returns 分组结果
+ * @returns 返回分组结果
  */
 export function keyBy<T extends any, K extends keyof any>(
   arr: T[],

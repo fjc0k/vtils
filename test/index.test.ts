@@ -467,12 +467,6 @@ describe('forOwn', () => {
   })
 })
 
-describe('supportPassiveEventListener', () => {
-  test('不支持', () => {
-    expect(vtils.supportPassiveEventListener()).toBeFalsy()
-  })
-})
-
 describe('parseCSSValue', () => {
   test('数字', () => {
     expect(vtils.parseCSSValue(12)).toEqual({
@@ -542,20 +536,6 @@ describe('isEqualArray', () => {
   })
 })
 
-describe('transformElement', () => {
-  const el = document.createElement('div')
-  document.body.appendChild(el)
-  test('cssTransform', () => {
-    vtils.transformElement(el, 'translateX(100px)', '.3s ease')
-    expect(el.style.transform).toBe('translateX(100px)')
-    expect(el.style.transition).toBe('transform .3s ease')
-  })
-  test('stopCssTransform', () => {
-    vtils.transformElement(el, 'stop')
-    expect(el.style.transition).toBe('none')
-  })
-})
-
 describe('shuffle', () => {
   test('非数组原样返回', () => {
     expect(vtils.shuffle(1 as any)).toEqual(1)
@@ -576,32 +556,6 @@ describe('shuffle', () => {
     }
     const arr2 = [1, 2, 3, '&', null, /x/, () => {}]
     expect(vtils.shuffle(arr2).sort()).toEqual(arr2.sort())
-  })
-})
-
-describe('preventEventDefault', () => {
-  test('阻止成功', done => {
-    const div = document.createElement('div')
-    div.onclick = e => {
-      expect(e.defaultPrevented).toBeFalsy()
-      vtils.preventEventDefault(e)
-      expect(e.defaultPrevented).toBeTruthy()
-      done()
-    }
-    div.click()
-  })
-})
-
-describe('stopEventPropagation', () => {
-  test('阻止成功', done => {
-    const div = document.createElement('div')
-    div.onclick = e => {
-      expect(e.cancelBubble).toBeFalsy()
-      vtils.stopEventPropagation(e)
-      expect(e.cancelBubble).toBeTruthy()
-      done()
-    }
-    div.click()
   })
 })
 
@@ -884,24 +838,6 @@ describe('randomString', () => {
   })
 })
 
-describe('result', () => {
-  test('非函数返回原值', () => {
-    [null, undefined, 1, false, {}, [], /ddd/, new Date()].forEach(item => {
-      expect(vtils.result(item)).toBe(item)
-    })
-  })
-  test('函数返回函数执行结果', () => {
-    [() => {}, (): any[] => [], () => 1, () => Date].forEach(item => {
-      expect(vtils.result(item)).toEqual(item())
-    })
-  })
-  test('函数可传参', () => {
-    [(x: number): number => x, (x: number, y: number): number => x + y].forEach(item => {
-      expect(vtils.result(item, 1, 2)).toEqual(item(1, 2))
-    })
-  })
-})
-
 describe('toDate', () => {
   console.warn = vtils.noop
   test('不传值返回当前时间', () => {
@@ -923,14 +859,6 @@ describe('toDate', () => {
     ['1541049425978', 1541049425978, '1541049383', 1541049383].forEach(item => {
       expect(vtils.toDate(item).getTime()).toBe(moment(String(item).length === 10 ? +item * 1000 : +item).toDate().getTime())
     })
-  })
-})
-
-describe('toPath', () => {
-  test('ok', () => {
-    expect(vtils.toPath('ss.dee.3.dew.22')).toEqual(['ss', 'dee', '3', 'dew', '22'])
-    expect(vtils.toPath('ss.dee[3].dew.22[we]')).toEqual(['ss', 'dee', '3', 'dew', '22', 'we'])
-    expect(vtils.toPath('dee[3.2][hello.333]')).toEqual(['dee', '3.2', 'hello.333'])
   })
 })
 
@@ -1206,60 +1134,6 @@ describe('isEmpty', () => {
   })
 })
 
-describe('get', () => {
-  test('ok', () => {
-    const obj: any = {
-      x: 1,
-      y: [1, 2, { z: null }],
-      z: { we: 'hello' },
-      1.2: 1.2,
-    }
-    expect(vtils.get(obj, 'x')).toBe(1)
-    expect(vtils.get(obj, 'y[1]')).toBe(2)
-    expect(vtils.get(obj, 'y[2].z')).toBe(null)
-    expect(vtils.get(obj, 'z.we')).toBe('hello')
-    expect(vtils.get(obj, 'z.we[1]')).toBe('e')
-    expect(vtils.get(obj, 'z.we[1].xxx')).toBe(undefined)
-    expect(vtils.get(obj, 'yyy')).toBe(undefined)
-    expect(vtils.get(obj, 'yyy', 2013)).toBe(2013)
-    expect(vtils.get(obj, '[1.2]')).toBe(1.2)
-    expect(vtils.get(obj, '1.2')).toBe(undefined)
-    expect(vtils.get(obj, ['y', 1])).toBe(2)
-  })
-})
-
-describe('set', () => {
-  test('ok', () => {
-    const fn = (): void => {}
-    const obj: any = {
-      x: 1,
-      y: [1, 2, { z: null }],
-      z: { we: 'hello' },
-      1.2: 1.2,
-      fn,
-    }
-    vtils.set(obj, 'x', 2)
-    vtils.set(obj, 'y[1]', '88')
-    vtils.set(obj, 'y[2].z', [9])
-    vtils.set(obj, 'z.we', {})
-    vtils.set(obj, 'z.we[1]', null)
-    vtils.set(obj, 'z.we[1].xxx', undefined)
-    vtils.set(obj, 'yyy', '?')
-    vtils.set(obj, '[1.2]', [])
-    vtils.set(obj, '1.2', ' ')
-    vtils.set(obj, 'fn.hello', 'world')
-    expect(obj).toEqual({
-      x: 2,
-      y: [1, '88', { z: [9] }],
-      z: { we: { 1: { xxx: undefined } } },
-      yyy: '?',
-      1.2: [],
-      1: { 2: ' ' },
-      fn,
-    })
-  })
-})
-
 describe('range', () => {
   test('ok', () => {
     expect(vtils.range(2)).toEqual([0, 1])
@@ -1409,21 +1283,6 @@ describe('sleep', () => {
     await vtils.sleep(1000)
     const time2 = new Date().getTime()
     expect(time2 - time1 >= 1000).toBeTruthy()
-  })
-})
-
-describe('defaultValue', () => {
-  test('ok', () => {
-    expect(vtils.defaultValue(
-      () => ({
-        x: 1,
-        y: 2,
-      }),
-      {
-        x: 2,
-        y: null,
-      },
-    )).toEqual({ x: 2, y: 2 })
   })
 })
 
