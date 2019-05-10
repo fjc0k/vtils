@@ -29,7 +29,7 @@
     "url": "https://github.com/fjc0k"
   },
   "scripts": {
-    "docsOnly": "typedoc --ignoreCompilerErrors --excludeNotExported --excludePrivate --excludeProtected --out docs --theme minimal --mode file src/index.ts",
+    "docsOnly": "typedoc --ignoreCompilerErrors --excludeNotExported --excludePrivate --excludeProtected --exclude **/libs/**/* --out docs --theme minimal --mode file src/index.ts",
     "docs": "yarn docsOnly && gh-pages -d docs",
     "lint": "eslint --fix --ext .ts src/",
     "testOnly": "jest",
