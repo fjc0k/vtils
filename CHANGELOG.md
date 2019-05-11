@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/fjc0k/vtils/compare/v1.1.0...v1.2.0) (2019-05-11)
+
+
+### Features
+
+* **Disposer:** API 重构 ([453e6ae](https://github.com/fjc0k/vtils/commit/453e6ae))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/fjc0k/vtils/compare/v1.0.2...v1.1.0) (2019-05-10)
 
