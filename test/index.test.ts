@@ -177,46 +177,17 @@ describe('base64', () => {
 
 describe('Disposer', () => {
   const disposer = new vtils.Disposer()
-  const helloDispose1 = jest.fn()
-  const helloDispose2 = jest.fn()
-  const helloDispose3 = jest.fn()
-  test('add', () => {
-    disposer.add('hello', helloDispose1)
-    expect((disposer as any).jar.hello).toEqual([helloDispose1])
-    disposer.add('hello', [helloDispose2, helloDispose3])
-    expect((disposer as any).jar.hello).toEqual([helloDispose1, helloDispose2, helloDispose3])
-  })
-  test('dispose', () => {
-    disposer.dispose('hello')
-    expect(helloDispose1).toBeCalledTimes(1)
-    expect(helloDispose2).toBeCalledTimes(1)
-    expect(helloDispose3).toBeCalledTimes(1)
-    expect((disposer as any).jar.hello).toBeUndefined()
-  })
-  test('disposeAll', () => {
-    const dispose1 = jest.fn()
-    const dispose2 = jest.fn()
-    const dispose3 = jest.fn()
-    disposer.add('1', dispose1)
-    disposer.add('2', dispose2)
-    disposer.add('3', dispose3)
-    disposer.disposeAll()
-    expect(helloDispose1).toBeCalledTimes(1)
-    expect(helloDispose2).toBeCalledTimes(1)
-    expect(helloDispose3).toBeCalledTimes(1)
-    expect((disposer as any).jar).toEqual({})
-  })
-  test('匿名项目', () => {
+
+  test('ok', () => {
     const dispose1 = jest.fn()
     const dispose2 = jest.fn()
     const dispose3 = jest.fn()
     disposer.add(dispose1)
-    disposer.add([dispose2, dispose3])
+    disposer.add(dispose2, dispose3)
     disposer.dispose()
-    expect(helloDispose1).toBeCalledTimes(1)
-    expect(helloDispose2).toBeCalledTimes(1)
-    expect(helloDispose3).toBeCalledTimes(1)
-    expect((disposer as any).jar).toEqual({})
+    expect(dispose1).toBeCalledTimes(1)
+    expect(dispose2).toBeCalledTimes(1)
+    expect(dispose3).toBeCalledTimes(1)
   })
 })
 
