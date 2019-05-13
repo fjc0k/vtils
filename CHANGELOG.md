@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/fjc0k/vtils/compare/v1.2.0...v1.3.0) (2019-05-13)
+
+
+### Features
+
+* **Validator:** 重构 ([6af7801](https://github.com/fjc0k/vtils/commit/6af7801))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/fjc0k/vtils/compare/v1.1.0...v1.2.0) (2019-05-11)
 
