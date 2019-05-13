@@ -22,6 +22,10 @@ function typedExpectEqual<T>(from: T, to: T) {
   return expect(from).toEqual(to)
 }
 
+function typedExpectMatch<T>(from: T, to: Partial<T>) {
+  return expect(from).toMatchObject(to)
+}
+
 const now = new Date()
 
 describe('noop', () => {
@@ -1005,146 +1009,156 @@ describe('isEmail', () => {
 })
 
 describe('Validator', () => {
-  test('基本可用', async () => {
-    const v = new vtils.Validator({
-      phone: {
-        type: 'mobile',
-        message: 'err',
-      },
-    })
-    expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
-    expect(await v.validate({ phone: '10086' })).toMatchObject({
-      valid: false,
-      key: 'phone',
-      type: 'mobile',
-    })
-  })
-  test('多个验证条件1', async () => {
-    const v = new vtils.Validator({
-      phone: [
-        {
-          type: 'mobile',
-          message: 'err',
-        },
-        {
-          custom: ({ value }) => value === '18087030178',
-          message: '错啦',
-        },
-      ],
-    })
-    expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
-    expect(await v.validate({ phone: '18087030179' })).toMatchObject({
-      valid: false,
-      key: 'phone',
-      message: '错啦',
-    })
-  })
-  test('多个验证条件2', async () => {
-    const v = new vtils.Validator({ phone: { type: 'mobile', custom: ({ value }) => value === '18087030178', message: '错啦' } })
-    expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
-    expect(await v.validate({ phone: '18087030179' })).toMatchObject({
-      valid: false,
-      key: 'phone',
-      message: '错啦',
-    })
-  })
-  test('多个验证参数', async () => {
-    const v = new vtils.Validator({
-      phone: { type: 'mobile', message: 'err' },
-      age: { custom: ({ value }) => value > 18, message: '18禁' },
-    })
-    expect(await v.validate({ phone: '18087030178' })).toMatchObject({ valid: true })
-    expect(await v.validate({ age: 12 })).toMatchObject({
-      valid: false,
-      key: 'age',
-      message: '18禁',
-    })
-    expect(await v.validate({ phone: '18087030178', age: 16 })).toMatchObject({
-      valid: false,
-      key: 'age',
-      message: '18禁',
-    })
-    expect(await v.validate({ phone: '18087030178', age: 19 })).toMatchObject({ valid: true })
-  })
-  test('联合校验，如：两次密码一致', async () => {
-    const v = new vtils.Validator({
-      pass1: { required: true, message: '密码不能为空' },
-      pass2: [
-        { required: true, message: '重复密码不能为空' },
-        { custom: ({ value, data }) => value === data.pass1, message: '两次密码不一致' },
-      ],
-    })
-    expect(await v.validate({ pass1: 'hello', pass2: 'hell0' })).toMatchObject({
-      valid: false,
-      key: 'pass2',
-      message: '两次密码不一致',
-    })
-    expect(await v.validate({ pass1: 'hello', pass2: 'hello' })).toMatchObject({ valid: true })
-  })
-  test('多余的 data 无影响', async () => {
-    const v = new vtils.Validator({ phone: { type: 'mobile', message: 'err' } })
-    expect(await v.validate({ phone: '18087030178', name: 'Jack', x: 'f' } as any)).toMatchObject({ valid: true })
-  })
+  type Data = {
+    number?: string,
+    integer?: string,
+    chinesePhoneNumber?: string,
+    chineseMobilePhoneNumber?: string,
+    chineseLandlinePhoneNumber?: string,
+    chineseIdCardNumber?: string,
+    url?: string,
+    email?: string,
+    chineseName?: string,
+    customRegExp?: string,
+    customSyncFn?: string,
+    customAsyncFn?: string,
+    pass1?: string,
+    pass2?: string,
+  }
+
   test('综合测试', async () => {
-    const v = new vtils.Validator({
-      min: { min: 10, message: 'err' },
-      max: { max: 100, message: 'err' },
-      numRange: { type: 'number', min: 5, max: 10, message: 'err' },
-      len: { len: 4, message: 'err' },
-      re: { custom: /^\d+$/, message: 'err' },
-      int: { type: 'integer', message: 'err' },
-      required: { required: true, message: 'err' },
-      fn: { custom: ({ value }) => value > 20, message: 'err' },
-      async: { custom: () => new Promise(resolve => setTimeout(() => resolve(true), 500)), message: 'err' },
-    })
-    expect(await v.validate({ min: vtils.repeat(1, 9) })).toMatchObject({ valid: false })
-    expect(await v.validate({ min: vtils.repeat(1, 9) })).toMatchObject({ valid: false })
-    expect(await v.validate({ min: vtils.repeat(1, 10) })).toMatchObject({ valid: true })
-    expect(await v.validate({ min: vtils.repeat(1, 11) })).toMatchObject({ valid: true })
-
-    expect(await v.validate({ min: vtils.repeat(1, 9).split('') })).toMatchObject({ valid: false })
-    expect(await v.validate({ min: vtils.repeat(1, 10).split('') })).toMatchObject({ valid: true })
-    expect(await v.validate({ min: vtils.repeat(1, 11).split('') })).toMatchObject({ valid: true })
-
-    expect(await v.validate({ max: vtils.repeat(1, 99) })).toMatchObject({ valid: true })
-    expect(await v.validate({ max: vtils.repeat(1, 100) })).toMatchObject({ valid: true })
-    expect(await v.validate({ max: vtils.repeat(1, 101) })).toMatchObject({ valid: false })
-
-    expect(await v.validate({ max: vtils.repeat(1, 99).split('') })).toMatchObject({ valid: true })
-    expect(await v.validate({ max: vtils.repeat(1, 100).split('') })).toMatchObject({ valid: true })
-    expect(await v.validate({ max: vtils.repeat(1, 101).split('') })).toMatchObject({ valid: false })
-
-    expect(await v.validate({ numRange: 1 })).toMatchObject({ valid: false })
-    expect(await v.validate({ numRange: '1' })).toMatchObject({ valid: false })
-    expect(await v.validate({ numRange: 11 })).toMatchObject({ valid: false })
-    expect(await v.validate({ numRange: '11' })).toMatchObject({ valid: false })
-    await Promise.all(vtils.range(5, 11).map(async item => {
-      expect(await v.validate({ numRange: item })).toMatchObject({ valid: true })
-      expect(await v.validate({ numRange: String(item) })).toMatchObject({ valid: true })
-    }))
-
-    expect(await v.validate({ len: vtils.repeat(1, 4) })).toMatchObject({ valid: true })
-    expect(await v.validate({ len: vtils.repeat(1, 3) })).toMatchObject({ valid: false })
-
-    expect(await v.validate({ len: vtils.repeat(1, 4).split('') })).toMatchObject({ valid: true })
-    expect(await v.validate({ len: vtils.repeat(1, 3).split('') })).toMatchObject({ valid: false })
-
-    expect(await v.validate({ re: '123' })).toMatchObject({ valid: true })
-    expect(await v.validate({ re: '1233r' })).toMatchObject({ valid: false })
-
-    expect(await v.validate({ int: 12 })).toMatchObject({ valid: true })
-    expect(await v.validate({ int: '123' })).toMatchObject({ valid: true })
-    expect(await v.validate({ int: '123.5' })).toMatchObject({ valid: false })
-    expect(await v.validate({ int: 'hello' })).toMatchObject({ valid: false })
-
-    expect(await v.validate({ required: '' })).toMatchObject({ valid: false })
-    expect(await v.validate({ required: [] })).toMatchObject({ valid: false })
-    expect(await v.validate({ required: '-' })).toMatchObject({ valid: true })
-
-    expect(await v.validate({ fn: 1 })).toMatchObject({ valid: false })
-    expect(await v.validate({ fn: 21 })).toMatchObject({ valid: true })
-
-    expect(await v.validate({ async: ';;;;' })).toMatchObject({ valid: true })
+    const rules: vtils.ValidatorRules<Data> = [
+      {
+        key: 'number',
+        type: 'number',
+        message: '请输入数字',
+      },
+      {
+        key: 'integer',
+        type: 'integer',
+        message: '请输入正整数',
+      },
+      {
+        key: 'chinesePhoneNumber',
+        type: 'chinesePhoneNumber',
+        message: '请输入电话号码',
+      },
+      {
+        key: 'chineseMobilePhoneNumber',
+        type: 'chineseMobilePhoneNumber',
+        message: '请输入手机号码',
+      },
+      {
+        key: 'chineseLandlinePhoneNumber',
+        type: 'chineseLandlinePhoneNumber',
+        message: '请输入座机号码',
+      },
+      {
+        key: 'chineseIdCardNumber',
+        type: 'chineseIdCardNumber',
+        message: '请输入身份证号',
+      },
+      {
+        key: 'url',
+        type: 'url',
+        message: '请输入网址',
+      },
+      {
+        key: 'email',
+        type: 'email',
+        message: '请输入邮箱',
+      },
+      {
+        key: 'email',
+        test: /@163\.com$/,
+        message: '请输入网易邮箱',
+      },
+      {
+        key: 'chineseName',
+        type: 'chineseName',
+        message: '请输入姓名',
+      },
+      {
+        key: 'customRegExp',
+        test: /abc/,
+        message: '请输入包含abc的文字',
+      },
+      {
+        key: 'customSyncFn',
+        test: value => /abc/.test(value),
+        message: '请输入包含abc的文字',
+      },
+      {
+        key: 'customAsyncFn',
+        test: async value => {
+          await vtils.wait(500)
+          return /abc/.test(value)
+        },
+        message: '请输入包含abc的文字',
+      },
+      {
+        key: 'pass1',
+        required: true,
+        test: value => value.length > 6,
+        message: '请输入大于6位的密码',
+      },
+      {
+        key: 'pass2',
+        test: (value, data) => value === data.pass1,
+        message: '请输入和密码一相同的密码',
+      },
+    ]
+    const v = new vtils.Validator<Data>(rules)
+    typedExpectMatch(
+      await v.validate({
+        number: '122.3',
+        integer: '12',
+        chinesePhoneNumber: '18842611520',
+        chineseMobilePhoneNumber: '18842611520',
+        chineseLandlinePhoneNumber: '87654321',
+        chineseIdCardNumber: '130401200101011678',
+        chineseName: '方剑成',
+        url: 'http://github.com',
+        email: 'fjc@163.com',
+        customRegExp: 'abc2',
+        customSyncFn: '2abc',
+        customAsyncFn: '2abc2',
+        pass1: '1234567',
+        pass2: '1234567',
+      }),
+      {
+        valid: true,
+        unvalidRules: [],
+      },
+    )
+    typedExpectMatch(
+      await v.validate({
+        number: '122.3',
+        integer: '12.2', // 1
+        chinesePhoneNumber: '18842611520',
+        chineseMobilePhoneNumber: '18842611520',
+        chineseLandlinePhoneNumber: '18842611520', // 4
+        chineseIdCardNumber: '130401200101011678',
+        url: 'http://github.com',
+        email: 'fjc@163', // 7 8
+        chineseName: '方剑成',
+        customRegExp: 'abc2',
+        customSyncFn: '2abc',
+        customAsyncFn: '2abs2', // 12
+        pass1: '1234567',
+        pass2: '12345678', // 14
+      }),
+      {
+        valid: false,
+        unvalidRules: [
+          rules[1],
+          rules[4],
+          rules[7],
+          rules[12],
+          rules[14],
+        ],
+      },
+    )
   })
 })
 

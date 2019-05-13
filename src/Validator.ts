@@ -1,171 +1,179 @@
-import { castArray } from './castArray'
-import { isArray } from './isArray'
 import { isChineseIDCardNumber } from './isChineseIDCardNumber'
 import { isChineseLandlinePhoneNumber, isChineseMobilePhoneNumber, isChinesePhoneNumber } from './isChinesePhoneNumber'
 import { isChineseName } from './isChineseName'
 import { isEmail } from './isEmail'
 import { isFunction } from './isFunction'
 import { isInteger } from './isInteger'
-import { isNil } from './isNil'
-import { isNumber } from './isNumber'
 import { isNumeric } from './isNumeric'
 import { isPromise } from './isPromise'
 import { isRegExp } from './isRegExp'
 import { isUrl } from './isUrl'
+import { promiseSeries } from './promiseSeries'
 
-export type ValidatorRuleType = 'number'
-| 'integer'
-| 'phone'
-| 'mobile'
-| 'landline'
-| 'id'
-| 'url'
-| 'email'
-| 'name'
-export type ValidatorRuleCustom = (
-  <D extends { [key: string]: any }>(payload: {
-    key: keyof D,
-    value: any,
+export type ValidatorData = Record<keyof any, any>
+
+export interface ValidatorRuleTestFunction<D extends ValidatorData> {
+  /**
+   * 测试函数。
+   *
+   * @param value 要测试的值
+   * @param data 数据对象
+   * @returns 返回是否测试通过
+   */
+  (
+    value: D[keyof D],
     data: D,
-    rule: ValidatorRule,
-  }) => boolean | Promise<boolean>
-)
-export interface ValidatorRule {
-  type?: ValidatorRuleType,
+  ): boolean | Promise<boolean>,
+}
+
+export interface ValidatorRule<D extends ValidatorData> {
+  /** 要验证字段在数据对象中的键名 */
+  key: keyof D,
+  /** 验证类型 */
+  type?: (
+    'number' |
+    'integer' |
+    'chinesePhoneNumber' |
+    'chineseMobilePhoneNumber' |
+    'chineseLandlinePhoneNumber' |
+    'chineseIdCardNumber' |
+    'url' |
+    'email' |
+    'chineseName'
+  ),
+  /** 是否必填 */
   required?: boolean,
-  len?: number,
-  min?: number,
-  max?: number,
-  custom?: RegExp | ValidatorRuleCustom,
+  /** 自定义测试，支持正则、同步函数、异步函数 */
+  test?: (
+    RegExp |
+    ValidatorRuleTestFunction<D>
+  ),
+  /** 提示信息 */
   message: any,
 }
 
-export interface ValidatorRules {
-  [key: string]: ValidatorRule | ValidatorRule[],
+export type ValidatorRules<D extends ValidatorData> = Array<ValidatorRule<D>>
+
+export interface ValidatorValidateReturn<D extends ValidatorData> {
+  /** 是否验证通过 */
+  valid: boolean,
+  /** 未验证通过的规则组成的列表 */
+  unvalidRules: Array<ValidatorRule<D>>,
 }
 
-const typeValidators: { [key in ValidatorRuleType]: (value: any) => boolean } = {
-  number: isNumeric,
-  integer: value => isNumeric(value) && isInteger(+value),
-  phone: isChinesePhoneNumber,
-  mobile: isChineseMobilePhoneNumber,
-  landline: isChineseLandlinePhoneNumber,
-  id: isChineseIDCardNumber,
-  url: isUrl,
-  email: isEmail,
-  name: isChineseName,
-}
+/**
+ * 数据对象验证器。
+ *
+ * @template D 要验证的数据对象类型
+ */
+export class Validator<D extends ValidatorData> {
+  /**
+   * 构造函数。
+   *
+   * @param rules 规律列表
+   */
+  constructor(private rules: ValidatorRules<D>) {}
 
-function validate<D>(data: D, key: keyof D, rule: ValidatorRule): Promise<boolean> {
-  return new Promise(resolve => {
-    const value = data[key] as any
-    const { required, type, len, min, max, custom } = rule
+  private check(rule: ValidatorRule<D>, data: D) {
+    return new Promise<boolean>(resolve => {
+      const key = rule.key
+      const value = data[key]
 
-    // required
-    if (required && (isNil(value) || value === '' || (isArray(value) && !value.length))) {
-      return resolve(false)
-    }
-
-    // type
-    if (type && typeValidators[type] && !typeValidators[type](value)) {
-      return resolve(false)
-    }
-
-    // min, max
-    const shouldValidateMin = isNumber(min)
-    const shouldValidateMax = isNumber(max)
-    if (shouldValidateMin || shouldValidateMax) {
-      const realValue = (
-        (type === 'number' || type === 'integer') ? value
-          : isArray(value) ? value.length
-            : String(value).length
-      )
-      if ((shouldValidateMin && realValue < min) || (shouldValidateMax && realValue > max)) {
-        return resolve(false)
-      }
-    }
-
-    // len
-    if (isNumber(len)) {
-      const realValue = isArray(value) ? value.length : String(value).length
-      if (len !== realValue) {
-        return resolve(false)
-      }
-    }
-
-    // custom
-    if (custom) {
-      /* istanbul ignore else */
-      if (isRegExp(custom)) {
-        return resolve(custom.test(value))
-      } else if (isFunction(custom)) {
-        const result = custom({ key, value, data, rule })
-        if (isPromise(result)) {
-          result.then(resolve)
-        } else {
-          resolve(result)
+      /* istanbul ignore if  */
+      if (!(key in data)) {
+        if (rule.required) {
+          return resolve(false)
+        }
+      } else {
+        if (rule.required && (value == null || value === '')) {
+          return resolve(false)
+        }
+        if (rule.type) {
+          switch (rule.type) {
+            case 'number':
+              if (!isNumeric(value)) return resolve(false)
+              break
+            case 'integer':
+              if (!isNumeric(value) || !isInteger(Number(value))) return resolve(false)
+              break
+            case 'chinesePhoneNumber':
+              if (!isChinesePhoneNumber(value)) return resolve(false)
+              break
+            case 'chineseMobilePhoneNumber':
+              if (!isChineseMobilePhoneNumber(value)) return resolve(false)
+              break
+            case 'chineseLandlinePhoneNumber':
+              if (!isChineseLandlinePhoneNumber(value)) return resolve(false)
+              break
+            case 'chineseIdCardNumber':
+              if (!isChineseIDCardNumber(value)) return resolve(false)
+              break
+            case 'url':
+              if (!isUrl(value)) return resolve(false)
+              break
+            case 'email':
+              if (!isEmail(value)) return resolve(false)
+              break
+            case 'chineseName':
+              if (!isChineseName(value)) return resolve(false)
+              break
+            /* istanbul ignore next */
+            default:
+              break
+          }
+        }
+        if (rule.test) {
+          if (isRegExp(rule.test)) {
+            if (!rule.test.test(value)) {
+              return resolve(false)
+            }
+          } else if (isFunction(rule.test)) {
+            const result = rule.test(value, data)
+            if (isPromise(result)) {
+              return result.then(resolve)
+            }
+            return resolve(result)
+          }
         }
       }
-    }
 
-    return resolve(true)
-  })
-}
-
-export class Validator<R extends ValidatorRules> {
-  private rules: R = {} as any
-
-  /**
-   * 表单验证器。
-   *
-   * @param rules 验证规则
-   */
-  public constructor(rules: R) {
-    this.rules = rules
+      return resolve(true)
+    })
   }
 
   /**
-   * 验证数据
+   * 验证数据。
    *
    * @param data 要验证的数据
-   * @returns 验证结果
+   * @returns 返回验证结果
    */
-  public validate<D extends { [key in keyof R]: any }>(data: Partial<D>): Promise<
-    { valid: true } | (
-      ValidatorRule & {
-        valid: false,
-        key: keyof D,
-        value: D[keyof D],
-      }
-    )
-  > {
-    return new Promise(resolve => {
-      Promise.all(Object.keys(data).map(key => {
-        return new Promise((resolveItem, rejectItem) => {
-          const rules = this.rules[key]
-          if (!rules) {
-            return resolveItem()
-          }
-          return Promise.all(castArray(rules).map(rule => {
-            return new Promise((resolveRule, rejectRule) => {
-              validate(data, key, rule).then(valid => {
-                if (valid) {
-                  resolveRule()
-                } else {
-                  rejectRule({
-                    ...rule,
-                    key,
-                    value: data[key],
-                  })
-                }
-              })
+  validate(data: D) {
+    const unvalidKeys: Array<keyof D> = []
+    const unvalidRules: Array<ValidatorRule<D>> = []
+
+    return (
+      promiseSeries(
+        this.rules.map(
+          rule => () => {
+            return new Promise(resolve => {
+              if (unvalidKeys.indexOf(rule.key) === -1) {
+                this.check(rule, data).then(valid => {
+                  if (!valid) {
+                    unvalidKeys.push(rule.key)
+                    unvalidRules.push(rule)
+                  }
+                  resolve()
+                })
+              } else {
+                resolve()
+              }
             })
-          })).then(resolveItem, rejectItem)
-        })
-      })).then(
-        () => resolve({ valid: true }),
-        result => resolve({ ...result, valid: false }),
-      )
-    })
+          },
+        ),
+      ).then<ValidatorValidateReturn<D>>(() => ({
+        valid: unvalidRules.length === 0,
+        unvalidRules: unvalidRules.slice(),
+      }))
+    )
   }
 }
