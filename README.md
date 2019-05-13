@@ -4,6 +4,36 @@
 
 <h2 align="center">一些常用的 JavaScript 工具函数</h2>
 
-文档：
+<p align="center">
+  <a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/</a>
+</p>
 
-[https://fjc0k.github.io/vtils/](https://fjc0k.github.io/vtils/)
+## 安装
+
+```bash
+# yarn
+yarn add vtils
+
+# or, npm
+npm i vtils --save
+```
+
+## 使用
+
+```js
+import { inBrowser, isChinesePhoneNumber, shuffle } from 'vtils'
+
+if (inBrowser()) {
+  alert('您在浏览器中...')
+}
+
+alert(isChinesePhoneNumber('15974872222'))
+
+alert(shuffle([1, 2, 3, 4]))
+```
+
+## 许可
+
+MIT ©️ Jay Fong
+
+
