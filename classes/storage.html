@@ -925,6 +925,12 @@ img { max-width: 100%; }
 					<a href="storage.html#get" class="tsd-kind-icon">get</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<a href="storage.html#getremember" class="tsd-kind-icon">get<wbr>Remember</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<a href="storage.html#getremembersync" class="tsd-kind-icon">get<wbr>Remember<wbr>Sync</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
 					<a href="storage.html#getsync" class="tsd-kind-icon">get<wbr>Sync</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
@@ -980,6 +986,8 @@ img { max-width: 100%; }
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="storage.html#clear" class="tsd-kind-icon">clear</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="storage.html#clearsync" class="tsd-kind-icon">clear<wbr>Sync</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external"><a href="storage.html#get" class="tsd-kind-icon">get</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external"><a href="storage.html#getremember" class="tsd-kind-icon">get<wbr>Remember</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external"><a href="storage.html#getremembersync" class="tsd-kind-icon">get<wbr>Remember<wbr>Sync</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external"><a href="storage.html#getsync" class="tsd-kind-icon">get<wbr>Sync</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="storage.html#remove" class="tsd-kind-icon">remove</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="storage.html#removesync" class="tsd-kind-icon">remove<wbr>Sync</a></li>
@@ -1002,7 +1010,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6d519dd/src/Storage.ts#L183">Storage.ts:183</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L183">Storage.ts:183</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1028,7 +1036,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6d519dd/src/Storage.ts#L241">Storage.ts:241</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L264">Storage.ts:264</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1045,7 +1053,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6d519dd/src/Storage.ts#L245">Storage.ts:245</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L268">Storage.ts:268</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1062,7 +1070,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6d519dd/src/Storage.ts#L205">Storage.ts:205</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L205">Storage.ts:205</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1085,6 +1093,70 @@ img { max-width: 100%; }
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+				<a name="getremember" class="tsd-anchor"></a>
+				<h3>get<wbr>Remember</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Remember&lt;DV&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span>, defaultValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L233">Storage.ts:233</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>DV<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> defaultValue: <span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol"> =&nbsp;null</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+				<a name="getremembersync" class="tsd-anchor"></a>
+				<h3>get<wbr>Remember<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Remember<wbr>Sync&lt;DV&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span>, defaultValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L245">Storage.ts:245</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>DV<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> defaultValue: <span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol"> =&nbsp;null</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T[K]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
 				<a name="getsync" class="tsd-anchor"></a>
 				<h3>get<wbr>Sync</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
@@ -1094,7 +1166,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6d519dd/src/Storage.ts#L222">Storage.ts:222</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L222">Storage.ts:222</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1126,7 +1198,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6d519dd/src/Storage.ts#L233">Storage.ts:233</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L256">Storage.ts:256</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1149,7 +1221,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6d519dd/src/Storage.ts#L237">Storage.ts:237</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L260">Storage.ts:260</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1172,7 +1244,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6d519dd/src/Storage.ts#L191">Storage.ts:191</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L191">Storage.ts:191</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1195,7 +1267,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6d519dd/src/Storage.ts#L199">Storage.ts:199</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L199">Storage.ts:199</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
