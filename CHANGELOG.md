@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.6.1"></a>
+## [1.6.1](https://github.com/fjc0k/vtils/compare/v1.6.0...v1.6.1) (2019-05-22)
+
+
+### Bug Fixes
+
+* **Wechat:** autoLoadJSSDK 默认为 true ([4e89734](https://github.com/fjc0k/vtils/commit/4e89734))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/fjc0k/vtils/compare/v1.5.0...v1.6.0) (2019-05-22)
 
