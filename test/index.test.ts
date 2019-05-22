@@ -850,6 +850,13 @@ describe('Storage', () => {
       storage.clearSync()
       expect(storage.getSync('str')).toBeNull()
     })
+
+    test('可记住获取的值', async () => {
+      expect(await storage.get('str')).toBeNull()
+      expect(await storage.getRemember('str', () => 'hello')).toBe('hello')
+      expect(storage.getSync('str', () => 'hello2')).toBe('hello')
+      expect(await storage.get('str')).toBe('hello')
+    })
   })
 })
 

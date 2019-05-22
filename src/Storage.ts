@@ -230,6 +230,29 @@ export class Storage<
     return value
   }
 
+  getRemember<DV extends T[K] | (() => (T[K] | Promise<T[K]>))>( // eslint-disable-line
+    key: K,
+    defaultValue: DV = null,
+  ): Promise<T[K]> { // eslint-disable-line
+    return this.get(key, defaultValue).then(value => {
+      if (value != null) {
+        return this.set({ [key]: value }).then(() => value)
+      }
+      return value
+    })
+  }
+
+  getRememberSync<DV extends T[K] | (() => T[K])>( // eslint-disable-line
+    key: K,
+    defaultValue: DV = null,
+  ): T[K] { // eslint-disable-line
+    const value = this.getSync(key, defaultValue)
+    if (value != null) {
+      this.setSync({ [key]: value })
+    }
+    return value
+  }
+
   remove(key: K) {
     return this.driver.remove(key)
   }
