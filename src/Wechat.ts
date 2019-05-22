@@ -373,7 +373,7 @@ export class Wechat {
    * @param params 传给 API 的参数
    * @returns 调用结果
    */
-  private invoke(jsApi: WechatJsApi, params: Record<string, any> = {}): Promise<any> {
+  invoke(jsApi: WechatJsApi, params: Record<string, any> = {}): Promise<any> {
     return new Promise((resolve, reject) => {
       if (typeof wx === 'undefined') return reject('请先引入微信 JSSDK')
       if (!wx[jsApi]) return reject(`wx.${jsApi} 不可用`)
