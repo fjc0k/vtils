@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/fjc0k/vtils/compare/v1.4.0...v1.5.0) (2019-05-22)
+
+
+### Features
+
+* **Storage:** 新增 getRemember 方法 ([696e62b](https://github.com/fjc0k/vtils/commit/696e62b))
+* 新增 ii ([855e508](https://github.com/fjc0k/vtils/commit/855e508))
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/fjc0k/vtils/compare/v1.3.0...v1.4.0) (2019-05-22)
 
