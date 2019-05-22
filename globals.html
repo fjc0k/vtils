@@ -910,6 +910,9 @@ img { max-width: 100%; }
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-enum tsd-is-external">
+			<a href="enums/loadresourceurltype.html" class="tsd-kind-icon">Load<wbr>Resource<wbr>Url<wbr>Type</a>
+		</li>
+		<li class=" tsd-kind-enum tsd-is-external">
 			<a href="enums/requestbodytype.html" class="tsd-kind-icon">Request<wbr>Body<wbr>Type</a>
 		</li>
 		<li class=" tsd-kind-enum tsd-is-external">
@@ -944,6 +947,9 @@ img { max-width: 100%; }
 		</li>
 		<li class=" tsd-kind-interface tsd-is-external">
 			<a href="interfaces/formatcurrencyoptions.html" class="tsd-kind-icon">Format<wbr>Currency<wbr>Options</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-is-external">
+			<a href="interfaces/loadresourceurl.html" class="tsd-kind-icon">Load<wbr>Resource<wbr>Url</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-is-external">
 			<a href="interfaces/memoizecache.html" class="tsd-kind-icon">Memoize<wbr>Cache</a>
@@ -1254,6 +1260,9 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external">
 			<a href="globals.html#last" class="tsd-kind-icon">last</a>
 		</li>
+		<li class=" tsd-kind-function tsd-is-external">
+			<a href="globals.html#loadresource" class="tsd-kind-icon">load<wbr>Resource</a>
+		</li>
 		<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external">
 			<a href="globals.html#mapvalues" class="tsd-kind-icon">map<wbr>Values</a>
 		</li>
@@ -1393,6 +1402,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<section class="tsd-index-section tsd-is-external">
 						<h3>Enumerations</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-enum tsd-is-external"><a href="enums/loadresourceurltype.html" class="tsd-kind-icon">Load<wbr>Resource<wbr>Url<wbr>Type</a></li>
 							<li class="tsd-kind-enum tsd-is-external"><a href="enums/requestbodytype.html" class="tsd-kind-icon">Request<wbr>Body<wbr>Type</a></li>
 							<li class="tsd-kind-enum tsd-is-external"><a href="enums/requestmethod.html" class="tsd-kind-icon">Request<wbr>Method</a></li>
 							<li class="tsd-kind-enum tsd-is-external"><a href="enums/responsebodytype.html" class="tsd-kind-icon">Response<wbr>Body<wbr>Type</a></li>
@@ -1415,6 +1425,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/cssvalue.html" class="tsd-kind-icon">CSSValue</a></li>
 							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/flexibleoptions.html" class="tsd-kind-icon">Flexible<wbr>Options</a></li>
 							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/formatcurrencyoptions.html" class="tsd-kind-icon">Format<wbr>Currency<wbr>Options</a></li>
+							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/loadresourceurl.html" class="tsd-kind-icon">Load<wbr>Resource<wbr>Url</a></li>
 							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/memoizecache.html" class="tsd-kind-icon">Memoize<wbr>Cache</a></li>
 							<li class="tsd-kind-interface tsd-has-type-parameter tsd-is-external"><a href="interfaces/memoizeoptions.html" class="tsd-kind-icon">Memoize<wbr>Options</a></li>
 							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/requestoptions.html" class="tsd-kind-icon">Request<wbr>Options</a></li>
@@ -1528,6 +1539,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#isurl" class="tsd-kind-icon">is<wbr>Url</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#keyby" class="tsd-kind-icon">key<wbr>By</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#last" class="tsd-kind-icon">last</a></li>
+							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#loadresource" class="tsd-kind-icon">load<wbr>Resource</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#mapvalues" class="tsd-kind-icon">map<wbr>Values</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#memoize" class="tsd-kind-icon">memoize</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#memorystoragedriver" class="tsd-kind-icon">memory<wbr>Storage<wbr>Driver</a></li>
@@ -1580,7 +1592,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Any<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isFunction.ts#L1">isFunction.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isFunction.ts#L1">isFunction.ts:1</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1611,7 +1623,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Any<wbr>Object<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/forOwn.ts#L3">forOwn.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/forOwn.ts#L3">forOwn.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1621,7 +1633,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Bind<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EventListenerOrEventListenerObject</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/bindEvent.ts#L2">bindEvent.ts:2</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/bindEvent.ts#L2">bindEvent.ts:2</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1631,7 +1643,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Bind<wbr>Event<wbr>Listener<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">AddEventListenerOptions</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/bindEvent.ts#L3">bindEvent.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/bindEvent.ts#L3">bindEvent.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1641,7 +1653,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Bind<wbr>Event<wbr>Types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/bindEvent.ts#L1">bindEvent.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/bindEvent.ts#L1">bindEvent.ts:1</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1651,7 +1663,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Disposer<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Disposer.ts#L3">Disposer.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Disposer.ts#L3">Disposer.ts:3</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1676,7 +1688,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Enumerable<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Extract</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/forOwn.ts#L5">forOwn.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/forOwn.ts#L5">forOwn.ts:5</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1686,7 +1698,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Event<wbr>Bus<wbr>Unsubscribe<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/EventBus.ts#L4">EventBus.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/EventBus.ts#L4">EventBus.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1716,7 +1728,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Format<wbr>Currency<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatCurrency.ts#L1">formatCurrency.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatCurrency.ts#L1">formatCurrency.ts:1</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1726,7 +1738,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Format<wbr>Date<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L4">formatDate.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L4">formatDate.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1736,7 +1748,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Format<wbr>Template<wbr>Pattern<wbr>ToValue<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatTemplate.ts#L4">formatTemplate.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatTemplate.ts#L4">formatTemplate.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1746,7 +1758,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Group<wbr>ByIteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/groupBy.ts#L1">groupBy.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/groupBy.ts#L1">groupBy.ts:1</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1780,7 +1792,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">In<wbr>Range<wbr>Interval<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"()"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"(]"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"[)"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"[]"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/inRange.ts#L1">inRange.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/inRange.ts#L1">inRange.ts:1</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1790,7 +1802,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Memoize<wbr>Return<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/memoize.ts#L27">memoize.ts:27</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/memoize.ts#L27">memoize.ts:27</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1800,7 +1812,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Omit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/omit.ts#L3">omit.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/omit.ts#L3">omit.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1810,7 +1822,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">On<wbr>Resize<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/onResize.ts#L4">onResize.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/onResize.ts#L4">onResize.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1841,7 +1853,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">On<wbr>Resize<wbr>Unbind<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/onResize.ts#L5">onResize.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/onResize.ts#L5">onResize.ts:5</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1866,7 +1878,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Request<wbr>Header<wbr>Field<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Date"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"A-IM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Accept"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Accept-Charset"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Accept-Encoding"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Accept-Language"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Accept-Datetime"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Access-Control-Request-Method"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Access-Control-Request-Headers"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Authorization"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Cache-Control"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Connection"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Content-Length"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Content-MD5"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Content-Type"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Cookie"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Expect"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Forwarded"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"From"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Host"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HTTP2-Settings"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"If-Match"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"If-Modified-Since"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"If-None-Match"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"If-Range"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"If-Unmodified-Since"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Max-Forwards"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Origin"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Pragma"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Proxy-Authorization"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Range"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Referer"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"User-Agent"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Upgrade"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Via"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Warning"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Upgrade-Insecure-Requests"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-Requested-With"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"DNT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-Forwarded-For"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-Forwarded-Host"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-Forwarded-Proto"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Front-End-Https"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-Http-Method-Override"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-ATT-DeviceId"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-Wap-Profile"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Proxy-Connection"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-UIDH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-Csrf-Token"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-Request-ID"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"X-Correlation-ID"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Save-Data"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/request.ts#L15">request.ts:15</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/request.ts#L15">request.ts:15</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1886,7 +1898,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Storage<wbr>Driver<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L18">Storage.ts:18</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Storage.ts#L18">Storage.ts:18</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1911,7 +1923,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Sum<wbr>ByIteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/sumBy.ts#L1">sumBy.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/sumBy.ts#L1">sumBy.ts:1</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1945,7 +1957,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Unbind<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/bindEvent.ts#L4">bindEvent.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/bindEvent.ts#L4">bindEvent.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1970,7 +1982,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Validator<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Validator.ts#L13">Validator.ts:13</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Validator.ts#L13">Validator.ts:13</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1980,7 +1992,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Validator<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/validatorrule.html" class="tsd-signature-type">ValidatorRule</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Validator.ts#L55">Validator.ts:55</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Validator.ts#L55">Validator.ts:55</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1990,7 +2002,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Value<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Undefined"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Null"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Array"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"String"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Arguments"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Function"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Error"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Boolean"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Date"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RegExp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Object"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"JSON"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Math"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/getType.ts#L1">getType.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/getType.ts#L1">getType.ts:1</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2000,7 +2012,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Wechat<wbr>Error<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Wechat.ts#L93">Wechat.ts:93</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Wechat.ts#L100">Wechat.ts:100</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2031,7 +2043,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Wechat<wbr>JsApi<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"checkJsApi"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"updateAppMessageShareData"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"updateTimelineShareData"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareTimeline"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareAppMessage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareQQ"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareQZone"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"startRecord"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stopRecord"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onVoiceRecordEnd"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"playVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"pauseVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stopVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onVoicePlayEnd"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"uploadVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"downloadVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chooseImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"previewImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"uploadImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"downloadImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"translateVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"getNetworkType"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openLocation"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"getLocation"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hideOptionMenu"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"showOptionMenu"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hideMenuItems"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"showMenuItems"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hideAllNonBaseMenuItem"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"showAllNonBaseMenuItem"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"closeWindow"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"scanQRCode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chooseWXPay"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openProductSpecificView"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"addCard"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chooseCard"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openCard"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Wechat.ts#L10">Wechat.ts:10</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Wechat.ts#L11">Wechat.ts:11</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2046,7 +2058,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">Wechat<wbr>Non<wbr>Base<wbr>Menu<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"menuItem:share:appMessage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:timeline"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:qq"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:weiboApp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:favorite"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:facebook"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:QZone"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:editTag"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:delete"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:copyUrl"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:originPage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:readMode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:openWithQQBrowser"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:openWithSafari"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:email"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:brand"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Wechat.ts#L156">Wechat.ts:156</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Wechat.ts#L163">Wechat.ts:163</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2068,7 +2080,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/assign.ts#L12">assign.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/assign.ts#L12">assign.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2113,7 +2125,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/base64Decode.ts#L9">base64Decode.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/base64Decode.ts#L9">base64Decode.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2145,7 +2157,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/base64Encode.ts#L9">base64Encode.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/base64Encode.ts#L9">base64Encode.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2177,7 +2189,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/base64UrlDecode.ts#L10">base64UrlDecode.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/base64UrlDecode.ts#L10">base64UrlDecode.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2214,7 +2226,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/base64UrlEncode.ts#L10">base64UrlEncode.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/base64UrlEncode.ts#L10">base64UrlEncode.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2251,7 +2263,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/bindEvent.ts#L15">bindEvent.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/bindEvent.ts#L15">bindEvent.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2301,7 +2313,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L72">Storage.ts:72</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Storage.ts#L72">Storage.ts:72</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="interfaces/storagedriverreturn.html" class="tsd-signature-type">StorageDriverReturn</a></h4>
@@ -2318,7 +2330,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L74">Storage.ts:74</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Storage.ts#L74">Storage.ts:74</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="interfaces/storagedriverreturn.html" class="tsd-signature-type">StorageDriverReturn</a></h4>
@@ -2335,7 +2347,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/castArray.ts#L7">castArray.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/castArray.ts#L7">castArray.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2373,7 +2385,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/chunk.ts#L13">chunk.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/chunk.ts#L13">chunk.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2427,7 +2439,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/clamp.ts#L9">clamp.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/clamp.ts#L9">clamp.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2471,7 +2483,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/column.ts#L9">column.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/column.ts#L9">column.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2527,7 +2539,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/endsWith.ts#L8">endsWith.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/endsWith.ts#L8">endsWith.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2566,7 +2578,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/fill.ts#L10">fill.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/fill.ts#L10">fill.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2634,7 +2646,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/fill.ts#L31">fill.ts:31</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/fill.ts#L31">fill.ts:31</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2684,7 +2696,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/flexible.ts#L18">flexible.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/flexible.ts#L18">flexible.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2715,7 +2727,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/forOwn.ts#L13">forOwn.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/forOwn.ts#L13">forOwn.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2785,7 +2797,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatCurrency.ts#L25">formatCurrency.ts:25</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatCurrency.ts#L25">formatCurrency.ts:25</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2823,7 +2835,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L24">formatDate.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L24">formatDate.ts:24</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2861,7 +2873,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDateDiff.ts#L22">formatDateDiff.ts:22</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDateDiff.ts#L22">formatDateDiff.ts:22</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2905,7 +2917,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatTemplate.ts#L13">formatTemplate.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatTemplate.ts#L13">formatTemplate.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2943,7 +2955,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/getDaysInMonth.ts#L12">getDaysInMonth.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/getDaysInMonth.ts#L12">getDaysInMonth.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2981,7 +2993,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/getType.ts#L27">getType.ts:27</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/getType.ts#L27">getType.ts:27</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3021,7 +3033,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/groupBy.ts#L10">groupBy.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/groupBy.ts#L10">groupBy.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3070,7 +3082,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/has.ts#L10">has.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/has.ts#L10">has.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3108,7 +3120,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/ii.ts#L11">ii.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/ii.ts#L11">ii.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3147,7 +3159,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/inBrowser.ts#L9">inBrowser.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/inBrowser.ts#L9">inBrowser.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3191,7 +3203,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/inNode.ts#L9">inNode.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/inNode.ts#L9">inNode.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3235,7 +3247,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/inRange.ts#L12">inRange.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/inRange.ts#L12">inRange.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3285,7 +3297,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/inWechatMiniProgram.ts#L11">inWechatMiniProgram.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/inWechatMiniProgram.ts#L11">inWechatMiniProgram.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3329,7 +3341,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/inWechatWebview.ts#L10">inWechatWebview.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/inWechatWebview.ts#L10">inWechatWebview.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3375,7 +3387,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/includes.ts#L12">includes.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/includes.ts#L12">includes.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3410,7 +3422,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/includes.ts#L21">includes.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/includes.ts#L21">includes.ts:21</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3445,7 +3457,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/includes.ts#L30">includes.ts:30</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/includes.ts#L30">includes.ts:30</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3483,7 +3495,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isArray.ts#L7">isArray.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isArray.ts#L7">isArray.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3515,7 +3527,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isBoolean.ts#L7">isBoolean.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isBoolean.ts#L7">isBoolean.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3547,7 +3559,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isChineseIDCardNumber.ts#L24">isChineseIDCardNumber.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isChineseIDCardNumber.ts#L24">isChineseIDCardNumber.ts:24</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3587,7 +3599,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isChinesePhoneNumber.ts#L23">isChinesePhoneNumber.ts:23</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isChinesePhoneNumber.ts#L23">isChinesePhoneNumber.ts:23</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3625,7 +3637,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isChinesePhoneNumber.ts#L8">isChinesePhoneNumber.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isChinesePhoneNumber.ts#L8">isChinesePhoneNumber.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3663,7 +3675,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isChineseName.ts#L9">isChineseName.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isChineseName.ts#L9">isChineseName.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3695,7 +3707,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isChinesePhoneNumber.ts#L38">isChinesePhoneNumber.ts:38</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isChinesePhoneNumber.ts#L38">isChinesePhoneNumber.ts:38</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3733,7 +3745,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isDate.ts#L9">isDate.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isDate.ts#L9">isDate.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3765,7 +3777,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isEmail.ts#L8">isEmail.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isEmail.ts#L8">isEmail.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3802,7 +3814,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isEmpty.ts#L9">isEmpty.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isEmpty.ts#L9">isEmpty.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3834,7 +3846,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isEqualArray.ts#L7">isEqualArray.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isEqualArray.ts#L7">isEqualArray.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3866,7 +3878,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isFinite.ts#L7">isFinite.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isFinite.ts#L7">isFinite.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3898,7 +3910,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isFunction.ts#L9">isFunction.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isFunction.ts#L9">isFunction.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3936,7 +3948,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isHan.ts#L7">isHan.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isHan.ts#L7">isHan.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3968,7 +3980,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isIOS.ts#L8">isIOS.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isIOS.ts#L8">isIOS.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3991,7 +4003,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isInteger.ts#L7">isInteger.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isInteger.ts#L7">isInteger.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4023,7 +4035,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isLeapYear.ts#L7">isLeapYear.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isLeapYear.ts#L7">isLeapYear.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4055,7 +4067,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isNaN.ts#L7">isNaN.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isNaN.ts#L7">isNaN.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4087,7 +4099,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isNil.ts#L7">isNil.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isNil.ts#L7">isNil.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4119,7 +4131,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isNull.ts#L7">isNull.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isNull.ts#L7">isNull.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4151,7 +4163,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isNumber.ts#L7">isNumber.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isNumber.ts#L7">isNumber.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4183,7 +4195,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isNumeric.ts#L7">isNumeric.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isNumeric.ts#L7">isNumeric.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4215,7 +4227,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isObject.ts#L7">isObject.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isObject.ts#L7">isObject.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4247,7 +4259,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isPlainObject.ts#L7">isPlainObject.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isPlainObject.ts#L7">isPlainObject.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4279,7 +4291,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isPromise.ts#L9">isPromise.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isPromise.ts#L9">isPromise.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4311,7 +4323,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isRegExp.ts#L9">isRegExp.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isRegExp.ts#L9">isRegExp.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4343,7 +4355,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isString.ts#L7">isString.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isString.ts#L7">isString.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4375,7 +4387,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isUndefined.ts#L7">isUndefined.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isUndefined.ts#L7">isUndefined.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4407,7 +4419,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/isUrl.ts#L8">isUrl.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/isUrl.ts#L8">isUrl.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4444,7 +4456,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/keyBy.ts#L8">keyBy.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/keyBy.ts#L8">keyBy.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4514,7 +4526,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/last.ts#L7">last.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/last.ts#L7">last.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4542,6 +4554,38 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+				<a name="loadresource" class="tsd-anchor"></a>
+				<h3>load<wbr>Resource</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">load<wbr>Resource<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/loadresourceurl.html" class="tsd-signature-type">LoadResourceUrl</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/loadresourceurl.html" class="tsd-signature-type">LoadResourceUrl</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLScriptElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLLinkElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/loadResource.ts#L67">loadResource.ts:67</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>加载图片、代码、样式等资源。</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/loadresourceurl.html" class="tsd-signature-type">LoadResourceUrl</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/loadresourceurl.html" class="tsd-signature-type">LoadResourceUrl</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>资源地址</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLScriptElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLLinkElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>返回各个资源的 HTMLElement 对象组成的数组</p>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter tsd-is-external">
 				<a name="mapvalues" class="tsd-anchor"></a>
 				<h3>map<wbr>Values</h3>
@@ -4552,7 +4596,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/mapValues.ts#L10">mapValues.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/mapValues.ts#L10">mapValues.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4628,7 +4672,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/memoize.ts#L41">memoize.ts:41</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/memoize.ts#L41">memoize.ts:41</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4672,7 +4716,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L145">Storage.ts:145</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Storage.ts#L145">Storage.ts:145</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -4689,7 +4733,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/noop.ts#L5">noop.ts:5</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/noop.ts#L5">noop.ts:5</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4717,7 +4761,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/objectToQueryString.ts#L10">objectToQueryString.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/objectToQueryString.ts#L10">objectToQueryString.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4749,7 +4793,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/omit.ts#L12">omit.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/omit.ts#L12">omit.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4798,7 +4842,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/onResize.ts#L13">onResize.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/onResize.ts#L13">onResize.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4830,7 +4874,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/pad.ts#L11">pad.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/pad.ts#L11">pad.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4874,7 +4918,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/padEnd.ts#L11">padEnd.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/padEnd.ts#L11">padEnd.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4918,7 +4962,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/padStart.ts#L11">padStart.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/padStart.ts#L11">padStart.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4962,7 +5006,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/parseCSSValue.ts#L15">parseCSSValue.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/parseCSSValue.ts#L15">parseCSSValue.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5000,7 +5044,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/pick.ts#L10">pick.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/pick.ts#L10">pick.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5050,7 +5094,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/placeKitten.ts#L7">placeKitten.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/placeKitten.ts#L7">placeKitten.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5073,7 +5117,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/placeKitten.ts#L16">placeKitten.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/placeKitten.ts#L16">placeKitten.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5111,7 +5155,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/promiseSeries.ts#L7">promiseSeries.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/promiseSeries.ts#L7">promiseSeries.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5152,7 +5196,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/randomString.ts#L6">randomString.ts:6</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/randomString.ts#L6">randomString.ts:6</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5175,7 +5219,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/range.ts#L9">range.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/range.ts#L9">range.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5220,7 +5264,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/reduce.ts#L11">reduce.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/reduce.ts#L11">reduce.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5288,7 +5332,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/reduce.ts#L25">reduce.ts:25</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/reduce.ts#L25">reduce.ts:25</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5365,7 +5409,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/repeat.ts#L8">repeat.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/repeat.ts#L8">repeat.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5403,7 +5447,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/request.ts#L110">request.ts:110</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/request.ts#L110">request.ts:110</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -5432,7 +5476,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/sample.ts#L10">sample.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/sample.ts#L10">sample.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5470,7 +5514,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/shuffle.ts#L8">shuffle.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/shuffle.ts#L8">shuffle.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5513,7 +5557,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/sleep.ts#L6">sleep.ts:6</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/sleep.ts#L6">sleep.ts:6</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5544,7 +5588,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/startsWith.ts#L8">startsWith.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/startsWith.ts#L8">startsWith.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5582,7 +5626,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/sum.ts#L9">sum.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/sum.ts#L9">sum.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5614,7 +5658,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/sumBy.ts#L13">sumBy.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/sumBy.ts#L13">sumBy.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5658,7 +5702,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/times.ts#L8">times.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/times.ts#L8">times.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5702,7 +5746,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/toDate.ts#L19">toDate.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/toDate.ts#L19">toDate.ts:19</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5739,7 +5783,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/toUnixTimestamp.ts#L10">toUnixTimestamp.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/toUnixTimestamp.ts#L10">toUnixTimestamp.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5771,7 +5815,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/upperCaseFirst.ts#L9">upperCaseFirst.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/upperCaseFirst.ts#L9">upperCaseFirst.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5803,7 +5847,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/urlJoin.ts#L8">urlJoin.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/urlJoin.ts#L8">urlJoin.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5840,7 +5884,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/values.ts#L9">values.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/values.ts#L9">values.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5878,7 +5922,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/wait.ts#L6">wait.ts:6</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/wait.ts#L6">wait.ts:6</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5909,7 +5953,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/Storage.ts#L76">Storage.ts:76</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Storage.ts#L76">Storage.ts:76</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
@@ -5927,7 +5971,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 				<div class="tsd-signature tsd-kind-icon">day<wbr>ToZhou<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L6">formatDate.ts:6</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L6">formatDate.ts:6</a></li>
 					</ul>
 				</aside>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-external">
@@ -5936,7 +5980,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<div class="tsd-signature tsd-kind-icon">0<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;日&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L7">formatDate.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L7">formatDate.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5946,7 +5990,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<div class="tsd-signature tsd-kind-icon">1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;一&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L8">formatDate.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L8">formatDate.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5956,7 +6000,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<div class="tsd-signature tsd-kind-icon">2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;二&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L9">formatDate.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L9">formatDate.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5966,7 +6010,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<div class="tsd-signature tsd-kind-icon">3<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;三&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L10">formatDate.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L10">formatDate.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5976,7 +6020,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<div class="tsd-signature tsd-kind-icon">4<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;四&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L11">formatDate.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L11">formatDate.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5986,7 +6030,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<div class="tsd-signature tsd-kind-icon">5<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;五&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L12">formatDate.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L12">formatDate.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -5996,7 +6040,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<div class="tsd-signature tsd-kind-icon">6<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;六&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L13">formatDate.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L13">formatDate.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -6006,7 +6050,7 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
 					<div class="tsd-signature tsd-kind-icon">7<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;日&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cbdf98d/src/formatDate.ts#L14">formatDate.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/formatDate.ts#L14">formatDate.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>

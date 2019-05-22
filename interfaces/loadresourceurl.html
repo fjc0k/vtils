@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ValidatorRule | vtils</title>
+	<title>LoadResourceUrl | vtils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -909,23 +909,17 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-interface tsd-has-type-parameter tsd-is-external">
-			<a href="validatorrule.html" class="tsd-kind-icon">Validator<wbr>Rule</a>
+		<li class="current tsd-kind-interface tsd-is-external">
+			<a href="loadresourceurl.html" class="tsd-kind-icon">Load<wbr>Resource<wbr>Url</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="validatorrule.html#key" class="tsd-kind-icon">key</a>
+					<a href="loadresourceurl.html#alternatepath" class="tsd-kind-icon">alternate<wbr>Path</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="validatorrule.html#message" class="tsd-kind-icon">message</a>
+					<a href="loadresourceurl.html#path" class="tsd-kind-icon">path</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="validatorrule.html#required" class="tsd-kind-icon">required</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="validatorrule.html#test" class="tsd-kind-icon">test</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="validatorrule.html#type" class="tsd-kind-icon">type</a>
+					<a href="loadresourceurl.html#type" class="tsd-kind-icon">type</a>
 				</li>
 			</ul>
 		</li>
@@ -933,19 +927,18 @@ img { max-width: 100%; }
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<section class="tsd-panel tsd-type-parameters">
-			<h3>Type parameters</h3>
-			<ul class="tsd-type-parameters">
-				<li>
-					<h4>D<span class="tsd-signature-symbol">: </span><a href="../globals.html#validatordata" class="tsd-signature-type">ValidatorData</a></h4>
-				</li>
-			</ul>
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>资源地址。</p>
+				</div>
+			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">ValidatorRule</span>
+					<span class="target">LoadResourceUrl</span>
 				</li>
 			</ul>
 		</section>
@@ -956,11 +949,9 @@ img { max-width: 100%; }
 					<section class="tsd-index-section tsd-is-external">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="validatorrule.html#key" class="tsd-kind-icon">key</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="validatorrule.html#message" class="tsd-kind-icon">message</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="validatorrule.html#required" class="tsd-kind-icon">required</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="validatorrule.html#test" class="tsd-kind-icon">test</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="validatorrule.html#type" class="tsd-kind-icon">type</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="loadresourceurl.html#alternatepath" class="tsd-kind-icon">alternate<wbr>Path</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="loadresourceurl.html#path" class="tsd-kind-icon">path</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="loadresourceurl.html#type" class="tsd-kind-icon">type</a></li>
 						</ul>
 					</section>
 				</div>
@@ -969,77 +960,47 @@ img { max-width: 100%; }
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="key" class="tsd-anchor"></a>
-				<h3>key</h3>
-				<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof D</span></div>
+				<a name="alternatepath" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> alternate<wbr>Path</h3>
+				<div class="tsd-signature tsd-kind-icon">alternate<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Validator.ts#L31">Validator.ts:31</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/loadResource.ts#L23">loadResource.ts:23</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>要验证字段在数据对象中的键名</p>
+						<p>备用资源路径</p>
 					</div>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="message" class="tsd-anchor"></a>
-				<h3>message</h3>
-				<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+				<a name="path" class="tsd-anchor"></a>
+				<h3>path</h3>
+				<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Validator.ts#L52">Validator.ts:52</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/loadResource.ts#L21">loadResource.ts:21</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>提示信息</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="required" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> required</h3>
-				<div class="tsd-signature tsd-kind-icon">required<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Validator.ts#L45">Validator.ts:45</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>是否必填</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="test" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> test</h3>
-				<div class="tsd-signature tsd-kind-icon">test<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> | </span><a href="validatorruletestfunction.html" class="tsd-signature-type">ValidatorRuleTestFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Validator.ts#L47">Validator.ts:47</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>自定义测试，支持正则、同步函数、异步函数</p>
+						<p>资源路径</p>
 					</div>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 				<a name="type" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> type</h3>
-				<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"integer"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chinesePhoneNumber"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chineseMobilePhoneNumber"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chineseLandlinePhoneNumber"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chineseIdCardNumber"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"url"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"email"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chineseName"</span></div>
+				<h3>type</h3>
+				<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/loadresourceurltype.html" class="tsd-signature-type">LoadResourceUrlType</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/Validator.ts#L33">Validator.ts:33</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/13459ec/src/loadResource.ts#L19">loadResource.ts:19</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>验证类型</p>
+						<p>资源类型</p>
 					</div>
 				</div>
 			</section>
