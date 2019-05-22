@@ -1783,3 +1783,20 @@ describe('request', () => {
     server.close()
   })
 })
+
+describe('ii', () => {
+  test('ok', () => {
+    typedExpectEqual(
+      vtils.ii(() => 1),
+      1,
+    )
+    typedExpectEqual(
+      vtils.ii(() => [2]),
+      [2],
+    )
+    typedExpectEqual(
+      vtils.ii(() => ({ hello: 'world' })),
+      { hello: 'world' },
+    )
+  })
+})
