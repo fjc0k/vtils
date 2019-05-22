@@ -402,19 +402,18 @@ export class Wechat {
    */
   invoke(jsApi: WechatJsApi, params: Record<string, any> = {}): Promise<any> {
     return new Promise((resolve, reject) => {
-      if (typeof wx === 'undefined') return reject('请先引入微信 JSSDK')
-      if (!wx[jsApi]) return reject(`wx.${jsApi} 不可用`)
       const invoke = () => {
+        if (!wx[jsApi]) return reject(`wx.${jsApi} 不可用`)
         wx[jsApi]({
           ...params,
           success: resolve,
           fail: reject,
         })
       }
-      if (this.ready) {
-        invoke()
-      } else {
+      if (typeof wx === 'undefined' || !this.ready) {
         this.bus.once('ready', invoke)
+      } else {
+        invoke()
       }
     })
   }
