@@ -253,22 +253,26 @@ export class Wechat {
         this.bus.emit('error', err)
       })
     }
-    if (params.autoLoadJSSDK) {
-      loadResource({
-        type: LoadResourceUrlType.js,
-        path: 'https://res.wx.qq.com/open/js/jweixin-1.4.0.js',
-        alternatePath: 'https://res2.wx.qq.com/open/js/jweixin-1.4.0.js',
-      }).then(() => {
+    if (typeof wx !== 'undefined') {
+      config()
+    } else {
+      if (params.autoLoadJSSDK !== false) {
+        loadResource({
+          type: LoadResourceUrlType.js,
+          path: 'https://res.wx.qq.com/open/js/jweixin-1.4.0.js',
+          alternatePath: 'https://res2.wx.qq.com/open/js/jweixin-1.4.0.js',
+        }).then(() => {
+          if (typeof wx === 'undefined') {
+            throw new Error('微信 JSSDK 加载失败')
+          }
+          config()
+        })
+      } else {
         if (typeof wx === 'undefined') {
-          throw new Error('微信 JSSDK 加载失败')
+          throw new Error('请先引入微信 JSSDK')
         }
         config()
-      })
-    } else {
-      if (typeof wx === 'undefined') {
-        throw new Error('请先引入微信 JSSDK')
       }
-      config()
     }
   }
 
