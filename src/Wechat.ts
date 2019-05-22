@@ -1,5 +1,6 @@
 import { EventBus } from './EventBus'
 import { isBoolean } from './isBoolean'
+import { loadResource, LoadResourceUrlType } from './loadResource'
 import { promiseSeries } from './promiseSeries'
 
 declare const wx: any
@@ -88,6 +89,12 @@ export interface WechatConfigParams {
    * @default false
    */
   sharable?: boolean,
+  /**
+   * 是否自动引入微信 JSSDK。
+   *
+   * @default true
+   */
+  autoLoadJSSDK: boolean,
 }
 
 export type WechatErrorCallback = (err: any) => void
@@ -229,24 +236,40 @@ export class Wechat {
    * @param params 配置参数
    */
   config(params: WechatConfigParams) {
-    if (typeof wx === 'undefined') {
-      throw new Error('请先引入微信 JSSDK')
+    const config = () => {
+      const sharable = isBoolean(params.sharable) ? params.sharable : false
+      wx.config({
+        ...params,
+        jsApiList: [
+          ...(params.jsApiList || []),
+          ...(sharable ? shareJsApiList : []),
+        ],
+      })
+      wx.ready(() => {
+        this.ready = true
+        this.bus.emit('ready')
+      })
+      wx.error((err: any) => {
+        this.bus.emit('error', err)
+      })
     }
-    const sharable = isBoolean(params.sharable) ? params.sharable : false
-    wx.config({
-      ...params,
-      jsApiList: [
-        ...(params.jsApiList || []),
-        ...(sharable ? shareJsApiList : []),
-      ],
-    })
-    wx.ready(() => {
-      this.ready = true
-      this.bus.emit('ready')
-    })
-    wx.error((err: any) => {
-      this.bus.emit('error', err)
-    })
+    if (params.autoLoadJSSDK) {
+      loadResource({
+        type: LoadResourceUrlType.js,
+        path: 'https://res.wx.qq.com/open/js/jweixin-1.4.0.js',
+        alternatePath: 'https://res2.wx.qq.com/open/js/jweixin-1.4.0.js',
+      }).then(() => {
+        if (typeof wx === 'undefined') {
+          throw new Error('微信 JSSDK 加载失败')
+        }
+        config()
+      })
+    } else {
+      if (typeof wx === 'undefined') {
+        throw new Error('请先引入微信 JSSDK')
+      }
+      config()
+    }
   }
 
   /**
