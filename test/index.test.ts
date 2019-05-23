@@ -1807,3 +1807,37 @@ describe('ii', () => {
     )
   })
 })
+
+describe('round', () => {
+  test('round', () => {
+    typedExpectEqual(vtils.round(0.129, 3), 0.129)
+    typedExpectEqual(vtils.round(0.129, 2), 0.13)
+    typedExpectEqual(vtils.round(0.129, 1), 0.1)
+    typedExpectEqual(vtils.round(1.005, 2), 1.01)
+    typedExpectEqual(vtils.round(1.005, 0), 1)
+    typedExpectEqual(vtils.round(111.1, -2), 100)
+    typedExpectEqual(vtils.round(-0.375, 2), -0.38)
+    typedExpectEqual(Number.isNaN(vtils.round(10000000000000, 8)), false)
+    typedExpectEqual(vtils.round(0.37542323423423432432432432432, 8), 0.37542323)
+  })
+
+  test('roundUp', () => {
+    typedExpectEqual(vtils.roundUp(0.111, 3), 0.111)
+    typedExpectEqual(vtils.roundUp(0.111, 2), 0.12)
+    typedExpectEqual(vtils.roundUp(0.111, 1), 0.2)
+    typedExpectEqual(vtils.roundUp(1.004, 2), 1.01)
+    typedExpectEqual(vtils.roundUp(1.111, 0), 2)
+    typedExpectEqual(vtils.roundUp(111.1, -2), 200)
+    typedExpectEqual(vtils.roundUp(-0.375, 2), -0.37)
+  })
+
+  test('roundDown', () => {
+    typedExpectEqual(vtils.roundDown(0.666, 3), 0.666)
+    typedExpectEqual(vtils.roundDown(0.666, 2), 0.66)
+    typedExpectEqual(vtils.roundDown(0.666, 1), 0.6)
+    typedExpectEqual(vtils.roundDown(1.006, 2), 1.0)
+    typedExpectEqual(vtils.roundDown(1.006, 0), 1)
+    typedExpectEqual(vtils.roundDown(111.6, -2), 100)
+    typedExpectEqual(vtils.roundDown(-0.375, 2), -0.38)
+  })
+})
