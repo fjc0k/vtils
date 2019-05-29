@@ -1,5 +1,3 @@
-import { isFunction, isObject } from './is'
-
 /**
  * 获取全局对象。
  *
@@ -34,7 +32,7 @@ export function inBrowser(callback?: () => void): boolean {
       && typeof document === 'object'
       && document.nodeType === 9
   }
-  if (inBrowser._0_ && isFunction(callback)) {
+  if (inBrowser._0_ && typeof callback === 'function') {
     callback()
   }
   return inBrowser._0_
@@ -54,7 +52,7 @@ export function inNode(callback?: () => void): boolean {
       && process.versions != null
       && process.versions.node != null
   }
-  if (inNode._0_ && isFunction(callback)) {
+  if (inNode._0_ && typeof callback === 'function') {
     callback()
   }
   return inNode._0_
@@ -70,12 +68,12 @@ inNode._0_ = undefined as boolean | undefined
  */
 export function inWechatMiniProgram(callback?: () => void): boolean {
   if (inWechatMiniProgram._0_ === undefined) {
-    inWechatMiniProgram._0_ = typeof wx !== 'undefined'
-      && isObject(wx)
-      && isFunction(wx.getSystemInfo)
+    inWechatMiniProgram._0_ = typeof wx === 'object'
+      && wx !== null
+      && typeof wx.getSystemInfo === 'function'
   }
   /* istanbul ignore if */
-  if (inWechatMiniProgram._0_ && isFunction(callback)) {
+  if (inWechatMiniProgram._0_ && typeof callback === 'function') {
     callback()
   }
   return inWechatMiniProgram._0_
@@ -95,7 +93,7 @@ export function inWechatWebview(callback?: () => void): boolean {
       && /micromessenger/.test(navigator.userAgent.toLowerCase())
   }
   /* istanbul ignore if */
-  if (inWechatWebview._0_ && isFunction(callback)) {
+  if (inWechatWebview._0_ && typeof callback === 'function') {
     callback()
   }
   return inWechatWebview._0_
@@ -116,7 +114,7 @@ export function inIOS(callback?: () => void): boolean {
       && /iPad|iPhone|iPod/.test(navigator.platform)
   }
   /* istanbul ignore if */
-  if (inIOS._0_ && isFunction(callback)) {
+  if (inIOS._0_ && typeof callback === 'function') {
     callback()
   }
   return inIOS._0_
