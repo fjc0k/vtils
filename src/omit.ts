@@ -1,6 +1,6 @@
-import { AnyObject, EnumerableKey, forOwn } from './forOwn'
-
-export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+import { AnyObject, Omit } from './enhanceType'
+import { forOwn } from './forOwn'
+import { includes } from './includes'
 
 /**
  * 创建一个从 `obj` 中剔除选中的可枚举属性的对象。
@@ -11,11 +11,12 @@ export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
  */
 export function omit<
   T extends AnyObject,
-  K extends EnumerableKey<keyof T>
+  K extends Extract<keyof T, string | number>,
 >(obj: T, props: K[]) {
+  props = props.map(String) as any
   const newObj: Omit<T, K> = {} as any
-  forOwn(obj, (value: T[K], key: K) => {
-    if (props.indexOf(key) === -1) {
+  forOwn(obj, (value, key) => {
+    if (!includes(props, key)) {
       (newObj as any)[key] = value
     }
   })

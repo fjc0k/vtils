@@ -1,6 +1,5 @@
 import { castArray } from './castArray'
-import { inBrowser } from './inBrowser'
-import { isString } from './isString'
+import { isString } from './is'
 
 /**
  * 资源类型。
@@ -24,7 +23,7 @@ export interface LoadResourceUrl {
 }
 
 function _loadResource(url: LoadResourceUrl): Promise<HTMLScriptElement | HTMLLinkElement | HTMLImageElement> {
-  return new Promise(resolve => {
+  return new Promise((resolve, reject) => {
     let el!: HTMLScriptElement | HTMLLinkElement | HTMLImageElement
     switch (url.type) {
       case LoadResourceUrlType.js:
@@ -49,10 +48,10 @@ function _loadResource(url: LoadResourceUrl): Promise<HTMLScriptElement | HTMLLi
         _loadResource({
           type: url.type,
           path: url.alternatePath,
-        }).then(resolve)
+        }).then(resolve, reject)
         return
       }
-      resolve(el)
+      reject(el)
     }
     document.head.appendChild(el)
   })
@@ -62,22 +61,22 @@ function _loadResource(url: LoadResourceUrl): Promise<HTMLScriptElement | HTMLLi
  * 加载图片、代码、样式等资源。
  *
  * @param url 资源地址
- * @returns 返回各个资源的 HTMLElement 对象组成的数组
+ * @returns 返回各个资源的 `HTMLElement` 对象组成的数组
  */
 export function loadResource(url: string | LoadResourceUrl | Array<string | LoadResourceUrl>): Promise<Array<HTMLScriptElement | HTMLLinkElement | HTMLImageElement>> {
-  if (!inBrowser()) return
-  const urls: LoadResourceUrl[] = castArray(url).map(item => {
-    return !isString(item) ? item : {
-      type: (
-        /\.css$/i.test(item)
-          ? LoadResourceUrlType.css
-          : /\.(png|jpg|jpeg|gif|svg)$/i.test(item)
-            ? LoadResourceUrlType.img
-            : LoadResourceUrlType.js
-      ),
-      path: item,
-    }
-  })
+  const urls: LoadResourceUrl[] = castArray(url)
+    .map(item => {
+      return !isString(item) ? item : {
+        type: (
+          /\.css$/i.test(item)
+            ? LoadResourceUrlType.css
+            : /\.(png|jpg|jpeg|gif|svg)$/i.test(item)
+              ? LoadResourceUrlType.img
+              : LoadResourceUrlType.js
+        ),
+        path: item,
+      }
+    })
   return Promise.all(
     urls.map(
       url => _loadResource(url),

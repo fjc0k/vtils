@@ -1,7 +1,7 @@
 import { EventBus } from './EventBus'
-import { isBoolean } from './isBoolean'
+import { isBoolean } from './is'
 import { loadResource, LoadResourceUrlType } from './loadResource'
-import { promiseSeries } from './promiseSeries'
+import { sequential } from './sequential'
 
 declare const wx: any
 
@@ -298,7 +298,7 @@ export class Wechat {
       ...params,
     }
     this.prevShareParams = params
-    return promiseSeries(
+    return sequential(
       shareJsApiList.map(
         jsApi => () => this.invoke(jsApi, params),
       ),

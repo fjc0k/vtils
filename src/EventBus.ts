@@ -1,4 +1,4 @@
-import { AnyFunction } from './isFunction'
+import { AnyFunction } from './enhanceType'
 
 /** 取消订阅 */
 export type EventBusUnsubscribe = () => void
@@ -17,7 +17,7 @@ export class EventBus<
    *
    * @private
    */
-  private listeners: { [key in K]: Array<T[key]> } = {} as any
+  private listeners: { [key in K]: Array<T[key]> } = Object.create(null)
 
   /**
    * 订阅事件。

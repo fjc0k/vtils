@@ -6,20 +6,10 @@
  * @param step 步进值
  * @returns 返回开始到结束范围内数字组成的数组
  */
-export function range(start: number, end?: number, step?: number): number[] {
-  if (arguments.length === 1) {
-    if (start > 0) {
-      end = start
-      start = 0
-    } else {
-      end = 0
-    }
-    step = 1
-  } else {
-    step = step == null ? 1 : step
-  }
+export function range(start: number, end: number, step: number = 1): number[] {
   const result: number[] = []
-  while (start < end) {
+  const increasing = start < end
+  while (increasing ? start < end : start > end) {
     result.push(start)
     start += step
   }

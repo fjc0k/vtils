@@ -1,23 +1,35 @@
-import { AnyObject, EnumerableKey, forOwn } from './forOwn'
+import { AnyObject } from './enhanceType'
+import { forOwn } from './forOwn'
+
+export interface MapValuesTraverse<T extends AnyObject, R, K extends string | number = Extract<keyof T, string | number>> {
+  /**
+   * 遍历函数。
+   *
+   * @param value 值
+   * @param key 键
+   * @param obj 原对象
+   * @returns 返回新值
+   */
+  (value: T[K], key: K, obj: T): R,
+}
 
 /**
  * 映射对象的可枚举属性值为一个新的值。
  *
  * @param obj 要遍历的对象
- * @param callback 回调函数
+ * @param traverse 遍历函数
  * @returns 返回映射后的新对象
  */
 export function mapValues<
   T extends AnyObject,
-  K extends EnumerableKey<keyof T>,
-  C
+  R extends any,
 >(
   obj: T,
-  callback: (value: T[K], key: K, obj: T) => C,
+  traverse: MapValuesTraverse<T, R>,
 ) {
-  const newObj: { [key in K]: C } = {} as any
-  forOwn(obj, (value: T[K], key: K, source: T) => {
-    newObj[key] = callback(value, key, source)
+  const newObj: Record<Extract<keyof T, string | number>, R> = {} as any
+  forOwn(obj, (value, key, source) => {
+    newObj[key] = traverse(value, key, source)
   })
   return newObj
 }

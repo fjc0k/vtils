@@ -1,4 +1,4 @@
-import { AnyFunction } from './isFunction'
+import { AnyFunction } from './enhanceType'
 
 /**
  * 立即调用函数并返回其返回值。

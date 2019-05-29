@@ -1,4 +1,6 @@
-export type ValueType = (
+import { LiteralUnion } from './enhanceType'
+
+export type GetTypeReturn = LiteralUnion<(
   'Undefined' |
   'Null' |
   'Array' |
@@ -11,19 +13,23 @@ export type ValueType = (
   'Date' |
   'RegExp' |
   'Object' |
-  // ES5 中还有以下两个类型，ES6 中它们都是 Object 类型
   'JSON' |
-  'Math'
-)
+  'Math' |
+  'Symbol' |
+  'Map' |
+  'Set' |
+  'WeakMap' |
+  'WeakSet'
+), string>
 
 /**
- * 检测 `value` 值的类型。
+ * 检测 `value` 的类型。
  *
  * @param value 要检测的值
- * @returns 检测值的类型
+ * @returns 返回检测值的类型
  * @see https://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring
  * @see https://www.ecma-international.org/ecma-262/5.1/#sec-8.6.2
  */
-export function getType(value: any): ValueType {
-  return Object.prototype.toString.call(value).slice(8, -1) as any
+export function getType(value: any): GetTypeReturn {
+  return Object.prototype.toString.call(value).slice(8, -1)
 }

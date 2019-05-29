@@ -22,7 +22,7 @@ export function parseCSSValue(
       unit: defaultUnit,
     }
   }
-  const matches = value.trim().match(/^(-?[\d+.-]+)([a-z]+|%)$/i)
+  const matches = value.trim().match(/^(-?[\d.]+)([a-z]+|%)$/i)
   return matches !== null
     ? {
       value: Number(matches[1]),

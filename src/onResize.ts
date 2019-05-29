@@ -1,4 +1,4 @@
-import { inBrowser } from './inBrowser'
+import { inBrowser } from './env'
 import { noop } from './noop'
 
 export type OnResizeCallback = (e: Event) => void

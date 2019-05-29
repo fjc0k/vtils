@@ -1,5 +1,5 @@
-import { isArray } from './isArray'
-import { isString } from './isString'
+import { AnyObject, Omit, ValueOf } from './enhanceType'
+import { isArray, isNaN, isString } from './is'
 import { values } from './values'
 
 /**
@@ -12,13 +12,13 @@ import { values } from './values'
 export function includes<T>(arr: T[], value: T): boolean
 
 /**
- * 检索值 `value` 是否在对象 `obj` 中。
+ * 检索可枚举属性值 `value` 是否在对象 `obj` 中。
  *
  * @param obj 要检索的对象
  * @param value 要检索的值
  * @returns `value` 在 `obj` 中返回 `true`，否则返回 `false`
  */
-export function includes<T>(obj: Record<any, T>, value: T): boolean
+export function includes<T extends AnyObject>(obj: T, value: ValueOf<Omit<T, symbol>>): boolean
 
 /**
  * 检索值 `value` 是否在字符串 `str` 中。
@@ -30,6 +30,16 @@ export function includes<T>(obj: Record<any, T>, value: T): boolean
 export function includes(str: string, value: string): boolean
 
 export function includes(haystack: any, needle: any): boolean {
-  haystack = isString(haystack) || isArray(haystack) ? haystack : values(haystack)
-  return haystack.indexOf(needle) >= 0
+  const _haystack = isString(haystack) || isArray(haystack) ? haystack : values(haystack)
+
+  if (_haystack.includes) return _haystack.includes(needle)
+
+  if (isString(_haystack)) return _haystack.indexOf(needle) > -1
+
+  for (let i = 0, len = _haystack.length; i < len; i++) {
+    if (isNaN(needle) && isNaN(_haystack[i])) return true
+    if (needle === _haystack[i]) return true
+  }
+
+  return false
 }

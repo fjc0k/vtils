@@ -6,9 +6,6 @@
  * @see https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/
  */
 export function shuffle<T>(arr: T[]): T[] {
-  if (!Array.isArray(arr)) {
-    return arr
-  }
   const newArr = arr.slice()
   for (let i = newArr.length - 1; i >= 0; i--) {
     const randomIndex = Math.floor(Math.random() * (i + 1))

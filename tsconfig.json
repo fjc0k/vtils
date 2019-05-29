@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "strict": true,
-    "strictNullChecks": false,
     "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
@@ -9,6 +8,7 @@
     "removeComments": false,
     "esModuleInterop": true,
     "outDir": "./lib",
+    "newLine": "LF",
     "lib": [
       "esnext",
       "dom"

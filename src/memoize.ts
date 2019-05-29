@@ -1,4 +1,5 @@
-import { AnyFunction } from './isFunction'
+import { AnyFunction } from './enhanceType'
+import { ii } from './ii'
 
 export interface MemoizeCache {
   /** 设置缓存 */
@@ -25,10 +26,10 @@ export interface MemoizeOptions<T extends AnyFunction = AnyFunction> {
 }
 
 export type MemoizeReturn<T extends AnyFunction = AnyFunction> = T & {
-  /** 上一次执行函数时的缓存键名 */
-  lastCacheKey: string,
   /** 缓存容器 */
-  cache: ReturnType<MemoizeOptions['createCache']>,
+  readonly cache: MemoizeCache,
+  /** 上一次执行函数时的缓存键名 */
+  readonly lastCacheKey: string,
 }
 
 /**
@@ -42,9 +43,9 @@ export function memoize<T extends AnyFunction>(
   fn: T,
   options: MemoizeOptions<T> = {},
 ): MemoizeReturn<T> {
-  const cache = (
+  const cache = ii(
     options.createCache
-      || (() => {
+      || ((): MemoizeCache => {
         if (typeof Map === 'function' && Map.prototype.hasOwnProperty('clear')) {
           return new Map()
         }
@@ -68,8 +69,8 @@ export function memoize<T extends AnyFunction>(
             })
           },
         }
-      })
-  )()
+      }),
+  )
   const memoizedFn: any = (...args: Parameters<T>) => {
     const cacheKey = (
       options.serializer

@@ -1,4 +1,4 @@
-import { inBrowser } from './inBrowser'
+import { inBrowser } from './env'
 import { onResize } from './onResize'
 
 export interface FlexibleOptions {

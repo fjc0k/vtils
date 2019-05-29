@@ -6,5 +6,5 @@
  * @returns `str` 以 `needle` 开头返回 `true`，否则返回 `false`
  */
 export function startsWith(str: string, needle: string): boolean {
-  return str.indexOf(needle) === 0
+  return str.startsWith ? str.startsWith(needle) : str.indexOf(needle) === 0
 }

@@ -1,4 +1,6 @@
-import { AnyObject, EnumerableKey, forOwn } from './forOwn'
+import { AnyObject } from './enhanceType'
+import { forOwn } from './forOwn'
+import { includes } from './includes'
 
 /**
  * 创建一个从 `obj` 中选中的可枚举属性的对象。
@@ -9,12 +11,13 @@ import { AnyObject, EnumerableKey, forOwn } from './forOwn'
  */
 export function pick<
   T extends AnyObject,
-  K extends EnumerableKey<keyof T>
+  K extends Extract<keyof T, string | number>,
 >(obj: T, props: K[]) {
+  props = props.map(String) as any
   const newObj: Pick<T, K> = {} as any
-  forOwn(obj, (value: T[K], key: K) => {
-    if (props.indexOf(key) > -1) {
-      newObj[key] = value
+  forOwn(obj, (value, key) => {
+    if (includes(props, key)) {
+      (newObj as any)[key] = value
     }
   })
   return newObj

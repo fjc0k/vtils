@@ -1,6 +1,9 @@
-import { isFunction } from './isFunction'
+import { isPromiseLike } from './is'
 
-export type DisposerItem = () => void
+/**
+ * 待释放项目。
+ */
+export type DisposerItem = () => void | Promise<void>
 
 /**
  * 资源释放器。
@@ -16,17 +19,32 @@ export class Disposer {
    *
    * @param items 待释放项目的序列
    */
-  public add(...items: DisposerItem[]): void {
-    this.jar.push(...items)
+  add(...items: DisposerItem[]) {
+    items.forEach(item => {
+      if (this.jar.indexOf(item) === -1) {
+        this.jar.push(item)
+      }
+    })
   }
 
   /**
    * 释放所有项目。
    */
-  public dispose() {
-    this.jar.forEach(
-      item => isFunction(item) && item(),
+  dispose() {
+    return (
+      Promise
+        .all(
+          this.jar.map(item => {
+            const result = item()
+            if (isPromiseLike(result)) {
+              return result
+            }
+            return Promise.resolve()
+          }),
+        )
+        .then(() => {
+          this.jar = []
+        })
     )
-    this.jar = []
   }
 }

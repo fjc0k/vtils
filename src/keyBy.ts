@@ -1,18 +1,31 @@
+export interface KeyByIteratee<T, K> {
+  /**
+   * 迭代函数。
+   *
+   * @param item 数据项
+   * @param index 数据项的索引
+   * @returns 返回在分组结果中的键
+   */
+  (item: T, index: number): K,
+}
+
 /**
- * 根据 `iteratee` 对 `arr` 进行分组，但只保留最后一个结果。
+ * 根据 `iteratee` 返回的键对 `data` 进行分组，但只保留最后一个结果。
  *
- * @param arr 要分组的数据
- * @param iteratee 生成 `key` 的迭代函数
+ * @param data 要分组的数据
+ * @param iteratee 迭代函数
  * @returns 返回分组结果
  */
 export function keyBy<T extends any, K extends keyof any>(
-  arr: T[],
-  iteratee: (item: T, index: number) => K,
+  data: T[],
+  iteratee: KeyByIteratee<T, K>,
 ) {
-  return arr.reduce<{ [key in K]: T }>(
+  return data.reduceRight<Record<K, T>>(
     (res, item, index) => {
       const key = iteratee(item, index)
-      res[key] = item
+      if (!Object.prototype.hasOwnProperty.call(res, key)) {
+        res[key] = item
+      }
       return res
     },
     {} as any,
