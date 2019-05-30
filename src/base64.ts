@@ -108,7 +108,7 @@ function prepare() {
  * 返回 `base64` 编码后的字符串。
  *
  * @param input 要编码的字符串
- * @returns 编码后的 `base64` 字符串
+ * @returns 返回编码后的 `base64` 字符串
  */
 export function base64Encode(input: string): string {
   if (inNode()) {
@@ -124,7 +124,7 @@ export function base64Encode(input: string): string {
  * 返回 `base64` 解码后的字符串。
  *
  * @param input 要解码的 `base64` 字符串
- * @returns 解码后的字符串
+ * @returns 返回解码后的字符串
  */
 export function base64Decode(input: string): string {
   if (inNode()) {
@@ -141,7 +141,7 @@ export function base64Decode(input: string): string {
  * 返回 `base64url` 编码后的字符串。
  *
  * @param input 要编码的字符串
- * @returns 编码后的 `base64url` 字符串
+ * @returns 返回编码后的 `base64url` 字符串
  * @see http://www.ietf.org/rfc/rfc4648.txt
  */
 export function base64UrlEncode(input: string): string {
@@ -155,7 +155,7 @@ export function base64UrlEncode(input: string): string {
  * 返回 `base64url` 解码后的字符串。
  *
  * @param input 要解码的 `base64url` 字符串
- * @returns 解码后的字符串
+ * @returns 返回解码后的字符串
  * @see http://www.ietf.org/rfc/rfc4648.txt
  */
 export function base64UrlDecode(input: string): string {
