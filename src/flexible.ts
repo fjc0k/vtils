@@ -45,6 +45,7 @@ export function flexible(options: FlexibleOptions = {}): void {
     setMeta()
     setBodyFontSize()
     setRemUnit()
+
     window.addEventListener('resize', setRemUnit)
     window.addEventListener('pageshow', e => {
       if (e.persisted) {
