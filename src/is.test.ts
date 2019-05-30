@@ -208,6 +208,8 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     [
       [[1], [3], [4], [null]],
       [[2, 3], ['2', '3']],
+      [[2], [2, 2]],
+      [[2], 2 as any],
     ].forEach(item => {
       expect(isEqualArray(...item)).toBeFalsy()
     })
