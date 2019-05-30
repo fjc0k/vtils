@@ -39,6 +39,7 @@ function _loadResource(url: LoadResourceUrl): Promise<HTMLScriptElement | HTMLLi
         el = document.createElement('img')
         el.src = url.path
         break
+      /* istanbul ignore next */
       default:
         break
     }
