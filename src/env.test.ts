@@ -26,7 +26,7 @@ const tests: Record<keyof typeof env, (_: typeof env) => void> = {
     Object.defineProperty(navigator, 'platform', {
       value: 'iPad',
     })
-    delete inIOS._0_
+    inIOS.clearCache()
     jestExpectEqual(
       inIOS(),
       true,
@@ -51,7 +51,7 @@ const tests: Record<keyof typeof env, (_: typeof env) => void> = {
         getSystemInfo() {},
       },
     })
-    delete inWechatMiniProgram._0_
+    inWechatMiniProgram.clearCache()
     jestExpectEqual(
       inWechatMiniProgram(),
       true,
@@ -67,7 +67,7 @@ const tests: Record<keyof typeof env, (_: typeof env) => void> = {
     Object.defineProperty(navigator, 'userAgent', {
       value: 'micromessenger',
     })
-    delete inWechatWebview._0_
+    inWechatWebview.clearCache()
     jestExpectEqual(
       inWechatWebview(),
       true,

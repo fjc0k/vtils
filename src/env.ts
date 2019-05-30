@@ -1,11 +1,13 @@
+const store: Record<string, any> = Object.create(null)
+
 /**
  * 获取全局对象。
  *
  * @returns 返回全局对象
  */
 export function getGlobal(): any {
-  if (getGlobal._0_ == null) {
-    getGlobal._0_ = (
+  if (store.getGlobal == null) {
+    store.getGlobal = (
       inBrowser()
         ? window
         : typeof global === 'object'
@@ -15,10 +17,13 @@ export function getGlobal(): any {
           : Function('return this')() || (42, eval)('this') || {}
     )
   }
-  return getGlobal._0_
+  return store.getGlobal
 }
 
-getGlobal._0_ = undefined as any
+/* istanbul ignore next */
+getGlobal.clearCache = () => {
+  delete store.getGlobal
+}
 
 /**
  * 检查是否在浏览器环境中。
@@ -27,18 +32,21 @@ getGlobal._0_ = undefined as any
  * @returns 在浏览器环境中返回 `true`，否则返回 `false`
  */
 export function inBrowser(callback?: () => void): boolean {
-  if (inBrowser._0_ === undefined) {
-    inBrowser._0_ = typeof window === 'object'
+  if (store.inBrowser === undefined) {
+    store.inBrowser = typeof window === 'object'
       && typeof document === 'object'
       && document.nodeType === 9
   }
-  if (inBrowser._0_ && typeof callback === 'function') {
+  if (store.inBrowser && typeof callback === 'function') {
     callback()
   }
-  return inBrowser._0_
+  return store.inBrowser
 }
 
-inBrowser._0_ = undefined as boolean | undefined
+/* istanbul ignore next */
+inBrowser.clearCache = () => {
+  delete store.inBrowser
+}
 
 /**
  * 检查是否在 `Node` 环境中。
@@ -47,18 +55,22 @@ inBrowser._0_ = undefined as boolean | undefined
  * @returns 在 `Node` 环境中返回 `true`，否则返回 `false`
  */
 export function inNode(callback?: () => void): boolean {
-  if (inNode._0_ === undefined) {
-    inNode._0_ = typeof process !== 'undefined'
+  if (store.inNode === undefined) {
+    store.inNode = typeof process !== 'undefined'
       && process.versions != null
       && process.versions.node != null
   }
-  if (inNode._0_ && typeof callback === 'function') {
+  /* istanbul ignore if */
+  if (store.inNode && typeof callback === 'function') {
     callback()
   }
-  return inNode._0_
+  return store.inNode
 }
 
-inNode._0_ = undefined as boolean | undefined
+/* istanbul ignore next */
+inNode.clearCache = () => {
+  delete store.inNode
+}
 
 /**
  * 检查是否在微信小程序环境中。
@@ -67,19 +79,21 @@ inNode._0_ = undefined as boolean | undefined
  * @returns 在微信小程序环境中返回 `true`，否则返回 `false`
  */
 export function inWechatMiniProgram(callback?: () => void): boolean {
-  if (inWechatMiniProgram._0_ === undefined) {
-    inWechatMiniProgram._0_ = typeof wx === 'object'
+  if (store.inWechatMiniProgram === undefined) {
+    store.inWechatMiniProgram = typeof wx === 'object'
       && wx !== null
       && typeof wx.getSystemInfo === 'function'
   }
   /* istanbul ignore if */
-  if (inWechatMiniProgram._0_ && typeof callback === 'function') {
+  if (store.inWechatMiniProgram && typeof callback === 'function') {
     callback()
   }
-  return inWechatMiniProgram._0_
+  return store.inWechatMiniProgram
 }
 
-inWechatMiniProgram._0_ = undefined as boolean | undefined
+inWechatMiniProgram.clearCache = () => {
+  delete store.inWechatMiniProgram
+}
 
 /**
  * 检查是否在微信浏览器环境中。
@@ -88,18 +102,20 @@ inWechatMiniProgram._0_ = undefined as boolean | undefined
  * @returns 在微信浏览器环境返回 `true`，否则返回 `false`
  */
 export function inWechatWebview(callback?: () => void): boolean {
-  if (inWechatWebview._0_ === undefined) {
-    inWechatWebview._0_ = inBrowser()
+  if (store.inWechatWebview === undefined) {
+    store.inWechatWebview = inBrowser()
       && /micromessenger/.test(navigator.userAgent.toLowerCase())
   }
   /* istanbul ignore if */
-  if (inWechatWebview._0_ && typeof callback === 'function') {
+  if (store.inWechatWebview && typeof callback === 'function') {
     callback()
   }
-  return inWechatWebview._0_
+  return store.inWechatWebview
 }
 
-inWechatWebview._0_ = undefined as boolean | undefined
+inWechatWebview.clearCache = () => {
+  delete store.inWechatWebview
+}
 
 /**
  * 检查是否在 `iOS` 设备中。
@@ -108,16 +124,18 @@ inWechatWebview._0_ = undefined as boolean | undefined
  * @returns 在 `iOS` 设备中返回 `true`，否则返回 `false`
  */
 export function inIOS(callback?: () => void): boolean {
-  if (inIOS._0_ === undefined) {
-    inIOS._0_ = inBrowser()
+  if (store.inIOS === undefined) {
+    store.inIOS = inBrowser()
       && !!navigator.platform
       && /iPad|iPhone|iPod/.test(navigator.platform)
   }
   /* istanbul ignore if */
-  if (inIOS._0_ && typeof callback === 'function') {
+  if (store.inIOS && typeof callback === 'function') {
     callback()
   }
-  return inIOS._0_
+  return store.inIOS
 }
 
-inIOS._0_ = undefined as boolean | undefined
+inIOS.clearCache = () => {
+  delete store.inIOS
+}
