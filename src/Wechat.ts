@@ -94,7 +94,7 @@ export interface WechatConfigParams {
    *
    * @default true
    */
-  autoLoadJSSDK: boolean,
+  autoLoadJSSDK?: boolean,
 }
 
 export type WechatErrorCallback = (err: any) => void
@@ -220,6 +220,11 @@ export class Wechat {
   private prevShareParams: WechatUpdateShareDataParams = {}
 
   /**
+   * 注入微信 `JSSDK` 的权限验证配置参数。
+   */
+  public configParams: WechatConfigParams = {} as any
+
+  /**
    * 构造函数。
    *
    * @param params 注入微信 `JSSDK` 的权限验证配置参数
@@ -236,6 +241,8 @@ export class Wechat {
    * @param params 配置参数
    */
   config(params: WechatConfigParams) {
+    this.configParams = params
+
     const config = () => {
       const sharable = isBoolean(params.sharable) ? params.sharable : false
       wx.config({
@@ -253,6 +260,7 @@ export class Wechat {
         this.bus.emit('error', err)
       })
     }
+
     if (typeof wx !== 'undefined') {
       config()
     } else {
