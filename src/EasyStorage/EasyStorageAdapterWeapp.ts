@@ -24,6 +24,7 @@ export class EasyStorageAdapterWeapp extends EasyStorageAdapter {
   }
 
   setSync(k: string, v: any) {
+    /* istanbul ignore else */
     if (v != null) {
       wx.setStorageSync(k, [EasyStorageAdapterWeapp.FLAG, v])
     }
@@ -52,6 +53,7 @@ export class EasyStorageAdapterWeapp extends EasyStorageAdapter {
         ? v[1]
         : null
     } catch (e) {
+      /* istanbul ignore next */
       return null
     }
   }
