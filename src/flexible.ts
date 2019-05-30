@@ -1,5 +1,4 @@
 import { inBrowser } from './env'
-import { onResize } from './onResize'
 
 export interface FlexibleOptions {
   /**
@@ -46,7 +45,7 @@ export function flexible(options: FlexibleOptions = {}): void {
     setMeta()
     setBodyFontSize()
     setRemUnit()
-    onResize(setRemUnit)
+    window.addEventListener('resize', setRemUnit)
     window.addEventListener('pageshow', e => {
       if (e.persisted) {
         setRemUnit()
