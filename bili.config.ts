@@ -7,6 +7,11 @@ const config: Config = {
     dir: 'lib',
     format: ['cjs', 'es', 'umd', 'umd-min'],
     moduleName: 'vtils',
+    sourceMap: false,
+  },
+  babel: {
+    minimal: true,
+    objectAssign: '__OBJECT_ASSIGN__',
   },
 }
 
