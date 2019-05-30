@@ -1,4 +1,3 @@
-import { AnyFunction } from './enhanceType'
 import { getGlobal } from './env'
 import { getType } from './getType'
 import { ii } from './ii'
@@ -209,7 +208,7 @@ export function isFinite(value: any): value is number {
  * @param value 要检查的值
  * @returns `value` 是函数返回 `true`，否则返回 `false`
  */
-export function isFunction<T extends AnyFunction = AnyFunction>(value: any): value is T {
+export function isFunction(value: any): value is Function {
   return typeof value === 'function'
 }
 
