@@ -9,7 +9,13 @@ test('表现正常', async () => {
 
   disposer.add(dispose1)
   disposer.add(dispose1)
-  disposer.add(dispose2, dispose3)
+  disposer.add([dispose2, dispose3, dispose1])
+
+  await disposer.dispose()
+
+  expect(dispose1).toBeCalledTimes(1)
+  expect(dispose2).toBeCalledTimes(1)
+  expect(dispose3).toBeCalledTimes(1)
 
   await disposer.dispose()
 

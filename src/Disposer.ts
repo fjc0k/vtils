@@ -1,4 +1,5 @@
-import { isPromiseLike } from './is'
+import { castArray } from './castArray'
+import { parallel } from './parallel'
 
 /**
  * 待释放项目。
@@ -17,10 +18,10 @@ export class Disposer {
   /**
    * 新增待释放项目。
    *
-   * @param items 待释放项目的序列
+   * @param item 待释放项目
    */
-  add(...items: DisposerItem[]) {
-    items.forEach(item => {
+  add(item: DisposerItem | DisposerItem[]) {
+    castArray(item).forEach(item => {
       if (this.jar.indexOf(item) === -1) {
         this.jar.push(item)
       }
@@ -31,20 +32,8 @@ export class Disposer {
    * 释放所有项目。
    */
   dispose() {
-    return (
-      Promise
-        .all(
-          this.jar.map(item => {
-            const result = item()
-            if (isPromiseLike(result)) {
-              return result
-            }
-            return Promise.resolve()
-          }),
-        )
-        .then(() => {
-          this.jar = []
-        })
-    )
+    return parallel(this.jar).then(() => {
+      this.jar = []
+    })
   }
 }
