@@ -31,7 +31,6 @@
     "url": "https://github.com/fjc0k"
   },
   "scripts": {
-    "prepublishOnly": "yarn lib:build && yarn publish:docs && yarn publish:git",
     "docs:build": "yarn ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildDocs.ts",
     "lib:lint": "eslint --fix --ext .ts src/ scripts/",
     "lib:test": "jest",
@@ -41,8 +40,11 @@
     "publish:docs": "yarn docs:build && gh-pages -d .typedoc",
     "publish:npm:latest": "npm publish",
     "publish:npm:next": "npm publish --tag=next",
+    "release:major:beta": "standard-version -a --no-verify --prerelease beta --release-as major && yarn publish:npm:next",
+    "release:major:latest": "standard-version -a --no-verify --release-as major && yarn publish:npm:latest",
     "release:beta": "standard-version -a --no-verify --prerelease beta && yarn publish:npm:next",
-    "release:latest": "standard-version -a --no-verify && yarn publish:npm:latest"
+    "release:latest": "standard-version -a --no-verify && yarn publish:npm:latest",
+    "prepublishOnly": "yarn lib:build && yarn publish:docs && yarn publish:git"
   },
   "eslintConfig": {
     "root": true,
