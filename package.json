@@ -36,7 +36,10 @@
     "lib:test": "jest",
     "lib:cov": "jest --coverage",
     "lib:build": "yarn ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildLib.ts",
-    "release": "standard-version -a && git push --follow-tags origin master && yarn buildLib && yarn docs && gh-pages -d .typedoc && npm publish"
+    "all:publish": "yarn lib:build && yarn docs:build && gh-pages -d .typedoc && git push --follow-tags origin master && npm publish",
+    "release:alpha": "standard-version -a --prerelease alpha && yarn all:publish",
+    "release:beta": "standard-version -a --prerelease beta && yarn all:publish",
+    "release:latest": "standard-version -a && yarn all:publish"
   },
   "eslintConfig": {
     "root": true,
