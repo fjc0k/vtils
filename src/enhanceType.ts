@@ -60,4 +60,18 @@ export type IsNever<T> = [T] extends [never] ? true : false
 
 export type If<Condition, Then, Else> = Condition extends true ? Then : Else
 
+/**
+ * 从 `T` 中排除 `undefined` 类型。
+ *
+ * @example
+ * ```ts
+ * interface User {
+ *   gender?: 'male' | 'female',
+ * }
+ * // before
+ * type UserGender = Exclude<User['gender'], undefined>
+ * // after
+ * type UserGender = Defined<User['gender']>
+ * ```
+ */
 export type Defined<T> = Exclude<T, undefined>

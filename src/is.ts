@@ -7,6 +7,11 @@ import { ii } from './ii'
  *
  * @param value 要检查的值
  * @returns `value` 是数组返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isArray(['x']) // => true
+ * isArray('x') // => false
+ * ```
  */
 export function isArray(value: any): value is any[] {
   return Array.isArray(value)
@@ -17,18 +22,28 @@ export function isArray(value: any): value is any[] {
  *
  * @param value 要检查的值
  * @returns `value` 是布尔值返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isBoolean(true) // => true
+ * isBoolean(false) // => true
+ * isBoolean('true') // => false
+ * ```
  */
 export function isBoolean(value: any): value is boolean {
   return typeof value === 'boolean'
 }
 
 /**
- * 检测 `value` 是否是中国大陆身份证号码。
+ * 检查 `value` 是否是合法的中国大陆居民 `18` 位身份证号码。
  *
- * @param value 要检测的值
- * @returns `value` 是中国大陆身份证号码返回 `true`，否则返回 `false`
+ * @param value 要检查的值
+ * @returns `value` 是合法的中国大陆居民 `18` 位身份证号码返回 `true`，否则返回 `false`
  * @see https://my.oschina.net/labrusca/blog/306116
  * @see http://developer.51cto.com/art/201803/568755.htm
+ * @example
+ * ```ts
+ * isChineseIDCardNumber('123456') // => false
+ * ```
  */
 export function isChineseIDCardNumber(value: string): boolean {
   const testRegExp = /^[1-9]([0-9]{14}|[0-9]{16}[0-9Xx])$/
@@ -43,6 +58,7 @@ export function isChineseIDCardNumber(value: string): boolean {
         && date.getMonth() + 1 === month
         && date.getDate() === day
         && date.getTime() < new Date().getTime()
+        && year > 1900
     )
   }
 
@@ -301,6 +317,12 @@ export function isNull(value: any): value is null {
  *
  * @param value 要检查的值
  * @returns `value` 是数字返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isNumber(1) // => true
+ * isNumber(0.1) // => true
+ * isNumber('1') // => false
+ * ```
  */
 export function isNumber(value: any): value is number {
   return typeof value === 'number' && !isNaN(value)

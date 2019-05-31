@@ -8,6 +8,19 @@ export type DisposerItem = () => void | Promise<void>
 
 /**
  * 资源释放器。
+ *
+ * @example
+ * ```js
+ * const disposer = new Disposer()
+ * const timer = setInterval(
+ *   () => console.log('ok'),
+ *   1000,
+ * )
+ * disposer.add(() => clearInterval(timer))
+ * document.querySelector('#stop').onclick = () => {
+ *   disposer.dispose()
+ * }
+ * ```
  */
 export class Disposer {
   /**

@@ -4,4 +4,4 @@ node_modules
 .rpt2_cache
 coverage
 lib
-docs
+.typedoc

@@ -62,6 +62,8 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
       '469001399208187005',
       '46900119925818180x',
       '530627199508918277',
+      '110106100001019457', // 1000 年
+      '140425900001017773', // 9000 年
     ].forEach(item => {
       expect(isChineseIDCardNumber(item)).toBeFalsy()
     })
