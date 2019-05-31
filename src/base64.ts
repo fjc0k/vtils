@@ -109,6 +109,12 @@ function prepare() {
  *
  * @param input 要编码的字符串
  * @returns 返回编码后的 `base64` 字符串
+ * @example
+ * ```ts
+ * base64Encode('vtils') // => dnRpbHM=
+ * base64Encode('中国') // => 5Lit5Zu9
+ * base64Encode('👨‍💻') // => 8J+RqOKAjfCfkrs=
+ * ```
  */
 export function base64Encode(input: string): string {
   if (inNode()) {
@@ -125,6 +131,12 @@ export function base64Encode(input: string): string {
  *
  * @param input 要解码的 `base64` 字符串
  * @returns 返回解码后的字符串
+ * @example
+ * ```ts
+ * base64Decode('dnRpbHM=') // => vtils
+ * base64Decode('5Lit5Zu9') // => 中国
+ * base64Decode('8J+RqOKAjfCfkrs=') // => 👨‍💻
+ * ```
  */
 export function base64Decode(input: string): string {
   if (inNode()) {
@@ -143,6 +155,12 @@ export function base64Decode(input: string): string {
  * @param input 要编码的字符串
  * @returns 返回编码后的 `base64url` 字符串
  * @see http://www.ietf.org/rfc/rfc4648.txt
+ * @example
+ * ```ts
+ * base64UrlEncode('vtils') // => dnRpbHM=
+ * base64UrlEncode('中国') // => 5Lit5Zu9
+ * base64UrlEncode('👨‍💻') // => 8J-RqOKAjfCfkrs=
+ * ```
  */
 export function base64UrlEncode(input: string): string {
   return base64Encode(input)
@@ -157,6 +175,12 @@ export function base64UrlEncode(input: string): string {
  * @param input 要解码的 `base64url` 字符串
  * @returns 返回解码后的字符串
  * @see http://www.ietf.org/rfc/rfc4648.txt
+ * @example
+ * ```ts
+ * base64Decode('dnRpbHM=') // => vtils
+ * base64Decode('5Lit5Zu9') // => 中国
+ * base64Decode('8J-RqOKAjfCfkrs=') // => 👨‍💻
+ * ```
  */
 export function base64UrlDecode(input: string): string {
   return base64Decode(input.replace(/-/g, '+').replace(/_/g, '/'))

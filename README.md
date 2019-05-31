@@ -43,11 +43,26 @@ alert(shuffle([1, 2, 3, 4]))
 
 来源对象的应用规则是从左到右，随后的下一个对象的属性会覆盖上一个对象的属性。
 
+```ts
+assign(
+  {},
+  { x: 1 },
+  { y: 2 },
+  { x: 5, z: 9 },
+) // => { x: 5, y: 2, z: 9 }
+```
+
 #### 💡 base64Decode
 
 <small>[源码]() | [API]()</small>
 
 返回 `base64` 解码后的字符串。
+
+```ts
+base64Decode('dnRpbHM=') // => vtils
+base64Decode('5Lit5Zu9') // => 中国
+base64Decode('8J+RqOKAjfCfkrs=') // => 👨‍💻
+```
 
 #### 💡 base64Encode
 
@@ -55,17 +70,35 @@ alert(shuffle([1, 2, 3, 4]))
 
 返回 `base64` 编码后的字符串。
 
+```ts
+base64Encode('vtils') // => dnRpbHM=
+base64Encode('中国') // => 5Lit5Zu9
+base64Encode('👨‍💻') // => 8J+RqOKAjfCfkrs=
+```
+
 #### 💡 base64UrlDecode
 
 <small>[源码]() | [API]()</small>
 
 返回 `base64url` 解码后的字符串。
 
+```ts
+base64Decode('dnRpbHM=') // => vtils
+base64Decode('5Lit5Zu9') // => 中国
+base64Decode('8J-RqOKAjfCfkrs=') // => 👨‍💻
+```
+
 #### 💡 base64UrlEncode
 
 <small>[源码]() | [API]()</small>
 
 返回 `base64url` 编码后的字符串。
+
+```ts
+base64UrlEncode('vtils') // => dnRpbHM=
+base64UrlEncode('中国') // => 5Lit5Zu9
+base64UrlEncode('👨‍💻') // => 8J-RqOKAjfCfkrs=
+```
 
 #### 💡 castArray
 
