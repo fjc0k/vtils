@@ -40,10 +40,10 @@
     "publish:docs": "yarn docs:build && gh-pages -d .typedoc",
     "publish:npm:latest": "npm publish",
     "publish:npm:next": "npm publish --tag=next",
-    "release:major:beta": "standard-version -a --no-verify --prerelease beta --release-as major && yarn publish:npm:next",
-    "release:major:latest": "standard-version -a --no-verify --release-as major && yarn publish:npm:latest",
-    "release:beta": "standard-version -a --no-verify --prerelease beta && yarn publish:npm:next",
-    "release:latest": "standard-version -a --no-verify && yarn publish:npm:latest",
+    "release:major:beta": "standard-version -a --no-verify --prerelease beta --release-as major && npm run publish:npm:next",
+    "release:major:latest": "standard-version -a --no-verify --release-as major && npm run publish:npm:latest",
+    "release:beta": "standard-version -a --no-verify --prerelease beta && npm run publish:npm:next",
+    "release:latest": "standard-version -a --no-verify && npm run publish:npm:latest",
     "prepublishOnly": "yarn lib:build && yarn publish:docs && yarn publish:git"
   },
   "eslintConfig": {
