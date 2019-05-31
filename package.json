@@ -108,7 +108,7 @@
     "ts-jest": "^24.0.2",
     "ts-node": "^8.0.2",
     "typed-we-app": "^1.7.0-update.6",
-    "typedoc": "^0.14.2",
+    "typedoc": "^0.15.0-0",
     "typescript": "^3.4.5"
   }
 }

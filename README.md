@@ -21,13 +21,11 @@ npm i vtils --save
 ## 使用
 
 ```js
-import { inBrowser, isChinesePhoneNumber, shuffle } from 'vtils'
+import { inBrowser,shuffle } from 'vtils'
 
 if (inBrowser()) {
   alert('您在浏览器中...')
 }
-
-alert(isChinesePhoneNumber('15974872222'))
 
 alert(shuffle([1, 2, 3, 4]))
 ```
