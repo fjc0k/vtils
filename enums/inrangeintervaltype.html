@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Disposer | vtils</title>
+	<title>InRangeIntervalType | vtils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2377,14 +2377,20 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-class tsd-is-external">
-			<a href="disposer.html" class="tsd-kind-icon">Disposer</a>
+		<li class="current tsd-kind-enum tsd-is-external">
+			<a href="inrangeintervaltype.html" class="tsd-kind-icon">In<wbr>Range<wbr>Interval<wbr>Type</a>
 			<ul>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="disposer.html#add" class="tsd-kind-icon">add</a>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+					<a href="inrangeintervaltype.html#closed" class="tsd-kind-icon">closed</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="disposer.html#dispose" class="tsd-kind-icon">dispose</a>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+					<a href="inrangeintervaltype.html#leftclosedrightopen" class="tsd-kind-icon">left<wbr>Closed<wbr>Right<wbr>Open</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+					<a href="inrangeintervaltype.html#leftopenrightclosed" class="tsd-kind-icon">left<wbr>Open<wbr>Right<wbr>Closed</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+					<a href="inrangeintervaltype.html#open" class="tsd-kind-icon">open</a>
 				</li>
 			</ul>
 		</li>
@@ -2395,99 +2401,87 @@ img {
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p>资源释放器。</p>
+					<p>区间类型</p>
 				</div>
-				<dl class="tsd-comment-tags">
-					<dt>example</dt>
-					<dd><pre><code class="language-js"><span class="hljs-keyword">const</span> disposer = <span class="hljs-keyword">new</span> Disposer()
-<span class="hljs-keyword">const</span> timer = setInterval(
-  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ok'</span>),
-  <span class="hljs-number">1000</span>,
-)
-disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> clearInterval(timer))
-<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#stop'</span>).onclick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  disposer.dispose()
-}</code></pre>
-					</dd>
-				</dl>
 			</div>
-		</section>
-		<section class="tsd-panel tsd-hierarchy">
-			<h3>Hierarchy</h3>
-			<ul class="tsd-hierarchy">
-				<li>
-					<span class="target">Disposer</span>
-				</li>
-			</ul>
 		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section tsd-is-external">
-						<h3>Methods</h3>
+						<h3>Enumeration members</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="disposer.html#add" class="tsd-kind-icon">add</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="disposer.html#dispose" class="tsd-kind-icon">dispose</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external"><a href="inrangeintervaltype.html#closed" class="tsd-kind-icon">closed</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external"><a href="inrangeintervaltype.html#leftclosedrightopen" class="tsd-kind-icon">left<wbr>Closed<wbr>Right<wbr>Open</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external"><a href="inrangeintervaltype.html#leftopenrightclosed" class="tsd-kind-icon">left<wbr>Open<wbr>Right<wbr>Closed</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external"><a href="inrangeintervaltype.html#open" class="tsd-kind-icon">open</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="add" class="tsd-anchor"></a>
-				<h3>add</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/Disposer.ts#L36">Disposer.ts:36</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>新增待释放项目。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>item: <a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol">[]</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>待释放项目</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-					</li>
-				</ul>
+			<h2>Enumeration members</h2>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+				<a name="closed" class="tsd-anchor"></a>
+				<h3>closed</h3>
+				<div class="tsd-signature tsd-kind-icon">closed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;closed&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/inRange.ts#L6">inRange.ts:6</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>闭区间，即：<code>[start, end]</code></p>
+					</div>
+				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="dispose" class="tsd-anchor"></a>
-				<h3>dispose</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/Disposer.ts#L47">Disposer.ts:47</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>释放所有项目。</p>
-							</div>
-						</div>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+				<a name="leftclosedrightopen" class="tsd-anchor"></a>
+				<h3>left<wbr>Closed<wbr>Right<wbr>Open</h3>
+				<div class="tsd-signature tsd-kind-icon">left<wbr>Closed<wbr>Right<wbr>Open<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;leftClosedRightOpen&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/inRange.ts#L10">inRange.ts:10</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>左闭右开区间，即：<code>[start, end)</code></p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+				<a name="leftopenrightclosed" class="tsd-anchor"></a>
+				<h3>left<wbr>Open<wbr>Right<wbr>Closed</h3>
+				<div class="tsd-signature tsd-kind-icon">left<wbr>Open<wbr>Right<wbr>Closed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;leftOpenRightClosed&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/inRange.ts#L8">inRange.ts:8</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>左开右闭区间，即：<code>(start, end]</code></p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-external">
+				<a name="open" class="tsd-anchor"></a>
+				<h3>open</h3>
+				<div class="tsd-signature tsd-kind-icon">open<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;open&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/inRange.ts#L4">inRange.ts:4</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>开区间，即：<code>(start, end)</code></p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Disposer | vtils</title>
+	<title>EasyValidatorRule | vtils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2377,14 +2377,23 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-class tsd-is-external">
-			<a href="disposer.html" class="tsd-kind-icon">Disposer</a>
+		<li class="current tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+			<a href="easyvalidatorrule.html" class="tsd-kind-icon">Easy<wbr>Validator<wbr>Rule</a>
 			<ul>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="disposer.html#add" class="tsd-kind-icon">add</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="easyvalidatorrule.html#key" class="tsd-kind-icon">key</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="disposer.html#dispose" class="tsd-kind-icon">dispose</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="easyvalidatorrule.html#message" class="tsd-kind-icon">message</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="easyvalidatorrule.html#required" class="tsd-kind-icon">required</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="easyvalidatorrule.html#test" class="tsd-kind-icon">test</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="easyvalidatorrule.html#type" class="tsd-kind-icon">type</a>
 				</li>
 			</ul>
 		</li>
@@ -2392,31 +2401,19 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<section class="tsd-panel tsd-comment">
-			<div class="tsd-comment tsd-typography">
-				<div class="lead">
-					<p>资源释放器。</p>
-				</div>
-				<dl class="tsd-comment-tags">
-					<dt>example</dt>
-					<dd><pre><code class="language-js"><span class="hljs-keyword">const</span> disposer = <span class="hljs-keyword">new</span> Disposer()
-<span class="hljs-keyword">const</span> timer = setInterval(
-  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ok'</span>),
-  <span class="hljs-number">1000</span>,
-)
-disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> clearInterval(timer))
-<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#stop'</span>).onclick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  disposer.dispose()
-}</code></pre>
-					</dd>
-				</dl>
-			</div>
+		<section class="tsd-panel tsd-type-parameters">
+			<h3>Type parameters</h3>
+			<ul class="tsd-type-parameters">
+				<li>
+					<h4>D<span class="tsd-signature-symbol">: </span><a href="../globals.html#easyvalidatordata" class="tsd-signature-type">EasyValidatorData</a></h4>
+				</li>
+			</ul>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">Disposer</span>
+					<span class="target">EasyValidatorRule</span>
 				</li>
 			</ul>
 		</section>
@@ -2425,69 +2422,94 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section tsd-is-external">
-						<h3>Methods</h3>
+						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="disposer.html#add" class="tsd-kind-icon">add</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="disposer.html#dispose" class="tsd-kind-icon">dispose</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorrule.html#key" class="tsd-kind-icon">key</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorrule.html#message" class="tsd-kind-icon">message</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorrule.html#required" class="tsd-kind-icon">required</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorrule.html#test" class="tsd-kind-icon">test</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorrule.html#type" class="tsd-kind-icon">type</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="add" class="tsd-anchor"></a>
-				<h3>add</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/Disposer.ts#L36">Disposer.ts:36</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>新增待释放项目。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>item: <a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol">[]</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>待释放项目</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-					</li>
-				</ul>
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="key" class="tsd-anchor"></a>
+				<h3>key</h3>
+				<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof D</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyValidator.ts#L23">EasyValidator.ts:23</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>要验证字段在数据对象中的键名</p>
+					</div>
+				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="dispose" class="tsd-anchor"></a>
-				<h3>dispose</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/Disposer.ts#L47">Disposer.ts:47</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>释放所有项目。</p>
-							</div>
-						</div>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="message" class="tsd-anchor"></a>
+				<h3>message</h3>
+				<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyValidator.ts#L42">EasyValidator.ts:42</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>提示信息</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="required" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> required</h3>
+				<div class="tsd-signature tsd-kind-icon">required<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyValidator.ts#L35">EasyValidator.ts:35</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>是否必填</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="test" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> test</h3>
+				<div class="tsd-signature tsd-kind-icon">test<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> | </span><a href="easyvalidatorruletestfunction.html" class="tsd-signature-type">EasyValidatorRuleTestFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyValidator.ts#L37">EasyValidator.ts:37</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>自定义测试，支持正则、同步函数、异步函数</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="type" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> type</h3>
+				<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"integer"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chineseMobilePhoneNumber"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chineseIdCardNumber"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"url"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"email"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chineseName"</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyValidator.ts#L25">EasyValidator.ts:25</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>验证类型</p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">

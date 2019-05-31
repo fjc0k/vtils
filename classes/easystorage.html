@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Disposer | vtils</title>
+	<title>EasyStorage | vtils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2377,14 +2377,41 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-class tsd-is-external">
-			<a href="disposer.html" class="tsd-kind-icon">Disposer</a>
+		<li class="current tsd-kind-class tsd-has-type-parameter tsd-is-external">
+			<a href="easystorage.html" class="tsd-kind-icon">Easy<wbr>Storage</a>
 			<ul>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="disposer.html#add" class="tsd-kind-icon">add</a>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+					<a href="easystorage.html#constructor" class="tsd-kind-icon">constructor</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="disposer.html#dispose" class="tsd-kind-icon">dispose</a>
+					<a href="easystorage.html#clear" class="tsd-kind-icon">clear</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorage.html#clearsync" class="tsd-kind-icon">clear<wbr>Sync</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<a href="easystorage.html#get" class="tsd-kind-icon">get</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<a href="easystorage.html#getremember" class="tsd-kind-icon">get<wbr>Remember</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<a href="easystorage.html#getremembersync" class="tsd-kind-icon">get<wbr>Remember<wbr>Sync</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<a href="easystorage.html#getsync" class="tsd-kind-icon">get<wbr>Sync</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorage.html#remove" class="tsd-kind-icon">remove</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorage.html#removesync" class="tsd-kind-icon">remove<wbr>Sync</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorage.html#set" class="tsd-kind-icon">set</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorage.html#setsync" class="tsd-kind-icon">set<wbr>Sync</a>
 				</li>
 			</ul>
 		</li>
@@ -2392,31 +2419,22 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<section class="tsd-panel tsd-comment">
-			<div class="tsd-comment tsd-typography">
-				<div class="lead">
-					<p>资源释放器。</p>
-				</div>
-				<dl class="tsd-comment-tags">
-					<dt>example</dt>
-					<dd><pre><code class="language-js"><span class="hljs-keyword">const</span> disposer = <span class="hljs-keyword">new</span> Disposer()
-<span class="hljs-keyword">const</span> timer = setInterval(
-  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ok'</span>),
-  <span class="hljs-number">1000</span>,
-)
-disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> clearInterval(timer))
-<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#stop'</span>).onclick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  disposer.dispose()
-}</code></pre>
-					</dd>
-				</dl>
-			</div>
+		<section class="tsd-panel tsd-type-parameters">
+			<h3>Type parameters</h3>
+			<ul class="tsd-type-parameters">
+				<li>
+					<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+				</li>
+				<li>
+					<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Extract</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+				</li>
+			</ul>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">Disposer</span>
+					<span class="target">EasyStorage</span>
 				</li>
 			</ul>
 		</section>
@@ -2425,42 +2443,259 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section tsd-is-external">
+						<h3>Constructors</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="easystorage.html#constructor" class="tsd-kind-icon">constructor</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-external">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="disposer.html#add" class="tsd-kind-icon">add</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="disposer.html#dispose" class="tsd-kind-icon">dispose</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorage.html#clear" class="tsd-kind-icon">clear</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorage.html#clearsync" class="tsd-kind-icon">clear<wbr>Sync</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external"><a href="easystorage.html#get" class="tsd-kind-icon">get</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external"><a href="easystorage.html#getremember" class="tsd-kind-icon">get<wbr>Remember</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external"><a href="easystorage.html#getremembersync" class="tsd-kind-icon">get<wbr>Remember<wbr>Sync</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external"><a href="easystorage.html#getsync" class="tsd-kind-icon">get<wbr>Sync</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorage.html#remove" class="tsd-kind-icon">remove</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorage.html#removesync" class="tsd-kind-icon">remove<wbr>Sync</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorage.html#set" class="tsd-kind-icon">set</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorage.html#setsync" class="tsd-kind-icon">set<wbr>Sync</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="add" class="tsd-anchor"></a>
-				<h3>add</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+			<h2>Constructors</h2>
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+				<a name="constructor" class="tsd-anchor"></a>
+				<h3>constructor</h3>
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Easy<wbr>Storage<span class="tsd-signature-symbol">(</span>adapter<span class="tsd-signature-symbol">: </span><a href="easystorageadapter.html" class="tsd-signature-type">EasyStorageAdapter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="easystorage.html" class="tsd-signature-type">EasyStorage</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/Disposer.ts#L36">Disposer.ts:36</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L7">EasyStorage/EasyStorage.ts:7</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>新增待释放项目。</p>
-							</div>
-						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>item: <a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol">[]</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>待释放项目</p>
-								</div>
+								<h5>adapter: <a href="easystorageadapter.html" class="tsd-signature-type">EasyStorageAdapter</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="easystorage.html" class="tsd-signature-type">EasyStorage</a></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-external">
+			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="clear" class="tsd-anchor"></a>
+				<h3>clear</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L77">EasyStorage/EasyStorage.ts:77</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="clearsync" class="tsd-anchor"></a>
+				<h3>clear<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">clear<wbr>Sync<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L81">EasyStorage/EasyStorage.ts:81</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+				<a name="get" class="tsd-anchor"></a>
+				<h3>get</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">get&lt;DV&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span>, defaultValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L18">EasyStorage/EasyStorage.ts:18</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>DV<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> defaultValue: <span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol"> =&nbsp;null as any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+				<a name="getremember" class="tsd-anchor"></a>
+				<h3>get<wbr>Remember</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Remember&lt;DV&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span>, defaultValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L46">EasyStorage/EasyStorage.ts:46</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>DV<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> defaultValue: <span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol"> =&nbsp;null as any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+				<a name="getremembersync" class="tsd-anchor"></a>
+				<h3>get<wbr>Remember<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Remember<wbr>Sync&lt;DV&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span>, defaultValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L58">EasyStorage/EasyStorage.ts:58</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>DV<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> defaultValue: <span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol"> =&nbsp;null as any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T[K]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+				<a name="getsync" class="tsd-anchor"></a>
+				<h3>get<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Sync&lt;DV&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span>, defaultValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L35">EasyStorage/EasyStorage.ts:35</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>DV<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> defaultValue: <span class="tsd-signature-type">DV</span><span class="tsd-signature-symbol"> =&nbsp;null as any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T[K]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="remove" class="tsd-anchor"></a>
+				<h3>remove</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L69">EasyStorage/EasyStorage.ts:69</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="removesync" class="tsd-anchor"></a>
+				<h3>remove<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">remove<wbr>Sync<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L73">EasyStorage/EasyStorage.ts:73</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2468,24 +2703,54 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="dispose" class="tsd-anchor"></a>
-				<h3>dispose</h3>
+				<a name="set" class="tsd-anchor"></a>
+				<h3>set</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/Disposer.ts#L47">Disposer.ts:47</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L10">EasyStorage/EasyStorage.ts:10</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>释放所有项目。</p>
-							</div>
-						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
+							</li>
+							<li>
+								<h5>value: <span class="tsd-signature-type">T[K]</span></h5>
+							</li>
+						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="setsync" class="tsd-anchor"></a>
+				<h3>set<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">set<wbr>Sync<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T[K]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorage.ts#L14">EasyStorage/EasyStorage.ts:14</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">K</span></h5>
+							</li>
+							<li>
+								<h5>value: <span class="tsd-signature-type">T[K]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 					</li>
 				</ul>
 			</section>

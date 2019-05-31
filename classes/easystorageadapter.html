@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Disposer | vtils</title>
+	<title>EasyStorageAdapter | vtils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2378,13 +2378,31 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-class tsd-is-external">
-			<a href="disposer.html" class="tsd-kind-icon">Disposer</a>
+			<a href="easystorageadapter.html" class="tsd-kind-icon">Easy<wbr>Storage<wbr>Adapter</a>
 			<ul>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="disposer.html#add" class="tsd-kind-icon">add</a>
+					<a href="easystorageadapter.html#clear" class="tsd-kind-icon">clear</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="disposer.html#dispose" class="tsd-kind-icon">dispose</a>
+					<a href="easystorageadapter.html#clearsync" class="tsd-kind-icon">clear<wbr>Sync</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorageadapter.html#get" class="tsd-kind-icon">get</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorageadapter.html#getsync" class="tsd-kind-icon">get<wbr>Sync</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorageadapter.html#remove" class="tsd-kind-icon">remove</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorageadapter.html#removesync" class="tsd-kind-icon">remove<wbr>Sync</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorageadapter.html#set" class="tsd-kind-icon">set</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="easystorageadapter.html#setsync" class="tsd-kind-icon">set<wbr>Sync</a>
 				</li>
 			</ul>
 		</li>
@@ -2392,31 +2410,22 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<section class="tsd-panel tsd-comment">
-			<div class="tsd-comment tsd-typography">
-				<div class="lead">
-					<p>资源释放器。</p>
-				</div>
-				<dl class="tsd-comment-tags">
-					<dt>example</dt>
-					<dd><pre><code class="language-js"><span class="hljs-keyword">const</span> disposer = <span class="hljs-keyword">new</span> Disposer()
-<span class="hljs-keyword">const</span> timer = setInterval(
-  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ok'</span>),
-  <span class="hljs-number">1000</span>,
-)
-disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> clearInterval(timer))
-<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#stop'</span>).onclick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  disposer.dispose()
-}</code></pre>
-					</dd>
-				</dl>
-			</div>
-		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">Disposer</span>
+					<span class="target">EasyStorageAdapter</span>
+					<ul class="tsd-hierarchy">
+						<li>
+							<a href="easystorageadapterbrowser.html" class="tsd-signature-type">EasyStorageAdapterBrowser</a>
+						</li>
+						<li>
+							<a href="easystorageadaptermemory.html" class="tsd-signature-type">EasyStorageAdapterMemory</a>
+						</li>
+						<li>
+							<a href="easystorageadapterweapp.html" class="tsd-signature-type">EasyStorageAdapterWeapp</a>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -2427,8 +2436,14 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 					<section class="tsd-index-section tsd-is-external">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="disposer.html#add" class="tsd-kind-icon">add</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="disposer.html#dispose" class="tsd-kind-icon">dispose</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorageadapter.html#clear" class="tsd-kind-icon">clear</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorageadapter.html#clearsync" class="tsd-kind-icon">clear<wbr>Sync</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorageadapter.html#get" class="tsd-kind-icon">get</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorageadapter.html#getsync" class="tsd-kind-icon">get<wbr>Sync</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorageadapter.html#remove" class="tsd-kind-icon">remove</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorageadapter.html#removesync" class="tsd-kind-icon">remove<wbr>Sync</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorageadapter.html#set" class="tsd-kind-icon">set</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="easystorageadapter.html#setsync" class="tsd-kind-icon">set<wbr>Sync</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2437,30 +2452,125 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
 			<h2>Methods</h2>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="add" class="tsd-anchor"></a>
-				<h3>add</h3>
+				<a name="clear" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> clear</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/Disposer.ts#L36">Disposer.ts:36</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorageAdapter.ts#L14">EasyStorage/EasyStorageAdapter.ts:14</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>新增待释放项目。</p>
-							</div>
-						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="clearsync" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> clear<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">clear<wbr>Sync<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorageAdapter.ts#L16">EasyStorage/EasyStorageAdapter.ts:16</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="get" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> get</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>k<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorageAdapter.ts#L6">EasyStorage/EasyStorageAdapter.ts:6</a></li>
+							</ul>
+						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>item: <a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#disposeritem" class="tsd-signature-type">DisposerItem</a><span class="tsd-signature-symbol">[]</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>待释放项目</p>
-								</div>
+								<h5>k: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="getsync" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> get<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Sync<span class="tsd-signature-symbol">(</span>k<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorageAdapter.ts#L8">EasyStorage/EasyStorageAdapter.ts:8</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>k: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="remove" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> remove</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>k<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorageAdapter.ts#L10">EasyStorage/EasyStorageAdapter.ts:10</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>k: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="removesync" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> remove<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">remove<wbr>Sync<span class="tsd-signature-symbol">(</span>k<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorageAdapter.ts#L12">EasyStorage/EasyStorageAdapter.ts:12</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>k: <span class="tsd-signature-type">string</span></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2468,24 +2578,54 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="dispose" class="tsd-anchor"></a>
-				<h3>dispose</h3>
+				<a name="set" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> set</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">(</span>k<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/Disposer.ts#L47">Disposer.ts:47</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorageAdapter.ts#L2">EasyStorage/EasyStorageAdapter.ts:2</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>释放所有项目。</p>
-							</div>
-						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>k: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5>v: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="setsync" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> set<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">set<wbr>Sync<span class="tsd-signature-symbol">(</span>k<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/08a4af3/src/EasyStorage/EasyStorageAdapter.ts#L4">EasyStorage/EasyStorageAdapter.ts:4</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>k: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5>v: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 					</li>
 				</ul>
 			</section>
