@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name=""></a>
+# [](https://github.com/fjc0k/vtils/compare/v1.6.3...v) (2019-05-31)
+
+
+### Bug Fixes
+
+* 解决 env.ts 与 is.ts 的相互依赖 ([4357650](https://github.com/fjc0k/vtils/commit/4357650))
+
+
+### Features
+
+* 删除 onResize ([35c7c52](https://github.com/fjc0k/vtils/commit/35c7c52))
+* 完成文档生成脚本 ([7526e59](https://github.com/fjc0k/vtils/commit/7526e59))
+* **Disposer:** API 优化 ([e083763](https://github.com/fjc0k/vtils/commit/e083763))
+* **env:** 状态独立 & 添加 clearCache 方法 ([da8fef0](https://github.com/fjc0k/vtils/commit/da8fef0))
+* 打包优化 ([048d154](https://github.com/fjc0k/vtils/commit/048d154))
+* 新增 assign ([664b634](https://github.com/fjc0k/vtils/commit/664b634))
+* 新增 round, roundUp, roundDown ([91cfa4b](https://github.com/fjc0k/vtils/commit/91cfa4b))
+* 构建流程优化 ([88daef3](https://github.com/fjc0k/vtils/commit/88daef3))
+* 重构基本完成 ([6ac8b34](https://github.com/fjc0k/vtils/commit/6ac8b34))
+
+
+
 <a name="1.6.3"></a>
 ## [1.6.3](https://github.com/fjc0k/vtils/compare/v1.6.2...v1.6.3) (2019-05-22)
 
