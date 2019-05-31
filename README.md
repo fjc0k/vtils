@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://badgen.net/npm/v/vtils" alt="License"> <a href="https://travis-ci.org/fjc0k/vtils"><img src="https://travis-ci.org/fjc0k/vtils.svg?branch=master" alt="Build Status"></a> <a href="https://codecov.io/gh/fjc0k/vtils"><img src="https://codecov.io/gh/fjc0k/vtils/branch/master/graph/badge.svg" alt="Coverage Status"></a> <img src="https://badgen.net/bundlephobia/min/vtils" alt="Size"> <img src="https://badgen.net/bundlephobia/minzip/vtils" alt="Gzip Size"> <img src="https://badgen.net/github/license/fjc0k/vtils" alt="License"></p>
 
-<h2 align="center">一些常用的 JavaScript 工具函数</h2>
+<h2 align="center">小巧实用的 JavaScript 工具类库。</h2>
 
 <p align="center">
   <a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/</a>
@@ -19,6 +19,8 @@ npm i vtils --save
 ```
 
 ## 使用
+
+在线体验：[https://stackblitz.com/edit/vtils](https://stackblitz.com/edit/vtils)
 
 ```js
 import { inBrowser,shuffle } from 'vtils'
