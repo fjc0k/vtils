@@ -16,6 +16,7 @@ type Data = {
   pass1?: string,
   pass2?: string,
   required: string,
+  updateMessage: string,
 }
 
 test('综合测试', async () => {
@@ -67,32 +68,42 @@ test('综合测试', async () => {
     },
     {
       key: 'customSyncFn',
-      test: value => /abc/.test(value),
+      test: ({ customSyncFn }) => /abc/.test(customSyncFn!),
       message: '请输入包含abc的文字',
     },
     {
       key: 'customAsyncFn',
-      test: async value => {
+      test: async ({ customAsyncFn }) => {
         await wait(500)
-        return /abc/.test(value)
+        return /abc/.test(customAsyncFn!)
       },
       message: '请输入包含abc的文字',
     },
     {
       key: 'pass1',
       required: true,
-      test: value => value.length > 6,
+      test: ({ pass1 }) => pass1!.length > 6,
       message: '请输入大于6位的密码',
     },
     {
       key: 'pass2',
-      test: (value, data) => value === data.pass1,
+      test: ({ pass1, pass2 }) => pass2 === pass1,
       message: '请输入和密码一相同的密码',
     },
     {
       key: 'required',
       required: true,
       message: '请输入',
+    },
+    {
+      key: 'updateMessage',
+      test: (_, { updateMessage }) => {
+        if (_.updateMessage !== 'x') {
+          updateMessage('出错啦')
+          return false
+        }
+      },
+      message: 'x',
     },
   ]
 
@@ -113,6 +124,7 @@ test('综合测试', async () => {
       pass1: '1234567',
       pass2: '1234567',
       required: 'req',
+      updateMessage: 'x',
     }),
     {
       valid: true,
@@ -135,6 +147,7 @@ test('综合测试', async () => {
       pass1: '1234567',
       pass2: '12345678', // 12
       required: undefined as any, // 13
+      updateMessage: 'y', // 14
     }),
     {
       valid: false,
@@ -145,6 +158,10 @@ test('综合测试', async () => {
         rules[10],
         rules[12],
         rules[13],
+        {
+          ...rules[14],
+          message: '出错啦',
+        },
       ],
     },
   )

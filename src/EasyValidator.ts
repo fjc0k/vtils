@@ -1,21 +1,29 @@
-import { Defined } from './enhanceType'
 import { isChineseIDCardNumber, isEmail, isFunction, isInteger, isNumeric, isPossibleChineseMobilePhoneNumber, isPossibleChineseName, isPromiseLike, isRegExp, isUrl } from './is'
 import { sequential } from './sequential'
 
 export type EasyValidatorData = Record<keyof any, any>
 
+export interface EasyValidatorRuleTestFunctionActions {
+  /**
+   * 更新提示信息。
+   *
+   * @param message 提示信息
+   */
+  updateMessage(message: any): void,
+}
+
 export interface EasyValidatorRuleTestFunction<D extends EasyValidatorData> {
   /**
-   * 测试函数。
+   * 测试函数，除非显式返回 `false`，否则都将视为测试通过。
    *
-   * @param value 要测试的值
    * @param data 数据对象
+   * @param actions 操作列表
    * @returns 返回是否测试通过
    */
   (
-    value: Defined<D[keyof D]>,
     data: D,
-  ): boolean | Promise<boolean>,
+    actions: EasyValidatorRuleTestFunctionActions,
+  ): any,
 }
 
 export interface EasyValidatorRule<D extends EasyValidatorData> {
@@ -33,7 +41,11 @@ export interface EasyValidatorRule<D extends EasyValidatorData> {
   ),
   /** 是否必填 */
   required?: boolean,
-  /** 自定义测试，支持正则、同步函数、异步函数 */
+  /**
+   * 自定义测试，支持正则、同步函数、异步函数。
+   *
+   * 为函数时，除非显式返回 `false`，否则都将视为测试通过。
+   */
   test?: (
     RegExp |
     EasyValidatorRuleTestFunction<D>
@@ -55,6 +67,30 @@ export interface EasyValidatorValidateReturn<D extends EasyValidatorData> {
  * 数据对象验证器。
  *
  * @template D 要验证的数据对象类型
+ * @example
+ * ```ts
+ * interface Data {
+ *   name: string,
+ *   phoneNumber: string,
+ *   pass1: string,
+ *   pass2: string,
+ * }
+ * const ev = new EasyValidator<Data>([
+ *   { key: 'name', type: 'chineseName', message: '请输入真实姓名' },
+ *   { key: 'phoneNumber', type: 'chineseMobilePhoneNumber', message: '请输入正确的手机号码' },
+ *   {
+ *     key: 'phoneNumber',
+ *     test: async (phoneNumber) => {
+ *       const result = await checkPhoneNumberAsync(phoneNumber)
+ *       if (result.pass) return true
+ *
+ *     },
+ *     message: '请输入正确的手机号码'
+ *   },
+ *   { key: 'pass1', test: pass1 => pass1.length > 6, message: '密码应大于6位' },
+ *   { key: 'pass2', test: (pass2, data) => pass2 === data.pass1, message: '两次密码应一致' },
+ * ])
+ * ```
  */
 export class EasyValidator<D extends EasyValidatorData> {
   /**
@@ -65,41 +101,41 @@ export class EasyValidator<D extends EasyValidatorData> {
   constructor(private rules: EasyValidatorRules<D>) {}
 
   private check(rule: EasyValidatorRule<D>, data: D) {
-    return new Promise<boolean>(resolve => {
+    return new Promise<{ valid: boolean, message?: any }>(resolve => {
       const key = rule.key
       const value = data[key]
 
       /* istanbul ignore if  */
       if (!(key in data)) {
         if (rule.required) {
-          return resolve(false)
+          return resolve({ valid: false })
         }
       } else {
         if ((rule.required || rule.type || rule.test) && (value == null || value === '')) {
-          return resolve(false)
+          return resolve({ valid: false })
         }
         if (rule.type) {
           switch (rule.type) {
             case 'number':
-              if (!isNumeric(value)) return resolve(false)
+              if (!isNumeric(value)) return resolve({ valid: false })
               break
             case 'integer':
-              if (!isNumeric(value) || !isInteger(Number(value))) return resolve(false)
+              if (!isNumeric(value) || !isInteger(Number(value))) return resolve({ valid: false })
               break
             case 'chineseMobilePhoneNumber':
-              if (!isPossibleChineseMobilePhoneNumber(value)) return resolve(false)
+              if (!isPossibleChineseMobilePhoneNumber(value)) return resolve({ valid: false })
               break
             case 'chineseIdCardNumber':
-              if (!isChineseIDCardNumber(value)) return resolve(false)
+              if (!isChineseIDCardNumber(value)) return resolve({ valid: false })
               break
             case 'url':
-              if (!isUrl(value)) return resolve(false)
+              if (!isUrl(value)) return resolve({ valid: false })
               break
             case 'email':
-              if (!isEmail(value)) return resolve(false)
+              if (!isEmail(value)) return resolve({ valid: false })
               break
             case 'chineseName':
-              if (!isPossibleChineseName(value)) return resolve(false)
+              if (!isPossibleChineseName(value)) return resolve({ valid: false })
               break
             /* istanbul ignore next */
             default:
@@ -109,19 +145,30 @@ export class EasyValidator<D extends EasyValidatorData> {
         if (rule.test) {
           if (isRegExp(rule.test)) {
             if (!rule.test.test(value)) {
-              return resolve(false)
+              return resolve({ valid: false })
             }
           } else if (isFunction(rule.test)) {
-            const result = rule.test(value, data)
-            if (isPromiseLike(result)) {
-              return result.then(resolve)
+            let message: any
+            const actions: EasyValidatorRuleTestFunctionActions = {
+              updateMessage(comingMessage) {
+                message = comingMessage
+              },
             }
-            return resolve(result)
+            const result = rule.test(data, actions)
+            if (isPromiseLike(result)) {
+              return result
+                .then(
+                  pass => ({ valid: pass !== false, message }),
+                  message => ({ valid: false, message }),
+                )
+                .then(resolve)
+            }
+            return resolve({ valid: result !== false, message })
           }
         }
       }
 
-      return resolve(true)
+      return resolve({ valid: true })
     })
   }
 
@@ -141,10 +188,14 @@ export class EasyValidator<D extends EasyValidatorData> {
           rule => () => {
             return new Promise(resolve => {
               if (unvalidKeys.indexOf(rule.key) === -1) {
-                this.check(rule, data).then(valid => {
+                this.check(rule, data).then(({ valid, message }) => {
                   if (!valid) {
                     unvalidKeys.push(rule.key)
-                    unvalidRules.push(rule)
+                    unvalidRules.push(
+                      message == null
+                        ? rule
+                        : { ...rule, message },
+                    )
                   }
                   resolve()
                 })
