@@ -103,13 +103,21 @@ ii(async function main() {
         new RegExp(`(<!-- ${readMeFlagByKind[kind]}! -->).+?(<!-- ${readMeFlagByKind[kind]}i -->)`, 's'),
         `$1\n${
           briefList.map(
-            brief => `
-              #### 💡 ${brief.name}
+            brief => {
+              const sourceUrl = `https://github.com/fjc0k/vtils/blob/master/src/${brief.source.fileName}`
+              const apiUrl = (
+                Number(kind) === ReflectionKind.Class
+                  ? `https://fjc0k.github.io/vtils/classes/${brief.name.toLowerCase()}.html`
+                  : `https://fjc0k.github.io/vtils/globals.html#${brief.name}`
+              )
+              return `
+                #### 💡 ${brief.name}
 
-              <small>[源码]() | [API]()</small>
+                <small>[源码](${sourceUrl}) | [API](${apiUrl})</small>
 
-              ${brief.body}
-            `.replace(/^ {14}/gm, '').trim(),
+                ${brief.body}
+              `.replace(/^ {16}/gm, '').trim()
+            },
           ).join('\n\n')
         }\n$2`,
       )
