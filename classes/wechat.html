@@ -2436,6 +2436,23 @@ img {
 				<div class="lead">
 					<p>对微信 JSSDK 的封装。</p>
 				</div>
+				<dl class="tsd-comment-tags">
+					<dt>example</dt>
+					<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> wechat = <span class="hljs-keyword">new</span> Wechat()
+getWechatConfigAsync().then(<span class="hljs-function"><span class="hljs-params">config</span> =&gt;</span> {
+  wechat.config(config)
+})
+wechat.updateShareData({
+  title: <span class="hljs-string">'分享标题'</span>,
+  desc: <span class="hljs-string">'分享描述'</span>,
+  link: <span class="hljs-string">'分享链接'</span>,
+  imgUrl: <span class="hljs-string">'缩略图地址'</span>,
+})
+wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+  <span class="hljs-comment">// =&gt; API 调用结果</span>
+})</code></pre>
+					</dd>
+				</dl>
 			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
@@ -2495,7 +2512,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L225">Wechat.ts:225</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L242">Wechat.ts:242</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2527,7 +2544,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">config<wbr>Params<span class="tsd-signature-symbol">:</span> <a href="../interfaces/wechatconfigparams.html" class="tsd-signature-type">WechatConfigParams</a><span class="tsd-signature-symbol"> =&nbsp;{} as any</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L225">Wechat.ts:225</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L242">Wechat.ts:242</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2549,7 +2566,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L293">Wechat.ts:293</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L310">Wechat.ts:310</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2587,7 +2604,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L322">Wechat.ts:322</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L339">Wechat.ts:339</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2619,7 +2636,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L359">Wechat.ts:359</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L376">Wechat.ts:376</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2641,7 +2658,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L243">Wechat.ts:243</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L260">Wechat.ts:260</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2672,7 +2689,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L384">Wechat.ts:384</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L401">Wechat.ts:401</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2694,7 +2711,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L368">Wechat.ts:368</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L385">Wechat.ts:385</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2725,7 +2742,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L411">Wechat.ts:411</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L428">Wechat.ts:428</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2763,7 +2780,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L400">Wechat.ts:400</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L417">Wechat.ts:417</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2794,7 +2811,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L332">Wechat.ts:332</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L349">Wechat.ts:349</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2825,7 +2842,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L391">Wechat.ts:391</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L408">Wechat.ts:408</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2847,7 +2864,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L377">Wechat.ts:377</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L394">Wechat.ts:394</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2878,7 +2895,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L303">Wechat.ts:303</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L320">Wechat.ts:320</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2909,7 +2926,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L349">Wechat.ts:349</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L366">Wechat.ts:366</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">

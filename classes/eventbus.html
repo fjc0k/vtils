@@ -2407,6 +2407,22 @@ img {
 					<dt>template</dt>
 					<dd><p>T 事件名称及其对应的监听器描述</p>
 					</dd>
+					<dt>example</dt>
+					<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> bus = <span class="hljs-keyword">new</span> EventBus&lt;{
+  success: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">void</span>,
+  error: <span class="hljs-function">(<span class="hljs-params">message: <span class="hljs-built_in">string</span></span>) =&gt;</span> <span class="hljs-built_in">void</span>,
+}&gt;()
+<span class="hljs-keyword">const</span> unbindSuccessListener = bus.on(<span class="hljs-string">'success'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'成功啦'</span>)
+})
+<span class="hljs-keyword">const</span> unbindErrorListener = bus.once(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.error(message)
+})
+bus.emit(<span class="hljs-string">'success'</span>)
+bus.emit(<span class="hljs-string">'error'</span>, <span class="hljs-string">'出错啦'</span>)
+unbindSuccessListener()
+bus.off(<span class="hljs-string">'error'</span>)</code></pre>
+					</dd>
 				</dl>
 			</div>
 		</section>
@@ -2457,7 +2473,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/EventBus.ts#L81">EventBus.ts:81</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/EventBus.ts#L98">EventBus.ts:98</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2501,7 +2517,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/EventBus.ts#L61">EventBus.ts:61</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/EventBus.ts#L78">EventBus.ts:78</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2544,7 +2560,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/EventBus.ts#L29">EventBus.ts:29</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/EventBus.ts#L46">EventBus.ts:46</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2588,7 +2604,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/EventBus.ts#L47">EventBus.ts:47</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/EventBus.ts#L64">EventBus.ts:64</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">

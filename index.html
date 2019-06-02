@@ -2425,6 +2425,9 @@ img {
 		<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-external">
 			<a href="interfaces/easyvalidatorruletestfunction.html" class="tsd-kind-icon">Easy<wbr>Validator<wbr>Rule<wbr>Test<wbr>Function</a>
 		</li>
+		<li class=" tsd-kind-interface tsd-is-external">
+			<a href="interfaces/easyvalidatorruletestfunctionactions.html" class="tsd-kind-icon">Easy<wbr>Validator<wbr>Rule<wbr>Test<wbr>Function<wbr>Actions</a>
+		</li>
 		<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-external">
 			<a href="interfaces/easyvalidatorvalidatereturn.html" class="tsd-kind-icon">Easy<wbr>Validator<wbr>Validate<wbr>Return</a>
 		</li>
@@ -2578,9 +2581,6 @@ img {
 		<li class=" tsd-kind-function tsd-is-external">
 			<a href="globals.html#clamp" class="tsd-kind-icon">clamp</a>
 		</li>
-		<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external">
-			<a href="globals.html#column" class="tsd-kind-icon">column</a>
-		</li>
 		<li class=" tsd-kind-function tsd-is-external">
 			<a href="globals.html#endswith" class="tsd-kind-icon">ends<wbr>With</a>
 		</li>
@@ -2607,6 +2607,9 @@ img {
 		</li>
 		<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external">
 			<a href="globals.html#ii" class="tsd-kind-icon">ii</a>
+		</li>
+		<li class=" tsd-kind-function tsd-is-external">
+			<a href="globals.html#inandroid" class="tsd-kind-icon">in<wbr>Android</a>
 		</li>
 		<li class=" tsd-kind-function tsd-is-external">
 			<a href="globals.html#inbrowser" class="tsd-kind-icon">in<wbr>Browser</a>
@@ -2661,9 +2664,6 @@ img {
 		</li>
 		<li class=" tsd-kind-function tsd-is-external">
 			<a href="globals.html#isinteger" class="tsd-kind-icon">is<wbr>Integer</a>
-		</li>
-		<li class=" tsd-kind-function tsd-is-external">
-			<a href="globals.html#isleapyear" class="tsd-kind-icon">is<wbr>Leap<wbr>Year</a>
 		</li>
 		<li class=" tsd-kind-function tsd-is-external">
 			<a href="globals.html#isnan" class="tsd-kind-icon">is<wbr>NaN</a>
@@ -2810,7 +2810,7 @@ img {
 		<div class="tsd-panel tsd-typography">
 			<p align="center"><img width="200" src="https://raw.githubusercontent.com/fjc0k/vtils/master/logo.png" alt="logo"></p>
 			<p align="center"><img src="https://badgen.net/npm/v/vtils" alt="License"> <a href="https://travis-ci.org/fjc0k/vtils"><img src="https://travis-ci.org/fjc0k/vtils.svg?branch=master" alt="Build Status"></a> <a href="https://codecov.io/gh/fjc0k/vtils"><img src="https://codecov.io/gh/fjc0k/vtils/branch/master/graph/badge.svg" alt="Coverage Status"></a> <img src="https://badgen.net/bundlephobia/min/vtils" alt="Size"> <img src="https://badgen.net/bundlephobia/minzip/vtils" alt="Gzip Size"> <img src="https://badgen.net/github/license/fjc0k/vtils" alt="License"></p>
-			<h2 align="center">一些常用的 JavaScript 工具函数</h2>
+			<h2 align="center">小巧实用的 JavaScript 工具类库。</h2>
 			<p align="center">
 				<a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/</a>
 			</p>
@@ -2821,6 +2821,7 @@ yarn add vtils
 <span class="hljs-comment"># or, npm</span>
 npm i vtils --save</code></pre>
 			<h2 id="使用">使用</h2>
+			<p>在线体验：<a href="https://stackblitz.com/edit/vtils">https://stackblitz.com/edit/vtils</a></p>
 			<pre><code class="language-js"><span class="hljs-keyword">import</span> { inBrowser,shuffle } <span class="hljs-keyword">from</span> <span class="hljs-string">'vtils'</span>
 
 <span class="hljs-keyword">if</span> (inBrowser()) {
@@ -2840,7 +2841,8 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
   { x: <span class="hljs-number">1</span> },
   { y: <span class="hljs-number">2</span> },
   { x: <span class="hljs-number">5</span>, z: <span class="hljs-number">9</span> },
-) <span class="hljs-comment">// =&gt; { x: 5, y: 2, z: 9 }</span></code></pre>
+)
+<span class="hljs-comment">// =&gt; { x: 5, y: 2, z: 9 }</span></code></pre>
 			<h4 id="💡-base64decode">💡 base64Decode</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>返回 <code>base64</code> 解码后的字符串。</p>
@@ -2874,21 +2876,30 @@ castArray(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">/
 castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; [null]</span></code></pre>
 			<h4 id="💡-chunk">💡 chunk</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
-			<p>将 <code>array</code> 拆分成多个 <code>size</code> 长度的区块，并将它们组合成一个新数组返回。</p>
-			<p>如果 <code>array</code> 无法等分，且设置了 <code>filler</code>，剩余的元素将被 <code>filler</code> 填充。</p>
+			<p>将 <code>arr</code> 拆分成多个 <code>size</code> 长度的区块，并将它们组合成一个新数组返回。</p>
+			<p>如果 <code>arr</code> 无法等分，且设置了 <code>filler</code> 函数，剩余的元素将被 <code>filler</code> 函数的返回值填充。</p>
+			<pre><code class="language-ts"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+chunk(arr, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; [[1, 2], [3, 4], [5, 6]]</span>
+chunk(arr, <span class="hljs-number">3</span>) <span class="hljs-comment">// =&gt; [[1, 2, 3], [4, 5, 6]]</span>
+chunk(arr, <span class="hljs-number">4</span>) <span class="hljs-comment">// =&gt; [[1, 2, 3, 4], [5, 6]]</span>
+chunk(arr, <span class="hljs-number">4</span>, <span class="hljs-function"><span class="hljs-params">index</span> =&gt;</span> index) <span class="hljs-comment">// =&gt; [[1, 2, 3, 4], [5, 6, 0, 1]]</span></code></pre>
 			<h4 id="💡-clamp">💡 clamp</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>返回限制在最小值和最大值之间的值。</p>
-			<h4 id="💡-column">💡 column</h4>
-			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
-			<p>返回对象数组中指定的一列。</p>
-			<p>返回对象数组中指定的一列。</p>
+			<pre><code class="language-ts">clamp(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>) <span class="hljs-comment">// =&gt; 50</span>
+clamp(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">50</span>) <span class="hljs-comment">// =&gt; 50</span>
+clamp(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">49</span>) <span class="hljs-comment">// =&gt; 49</span>
+clamp(<span class="hljs-number">50</span>, <span class="hljs-number">51</span>, <span class="hljs-number">100</span>) <span class="hljs-comment">// =&gt; 51</span></code></pre>
 			<h4 id="💡-endswith">💡 endsWith</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>str</code> 是否以 <code>needle</code> 结尾。</p>
+			<pre><code class="language-ts">endsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'llo'</span>) <span class="hljs-comment">// =&gt; true</span>
+endsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'he'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-fill">💡 fill</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>使用 <code>value</code> 来填充（替换） <code>arr</code>，从 <code>start</code> 位置开始, 到 <code>end</code> 位置结束（但不包括 <code>end</code> 位置）。</p>
+			<pre><code class="language-ts">fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">5</span>), <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; [1, 1, 1, 1, 1]</span>
+fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>), <span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> index) <span class="hljs-comment">// =&gt; [0, 1, 2]</span></code></pre>
 			<h4 id="💡-flexible">💡 flexible</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>移动端屏幕适配。</p>
@@ -2896,45 +2907,139 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>遍历对象的可枚举属性。若遍历函数返回 <code>false</code>，遍历会提前退出。</p>
 			<p>注：基于你传入的 <code>obj</code>，遍历函数中 <code>key</code> 的类型可能为 <code>number</code>，但在运行时，<code>key</code> 始终为 <code>string</code>，因此，你应该始终把 <code>key</code> 当作 <code>string</code> 处理。（为什么会这样？<a href="https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208%EF%BC%89">https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208）</a></p>
+			<pre><code class="language-ts">forOwn(
+  { x: <span class="hljs-string">'1'</span>, y: <span class="hljs-number">2</span> },
+  <span class="hljs-function">(<span class="hljs-params">value, key</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(key, value)
+  }
+)</code></pre>
 			<h4 id="💡-getglobal">💡 getGlobal</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>获取全局对象。</p>
+			<pre><code class="language-ts"><span class="hljs-comment">// 浏览器中</span>
+getGlobal() <span class="hljs-comment">// =&gt; window</span>
+<span class="hljs-comment">// Node 中</span>
+getGlobal() <span class="hljs-comment">// =&gt; global</span></code></pre>
 			<h4 id="💡-gettype">💡 getType</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检测 <code>value</code> 的类型。</p>
+			<pre><code class="language-ts">getType(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; Number</span>
+getType(<span class="hljs-literal">true</span>) <span class="hljs-comment">// =&gt; Boolean</span>
+getType([]) <span class="hljs-comment">// =&gt; Array</span>
+getType(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// =&gt; RegExp</span></code></pre>
 			<h4 id="💡-groupby">💡 groupBy</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>根据 <code>iteratee</code> 返回的值对 <code>data</code> 进行分组。</p>
+			<pre><code class="language-ts">groupBy(
+  [
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">1</span>, name: <span class="hljs-string">'石头'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">3</span>, name: <span class="hljs-string">'花生'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">2</span>, name: <span class="hljs-string">'鲸鱼'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">1</span>, name: <span class="hljs-string">'树木'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">2</span>, name: <span class="hljs-string">'鲨鱼'</span> },
+  ],
+  <span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.type,
+)
+<span class="hljs-comment">// =&gt; {</span>
+<span class="hljs-comment">// =&gt;   1: [</span>
+<span class="hljs-comment">// =&gt;     { type: 1, name: '石头' },</span>
+<span class="hljs-comment">// =&gt;     { type: 1, name: '树木' },</span>
+<span class="hljs-comment">// =&gt;   ],</span>
+<span class="hljs-comment">// =&gt;   2: [</span>
+<span class="hljs-comment">// =&gt;     { type: 2, name: '鲸鱼' },</span>
+<span class="hljs-comment">// =&gt;     { type: 2, name: '鲨鱼' },</span>
+<span class="hljs-comment">// =&gt;   ],</span>
+<span class="hljs-comment">// =&gt;   3: [</span>
+<span class="hljs-comment">// =&gt;     { type: 3, name: '花生' },</span>
+<span class="hljs-comment">// =&gt;   ],</span>
+<span class="hljs-comment">// =&gt; }</span></code></pre>
 			<h4 id="💡-has">💡 has</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>key</code> 是否是对象 <code>obj</code> 自身的属性。</p>
+			<pre><code class="language-ts"><span class="hljs-keyword">const</span> obj = { x: <span class="hljs-number">1</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'y'</span> }
+has(obj, <span class="hljs-string">'x'</span>) <span class="hljs-comment">// =&gt; true</span>
+has(obj, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; true</span>
+has(obj, <span class="hljs-string">'toString'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-ii">💡 ii</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>立即调用函数并返回其返回值。</p>
 			<p>注：<code>ii = immediately invoke</code></p>
+			<pre><code class="language-ts">ii(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 1</span></code></pre>
+			<h4 id="💡-inandroid">💡 inAndroid</h4>
+			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
+			<p>检查是否在 <code>Android</code> 设备中。</p>
+			<pre><code class="language-ts"><span class="hljs-comment">// Android 设备中</span>
+inAndroid() <span class="hljs-comment">// =&gt; true</span>
+inAndroid(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在 Android 设备中'</span>),
+)</code></pre>
 			<h4 id="💡-inbrowser">💡 inBrowser</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查是否在浏览器环境中。</p>
+			<pre><code class="language-ts"><span class="hljs-comment">// 浏览器中</span>
+inBrowser() <span class="hljs-comment">// =&gt; true</span>
+inBrowser(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在浏览器中'</span>),
+)</code></pre>
 			<h4 id="💡-inios">💡 inIOS</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查是否在 <code>iOS</code> 设备中。</p>
+			<pre><code class="language-ts"><span class="hljs-comment">// iOS 设备中</span>
+inIOS() <span class="hljs-comment">// =&gt; true</span>
+inIOS(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在 iOS 设备中'</span>),
+)</code></pre>
 			<h4 id="💡-innode">💡 inNode</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查是否在 <code>Node</code> 环境中。</p>
+			<pre><code class="language-ts"><span class="hljs-comment">// Node 中</span>
+inNode() <span class="hljs-comment">// =&gt; true</span>
+inNode(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在 Node 中'</span>),
+)</code></pre>
 			<h4 id="💡-inrange">💡 inRange</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否在某区间内。</p>
+			<pre><code class="language-ts"><span class="hljs-comment">// 2 是否在区间 (0, 2) 内</span>
+inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.open) <span class="hljs-comment">// =&gt; false</span>
+
+<span class="hljs-comment">// 2 是否在区间 [0, 2] 内</span>
+inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.closed) <span class="hljs-comment">// =&gt; true</span>
+
+<span class="hljs-comment">// 2 是否在区间 [0, 2) 内</span>
+inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.leftClosedRightOpen) <span class="hljs-comment">// =&gt; false</span>
+
+<span class="hljs-comment">// 2 是否在区间 (0, 2] 内</span>
+inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.leftOpenRightClosed) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-inwechatminiprogram">💡 inWechatMiniProgram</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查是否在微信小程序环境中。</p>
+			<pre><code class="language-ts"><span class="hljs-comment">// 微信小程序中</span>
+inWechatMiniProgram() <span class="hljs-comment">// =&gt; true</span>
+inWechatMiniProgram(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在微信小程序中'</span>),
+)</code></pre>
 			<h4 id="💡-inwechatwebview">💡 inWechatWebview</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查是否在微信浏览器环境中。</p>
+			<pre><code class="language-ts"><span class="hljs-comment">// 微信浏览器中</span>
+inWechatWebview() <span class="hljs-comment">// =&gt; true</span>
+inWechatWebview(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在微信浏览器中'</span>),
+)</code></pre>
 			<h4 id="💡-includes">💡 includes</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检索值 <code>value</code> 是否在数组 <code>arr</code> 中。</p>
+			<pre><code class="language-ts">includes([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+includes([<span class="hljs-literal">NaN</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; true</span>
+includes([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-number">4</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<p>检索可枚举属性值 <code>value</code> 是否在对象 <code>obj</code> 中。</p>
+			<pre><code class="language-ts">includes({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+includes({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, <span class="hljs-number">3</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<p>检索值 <code>value</code> 是否在字符串 <code>str</code> 中。</p>
+			<pre><code class="language-ts">includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'h'</span>) <span class="hljs-comment">// =&gt; true</span>
+includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'ll'</span>) <span class="hljs-comment">// =&gt; true</span>
+includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'123'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-isarray">💡 isArray</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个数组。</p>
@@ -2953,175 +3058,322 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 			<h4 id="💡-isdate">💡 isDate</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个日期。</p>
+			<pre><code class="language-ts">isDate(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isemail">💡 isEmail</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个邮件地址。</p>
+			<pre><code class="language-ts">isEmail(<span class="hljs-string">'hello@foo.bar'</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmail(<span class="hljs-string">'hello@foo'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-isempty">💡 isEmpty</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是空值，包括：<code>undefined</code>、<code>null</code>、<code>&#39;&#39;</code>、<code>false</code>、<code>true</code>、<code>[]</code>、<code>{}</code>。</p>
+			<pre><code class="language-ts">isEmpty(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty(<span class="hljs-literal">false</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty(<span class="hljs-literal">true</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty([]) <span class="hljs-comment">// =&gt; true</span>
+isEmpty({}) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isequalarray">💡 isEqualArray</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查给定的数组的各项是否相等。</p>
+			<pre><code class="language-ts">isEqualArray([<span class="hljs-number">1</span>], [<span class="hljs-number">1</span>]) <span class="hljs-comment">// =&gt; true</span>
+isEqualArray([<span class="hljs-number">1</span>], [<span class="hljs-number">5</span>]) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-isfinite">💡 isFinite</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是原始有限数值。</p>
+			<pre><code class="language-ts"><span class="hljs-built_in">isFinite</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+<span class="hljs-built_in">isFinite</span>(<span class="hljs-literal">Infinity</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-isfunction">💡 isFunction</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个函数。</p>
+			<pre><code class="language-ts">isFunction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; true</span>
+isFunction(<span class="hljs-number">2000</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-ishan">💡 isHan</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否全是汉字。</p>
+			<pre><code class="language-ts">isHan(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">// =&gt; false</span>
+isHan(<span class="hljs-string">'嗨咯'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isinteger">💡 isInteger</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个整数。</p>
-			<h4 id="💡-isleapyear">💡 isLeapYear</h4>
-			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
-			<p>判断给定的年份是否是闰年。</p>
+			<pre><code class="language-ts">isInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+isInteger(<span class="hljs-number">1.2</span>) <span class="hljs-comment">// =&gt; false</span>
+isInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isnan">💡 isNaN</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是 <code>NaN</code>。</p>
+			<pre><code class="language-ts"><span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; true</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-isnegativeinteger">💡 isNegativeInteger</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个负整数。</p>
+			<pre><code class="language-ts">isNegativeInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; true</span>
+isNegativeInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-isnil">💡 isNil</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是 <code>null</code> 或 <code>undefined</code>。</p>
+			<pre><code class="language-ts">isNil(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; true</span>
+isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isnull">💡 isNull</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是 <code>null</code>。</p>
+			<pre><code class="language-ts">isNull(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isnumber">💡 isNumber</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个数字。</p>
 			<p>注：<code>NaN</code> 不被认为是数字。</p>
 			<pre><code class="language-ts">isNumber(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
 isNumber(<span class="hljs-number">0.1</span>) <span class="hljs-comment">// =&gt; true</span>
-isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+isNumber(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-isnumeric">💡 isNumeric</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个数值。</p>
 			<p>注：<code>Infinity</code>、<code>-Infinity</code>、<code>NaN</code> 不被认为是数值。</p>
+			<pre><code class="language-ts">isNumeric(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+isNumeric(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isobject">💡 isObject</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个对象。</p>
+			<pre><code class="language-ts">isObject({}) <span class="hljs-comment">// =&gt; true</span>
+isObject(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; true</span>
+isObject(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-isplainobject">💡 isPlainObject</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个普通对象。</p>
+			<pre><code class="language-ts">isPlainObject({}) <span class="hljs-comment">// =&gt; true</span>
+isPlainObject(<span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>)) <span class="hljs-comment">// =&gt; true</span>
+isPlainObject(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-ispositiveinteger">💡 isPositiveInteger</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个正整数。</p>
+			<pre><code class="language-ts">isPositiveInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+isPositiveInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-ispossiblechinesemobilephonenumber">💡 isPossibleChineseMobilePhoneNumber</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检测 <code>number</code> 是否可能是中国的手机号码。</p>
+			<pre><code class="language-ts">isPossibleChineseMobilePhoneNumber(<span class="hljs-number">18000030000</span>) <span class="hljs-comment">// =&gt; true</span>
+isPossibleChineseMobilePhoneNumber(<span class="hljs-number">10086</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-ispossiblechinesename">💡 isPossibleChineseName</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检测 <code>value</code> 是否可能是中国人的姓名，支持少数名族姓名中间的 <code>·</code> 号。</p>
+			<pre><code class="language-ts">isPossibleChineseName(<span class="hljs-string">'鲁'</span>) <span class="hljs-comment">// =&gt; false</span>
+isPossibleChineseName(<span class="hljs-string">'鲁迅'</span>) <span class="hljs-comment">// =&gt; true</span>
+isPossibleChineseName(<span class="hljs-string">'买买提·吐尔逊'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-ispromiselike">💡 isPromiseLike</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否像 <code>Promise</code>。</p>
+			<pre><code class="language-ts">isPromiseLike(<span class="hljs-built_in">Promise</span>.resolve()) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isregexp">💡 isRegExp</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个正则对象。</p>
+			<pre><code class="language-ts">isRegExp(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// =&gt; true</span>
+isRegExp(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'hello'</span>)) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isstring">💡 isString</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个字符串。</p>
+			<pre><code class="language-ts">isString(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; true</span>
+isString(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isundefined">💡 isUndefined</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否等于 <code>undefined</code>。</p>
+			<pre><code class="language-ts">isUndefined(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; true</span>
+isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-isurl">💡 isUrl</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>value</code> 是否是一个有效的网址，仅支持 <code>http</code>、<code>https</code> 协议，支持 <code>IP</code> 域名。</p>
+			<pre><code class="language-ts">isUrl(<span class="hljs-string">'http://foo.bar'</span>) <span class="hljs-comment">// =&gt; true</span>
+isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 			<h4 id="💡-jestexpectequal">💡 jestExpectEqual</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<h4 id="💡-keyby">💡 keyBy</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>根据 <code>iteratee</code> 返回的键对 <code>data</code> 进行分组，但只保留最后一个结果。</p>
+			<pre><code class="language-ts">keyBy(
+  [
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">1</span>, name: <span class="hljs-string">'石头'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">3</span>, name: <span class="hljs-string">'花生'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">2</span>, name: <span class="hljs-string">'鲸鱼'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">1</span>, name: <span class="hljs-string">'树木'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">2</span>, name: <span class="hljs-string">'鲨鱼'</span> },
+  ],
+  <span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.type,
+)
+<span class="hljs-comment">// =&gt; {</span>
+<span class="hljs-comment">// =&gt;   1: { type: 1, name: '树木' },</span>
+<span class="hljs-comment">// =&gt;   2: { type: 2, name: '鲨鱼' },</span>
+<span class="hljs-comment">// =&gt;   3: { type: 3, name: '花生' },</span>
+<span class="hljs-comment">// =&gt; }</span></code></pre>
 			<h4 id="💡-keys">💡 keys</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>返回 <code>obj</code> 的可枚举属性组成的数组。</p>
 			<p>注：基于你传入的 <code>obj</code>，返回的 <code>key</code> 的类型可能为 <code>number</code>，但在运行时，<code>key</code> 始终为 <code>string</code>，因此，你应该始终把 <code>key</code> 当作 <code>string</code> 处理。（为什么会这样？<a href="https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208%EF%BC%89">https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208）</a></p>
+			<pre><code class="language-ts">keys({ x: <span class="hljs-number">1</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'y'</span> }) <span class="hljs-comment">// =&gt; ['x', '2'] 或 ['2', 'x']</span></code></pre>
 			<h4 id="💡-last">💡 last</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>返回数组 <code>arr</code> 的最后一项。</p>
+			<pre><code class="language-ts">last([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; 3</span></code></pre>
 			<h4 id="💡-loadresource">💡 loadResource</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>加载图片、代码、样式等资源。</p>
+			<pre><code class="language-ts">loadResource([
+  <span class="hljs-string">'https://foo.bar/all.js'</span>,
+  <span class="hljs-string">'https://foo.bar/all.css'</span>,
+  <span class="hljs-string">'https://foo.bar/logo.png'</span>,
+  {
+    <span class="hljs-keyword">type</span>: LoadResourceUrlType.js,
+    path: <span class="hljs-string">'https://s1.foo.bar/js/full'</span>,
+    alternatePath: <span class="hljs-string">'https://s2.foo.bar/js/full'</span>,
+  },
+]).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// 资源加载完成后的操作</span>
+})</code></pre>
 			<h4 id="💡-mapvalues">💡 mapValues</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>映射对象的可枚举属性值为一个新的值。</p>
+			<pre><code class="language-ts">mapValues(
+  { x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> },
+  <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> value + <span class="hljs-number">10</span>,
+)
+<span class="hljs-comment">// =&gt; { x: 11, y: 12 }</span></code></pre>
 			<h4 id="💡-memoize">💡 memoize</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>函数结果缓存。</p>
+			<pre><code class="language-ts"><span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>
+<span class="hljs-keyword">const</span> fn = memoize(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> i++)
+fn() <span class="hljs-comment">// =&gt; 0</span>
+fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
 			<h4 id="💡-noop">💡 noop</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>无操作函数。</p>
+			<pre><code class="language-ts">noop() <span class="hljs-comment">// =&gt; undefined</span></code></pre>
 			<h4 id="💡-omit">💡 omit</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>创建一个从 <code>obj</code> 中剔除选中的可枚举属性的对象。</p>
+			<pre><code class="language-ts">omit({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, [<span class="hljs-string">'x'</span>]) <span class="hljs-comment">// =&gt; { y: 2 }</span></code></pre>
 			<h4 id="💡-padend">💡 padEnd</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>在 <code>str</code> 右侧填充字符。</p>
+			<pre><code class="language-ts">padEnd(<span class="hljs-string">'姓名'</span>, <span class="hljs-number">4</span>, <span class="hljs-string">'*'</span>) <span class="hljs-comment">// =&gt; 姓名**</span></code></pre>
 			<h4 id="💡-padstart">💡 padStart</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>在 <code>str</code> 左侧填充字符。</p>
+			<pre><code class="language-ts">padStart(<span class="hljs-string">'姓名'</span>, <span class="hljs-number">4</span>, <span class="hljs-string">'*'</span>) <span class="hljs-comment">// =&gt; **姓名</span></code></pre>
 			<h4 id="💡-parallel">💡 parallel</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>并行执行任务，<code>同步任务</code>、<code>异步任务</code> 皆可。</p>
+			<pre><code class="language-ts">parallel([
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>,
+  <span class="hljs-keyword">async</span> () =&gt; <span class="hljs-string">'hello'</span>,
+]).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+  <span class="hljs-comment">// =&gt; [1, 'hello']</span>
+})</code></pre>
 			<h4 id="💡-parsecssvalue">💡 parseCSSValue</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>解析 <code>CSS</code> 值的数值和单位。</p>
+			<pre><code class="language-ts">parseCSSValue(<span class="hljs-string">'12px'</span>) <span class="hljs-comment">// =&gt; { value: 12, unit: 'px' }</span>
+parseCSSValue(<span class="hljs-number">12</span>) <span class="hljs-comment">// =&gt; { value: 12, unit: 'px' }</span>
+parseCSSValue(<span class="hljs-string">'12%'</span>) <span class="hljs-comment">// =&gt; { value: 12, unit: '%' }</span></code></pre>
 			<h4 id="💡-pick">💡 pick</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>创建一个从 <code>obj</code> 中选中的可枚举属性的对象。</p>
+			<pre><code class="language-ts">pick({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, [<span class="hljs-string">'x'</span>]) <span class="hljs-comment">// =&gt; { x: 1 }</span></code></pre>
 			<h4 id="💡-placekitten">💡 placeKitten</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
-			<p>获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
-			<p>获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
+			<p>给定大小获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
+			<pre><code class="language-ts">placeKitten(<span class="hljs-number">100</span>) <span class="hljs-comment">// =&gt; https://placekitten.com/100/100</span></code></pre>
+			<p>给定宽高获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
+			<pre><code class="language-ts">placeKitten(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>) <span class="hljs-comment">// =&gt; https://placekitten.com/100/200</span></code></pre>
 			<h4 id="💡-randomstring">💡 randomString</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>生成一个随机字符串。</p>
+			<pre><code class="language-ts">randomString() <span class="hljs-comment">// =&gt; m481rnmse1m</span></code></pre>
 			<h4 id="💡-range">💡 range</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>创建一个包含从 <code>start</code> 到 <code>end</code>，但不包含 <code>end</code> 本身范围数字的数组。</p>
+			<pre><code class="language-ts">range(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>) <span class="hljs-comment">// =&gt; [0, 1, 2, 3, 4]</span>
+range(<span class="hljs-number">0</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; [0, -1, -2, -3, -4]</span></code></pre>
 			<h4 id="💡-repeat">💡 repeat</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>重复 <code>n</code> 次给定字符串。</p>
+			<pre><code class="language-ts">repeat(<span class="hljs-string">'a'</span>, <span class="hljs-number">5</span>) <span class="hljs-comment">// =&gt; aaaaa</span></code></pre>
 			<h4 id="💡-round">💡 round</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>对传入的数字按给定的精度四舍五入后返回。</p>
+			<pre><code class="language-ts">round(<span class="hljs-number">3.456</span>) <span class="hljs-comment">// =&gt; 3</span>
+round(<span class="hljs-number">3.456</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 3.5</span>
+round(<span class="hljs-number">3.456</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 3.46</span>
+round(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>) <span class="hljs-comment">// =&gt; 300</span></code></pre>
 			<h4 id="💡-rounddown">💡 roundDown</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>对传入的数字按给定的精度向下取值后返回。</p>
+			<pre><code class="language-ts">roundDown(<span class="hljs-number">3.456</span>) <span class="hljs-comment">// =&gt; 3</span>
+roundDown(<span class="hljs-number">3.456</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 3.4</span>
+roundDown(<span class="hljs-number">3.456</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 3.45</span>
+roundDown(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>) <span class="hljs-comment">// =&gt; 300</span></code></pre>
 			<h4 id="💡-roundup">💡 roundUp</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>对传入的数字按给定的精度向上取值后返回。</p>
+			<pre><code class="language-ts">roundUp(<span class="hljs-number">3.456</span>) <span class="hljs-comment">// =&gt; 4</span>
+roundUp(<span class="hljs-number">3.456</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 3.5</span>
+roundUp(<span class="hljs-number">3.456</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 3.46</span>
+roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>) <span class="hljs-comment">// =&gt; 400</span></code></pre>
 			<h4 id="💡-sample">💡 sample</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>从数组中随机获取一个元素。</p>
+			<pre><code class="language-ts">sample([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; 1 或 2 或 3</span></code></pre>
 			<p>从对象中随机获取一个可枚举属性的值。</p>
+			<pre><code class="language-ts">sample({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span> }) <span class="hljs-comment">// =&gt; 1 或 2 或 3</span></code></pre>
 			<h4 id="💡-sequential">💡 sequential</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>顺序执行任务，<code>同步任务</code>、<code>异步任务</code> 皆可。</p>
+			<pre><code class="language-ts">sequential([
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>,
+  <span class="hljs-keyword">async</span> () =&gt; <span class="hljs-string">'hello'</span>,
+]).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+  <span class="hljs-comment">// =&gt; [1, 'hello']</span>
+})</code></pre>
 			<h4 id="💡-shuffle">💡 shuffle</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>打乱一个数组。</p>
+			<pre><code class="language-ts">shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]) <span class="hljs-comment">// =&gt; [1, 2] 或 [2, 1]</span></code></pre>
 			<h4 id="💡-startswith">💡 startsWith</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>检查 <code>str</code> 是否以 <code>needle</code> 开头。</p>
+			<pre><code class="language-ts">startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'he'</span>) <span class="hljs-comment">// =&gt; true</span>
+startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'llo'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 			<h4 id="💡-sum">💡 sum</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>计算传入值的总和。</p>
+			<pre><code class="language-ts">sum([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; 6</span></code></pre>
 			<h4 id="💡-sumby">💡 sumBy</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>根据 <code>iteratee</code> 返回的结果计算传入值的总和。</p>
+			<pre><code class="language-ts">sumBy(
+  [
+    { count: <span class="hljs-number">1</span> },
+    { count: <span class="hljs-number">2</span> },
+    { count: <span class="hljs-number">3</span> },
+  ],
+  <span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.count,
+)
+<span class="hljs-comment">// =&gt; 6</span></code></pre>
 			<h4 id="💡-times">💡 times</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>调用函数 <code>n</code> 次，将每次的调用结果存进数组并返回。</p>
+			<pre><code class="language-ts">times(<span class="hljs-number">4</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// 这里将会执行 4 次</span>
+})</code></pre>
 			<h4 id="💡-values">💡 values</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>返回 <code>obj</code> 自身可枚举属性值组成的数组。</p>
+			<pre><code class="language-ts">values({ x: <span class="hljs-number">1</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'y'</span> }) <span class="hljs-comment">// =&gt; [1, 'y'] 或 ['y', 1]</span></code></pre>
 			<h4 id="💡-wait">💡 wait</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>等待一段时间。</p>
+			<pre><code class="language-ts">wait(<span class="hljs-number">1000</span>).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// 等待 1000 毫秒后执行</span>
+})</code></pre>
 			<!-- 工具函数i -->
 			<h3 id="📦-工具类">📦 工具类</h3>
 			<!-- 工具类! -->
@@ -3156,12 +3408,86 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 			<h4 id="💡-easyvalidator">💡 EasyValidator</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>数据对象验证器。</p>
+			<pre><code class="language-ts"><span class="hljs-keyword">interface</span> Data {
+  name: <span class="hljs-built_in">string</span>,
+  phoneNumber: <span class="hljs-built_in">string</span>,
+  pass1: <span class="hljs-built_in">string</span>,
+  pass2: <span class="hljs-built_in">string</span>,
+}
+<span class="hljs-keyword">const</span> ev = <span class="hljs-keyword">new</span> EasyValidator&lt;Data&gt;([
+  {
+    key: <span class="hljs-string">'name'</span>,
+    <span class="hljs-keyword">type</span>: <span class="hljs-string">'chineseName'</span>,
+    message: <span class="hljs-string">'请输入真实姓名'</span>,
+  },
+  {
+    key: <span class="hljs-string">'phoneNumber'</span>,
+    <span class="hljs-keyword">type</span>: <span class="hljs-string">'chineseMobilePhoneNumber'</span>,
+    message: <span class="hljs-string">'请输入正确的手机号码'</span>,
+  },
+  {
+    key: <span class="hljs-string">'phoneNumber'</span>,
+    test: <span class="hljs-keyword">async</span> ({ phoneNumber }, { updateMessage }) =&gt; {
+      <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> checkPhoneNumberAsync(phoneNumber)
+      <span class="hljs-keyword">if</span> (!result.valid) {
+        updateMessage(result.message)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+      }
+    },
+    message: <span class="hljs-string">'请输入正确的手机号码'</span>
+  },
+  {
+    key: <span class="hljs-string">'pass1'</span>,
+    test: <span class="hljs-function">(<span class="hljs-params">{ pass1 }</span>) =&gt;</span> pass1.length &gt; <span class="hljs-number">6</span>,
+    message: <span class="hljs-string">'密码应大于6位'</span>,
+  },
+  {
+    key: <span class="hljs-string">'pass2'</span>,
+    test: <span class="hljs-function">(<span class="hljs-params">{ pass1, pass2 }</span>) =&gt;</span> pass2 === pass1,
+    message: <span class="hljs-string">'两次密码应一致'</span>,
+  },
+])
+ev.validate({
+  name: <span class="hljs-string">'方一一'</span>,
+  phoneNumber: <span class="hljs-string">'18087030070'</span>,
+  pass1: <span class="hljs-string">'1234567'</span>,
+  pass2: <span class="hljs-string">'12345678'</span>
+}).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+  <span class="hljs-comment">// =&gt; { valid: false, unvalidRules: [{ key: 'pass2', test: ({ pass1, pass2 }) =&gt; pass2 === pass1, message: '两次密码应一致' }] }</span>
+})</code></pre>
 			<h4 id="💡-eventbus">💡 EventBus</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>事件巴士，管理事件的发布与订阅。</p>
+			<pre><code class="language-ts"><span class="hljs-keyword">const</span> bus = <span class="hljs-keyword">new</span> EventBus&lt;{
+  success: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">void</span>,
+  error: <span class="hljs-function">(<span class="hljs-params">message: <span class="hljs-built_in">string</span></span>) =&gt;</span> <span class="hljs-built_in">void</span>,
+}&gt;()
+<span class="hljs-keyword">const</span> unbindSuccessListener = bus.on(<span class="hljs-string">'success'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'成功啦'</span>)
+})
+<span class="hljs-keyword">const</span> unbindErrorListener = bus.once(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.error(message)
+})
+bus.emit(<span class="hljs-string">'success'</span>)
+bus.emit(<span class="hljs-string">'error'</span>, <span class="hljs-string">'出错啦'</span>)
+unbindSuccessListener()
+bus.off(<span class="hljs-string">'error'</span>)</code></pre>
 			<h4 id="💡-wechat">💡 Wechat</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<p>对微信 JSSDK 的封装。</p>
+			<pre><code class="language-ts"><span class="hljs-keyword">const</span> wechat = <span class="hljs-keyword">new</span> Wechat()
+getWechatConfigAsync().then(<span class="hljs-function"><span class="hljs-params">config</span> =&gt;</span> {
+  wechat.config(config)
+})
+wechat.updateShareData({
+  title: <span class="hljs-string">'分享标题'</span>,
+  desc: <span class="hljs-string">'分享描述'</span>,
+  link: <span class="hljs-string">'分享链接'</span>,
+  imgUrl: <span class="hljs-string">'缩略图地址'</span>,
+})
+wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+  <span class="hljs-comment">// =&gt; API 调用结果</span>
+})</code></pre>
 			<!-- 工具类i -->
 			<h3 id="📦-工具类型">📦 工具类型</h3>
 			<!-- 工具类型! -->
@@ -3185,6 +3511,12 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 <span class="hljs-keyword">type</span> UserGender = Defined&lt;User[<span class="hljs-string">'gender'</span>]&gt;</code></pre>
 			<h4 id="💡-if">💡 If</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
+			<p>条件类型。</p>
+			<pre><code class="language-ts"><span class="hljs-keyword">type</span> X = <span class="hljs-string">'x'</span>
+<span class="hljs-comment">// before</span>
+<span class="hljs-keyword">type</span> IsX = X <span class="hljs-keyword">extends</span> <span class="hljs-string">'x'</span> ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>
+<span class="hljs-comment">// after</span>
+<span class="hljs-keyword">type</span> IsX = If&lt;X <span class="hljs-keyword">extends</span> <span class="hljs-string">'x'</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>&gt;</code></pre>
 			<h4 id="💡-isnever">💡 IsNever</h4>
 			<p><small><a href="">源码</a> | <a href="">API</a></small></p>
 			<h4 id="💡-literalunion">💡 LiteralUnion</h4>
@@ -3247,6 +3579,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/cssvalue.html" class="tsd-kind-icon">CSSValue</a></li>
 							<li class="tsd-kind-interface tsd-has-type-parameter tsd-is-external"><a href="interfaces/easyvalidatorrule.html" class="tsd-kind-icon">Easy<wbr>Validator<wbr>Rule</a></li>
 							<li class="tsd-kind-interface tsd-has-type-parameter tsd-is-external"><a href="interfaces/easyvalidatorruletestfunction.html" class="tsd-kind-icon">Easy<wbr>Validator<wbr>Rule<wbr>Test<wbr>Function</a></li>
+							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/easyvalidatorruletestfunctionactions.html" class="tsd-kind-icon">Easy<wbr>Validator<wbr>Rule<wbr>Test<wbr>Function<wbr>Actions</a></li>
 							<li class="tsd-kind-interface tsd-has-type-parameter tsd-is-external"><a href="interfaces/easyvalidatorvalidatereturn.html" class="tsd-kind-icon">Easy<wbr>Validator<wbr>Validate<wbr>Return</a></li>
 							<li class="tsd-kind-interface tsd-has-type-parameter tsd-is-external"><a href="interfaces/fillreturnvalue.html" class="tsd-kind-icon">Fill<wbr>Return<wbr>Value</a></li>
 							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/flexibleoptions.html" class="tsd-kind-icon">Flexible<wbr>Options</a></li>
@@ -3308,7 +3641,6 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#castarray" class="tsd-kind-icon">cast<wbr>Array</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#chunk" class="tsd-kind-icon">chunk</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#clamp" class="tsd-kind-icon">clamp</a></li>
-							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#column" class="tsd-kind-icon">column</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#endswith" class="tsd-kind-icon">ends<wbr>With</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#fill" class="tsd-kind-icon">fill</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#flexible" class="tsd-kind-icon">flexible</a></li>
@@ -3318,6 +3650,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#groupby" class="tsd-kind-icon">group<wbr>By</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#has" class="tsd-kind-icon">has</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#ii" class="tsd-kind-icon">ii</a></li>
+							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#inandroid" class="tsd-kind-icon">in<wbr>Android</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#inbrowser" class="tsd-kind-icon">in<wbr>Browser</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#inios" class="tsd-kind-icon">inIOS</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#innode" class="tsd-kind-icon">in<wbr>Node</a></li>
@@ -3336,7 +3669,6 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#isfunction" class="tsd-kind-icon">is<wbr>Function</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#ishan" class="tsd-kind-icon">is<wbr>Han</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#isinteger" class="tsd-kind-icon">is<wbr>Integer</a></li>
-							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#isleapyear" class="tsd-kind-icon">is<wbr>Leap<wbr>Year</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#isnan" class="tsd-kind-icon">is<wbr>NaN</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#isnegativeinteger" class="tsd-kind-icon">is<wbr>Negative<wbr>Integer</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#isnil" class="tsd-kind-icon">is<wbr>Nil</a></li>
@@ -3396,7 +3728,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Any<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L1">enhanceType.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L1">enhanceType.ts:1</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3427,7 +3759,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Any<wbr>Object<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L3">enhanceType.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L3">enhanceType.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3437,7 +3769,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Async<wbr>OrSync&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L9">enhanceType.ts:9</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L9">enhanceType.ts:9</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3453,7 +3785,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Brand&lt;T, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L7">enhanceType.ts:7</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L7">enhanceType.ts:7</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3472,7 +3804,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Defined&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L77">enhanceType.ts:77</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L89">enhanceType.ts:89</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3504,7 +3836,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Disposer<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Disposer.ts#L7">Disposer.ts:7</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Disposer.ts#L7">Disposer.ts:7</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3537,7 +3869,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Easy<wbr>Validator<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/EasyValidator.ts#L5">EasyValidator.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/EasyValidator.ts#L4">EasyValidator.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3547,7 +3879,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Easy<wbr>Validator<wbr>Rules&lt;D&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/easyvalidatorrule.html" class="tsd-signature-type">EasyValidatorRule</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/EasyValidator.ts#L45">EasyValidator.ts:45</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/EasyValidator.ts#L57">EasyValidator.ts:57</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3563,7 +3895,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Event<wbr>Bus<wbr>Unsubscribe<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/EventBus.ts#L4">EventBus.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/EventBus.ts#L4">EventBus.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3593,7 +3925,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Get<wbr>Type<wbr>Return<span class="tsd-signature-symbol">:</span> <a href="globals.html#literalunion" class="tsd-signature-type">LiteralUnion</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"Undefined"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Null"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Array"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"String"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Arguments"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Function"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Error"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Boolean"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Date"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RegExp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Object"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"JSON"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Math"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Symbol"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Map"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Set"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WeakMap"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WeakSet"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/getType.ts#L3">getType.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/getType.ts#L3">getType.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3603,9 +3935,23 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">If&lt;Condition, Then, Else&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">If&lt;Condition, Then, Else&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L61">enhanceType.ts:61</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L73">enhanceType.ts:73</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>条件类型。</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><pre><code class="language-ts"><span class="hljs-keyword">type</span> X = <span class="hljs-string">'x'</span>
+<span class="hljs-comment">// before</span>
+<span class="hljs-keyword">type</span> IsX = X <span class="hljs-keyword">extends</span> <span class="hljs-string">'x'</span> ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>
+<span class="hljs-comment">// after</span>
+<span class="hljs-keyword">type</span> IsX = If&lt;X <span class="hljs-keyword">extends</span> <span class="hljs-string">'x'</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>&gt;</code></pre>
+						</dd>
+					</dl>
+				</div>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
 				<ul class="tsd-type-parameters">
 					<li>
@@ -3625,7 +3971,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Is<wbr>Never&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IsNever&lt;T&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L59">enhanceType.ts:59</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L59">enhanceType.ts:59</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3641,7 +3987,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Literal<wbr>Union&lt;L, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">L</span><span class="tsd-signature-symbol"> | </span><a href="globals.html#brand" class="tsd-signature-type">Brand</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L57">enhanceType.ts:57</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L57">enhanceType.ts:57</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3660,7 +4006,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Memoize<wbr>Return&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/memoize.ts#L28">memoize.ts:28</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/memoize.ts#L28">memoize.ts:28</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3676,7 +4022,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Merge&lt;M, N&gt;<span class="tsd-signature-symbol">:</span> <a href="globals.html#omit" class="tsd-signature-type">Omit</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">M</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Extract</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof M</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">keyof N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">N</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L55">enhanceType.ts:55</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L55">enhanceType.ts:55</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3695,7 +4041,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Omit&lt;T, K&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L13">enhanceType.ts:13</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L13">enhanceType.ts:13</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3714,7 +4060,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Omit<wbr>ByValue&lt;T, ValueType&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">{ [Key in keyof T]: T[Key] extends ValueType ? never : Key; }[keyof T]</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L15">enhanceType.ts:15</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L15">enhanceType.ts:15</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3733,7 +4079,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Omit<wbr>ByValue<wbr>Exact&lt;T, ValueType&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">{ [Key in keyof T]: [ValueType] extends [T[Key]] ? [T[Key]] extends [ValueType] ? never : Key : Key; }[keyof T]</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L20">enhanceType.ts:20</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L20">enhanceType.ts:20</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3752,7 +4098,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">One<wbr>OrMore&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L5">enhanceType.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L5">enhanceType.ts:5</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3768,7 +4114,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Optional<wbr>Keys&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">{ [K in keyof T]-?: {} extends Pick&lt;T, K&gt; ? K : never; }[keyof T]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L51">enhanceType.ts:51</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L51">enhanceType.ts:51</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3784,7 +4130,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Pick<wbr>ByValue&lt;T, ValueType&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">{ [Key in keyof T]: T[Key] extends ValueType ? Key : never; }[keyof T]</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L31">enhanceType.ts:31</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L31">enhanceType.ts:31</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3803,7 +4149,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Pick<wbr>ByValue<wbr>Exact&lt;T, ValueType&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">{ [Key in keyof T]: [ValueType] extends [T[Key]] ? [T[Key]] extends [ValueType] ? Key : never : never; }[keyof T]</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L36">enhanceType.ts:36</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L36">enhanceType.ts:36</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3822,7 +4168,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Required<wbr>Keys&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">{ [K in keyof T]-?: {} extends Pick&lt;T, K&gt; ? never : K; }[keyof T]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L47">enhanceType.ts:47</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L47">enhanceType.ts:47</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3838,7 +4184,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Value<wbr>Of&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T[keyof T]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceType.ts#L11">enhanceType.ts:11</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceType.ts#L11">enhanceType.ts:11</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3854,7 +4200,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Wechat<wbr>Error<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L100">Wechat.ts:100</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L100">Wechat.ts:100</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3885,7 +4231,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Wechat<wbr>JsApi<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"checkJsApi"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"updateAppMessageShareData"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"updateTimelineShareData"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareTimeline"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareAppMessage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareQQ"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareQZone"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"startRecord"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stopRecord"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onVoiceRecordEnd"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"playVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"pauseVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stopVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onVoicePlayEnd"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"uploadVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"downloadVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chooseImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"previewImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"uploadImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"downloadImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"translateVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"getNetworkType"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openLocation"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"getLocation"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hideOptionMenu"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"showOptionMenu"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hideMenuItems"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"showMenuItems"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hideAllNonBaseMenuItem"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"showAllNonBaseMenuItem"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"closeWindow"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"scanQRCode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chooseWXPay"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openProductSpecificView"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"addCard"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chooseCard"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openCard"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L11">Wechat.ts:11</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L11">Wechat.ts:11</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3900,7 +4246,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 				<div class="tsd-signature tsd-kind-icon">Wechat<wbr>Non<wbr>Base<wbr>Menu<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"menuItem:share:appMessage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:timeline"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:qq"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:weiboApp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:favorite"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:facebook"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:QZone"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:editTag"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:delete"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:copyUrl"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:originPage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:readMode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:openWithQQBrowser"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:openWithSafari"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:email"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:brand"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/Wechat.ts#L163">Wechat.ts:163</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/Wechat.ts#L163">Wechat.ts:163</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3922,7 +4268,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/assign.ts#L21">assign.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/assign.ts#L22">assign.ts:22</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3937,7 +4283,8 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
   { x: <span class="hljs-number">1</span> },
   { y: <span class="hljs-number">2</span> },
   { x: <span class="hljs-number">5</span>, z: <span class="hljs-number">9</span> },
-) <span class="hljs-comment">// =&gt; { x: 5, y: 2, z: 9 }</span></code></pre>
+)
+<span class="hljs-comment">// =&gt; { x: 5, y: 2, z: 9 }</span></code></pre>
 								</dd>
 							</dl>
 						</div>
@@ -3977,7 +4324,7 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/base64.ts#L141">base64.ts:141</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/base64.ts#L141">base64.ts:141</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4016,7 +4363,7 @@ base64Decode(<span class="hljs-string">'8J+RqOKAjfCfkrs='</span>) <span class="h
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/base64.ts#L119">base64.ts:119</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/base64.ts#L119">base64.ts:119</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4055,7 +4402,7 @@ base64Encode(<span class="hljs-string">'👨‍💻'</span>) <span class="hljs-c
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/base64.ts#L185">base64.ts:185</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/base64.ts#L185">base64.ts:185</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4097,7 +4444,7 @@ base64Decode(<span class="hljs-string">'8J-RqOKAjfCfkrs='</span>) <span class="h
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/base64.ts#L165">base64.ts:165</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/base64.ts#L165">base64.ts:165</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4139,7 +4486,7 @@ base64UrlEncode(<span class="hljs-string">'👨‍💻'</span>) <span class="hlj
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/castArray.ts#L14">castArray.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/castArray.ts#L14">castArray.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4179,20 +4526,29 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 				<a name="chunk" class="tsd-anchor"></a>
 				<h3>chunk</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">chunk&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, filler<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
+					<li class="tsd-signature tsd-kind-icon">chunk&lt;T&gt;<span class="tsd-signature-symbol">(</span>arr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, filler<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/chunk.ts#L13">chunk.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/chunk.ts#L21">chunk.ts:21</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>将 <code>array</code> 拆分成多个 <code>size</code> 长度的区块，并将它们组合成一个新数组返回。</p>
+								<p>将 <code>arr</code> 拆分成多个 <code>size</code> 长度的区块，并将它们组合成一个新数组返回。</p>
 							</div>
-							<p>如果 <code>array</code> 无法等分，且设置了 <code>filler</code>，剩余的元素将被 <code>filler</code> 填充。</p>
+							<p>如果 <code>arr</code> 无法等分，且设置了 <code>filler</code> 函数，剩余的元素将被 <code>filler</code> 函数的返回值填充。</p>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+chunk(arr, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; [[1, 2], [3, 4], [5, 6]]</span>
+chunk(arr, <span class="hljs-number">3</span>) <span class="hljs-comment">// =&gt; [[1, 2, 3], [4, 5, 6]]</span>
+chunk(arr, <span class="hljs-number">4</span>) <span class="hljs-comment">// =&gt; [[1, 2, 3, 4], [5, 6]]</span>
+chunk(arr, <span class="hljs-number">4</span>, <span class="hljs-function"><span class="hljs-params">index</span> =&gt;</span> index) <span class="hljs-comment">// =&gt; [[1, 2, 3, 4], [5, 6, 0, 1]]</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -4203,7 +4559,7 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+								<h5>arr: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>要处理的数组</p>
 								</div>
@@ -4236,13 +4592,21 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/clamp.ts#L9">clamp.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/clamp.ts#L16">clamp.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>返回限制在最小值和最大值之间的值。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">clamp(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>) <span class="hljs-comment">// =&gt; 50</span>
+clamp(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">50</span>) <span class="hljs-comment">// =&gt; 50</span>
+clamp(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">49</span>) <span class="hljs-comment">// =&gt; 49</span>
+clamp(<span class="hljs-number">50</span>, <span class="hljs-number">51</span>, <span class="hljs-number">100</span>) <span class="hljs-comment">// =&gt; 51</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -4270,101 +4634,6 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter tsd-is-external">
-				<a name="column" class="tsd-anchor"></a>
-				<h3>column</h3>
-				<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">column&lt;O, CK&gt;<span class="tsd-signature-symbol">(</span>arr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">[]</span>, columnKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CK</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O[CK]</span><span class="tsd-signature-symbol">&gt;</span></li>
-					<li class="tsd-signature tsd-kind-icon">column&lt;O, CK, IK&gt;<span class="tsd-signature-symbol">(</span>arr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">[]</span>, columnKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CK</span>, indexKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IK</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O[IK]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O[CK]</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/column.ts#L8">column.ts:8</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>返回对象数组中指定的一列。</p>
-							</div>
-						</div>
-						<h4 class="tsd-type-parameters-title">Type parameters</h4>
-						<ul class="tsd-type-parameters">
-							<li>
-								<h4>O<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							</li>
-							<li>
-								<h4>CK<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof O</span></h4>
-							</li>
-						</ul>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>arr: <span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">[]</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>要操作的对象数组</p>
-								</div>
-							</li>
-							<li>
-								<h5>columnKey: <span class="tsd-signature-type">CK</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>列的键</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O[CK]</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						<p>返回列值组成的数组</p>
-					</li>
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/column.ts#L21">column.ts:21</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>返回对象数组中指定的一列。</p>
-							</div>
-						</div>
-						<h4 class="tsd-type-parameters-title">Type parameters</h4>
-						<ul class="tsd-type-parameters">
-							<li>
-								<h4>O<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							</li>
-							<li>
-								<h4>CK<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof O</span></h4>
-							</li>
-							<li>
-								<h4>IK<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof O</span></h4>
-							</li>
-						</ul>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>arr: <span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">[]</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>要操作的对象数组</p>
-								</div>
-							</li>
-							<li>
-								<h5>columnKey: <span class="tsd-signature-type">CK</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>列的键</p>
-								</div>
-							</li>
-							<li>
-								<h5>indexKey: <span class="tsd-signature-type">IK</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>作为返回对象的键的列键</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O[IK]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O[CK]</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						<p>返回列值组成的对象</p>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
 				<a name="endswith" class="tsd-anchor"></a>
 				<h3>ends<wbr>With</h3>
@@ -4375,13 +4644,19 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/endsWith.ts#L8">endsWith.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/endsWith.ts#L13">endsWith.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>str</code> 是否以 <code>needle</code> 结尾。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">endsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'llo'</span>) <span class="hljs-comment">// =&gt; true</span>
+endsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'he'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -4413,13 +4688,19 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/fill.ts#L23">fill.ts:23</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/fill.ts#L28">fill.ts:28</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>使用 <code>value</code> 来填充（替换） <code>arr</code>，从 <code>start</code> 位置开始, 到 <code>end</code> 位置结束（但不包括 <code>end</code> 位置）。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">5</span>), <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; [1, 1, 1, 1, 1]</span>
+fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>), <span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> index) <span class="hljs-comment">// =&gt; [0, 1, 2]</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -4469,7 +4750,7 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/flexible.ts#L17">flexible.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/flexible.ts#L17">flexible.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4500,7 +4781,7 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/forOwn.ts#L26">forOwn.ts:26</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/forOwn.ts#L35">forOwn.ts:35</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4511,6 +4792,16 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 								但在运行时，<code>key</code> 始终为 <code>string</code>，
 								因此，你应该始终把 <code>key</code> 当作 <code>string</code> 处理。
 							（为什么会这样？<a href="https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208%EF%BC%89">https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208）</a></p>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">forOwn(
+  { x: <span class="hljs-string">'1'</span>, y: <span class="hljs-number">2</span> },
+  <span class="hljs-function">(<span class="hljs-params">value, key</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(key, value)
+  }
+)</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -4547,13 +4838,21 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/env.ts#L8">env.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/env.ts#L15">env.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>获取全局对象。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-comment">// 浏览器中</span>
+getGlobal() <span class="hljs-comment">// =&gt; window</span>
+<span class="hljs-comment">// Node 中</span>
+getGlobal() <span class="hljs-comment">// =&gt; global</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						<p>返回全局对象</p>
@@ -4570,7 +4869,7 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/getType.ts#L33">getType.ts:33</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/getType.ts#L40">getType.ts:40</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4583,6 +4882,12 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 								</dd>
 								<dt>see</dt>
 								<dd><p><a href="https://www.ecma-international.org/ecma-262/5.1/#sec-8.6.2">https://www.ecma-international.org/ecma-262/5.1/#sec-8.6.2</a></p>
+								</dd>
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">getType(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; Number</span>
+getType(<span class="hljs-literal">true</span>) <span class="hljs-comment">// =&gt; Boolean</span>
+getType([]) <span class="hljs-comment">// =&gt; Array</span>
+getType(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// =&gt; RegExp</span></code></pre>
 								</dd>
 							</dl>
 						</div>
@@ -4610,13 +4915,40 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/groupBy.ts#L19">groupBy.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/groupBy.ts#L45">groupBy.ts:45</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>根据 <code>iteratee</code> 返回的值对 <code>data</code> 进行分组。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">groupBy(
+  [
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">1</span>, name: <span class="hljs-string">'石头'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">3</span>, name: <span class="hljs-string">'花生'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">2</span>, name: <span class="hljs-string">'鲸鱼'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">1</span>, name: <span class="hljs-string">'树木'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">2</span>, name: <span class="hljs-string">'鲨鱼'</span> },
+  ],
+  <span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.type,
+)
+<span class="hljs-comment">// =&gt; {</span>
+<span class="hljs-comment">// =&gt;   1: [</span>
+<span class="hljs-comment">// =&gt;     { type: 1, name: '石头' },</span>
+<span class="hljs-comment">// =&gt;     { type: 1, name: '树木' },</span>
+<span class="hljs-comment">// =&gt;   ],</span>
+<span class="hljs-comment">// =&gt;   2: [</span>
+<span class="hljs-comment">// =&gt;     { type: 2, name: '鲸鱼' },</span>
+<span class="hljs-comment">// =&gt;     { type: 2, name: '鲨鱼' },</span>
+<span class="hljs-comment">// =&gt;   ],</span>
+<span class="hljs-comment">// =&gt;   3: [</span>
+<span class="hljs-comment">// =&gt;     { type: 3, name: '花生' },</span>
+<span class="hljs-comment">// =&gt;   ],</span>
+<span class="hljs-comment">// =&gt; }</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -4659,13 +4991,21 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/has.ts#L10">has.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/has.ts#L17">has.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>key</code> 是否是对象 <code>obj</code> 自身的属性。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> obj = { x: <span class="hljs-number">1</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'y'</span> }
+has(obj, <span class="hljs-string">'x'</span>) <span class="hljs-comment">// =&gt; true</span>
+has(obj, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; true</span>
+has(obj, <span class="hljs-string">'toString'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -4703,7 +5043,7 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/ii.ts#L11">ii.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/ii.ts#L15">ii.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4711,6 +5051,11 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 								<p>立即调用函数并返回其返回值。</p>
 							</div>
 							<p>注：<code>ii = immediately invoke</code></p>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">ii(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 1</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -4733,6 +5078,47 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+				<a name="inandroid" class="tsd-anchor"></a>
+				<h3>in<wbr>Android</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">in<wbr>Android<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/env.ts#L204">env.ts:204</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>检查是否在 <code>Android</code> 设备中。</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-comment">// Android 设备中</span>
+inAndroid() <span class="hljs-comment">// =&gt; true</span>
+inAndroid(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在 Android 设备中'</span>),
+)</code></pre>
+								</dd>
+							</dl>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>在 <code>Android</code> 设备中执行的回调</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						<p>在 <code>Android</code> 设备中返回 <code>true</code>，否则返回 <code>false</code></p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
 				<a name="inbrowser" class="tsd-anchor"></a>
 				<h3>in<wbr>Browser</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-is-external">
@@ -4742,13 +5128,22 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/env.ts#L34">env.ts:34</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/env.ts#L49">env.ts:49</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查是否在浏览器环境中。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-comment">// 浏览器中</span>
+inBrowser() <span class="hljs-comment">// =&gt; true</span>
+inBrowser(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在浏览器中'</span>),
+)</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -4774,13 +5169,22 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/env.ts#L126">env.ts:126</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/env.ts#L173">env.ts:173</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查是否在 <code>iOS</code> 设备中。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-comment">// iOS 设备中</span>
+inIOS() <span class="hljs-comment">// =&gt; true</span>
+inIOS(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在 iOS 设备中'</span>),
+)</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -4806,13 +5210,22 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/env.ts#L57">env.ts:57</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/env.ts#L80">env.ts:80</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查是否在 <code>Node</code> 环境中。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-comment">// Node 中</span>
+inNode() <span class="hljs-comment">// =&gt; true</span>
+inNode(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在 Node 中'</span>),
+)</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -4838,13 +5251,28 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/inRange.ts#L22">inRange.ts:22</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/inRange.ts#L36">inRange.ts:36</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否在某区间内。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-comment">// 2 是否在区间 (0, 2) 内</span>
+inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.open) <span class="hljs-comment">// =&gt; false</span>
+
+<span class="hljs-comment">// 2 是否在区间 [0, 2] 内</span>
+inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.closed) <span class="hljs-comment">// =&gt; true</span>
+
+<span class="hljs-comment">// 2 是否在区间 [0, 2) 内</span>
+inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.leftClosedRightOpen) <span class="hljs-comment">// =&gt; false</span>
+
+<span class="hljs-comment">// 2 是否在区间 (0, 2] 内</span>
+inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.leftOpenRightClosed) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -4888,13 +5316,22 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/env.ts#L81">env.ts:81</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/env.ts#L112">env.ts:112</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查是否在微信小程序环境中。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-comment">// 微信小程序中</span>
+inWechatMiniProgram() <span class="hljs-comment">// =&gt; true</span>
+inWechatMiniProgram(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在微信小程序中'</span>),
+)</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -4920,13 +5357,22 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/env.ts#L104">env.ts:104</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/env.ts#L143">env.ts:143</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查是否在微信浏览器环境中。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-comment">// 微信浏览器中</span>
+inWechatWebview() <span class="hljs-comment">// =&gt; true</span>
+inWechatWebview(
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在微信浏览器中'</span>),
+)</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -4954,13 +5400,20 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/includes.ts#L12">includes.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/includes.ts#L18">includes.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检索值 <code>value</code> 是否在数组 <code>arr</code> 中。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">includes([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+includes([<span class="hljs-literal">NaN</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; true</span>
+includes([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-number">4</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -4989,13 +5442,19 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/includes.ts#L21">includes.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/includes.ts#L32">includes.ts:32</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检索可枚举属性值 <code>value</code> 是否在对象 <code>obj</code> 中。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">includes({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+includes({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, <span class="hljs-number">3</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -5024,13 +5483,20 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/includes.ts#L30">includes.ts:30</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/includes.ts#L47">includes.ts:47</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检索值 <code>value</code> 是否在字符串 <code>str</code> 中。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'h'</span>) <span class="hljs-comment">// =&gt; true</span>
+includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'ll'</span>) <span class="hljs-comment">// =&gt; true</span>
+includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'123'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5062,7 +5528,7 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L16">is.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L16">is.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5100,7 +5566,7 @@ isArray(<span class="hljs-string">'x'</span>) <span class="hljs-comment">// =&gt
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L32">is.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L32">is.ts:32</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5139,7 +5605,7 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L48">is.ts:48</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L48">is.ts:48</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5182,13 +5648,18 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L144">is.ts:144</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L159">is.ts:159</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是一个日期。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isDate(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5214,7 +5685,7 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L155">is.ts:155</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L175">is.ts:175</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5224,6 +5695,10 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 							<dl class="tsd-comment-tags">
 								<dt>see</dt>
 								<dd><p><a href="http://emailregex.com/">http://emailregex.com/</a></p>
+								</dd>
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isEmail(<span class="hljs-string">'hello@foo.bar'</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmail(<span class="hljs-string">'hello@foo'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 								</dd>
 							</dl>
 						</div>
@@ -5251,13 +5726,24 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L166">is.ts:166</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L196">is.ts:196</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是空值，包括：<code>undefined</code>、<code>null</code>、<code>&#39;&#39;</code>、<code>false</code>、<code>true</code>、<code>[]</code>、<code>{}</code>。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isEmpty(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty(<span class="hljs-literal">false</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty(<span class="hljs-literal">true</span>) <span class="hljs-comment">// =&gt; true</span>
+isEmpty([]) <span class="hljs-comment">// =&gt; true</span>
+isEmpty({}) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5283,13 +5769,19 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L187">is.ts:187</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L222">is.ts:222</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查给定的数组的各项是否相等。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isEqualArray([<span class="hljs-number">1</span>], [<span class="hljs-number">1</span>]) <span class="hljs-comment">// =&gt; true</span>
+isEqualArray([<span class="hljs-number">1</span>], [<span class="hljs-number">5</span>]) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5315,13 +5807,19 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L217">is.ts:217</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L257">is.ts:257</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是原始有限数值。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-built_in">isFinite</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+<span class="hljs-built_in">isFinite</span>(<span class="hljs-literal">Infinity</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5347,13 +5845,19 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L227">is.ts:227</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L272">is.ts:272</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是一个函数。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isFunction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; true</span>
+isFunction(<span class="hljs-number">2000</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5379,13 +5883,19 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L237">is.ts:237</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L287">is.ts:287</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否全是汉字。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isHan(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">// =&gt; false</span>
+isHan(<span class="hljs-string">'嗨咯'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5411,13 +5921,20 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L249">is.ts:249</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L305">is.ts:305</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是一个整数。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+isInteger(<span class="hljs-number">1.2</span>) <span class="hljs-comment">// =&gt; false</span>
+isInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5434,38 +5951,6 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
-				<a name="isleapyear" class="tsd-anchor"></a>
-				<h3>is<wbr>Leap<wbr>Year</h3>
-				<ul class="tsd-signatures tsd-kind-function tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">is<wbr>Leap<wbr>Year<span class="tsd-signature-symbol">(</span>year<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L279">is.ts:279</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>判断给定的年份是否是闰年。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>year: <span class="tsd-signature-type">number</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>要判断的年份</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						<p>给定的年份是闰年返回 <code>true</code>，否则返回 <code>false</code></p>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
 				<a name="isnan" class="tsd-anchor"></a>
 				<h3>is<wbr>NaN</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-is-external">
@@ -5475,13 +5960,19 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L289">is.ts:289</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L350">is.ts:350</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是 <code>NaN</code>。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; true</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5507,13 +5998,19 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L269">is.ts:269</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L335">is.ts:335</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是一个负整数。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isNegativeInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; true</span>
+isNegativeInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5539,13 +6036,19 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L299">is.ts:299</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L365">is.ts:365</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是 <code>null</code> 或 <code>undefined</code>。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isNil(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; true</span>
+isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5571,13 +6074,18 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L309">is.ts:309</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L379">is.ts:379</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是 <code>null</code>。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isNull(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5603,7 +6111,7 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L327">is.ts:327</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L397">is.ts:397</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5615,7 +6123,7 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 								<dt>example</dt>
 								<dd><pre><code class="language-ts">isNumber(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
 isNumber(<span class="hljs-number">0.1</span>) <span class="hljs-comment">// =&gt; true</span>
-isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+isNumber(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
 								</dd>
 							</dl>
 						</div>
@@ -5643,7 +6151,7 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L339">is.ts:339</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L414">is.ts:414</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5651,6 +6159,12 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 								<p>检查 <code>value</code> 是否是一个数值。</p>
 							</div>
 							<p>注：<code>Infinity</code>、<code>-Infinity</code>、<code>NaN</code> 不被认为是数值。</p>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isNumeric(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+isNumeric(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5676,13 +6190,20 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L349">is.ts:349</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L430">is.ts:430</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是一个对象。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isObject({}) <span class="hljs-comment">// =&gt; true</span>
+isObject(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; true</span>
+isObject(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5708,13 +6229,20 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L360">is.ts:360</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L447">is.ts:447</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是一个普通对象。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isPlainObject({}) <span class="hljs-comment">// =&gt; true</span>
+isPlainObject(<span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>)) <span class="hljs-comment">// =&gt; true</span>
+isPlainObject(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5740,13 +6268,19 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L259">is.ts:259</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L320">is.ts:320</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是一个正整数。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isPositiveInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+isPositiveInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5772,13 +6306,19 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L117">is.ts:117</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L122">is.ts:122</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检测 <code>number</code> 是否可能是中国的手机号码。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isPossibleChineseMobilePhoneNumber(<span class="hljs-number">18000030000</span>) <span class="hljs-comment">// =&gt; true</span>
+isPossibleChineseMobilePhoneNumber(<span class="hljs-number">10086</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5804,13 +6344,20 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L127">is.ts:127</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L138">is.ts:138</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检测 <code>value</code> 是否可能是中国人的姓名，支持少数名族姓名中间的 <code>·</code> 号。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isPossibleChineseName(<span class="hljs-string">'鲁'</span>) <span class="hljs-comment">// =&gt; false</span>
+isPossibleChineseName(<span class="hljs-string">'鲁迅'</span>) <span class="hljs-comment">// =&gt; true</span>
+isPossibleChineseName(<span class="hljs-string">'买买提·吐尔逊'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5836,13 +6383,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L378">is.ts:378</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L469">is.ts:469</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否像 <code>Promise</code>。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isPromiseLike(<span class="hljs-built_in">Promise</span>.resolve()) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5868,13 +6420,19 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L391">is.ts:391</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L487">is.ts:487</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是一个正则对象。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isRegExp(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// =&gt; true</span>
+isRegExp(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'hello'</span>)) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5900,13 +6458,19 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L401">is.ts:401</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L502">is.ts:502</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否是一个字符串。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isString(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; true</span>
+isString(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5932,13 +6496,19 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L411">is.ts:411</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L517">is.ts:517</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>value</code> 是否等于 <code>undefined</code>。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isUndefined(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; true</span>
+isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -5964,7 +6534,7 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/is.ts#L422">is.ts:422</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/is.ts#L533">is.ts:533</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5974,6 +6544,10 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 							<dl class="tsd-comment-tags">
 								<dt>see</dt>
 								<dd><p><a href="http://urlregex.com/">http://urlregex.com/</a></p>
+								</dd>
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isUrl(<span class="hljs-string">'http://foo.bar'</span>) <span class="hljs-comment">// =&gt; true</span>
+isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 								</dd>
 							</dl>
 						</div>
@@ -6001,7 +6575,7 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/enhanceJest.ts#L1">enhanceJest.ts:1</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/enhanceJest.ts#L1">enhanceJest.ts:1</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -6033,13 +6607,32 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/keyBy.ts#L19">keyBy.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/keyBy.ts#L37">keyBy.ts:37</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>根据 <code>iteratee</code> 返回的键对 <code>data</code> 进行分组，但只保留最后一个结果。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">keyBy(
+  [
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">1</span>, name: <span class="hljs-string">'石头'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">3</span>, name: <span class="hljs-string">'花生'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">2</span>, name: <span class="hljs-string">'鲸鱼'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">1</span>, name: <span class="hljs-string">'树木'</span> },
+    { <span class="hljs-keyword">type</span>: <span class="hljs-number">2</span>, name: <span class="hljs-string">'鲨鱼'</span> },
+  ],
+  <span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.type,
+)
+<span class="hljs-comment">// =&gt; {</span>
+<span class="hljs-comment">// =&gt;   1: { type: 1, name: '树木' },</span>
+<span class="hljs-comment">// =&gt;   2: { type: 2, name: '鲨鱼' },</span>
+<span class="hljs-comment">// =&gt;   3: { type: 3, name: '花生' },</span>
+<span class="hljs-comment">// =&gt; }</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6082,7 +6675,7 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/keys.ts#L14">keys.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/keys.ts#L18">keys.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6093,6 +6686,11 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 								但在运行时，<code>key</code> 始终为 <code>string</code>，
 								因此，你应该始终把 <code>key</code> 当作 <code>string</code> 处理。
 							（为什么会这样？<a href="https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208%EF%BC%89">https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208）</a></p>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">keys({ x: <span class="hljs-number">1</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'y'</span> }) <span class="hljs-comment">// =&gt; ['x', '2'] 或 ['2', 'x']</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6124,13 +6722,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/last.ts#L9">last.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/last.ts#L13">last.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>返回数组 <code>arr</code> 的最后一项。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">last([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; 3</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6162,13 +6765,29 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/loadResource.ts#L67">loadResource.ts:67</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/loadResource.ts#L82">loadResource.ts:82</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>加载图片、代码、样式等资源。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">loadResource([
+  <span class="hljs-string">'https://foo.bar/all.js'</span>,
+  <span class="hljs-string">'https://foo.bar/all.css'</span>,
+  <span class="hljs-string">'https://foo.bar/logo.png'</span>,
+  {
+    <span class="hljs-keyword">type</span>: LoadResourceUrlType.js,
+    path: <span class="hljs-string">'https://s1.foo.bar/js/full'</span>,
+    alternatePath: <span class="hljs-string">'https://s2.foo.bar/js/full'</span>,
+  },
+]).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// 资源加载完成后的操作</span>
+})</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6194,13 +6813,22 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/mapValues.ts#L23">mapValues.ts:23</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/mapValues.ts#L31">mapValues.ts:31</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>映射对象的可枚举属性值为一个新的值。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">mapValues(
+  { x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> },
+  <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> value + <span class="hljs-number">10</span>,
+)
+<span class="hljs-comment">// =&gt; { x: 11, y: 12 }</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6243,13 +6871,21 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/memoize.ts#L42">memoize.ts:42</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/memoize.ts#L49">memoize.ts:49</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>函数结果缓存。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>
+<span class="hljs-keyword">const</span> fn = memoize(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> i++)
+fn() <span class="hljs-comment">// =&gt; 0</span>
+fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6287,13 +6923,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/noop.ts#L4">noop.ts:4</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/noop.ts#L9">noop.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>无操作函数。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">noop() <span class="hljs-comment">// =&gt; undefined</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6315,13 +6956,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/omit.ts#L12">omit.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/omit.ts#L16">omit.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>创建一个从 <code>obj</code> 中剔除选中的可枚举属性的对象。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">omit({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, [<span class="hljs-string">'x'</span>]) <span class="hljs-comment">// =&gt; { y: 2 }</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6364,13 +7010,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/pad.ts#L33">pad.ts:33</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/pad.ts#L41">pad.ts:41</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>在 <code>str</code> 右侧填充字符。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">padEnd(<span class="hljs-string">'姓名'</span>, <span class="hljs-number">4</span>, <span class="hljs-string">'*'</span>) <span class="hljs-comment">// =&gt; 姓名**</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6408,13 +7059,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/pad.ts#L12">pad.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/pad.ts#L16">pad.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>在 <code>str</code> 左侧填充字符。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">padStart(<span class="hljs-string">'姓名'</span>, <span class="hljs-number">4</span>, <span class="hljs-string">'*'</span>) <span class="hljs-comment">// =&gt; **姓名</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6452,13 +7108,23 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/parallel.ts#L10">parallel.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/parallel.ts#L19">parallel.ts:19</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>并行执行任务，<code>同步任务</code>、<code>异步任务</code> 皆可。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">parallel([
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>,
+  <span class="hljs-keyword">async</span> () =&gt; <span class="hljs-string">'hello'</span>,
+]).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+  <span class="hljs-comment">// =&gt; [1, 'hello']</span>
+})</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6493,13 +7159,20 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/parseCSSValue.ts#L15">parseCSSValue.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/parseCSSValue.ts#L21">parseCSSValue.ts:21</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>解析 <code>CSS</code> 值的数值和单位。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">parseCSSValue(<span class="hljs-string">'12px'</span>) <span class="hljs-comment">// =&gt; { value: 12, unit: 'px' }</span>
+parseCSSValue(<span class="hljs-number">12</span>) <span class="hljs-comment">// =&gt; { value: 12, unit: 'px' }</span>
+parseCSSValue(<span class="hljs-string">'12%'</span>) <span class="hljs-comment">// =&gt; { value: 12, unit: '%' }</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6531,13 +7204,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/pick.ts#L12">pick.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/pick.ts#L16">pick.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>创建一个从 <code>obj</code> 中选中的可枚举属性的对象。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">pick({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, [<span class="hljs-string">'x'</span>]) <span class="hljs-comment">// =&gt; { x: 1 }</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6581,13 +7259,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/placeKitten.ts#L7">placeKitten.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/placeKitten.ts#L11">placeKitten.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
+								<p>给定大小获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">placeKitten(<span class="hljs-number">100</span>) <span class="hljs-comment">// =&gt; https://placekitten.com/100/100</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6604,13 +7287,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/placeKitten.ts#L16">placeKitten.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/placeKitten.ts#L24">placeKitten.ts:24</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
+								<p>给定宽高获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">placeKitten(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>) <span class="hljs-comment">// =&gt; https://placekitten.com/100/200</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6642,13 +7330,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/randomString.ts#L6">randomString.ts:6</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/randomString.ts#L10">randomString.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>生成一个随机字符串。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">randomString() <span class="hljs-comment">// =&gt; m481rnmse1m</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						<p>返回生成的随机字符串</p>
@@ -6665,13 +7358,19 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/range.ts#L9">range.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/range.ts#L14">range.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>创建一个包含从 <code>start</code> 到 <code>end</code>，但不包含 <code>end</code> 本身范围数字的数组。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">range(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>) <span class="hljs-comment">// =&gt; [0, 1, 2, 3, 4]</span>
+range(<span class="hljs-number">0</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; [0, -1, -2, -3, -4]</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6709,13 +7408,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/repeat.ts#L10">repeat.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/repeat.ts#L14">repeat.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>重复 <code>n</code> 次给定字符串。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">repeat(<span class="hljs-string">'a'</span>, <span class="hljs-number">5</span>) <span class="hljs-comment">// =&gt; aaaaa</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6747,13 +7451,21 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/round.ts#L28">round.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/round.ts#L35">round.ts:35</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>对传入的数字按给定的精度四舍五入后返回。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">round(<span class="hljs-number">3.456</span>) <span class="hljs-comment">// =&gt; 3</span>
+round(<span class="hljs-number">3.456</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 3.5</span>
+round(<span class="hljs-number">3.456</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 3.46</span>
+round(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>) <span class="hljs-comment">// =&gt; 300</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6785,13 +7497,21 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/round.ts#L50">round.ts:50</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/round.ts#L71">round.ts:71</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>对传入的数字按给定的精度向下取值后返回。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">roundDown(<span class="hljs-number">3.456</span>) <span class="hljs-comment">// =&gt; 3</span>
+roundDown(<span class="hljs-number">3.456</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 3.4</span>
+roundDown(<span class="hljs-number">3.456</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 3.45</span>
+roundDown(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>) <span class="hljs-comment">// =&gt; 300</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6823,13 +7543,21 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/round.ts#L39">round.ts:39</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/round.ts#L53">round.ts:53</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>对传入的数字按给定的精度向上取值后返回。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">roundUp(<span class="hljs-number">3.456</span>) <span class="hljs-comment">// =&gt; 4</span>
+roundUp(<span class="hljs-number">3.456</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 3.5</span>
+roundUp(<span class="hljs-number">3.456</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 3.46</span>
+roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>) <span class="hljs-comment">// =&gt; 400</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -6862,13 +7590,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/sample.ts#L11">sample.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/sample.ts#L15">sample.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>从数组中随机获取一个元素。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">sample([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; 1 或 2 或 3</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6891,13 +7624,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/sample.ts#L19">sample.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/sample.ts#L27">sample.ts:27</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>从对象中随机获取一个可枚举属性的值。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">sample({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span> }) <span class="hljs-comment">// =&gt; 1 或 2 或 3</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6929,13 +7667,23 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/sequential.ts#L9">sequential.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/sequential.ts#L18">sequential.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>顺序执行任务，<code>同步任务</code>、<code>异步任务</code> 皆可。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">sequential([
+  <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>,
+  <span class="hljs-keyword">async</span> () =&gt; <span class="hljs-string">'hello'</span>,
+]).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+  <span class="hljs-comment">// =&gt; [1, 'hello']</span>
+})</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -6970,7 +7718,7 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/shuffle.ts#L8">shuffle.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/shuffle.ts#L12">shuffle.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6980,6 +7728,9 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 							<dl class="tsd-comment-tags">
 								<dt>see</dt>
 								<dd><p><a href="https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/">https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/</a></p>
+								</dd>
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]) <span class="hljs-comment">// =&gt; [1, 2] 或 [2, 1]</span></code></pre>
 								</dd>
 							</dl>
 						</div>
@@ -7013,13 +7764,19 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/startsWith.ts#L8">startsWith.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/startsWith.ts#L13">startsWith.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>检查 <code>str</code> 是否以 <code>needle</code> 开头。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'he'</span>) <span class="hljs-comment">// =&gt; true</span>
+startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'llo'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -7051,13 +7808,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/sum.ts#L9">sum.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/sum.ts#L13">sum.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>计算传入值的总和。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">sum([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; 6</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -7083,13 +7845,26 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/sum.ts#L38">sum.ts:38</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/sum.ts#L54">sum.ts:54</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>根据 <code>iteratee</code> 返回的结果计算传入值的总和。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">sumBy(
+  [
+    { count: <span class="hljs-number">1</span> },
+    { count: <span class="hljs-number">2</span> },
+    { count: <span class="hljs-number">3</span> },
+  ],
+  <span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.count,
+)
+<span class="hljs-comment">// =&gt; 6</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -7127,13 +7902,20 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/times.ts#L8">times.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/times.ts#L14">times.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>调用函数 <code>n</code> 次，将每次的调用结果存进数组并返回。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">times(<span class="hljs-number">4</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// 这里将会执行 4 次</span>
+})</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -7171,13 +7953,18 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/values.ts#L10">values.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/values.ts#L14">values.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>返回 <code>obj</code> 自身可枚举属性值组成的数组。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">values({ x: <span class="hljs-number">1</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'y'</span> }) <span class="hljs-comment">// =&gt; [1, 'y'] 或 ['y', 1]</span></code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
@@ -7209,13 +7996,20 @@ isNumber(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/d365bee/src/wait.ts#L6">wait.ts:6</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/bb295ba/src/wait.ts#L12">wait.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>等待一段时间。</p>
 							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">wait(<span class="hljs-number">1000</span>).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// 等待 1000 毫秒后执行</span>
+})</code></pre>
+								</dd>
+							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
