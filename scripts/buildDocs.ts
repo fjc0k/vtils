@@ -108,7 +108,7 @@ ii(async function main() {
               const apiUrl = (
                 Number(kind) === ReflectionKind.Class
                   ? `https://fjc0k.github.io/vtils/classes/${brief.name.toLowerCase()}.html`
-                  : `https://fjc0k.github.io/vtils/globals.html#${brief.name}`
+                  : `https://fjc0k.github.io/vtils/globals.html#${brief.name.toLowerCase()}`
               )
               return `
                 #### 💡 ${brief.name}

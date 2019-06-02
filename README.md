@@ -57,7 +57,7 @@ assign(
 
 #### 💡 base64Decode
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L141) | [API](https://fjc0k.github.io/vtils/globals.html#base64Decode)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L141) | [API](https://fjc0k.github.io/vtils/globals.html#base64decode)</small>
 
 返回 `base64` 解码后的字符串。
 
@@ -69,7 +69,7 @@ base64Decode('8J+RqOKAjfCfkrs=') // => 👨‍💻
 
 #### 💡 base64Encode
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L119) | [API](https://fjc0k.github.io/vtils/globals.html#base64Encode)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L119) | [API](https://fjc0k.github.io/vtils/globals.html#base64encode)</small>
 
 返回 `base64` 编码后的字符串。
 
@@ -81,7 +81,7 @@ base64Encode('👨‍💻') // => 8J+RqOKAjfCfkrs=
 
 #### 💡 base64UrlDecode
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L185) | [API](https://fjc0k.github.io/vtils/globals.html#base64UrlDecode)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L185) | [API](https://fjc0k.github.io/vtils/globals.html#base64urldecode)</small>
 
 返回 `base64url` 解码后的字符串。
 
@@ -93,7 +93,7 @@ base64Decode('8J-RqOKAjfCfkrs=') // => 👨‍💻
 
 #### 💡 base64UrlEncode
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L165) | [API](https://fjc0k.github.io/vtils/globals.html#base64UrlEncode)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L165) | [API](https://fjc0k.github.io/vtils/globals.html#base64urlencode)</small>
 
 返回 `base64url` 编码后的字符串。
 
@@ -105,7 +105,7 @@ base64UrlEncode('👨‍💻') // => 8J-RqOKAjfCfkrs=
 
 #### 💡 castArray
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/castArray.ts#L14) | [API](https://fjc0k.github.io/vtils/globals.html#castArray)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/castArray.ts#L14) | [API](https://fjc0k.github.io/vtils/globals.html#castarray)</small>
 
 如果 `value` 是数组，直接返回；如果 `value` 不是数组，返回 `[value]`。
 
@@ -147,7 +147,7 @@ clamp(50, 51, 100) // => 51
 
 #### 💡 endsWith
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/endsWith.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#endsWith)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/endsWith.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#endswith)</small>
 
 检查 `str` 是否以 `needle` 结尾。
 
@@ -175,7 +175,7 @@ fill(Array(3), (value, index) => index) // => [0, 1, 2]
 
 #### 💡 forOwn
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/forOwn.ts#L35) | [API](https://fjc0k.github.io/vtils/globals.html#forOwn)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/forOwn.ts#L35) | [API](https://fjc0k.github.io/vtils/globals.html#forown)</small>
 
 遍历对象的可枚举属性。若遍历函数返回 `false`，遍历会提前退出。
 
@@ -192,7 +192,7 @@ forOwn(
 
 #### 💡 getGlobal
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L15) | [API](https://fjc0k.github.io/vtils/globals.html#getGlobal)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L15) | [API](https://fjc0k.github.io/vtils/globals.html#getglobal)</small>
 
 获取全局对象。
 
@@ -205,7 +205,7 @@ getGlobal() // => global
 
 #### 💡 getType
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/getType.ts#L40) | [API](https://fjc0k.github.io/vtils/globals.html#getType)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/getType.ts#L40) | [API](https://fjc0k.github.io/vtils/globals.html#gettype)</small>
 
 检测 `value` 的类型。
 
@@ -218,7 +218,7 @@ getType(/hello/) // => RegExp
 
 #### 💡 groupBy
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/groupBy.ts#L45) | [API](https://fjc0k.github.io/vtils/globals.html#groupBy)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/groupBy.ts#L45) | [API](https://fjc0k.github.io/vtils/globals.html#groupby)</small>
 
 根据 `iteratee` 返回的值对 `data` 进行分组。
 
@@ -275,7 +275,7 @@ ii(() => 1) // => 1
 
 #### 💡 inAndroid
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L204) | [API](https://fjc0k.github.io/vtils/globals.html#inAndroid)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L204) | [API](https://fjc0k.github.io/vtils/globals.html#inandroid)</small>
 
 检查是否在 `Android` 设备中。
 
@@ -289,7 +289,7 @@ inAndroid(
 
 #### 💡 inBrowser
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L49) | [API](https://fjc0k.github.io/vtils/globals.html#inBrowser)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L49) | [API](https://fjc0k.github.io/vtils/globals.html#inbrowser)</small>
 
 检查是否在浏览器环境中。
 
@@ -303,7 +303,7 @@ inBrowser(
 
 #### 💡 inIOS
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L173) | [API](https://fjc0k.github.io/vtils/globals.html#inIOS)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L173) | [API](https://fjc0k.github.io/vtils/globals.html#inios)</small>
 
 检查是否在 `iOS` 设备中。
 
@@ -317,7 +317,7 @@ inIOS(
 
 #### 💡 inNode
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L80) | [API](https://fjc0k.github.io/vtils/globals.html#inNode)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L80) | [API](https://fjc0k.github.io/vtils/globals.html#innode)</small>
 
 检查是否在 `Node` 环境中。
 
@@ -331,7 +331,7 @@ inNode(
 
 #### 💡 inRange
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/inRange.ts#L36) | [API](https://fjc0k.github.io/vtils/globals.html#inRange)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/inRange.ts#L36) | [API](https://fjc0k.github.io/vtils/globals.html#inrange)</small>
 
 检查 `value` 是否在某区间内。
 
@@ -351,7 +351,7 @@ inRange(2, 0, 2, InRangeIntervalType.leftOpenRightClosed) // => true
 
 #### 💡 inWechatMiniProgram
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L112) | [API](https://fjc0k.github.io/vtils/globals.html#inWechatMiniProgram)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L112) | [API](https://fjc0k.github.io/vtils/globals.html#inwechatminiprogram)</small>
 
 检查是否在微信小程序环境中。
 
@@ -365,7 +365,7 @@ inWechatMiniProgram(
 
 #### 💡 inWechatWebview
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L143) | [API](https://fjc0k.github.io/vtils/globals.html#inWechatWebview)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/env.ts#L143) | [API](https://fjc0k.github.io/vtils/globals.html#inwechatwebview)</small>
 
 检查是否在微信浏览器环境中。
 
@@ -406,7 +406,7 @@ includes('hello', '123') // => false
 
 #### 💡 isArray
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L16) | [API](https://fjc0k.github.io/vtils/globals.html#isArray)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L16) | [API](https://fjc0k.github.io/vtils/globals.html#isarray)</small>
 
 检查 `value` 是否是一个数组。
 
@@ -417,7 +417,7 @@ isArray('x') // => false
 
 #### 💡 isBoolean
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L32) | [API](https://fjc0k.github.io/vtils/globals.html#isBoolean)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L32) | [API](https://fjc0k.github.io/vtils/globals.html#isboolean)</small>
 
 检查 `value` 是否是一个布尔值。
 
@@ -429,7 +429,7 @@ isBoolean('true') // => false
 
 #### 💡 isChineseIDCardNumber
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L48) | [API](https://fjc0k.github.io/vtils/globals.html#isChineseIDCardNumber)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L48) | [API](https://fjc0k.github.io/vtils/globals.html#ischineseidcardnumber)</small>
 
 检查 `value` 是否是合法的中国大陆居民 `18` 位身份证号码。
 
@@ -439,7 +439,7 @@ isChineseIDCardNumber('123456') // => false
 
 #### 💡 isDate
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L159) | [API](https://fjc0k.github.io/vtils/globals.html#isDate)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L159) | [API](https://fjc0k.github.io/vtils/globals.html#isdate)</small>
 
 检查 `value` 是否是一个日期。
 
@@ -449,7 +449,7 @@ isDate(new Date()) // => true
 
 #### 💡 isEmail
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L175) | [API](https://fjc0k.github.io/vtils/globals.html#isEmail)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L175) | [API](https://fjc0k.github.io/vtils/globals.html#isemail)</small>
 
 检查 `value` 是否是一个邮件地址。
 
@@ -460,7 +460,7 @@ isEmail('hello@foo') // => false
 
 #### 💡 isEmpty
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L196) | [API](https://fjc0k.github.io/vtils/globals.html#isEmpty)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L196) | [API](https://fjc0k.github.io/vtils/globals.html#isempty)</small>
 
 检查 `value` 是否是空值，包括：`undefined`、`null`、`''`、`false`、`true`、`[]`、`{}`。
 
@@ -476,7 +476,7 @@ isEmpty({}) // => true
 
 #### 💡 isEqualArray
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L222) | [API](https://fjc0k.github.io/vtils/globals.html#isEqualArray)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L222) | [API](https://fjc0k.github.io/vtils/globals.html#isequalarray)</small>
 
 检查给定的数组的各项是否相等。
 
@@ -487,7 +487,7 @@ isEqualArray([1], [5]) // => false
 
 #### 💡 isFinite
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L257) | [API](https://fjc0k.github.io/vtils/globals.html#isFinite)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L257) | [API](https://fjc0k.github.io/vtils/globals.html#isfinite)</small>
 
 检查 `value` 是否是原始有限数值。
 
@@ -498,7 +498,7 @@ isFinite(Infinity) // => false
 
 #### 💡 isFunction
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L272) | [API](https://fjc0k.github.io/vtils/globals.html#isFunction)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L272) | [API](https://fjc0k.github.io/vtils/globals.html#isfunction)</small>
 
 检查 `value` 是否是一个函数。
 
@@ -509,7 +509,7 @@ isFunction(2000) // => false
 
 #### 💡 isHan
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L287) | [API](https://fjc0k.github.io/vtils/globals.html#isHan)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L287) | [API](https://fjc0k.github.io/vtils/globals.html#ishan)</small>
 
 检查 `value` 是否全是汉字。
 
@@ -520,7 +520,7 @@ isHan('嗨咯') // => true
 
 #### 💡 isInteger
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L305) | [API](https://fjc0k.github.io/vtils/globals.html#isInteger)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L305) | [API](https://fjc0k.github.io/vtils/globals.html#isinteger)</small>
 
 检查 `value` 是否是一个整数。
 
@@ -532,7 +532,7 @@ isInteger(-1) // => true
 
 #### 💡 isNaN
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L350) | [API](https://fjc0k.github.io/vtils/globals.html#isNaN)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L350) | [API](https://fjc0k.github.io/vtils/globals.html#isnan)</small>
 
 检查 `value` 是否是 `NaN`。
 
@@ -543,7 +543,7 @@ isNaN(2) // => false
 
 #### 💡 isNegativeInteger
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L335) | [API](https://fjc0k.github.io/vtils/globals.html#isNegativeInteger)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L335) | [API](https://fjc0k.github.io/vtils/globals.html#isnegativeinteger)</small>
 
 检查 `value` 是否是一个负整数。
 
@@ -554,7 +554,7 @@ isNegativeInteger(1) // => false
 
 #### 💡 isNil
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L365) | [API](https://fjc0k.github.io/vtils/globals.html#isNil)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L365) | [API](https://fjc0k.github.io/vtils/globals.html#isnil)</small>
 
 检查 `value` 是否是 `null` 或 `undefined`。
 
@@ -565,7 +565,7 @@ isNil(undefined) // => true
 
 #### 💡 isNull
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L379) | [API](https://fjc0k.github.io/vtils/globals.html#isNull)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L379) | [API](https://fjc0k.github.io/vtils/globals.html#isnull)</small>
 
 检查 `value` 是否是 `null`。
 
@@ -575,7 +575,7 @@ isNull(null) // => true
 
 #### 💡 isNumber
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L397) | [API](https://fjc0k.github.io/vtils/globals.html#isNumber)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L397) | [API](https://fjc0k.github.io/vtils/globals.html#isnumber)</small>
 
 检查 `value` 是否是一个数字。
 
@@ -589,7 +589,7 @@ isNumber(NaN) // => false
 
 #### 💡 isNumeric
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L414) | [API](https://fjc0k.github.io/vtils/globals.html#isNumeric)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L414) | [API](https://fjc0k.github.io/vtils/globals.html#isnumeric)</small>
 
 检查 `value` 是否是一个数值。
 
@@ -602,7 +602,7 @@ isNumeric('1') // => true
 
 #### 💡 isObject
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L430) | [API](https://fjc0k.github.io/vtils/globals.html#isObject)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L430) | [API](https://fjc0k.github.io/vtils/globals.html#isobject)</small>
 
 检查 `value` 是否是一个对象。
 
@@ -614,7 +614,7 @@ isObject(null) // => false
 
 #### 💡 isPlainObject
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L447) | [API](https://fjc0k.github.io/vtils/globals.html#isPlainObject)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L447) | [API](https://fjc0k.github.io/vtils/globals.html#isplainobject)</small>
 
 检查 `value` 是否是一个普通对象。
 
@@ -626,7 +626,7 @@ isPlainObject(() => {}) // => false
 
 #### 💡 isPositiveInteger
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L320) | [API](https://fjc0k.github.io/vtils/globals.html#isPositiveInteger)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L320) | [API](https://fjc0k.github.io/vtils/globals.html#ispositiveinteger)</small>
 
 检查 `value` 是否是一个正整数。
 
@@ -637,7 +637,7 @@ isPositiveInteger(-1) // => false
 
 #### 💡 isPossibleChineseMobilePhoneNumber
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L122) | [API](https://fjc0k.github.io/vtils/globals.html#isPossibleChineseMobilePhoneNumber)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L122) | [API](https://fjc0k.github.io/vtils/globals.html#ispossiblechinesemobilephonenumber)</small>
 
 检测 `number` 是否可能是中国的手机号码。
 
@@ -648,7 +648,7 @@ isPossibleChineseMobilePhoneNumber(10086) // => false
 
 #### 💡 isPossibleChineseName
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L138) | [API](https://fjc0k.github.io/vtils/globals.html#isPossibleChineseName)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L138) | [API](https://fjc0k.github.io/vtils/globals.html#ispossiblechinesename)</small>
 
 检测 `value` 是否可能是中国人的姓名，支持少数名族姓名中间的 `·` 号。
 
@@ -660,7 +660,7 @@ isPossibleChineseName('买买提·吐尔逊') // => true
 
 #### 💡 isPromiseLike
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L469) | [API](https://fjc0k.github.io/vtils/globals.html#isPromiseLike)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L469) | [API](https://fjc0k.github.io/vtils/globals.html#ispromiselike)</small>
 
 检查 `value` 是否像 `Promise`。
 
@@ -670,7 +670,7 @@ isPromiseLike(Promise.resolve()) // => true
 
 #### 💡 isRegExp
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L487) | [API](https://fjc0k.github.io/vtils/globals.html#isRegExp)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L487) | [API](https://fjc0k.github.io/vtils/globals.html#isregexp)</small>
 
 检查 `value` 是否是一个正则对象。
 
@@ -681,7 +681,7 @@ isRegExp(new RegExp('hello')) // => true
 
 #### 💡 isString
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L502) | [API](https://fjc0k.github.io/vtils/globals.html#isString)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L502) | [API](https://fjc0k.github.io/vtils/globals.html#isstring)</small>
 
 检查 `value` 是否是一个字符串。
 
@@ -692,7 +692,7 @@ isString('hello') // => true
 
 #### 💡 isUndefined
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L517) | [API](https://fjc0k.github.io/vtils/globals.html#isUndefined)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L517) | [API](https://fjc0k.github.io/vtils/globals.html#isundefined)</small>
 
 检查 `value` 是否等于 `undefined`。
 
@@ -703,7 +703,7 @@ isUndefined(void 0) // => true
 
 #### 💡 isUrl
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L533) | [API](https://fjc0k.github.io/vtils/globals.html#isUrl)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L533) | [API](https://fjc0k.github.io/vtils/globals.html#isurl)</small>
 
 检查 `value` 是否是一个有效的网址，仅支持 `http`、`https` 协议，支持 `IP` 域名。
 
@@ -714,11 +714,11 @@ isUrl('https://foo.bar/home') // => true
 
 #### 💡 jestExpectEqual
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceJest.ts#L1) | [API](https://fjc0k.github.io/vtils/globals.html#jestExpectEqual)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceJest.ts#L1) | [API](https://fjc0k.github.io/vtils/globals.html#jestexpectequal)</small>
 
 #### 💡 keyBy
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/keyBy.ts#L37) | [API](https://fjc0k.github.io/vtils/globals.html#keyBy)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/keyBy.ts#L37) | [API](https://fjc0k.github.io/vtils/globals.html#keyby)</small>
 
 根据 `iteratee` 返回的键对 `data` 进行分组，但只保留最后一个结果。
 
@@ -764,7 +764,7 @@ last([1, 2, 3]) // => 3
 
 #### 💡 loadResource
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/loadResource.ts#L82) | [API](https://fjc0k.github.io/vtils/globals.html#loadResource)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/loadResource.ts#L82) | [API](https://fjc0k.github.io/vtils/globals.html#loadresource)</small>
 
 加载图片、代码、样式等资源。
 
@@ -785,7 +785,7 @@ loadResource([
 
 #### 💡 mapValues
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/mapValues.ts#L31) | [API](https://fjc0k.github.io/vtils/globals.html#mapValues)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/mapValues.ts#L31) | [API](https://fjc0k.github.io/vtils/globals.html#mapvalues)</small>
 
 映射对象的可枚举属性值为一个新的值。
 
@@ -832,7 +832,7 @@ omit({ x: 1, y: 2 }, ['x']) // => { y: 2 }
 
 #### 💡 orderBy
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/orderBy.ts#L43) | [API](https://fjc0k.github.io/vtils/globals.html#orderBy)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/orderBy.ts#L43) | [API](https://fjc0k.github.io/vtils/globals.html#orderby)</small>
 
 允许指定一个或多个规则对数据进行排序。
 
@@ -849,7 +849,7 @@ orderBy(
 
 #### 💡 padEnd
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/pad.ts#L41) | [API](https://fjc0k.github.io/vtils/globals.html#padEnd)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/pad.ts#L41) | [API](https://fjc0k.github.io/vtils/globals.html#padend)</small>
 
 在 `str` 右侧填充字符。
 
@@ -859,7 +859,7 @@ padEnd('姓名', 4, '*') // => 姓名**
 
 #### 💡 padStart
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/pad.ts#L16) | [API](https://fjc0k.github.io/vtils/globals.html#padStart)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/pad.ts#L16) | [API](https://fjc0k.github.io/vtils/globals.html#padstart)</small>
 
 在 `str` 左侧填充字符。
 
@@ -884,7 +884,7 @@ parallel([
 
 #### 💡 parseCSSValue
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/parseCSSValue.ts#L21) | [API](https://fjc0k.github.io/vtils/globals.html#parseCSSValue)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/parseCSSValue.ts#L21) | [API](https://fjc0k.github.io/vtils/globals.html#parsecssvalue)</small>
 
 解析 `CSS` 值的数值和单位。
 
@@ -906,7 +906,7 @@ pick({ x: 1, y: 2 }, ['x']) // => { x: 1 }
 
 #### 💡 placeKitten
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/placeKitten.ts#L11) | [API](https://fjc0k.github.io/vtils/globals.html#placeKitten)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/placeKitten.ts#L11) | [API](https://fjc0k.github.io/vtils/globals.html#placekitten)</small>
 
 给定大小获取占位猫咪图片，图片来自：https://placekitten.com/
 
@@ -922,7 +922,7 @@ placeKitten(100, 200) // => https://placekitten.com/100/200
 
 #### 💡 randomString
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/randomString.ts#L10) | [API](https://fjc0k.github.io/vtils/globals.html#randomString)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/randomString.ts#L10) | [API](https://fjc0k.github.io/vtils/globals.html#randomstring)</small>
 
 生成一个随机字符串。
 
@@ -966,7 +966,7 @@ round(345, -2) // => 300
 
 #### 💡 roundDown
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/round.ts#L71) | [API](https://fjc0k.github.io/vtils/globals.html#roundDown)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/round.ts#L71) | [API](https://fjc0k.github.io/vtils/globals.html#rounddown)</small>
 
 对传入的数字按给定的精度向下取值后返回。
 
@@ -979,7 +979,7 @@ roundDown(345, -2) // => 300
 
 #### 💡 roundUp
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/round.ts#L53) | [API](https://fjc0k.github.io/vtils/globals.html#roundUp)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/round.ts#L53) | [API](https://fjc0k.github.io/vtils/globals.html#roundup)</small>
 
 对传入的数字按给定的精度向上取值后返回。
 
@@ -1033,7 +1033,7 @@ shuffle([1, 2]) // => [1, 2] 或 [2, 1]
 
 #### 💡 startsWith
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/startsWith.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#startsWith)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/startsWith.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#startswith)</small>
 
 检查 `str` 是否以 `needle` 开头。
 
@@ -1054,7 +1054,7 @@ sum([1, 2, 3]) // => 6
 
 #### 💡 sumBy
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/sum.ts#L54) | [API](https://fjc0k.github.io/vtils/globals.html#sumBy)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/sum.ts#L54) | [API](https://fjc0k.github.io/vtils/globals.html#sumby)</small>
 
 根据 `iteratee` 返回的结果计算传入值的总和。
 
@@ -1265,23 +1265,23 @@ wechat.invoke('scanQRCode').then(res => {
 <!-- 工具类型! -->
 #### 💡 AnyFunction
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L1) | [API](https://fjc0k.github.io/vtils/globals.html#AnyFunction)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L1) | [API](https://fjc0k.github.io/vtils/globals.html#anyfunction)</small>
 
 #### 💡 AnyObject
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L3) | [API](https://fjc0k.github.io/vtils/globals.html#AnyObject)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L3) | [API](https://fjc0k.github.io/vtils/globals.html#anyobject)</small>
 
 #### 💡 AsyncOrSync
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L9) | [API](https://fjc0k.github.io/vtils/globals.html#AsyncOrSync)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L9) | [API](https://fjc0k.github.io/vtils/globals.html#asyncorsync)</small>
 
 #### 💡 Brand
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L7) | [API](https://fjc0k.github.io/vtils/globals.html#Brand)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L7) | [API](https://fjc0k.github.io/vtils/globals.html#brand)</small>
 
 #### 💡 Defined
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L89) | [API](https://fjc0k.github.io/vtils/globals.html#Defined)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L89) | [API](https://fjc0k.github.io/vtils/globals.html#defined)</small>
 
 从 `T` 中排除 `undefined` 类型。
 
@@ -1297,7 +1297,7 @@ type UserGender = Defined<User['gender']>
 
 #### 💡 If
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L73) | [API](https://fjc0k.github.io/vtils/globals.html#If)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L73) | [API](https://fjc0k.github.io/vtils/globals.html#if)</small>
 
 条件类型。
 
@@ -1311,51 +1311,51 @@ type IsX = If<X extends 'x', true, false>
 
 #### 💡 IsNever
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L59) | [API](https://fjc0k.github.io/vtils/globals.html#IsNever)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L59) | [API](https://fjc0k.github.io/vtils/globals.html#isnever)</small>
 
 #### 💡 LiteralUnion
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L57) | [API](https://fjc0k.github.io/vtils/globals.html#LiteralUnion)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L57) | [API](https://fjc0k.github.io/vtils/globals.html#literalunion)</small>
 
 #### 💡 Merge
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L55) | [API](https://fjc0k.github.io/vtils/globals.html#Merge)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L55) | [API](https://fjc0k.github.io/vtils/globals.html#merge)</small>
 
 #### 💡 Omit
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#Omit)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#omit)</small>
 
 #### 💡 OmitByValue
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L15) | [API](https://fjc0k.github.io/vtils/globals.html#OmitByValue)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L15) | [API](https://fjc0k.github.io/vtils/globals.html#omitbyvalue)</small>
 
 #### 💡 OmitByValueExact
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L20) | [API](https://fjc0k.github.io/vtils/globals.html#OmitByValueExact)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L20) | [API](https://fjc0k.github.io/vtils/globals.html#omitbyvalueexact)</small>
 
 #### 💡 OneOrMore
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L5) | [API](https://fjc0k.github.io/vtils/globals.html#OneOrMore)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L5) | [API](https://fjc0k.github.io/vtils/globals.html#oneormore)</small>
 
 #### 💡 OptionalKeys
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L51) | [API](https://fjc0k.github.io/vtils/globals.html#OptionalKeys)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L51) | [API](https://fjc0k.github.io/vtils/globals.html#optionalkeys)</small>
 
 #### 💡 PickByValue
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L31) | [API](https://fjc0k.github.io/vtils/globals.html#PickByValue)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L31) | [API](https://fjc0k.github.io/vtils/globals.html#pickbyvalue)</small>
 
 #### 💡 PickByValueExact
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L36) | [API](https://fjc0k.github.io/vtils/globals.html#PickByValueExact)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L36) | [API](https://fjc0k.github.io/vtils/globals.html#pickbyvalueexact)</small>
 
 #### 💡 RequiredKeys
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L47) | [API](https://fjc0k.github.io/vtils/globals.html#RequiredKeys)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L47) | [API](https://fjc0k.github.io/vtils/globals.html#requiredkeys)</small>
 
 #### 💡 ValueOf
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L11) | [API](https://fjc0k.github.io/vtils/globals.html#ValueOf)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L11) | [API](https://fjc0k.github.io/vtils/globals.html#valueof)</small>
 <!-- 工具类型i -->
 
 ## 许可
