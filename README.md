@@ -830,6 +830,23 @@ noop() // => undefined
 omit({ x: 1, y: 2 }, ['x']) // => { y: 2 }
 ```
 
+#### 💡 orderBy
+
+<small>[源码]() | [API]()</small>
+
+允许指定一个或多个规则对数据进行排序。
+
+```ts
+orderBy(
+  ['x', 'xyz', 'xy'],
+  {
+    iteratee: item => item.length,
+    type: OrderByRuleType.desc,
+  },
+)
+// => ['xyz', 'xy', 'x']
+```
+
 #### 💡 padEnd
 
 <small>[源码]() | [API]()</small>
