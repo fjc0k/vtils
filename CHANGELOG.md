@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-beta.2"></a>
+# [2.0.0-beta.2](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2019-06-02)
+
+
+### Features
+
+* 增加示例 ([0fc4767](https://github.com/fjc0k/vtils/commit/0fc4767))
+* **EasyValidator:** 支持动态设置 message ([3827577](https://github.com/fjc0k/vtils/commit/3827577))
+
+
+
 <a name="2.0.0-beta.1"></a>
 # [2.0.0-beta.1](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2019-05-31)
 
