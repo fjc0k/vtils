@@ -38,6 +38,13 @@ export type MemoizeReturn<T extends AnyFunction = AnyFunction> = T & {
  * @param fn 要缓存的函数
  * @param options 选项
  * @returns 返回缓存化后的函数
+ * @example
+ * ```ts
+ * let i = 0
+ * const fn = memoize(() => i++)
+ * fn() // => 0
+ * fn() // => 0
+ * ```
  */
 export function memoize<T extends AnyFunction>(
   fn: T,

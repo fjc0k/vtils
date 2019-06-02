@@ -8,6 +8,10 @@ import { repeat } from './repeat'
  * @param length 目标长度
  * @param chars 填充字符
  * @returns 返回填充后的字符串
+ * @example
+ * ```ts
+ * padStart('姓名', 4, '*') // => **姓名
+ * ```
  */
 export function padStart(str: string, length: number, chars: string = ' '): string {
   if (!isPositiveInteger(length)) {
@@ -29,6 +33,10 @@ export function padStart(str: string, length: number, chars: string = ' '): stri
  * @param length 目标长度
  * @param chars 填充字符
  * @returns 返回填充后的字符串
+ * @example
+ * ```ts
+ * padEnd('姓名', 4, '*') // => 姓名**
+ * ```
  */
 export function padEnd(str: string, length: number, chars: string = ' '): string {
   if (!isPositiveInteger(length)) {

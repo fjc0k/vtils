@@ -18,6 +18,20 @@ export enum InRangeIntervalType {
  * @param end 结束值
  * @param intervalType 区间类型
  * @returns `value` 在区间内返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * // 2 是否在区间 (0, 2) 内
+ * inRange(2, 0, 2, InRangeIntervalType.open) // => false
+ *
+ * // 2 是否在区间 [0, 2] 内
+ * inRange(2, 0, 2, InRangeIntervalType.closed) // => true
+ *
+ * // 2 是否在区间 [0, 2) 内
+ * inRange(2, 0, 2, InRangeIntervalType.leftClosedRightOpen) // => false
+ *
+ * // 2 是否在区间 (0, 2] 内
+ * inRange(2, 0, 2, InRangeIntervalType.leftOpenRightClosed) // => true
+ * ```
  */
 export function inRange(
   value: number,

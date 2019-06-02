@@ -15,6 +15,24 @@ export interface KeyByIteratee<T, K> {
  * @param data 要分组的数据
  * @param iteratee 迭代函数
  * @returns 返回分组结果
+ * @example
+ * ```ts
+ * keyBy(
+ *   [
+ *     { type: 1, name: '石头' },
+ *     { type: 3, name: '花生' },
+ *     { type: 2, name: '鲸鱼' },
+ *     { type: 1, name: '树木' },
+ *     { type: 2, name: '鲨鱼' },
+ *   ],
+ *   item => item.type,
+ * )
+ * // => {
+ * // =>   1: { type: 1, name: '树木' },
+ * // =>   2: { type: 2, name: '鲨鱼' },
+ * // =>   3: { type: 3, name: '花生' },
+ * // => }
+ * ```
  */
 export function keyBy<T extends any, K extends keyof any>(
   data: T[],

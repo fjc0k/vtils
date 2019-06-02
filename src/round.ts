@@ -24,6 +24,13 @@ function nativeRound(fn: Math['round'] | Math['ceil'] | Math['floor'], number: n
  * @param number 传入的数字
  * @param precision 精度
  * @returns 返回结果
+ * @example
+ * ```ts
+ * round(3.456) // => 3
+ * round(3.456, 1) // => 3.5
+ * round(3.456, 2) // => 3.46
+ * round(345, -2) // => 300
+ * ```
  */
 export function round(number: number, precision: number = 0) {
   return nativeRound(Math.round, number, precision)
@@ -35,6 +42,13 @@ export function round(number: number, precision: number = 0) {
  * @param number 传入的数字
  * @param precision 精度
  * @returns 返回结果
+ * @example
+ * ```ts
+ * roundUp(3.456) // => 4
+ * roundUp(3.456, 1) // => 3.5
+ * roundUp(3.456, 2) // => 3.46
+ * roundUp(345, -2) // => 400
+ * ```
  */
 export function roundUp(number: number, precision: number = 0) {
   return nativeRound(Math.ceil, number, precision)
@@ -46,6 +60,13 @@ export function roundUp(number: number, precision: number = 0) {
  * @param number 传入的数字
  * @param precision 精度
  * @returns 返回结果
+ * @example
+ * ```ts
+ * roundDown(3.456) // => 3
+ * roundDown(3.456, 1) // => 3.4
+ * roundDown(3.456, 2) // => 3.45
+ * roundDown(345, -2) // => 300
+ * ```
  */
 export function roundDown(number: number, precision: number = 0) {
   return nativeRound(Math.floor, number, precision)

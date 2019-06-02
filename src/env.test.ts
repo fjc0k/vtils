@@ -33,6 +33,28 @@ const tests: Record<keyof typeof env, (_: typeof env) => void> = {
     )
   },
 
+  inAndroid({ inAndroid }) {
+    jestExpectEqual(
+      inAndroid(),
+      false,
+    )
+
+    const originalUA = navigator.userAgent
+    Object.defineProperty(navigator, 'userAgent', {
+      value: 'Android',
+      writable: true,
+    })
+    inAndroid.clearCache()
+    jestExpectEqual(
+      inAndroid(),
+      true,
+    )
+    Object.defineProperty(navigator, 'userAgent', {
+      value: originalUA,
+      writable: true,
+    })
+  },
+
   inNode({ inNode }) {
     jestExpectEqual(
       inNode(),

@@ -58,6 +58,18 @@ export type LiteralUnion<L, B> = L | Brand<B, never>
 
 export type IsNever<T> = [T] extends [never] ? true : false
 
+/**
+ * 条件类型。
+ *
+ * @example
+ * ```ts
+ * type X = 'x'
+ * // before
+ * type IsX = X extends 'x' ? true : false
+ * // after
+ * type IsX = If<X extends 'x', true, false>
+ * ```
+ */
 export type If<Condition, Then, Else> = Condition extends true ? Then : Else
 
 /**

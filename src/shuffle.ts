@@ -4,6 +4,10 @@
  * @param arr 要打乱的数组
  * @returns 返回打乱后的数组
  * @see https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/
+ * @example
+ * ```ts
+ * shuffle([1, 2]) // => [1, 2] 或 [2, 1]
+ * ```
  */
 export function shuffle<T>(arr: T[]): T[] {
   const newArr = arr.slice()

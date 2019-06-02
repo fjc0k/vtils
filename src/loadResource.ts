@@ -63,6 +63,21 @@ function _loadResource(url: LoadResourceUrl): Promise<HTMLScriptElement | HTMLLi
  *
  * @param url 资源地址
  * @returns 返回各个资源的 `HTMLElement` 对象组成的数组
+ * @example
+ * ```ts
+ * loadResource([
+ *   'https://foo.bar/all.js',
+ *   'https://foo.bar/all.css',
+ *   'https://foo.bar/logo.png',
+ *   {
+ *     type: LoadResourceUrlType.js,
+ *     path: 'https://s1.foo.bar/js/full',
+ *     alternatePath: 'https://s2.foo.bar/js/full',
+ *   },
+ * ]).then(() => {
+ *   // 资源加载完成后的操作
+ * })
+ * ```
  */
 export function loadResource(url: string | LoadResourceUrl | Array<string | LoadResourceUrl>): Promise<Array<HTMLScriptElement | HTMLLinkElement | HTMLImageElement>> {
   const urls: LoadResourceUrl[] = castArray(url)

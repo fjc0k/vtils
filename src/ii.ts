@@ -7,6 +7,10 @@ import { AnyFunction } from './enhanceType'
  *
  * @param fn 要调用的函数
  * @returns 返回被调用函数的返回值
+ * @example
+ * ```ts
+ * ii(() => 1) // => 1
+ * ```
  */
 export function ii<F extends AnyFunction>(fn: F): ReturnType<F> {
   return fn()

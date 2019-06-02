@@ -19,6 +19,11 @@ export interface FillReturnValue<T> {
  * @param start 开始位置
  * @param end 结束位置
  * @returns 返回填充改变后的数组
+ * @example
+ * ```ts
+ * fill(Array(5), () => 1) // => [1, 1, 1, 1, 1]
+ * fill(Array(3), (value, index) => index) // => [0, 1, 2]
+ * ```
  */
 export function fill<T>(
   arr: T[],

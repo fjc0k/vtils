@@ -11,6 +11,12 @@ export interface CSSValue {
  * @param value 要解析的值
  * @param defaultUnit 默认单位
  * @returns 返回解析结果
+ * @example
+ * ```ts
+ * parseCSSValue('12px') // => { value: 12, unit: 'px' }
+ * parseCSSValue(12) // => { value: 12, unit: 'px' }
+ * parseCSSValue('12%') // => { value: 12, unit: '%' }
+ * ```
  */
 export function parseCSSValue(
   value: string | number,

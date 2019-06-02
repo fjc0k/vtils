@@ -7,6 +7,23 @@ export type EventBusUnsubscribe = () => void
  * 事件巴士，管理事件的发布与订阅。
  *
  * @template T 事件名称及其对应的监听器描述
+ * @example
+ * ```ts
+ * const bus = new EventBus<{
+ *   success: () => void,
+ *   error: (message: string) => void,
+ * }>()
+ * const unbindSuccessListener = bus.on('success', () => {
+ *   console.log('成功啦')
+ * })
+ * const unbindErrorListener = bus.once('error', message => {
+ *   console.error(message)
+ * })
+ * bus.emit('success')
+ * bus.emit('error', '出错啦')
+ * unbindSuccessListener()
+ * bus.off('error')
+ * ```
  */
 export class EventBus<
   T extends Record<string, AnyFunction> = Record<string, AnyFunction>,

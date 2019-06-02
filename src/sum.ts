@@ -5,6 +5,10 @@ import { isArray } from './is'
  *
  * @param numbers 传入的数字
  * @returns 返回传入值的总和
+ * @example
+ * ```ts
+ * sum([1, 2, 3]) // => 6
+ * ```
  */
 export function sum(...numbers: Array<number | number[]>) {
   return numbers.reduce<number>(
@@ -34,6 +38,18 @@ export interface SumByIteratee<T = any> {
  * @param array 传入的数组
  * @param iteratee 迭代函数
  * @returns 返回总和
+ * @example
+ * ```ts
+ * sumBy(
+ *   [
+ *     { count: 1 },
+ *     { count: 2 },
+ *     { count: 3 },
+ *   ],
+ *   item => item.count,
+ * )
+ * // => 6
+ * ```
  */
 export function sumBy<T>(array: T[], iteratee: SumByIteratee<T>) {
   return array.reduce<number>(

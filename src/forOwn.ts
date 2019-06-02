@@ -22,6 +22,15 @@ export interface ForOwnTraverse<T extends AnyObject, K extends string | number =
  *
  * @param obj 要遍历的对象
  * @param traverse 遍历函数
+ * @example
+ * ```ts
+ * forOwn(
+ *   { x: '1', y: 2 },
+ *   (value, key) => {
+ *     console.log(key, value)
+ *   }
+ * )
+ * ```
  */
 export function forOwn<T extends AnyObject>(obj: T, traverse: ForOwnTraverse<T>) {
   for (const key in obj) {

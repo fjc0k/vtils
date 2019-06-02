@@ -166,3 +166,63 @@ test('综合测试', async () => {
     },
   )
 })
+
+test('示例', async () => {
+  async function checkPhoneNumberAsync(_num: string) {
+    await wait(500)
+    return {
+      valid: true,
+      message: '',
+    }
+  }
+  interface Data {
+    name: string,
+    phoneNumber: string,
+    pass1: string,
+    pass2: string,
+  }
+  const ev = new EasyValidator<Data>([
+    {
+      key: 'name',
+      type: 'chineseName',
+      message: '请输入真实姓名',
+    },
+    {
+      key: 'phoneNumber',
+      type: 'chineseMobilePhoneNumber',
+      message: '请输入正确的手机号码',
+    },
+    {
+      key: 'phoneNumber',
+      test: async ({ phoneNumber }, { updateMessage }) => {
+        const result = await checkPhoneNumberAsync(phoneNumber)
+        if (!result.valid) {
+          updateMessage(result.message)
+          return false
+        }
+      },
+      message: '请输入正确的手机号码',
+    },
+    {
+      key: 'pass1',
+      test: ({ pass1 }) => pass1.length > 6,
+      message: '密码应大于6位',
+    },
+    {
+      key: 'pass2',
+      test: ({ pass1, pass2 }) => pass2 === pass1,
+      message: '两次密码应一致',
+    },
+  ])
+  const res = await ev.validate({
+    name: '方一一',
+    phoneNumber: '18087030070',
+    pass1: '1234567',
+    pass2: '12345678',
+  })
+  expect(res.valid).toBeFalsy()
+  jestExpectEqual(
+    res.unvalidRules[0].key,
+    'pass2',
+  )
+})

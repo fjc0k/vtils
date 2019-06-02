@@ -5,6 +5,10 @@ import { If, IsNever } from './enhanceType'
  *
  * @param arr 数组
  * @returns 返回数组的最后一项
+ * @example
+ * ```ts
+ * last([1, 2, 3]) // => 3
+ * ```
  */
 export function last<T>(arr: T[]): If<IsNever<T>, undefined, T | undefined> {
   return (arr.length ? arr[arr.length - 1] : undefined) as any

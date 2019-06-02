@@ -8,6 +8,10 @@ import { includes } from './includes'
  * @param obj 来源对象
  * @param props 要剔除的可枚举属性
  * @returns 返回结果对象
+ * @example
+ * ```ts
+ * omit({ x: 1, y: 2 }, ['x']) // => { y: 2 }
+ * ```
  */
 export function omit<
   T extends AnyObject,

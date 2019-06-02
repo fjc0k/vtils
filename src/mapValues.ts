@@ -19,6 +19,14 @@ export interface MapValuesTraverse<T extends AnyObject, R, K extends string | nu
  * @param obj 要遍历的对象
  * @param traverse 遍历函数
  * @returns 返回映射后的新对象
+ * @example
+ * ```ts
+ * mapValues(
+ *   { x: 1, y: 2 },
+ *   value => value + 10,
+ * )
+ * // => { x: 11, y: 12 }
+ * ```
  */
 export function mapValues<
   T extends AnyObject,

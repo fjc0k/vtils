@@ -10,6 +10,10 @@ import { AnyObject, LiteralUnion } from './enhanceType'
  *
  * @param obj 对象
  * @returns 返回结果数组
+ * @example
+ * ```ts
+ * keys({ x: 1, 2: 'y' }) // => ['x', '2'] 或 ['2', 'x']
+ * ```
  */
 export function keys<T extends AnyObject>(obj: T) {
   return Object.keys(obj) as Array<

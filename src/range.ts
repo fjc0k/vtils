@@ -5,6 +5,11 @@
  * @param end 结束数字
  * @param step 步进值
  * @returns 返回开始到结束范围内数字组成的数组
+ * @example
+ * ```ts
+ * range(0, 5) // => [0, 1, 2, 3, 4]
+ * range(0, -5, -1) // => [0, -1, -2, -3, -4]
+ * ```
  */
 export function range(start: number, end: number, step: number = 1): number[] {
   const result: number[] = []

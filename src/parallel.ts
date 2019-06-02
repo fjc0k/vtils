@@ -6,6 +6,15 @@ import { isPromiseLike } from './is'
  *
  * @param tasks 要执行的任务列表
  * @returns 返回全部任务执行结果组成的数组
+ * @example
+ * ```ts
+ * parallel([
+ *   () => 1,
+ *   async () => 'hello',
+ * ]).then(res => {
+ *   // => [1, 'hello']
+ * })
+ * ```
  */
 export function parallel<
   T extends AnyFunction,

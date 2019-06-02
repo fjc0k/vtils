@@ -76,27 +76,53 @@ export interface EasyValidatorValidateReturn<D extends EasyValidatorData> {
  *   pass2: string,
  * }
  * const ev = new EasyValidator<Data>([
- *   { key: 'name', type: 'chineseName', message: '请输入真实姓名' },
- *   { key: 'phoneNumber', type: 'chineseMobilePhoneNumber', message: '请输入正确的手机号码' },
+ *   {
+ *     key: 'name',
+ *     type: 'chineseName',
+ *     message: '请输入真实姓名',
+ *   },
  *   {
  *     key: 'phoneNumber',
- *     test: async (phoneNumber) => {
+ *     type: 'chineseMobilePhoneNumber',
+ *     message: '请输入正确的手机号码',
+ *   },
+ *   {
+ *     key: 'phoneNumber',
+ *     test: async ({ phoneNumber }, { updateMessage }) => {
  *       const result = await checkPhoneNumberAsync(phoneNumber)
- *       if (result.pass) return true
- *
+ *       if (!result.valid) {
+ *         updateMessage(result.message)
+ *         return false
+ *       }
  *     },
  *     message: '请输入正确的手机号码'
  *   },
- *   { key: 'pass1', test: pass1 => pass1.length > 6, message: '密码应大于6位' },
- *   { key: 'pass2', test: (pass2, data) => pass2 === data.pass1, message: '两次密码应一致' },
+ *   {
+ *     key: 'pass1',
+ *     test: ({ pass1 }) => pass1.length > 6,
+ *     message: '密码应大于6位',
+ *   },
+ *   {
+ *     key: 'pass2',
+ *     test: ({ pass1, pass2 }) => pass2 === pass1,
+ *     message: '两次密码应一致',
+ *   },
  * ])
+ * ev.validate({
+ *   name: '方一一',
+ *   phoneNumber: '18087030070',
+ *   pass1: '1234567',
+ *   pass2: '12345678'
+ * }).then(res => {
+ *   // => { valid: false, unvalidRules: [{ key: 'pass2', test: ({ pass1, pass2 }) => pass2 === pass1, message: '两次密码应一致' }] }
+ * })
  * ```
  */
 export class EasyValidator<D extends EasyValidatorData> {
   /**
    * 构造函数。
    *
-   * @param rules 规律列表
+   * @param rules 规则列表
    */
   constructor(private rules: EasyValidatorRules<D>) {}
 

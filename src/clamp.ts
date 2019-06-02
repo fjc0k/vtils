@@ -5,6 +5,13 @@
  * @param min 最小值
  * @param max 最大值
  * @returns 返回结果值
+ * @example
+ * ```ts
+ * clamp(50, 0, 100) // => 50
+ * clamp(50, 0, 50) // => 50
+ * clamp(50, 0, 49) // => 49
+ * clamp(50, 51, 100) // => 51
+ * ```
  */
 export function clamp(value: number, min: number, max: number): number {
   return (

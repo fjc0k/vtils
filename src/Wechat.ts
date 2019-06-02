@@ -193,6 +193,23 @@ const shareJsApiList: WechatJsApi[] = [
 
 /**
  * 对微信 JSSDK 的封装。
+ *
+ * @example
+ * ```ts
+ * const wechat = new Wechat()
+ * getWechatConfigAsync().then(config => {
+ *   wechat.config(config)
+ * })
+ * wechat.updateShareData({
+ *   title: '分享标题',
+ *   desc: '分享描述',
+ *   link: '分享链接',
+ *   imgUrl: '缩略图地址',
+ * })
+ * wechat.invoke('scanQRCode').then(res => {
+ *   // => API 调用结果
+ * })
+ * ```
  */
 export class Wechat {
   /**

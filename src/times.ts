@@ -4,6 +4,12 @@
  * @param n 调用次数
  * @param fn 调用函数
  * @returns 返回每次的调用结果组成的数组
+ * @example
+ * ```ts
+ * times(4, () => {
+ *   // 这里将会执行 4 次
+ * })
+ * ```
  */
 export function times<T extends (index: number) => any> (n: number, fn: T): Array<ReturnType<T>> { // eslint-disable-line
   const result: any[] = []

@@ -113,6 +113,11 @@ export function isChineseIDCardNumber(value: string): boolean {
  *
  * @param number 要检测的号码
  * @returns `number` 可能是中国的手机号码返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isPossibleChineseMobilePhoneNumber(18000030000) // => true
+ * isPossibleChineseMobilePhoneNumber(10086) // => false
+ * ```
  */
 export function isPossibleChineseMobilePhoneNumber(number: number | string) {
   return /^1[3-9][0-9]{9}$/.test(String(number))
@@ -123,6 +128,12 @@ export function isPossibleChineseMobilePhoneNumber(number: number | string) {
  *
  * @param value 要检测的值
  * @returns `value` 可能是中国人的姓名返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isPossibleChineseName('鲁') // => false
+ * isPossibleChineseName('鲁迅') // => true
+ * isPossibleChineseName('买买提·吐尔逊') // => true
+ * ```
  */
 export function isPossibleChineseName(value: string): boolean {
   return (
@@ -140,6 +151,10 @@ export function isPossibleChineseName(value: string): boolean {
  *
  * @param value 要检查的值
  * @returns `value` 是日期返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isDate(new Date()) // => true
+ * ```
  */
 export function isDate(value: any): value is Date {
   return getType(value) === 'Date'
@@ -151,6 +166,11 @@ export function isDate(value: any): value is Date {
  * @param value 要检查的值
  * @returns `value` 是邮件地址返回 `true`，否则返回 `false`
  * @see http://emailregex.com/
+ * @example
+ * ```ts
+ * isEmail('hello@foo.bar') // => true
+ * isEmail('hello@foo') // => false
+ * ```
  */
 export function isEmail(value: string): boolean {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -162,6 +182,16 @@ export function isEmail(value: string): boolean {
  *
  * @param value 要检查的值
  * @returns `value` 是空值返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isEmpty(undefined) // => true
+ * isEmpty(null) // => true
+ * isEmpty('') // => true
+ * isEmpty(false) // => true
+ * isEmpty(true) // => true
+ * isEmpty([]) // => true
+ * isEmpty({}) // => true
+ * ```
  */
 export function isEmpty(value: any): boolean {
   return (
@@ -183,6 +213,11 @@ export function isEmpty(value: any): boolean {
  *
  * @param arrs 要检查的数组
  * @returns 给定的数组的各项都相等返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isEqualArray([1], [1]) // => true
+ * isEqualArray([1], [5]) // => false
+ * ```
  */
 export function isEqualArray(...arrs: any[][]): boolean {
   for (let i = 0; i < arrs.length; i++) {
@@ -213,6 +248,11 @@ export function isEqualArray(...arrs: any[][]): boolean {
  *
  * @param value 要检查的值
  * @returns `value` 是原始有限数值返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isFinite(1) // => true
+ * isFinite(Infinity) // => false
+ * ```
  */
 export function isFinite(value: any): value is number {
   return Number.isFinite(value)
@@ -223,6 +263,11 @@ export function isFinite(value: any): value is number {
  *
  * @param value 要检查的值
  * @returns `value` 是函数返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isFunction(() => {}) // => true
+ * isFunction(2000) // => false
+ * ```
  */
 export function isFunction(value: any): value is Function {
   return typeof value === 'function'
@@ -233,6 +278,11 @@ export function isFunction(value: any): value is Function {
  *
  * @param value 要检查的值
  * @returns `value` 全是汉字返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isHan('hello') // => false
+ * isHan('嗨咯') // => true
+ * ```
  */
 export function isHan(value: string): boolean {
   // https://mothereff.in/regexpu#input=const+regex+%3D+%2F%5E%5Cp%7BScript%3DHan%7D%2B%24%2Fu%3B&unicodePropertyEscape=1
@@ -245,6 +295,12 @@ export function isHan(value: string): boolean {
  *
  * @param value 要检查的值
  * @returns `value` 是整数返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isInteger(1) // => true
+ * isInteger(1.2) // => false
+ * isInteger(-1) // => true
+ * ```
  */
 export function isInteger(value: any): value is number {
   return Number.isInteger(value)
@@ -255,6 +311,11 @@ export function isInteger(value: any): value is number {
  *
  * @param value 要检查的值
  * @returns `value` 是正整数返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isPositiveInteger(1) // => true
+ * isPositiveInteger(-1) // => false
+ * ```
  */
 export function isPositiveInteger(value: any): value is number {
   return value > 0 && isInteger(value)
@@ -265,19 +326,14 @@ export function isPositiveInteger(value: any): value is number {
  *
  * @param value 要检查的值
  * @returns `value` 是负整数返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isNegativeInteger(-1) // => true
+ * isNegativeInteger(1) // => false
+ * ```
  */
 export function isNegativeInteger(value: any): value is number {
   return value < 0 && isInteger(value)
-}
-
-/**
- * 判断给定的年份是否是闰年。
- *
- * @param year 要判断的年份
- * @returns 给定的年份是闰年返回 `true`，否则返回 `false`
- */
-export function isLeapYear(year: number): boolean {
-  return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)
 }
 
 /**
@@ -285,6 +341,11 @@ export function isLeapYear(year: number): boolean {
  *
  * @param value 要检查的值
  * @returns `value` 是 `NaN` 返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isNaN(NaN) // => true
+ * isNaN(2) // => false
+ * ```
  */
 export function isNaN(value: any): boolean {
   return value !== value
@@ -295,6 +356,11 @@ export function isNaN(value: any): boolean {
  *
  * @param value 要检查的值
  * @returns `value` 是 `null` 或 `undefined` 返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isNil(null) // => true
+ * isNil(undefined) // => true
+ * ```
  */
 export function isNil(value: any): value is null | undefined {
   return value == null
@@ -305,6 +371,10 @@ export function isNil(value: any): value is null | undefined {
  *
  * @param value 要检查的值
  * @returns `value` 是 `null` 返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isNull(null) // => true
+ * ```
  */
 export function isNull(value: any): value is null {
   return value === null
@@ -321,7 +391,7 @@ export function isNull(value: any): value is null {
  * ```ts
  * isNumber(1) // => true
  * isNumber(0.1) // => true
- * isNumber('1') // => false
+ * isNumber(NaN) // => false
  * ```
  */
 export function isNumber(value: any): value is number {
@@ -335,6 +405,11 @@ export function isNumber(value: any): value is number {
  *
  * @param value 要检查的值
  * @returns `value` 是数值返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isNumeric(1) // => true
+ * isNumeric('1') // => true
+ * ```
  */
 export function isNumeric(value: any): value is number | string {
   return value != null && !(getGlobal().isNaN || isNaN)(value - parseFloat(value))
@@ -345,6 +420,12 @@ export function isNumeric(value: any): value is number | string {
  *
  * @param value 要检查的值
  * @returns `value` 是对象返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isObject({}) // => true
+ * isObject(() => {}) // => true
+ * isObject(null) // => false
+ * ```
  */
 export function isObject(value: any): value is object {
   const type = typeof value
@@ -356,6 +437,12 @@ export function isObject(value: any): value is object {
  *
  * @param value 要检查的值
  * @returns `value` 是普通对象返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isPlainObject({}) // => true
+ * isPlainObject(Object.create(null)) // => true
+ * isPlainObject(() => {}) // => false
+ * ```
  */
 export function isPlainObject(value: any): value is Record<keyof any, any> {
   if (!value || typeof value !== 'object') {
@@ -374,6 +461,10 @@ export function isPlainObject(value: any): value is Record<keyof any, any> {
  *
  * @param value 要检查的值
  * @returns `value` 像 `Promise` 返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isPromiseLike(Promise.resolve()) // => true
+ * ```
  */
 export function isPromiseLike(value: any): value is PromiseLike<any> {
   return (
@@ -387,6 +478,11 @@ export function isPromiseLike(value: any): value is PromiseLike<any> {
  *
  * @param value 要检查的值
  * @returns `value` 是正则对象返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isRegExp(/hello/) // => true
+ * isRegExp(new RegExp('hello')) // => true
+ * ```
  */
 export function isRegExp(value: any): value is RegExp {
   return getType(value) === 'RegExp'
@@ -397,6 +493,11 @@ export function isRegExp(value: any): value is RegExp {
  *
  * @param value 要检查的值
  * @returns `value` 是字符串返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isString('') // => true
+ * isString('hello') // => true
+ * ```
  */
 export function isString(value: any): value is string {
   return typeof value === 'string'
@@ -407,6 +508,11 @@ export function isString(value: any): value is string {
  *
  * @param value 要检查的值
  * @returns `value` 是 `undefined` 返回 `true`，否则返回 `false`
+ * @example
+ * ```ts
+ * isUndefined(undefined) // => true
+ * isUndefined(void 0) // => true
+ * ```
  */
 export function isUndefined(value: any): value is undefined {
   return value === undefined
@@ -418,6 +524,11 @@ export function isUndefined(value: any): value is undefined {
  * @param value 要检查的值
  * @returns `value` 是有效的网址返回 `true`，否则返回 `false`
  * @see http://urlregex.com/
+ * @example
+ * ```ts
+ * isUrl('http://foo.bar') // => true
+ * isUrl('https://foo.bar/home') // => true
+ * ```
  */
 export function isUrl(value: string): boolean {
   // http://urlregex.com/ ==> Ruby

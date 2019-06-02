@@ -15,7 +15,8 @@ import { forOwn } from './forOwn'
  *   { x: 1 },
  *   { y: 2 },
  *   { x: 5, z: 9 },
- * ) // => { x: 5, y: 2, z: 9 }
+ * )
+ * // => { x: 5, y: 2, z: 9 }
  * ```
  */
 export function assign<T extends object>(target: T, ...sources: object[]): T {
