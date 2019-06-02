@@ -104,7 +104,7 @@ ii(async function main() {
         `$1\n${
           briefList.map(
             brief => {
-              const sourceUrl = `https://github.com/fjc0k/vtils/blob/master/src/${brief.source.fileName}`
+              const sourceUrl = `https://github.com/fjc0k/vtils/blob/master/src/${brief.source.fileName}#L${brief.source.line}`
               const apiUrl = (
                 Number(kind) === ReflectionKind.Class
                   ? `https://fjc0k.github.io/vtils/classes/${brief.name.toLowerCase()}.html`
