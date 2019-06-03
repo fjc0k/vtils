@@ -145,6 +145,16 @@ clamp(50, 0, 49) // => 49
 clamp(50, 51, 100) // => 51
 ```
 
+#### 💡 createURIQuery
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/URI.ts#L14) | [API](https://fjc0k.github.io/vtils/globals.html#createuriquery)</small>
+
+创建 URI 查询字符串。
+
+```ts
+createURIQuery({ x: 1, y: 'z' }) // => x=1&y=z
+```
+
 #### 💡 endsWith
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/src/endsWith.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#endswith)</small>
