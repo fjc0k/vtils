@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-beta.8"></a>
+# [2.0.0-beta.8](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.7...v2.0.0-beta.8) (2019-06-03)
+
+
+### Features
+
+* 新增 unique ([5ebe402](https://github.com/fjc0k/vtils/commit/5ebe402))
+
+
+
 <a name="2.0.0-beta.7"></a>
 # [2.0.0-beta.7](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.6...v2.0.0-beta.7) (2019-06-03)
 
