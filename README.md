@@ -1092,6 +1092,16 @@ times(4, () => {
 })
 ```
 
+#### 💡 unique
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/unique.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#unique)</small>
+
+将给定的数组去重后返回。
+
+```ts
+unique([1, 2, 1, 3]) // => [1, 2, 3]
+```
+
 #### 💡 values
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/src/values.ts#L14) | [API](https://fjc0k.github.io/vtils/globals.html#values)</small>
