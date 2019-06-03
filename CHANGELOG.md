@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-beta.4"></a>
+# [2.0.0-beta.4](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2019-06-03)
+
+
+### Features
+
+* 添加 createURIQuery ([74d414d](https://github.com/fjc0k/vtils/commit/74d414d))
+
+
+
 <a name="2.0.0-beta.3"></a>
 # [2.0.0-beta.3](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2019-06-02)
 
