@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-beta.7"></a>
+# [2.0.0-beta.7](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.6...v2.0.0-beta.7) (2019-06-03)
+
+
+### Bug Fixes
+
+* 导出 URI ([30322be](https://github.com/fjc0k/vtils/commit/30322be))
+
+
+
 <a name="2.0.0-beta.6"></a>
 # [2.0.0-beta.6](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.4...v2.0.0-beta.6) (2019-06-03)
 
