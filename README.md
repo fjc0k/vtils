@@ -8,6 +8,13 @@
   <a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/</a>
 </p>
 
+## 特性
+
+- 源于日常项目实践，更实用
+- 使用 TypeScript 编写，类型友好
+- 支持摇树优化(Tree Shaking)，只引入使用到的工具
+- 浏览器、Node、小程序多端兼容
+
 ## 安装
 
 ```bash
@@ -23,7 +30,7 @@ npm i vtils --save
 在线体验：[https://stackblitz.com/edit/vtils](https://stackblitz.com/edit/vtils)
 
 ```js
-import { inBrowser,shuffle } from 'vtils'
+import { inBrowser, shuffle } from 'vtils'
 
 if (inBrowser()) {
   alert('您在浏览器中...')
