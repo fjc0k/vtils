@@ -37,7 +37,7 @@
     "lib:cov": "jest --coverage",
     "lib:build": "yarn ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildLib.ts",
     "publish:git": "git push --follow-tags origin master",
-    "publish:docs": "yarn docs:build && git add README.md && git commit -m \"docs: 更新文档\" --no-verify | true && gh-pages -d .typedoc",
+    "publish:docs": "gh-pages -d .typedoc",
     "publish:npm:latest": "npm publish",
     "publish:npm:next": "npm publish --tag=next",
     "release:major:beta": "standard-version -a --no-verify --prerelease beta --release-as major && npm run publish:npm:next",
@@ -45,6 +45,11 @@
     "release:beta": "standard-version -a --no-verify --prerelease beta && npm run publish:npm:next",
     "release:latest": "standard-version -a --no-verify && npm run publish:npm:latest",
     "prepublishOnly": "yarn lib:build && yarn publish:docs && yarn publish:git"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "yarn docs:build && git add README.md"
+    }
   },
   "eslintConfig": {
     "root": true,
