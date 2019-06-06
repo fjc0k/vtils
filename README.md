@@ -93,9 +93,9 @@ base64Encode('👨‍💻') // => 8J+RqOKAjfCfkrs=
 返回 `base64url` 解码后的字符串。
 
 ```ts
-base64Decode('dnRpbHM=') // => vtils
-base64Decode('5Lit5Zu9') // => 中国
-base64Decode('8J-RqOKAjfCfkrs=') // => 👨‍💻
+base64UrlDecode('dnRpbHM') // => vtils
+base64UrlDecode('5Lit5Zu9') // => 中国
+base64UrlDecode('8J-RqOKAjfCfkrs') // => 👨‍💻
 ```
 
 #### 💡 base64UrlEncode
@@ -105,9 +105,9 @@ base64Decode('8J-RqOKAjfCfkrs=') // => 👨‍💻
 返回 `base64url` 编码后的字符串。
 
 ```ts
-base64UrlEncode('vtils') // => dnRpbHM=
+base64UrlEncode('vtils') // => dnRpbHM
 base64UrlEncode('中国') // => 5Lit5Zu9
-base64UrlEncode('👨‍💻') // => 8J-RqOKAjfCfkrs=
+base64UrlEncode('👨‍💻') // => 8J-RqOKAjfCfkrs
 ```
 
 #### 💡 castArray
