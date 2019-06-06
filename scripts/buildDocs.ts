@@ -87,7 +87,7 @@ ii(async function main() {
               ${desc}
 
               ${example}
-            `.replace(/^ {16}/gm, '').trim(),
+            `.replace(/^ {14}/gm, '').trim(),
             source: item.sources![0],
           })
         })

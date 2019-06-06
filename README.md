@@ -1305,7 +1305,7 @@ wechat.invoke('scanQRCode').then(res => {
 
 从 `T` 中排除 `undefined` 类型。
 
-              ```ts
+```ts
 interface User {
   gender?: 'male' | 'female',
 }
@@ -1321,7 +1321,7 @@ type UserGender = Defined<User['gender']>
 
 条件类型。
 
-              ```ts
+```ts
 type X = 'x'
 // before
 type IsX = X extends 'x' ? true : false
