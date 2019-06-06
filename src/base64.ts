@@ -157,9 +157,9 @@ export function base64Decode(input: string): string {
  * @see http://www.ietf.org/rfc/rfc4648.txt
  * @example
  * ```ts
- * base64UrlEncode('vtils') // => dnRpbHM=
+ * base64UrlEncode('vtils') // => dnRpbHM
  * base64UrlEncode('中国') // => 5Lit5Zu9
- * base64UrlEncode('👨‍💻') // => 8J-RqOKAjfCfkrs=
+ * base64UrlEncode('👨‍💻') // => 8J-RqOKAjfCfkrs
  * ```
  */
 export function base64UrlEncode(input: string): string {
@@ -177,9 +177,9 @@ export function base64UrlEncode(input: string): string {
  * @see http://www.ietf.org/rfc/rfc4648.txt
  * @example
  * ```ts
- * base64Decode('dnRpbHM=') // => vtils
- * base64Decode('5Lit5Zu9') // => 中国
- * base64Decode('8J-RqOKAjfCfkrs=') // => 👨‍💻
+ * base64UrlDecode('dnRpbHM') // => vtils
+ * base64UrlDecode('5Lit5Zu9') // => 中国
+ * base64UrlDecode('8J-RqOKAjfCfkrs') // => 👨‍💻
  * ```
  */
 export function base64UrlDecode(input: string): string {
