@@ -1285,23 +1285,44 @@ wechat.invoke('scanQRCode').then(res => {
 <!-- 工具类型! -->
 #### 💡 AnyFunction
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L1) | [API](https://fjc0k.github.io/vtils/globals.html#anyfunction)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L4) | [API](https://fjc0k.github.io/vtils/globals.html#anyfunction)</small>
+
+任意函数类型。
 
 #### 💡 AnyObject
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L3) | [API](https://fjc0k.github.io/vtils/globals.html#anyobject)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L9) | [API](https://fjc0k.github.io/vtils/globals.html#anyobject)</small>
+
+任意对象类型。
 
 #### 💡 AsyncOrSync
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L9) | [API](https://fjc0k.github.io/vtils/globals.html#asyncorsync)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L45) | [API](https://fjc0k.github.io/vtils/globals.html#asyncorsync)</small>
+
+```ts
+// before
+type X = PromiseLike<string> | string
+// after
+type X = AsyncOrSync<string>
+```
 
 #### 💡 Brand
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L7) | [API](https://fjc0k.github.io/vtils/globals.html#brand)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L23) | [API](https://fjc0k.github.io/vtils/globals.html#brand)</small>
+
+名义化类型。
+
+```ts
+type User = { id: Brand<number, User>, name: string }
+type Post = { id: Brand<number, Post>, title: string }
+type UserIdIsNumber = User['id'] extends number ? true: false // => true
+type PostIdIsNumber = Post['id'] extends number ? true: false // => true
+type PostIdIsNotUserId = Post['id'] extends User['id'] ? false : true // => true
+```
 
 #### 💡 Defined
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L89) | [API](https://fjc0k.github.io/vtils/globals.html#defined)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L141) | [API](https://fjc0k.github.io/vtils/globals.html#defined)</small>
 
 从 `T` 中排除 `undefined` 类型。
 
@@ -1317,7 +1338,7 @@ type UserGender = Defined<User['gender']>
 
 #### 💡 If
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L73) | [API](https://fjc0k.github.io/vtils/globals.html#if)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L125) | [API](https://fjc0k.github.io/vtils/globals.html#if)</small>
 
 条件类型。
 
@@ -1331,51 +1352,80 @@ type IsX = If<X extends 'x', true, false>
 
 #### 💡 IsNever
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L59) | [API](https://fjc0k.github.io/vtils/globals.html#isnever)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L111) | [API](https://fjc0k.github.io/vtils/globals.html#isnever)</small>
+
+检查 `T` 是否是 `never` 类型。
+
+```ts
+type X = never
+// before
+type XIsNever = [X] extends [never] ? true : false
+// after
+type XIsNever = IsNever<X>
+```
 
 #### 💡 LiteralUnion
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L57) | [API](https://fjc0k.github.io/vtils/globals.html#literalunion)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L97) | [API](https://fjc0k.github.io/vtils/globals.html#literalunion)</small>
+
+字面量联合类型。
+
+```ts
+// before: China, American 将得不到类型提示
+type Country = 'China' | 'American' | string
+// after: China, American 将得到类型提示
+type Country = LiteralUnion<'China' | 'American', string>
+```
 
 #### 💡 Merge
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L55) | [API](https://fjc0k.github.io/vtils/globals.html#merge)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L84) | [API](https://fjc0k.github.io/vtils/globals.html#merge)</small>
+
+合并两个类型，后一个类型的定义将覆盖前一个类型的定义。
+
+```ts
+type X = Merge<
+  { x: number, y: number },
+  { x: string, z: string }
+>
+// => { x: string, y: number, z: string }
+```
 
 #### 💡 Omit
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#omit)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L70) | [API](https://fjc0k.github.io/vtils/globals.html#omit)</small>
 
-#### 💡 OmitByValue
+从接口 `T` 中去除指定的属性。
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L15) | [API](https://fjc0k.github.io/vtils/globals.html#omitbyvalue)</small>
-
-#### 💡 OmitByValueExact
-
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L20) | [API](https://fjc0k.github.io/vtils/globals.html#omitbyvalueexact)</small>
+```ts
+type X =                                                                                                                                                        Omit<
+  { x: number, y: string, z: boolean },
+  'x' | 'z'
+>
+// => { y: string }
+```
 
 #### 💡 OneOrMore
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L5) | [API](https://fjc0k.github.io/vtils/globals.html#oneormore)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L34) | [API](https://fjc0k.github.io/vtils/globals.html#oneormore)</small>
 
-#### 💡 OptionalKeys
-
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L51) | [API](https://fjc0k.github.io/vtils/globals.html#optionalkeys)</small>
-
-#### 💡 PickByValue
-
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L31) | [API](https://fjc0k.github.io/vtils/globals.html#pickbyvalue)</small>
-
-#### 💡 PickByValueExact
-
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L36) | [API](https://fjc0k.github.io/vtils/globals.html#pickbyvalueexact)</small>
-
-#### 💡 RequiredKeys
-
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L47) | [API](https://fjc0k.github.io/vtils/globals.html#requiredkeys)</small>
+```ts
+// before
+type X = number | number[]
+// after
+type X = OneOrMore<number>
+```
 
 #### 💡 ValueOf
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L11) | [API](https://fjc0k.github.io/vtils/globals.html#valueof)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L56) | [API](https://fjc0k.github.io/vtils/globals.html#valueof)</small>
+
+返回接口 `T` 属性值的类型。
+
+```ts
+type V = ValueOf<{ x: number, y: string, z: boolean }>
+// => number | string | boolean
+```
 <!-- 工具类型i -->
 
 ## 许可
