@@ -162,6 +162,25 @@ clamp(50, 51, 100) // => 51
 createURIQuery({ x: 1, y: 'z' }) // => x=1&y=z
 ```
 
+#### 💡 debounce
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/debounce.ts#L24) | [API](https://fjc0k.github.io/vtils/globals.html#debounce)</small>
+
+创建一个去抖函数，将触发频繁的事件合并成一次执行。
+
+该函数被调用后，计时 `wait` 毫秒后调用 `fn` 函数。若在 `wait` 毫秒内该函数再次被调用，则重新开始计时。
+
+一个应用场景：监听输入框的 `input` 事件发起网络请求。
+
+```ts
+document.querySelector('#input').oninput = debounce(
+  e => {
+    console.log(e.target.value)
+  },
+  500,
+)
+```
+
 #### 💡 endsWith
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/src/endsWith.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#endswith)</small>
@@ -1085,6 +1104,26 @@ sumBy(
   item => item.count,
 )
 // => 6
+```
+
+#### 💡 throttle
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/throttle.ts#L30) | [API](https://fjc0k.github.io/vtils/globals.html#throttle)</small>
+
+创建一个节流函数，给函数设置固定的执行速率。
+
+- 该函数首次被调用时，会立即调用 `fn` 函数，并记录首次调用时间。  - 该函数第二次被调用时：    - 如果该次调用时间在首次调用时间的 `wait` 区间内，`timer = setTimeout(操作, 时间差)`；      - 该函数再次被调用时：        - 如果该次调用时间在首次调用时间的 `wait` 区间内，什么都不做；        - 否则，清除首次调用时间和计时器，回到第一步。    - 否则，清除首次调用时间，回到第一步。
+
+一个应用场景：监听窗口的 `resize` 事件响应相关操作。
+
+```ts
+window.addEventListener(
+  'resize',
+  throttle(
+    () => console.log('窗口大小改变后的操作'),
+    1000,
+  ),
+)
 ```
 
 #### 💡 times
