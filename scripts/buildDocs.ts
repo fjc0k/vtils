@@ -141,7 +141,7 @@ function getDesc(reflection: Reflection): string {
     .map(
       v => v.trim()
         .replace(/\n\n/g, '__NN__')
-        .replace(/\n/g, '')
+        .replace(/\n(?!\s*(-|\d\.))/g, '')
         .replace(/__NN__/g, '\n\n'),
     )
     .join('\n\n')
