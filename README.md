@@ -956,6 +956,14 @@ placeKitten(100) // => https://placekitten.com/100/100
 placeKitten(100, 200) // => https://placekitten.com/100/200
 ```
 
+#### 💡 pluck
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/pluck.ts#L18) | [API](https://fjc0k.github.io/vtils/globals.html#pluck)</small>
+
+将数据中每一项的迭代值组合成一个数组返回。
+
+将数据中每一项的迭代值组合成一个对象返回。
+
 #### 💡 randomString
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/src/randomString.ts#L10) | [API](https://fjc0k.github.io/vtils/globals.html#randomstring)</small>
