@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Wechat | vtils</title>
+	<title>PluckGetValueIteratee | vtils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2377,580 +2377,59 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-class tsd-is-external">
-			<a href="wechat.html" class="tsd-kind-icon">Wechat</a>
-			<ul>
-				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#constructor" class="tsd-kind-icon">constructor</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#configparams" class="tsd-kind-icon">config<wbr>Params</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
-					<a href="wechat.html#checkjsapi" class="tsd-kind-icon">check<wbr>JsApi</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#chooseimage" class="tsd-kind-icon">choose<wbr>Image</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#closewindow" class="tsd-kind-icon">close<wbr>Window</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#config" class="tsd-kind-icon">config</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#hideallnonbasemenuitems" class="tsd-kind-icon">hide<wbr>All<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#hidenonbasemenuitems" class="tsd-kind-icon">hide<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#invoke" class="tsd-kind-icon">invoke</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#onerror" class="tsd-kind-icon">on<wbr>Error</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#previewimage" class="tsd-kind-icon">preview<wbr>Image</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#showallnonbasemenuitems" class="tsd-kind-icon">show<wbr>All<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#shownonbasemenuitems" class="tsd-kind-icon">show<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#updatesharedata" class="tsd-kind-icon">update<wbr>Share<wbr>Data</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="wechat.html#uploadimage" class="tsd-kind-icon">upload<wbr>Image</a>
-				</li>
-			</ul>
+		<li class="current tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+			<a href="pluckgetvalueiteratee.html" class="tsd-kind-icon">Pluck<wbr>Get<wbr>Value<wbr>Iteratee</a>
 		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<section class="tsd-panel tsd-comment">
-			<div class="tsd-comment tsd-typography">
-				<div class="lead">
-					<p>对微信 JSSDK 的封装。</p>
-				</div>
-				<dl class="tsd-comment-tags">
-					<dt>example</dt>
-					<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> wechat = <span class="hljs-keyword">new</span> Wechat()
-getWechatConfigAsync().then(<span class="hljs-function"><span class="hljs-params">config</span> =&gt;</span> {
-  wechat.config(config)
-})
-wechat.updateShareData({
-  title: <span class="hljs-string">'分享标题'</span>,
-  desc: <span class="hljs-string">'分享描述'</span>,
-  link: <span class="hljs-string">'分享链接'</span>,
-  imgUrl: <span class="hljs-string">'缩略图地址'</span>,
-})
-wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
-  <span class="hljs-comment">// =&gt; API 调用结果</span>
-})</code></pre>
-					</dd>
-				</dl>
-			</div>
+		<section class="tsd-panel tsd-type-parameters">
+			<h3>Type parameters</h3>
+			<ul class="tsd-type-parameters">
+				<li>
+					<h4>T</h4>
+				</li>
+				<li>
+					<h4>V</h4>
+				</li>
+			</ul>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">Wechat</span>
+					<span class="target">PluckGetValueIteratee</span>
 				</li>
 			</ul>
 		</section>
-		<section class="tsd-panel-group tsd-index-group">
-			<h2>Index</h2>
-			<section class="tsd-panel tsd-index-panel">
-				<div class="tsd-index-content">
-					<section class="tsd-index-section tsd-is-external">
-						<h3>Constructors</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="wechat.html#constructor" class="tsd-kind-icon">constructor</a></li>
+		<section class="tsd-panel">
+			<h3 class="tsd-before-signature">Callable</h3>
+			<ul class="tsd-signatures tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+				<li class="tsd-signature tsd-kind-icon">__call<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">V</span></li>
+			</ul>
+			<ul class="tsd-descriptions">
+				<li class="tsd-description">
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/pluck.ts#L3">pluck.ts:3</a></li>
 						</ul>
-					</section>
-					<section class="tsd-index-section tsd-is-external">
-						<h3>Properties</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="wechat.html#configparams" class="tsd-kind-icon">config<wbr>Params</a></li>
-						</ul>
-					</section>
-					<section class="tsd-index-section tsd-is-external">
-						<h3>Methods</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external"><a href="wechat.html#checkjsapi" class="tsd-kind-icon">check<wbr>JsApi</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#chooseimage" class="tsd-kind-icon">choose<wbr>Image</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#closewindow" class="tsd-kind-icon">close<wbr>Window</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#config" class="tsd-kind-icon">config</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#hideallnonbasemenuitems" class="tsd-kind-icon">hide<wbr>All<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#hidenonbasemenuitems" class="tsd-kind-icon">hide<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#invoke" class="tsd-kind-icon">invoke</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#onerror" class="tsd-kind-icon">on<wbr>Error</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#previewimage" class="tsd-kind-icon">preview<wbr>Image</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#showallnonbasemenuitems" class="tsd-kind-icon">show<wbr>All<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#shownonbasemenuitems" class="tsd-kind-icon">show<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#updatesharedata" class="tsd-kind-icon">update<wbr>Share<wbr>Data</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="wechat.html#uploadimage" class="tsd-kind-icon">upload<wbr>Image</a></li>
-						</ul>
-					</section>
-				</div>
-			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Constructors</h2>
-			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-				<a name="constructor" class="tsd-anchor"></a>
-				<h3>constructor</h3>
-				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">new <wbr>Wechat<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">?: </span><a href="../interfaces/wechatconfigparams.html" class="tsd-signature-type">WechatConfigParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="wechat.html" class="tsd-signature-type">Wechat</a></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L242">Wechat.ts:242</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>构造函数。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> params: <a href="../interfaces/wechatconfigparams.html" class="tsd-signature-type">WechatConfigParams</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>注入微信 <code>JSSDK</code> 的权限验证配置参数</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="wechat.html" class="tsd-signature-type">Wechat</a></h4>
-					</li>
-				</ul>
-			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
-				<a name="configparams" class="tsd-anchor"></a>
-				<h3>config<wbr>Params</h3>
-				<div class="tsd-signature tsd-kind-icon">config<wbr>Params<span class="tsd-signature-symbol">:</span> <a href="../interfaces/wechatconfigparams.html" class="tsd-signature-type">WechatConfigParams</a><span class="tsd-signature-symbol"> =&nbsp;{} as any</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L242">Wechat.ts:242</a></li>
+					</aside>
+					<h4 class="tsd-parameters-title">Parameters</h4>
+					<ul class="tsd-parameters">
+						<li>
+							<h5>item: <span class="tsd-signature-type">T</span></h5>
+						</li>
+						<li>
+							<h5>index: <span class="tsd-signature-type">number</span></h5>
+						</li>
+						<li>
+							<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+						</li>
 					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>注入微信 <code>JSSDK</code> 的权限验证配置参数。</p>
-					</div>
-				</div>
-			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
-				<a name="checkjsapi" class="tsd-anchor"></a>
-				<h3>check<wbr>JsApi</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">check<wbr>JsApi&lt;T&gt;<span class="tsd-signature-symbol">(</span>jsApiList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L310">Wechat.ts:310</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>判断当前客户端版本是否支持指定 JS 接口。</p>
-							</div>
-						</div>
-						<h4 class="tsd-type-parameters-title">Type parameters</h4>
-						<ul class="tsd-type-parameters">
-							<li>
-								<h4>T<span class="tsd-signature-symbol">: </span><a href="../globals.html#wechatjsapi" class="tsd-signature-type">WechatJsApi</a></h4>
-							</li>
-						</ul>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>jsApiList: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>需要检测的 JS 接口列表</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						<p>以键值对的形式返回，可用的 <code>api</code> 值 <code>true</code>，不可用为 <code>false</code></p>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="chooseimage" class="tsd-anchor"></a>
-				<h3>choose<wbr>Image</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">choose<wbr>Image<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">?: </span><a href="../interfaces/wechatchooseimageparams.html" class="tsd-signature-type">WechatChooseImageParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L339">Wechat.ts:339</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>选择图片。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> params: <a href="../interfaces/wechatchooseimageparams.html" class="tsd-signature-type">WechatChooseImageParams</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>参数</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						<p>选定照片的本地 ID 列表</p>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="closewindow" class="tsd-anchor"></a>
-				<h3>close<wbr>Window</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">close<wbr>Window<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L376">Wechat.ts:376</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>关闭当前网页窗口。</p>
-							</div>
-						</div>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="config" class="tsd-anchor"></a>
-				<h3>config</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/wechatconfigparams.html" class="tsd-signature-type">WechatConfigParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L260">Wechat.ts:260</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>注入微信 <code>JSSDK</code> 的权限验证配置。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>params: <a href="../interfaces/wechatconfigparams.html" class="tsd-signature-type">WechatConfigParams</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>配置参数</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="hideallnonbasemenuitems" class="tsd-anchor"></a>
-				<h3>hide<wbr>All<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">hide<wbr>All<wbr>Non<wbr>Base<wbr>Menu<wbr>Items<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L401">Wechat.ts:401</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>隐藏所有的非基础菜单项。</p>
-							</div>
-						</div>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="hidenonbasemenuitems" class="tsd-anchor"></a>
-				<h3>hide<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">hide<wbr>Non<wbr>Base<wbr>Menu<wbr>Items<span class="tsd-signature-symbol">(</span>menuList<span class="tsd-signature-symbol">: </span><a href="../globals.html#wechatnonbasemenuitem" class="tsd-signature-type">WechatNonBaseMenuItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L385">Wechat.ts:385</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>批量隐藏非基础菜单项。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>menuList: <a href="../globals.html#wechatnonbasemenuitem" class="tsd-signature-type">WechatNonBaseMenuItem</a><span class="tsd-signature-symbol">[]</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>要隐藏的非基础菜单项列表</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="invoke" class="tsd-anchor"></a>
-				<h3>invoke</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">invoke<span class="tsd-signature-symbol">(</span>jsApi<span class="tsd-signature-symbol">: </span><a href="../globals.html#wechatjsapi" class="tsd-signature-type">WechatJsApi</a>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L428">Wechat.ts:428</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>调用 JSSDK 的 API 方法。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>jsApi: <a href="../globals.html#wechatjsapi" class="tsd-signature-type">WechatJsApi</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>要调用的 API 名称</p>
-								</div>
-							</li>
-							<li>
-								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> params: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>传给 API 的参数</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						<p>调用结果</p>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="onerror" class="tsd-anchor"></a>
-				<h3>on<wbr>Error</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">on<wbr>Error<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><a href="../globals.html#wechaterrorcallback" class="tsd-signature-type">WechatErrorCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L417">Wechat.ts:417</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>错误处理。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>callback: <a href="../globals.html#wechaterrorcallback" class="tsd-signature-type">WechatErrorCallback</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>出错时的回调函数</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="previewimage" class="tsd-anchor"></a>
-				<h3>preview<wbr>Image</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">preview<wbr>Image<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/wechatpreviewimageparams.html" class="tsd-signature-type">WechatPreviewImageParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L349">Wechat.ts:349</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>预览图片。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>params: <a href="../interfaces/wechatpreviewimageparams.html" class="tsd-signature-type">WechatPreviewImageParams</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>参数</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="showallnonbasemenuitems" class="tsd-anchor"></a>
-				<h3>show<wbr>All<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">show<wbr>All<wbr>Non<wbr>Base<wbr>Menu<wbr>Items<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L408">Wechat.ts:408</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>显示所有的非基础菜单项。</p>
-							</div>
-						</div>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="shownonbasemenuitems" class="tsd-anchor"></a>
-				<h3>show<wbr>Non<wbr>Base<wbr>Menu<wbr>Items</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">show<wbr>Non<wbr>Base<wbr>Menu<wbr>Items<span class="tsd-signature-symbol">(</span>menuList<span class="tsd-signature-symbol">: </span><a href="../globals.html#wechatnonbasemenuitem" class="tsd-signature-type">WechatNonBaseMenuItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L394">Wechat.ts:394</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>批量显示非基础菜单项。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>menuList: <a href="../globals.html#wechatnonbasemenuitem" class="tsd-signature-type">WechatNonBaseMenuItem</a><span class="tsd-signature-symbol">[]</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>要显示的非基础菜单项列表</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="updatesharedata" class="tsd-anchor"></a>
-				<h3>update<wbr>Share<wbr>Data</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">update<wbr>Share<wbr>Data<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/wechatupdatesharedataparams.html" class="tsd-signature-type">WechatUpdateShareDataParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L320">Wechat.ts:320</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>设置分享数据。</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>params: <a href="../interfaces/wechatupdatesharedataparams.html" class="tsd-signature-type">WechatUpdateShareDataParams</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>分享数据</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="uploadimage" class="tsd-anchor"></a>
-				<h3>upload<wbr>Image</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">upload<wbr>Image<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/wechatuploadimageparams.html" class="tsd-signature-type">WechatUploadImageParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/14c524e/src/Wechat.ts#L366">Wechat.ts:366</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>上传图片。</p>
-							</div>
-							<p><strong>备注：</strong> 上传图片有效期3天，
-								可用微信多媒体接口下载图片到自己的服务器，
-							此处获得的服务器端 ID 即 <code>media_id</code>。</p>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>params: <a href="../interfaces/wechatuploadimageparams.html" class="tsd-signature-type">WechatUploadImageParams</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>参数</p>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						<p>图片的服务器端 ID</p>
-					</li>
-				</ul>
-			</section>
+					<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">V</span></h4>
+				</li>
+			</ul>
 		</section>
 		<footer class="with-border-bottom">
 			<div class="container">
