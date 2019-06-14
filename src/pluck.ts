@@ -14,6 +14,13 @@ export interface PluckGetKeyIteratee<T, K> {
  * @param data 数据
  * @param getValueIteratee 值的迭代函数
  * @returns 返回结果数组
+ * @example
+ * ```ts
+ * pluck(
+ *   [{ id: 1, name: 'Jay' }, { id: 2, name: 'Lily' }],
+ *   item => item.name,
+ * ) // => ['Jay', 'Lily']
+ * ```
  */
 export function pluck<T, V>(
   data: T[],
@@ -27,6 +34,14 @@ export function pluck<T, V>(
  * @param getValueIteratee 值的迭代函数
  * @param getKeyIteratee 键的迭代函数
  * @returns 返回结果对象
+ * @example
+ * ```ts
+ * pluck(
+ *   [{ id: 1, name: 'Jay' }, { id: 2, name: 'Lily' }],
+ *   item => item.name,
+ *   item => item.id,
+ * ) // => { 1: 'Jay', 2: 'Lily' }
+ * ```
  */
 export function pluck<T, V, K extends keyof any>(
   data: T[],
