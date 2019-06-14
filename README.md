@@ -958,11 +958,26 @@ placeKitten(100, 200) // => https://placekitten.com/100/200
 
 #### 💡 pluck
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/pluck.ts#L18) | [API](https://fjc0k.github.io/vtils/globals.html#pluck)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/pluck.ts#L25) | [API](https://fjc0k.github.io/vtils/globals.html#pluck)</small>
 
 将数据中每一项的迭代值组合成一个数组返回。
 
+```ts
+pluck(
+  [{ id: 1, name: 'Jay' }, { id: 2, name: 'Lily' }],
+  item => item.name,
+) // => ['Jay', 'Lily']
+```
+
 将数据中每一项的迭代值组合成一个对象返回。
+
+```ts
+pluck(
+  [{ id: 1, name: 'Jay' }, { id: 2, name: 'Lily' }],
+  item => item.name,
+  item => item.id,
+) // => { 1: 'Jay', 2: 'Lily' }
+```
 
 #### 💡 randomString
 
