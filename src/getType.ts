@@ -31,10 +31,10 @@ export type GetTypeReturn = LiteralUnion<(
  * @see https://www.ecma-international.org/ecma-262/5.1/#sec-8.6.2
  * @example
  * ```ts
- * getType(1) // => Number
- * getType(true) // => Boolean
- * getType([]) // => Array
- * getType(/hello/) // => RegExp
+ * getType(1) // => 'Number'
+ * getType(true) // => 'Boolean'
+ * getType([]) // => 'Array'
+ * getType(/hello/) // => 'RegExp'
  * ```
  */
 export function getType(value: any): GetTypeReturn {
