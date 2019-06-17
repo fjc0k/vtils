@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.4.0"></a>
+# [2.4.0](https://github.com/fjc0k/vtils/compare/v2.3.1...v2.4.0) (2019-06-17)
+
+
+### Features
+
+* 新增 defaultTo ([a587b71](https://github.com/fjc0k/vtils/commit/a587b71))
+* 新增 isArguments ([26a71f4](https://github.com/fjc0k/vtils/commit/26a71f4))
+* 新增 safeGet ([a80b6e1](https://github.com/fjc0k/vtils/commit/a80b6e1))
+
+
+
 <a name="2.3.1"></a>
 ## [2.3.1](https://github.com/fjc0k/vtils/compare/v2.3.0...v2.3.1) (2019-06-14)
 

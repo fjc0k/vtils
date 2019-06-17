@@ -181,6 +181,19 @@ document.querySelector('#input').oninput = debounce(
 )
 ```
 
+#### 💡 defaultTo
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/defaultTo.ts#L17) | [API](https://fjc0k.github.io/vtils/globals.html#defaultto)</small>
+
+检查 `value` 是否是 `null`、`undefined`、`NaN`，是则返回 `defaultValue`，否则返回 `value`。
+
+```ts
+defaultTo(1, 2) // => 1
+defaultTo(NaN, 2) // => 2
+defaultTo(null, 2) // => 2
+defaultTo(undefined, 2) // => 2
+```
+
 #### 💡 endsWith
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/src/endsWith.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#endswith)</small>
@@ -246,10 +259,10 @@ getGlobal() // => global
 检测 `value` 的类型。
 
 ```ts
-getType(1) // => Number
-getType(true) // => Boolean
-getType([]) // => Array
-getType(/hello/) // => RegExp
+getType(1) // => 'Number'
+getType(true) // => 'Boolean'
+getType([]) // => 'Array'
+getType(/hello/) // => 'RegExp'
 ```
 
 #### 💡 groupBy
@@ -438,6 +451,18 @@ includes({ x: 1, y: 2 }, 3) // => false
 includes('hello', 'h') // => true
 includes('hello', 'll') // => true
 includes('hello', '123') // => false
+```
+
+#### 💡 isArguments
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/is.ts#L551) | [API](https://fjc0k.github.io/vtils/globals.html#isarguments)</small>
+
+检查 `value` 是否是一个 `arguments` 对象。
+
+```ts
+function myFunction() {
+  console.log(isArguments(arguments)) // true
+}
 ```
 
 #### 💡 isArray
@@ -750,7 +775,9 @@ isUrl('https://foo.bar/home') // => true
 
 #### 💡 jestExpectEqual
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceJest.ts#L1) | [API](https://fjc0k.github.io/vtils/globals.html#jestexpectequal)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceJest.ts#L7) | [API](https://fjc0k.github.io/vtils/globals.html#jestexpectequal)</small>
+
+这是一个 jest 测试辅助函数，等同于 `expect(actual).toEqual(expected)`，只不过是加上了类型。
 
 #### 💡 keyBy
 
@@ -1048,6 +1075,10 @@ roundUp(3.456, 1) // => 3.5
 roundUp(3.456, 2) // => 3.46
 roundUp(345, -2) // => 400
 ```
+
+#### 💡 safeGet
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/safeGet.ts#L4) | [API](https://fjc0k.github.io/vtils/globals.html#safeget)</small>
 
 #### 💡 sample
 
@@ -1473,7 +1504,7 @@ type X = Merge<
 从接口 `T` 中去除指定的属性。
 
 ```ts
-type X =                                                                                                                                                        Omit<
+type X = Omit<
   { x: number, y: string, z: boolean },
   'x' | 'z'
 >
