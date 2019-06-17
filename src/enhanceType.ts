@@ -60,7 +60,7 @@ export type ValueOf<T> = T[keyof T]
  *
  * @example
  * ```ts
- * type X =                                                                                                                                                        Omit<
+ * type X = Omit<
  *   { x: number, y: string, z: boolean },
  *   'x' | 'z'
  * >
