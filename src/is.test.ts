@@ -666,6 +666,25 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
       expect(isUrl(item)).toBeTruthy()
     })
   },
+
+  isArguments({ isArguments }) {
+    // 不是
+    [
+      true,
+      {},
+      () => {},
+      [],
+    ].forEach(item => {
+      expect(isArguments(item)).toBeFalsy()
+    })
+
+    // 是
+    ;[
+      arguments,
+    ].forEach(item => {
+      expect(isArguments(item)).toBeTruthy()
+    })
+  },
 }
 
 for (const key in tests) {
