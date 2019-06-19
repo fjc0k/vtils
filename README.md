@@ -1198,6 +1198,26 @@ times(4, () => {
 })
 ```
 
+#### 💡 tryGet
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/tryGet.ts#L18) | [API](https://fjc0k.github.io/vtils/globals.html#tryget)</small>
+
+尝试执行 `accessor` 返回值，若其报错，返回默认值 `defaultValue`。
+
+```ts
+const obj = { x: 1 }
+tryGet(() => obj.x, 2) // => 1
+tryGet(() => obj.x.y, 2) // => 2
+```
+
+尝试执行 `accessor` 返回值，若其报错，返回 `undefined`。
+
+```ts
+const obj = { x: 1 }
+tryGet(() => obj.x) // => 1
+tryGet(() => obj.x.y) // => undefined
+```
+
 #### 💡 unique
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/src/unique.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#unique)</small>

@@ -1,6 +1,6 @@
 {
   "name": "vtils",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "小巧实用的 JavaScript 工具类库。",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
