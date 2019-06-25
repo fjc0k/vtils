@@ -9,7 +9,7 @@ export interface EasyValidatorRuleTestFunctionActions {
    *
    * @param message 提示信息
    */
-  updateMessage(message: any): void,
+  updateMessage(message: any): false,
 }
 
 export interface EasyValidatorRuleTestFunction<D extends EasyValidatorData> {
@@ -178,6 +178,7 @@ export class EasyValidator<D extends EasyValidatorData> {
             const actions: EasyValidatorRuleTestFunctionActions = {
               updateMessage(comingMessage) {
                 message = comingMessage
+                return false
               },
             }
             const result = rule.test(data, actions)
