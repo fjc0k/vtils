@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.6.0"></a>
+# [2.6.0](https://github.com/fjc0k/vtils/compare/v2.5.0...v2.6.0) (2019-06-25)
+
+
+### Features
+
+* **EasyValidator:** updateMessage 现在返回 false ([02a10b7](https://github.com/fjc0k/vtils/commit/02a10b7))
+
+
+
 <a name="2.5.0"></a>
 # [2.5.0](https://github.com/fjc0k/vtils/compare/v2.4.0...v2.5.0) (2019-06-19)
 
