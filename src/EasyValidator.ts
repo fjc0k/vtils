@@ -1,4 +1,5 @@
 import { isChineseIDCardNumber, isEmail, isFunction, isInteger, isNumeric, isPossibleChineseMobilePhoneNumber, isPossibleChineseName, isPromiseLike, isRegExp, isUrl } from './is'
+import { pluck } from './pluck'
 import { sequential } from './sequential'
 
 export type EasyValidatorData = Record<keyof any, any>
@@ -61,6 +62,8 @@ export interface EasyValidatorValidateReturn<D extends EasyValidatorData> {
   valid: boolean,
   /** 未验证通过的规则组成的列表 */
   unvalidRules: Array<EasyValidatorRule<D>>,
+  /** 未验证通过的属性的提示信息 */
+  messages: Partial<Record<keyof D, any>>,
 }
 
 /**
@@ -235,6 +238,7 @@ export class EasyValidator<D extends EasyValidatorData> {
       ).then<EasyValidatorValidateReturn<D>>(() => ({
         valid: unvalidRules.length === 0,
         unvalidRules: unvalidRules.slice(),
+        messages: pluck(unvalidRules, item => item.message, item => item.key),
       }))
     )
   }

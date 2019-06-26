@@ -1,5 +1,7 @@
 import { EasyValidator, EasyValidatorRules } from './EasyValidator'
+import { ii } from './ii'
 import { jestExpectEqual } from './enhanceJest'
+import { pluck } from './pluck'
 import { wait } from './wait'
 
 type Data = {
@@ -129,6 +131,7 @@ test('综合测试', async () => {
     {
       valid: true,
       unvalidRules: [],
+      messages: {},
     },
   )
   jestExpectEqual(
@@ -149,9 +152,8 @@ test('综合测试', async () => {
       required: undefined as any, // 13
       updateMessage: 'y', // 14
     }),
-    {
-      valid: false,
-      unvalidRules: [
+    ii(() => {
+      const unvalidRules = [
         rules[1],
         rules[5],
         rules[8],
@@ -162,8 +164,13 @@ test('综合测试', async () => {
           ...rules[14],
           message: '出错啦',
         },
-      ],
-    },
+      ]
+      return {
+        valid: false,
+        unvalidRules: unvalidRules,
+        messages: pluck(unvalidRules, item => item.message, item => item.key),
+      }
+    }),
   )
 })
 
