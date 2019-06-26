@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.7.0"></a>
+# [2.7.0](https://github.com/fjc0k/vtils/compare/v2.6.0...v2.7.0) (2019-06-26)
+
+
+### Features
+
+* **EasyValidator:** 验证结果包含未验证通过的属性的提示信息 ([0e60b45](https://github.com/fjc0k/vtils/commit/0e60b45))
+
+
+
 <a name="2.6.0"></a>
 # [2.6.0](https://github.com/fjc0k/vtils/compare/v2.5.0...v2.6.0) (2019-06-25)
 

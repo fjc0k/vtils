@@ -1306,7 +1306,7 @@ document.querySelector('#stop').onclick = () => {
 
 #### 💡 EasyValidator
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/EasyValidator.ts#L121) | [API](https://fjc0k.github.io/vtils/classes/easyvalidator.html)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/EasyValidator.ts#L124) | [API](https://fjc0k.github.io/vtils/classes/easyvalidator.html)</small>
 
 数据对象验证器。
 
