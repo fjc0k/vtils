@@ -15,6 +15,13 @@
 - 支持摇树优化(Tree Shaking)，只引入使用到的工具
 - 浏览器、Node、小程序多端兼容
 
+## 说明
+
+`vtils` 自身并不包括一些已有成熟库的工具，如时间处理、网络请求等，在此做下推荐：
+
+- 时间处理：[dayjs](https://github.com/iamkun/dayjs)
+- 网络请求：[axios](https://github.com/axios/axios)、[taro-axios](https://github.com/fjc0k/taro-axios)
+
 ## 安装
 
 ```bash
