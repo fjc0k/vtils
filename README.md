@@ -161,7 +161,7 @@ clamp(50, 51, 100) // => 51
 
 #### 💡 createURIQuery
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/URI.ts#L14) | [API](https://fjc0k.github.io/vtils/globals.html#createuriquery)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/URI.ts#L15) | [API](https://fjc0k.github.io/vtils/globals.html#createuriquery)</small>
 
 创建 URI 查询字符串。
 
@@ -962,6 +962,26 @@ parallel([
 parseCSSValue('12px') // => { value: 12, unit: 'px' }
 parseCSSValue(12) // => { value: 12, unit: 'px' }
 parseCSSValue('12%') // => { value: 12, unit: '%' }
+```
+
+#### 💡 parseURIQuery
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/URI.ts#L50) | [API](https://fjc0k.github.io/vtils/globals.html#parseuriquery)</small>
+
+解析 URI 查询字符串。
+
+兼容以 `?` 开头的查询字符串，因此你可以直接传入 `location.search` 的值。
+
+```ts
+parseURIQuery('x=1&y=z') // => { x: '1', y: 'z' }
+parseURIQuery('?x=1&y=z') // => { x: '1', y: 'z' }
+parseURIQuery(
+  'x=1&y=z',
+  parameters => ({
+    ...parameters,
+    x: Number(parameters.x),
+  }),
+) // => { x: 1, y: 'z' }
 ```
 
 #### 💡 pick
