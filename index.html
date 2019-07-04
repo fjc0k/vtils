@@ -2875,11 +2875,260 @@ npm i vtils --save</code></pre>
 }
 
 alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]))</code></pre>
-			<h2 id="工具列表">工具列表</h2>
+			<h2 id="目录">目录</h2>
 			<h3 id="📦-工具函数">📦 工具函数</h3>
-			<!-- 工具函数! -->
-			<h4 id="💡-assign">💡 assign</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/assign.ts#L22">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#assign">API</a></small></p>
+			<!-- 工具函数!目录 -->
+			<table>
+				<thead>
+					<tr>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+						<td><a href="#assign">assign</a></td>
+						<td><a href="#base64decode">base64Decode</a></td>
+						<td><a href="#base64encode">base64Encode</a></td>
+						<td><a href="#base64urldecode">base64UrlDecode</a></td>
+					</tr>
+					<tr>
+						<td><a href="#base64urlencode">base64UrlEncode</a></td>
+						<td><a href="#castarray">castArray</a></td>
+						<td><a href="#chunk">chunk</a></td>
+						<td><a href="#clamp">clamp</a></td>
+					</tr>
+					<tr>
+						<td><a href="#createuriquery">createURIQuery</a></td>
+						<td><a href="#debounce">debounce</a></td>
+						<td><a href="#defaultto">defaultTo</a></td>
+						<td><a href="#endswith">endsWith</a></td>
+					</tr>
+					<tr>
+						<td><a href="#fill">fill</a></td>
+						<td><a href="#flexible">flexible</a></td>
+						<td><a href="#forown">forOwn</a></td>
+						<td><a href="#getglobal">getGlobal</a></td>
+					</tr>
+					<tr>
+						<td><a href="#gettype">getType</a></td>
+						<td><a href="#groupby">groupBy</a></td>
+						<td><a href="#has">has</a></td>
+						<td><a href="#ii">ii</a></td>
+					</tr>
+					<tr>
+						<td><a href="#inandroid">inAndroid</a></td>
+						<td><a href="#inbrowser">inBrowser</a></td>
+						<td><a href="#inios">inIOS</a></td>
+						<td><a href="#innode">inNode</a></td>
+					</tr>
+					<tr>
+						<td><a href="#inrange">inRange</a></td>
+						<td><a href="#inwechatminiprogram">inWechatMiniProgram</a></td>
+						<td><a href="#inwechatwebview">inWechatWebview</a></td>
+						<td><a href="#includes">includes</a></td>
+					</tr>
+					<tr>
+						<td><a href="#isarguments">isArguments</a></td>
+						<td><a href="#isarray">isArray</a></td>
+						<td><a href="#isboolean">isBoolean</a></td>
+						<td><a href="#ischineseidcardnumber">isChineseIDCardNumber</a></td>
+					</tr>
+					<tr>
+						<td><a href="#isdate">isDate</a></td>
+						<td><a href="#isemail">isEmail</a></td>
+						<td><a href="#isempty">isEmpty</a></td>
+						<td><a href="#isequalarray">isEqualArray</a></td>
+					</tr>
+					<tr>
+						<td><a href="#isfinite">isFinite</a></td>
+						<td><a href="#isfunction">isFunction</a></td>
+						<td><a href="#ishan">isHan</a></td>
+						<td><a href="#isinteger">isInteger</a></td>
+					</tr>
+					<tr>
+						<td><a href="#isnan">isNaN</a></td>
+						<td><a href="#isnegativeinteger">isNegativeInteger</a></td>
+						<td><a href="#isnil">isNil</a></td>
+						<td><a href="#isnull">isNull</a></td>
+					</tr>
+					<tr>
+						<td><a href="#isnumber">isNumber</a></td>
+						<td><a href="#isnumeric">isNumeric</a></td>
+						<td><a href="#isobject">isObject</a></td>
+						<td><a href="#isplainobject">isPlainObject</a></td>
+					</tr>
+					<tr>
+						<td><a href="#ispositiveinteger">isPositiveInteger</a></td>
+						<td><a href="#ispossiblechinesemobilephonenumber">isPossibleChineseMobilePhoneNumber</a></td>
+						<td><a href="#ispossiblechinesename">isPossibleChineseName</a></td>
+						<td><a href="#ispromiselike">isPromiseLike</a></td>
+					</tr>
+					<tr>
+						<td><a href="#isregexp">isRegExp</a></td>
+						<td><a href="#isstring">isString</a></td>
+						<td><a href="#isundefined">isUndefined</a></td>
+						<td><a href="#isurl">isUrl</a></td>
+					</tr>
+					<tr>
+						<td><a href="#jestexpectequal">jestExpectEqual</a></td>
+						<td><a href="#keyby">keyBy</a></td>
+						<td><a href="#keys">keys</a></td>
+						<td><a href="#last">last</a></td>
+					</tr>
+					<tr>
+						<td><a href="#loadresource">loadResource</a></td>
+						<td><a href="#mapvalues">mapValues</a></td>
+						<td><a href="#memoize">memoize</a></td>
+						<td><a href="#noop">noop</a></td>
+					</tr>
+					<tr>
+						<td><a href="#omit">omit</a></td>
+						<td><a href="#orderby">orderBy</a></td>
+						<td><a href="#padend">padEnd</a></td>
+						<td><a href="#padstart">padStart</a></td>
+					</tr>
+					<tr>
+						<td><a href="#parallel">parallel</a></td>
+						<td><a href="#parsecssvalue">parseCSSValue</a></td>
+						<td><a href="#parseuriquery">parseURIQuery</a></td>
+						<td><a href="#pick">pick</a></td>
+					</tr>
+					<tr>
+						<td><a href="#placekitten">placeKitten</a></td>
+						<td><a href="#pluck">pluck</a></td>
+						<td><a href="#randomstring">randomString</a></td>
+						<td><a href="#range">range</a></td>
+					</tr>
+					<tr>
+						<td><a href="#repeat">repeat</a></td>
+						<td><a href="#round">round</a></td>
+						<td><a href="#rounddown">roundDown</a></td>
+						<td><a href="#roundup">roundUp</a></td>
+					</tr>
+					<tr>
+						<td><a href="#safeget">safeGet</a></td>
+						<td><a href="#sample">sample</a></td>
+						<td><a href="#sequential">sequential</a></td>
+						<td><a href="#shuffle">shuffle</a></td>
+					</tr>
+					<tr>
+						<td><a href="#startswith">startsWith</a></td>
+						<td><a href="#sum">sum</a></td>
+						<td><a href="#sumby">sumBy</a></td>
+						<td><a href="#throttle">throttle</a></td>
+					</tr>
+					<tr>
+						<td><a href="#times">times</a></td>
+						<td><a href="#tryget">tryGet</a></td>
+						<td><a href="#unique">unique</a></td>
+						<td><a href="#values">values</a></td>
+					</tr>
+					<tr>
+						<td><a href="#wait">wait</a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><!-- 工具函数i目录 --></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+			</tbody></table>
+			<h3 id="📦-工具类">📦 工具类</h3>
+			<!-- 工具类!目录 -->
+			<table>
+				<thead>
+					<tr>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+						<td><a href="#disposer">Disposer</a></td>
+						<td><a href="#easystorage">EasyStorage</a></td>
+						<td><a href="#easystorageadapter">EasyStorageAdapter</a></td>
+					</tr>
+					<tr>
+						<td><a href="#easystorageadapterbrowser">EasyStorageAdapterBrowser</a></td>
+						<td><a href="#easystorageadaptermemory">EasyStorageAdapterMemory</a></td>
+						<td><a href="#easystorageadapterweapp">EasyStorageAdapterWeapp</a></td>
+					</tr>
+					<tr>
+						<td><a href="#easystoragedriverbrowserlocalstorage">EasyStorageDriverBrowserLocalStorage</a></td>
+						<td><a href="#easystoragedriverbrowsersessionstorage">EasyStorageDriverBrowserSessionStorage</a></td>
+						<td><a href="#easyvalidator">EasyValidator</a></td>
+					</tr>
+					<tr>
+						<td><a href="#eventbus">EventBus</a></td>
+						<td><a href="#wechat">Wechat</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><!-- 工具类i目录 --></td>
+						<td></td>
+						<td></td>
+					</tr>
+			</tbody></table>
+			<h3 id="📦-工具类型">📦 工具类型</h3>
+			<!-- 工具类型!目录 -->
+			<table>
+				<thead>
+					<tr>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+						<th>👇</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+						<td><a href="#anyfunction">AnyFunction</a></td>
+						<td><a href="#anyobject">AnyObject</a></td>
+						<td><a href="#asyncorsync">AsyncOrSync</a></td>
+						<td><a href="#brand">Brand</a></td>
+						<td><a href="#defined">Defined</a></td>
+						<td><a href="#if">If</a></td>
+						<td><a href="#isnever">IsNever</a></td>
+						<td><a href="#literalunion">LiteralUnion</a></td>
+						<td><a href="#merge">Merge</a></td>
+					</tr>
+					<tr>
+						<td><a href="#omit">Omit</a></td>
+						<td><a href="#oneormore">OneOrMore</a></td>
+						<td><a href="#valueof">ValueOf</a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><!-- 工具类型i目录 --></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+			</tbody></table>
+			<h2 id="工具列表">工具列表</h2>
+			<h3 id="📦-工具函数-1">📦 工具函数</h3>
+			<!-- 工具函数!内容 -->
+			<h4 id="assign">assign</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/assign.ts#L22">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#assign">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>分配来源对象的可枚举属性到目标对象上。</p>
 			<p>来源对象的应用规则是从左到右，随后的下一个对象的属性会覆盖上一个对象的属性。</p>
 			<pre><code class="language-ts">assign(
@@ -2889,39 +3138,39 @@ alert(shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</
   { x: <span class="hljs-number">5</span>, z: <span class="hljs-number">9</span> },
 )
 <span class="hljs-comment">// =&gt; { x: 5, y: 2, z: 9 }</span></code></pre>
-			<h4 id="💡-base64decode">💡 base64Decode</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L141">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#base64decode">API</a></small></p>
+			<h4 id="base64decode">base64Decode</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L141">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#base64decode">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>返回 <code>base64</code> 解码后的字符串。</p>
 			<pre><code class="language-ts">base64Decode(<span class="hljs-string">'dnRpbHM='</span>) <span class="hljs-comment">// =&gt; vtils</span>
 base64Decode(<span class="hljs-string">'5Lit5Zu9'</span>) <span class="hljs-comment">// =&gt; 中国</span>
 base64Decode(<span class="hljs-string">'8J+RqOKAjfCfkrs='</span>) <span class="hljs-comment">// =&gt; 👨‍💻</span></code></pre>
-			<h4 id="💡-base64encode">💡 base64Encode</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L119">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#base64encode">API</a></small></p>
+			<h4 id="base64encode">base64Encode</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L119">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#base64encode">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>返回 <code>base64</code> 编码后的字符串。</p>
 			<pre><code class="language-ts">base64Encode(<span class="hljs-string">'vtils'</span>) <span class="hljs-comment">// =&gt; dnRpbHM=</span>
 base64Encode(<span class="hljs-string">'中国'</span>) <span class="hljs-comment">// =&gt; 5Lit5Zu9</span>
 base64Encode(<span class="hljs-string">'👨‍💻'</span>) <span class="hljs-comment">// =&gt; 8J+RqOKAjfCfkrs=</span></code></pre>
-			<h4 id="💡-base64urldecode">💡 base64UrlDecode</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L185">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#base64urldecode">API</a></small></p>
+			<h4 id="base64urldecode">base64UrlDecode</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L185">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#base64urldecode">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>返回 <code>base64url</code> 解码后的字符串。</p>
 			<pre><code class="language-ts">base64UrlDecode(<span class="hljs-string">'dnRpbHM'</span>) <span class="hljs-comment">// =&gt; vtils</span>
 base64UrlDecode(<span class="hljs-string">'5Lit5Zu9'</span>) <span class="hljs-comment">// =&gt; 中国</span>
 base64UrlDecode(<span class="hljs-string">'8J-RqOKAjfCfkrs'</span>) <span class="hljs-comment">// =&gt; 👨‍💻</span></code></pre>
-			<h4 id="💡-base64urlencode">💡 base64UrlEncode</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L165">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#base64urlencode">API</a></small></p>
+			<h4 id="base64urlencode">base64UrlEncode</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/base64.ts#L165">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#base64urlencode">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>返回 <code>base64url</code> 编码后的字符串。</p>
 			<pre><code class="language-ts">base64UrlEncode(<span class="hljs-string">'vtils'</span>) <span class="hljs-comment">// =&gt; dnRpbHM</span>
 base64UrlEncode(<span class="hljs-string">'中国'</span>) <span class="hljs-comment">// =&gt; 5Lit5Zu9</span>
 base64UrlEncode(<span class="hljs-string">'👨‍💻'</span>) <span class="hljs-comment">// =&gt; 8J-RqOKAjfCfkrs</span></code></pre>
-			<h4 id="💡-castarray">💡 castArray</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/castArray.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#castarray">API</a></small></p>
+			<h4 id="castarray">castArray</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/castArray.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#castarray">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>如果 <code>value</code> 是数组，直接返回；如果 <code>value</code> 不是数组，返回 <code>[value]</code>。</p>
 			<pre><code class="language-ts">castArray([<span class="hljs-number">123</span>, <span class="hljs-number">456</span>]) <span class="hljs-comment">// =&gt; [123, 456]</span>
 castArray(<span class="hljs-number">123</span>) <span class="hljs-comment">// =&gt; [123]</span>
 castArray(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">// =&gt; ['hello']</span>
 castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; [null]</span></code></pre>
-			<h4 id="💡-chunk">💡 chunk</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/chunk.ts#L21">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#chunk">API</a></small></p>
+			<h4 id="chunk">chunk</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/chunk.ts#L21">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#chunk">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>将 <code>arr</code> 拆分成多个 <code>size</code> 长度的区块，并将它们组合成一个新数组返回。</p>
 			<p>如果 <code>arr</code> 无法等分，且设置了 <code>filler</code> 函数，剩余的元素将被 <code>filler</code> 函数的返回值填充。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
@@ -2929,19 +3178,19 @@ chunk(arr, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&g
 chunk(arr, <span class="hljs-number">3</span>) <span class="hljs-comment">// =&gt; [[1, 2, 3], [4, 5, 6]]</span>
 chunk(arr, <span class="hljs-number">4</span>) <span class="hljs-comment">// =&gt; [[1, 2, 3, 4], [5, 6]]</span>
 chunk(arr, <span class="hljs-number">4</span>, <span class="hljs-function"><span class="hljs-params">index</span> =&gt;</span> index) <span class="hljs-comment">// =&gt; [[1, 2, 3, 4], [5, 6, 0, 1]]</span></code></pre>
-			<h4 id="💡-clamp">💡 clamp</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/clamp.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#clamp">API</a></small></p>
+			<h4 id="clamp">clamp</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/clamp.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#clamp">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>返回限制在最小值和最大值之间的值。</p>
 			<pre><code class="language-ts">clamp(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>) <span class="hljs-comment">// =&gt; 50</span>
 clamp(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">50</span>) <span class="hljs-comment">// =&gt; 50</span>
 clamp(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">49</span>) <span class="hljs-comment">// =&gt; 49</span>
 clamp(<span class="hljs-number">50</span>, <span class="hljs-number">51</span>, <span class="hljs-number">100</span>) <span class="hljs-comment">// =&gt; 51</span></code></pre>
-			<h4 id="💡-createuriquery">💡 createURIQuery</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/URI.ts#L15">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#createuriquery">API</a></small></p>
+			<h4 id="createuriquery">createURIQuery</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/URI.ts#L15">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#createuriquery">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>创建 URI 查询字符串。</p>
 			<pre><code class="language-ts">createURIQuery({ x: <span class="hljs-number">1</span>, y: <span class="hljs-string">'z'</span> }) <span class="hljs-comment">// =&gt; x=1&amp;y=z</span></code></pre>
-			<h4 id="💡-debounce">💡 debounce</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/debounce.ts#L24">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#debounce">API</a></small></p>
+			<h4 id="debounce">debounce</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/debounce.ts#L24">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#debounce">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>创建一个去抖函数，将触发频繁的事件合并成一次执行。</p>
 			<p>该函数被调用后，计时 <code>wait</code> 毫秒后调用 <code>fn</code> 函数。若在 <code>wait</code> 毫秒内该函数再次被调用，则重新开始计时。</p>
 			<p>一个应用场景：监听输入框的 <code>input</code> 事件发起网络请求。</p>
@@ -2951,28 +3200,28 @@ clamp(<span class="hljs-number">50</span>, <span class="hljs-number">51</span>, 
   },
   <span class="hljs-number">500</span>,
 )</code></pre>
-			<h4 id="💡-defaultto">💡 defaultTo</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/defaultTo.ts#L17">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#defaultto">API</a></small></p>
+			<h4 id="defaultto">defaultTo</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/defaultTo.ts#L17">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#defaultto">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是 <code>null</code>、<code>undefined</code>、<code>NaN</code>，是则返回 <code>defaultValue</code>，否则返回 <code>value</code>。</p>
 			<pre><code class="language-ts">defaultTo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 1</span>
 defaultTo(<span class="hljs-literal">NaN</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 2</span>
 defaultTo(<span class="hljs-literal">null</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 2</span>
 defaultTo(<span class="hljs-literal">undefined</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 2</span></code></pre>
-			<h4 id="💡-endswith">💡 endsWith</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/endsWith.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#endswith">API</a></small></p>
+			<h4 id="endswith">endsWith</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/endsWith.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#endswith">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>str</code> 是否以 <code>needle</code> 结尾。</p>
 			<pre><code class="language-ts">endsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'llo'</span>) <span class="hljs-comment">// =&gt; true</span>
 endsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'he'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-fill">💡 fill</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/fill.ts#L28">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#fill">API</a></small></p>
+			<h4 id="fill">fill</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/fill.ts#L28">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#fill">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>使用 <code>value</code> 来填充（替换） <code>arr</code>，从 <code>start</code> 位置开始, 到 <code>end</code> 位置结束（但不包括 <code>end</code> 位置）。</p>
 			<pre><code class="language-ts">fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">5</span>), <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; [1, 1, 1, 1, 1]</span>
 fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>), <span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> index) <span class="hljs-comment">// =&gt; [0, 1, 2]</span></code></pre>
-			<h4 id="💡-flexible">💡 flexible</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/flexible.ts#L17">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#flexible">API</a></small></p>
+			<h4 id="flexible">flexible</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/flexible.ts#L17">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#flexible">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>移动端屏幕适配。</p>
-			<h4 id="💡-forown">💡 forOwn</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/forOwn.ts#L35">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#forown">API</a></small></p>
+			<h4 id="forown">forOwn</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/forOwn.ts#L35">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#forown">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>遍历对象的可枚举属性。若遍历函数返回 <code>false</code>，遍历会提前退出。</p>
 			<p>注：基于你传入的 <code>obj</code>，遍历函数中 <code>key</code> 的类型可能为 <code>number</code>，但在运行时，<code>key</code> 始终为 <code>string</code>，因此，你应该始终把 <code>key</code> 当作 <code>string</code> 处理。（为什么会这样？<a href="https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208%EF%BC%89">https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208）</a></p>
 			<pre><code class="language-ts">forOwn(
@@ -2981,22 +3230,22 @@ fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>
     <span class="hljs-built_in">console</span>.log(key, value)
   }
 )</code></pre>
-			<h4 id="💡-getglobal">💡 getGlobal</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L15">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#getglobal">API</a></small></p>
+			<h4 id="getglobal">getGlobal</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L15">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#getglobal">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>获取全局对象。</p>
 			<pre><code class="language-ts"><span class="hljs-comment">// 浏览器中</span>
 getGlobal() <span class="hljs-comment">// =&gt; window</span>
 <span class="hljs-comment">// Node 中</span>
 getGlobal() <span class="hljs-comment">// =&gt; global</span></code></pre>
-			<h4 id="💡-gettype">💡 getType</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/getType.ts#L40">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#gettype">API</a></small></p>
+			<h4 id="gettype">getType</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/getType.ts#L40">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#gettype">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检测 <code>value</code> 的类型。</p>
 			<pre><code class="language-ts">getType(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 'Number'</span>
 getType(<span class="hljs-literal">true</span>) <span class="hljs-comment">// =&gt; 'Boolean'</span>
 getType([]) <span class="hljs-comment">// =&gt; 'Array'</span>
 getType(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// =&gt; 'RegExp'</span></code></pre>
-			<h4 id="💡-groupby">💡 groupBy</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/groupBy.ts#L45">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#groupby">API</a></small></p>
+			<h4 id="groupby">groupBy</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/groupBy.ts#L45">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#groupby">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>根据 <code>iteratee</code> 返回的值对 <code>data</code> 进行分组。</p>
 			<pre><code class="language-ts">groupBy(
   [
@@ -3021,52 +3270,52 @@ getType(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// 
 <span class="hljs-comment">// =&gt;     { type: 3, name: '花生' },</span>
 <span class="hljs-comment">// =&gt;   ],</span>
 <span class="hljs-comment">// =&gt; }</span></code></pre>
-			<h4 id="💡-has">💡 has</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/has.ts#L17">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#has">API</a></small></p>
+			<h4 id="has">has</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/has.ts#L17">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#has">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>key</code> 是否是对象 <code>obj</code> 自身的属性。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">const</span> obj = { x: <span class="hljs-number">1</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'y'</span> }
 has(obj, <span class="hljs-string">'x'</span>) <span class="hljs-comment">// =&gt; true</span>
 has(obj, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; true</span>
 has(obj, <span class="hljs-string">'toString'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-ii">💡 ii</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/ii.ts#L15">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ii">API</a></small></p>
+			<h4 id="ii">ii</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/ii.ts#L15">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ii">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>立即调用函数并返回其返回值。</p>
 			<p>注：<code>ii = immediately invoke</code></p>
 			<pre><code class="language-ts">ii(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 1</span></code></pre>
-			<h4 id="💡-inandroid">💡 inAndroid</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L204">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inandroid">API</a></small></p>
+			<h4 id="inandroid">inAndroid</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L204">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inandroid">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查是否在 <code>Android</code> 设备中。</p>
 			<pre><code class="language-ts"><span class="hljs-comment">// Android 设备中</span>
 inAndroid() <span class="hljs-comment">// =&gt; true</span>
 inAndroid(
   <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在 Android 设备中'</span>),
 )</code></pre>
-			<h4 id="💡-inbrowser">💡 inBrowser</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L49">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inbrowser">API</a></small></p>
+			<h4 id="inbrowser">inBrowser</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L49">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inbrowser">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查是否在浏览器环境中。</p>
 			<pre><code class="language-ts"><span class="hljs-comment">// 浏览器中</span>
 inBrowser() <span class="hljs-comment">// =&gt; true</span>
 inBrowser(
   <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在浏览器中'</span>),
 )</code></pre>
-			<h4 id="💡-inios">💡 inIOS</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L173">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inios">API</a></small></p>
+			<h4 id="inios">inIOS</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L173">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inios">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查是否在 <code>iOS</code> 设备中。</p>
 			<pre><code class="language-ts"><span class="hljs-comment">// iOS 设备中</span>
 inIOS() <span class="hljs-comment">// =&gt; true</span>
 inIOS(
   <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在 iOS 设备中'</span>),
 )</code></pre>
-			<h4 id="💡-innode">💡 inNode</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L80">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#innode">API</a></small></p>
+			<h4 id="innode">inNode</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L80">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#innode">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查是否在 <code>Node</code> 环境中。</p>
 			<pre><code class="language-ts"><span class="hljs-comment">// Node 中</span>
 inNode() <span class="hljs-comment">// =&gt; true</span>
 inNode(
   <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在 Node 中'</span>),
 )</code></pre>
-			<h4 id="💡-inrange">💡 inRange</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/inRange.ts#L36">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inrange">API</a></small></p>
+			<h4 id="inrange">inRange</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/inRange.ts#L36">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inrange">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否在某区间内。</p>
 			<pre><code class="language-ts"><span class="hljs-comment">// 2 是否在区间 (0, 2) 内</span>
 inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.open) <span class="hljs-comment">// =&gt; false</span>
@@ -3079,24 +3328,24 @@ inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, 
 
 <span class="hljs-comment">// 2 是否在区间 (0, 2] 内</span>
 inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, InRangeIntervalType.leftOpenRightClosed) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-inwechatminiprogram">💡 inWechatMiniProgram</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L112">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inwechatminiprogram">API</a></small></p>
+			<h4 id="inwechatminiprogram">inWechatMiniProgram</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L112">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inwechatminiprogram">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查是否在微信小程序环境中。</p>
 			<pre><code class="language-ts"><span class="hljs-comment">// 微信小程序中</span>
 inWechatMiniProgram() <span class="hljs-comment">// =&gt; true</span>
 inWechatMiniProgram(
   <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在微信小程序中'</span>),
 )</code></pre>
-			<h4 id="💡-inwechatwebview">💡 inWechatWebview</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L143">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inwechatwebview">API</a></small></p>
+			<h4 id="inwechatwebview">inWechatWebview</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/env.ts#L143">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#inwechatwebview">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查是否在微信浏览器环境中。</p>
 			<pre><code class="language-ts"><span class="hljs-comment">// 微信浏览器中</span>
 inWechatWebview() <span class="hljs-comment">// =&gt; true</span>
 inWechatWebview(
   <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你在微信浏览器中'</span>),
 )</code></pre>
-			<h4 id="💡-includes">💡 includes</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/includes.ts#L18">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#includes">API</a></small></p>
+			<h4 id="includes">includes</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/includes.ts#L18">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#includes">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检索值 <code>value</code> 是否在数组 <code>arr</code> 中。</p>
 			<pre><code class="language-ts">includes([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
 includes([<span class="hljs-literal">NaN</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; true</span>
@@ -3108,38 +3357,38 @@ includes({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2
 			<pre><code class="language-ts">includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'h'</span>) <span class="hljs-comment">// =&gt; true</span>
 includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'ll'</span>) <span class="hljs-comment">// =&gt; true</span>
 includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'123'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isarguments">💡 isArguments</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L551">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isarguments">API</a></small></p>
+			<h4 id="isarguments">isArguments</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L551">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isarguments">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个 <code>arguments</code> 对象。</p>
 			<pre><code class="language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(isArguments(<span class="hljs-built_in">arguments</span>)) <span class="hljs-comment">// true</span>
 }</code></pre>
-			<h4 id="💡-isarray">💡 isArray</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isarray">API</a></small></p>
+			<h4 id="isarray">isArray</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isarray">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个数组。</p>
 			<pre><code class="language-ts">isArray([<span class="hljs-string">'x'</span>]) <span class="hljs-comment">// =&gt; true</span>
 isArray(<span class="hljs-string">'x'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isboolean">💡 isBoolean</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L32">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isboolean">API</a></small></p>
+			<h4 id="isboolean">isBoolean</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L32">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isboolean">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个布尔值。</p>
 			<pre><code class="language-ts">isBoolean(<span class="hljs-literal">true</span>) <span class="hljs-comment">// =&gt; true</span>
 isBoolean(<span class="hljs-literal">false</span>) <span class="hljs-comment">// =&gt; true</span>
 isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-ischineseidcardnumber">💡 isChineseIDCardNumber</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L48">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ischineseidcardnumber">API</a></small></p>
+			<h4 id="ischineseidcardnumber">isChineseIDCardNumber</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L48">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ischineseidcardnumber">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是合法的中国大陆居民 <code>18</code> 位身份证号码。</p>
 			<pre><code class="language-ts">isChineseIDCardNumber(<span class="hljs-string">'123456'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isdate">💡 isDate</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L159">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isdate">API</a></small></p>
+			<h4 id="isdate">isDate</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L159">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isdate">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个日期。</p>
 			<pre><code class="language-ts">isDate(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isemail">💡 isEmail</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L175">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isemail">API</a></small></p>
+			<h4 id="isemail">isEmail</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L175">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isemail">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个邮件地址。</p>
 			<pre><code class="language-ts">isEmail(<span class="hljs-string">'hello@foo.bar'</span>) <span class="hljs-comment">// =&gt; true</span>
 isEmail(<span class="hljs-string">'hello@foo'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isempty">💡 isEmpty</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L196">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isempty">API</a></small></p>
+			<h4 id="isempty">isEmpty</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L196">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isempty">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是空值，包括：<code>undefined</code>、<code>null</code>、<code>&#39;&#39;</code>、<code>false</code>、<code>true</code>、<code>[]</code>、<code>{}</code>。</p>
 			<pre><code class="language-ts">isEmpty(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; true</span>
 isEmpty(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; true</span>
@@ -3148,121 +3397,121 @@ isEmpty(<span class="hljs-literal">false</span>) <span class="hljs-comment">// =
 isEmpty(<span class="hljs-literal">true</span>) <span class="hljs-comment">// =&gt; true</span>
 isEmpty([]) <span class="hljs-comment">// =&gt; true</span>
 isEmpty({}) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isequalarray">💡 isEqualArray</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L222">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isequalarray">API</a></small></p>
+			<h4 id="isequalarray">isEqualArray</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L222">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isequalarray">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查给定的数组的各项是否相等。</p>
 			<pre><code class="language-ts">isEqualArray([<span class="hljs-number">1</span>], [<span class="hljs-number">1</span>]) <span class="hljs-comment">// =&gt; true</span>
 isEqualArray([<span class="hljs-number">1</span>], [<span class="hljs-number">5</span>]) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isfinite">💡 isFinite</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L257">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isfinite">API</a></small></p>
+			<h4 id="isfinite">isFinite</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L257">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isfinite">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是原始有限数值。</p>
 			<pre><code class="language-ts"><span class="hljs-built_in">isFinite</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
 <span class="hljs-built_in">isFinite</span>(<span class="hljs-literal">Infinity</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isfunction">💡 isFunction</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L272">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isfunction">API</a></small></p>
+			<h4 id="isfunction">isFunction</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L272">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isfunction">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个函数。</p>
 			<pre><code class="language-ts">isFunction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; true</span>
 isFunction(<span class="hljs-number">2000</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-ishan">💡 isHan</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L287">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ishan">API</a></small></p>
+			<h4 id="ishan">isHan</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L287">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ishan">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否全是汉字。</p>
 			<pre><code class="language-ts">isHan(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">// =&gt; false</span>
 isHan(<span class="hljs-string">'嗨咯'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isinteger">💡 isInteger</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L305">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isinteger">API</a></small></p>
+			<h4 id="isinteger">isInteger</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L305">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isinteger">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个整数。</p>
 			<pre><code class="language-ts">isInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
 isInteger(<span class="hljs-number">1.2</span>) <span class="hljs-comment">// =&gt; false</span>
 isInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isnan">💡 isNaN</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L350">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnan">API</a></small></p>
+			<h4 id="isnan">isNaN</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L350">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnan">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是 <code>NaN</code>。</p>
 			<pre><code class="language-ts"><span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; true</span>
 <span class="hljs-built_in">isNaN</span>(<span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isnegativeinteger">💡 isNegativeInteger</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L335">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnegativeinteger">API</a></small></p>
+			<h4 id="isnegativeinteger">isNegativeInteger</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L335">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnegativeinteger">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个负整数。</p>
 			<pre><code class="language-ts">isNegativeInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; true</span>
 isNegativeInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isnil">💡 isNil</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L365">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnil">API</a></small></p>
+			<h4 id="isnil">isNil</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L365">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnil">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是 <code>null</code> 或 <code>undefined</code>。</p>
 			<pre><code class="language-ts">isNil(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; true</span>
 isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isnull">💡 isNull</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L379">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnull">API</a></small></p>
+			<h4 id="isnull">isNull</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L379">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnull">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是 <code>null</code>。</p>
 			<pre><code class="language-ts">isNull(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isnumber">💡 isNumber</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L397">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnumber">API</a></small></p>
+			<h4 id="isnumber">isNumber</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L397">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnumber">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个数字。</p>
 			<p>注：<code>NaN</code> 不被认为是数字。</p>
 			<pre><code class="language-ts">isNumber(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
 isNumber(<span class="hljs-number">0.1</span>) <span class="hljs-comment">// =&gt; true</span>
 isNumber(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isnumeric">💡 isNumeric</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L414">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnumeric">API</a></small></p>
+			<h4 id="isnumeric">isNumeric</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L414">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnumeric">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个数值。</p>
 			<p>注：<code>Infinity</code>、<code>-Infinity</code>、<code>NaN</code> 不被认为是数值。</p>
 			<pre><code class="language-ts">isNumeric(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
 isNumeric(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isobject">💡 isObject</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L430">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isobject">API</a></small></p>
+			<h4 id="isobject">isObject</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L430">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isobject">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个对象。</p>
 			<pre><code class="language-ts">isObject({}) <span class="hljs-comment">// =&gt; true</span>
 isObject(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; true</span>
 isObject(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-isplainobject">💡 isPlainObject</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L447">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isplainobject">API</a></small></p>
+			<h4 id="isplainobject">isPlainObject</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L447">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isplainobject">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个普通对象。</p>
 			<pre><code class="language-ts">isPlainObject({}) <span class="hljs-comment">// =&gt; true</span>
 isPlainObject(<span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>)) <span class="hljs-comment">// =&gt; true</span>
 isPlainObject(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-ispositiveinteger">💡 isPositiveInteger</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L320">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ispositiveinteger">API</a></small></p>
+			<h4 id="ispositiveinteger">isPositiveInteger</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L320">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ispositiveinteger">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个正整数。</p>
 			<pre><code class="language-ts">isPositiveInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
 isPositiveInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-ispossiblechinesemobilephonenumber">💡 isPossibleChineseMobilePhoneNumber</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L122">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ispossiblechinesemobilephonenumber">API</a></small></p>
+			<h4 id="ispossiblechinesemobilephonenumber">isPossibleChineseMobilePhoneNumber</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L122">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ispossiblechinesemobilephonenumber">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检测 <code>number</code> 是否可能是中国的手机号码。</p>
 			<pre><code class="language-ts">isPossibleChineseMobilePhoneNumber(<span class="hljs-number">18000030000</span>) <span class="hljs-comment">// =&gt; true</span>
 isPossibleChineseMobilePhoneNumber(<span class="hljs-number">10086</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-ispossiblechinesename">💡 isPossibleChineseName</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L138">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ispossiblechinesename">API</a></small></p>
+			<h4 id="ispossiblechinesename">isPossibleChineseName</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L138">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ispossiblechinesename">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检测 <code>value</code> 是否可能是中国人的姓名，支持少数名族姓名中间的 <code>·</code> 号。</p>
 			<pre><code class="language-ts">isPossibleChineseName(<span class="hljs-string">'鲁'</span>) <span class="hljs-comment">// =&gt; false</span>
 isPossibleChineseName(<span class="hljs-string">'鲁迅'</span>) <span class="hljs-comment">// =&gt; true</span>
 isPossibleChineseName(<span class="hljs-string">'买买提·吐尔逊'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-ispromiselike">💡 isPromiseLike</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L469">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ispromiselike">API</a></small></p>
+			<h4 id="ispromiselike">isPromiseLike</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L469">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#ispromiselike">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否像 <code>Promise</code>。</p>
 			<pre><code class="language-ts">isPromiseLike(<span class="hljs-built_in">Promise</span>.resolve()) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isregexp">💡 isRegExp</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L487">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isregexp">API</a></small></p>
+			<h4 id="isregexp">isRegExp</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L487">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isregexp">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个正则对象。</p>
 			<pre><code class="language-ts">isRegExp(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// =&gt; true</span>
 isRegExp(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'hello'</span>)) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isstring">💡 isString</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L502">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isstring">API</a></small></p>
+			<h4 id="isstring">isString</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L502">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isstring">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个字符串。</p>
 			<pre><code class="language-ts">isString(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; true</span>
 isString(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isundefined">💡 isUndefined</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L517">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isundefined">API</a></small></p>
+			<h4 id="isundefined">isUndefined</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L517">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isundefined">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否等于 <code>undefined</code>。</p>
 			<pre><code class="language-ts">isUndefined(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; true</span>
 isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-isurl">💡 isUrl</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L533">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isurl">API</a></small></p>
+			<h4 id="isurl">isUrl</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/is.ts#L533">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isurl">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>value</code> 是否是一个有效的网址，仅支持 <code>http</code>、<code>https</code> 协议，支持 <code>IP</code> 域名。</p>
 			<pre><code class="language-ts">isUrl(<span class="hljs-string">'http://foo.bar'</span>) <span class="hljs-comment">// =&gt; true</span>
 isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-jestexpectequal">💡 jestExpectEqual</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceJest.ts#L7">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#jestexpectequal">API</a></small></p>
+			<h4 id="jestexpectequal">jestExpectEqual</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceJest.ts#L7">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#jestexpectequal">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>这是一个 jest 测试辅助函数，等同于 <code>expect(actual).toEqual(expected)</code>，只不过是加上了类型。</p>
-			<h4 id="💡-keyby">💡 keyBy</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/keyBy.ts#L37">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#keyby">API</a></small></p>
+			<h4 id="keyby">keyBy</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/keyBy.ts#L37">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#keyby">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>根据 <code>iteratee</code> 返回的键对 <code>data</code> 进行分组，但只保留最后一个结果。</p>
 			<pre><code class="language-ts">keyBy(
   [
@@ -3279,17 +3528,17 @@ isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs
 <span class="hljs-comment">// =&gt;   2: { type: 2, name: '鲨鱼' },</span>
 <span class="hljs-comment">// =&gt;   3: { type: 3, name: '花生' },</span>
 <span class="hljs-comment">// =&gt; }</span></code></pre>
-			<h4 id="💡-keys">💡 keys</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/keys.ts#L18">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#keys">API</a></small></p>
+			<h4 id="keys">keys</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/keys.ts#L18">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#keys">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>返回 <code>obj</code> 的可枚举属性组成的数组。</p>
 			<p>注：基于你传入的 <code>obj</code>，返回的 <code>key</code> 的类型可能为 <code>number</code>，但在运行时，<code>key</code> 始终为 <code>string</code>，因此，你应该始终把 <code>key</code> 当作 <code>string</code> 处理。（为什么会这样？<a href="https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208%EF%BC%89">https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208）</a></p>
 			<pre><code class="language-ts">keys({ x: <span class="hljs-number">1</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'y'</span> }) <span class="hljs-comment">// =&gt; ['x', '2'] 或 ['2', 'x']</span></code></pre>
-			<h4 id="💡-last">💡 last</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/last.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#last">API</a></small></p>
+			<h4 id="last">last</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/last.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#last">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>返回数组 <code>arr</code> 的最后一项。</p>
 			<pre><code class="language-ts">last([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; 3</span></code></pre>
-			<h4 id="💡-loadresource">💡 loadResource</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/loadResource.ts#L82">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#loadresource">API</a></small></p>
+			<h4 id="loadresource">loadResource</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/loadResource.ts#L82">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#loadresource">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>加载图片、代码、样式等资源。</p>
 			<pre><code class="language-ts">loadResource([
   <span class="hljs-string">'https://foo.bar/all.js'</span>,
@@ -3303,31 +3552,31 @@ isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs
 ]).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-comment">// 资源加载完成后的操作</span>
 })</code></pre>
-			<h4 id="💡-mapvalues">💡 mapValues</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/mapValues.ts#L31">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#mapvalues">API</a></small></p>
+			<h4 id="mapvalues">mapValues</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/mapValues.ts#L31">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#mapvalues">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>映射对象的可枚举属性值为一个新的值。</p>
 			<pre><code class="language-ts">mapValues(
   { x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> },
   <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> value + <span class="hljs-number">10</span>,
 )
 <span class="hljs-comment">// =&gt; { x: 11, y: 12 }</span></code></pre>
-			<h4 id="💡-memoize">💡 memoize</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/memoize.ts#L49">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#memoize">API</a></small></p>
+			<h4 id="memoize">memoize</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/memoize.ts#L49">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#memoize">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>函数结果缓存。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>
 <span class="hljs-keyword">const</span> fn = memoize(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> i++)
 fn() <span class="hljs-comment">// =&gt; 0</span>
 fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
-			<h4 id="💡-noop">💡 noop</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/noop.ts#L9">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#noop">API</a></small></p>
+			<h4 id="noop">noop</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/noop.ts#L9">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#noop">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>无操作函数。</p>
 			<pre><code class="language-ts">noop() <span class="hljs-comment">// =&gt; undefined</span></code></pre>
-			<h4 id="💡-omit">💡 omit</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/omit.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#omit">API</a></small></p>
+			<h4 id="omit">omit</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/omit.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#omit">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>创建一个从 <code>obj</code> 中剔除选中的可枚举属性的对象。</p>
 			<pre><code class="language-ts">omit({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, [<span class="hljs-string">'x'</span>]) <span class="hljs-comment">// =&gt; { y: 2 }</span></code></pre>
-			<h4 id="💡-orderby">💡 orderBy</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/orderBy.ts#L43">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#orderby">API</a></small></p>
+			<h4 id="orderby">orderBy</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/orderBy.ts#L43">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#orderby">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>允许指定一个或多个规则对数据进行排序。</p>
 			<pre><code class="language-ts">orderBy(
   [<span class="hljs-string">'x'</span>, <span class="hljs-string">'xyz'</span>, <span class="hljs-string">'xy'</span>],
@@ -3337,16 +3586,16 @@ fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
   },
 )
 <span class="hljs-comment">// =&gt; ['xyz', 'xy', 'x']</span></code></pre>
-			<h4 id="💡-padend">💡 padEnd</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/pad.ts#L41">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#padend">API</a></small></p>
+			<h4 id="padend">padEnd</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/pad.ts#L41">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#padend">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>在 <code>str</code> 右侧填充字符。</p>
 			<pre><code class="language-ts">padEnd(<span class="hljs-string">'姓名'</span>, <span class="hljs-number">4</span>, <span class="hljs-string">'*'</span>) <span class="hljs-comment">// =&gt; 姓名**</span></code></pre>
-			<h4 id="💡-padstart">💡 padStart</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/pad.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#padstart">API</a></small></p>
+			<h4 id="padstart">padStart</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/pad.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#padstart">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>在 <code>str</code> 左侧填充字符。</p>
 			<pre><code class="language-ts">padStart(<span class="hljs-string">'姓名'</span>, <span class="hljs-number">4</span>, <span class="hljs-string">'*'</span>) <span class="hljs-comment">// =&gt; **姓名</span></code></pre>
-			<h4 id="💡-parallel">💡 parallel</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/parallel.ts#L19">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#parallel">API</a></small></p>
+			<h4 id="parallel">parallel</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/parallel.ts#L19">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#parallel">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>并行执行任务，<code>同步任务</code>、<code>异步任务</code> 皆可。</p>
 			<pre><code class="language-ts">parallel([
   <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>,
@@ -3354,14 +3603,14 @@ fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
 ]).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
   <span class="hljs-comment">// =&gt; [1, 'hello']</span>
 })</code></pre>
-			<h4 id="💡-parsecssvalue">💡 parseCSSValue</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/parseCSSValue.ts#L21">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#parsecssvalue">API</a></small></p>
+			<h4 id="parsecssvalue">parseCSSValue</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/parseCSSValue.ts#L21">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#parsecssvalue">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>解析 <code>CSS</code> 值的数值和单位。</p>
 			<pre><code class="language-ts">parseCSSValue(<span class="hljs-string">'12px'</span>) <span class="hljs-comment">// =&gt; { value: 12, unit: 'px' }</span>
 parseCSSValue(<span class="hljs-number">12</span>) <span class="hljs-comment">// =&gt; { value: 12, unit: 'px' }</span>
 parseCSSValue(<span class="hljs-string">'12%'</span>) <span class="hljs-comment">// =&gt; { value: 12, unit: '%' }</span></code></pre>
-			<h4 id="💡-parseuriquery">💡 parseURIQuery</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/URI.ts#L50">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#parseuriquery">API</a></small></p>
+			<h4 id="parseuriquery">parseURIQuery</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/URI.ts#L50">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#parseuriquery">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>解析 URI 查询字符串。</p>
 			<p>兼容以 <code>?</code> 开头的查询字符串，因此你可以直接传入 <code>location.search</code> 的值。</p>
 			<pre><code class="language-ts">parseURIQuery(<span class="hljs-string">'x=1&amp;y=z'</span>) <span class="hljs-comment">// =&gt; { x: '1', y: 'z' }</span>
@@ -3373,18 +3622,18 @@ parseURIQuery(
     x: <span class="hljs-built_in">Number</span>(parameters.x),
   }),
 ) <span class="hljs-comment">// =&gt; { x: 1, y: 'z' }</span></code></pre>
-			<h4 id="💡-pick">💡 pick</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/pick.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#pick">API</a></small></p>
+			<h4 id="pick">pick</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/pick.ts#L16">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#pick">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>创建一个从 <code>obj</code> 中选中的可枚举属性的对象。</p>
 			<pre><code class="language-ts">pick({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }, [<span class="hljs-string">'x'</span>]) <span class="hljs-comment">// =&gt; { x: 1 }</span></code></pre>
-			<h4 id="💡-placekitten">💡 placeKitten</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/placeKitten.ts#L11">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#placekitten">API</a></small></p>
+			<h4 id="placekitten">placeKitten</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/placeKitten.ts#L11">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#placekitten">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>给定大小获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
 			<pre><code class="language-ts">placeKitten(<span class="hljs-number">100</span>) <span class="hljs-comment">// =&gt; https://placekitten.com/100/100</span></code></pre>
 			<p>给定宽高获取占位猫咪图片，图片来自：<a href="https://placekitten.com/">https://placekitten.com/</a></p>
 			<pre><code class="language-ts">placeKitten(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>) <span class="hljs-comment">// =&gt; https://placekitten.com/100/200</span></code></pre>
-			<h4 id="💡-pluck">💡 pluck</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/pluck.ts#L25">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#pluck">API</a></small></p>
+			<h4 id="pluck">pluck</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/pluck.ts#L25">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#pluck">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>将数据中每一项的迭代值组合成一个数组返回。</p>
 			<pre><code class="language-ts">pluck(
   [{ id: <span class="hljs-number">1</span>, name: <span class="hljs-string">'Jay'</span> }, { id: <span class="hljs-number">2</span>, name: <span class="hljs-string">'Lily'</span> }],
@@ -3396,50 +3645,50 @@ parseURIQuery(
   <span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.name,
   <span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.id,
 ) <span class="hljs-comment">// =&gt; { 1: 'Jay', 2: 'Lily' }</span></code></pre>
-			<h4 id="💡-randomstring">💡 randomString</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/randomString.ts#L10">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#randomstring">API</a></small></p>
+			<h4 id="randomstring">randomString</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/randomString.ts#L10">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#randomstring">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>生成一个随机字符串。</p>
 			<pre><code class="language-ts">randomString() <span class="hljs-comment">// =&gt; m481rnmse1m</span></code></pre>
-			<h4 id="💡-range">💡 range</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/range.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#range">API</a></small></p>
+			<h4 id="range">range</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/range.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#range">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>创建一个包含从 <code>start</code> 到 <code>end</code>，但不包含 <code>end</code> 本身范围数字的数组。</p>
 			<pre><code class="language-ts">range(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>) <span class="hljs-comment">// =&gt; [0, 1, 2, 3, 4]</span>
 range(<span class="hljs-number">0</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; [0, -1, -2, -3, -4]</span></code></pre>
-			<h4 id="💡-repeat">💡 repeat</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/repeat.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#repeat">API</a></small></p>
+			<h4 id="repeat">repeat</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/repeat.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#repeat">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>重复 <code>n</code> 次给定字符串。</p>
 			<pre><code class="language-ts">repeat(<span class="hljs-string">'a'</span>, <span class="hljs-number">5</span>) <span class="hljs-comment">// =&gt; aaaaa</span></code></pre>
-			<h4 id="💡-round">💡 round</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/round.ts#L35">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#round">API</a></small></p>
+			<h4 id="round">round</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/round.ts#L35">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#round">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>对传入的数字按给定的精度四舍五入后返回。</p>
 			<pre><code class="language-ts">round(<span class="hljs-number">3.456</span>) <span class="hljs-comment">// =&gt; 3</span>
 round(<span class="hljs-number">3.456</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 3.5</span>
 round(<span class="hljs-number">3.456</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 3.46</span>
 round(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>) <span class="hljs-comment">// =&gt; 300</span></code></pre>
-			<h4 id="💡-rounddown">💡 roundDown</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/round.ts#L71">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#rounddown">API</a></small></p>
+			<h4 id="rounddown">roundDown</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/round.ts#L71">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#rounddown">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>对传入的数字按给定的精度向下取值后返回。</p>
 			<pre><code class="language-ts">roundDown(<span class="hljs-number">3.456</span>) <span class="hljs-comment">// =&gt; 3</span>
 roundDown(<span class="hljs-number">3.456</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 3.4</span>
 roundDown(<span class="hljs-number">3.456</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 3.45</span>
 roundDown(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>) <span class="hljs-comment">// =&gt; 300</span></code></pre>
-			<h4 id="💡-roundup">💡 roundUp</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/round.ts#L53">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#roundup">API</a></small></p>
+			<h4 id="roundup">roundUp</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/round.ts#L53">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#roundup">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>对传入的数字按给定的精度向上取值后返回。</p>
 			<pre><code class="language-ts">roundUp(<span class="hljs-number">3.456</span>) <span class="hljs-comment">// =&gt; 4</span>
 roundUp(<span class="hljs-number">3.456</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 3.5</span>
 roundUp(<span class="hljs-number">3.456</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 3.46</span>
 roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>) <span class="hljs-comment">// =&gt; 400</span></code></pre>
-			<h4 id="💡-safeget">💡 safeGet</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/safeGet.ts#L4">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#safeget">API</a></small></p>
-			<h4 id="💡-sample">💡 sample</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/sample.ts#L15">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#sample">API</a></small></p>
+			<h4 id="safeget">safeGet</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/safeGet.ts#L4">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#safeget">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
+			<h4 id="sample">sample</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/sample.ts#L15">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#sample">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>从数组中随机获取一个元素。</p>
 			<pre><code class="language-ts">sample([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; 1 或 2 或 3</span></code></pre>
 			<p>从对象中随机获取一个可枚举属性的值。</p>
 			<pre><code class="language-ts">sample({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span> }) <span class="hljs-comment">// =&gt; 1 或 2 或 3</span></code></pre>
-			<h4 id="💡-sequential">💡 sequential</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/sequential.ts#L18">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#sequential">API</a></small></p>
+			<h4 id="sequential">sequential</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/sequential.ts#L18">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#sequential">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>顺序执行任务，<code>同步任务</code>、<code>异步任务</code> 皆可。</p>
 			<pre><code class="language-ts">sequential([
   <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">1</span>,
@@ -3447,21 +3696,21 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 ]).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
   <span class="hljs-comment">// =&gt; [1, 'hello']</span>
 })</code></pre>
-			<h4 id="💡-shuffle">💡 shuffle</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/shuffle.ts#L12">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#shuffle">API</a></small></p>
+			<h4 id="shuffle">shuffle</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/shuffle.ts#L12">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#shuffle">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>打乱一个数组。</p>
 			<pre><code class="language-ts">shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]) <span class="hljs-comment">// =&gt; [1, 2] 或 [2, 1]</span></code></pre>
-			<h4 id="💡-startswith">💡 startsWith</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/startsWith.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#startswith">API</a></small></p>
+			<h4 id="startswith">startsWith</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/startsWith.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#startswith">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>str</code> 是否以 <code>needle</code> 开头。</p>
 			<pre><code class="language-ts">startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'he'</span>) <span class="hljs-comment">// =&gt; true</span>
 startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'llo'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-			<h4 id="💡-sum">💡 sum</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/sum.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#sum">API</a></small></p>
+			<h4 id="sum">sum</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/sum.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#sum">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>计算传入值的总和。</p>
 			<pre><code class="language-ts">sum([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; 6</span></code></pre>
-			<h4 id="💡-sumby">💡 sumBy</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/sum.ts#L54">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#sumby">API</a></small></p>
+			<h4 id="sumby">sumBy</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/sum.ts#L54">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#sumby">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>根据 <code>iteratee</code> 返回的结果计算传入值的总和。</p>
 			<pre><code class="language-ts">sumBy(
   [
@@ -3472,8 +3721,8 @@ startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'
   <span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.count,
 )
 <span class="hljs-comment">// =&gt; 6</span></code></pre>
-			<h4 id="💡-throttle">💡 throttle</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/throttle.ts#L30">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#throttle">API</a></small></p>
+			<h4 id="throttle">throttle</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/throttle.ts#L30">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#throttle">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>创建一个节流函数，给函数设置固定的执行速率。</p>
 			<ul>
 				<li>该函数首次被调用时，会立即调用 <code>fn</code> 函数，并记录首次调用时间。<ul>
@@ -3500,14 +3749,14 @@ startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'
     <span class="hljs-number">1000</span>,
   ),
 )</code></pre>
-			<h4 id="💡-times">💡 times</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/times.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#times">API</a></small></p>
+			<h4 id="times">times</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/times.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#times">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>调用函数 <code>n</code> 次，将每次的调用结果存进数组并返回。</p>
 			<pre><code class="language-ts">times(<span class="hljs-number">4</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-comment">// 这里将会执行 4 次</span>
 })</code></pre>
-			<h4 id="💡-tryget">💡 tryGet</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/tryGet.ts#L18">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#tryget">API</a></small></p>
+			<h4 id="tryget">tryGet</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/tryGet.ts#L18">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#tryget">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>尝试执行 <code>accessor</code> 返回值，若其报错，返回默认值 <code>defaultValue</code>。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">const</span> obj = { x: <span class="hljs-number">1</span> }
 tryGet(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> obj.x, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; 1</span>
@@ -3516,25 +3765,25 @@ tryGet(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</sp
 			<pre><code class="language-ts"><span class="hljs-keyword">const</span> obj = { x: <span class="hljs-number">1</span> }
 tryGet(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> obj.x) <span class="hljs-comment">// =&gt; 1</span>
 tryGet(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> obj.x.y) <span class="hljs-comment">// =&gt; undefined</span></code></pre>
-			<h4 id="💡-unique">💡 unique</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/unique.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#unique">API</a></small></p>
+			<h4 id="unique">unique</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/unique.ts#L13">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#unique">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>将给定的数组去重后返回。</p>
 			<pre><code class="language-ts">unique([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// =&gt; [1, 2, 3]</span></code></pre>
-			<h4 id="💡-values">💡 values</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/values.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#values">API</a></small></p>
+			<h4 id="values">values</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/values.ts#L14">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#values">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>返回 <code>obj</code> 自身可枚举属性值组成的数组。</p>
 			<pre><code class="language-ts">values({ x: <span class="hljs-number">1</span>, <span class="hljs-number">2</span>: <span class="hljs-string">'y'</span> }) <span class="hljs-comment">// =&gt; [1, 'y'] 或 ['y', 1]</span></code></pre>
-			<h4 id="💡-wait">💡 wait</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/wait.ts#L12">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#wait">API</a></small></p>
+			<h4 id="wait">wait</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/wait.ts#L12">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#wait">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>等待一段时间。</p>
 			<pre><code class="language-ts">wait(<span class="hljs-number">1000</span>).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-comment">// 等待 1000 毫秒后执行</span>
 })</code></pre>
-			<!-- 工具函数i -->
-			<h3 id="📦-工具类">📦 工具类</h3>
-			<!-- 工具类! -->
-			<h4 id="💡-disposer">💡 Disposer</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/Disposer.ts#L25">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/disposer.html">API</a></small></p>
+			<!-- 工具函数i内容 -->
+			<h3 id="📦-工具类-1">📦 工具类</h3>
+			<!-- 工具类!内容 -->
+			<h4 id="disposer">Disposer</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/Disposer.ts#L25">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/disposer.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>资源释放器。</p>
 			<pre><code class="language-js"><span class="hljs-keyword">const</span> disposer = <span class="hljs-keyword">new</span> Disposer()
 <span class="hljs-keyword">const</span> timer = setInterval(
@@ -3545,24 +3794,24 @@ disposer.add(<span class="hljs-function"><span class="hljs-params">()</span> =&g
 <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#stop'</span>).onclick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   disposer.dispose()
 }</code></pre>
-			<h4 id="💡-easystorage">💡 EasyStorage</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorage.ts#L4">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorage.html">API</a></small></p>
-			<h4 id="💡-easystorageadapter">💡 EasyStorageAdapter</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapter.ts#L1">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorageadapter.html">API</a></small></p>
-			<h4 id="💡-easystorageadapterbrowser">💡 EasyStorageAdapterBrowser</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterBrowser.ts#L3">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorageadapterbrowser.html">API</a></small></p>
-			<h4 id="💡-easystorageadaptermemory">💡 EasyStorageAdapterMemory</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterMemory.ts#L3">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorageadaptermemory.html">API</a></small></p>
-			<h4 id="💡-easystorageadapterweapp">💡 EasyStorageAdapterWeapp</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterWeapp.ts#L12">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorageadapterweapp.html">API</a></small></p>
+			<h4 id="easystorage">EasyStorage</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorage.ts#L4">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorage.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
+			<h4 id="easystorageadapter">EasyStorageAdapter</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapter.ts#L1">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorageadapter.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
+			<h4 id="easystorageadapterbrowser">EasyStorageAdapterBrowser</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterBrowser.ts#L3">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorageadapterbrowser.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
+			<h4 id="easystorageadaptermemory">EasyStorageAdapterMemory</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterMemory.ts#L3">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorageadaptermemory.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
+			<h4 id="easystorageadapterweapp">EasyStorageAdapterWeapp</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterWeapp.ts#L12">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystorageadapterweapp.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>微信小程序 <code>Storage</code> 适配器。</p>
 			<p>由于微信小程序的 <code>wx.getStorageSync</code> 方法对于不存在的项目会返回 <code>空字符串</code>，导致无法判断项目是否存在，因此，该适配器对存储的内容做了一层封装，以保证相关操作的结果可确定。</p>
-			<h4 id="💡-easystoragedriverbrowserlocalstorage">💡 EasyStorageDriverBrowserLocalStorage</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterBrowser.ts#L47">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystoragedriverbrowserlocalstorage.html">API</a></small></p>
-			<h4 id="💡-easystoragedriverbrowsersessionstorage">💡 EasyStorageDriverBrowserSessionStorage</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterBrowser.ts#L53">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystoragedriverbrowsersessionstorage.html">API</a></small></p>
-			<h4 id="💡-easyvalidator">💡 EasyValidator</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyValidator.ts#L124">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easyvalidator.html">API</a></small></p>
+			<h4 id="easystoragedriverbrowserlocalstorage">EasyStorageDriverBrowserLocalStorage</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterBrowser.ts#L47">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystoragedriverbrowserlocalstorage.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
+			<h4 id="easystoragedriverbrowsersessionstorage">EasyStorageDriverBrowserSessionStorage</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyStorage/EasyStorageAdapterBrowser.ts#L53">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easystoragedriverbrowsersessionstorage.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
+			<h4 id="easyvalidator">EasyValidator</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EasyValidator.ts#L124">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/easyvalidator.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>数据对象验证器。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">interface</span> Data {
   name: <span class="hljs-built_in">string</span>,
@@ -3611,8 +3860,8 @@ ev.validate({
 }).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
   <span class="hljs-comment">// =&gt; { valid: false, unvalidRules: [{ key: 'pass2', test: ({ pass1, pass2 }) =&gt; pass2 === pass1, message: '两次密码应一致' }] }</span>
 })</code></pre>
-			<h4 id="💡-eventbus">💡 EventBus</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EventBus.ts#L28">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/eventbus.html">API</a></small></p>
+			<h4 id="eventbus">EventBus</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/EventBus.ts#L28">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/eventbus.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>事件巴士，管理事件的发布与订阅。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">const</span> bus = <span class="hljs-keyword">new</span> EventBus&lt;{
   success: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">void</span>,
@@ -3628,8 +3877,8 @@ bus.emit(<span class="hljs-string">'success'</span>)
 bus.emit(<span class="hljs-string">'error'</span>, <span class="hljs-string">'出错啦'</span>)
 unbindSuccessListener()
 bus.off(<span class="hljs-string">'error'</span>)</code></pre>
-			<h4 id="💡-wechat">💡 Wechat</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/Wechat.ts#L214">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/wechat.html">API</a></small></p>
+			<h4 id="wechat">Wechat</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/Wechat.ts#L214">源码</a> | <a href="https://fjc0k.github.io/vtils/classes/wechat.html">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>对微信 JSSDK 的封装。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">const</span> wechat = <span class="hljs-keyword">new</span> Wechat()
 getWechatConfigAsync().then(<span class="hljs-function"><span class="hljs-params">config</span> =&gt;</span> {
@@ -3644,31 +3893,31 @@ wechat.updateShareData({
 wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
   <span class="hljs-comment">// =&gt; API 调用结果</span>
 })</code></pre>
-			<!-- 工具类i -->
-			<h3 id="📦-工具类型">📦 工具类型</h3>
-			<!-- 工具类型! -->
-			<h4 id="💡-anyfunction">💡 AnyFunction</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L4">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#anyfunction">API</a></small></p>
+			<!-- 工具类i内容 -->
+			<h3 id="📦-工具类型-1">📦 工具类型</h3>
+			<!-- 工具类型!内容 -->
+			<h4 id="anyfunction">AnyFunction</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L4">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#anyfunction">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>任意函数类型。</p>
-			<h4 id="💡-anyobject">💡 AnyObject</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L9">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#anyobject">API</a></small></p>
+			<h4 id="anyobject">AnyObject</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L9">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#anyobject">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>任意对象类型。</p>
-			<h4 id="💡-asyncorsync">💡 AsyncOrSync</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L45">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#asyncorsync">API</a></small></p>
+			<h4 id="asyncorsync">AsyncOrSync</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L45">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#asyncorsync">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<pre><code class="language-ts"><span class="hljs-comment">// before</span>
 <span class="hljs-keyword">type</span> X = PromiseLike&lt;<span class="hljs-built_in">string</span>&gt; | <span class="hljs-built_in">string</span>
 <span class="hljs-comment">// after</span>
 <span class="hljs-keyword">type</span> X = AsyncOrSync&lt;<span class="hljs-built_in">string</span>&gt;</code></pre>
-			<h4 id="💡-brand">💡 Brand</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L23">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#brand">API</a></small></p>
+			<h4 id="brand">Brand</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L23">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#brand">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>名义化类型。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">type</span> User = { id: Brand&lt;<span class="hljs-built_in">number</span>, User&gt;, name: <span class="hljs-built_in">string</span> }
 <span class="hljs-keyword">type</span> Post = { id: Brand&lt;<span class="hljs-built_in">number</span>, Post&gt;, title: <span class="hljs-built_in">string</span> }
 <span class="hljs-keyword">type</span> UserIdIsNumber = User[<span class="hljs-string">'id'</span>] <span class="hljs-keyword">extends</span> <span class="hljs-built_in">number</span> ? <span class="hljs-literal">true</span>: <span class="hljs-literal">false</span> <span class="hljs-comment">// =&gt; true</span>
 <span class="hljs-keyword">type</span> PostIdIsNumber = Post[<span class="hljs-string">'id'</span>] <span class="hljs-keyword">extends</span> <span class="hljs-built_in">number</span> ? <span class="hljs-literal">true</span>: <span class="hljs-literal">false</span> <span class="hljs-comment">// =&gt; true</span>
 <span class="hljs-keyword">type</span> PostIdIsNotUserId = Post[<span class="hljs-string">'id'</span>] <span class="hljs-keyword">extends</span> User[<span class="hljs-string">'id'</span>] ? <span class="hljs-literal">false</span> : <span class="hljs-literal">true</span> <span class="hljs-comment">// =&gt; true</span></code></pre>
-			<h4 id="💡-defined">💡 Defined</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L141">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#defined">API</a></small></p>
+			<h4 id="defined">Defined</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L141">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#defined">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>从 <code>T</code> 中排除 <code>undefined</code> 类型。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">interface</span> User {
   gender?: <span class="hljs-string">'male'</span> | <span class="hljs-string">'female'</span>,
@@ -3677,57 +3926,57 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 <span class="hljs-keyword">type</span> UserGender = Exclude&lt;User[<span class="hljs-string">'gender'</span>], <span class="hljs-literal">undefined</span>&gt;
 <span class="hljs-comment">// after</span>
 <span class="hljs-keyword">type</span> UserGender = Defined&lt;User[<span class="hljs-string">'gender'</span>]&gt;</code></pre>
-			<h4 id="💡-if">💡 If</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L125">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#if">API</a></small></p>
+			<h4 id="if">If</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L125">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#if">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>条件类型。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">type</span> X = <span class="hljs-string">'x'</span>
 <span class="hljs-comment">// before</span>
 <span class="hljs-keyword">type</span> IsX = X <span class="hljs-keyword">extends</span> <span class="hljs-string">'x'</span> ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>
 <span class="hljs-comment">// after</span>
 <span class="hljs-keyword">type</span> IsX = If&lt;X <span class="hljs-keyword">extends</span> <span class="hljs-string">'x'</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>&gt;</code></pre>
-			<h4 id="💡-isnever">💡 IsNever</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L111">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnever">API</a></small></p>
+			<h4 id="isnever">IsNever</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L111">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#isnever">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>检查 <code>T</code> 是否是 <code>never</code> 类型。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">type</span> X = never
 <span class="hljs-comment">// before</span>
 <span class="hljs-keyword">type</span> XIsNever = [X] <span class="hljs-keyword">extends</span> [never] ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>
 <span class="hljs-comment">// after</span>
 <span class="hljs-keyword">type</span> XIsNever = IsNever&lt;X&gt;</code></pre>
-			<h4 id="💡-literalunion">💡 LiteralUnion</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L97">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#literalunion">API</a></small></p>
+			<h4 id="literalunion">LiteralUnion</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L97">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#literalunion">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>字面量联合类型。</p>
 			<pre><code class="language-ts"><span class="hljs-comment">// before: China, American 将得不到类型提示</span>
 <span class="hljs-keyword">type</span> Country = <span class="hljs-string">'China'</span> | <span class="hljs-string">'American'</span> | <span class="hljs-built_in">string</span>
 <span class="hljs-comment">// after: China, American 将得到类型提示</span>
 <span class="hljs-keyword">type</span> Country = LiteralUnion&lt;<span class="hljs-string">'China'</span> | <span class="hljs-string">'American'</span>, <span class="hljs-built_in">string</span>&gt;</code></pre>
-			<h4 id="💡-merge">💡 Merge</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L84">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#merge">API</a></small></p>
+			<h4 id="merge">Merge</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L84">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#merge">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>合并两个类型，后一个类型的定义将覆盖前一个类型的定义。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">type</span> X = Merge&lt;
   { x: <span class="hljs-built_in">number</span>, y: <span class="hljs-built_in">number</span> },
   { x: <span class="hljs-built_in">string</span>, z: <span class="hljs-built_in">string</span> }
 &gt;
 <span class="hljs-comment">// =&gt; { x: string, y: number, z: string }</span></code></pre>
-			<h4 id="💡-omit-1">💡 Omit</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L70">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#omit">API</a></small></p>
+			<h4 id="omit-1">Omit</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L70">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#omit">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>从接口 <code>T</code> 中去除指定的属性。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">type</span> X = Omit&lt;
   { x: <span class="hljs-built_in">number</span>, y: <span class="hljs-built_in">string</span>, z: <span class="hljs-built_in">boolean</span> },
   <span class="hljs-string">'x'</span> | <span class="hljs-string">'z'</span>
 &gt;
 <span class="hljs-comment">// =&gt; { y: string }</span></code></pre>
-			<h4 id="💡-oneormore">💡 OneOrMore</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L34">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#oneormore">API</a></small></p>
+			<h4 id="oneormore">OneOrMore</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L34">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#oneormore">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<pre><code class="language-ts"><span class="hljs-comment">// before</span>
 <span class="hljs-keyword">type</span> X = <span class="hljs-built_in">number</span> | <span class="hljs-built_in">number</span>[]
 <span class="hljs-comment">// after</span>
 <span class="hljs-keyword">type</span> X = OneOrMore&lt;<span class="hljs-built_in">number</span>&gt;</code></pre>
-			<h4 id="💡-valueof">💡 ValueOf</h4>
-			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L56">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#valueof">API</a></small></p>
+			<h4 id="valueof">ValueOf</h4>
+			<p><small><a href="https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L56">源码</a> | <a href="https://fjc0k.github.io/vtils/globals.html#valueof">API</a> | <a href="#%E7%9B%AE%E5%BD%95">回目录</a></small></p>
 			<p>返回接口 <code>T</code> 属性值的类型。</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">type</span> V = ValueOf&lt;{ x: <span class="hljs-built_in">number</span>, y: <span class="hljs-built_in">string</span>, z: <span class="hljs-built_in">boolean</span> }&gt;
 <span class="hljs-comment">// =&gt; number | string | boolean</span></code></pre>
-			<!-- 工具类型i -->
+			<!-- 工具类型i内容 -->
 			<h2 id="许可">许可</h2>
 			<p>MIT ©️ Jay Fong</p>
 		</div>
@@ -3925,7 +4174,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Any<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L4">enhanceType.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L4">enhanceType.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3961,7 +4210,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Any<wbr>Object<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L9">enhanceType.ts:9</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L9">enhanceType.ts:9</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3976,7 +4225,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Async<wbr>OrSync&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L45">enhanceType.ts:45</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L45">enhanceType.ts:45</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4002,7 +4251,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Brand&lt;T, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L23">enhanceType.ts:23</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L23">enhanceType.ts:23</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4035,7 +4284,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Defined&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L141">enhanceType.ts:141</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L141">enhanceType.ts:141</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4067,7 +4316,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Disposer<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/Disposer.ts#L7">Disposer.ts:7</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/Disposer.ts#L7">Disposer.ts:7</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4100,7 +4349,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Easy<wbr>Validator<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/EasyValidator.ts#L5">EasyValidator.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/EasyValidator.ts#L5">EasyValidator.ts:5</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -4110,7 +4359,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Easy<wbr>Validator<wbr>Rules&lt;D&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/easyvalidatorrule.html" class="tsd-signature-type">EasyValidatorRule</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/EasyValidator.ts#L58">EasyValidator.ts:58</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/EasyValidator.ts#L58">EasyValidator.ts:58</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4126,7 +4375,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Event<wbr>Bus<wbr>Unsubscribe<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/EventBus.ts#L4">EventBus.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/EventBus.ts#L4">EventBus.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4156,7 +4405,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Get<wbr>Type<wbr>Return<span class="tsd-signature-symbol">:</span> <a href="globals.html#literalunion" class="tsd-signature-type">LiteralUnion</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"Undefined"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Null"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Array"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"String"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Arguments"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Function"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Error"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Boolean"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Date"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RegExp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Object"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"JSON"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Math"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Symbol"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Map"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Set"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WeakMap"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WeakSet"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/getType.ts#L3">getType.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/getType.ts#L3">getType.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -4166,7 +4415,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">If&lt;Condition, Then, Else&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">If&lt;Condition, Then, Else&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L125">enhanceType.ts:125</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L125">enhanceType.ts:125</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4202,7 +4451,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Is<wbr>Never&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IsNever&lt;T&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L111">enhanceType.ts:111</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L111">enhanceType.ts:111</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4232,7 +4481,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Literal<wbr>Union&lt;L, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">L</span><span class="tsd-signature-symbol"> | </span><a href="globals.html#brand" class="tsd-signature-type">Brand</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L97">enhanceType.ts:97</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L97">enhanceType.ts:97</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4264,7 +4513,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Memoize<wbr>Return&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/memoize.ts#L28">memoize.ts:28</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/memoize.ts#L28">memoize.ts:28</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4280,7 +4529,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Merge&lt;M, N&gt;<span class="tsd-signature-symbol">:</span> <a href="globals.html#omit" class="tsd-signature-type">Omit</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">M</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Extract</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof M</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">keyof N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">N</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L84">enhanceType.ts:84</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L84">enhanceType.ts:84</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4313,7 +4562,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Omit&lt;T, K&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L70">enhanceType.ts:70</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L70">enhanceType.ts:70</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4346,7 +4595,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">One<wbr>OrMore&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L34">enhanceType.ts:34</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L34">enhanceType.ts:34</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4372,7 +4621,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Order<wbr>ByRule&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/orderBy.ts#L11">orderBy.ts:11</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/orderBy.ts#L11">orderBy.ts:11</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4393,7 +4642,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Value<wbr>Of&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T[keyof T]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceType.ts#L56">enhanceType.ts:56</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceType.ts#L56">enhanceType.ts:56</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4420,7 +4669,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Wechat<wbr>Error<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/Wechat.ts#L100">Wechat.ts:100</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/Wechat.ts#L100">Wechat.ts:100</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -4451,7 +4700,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Wechat<wbr>JsApi<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"checkJsApi"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"updateAppMessageShareData"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"updateTimelineShareData"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareTimeline"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareAppMessage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareQQ"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onMenuShareQZone"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"startRecord"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stopRecord"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onVoiceRecordEnd"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"playVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"pauseVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stopVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"onVoicePlayEnd"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"uploadVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"downloadVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chooseImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"previewImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"uploadImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"downloadImage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"translateVoice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"getNetworkType"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openLocation"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"getLocation"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hideOptionMenu"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"showOptionMenu"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hideMenuItems"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"showMenuItems"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hideAllNonBaseMenuItem"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"showAllNonBaseMenuItem"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"closeWindow"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"scanQRCode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chooseWXPay"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openProductSpecificView"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"addCard"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chooseCard"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"openCard"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/Wechat.ts#L11">Wechat.ts:11</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/Wechat.ts#L11">Wechat.ts:11</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4466,7 +4715,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 				<div class="tsd-signature tsd-kind-icon">Wechat<wbr>Non<wbr>Base<wbr>Menu<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"menuItem:share:appMessage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:timeline"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:qq"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:weiboApp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:favorite"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:facebook"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:QZone"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:editTag"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:delete"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:copyUrl"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:originPage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:readMode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:openWithQQBrowser"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:openWithSafari"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:email"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menuItem:share:brand"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/Wechat.ts#L163">Wechat.ts:163</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/Wechat.ts#L163">Wechat.ts:163</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4488,7 +4737,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/assign.ts#L22">assign.ts:22</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/assign.ts#L22">assign.ts:22</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4544,7 +4793,7 @@ wechat.invoke(<span class="hljs-string">'scanQRCode'</span>).then(<span class="h
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/base64.ts#L141">base64.ts:141</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/base64.ts#L141">base64.ts:141</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4583,7 +4832,7 @@ base64Decode(<span class="hljs-string">'8J+RqOKAjfCfkrs='</span>) <span class="h
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/base64.ts#L119">base64.ts:119</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/base64.ts#L119">base64.ts:119</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4622,7 +4871,7 @@ base64Encode(<span class="hljs-string">'👨‍💻'</span>) <span class="hljs-c
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/base64.ts#L185">base64.ts:185</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/base64.ts#L185">base64.ts:185</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4664,7 +4913,7 @@ base64UrlDecode(<span class="hljs-string">'8J-RqOKAjfCfkrs'</span>) <span class=
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/base64.ts#L165">base64.ts:165</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/base64.ts#L165">base64.ts:165</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4706,7 +4955,7 @@ base64UrlEncode(<span class="hljs-string">'👨‍💻'</span>) <span class="hlj
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/castArray.ts#L14">castArray.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/castArray.ts#L14">castArray.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4752,7 +5001,7 @@ castArray(<span class="hljs-literal">null</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/chunk.ts#L21">chunk.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/chunk.ts#L21">chunk.ts:21</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4812,7 +5061,7 @@ chunk(arr, <span class="hljs-number">4</span>, <span class="hljs-function"><span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/clamp.ts#L16">clamp.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/clamp.ts#L16">clamp.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4864,7 +5113,7 @@ clamp(<span class="hljs-number">50</span>, <span class="hljs-number">51</span>, 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/URI.ts#L15">URI.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/URI.ts#L15">URI.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4901,7 +5150,7 @@ clamp(<span class="hljs-number">50</span>, <span class="hljs-number">51</span>, 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/debounce.ts#L24">debounce.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/debounce.ts#L24">debounce.ts:24</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4976,7 +5225,7 @@ clamp(<span class="hljs-number">50</span>, <span class="hljs-number">51</span>, 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/defaultTo.ts#L17">defaultTo.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/defaultTo.ts#L17">defaultTo.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5028,7 +5277,7 @@ defaultTo(<span class="hljs-literal">undefined</span>, <span class="hljs-number"
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/endsWith.ts#L13">endsWith.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/endsWith.ts#L13">endsWith.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5072,7 +5321,7 @@ endsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'he
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/fill.ts#L28">fill.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/fill.ts#L28">fill.ts:28</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5134,7 +5383,7 @@ fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/flexible.ts#L17">flexible.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/flexible.ts#L17">flexible.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5165,7 +5414,7 @@ fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/forOwn.ts#L35">forOwn.ts:35</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/forOwn.ts#L35">forOwn.ts:35</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5222,7 +5471,7 @@ fill(<span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/env.ts#L15">env.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/env.ts#L15">env.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5253,7 +5502,7 @@ getGlobal() <span class="hljs-comment">// =&gt; global</span></code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/getType.ts#L40">getType.ts:40</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/getType.ts#L40">getType.ts:40</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5299,7 +5548,7 @@ getType(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/groupBy.ts#L45">groupBy.ts:45</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/groupBy.ts#L45">groupBy.ts:45</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5375,7 +5624,7 @@ getType(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/has.ts#L17">has.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/has.ts#L17">has.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5427,7 +5676,7 @@ has(obj, <span class="hljs-string">'toString'</span>) <span class="hljs-comment"
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/ii.ts#L15">ii.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/ii.ts#L15">ii.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5471,7 +5720,7 @@ has(obj, <span class="hljs-string">'toString'</span>) <span class="hljs-comment"
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/env.ts#L204">env.ts:204</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/env.ts#L204">env.ts:204</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5512,7 +5761,7 @@ inAndroid(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/env.ts#L49">env.ts:49</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/env.ts#L49">env.ts:49</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5553,7 +5802,7 @@ inBrowser(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/env.ts#L173">env.ts:173</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/env.ts#L173">env.ts:173</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5594,7 +5843,7 @@ inIOS(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/env.ts#L80">env.ts:80</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/env.ts#L80">env.ts:80</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5635,7 +5884,7 @@ inNode(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/inRange.ts#L36">inRange.ts:36</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/inRange.ts#L36">inRange.ts:36</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5700,7 +5949,7 @@ inRange(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/env.ts#L112">env.ts:112</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/env.ts#L112">env.ts:112</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5741,7 +5990,7 @@ inWechatMiniProgram(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/env.ts#L143">env.ts:143</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/env.ts#L143">env.ts:143</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5784,7 +6033,7 @@ inWechatWebview(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/includes.ts#L18">includes.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/includes.ts#L18">includes.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5826,7 +6075,7 @@ includes([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/includes.ts#L32">includes.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/includes.ts#L32">includes.ts:32</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5867,7 +6116,7 @@ includes({ x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/includes.ts#L47">includes.ts:47</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/includes.ts#L47">includes.ts:47</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5912,7 +6161,7 @@ includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'12
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L551">is.ts:551</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L551">is.ts:551</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5951,7 +6200,7 @@ includes(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'12
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L16">is.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L16">is.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5989,7 +6238,7 @@ isArray(<span class="hljs-string">'x'</span>) <span class="hljs-comment">// =&gt
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L32">is.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L32">is.ts:32</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6028,7 +6277,7 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L48">is.ts:48</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L48">is.ts:48</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6071,7 +6320,7 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L159">is.ts:159</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L159">is.ts:159</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6108,7 +6357,7 @@ isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L175">is.ts:175</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L175">is.ts:175</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6149,7 +6398,7 @@ isEmail(<span class="hljs-string">'hello@foo'</span>) <span class="hljs-comment"
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L196">is.ts:196</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L196">is.ts:196</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6192,7 +6441,7 @@ isEmpty({}) <span class="hljs-comment">// =&gt; true</span></code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L222">is.ts:222</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L222">is.ts:222</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6230,7 +6479,7 @@ isEqualArray([<span class="hljs-number">1</span>], [<span class="hljs-number">5<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L257">is.ts:257</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L257">is.ts:257</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6268,7 +6517,7 @@ isEqualArray([<span class="hljs-number">1</span>], [<span class="hljs-number">5<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L272">is.ts:272</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L272">is.ts:272</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6306,7 +6555,7 @@ isFunction(<span class="hljs-number">2000</span>) <span class="hljs-comment">// 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L287">is.ts:287</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L287">is.ts:287</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6344,7 +6593,7 @@ isHan(<span class="hljs-string">'嗨咯'</span>) <span class="hljs-comment">// =
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L305">is.ts:305</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L305">is.ts:305</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6383,7 +6632,7 @@ isInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L350">is.ts:350</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L350">is.ts:350</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6421,7 +6670,7 @@ isInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&g
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L335">is.ts:335</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L335">is.ts:335</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6459,7 +6708,7 @@ isNegativeInteger(<span class="hljs-number">1</span>) <span class="hljs-comment"
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L365">is.ts:365</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L365">is.ts:365</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6497,7 +6746,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L379">is.ts:379</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L379">is.ts:379</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6534,7 +6783,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L397">is.ts:397</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L397">is.ts:397</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6574,7 +6823,7 @@ isNumber(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L414">is.ts:414</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L414">is.ts:414</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6613,7 +6862,7 @@ isNumeric(<span class="hljs-string">'1'</span>) <span class="hljs-comment">// =&
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L430">is.ts:430</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L430">is.ts:430</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6652,7 +6901,7 @@ isObject(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L447">is.ts:447</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L447">is.ts:447</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6691,7 +6940,7 @@ isPlainObject(<span class="hljs-function"><span class="hljs-params">()</span> =&
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L320">is.ts:320</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L320">is.ts:320</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6729,7 +6978,7 @@ isPositiveInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L122">is.ts:122</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L122">is.ts:122</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6767,7 +7016,7 @@ isPossibleChineseMobilePhoneNumber(<span class="hljs-number">10086</span>) <span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L138">is.ts:138</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L138">is.ts:138</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6806,7 +7055,7 @@ isPossibleChineseName(<span class="hljs-string">'买买提·吐尔逊'</span>) <
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L469">is.ts:469</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L469">is.ts:469</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6843,7 +7092,7 @@ isPossibleChineseName(<span class="hljs-string">'买买提·吐尔逊'</span>) <
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L487">is.ts:487</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L487">is.ts:487</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6881,7 +7130,7 @@ isRegExp(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegEx
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L502">is.ts:502</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L502">is.ts:502</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6919,7 +7168,7 @@ isString(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L517">is.ts:517</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L517">is.ts:517</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6957,7 +7206,7 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/is.ts#L533">is.ts:533</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/is.ts#L533">is.ts:533</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6998,7 +7247,7 @@ isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/enhanceJest.ts#L7">enhanceJest.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/enhanceJest.ts#L7">enhanceJest.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7041,7 +7290,7 @@ isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/keyBy.ts#L37">keyBy.ts:37</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/keyBy.ts#L37">keyBy.ts:37</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7109,7 +7358,7 @@ isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/keys.ts#L18">keys.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/keys.ts#L18">keys.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7156,7 +7405,7 @@ isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/last.ts#L13">last.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/last.ts#L13">last.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7199,7 +7448,7 @@ isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/loadResource.ts#L82">loadResource.ts:82</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/loadResource.ts#L82">loadResource.ts:82</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7247,7 +7496,7 @@ isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/mapValues.ts#L31">mapValues.ts:31</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/mapValues.ts#L31">mapValues.ts:31</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7305,7 +7554,7 @@ isUrl(<span class="hljs-string">'https://foo.bar/home'</span>) <span class="hljs
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/memoize.ts#L49">memoize.ts:49</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/memoize.ts#L49">memoize.ts:49</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7357,7 +7606,7 @@ fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/noop.ts#L9">noop.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/noop.ts#L9">noop.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7390,7 +7639,7 @@ fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/omit.ts#L16">omit.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/omit.ts#L16">omit.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7444,7 +7693,7 @@ fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/orderBy.ts#L43">orderBy.ts:43</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/orderBy.ts#L43">orderBy.ts:43</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7500,7 +7749,7 @@ fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/pad.ts#L41">pad.ts:41</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/pad.ts#L41">pad.ts:41</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7549,7 +7798,7 @@ fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/pad.ts#L16">pad.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/pad.ts#L16">pad.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7598,7 +7847,7 @@ fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/parallel.ts#L19">parallel.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/parallel.ts#L19">parallel.ts:19</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7649,7 +7898,7 @@ fn() <span class="hljs-comment">// =&gt; 0</span></code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/parseCSSValue.ts#L21">parseCSSValue.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/parseCSSValue.ts#L21">parseCSSValue.ts:21</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7694,7 +7943,7 @@ parseCSSValue(<span class="hljs-string">'12%'</span>) <span class="hljs-comment"
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/URI.ts#L50">URI.ts:50</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/URI.ts#L50">URI.ts:50</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7752,7 +8001,7 @@ parseURIQuery(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/pick.ts#L16">pick.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/pick.ts#L16">pick.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7807,7 +8056,7 @@ parseURIQuery(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/placeKitten.ts#L11">placeKitten.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/placeKitten.ts#L11">placeKitten.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7835,7 +8084,7 @@ parseURIQuery(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/placeKitten.ts#L24">placeKitten.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/placeKitten.ts#L24">placeKitten.ts:24</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7879,7 +8128,7 @@ parseURIQuery(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/pluck.ts#L25">pluck.ts:25</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/pluck.ts#L25">pluck.ts:25</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7925,7 +8174,7 @@ parseURIQuery(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/pluck.ts#L46">pluck.ts:46</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/pluck.ts#L46">pluck.ts:46</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7990,7 +8239,7 @@ parseURIQuery(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/randomString.ts#L10">randomString.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/randomString.ts#L10">randomString.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8018,7 +8267,7 @@ parseURIQuery(
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/range.ts#L14">range.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/range.ts#L14">range.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8068,7 +8317,7 @@ range(<span class="hljs-number">0</span>, <span class="hljs-number">-5</span>, <
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/repeat.ts#L14">repeat.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/repeat.ts#L14">repeat.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8111,7 +8360,7 @@ range(<span class="hljs-number">0</span>, <span class="hljs-number">-5</span>, <
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/round.ts#L35">round.ts:35</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/round.ts#L35">round.ts:35</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8157,7 +8406,7 @@ round(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span>)
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/round.ts#L71">round.ts:71</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/round.ts#L71">round.ts:71</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8203,7 +8452,7 @@ roundDown(<span class="hljs-number">345</span>, <span class="hljs-number">-2</sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/round.ts#L53">round.ts:53</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/round.ts#L53">round.ts:53</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8258,7 +8507,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L4">safeGet.ts:4</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L4">safeGet.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8284,7 +8533,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L9">safeGet.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L9">safeGet.ts:9</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8316,7 +8565,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L15">safeGet.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L15">safeGet.ts:15</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8354,7 +8603,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L22">safeGet.ts:22</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L22">safeGet.ts:22</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8398,7 +8647,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L30">safeGet.ts:30</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L30">safeGet.ts:30</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8448,7 +8697,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L39">safeGet.ts:39</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L39">safeGet.ts:39</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8504,7 +8753,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L49">safeGet.ts:49</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L49">safeGet.ts:49</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8566,7 +8815,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L60">safeGet.ts:60</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L60">safeGet.ts:60</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8634,7 +8883,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L72">safeGet.ts:72</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L72">safeGet.ts:72</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8708,7 +8957,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/safeGet.ts#L85">safeGet.ts:85</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/safeGet.ts#L85">safeGet.ts:85</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -8798,7 +9047,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/sample.ts#L15">sample.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/sample.ts#L15">sample.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8832,7 +9081,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/sample.ts#L27">sample.ts:27</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/sample.ts#L27">sample.ts:27</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8875,7 +9124,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/sequential.ts#L18">sequential.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/sequential.ts#L18">sequential.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8926,7 +9175,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/shuffle.ts#L12">shuffle.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/shuffle.ts#L12">shuffle.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -8972,7 +9221,7 @@ roundUp(<span class="hljs-number">345</span>, <span class="hljs-number">-2</span
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/startsWith.ts#L13">startsWith.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/startsWith.ts#L13">startsWith.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -9016,7 +9265,7 @@ startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/sum.ts#L13">sum.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/sum.ts#L13">sum.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -9053,7 +9302,7 @@ startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/sum.ts#L54">sum.ts:54</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/sum.ts#L54">sum.ts:54</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -9110,7 +9359,7 @@ startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/throttle.ts#L30">throttle.ts:30</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/throttle.ts#L30">throttle.ts:30</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -9201,7 +9450,7 @@ startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/times.ts#L14">times.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/times.ts#L14">times.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -9253,7 +9502,7 @@ startsWith(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/tryGet.ts#L18">tryGet.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/tryGet.ts#L18">tryGet.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -9295,7 +9544,7 @@ tryGet(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/tryGet.ts#L32">tryGet.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/tryGet.ts#L32">tryGet.ts:32</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -9343,7 +9592,7 @@ tryGet(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/unique.ts#L13">unique.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/unique.ts#L13">unique.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -9386,7 +9635,7 @@ tryGet(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/values.ts#L14">values.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/values.ts#L14">values.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -9429,7 +9678,7 @@ tryGet(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6eca769/src/wait.ts#L12">wait.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/2f9fda4/src/wait.ts#L12">wait.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
