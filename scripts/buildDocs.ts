@@ -1,7 +1,7 @@
 import _ from 'shelljs'
 import fs from 'fs-extra'
 import path from 'path'
-import { Defined, forOwn, groupBy, ii } from '../src'
+import { chunk, Defined, fill, forOwn, groupBy, ii } from '../src'
 import { Reflection, ReflectionKind } from 'typedoc'
 
 type Item = Reflection & {
@@ -38,6 +38,11 @@ ii(async function main() {
     [ReflectionKind.Function]: '工具函数',
     [ReflectionKind.Class]: '工具类',
     [ReflectionKind.TypeAlias]: '工具类型',
+  }
+  const contentItemCountPerLineByKind: Partial<Record<ReflectionKind, number>> = {
+    [ReflectionKind.Function]: 4,
+    [ReflectionKind.Class]: 3,
+    [ReflectionKind.TypeAlias]: 9,
   }
 
   let readme = (await fs.readFile(readMeFile)).toString()
@@ -99,28 +104,51 @@ ii(async function main() {
 
   forOwn(briefListByKind, (briefList, kind) => {
     if (readMeFlagByKind[kind]) {
-      readme = readme.replace(
-        new RegExp(`(<!-- ${readMeFlagByKind[kind]}! -->).+?(<!-- ${readMeFlagByKind[kind]}i -->)`, 's'),
-        `$1\n${
-          briefList.map(
-            brief => {
-              const sourceUrl = `https://github.com/fjc0k/vtils/blob/master/src/${brief.source.fileName}#L${brief.source.line}`
-              const apiUrl = (
-                Number(kind) === ReflectionKind.Class
-                  ? `https://fjc0k.github.io/vtils/classes/${brief.name.toLowerCase()}.html`
-                  : `https://fjc0k.github.io/vtils/globals.html#${brief.name.toLowerCase()}`
-              )
-              return `
-                #### 💡 ${brief.name}
+      readme = readme
+        .replace(
+          new RegExp(`(<!-- ${readMeFlagByKind[kind]}!目录 -->).+?(<!-- ${readMeFlagByKind[kind]}i目录 -->)`, 's'),
+          `$1\n${
+            [
+              fill(new Array(contentItemCountPerLineByKind[kind]), () => '👇'),
+              fill(new Array(contentItemCountPerLineByKind[kind]), () => '---'),
+              ...chunk(
+                briefList.map(
+                  brief => {
+                    return `
+                      [${brief.name}](#${brief.name.toLowerCase()})
+                    `.replace(/^ {22}/gm, '').trim()
+                  },
+                ),
+                contentItemCountPerLineByKind[kind]!,
+                () => '',
+              ),
+            ]
+              .map(items => items.join(' | '))
+              .join('\n')
+          }\n$2`,
+        )
+        .replace(
+          new RegExp(`(<!-- ${readMeFlagByKind[kind]}!内容 -->).+?(<!-- ${readMeFlagByKind[kind]}i内容 -->)`, 's'),
+          `$1\n${
+            briefList.map(
+              brief => {
+                const sourceUrl = `https://github.com/fjc0k/vtils/blob/master/src/${brief.source.fileName}#L${brief.source.line}`
+                const apiUrl = (
+                  Number(kind) === ReflectionKind.Class
+                    ? `https://fjc0k.github.io/vtils/classes/${brief.name.toLowerCase()}.html`
+                    : `https://fjc0k.github.io/vtils/globals.html#${brief.name.toLowerCase()}`
+                )
+                return `
+                  #### ${brief.name}
 
-                <small>[源码](${sourceUrl}) | [API](${apiUrl})</small>
+                  <small>[源码](${sourceUrl}) | [API](${apiUrl}) | [回目录](#目录)</small>
 
-                ${brief.body}
-              `.replace(/^ {16}/gm, '').trim()
-            },
-          ).join('\n\n')
-        }\n$2`,
-      )
+                  ${brief.body}
+                `.replace(/^ {18}/gm, '').trim()
+              },
+            ).join('\n\n')
+          }\n$2`,
+        )
     }
   })
 
