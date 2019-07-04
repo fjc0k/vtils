@@ -23,6 +23,7 @@ ii(async function main() {
   const typedocPath = path.join(__dirname, '../.typedoc')
   const typedocDataFile = path.join(typedocPath, 'data.json')
   const readMeFile = path.join(__dirname, '../README.md')
+  const typedocReadMeFile = path.join(__dirname, '../README_TYPEDOC.md')
 
   // 切换至工作目录
   _.cd(wd)
@@ -154,9 +155,15 @@ ii(async function main() {
 
   await fs.writeFile(readMeFile, readme)
 
+  // typedoc 主页
+  await fs.writeFile(
+    typedocReadMeFile,
+    readme.split('<!-- TYPEDOC -->')[0],
+  )
+
   // 构建文档
   _.rm('-rf', typedocPath)
-  _.exec(`typedoc --ignoreCompilerErrors --excludeNotExported --excludePrivate --excludeProtected --out ${typedocPath} --theme minimal --mode file src/index.ts`)
+  _.exec(`typedoc --readme README_TYPEDOC.md --ignoreCompilerErrors --excludeNotExported --excludePrivate --excludeProtected --out ${typedocPath} --theme minimal --mode file src/index.ts`)
 })
 
 function getDesc(reflection: Reflection): string {
