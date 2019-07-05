@@ -1,6 +1,7 @@
 import { EventBus } from './EventBus'
 import { isBoolean } from './is'
 import { loadResource, LoadResourceUrlType } from './loadResource'
+import { noop } from './noop'
 import { sequential } from './sequential'
 
 declare const wx: any
@@ -317,7 +318,7 @@ export class Wechat {
    *
    * @param params 分享数据
    */
-  updateShareData(params: WechatUpdateShareDataParams): Promise<any> {
+  updateShareData(params: WechatUpdateShareDataParams): Promise<void> {
     params = {
       ...this.prevShareParams,
       ...params,
@@ -327,7 +328,7 @@ export class Wechat {
       shareJsApiList.map(
         jsApi => () => this.invoke(jsApi, params),
       ),
-    )
+    ).then(noop, noop)
   }
 
   /**
