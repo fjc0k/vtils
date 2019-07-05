@@ -1467,7 +1467,7 @@ bus.off('error')
 
 #### Wechat
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/Wechat.ts#L214) | [API](https://fjc0k.github.io/vtils/classes/wechat.html) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/Wechat.ts#L215) | [API](https://fjc0k.github.io/vtils/classes/wechat.html) | [回目录](#目录)</small>
 
 对微信 JSSDK 的封装。
 
