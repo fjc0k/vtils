@@ -1,3 +1,10 @@
+export interface WaitReturn extends Promise<void> {
+  /**
+   * 取消等待，不执行后续逻辑。
+   */
+  cancel: () => void,
+}
+
 /**
  * 等待一段时间。
  *
@@ -9,8 +16,13 @@
  * })
  * ```
  */
-export function wait(milliseconds: number): Promise<void> {
-  return new Promise(
-    resolve => setTimeout(resolve, milliseconds),
+export function wait(milliseconds: number): WaitReturn {
+  let timer!: number
+  const p = new Promise(
+    resolve => {
+      timer = setTimeout(resolve, milliseconds) as any
+    },
   )
+  ;(p as any).cancel = () => clearTimeout(timer)
+  return p as any
 }

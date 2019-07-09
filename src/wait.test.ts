@@ -11,3 +11,13 @@ test('表现正常', async () => {
     true,
   )
 })
+
+test('可取消等待', async () => {
+  const cb = jest.fn()
+  const w = wait(500)
+  w.then(cb)
+  w.cancel()
+  await wait(600)
+
+  expect(cb).toBeCalledTimes(0)
+})
