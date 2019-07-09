@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.10.0"></a>
+# [2.10.0](https://github.com/fjc0k/vtils/compare/v2.9.0...v2.10.0) (2019-07-09)
+
+
+### Features
+
+* **wait:** 支持取消等待 ([0cb4ec0](https://github.com/fjc0k/vtils/commit/0cb4ec0))
+
+
+
 <a name="2.9.0"></a>
 # [2.9.0](https://github.com/fjc0k/vtils/compare/v2.8.2...v2.9.0) (2019-07-05)
 

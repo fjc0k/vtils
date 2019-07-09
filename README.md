@@ -1322,7 +1322,7 @@ values({ x: 1, 2: 'y' }) // => [1, 'y'] 或 ['y', 1]
 
 #### wait
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/wait.ts#L12) | [API](https://fjc0k.github.io/vtils/globals.html#wait) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/wait.ts#L19) | [API](https://fjc0k.github.io/vtils/globals.html#wait) | [回目录](#目录)</small>
 
 等待一段时间。
 
