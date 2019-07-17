@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.11.0"></a>
+# [2.11.0](https://github.com/fjc0k/vtils/compare/v2.10.1...v2.11.0) (2019-07-17)
+
+
+### Features
+
+* 新增 escapeRegExp ([b819f57](https://github.com/fjc0k/vtils/commit/b819f57))
+
+
+
 <a name="2.10.1"></a>
 ## [2.10.1](https://github.com/fjc0k/vtils/compare/v2.10.0...v2.10.1) (2019-07-17)
 

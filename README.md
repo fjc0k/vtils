@@ -58,27 +58,27 @@ alert(shuffle([1, 2, 3, 4]))
 [assign](#assign) | [base64Decode](#base64decode) | [base64Encode](#base64encode) | [base64UrlDecode](#base64urldecode)
 [base64UrlEncode](#base64urlencode) | [castArray](#castarray) | [chunk](#chunk) | [clamp](#clamp)
 [createURIQuery](#createuriquery) | [debounce](#debounce) | [defaultTo](#defaultto) | [endsWith](#endswith)
-[fill](#fill) | [flexible](#flexible) | [forOwn](#forown) | [getGlobal](#getglobal)
-[getType](#gettype) | [groupBy](#groupby) | [has](#has) | [ii](#ii)
-[inAndroid](#inandroid) | [inBrowser](#inbrowser) | [inIOS](#inios) | [inNode](#innode)
-[inRange](#inrange) | [inWechatMiniProgram](#inwechatminiprogram) | [inWechatWebview](#inwechatwebview) | [includes](#includes)
-[isArguments](#isarguments) | [isArray](#isarray) | [isBoolean](#isboolean) | [isChineseIDCardNumber](#ischineseidcardnumber)
-[isDate](#isdate) | [isEmail](#isemail) | [isEmpty](#isempty) | [isEqualArray](#isequalarray)
-[isFinite](#isfinite) | [isFunction](#isfunction) | [isHan](#ishan) | [isInteger](#isinteger)
-[isNaN](#isnan) | [isNegativeInteger](#isnegativeinteger) | [isNil](#isnil) | [isNull](#isnull)
-[isNumber](#isnumber) | [isNumeric](#isnumeric) | [isObject](#isobject) | [isPlainObject](#isplainobject)
-[isPositiveInteger](#ispositiveinteger) | [isPossibleChineseMobilePhoneNumber](#ispossiblechinesemobilephonenumber) | [isPossibleChineseName](#ispossiblechinesename) | [isPromiseLike](#ispromiselike)
-[isRegExp](#isregexp) | [isString](#isstring) | [isUndefined](#isundefined) | [isUrl](#isurl)
-[jestExpectEqual](#jestexpectequal) | [keyBy](#keyby) | [keys](#keys) | [last](#last)
-[loadResource](#loadresource) | [mapValues](#mapvalues) | [memoize](#memoize) | [noop](#noop)
-[omit](#omit) | [orderBy](#orderby) | [padEnd](#padend) | [padStart](#padstart)
-[parallel](#parallel) | [parseCSSValue](#parsecssvalue) | [parseURIQuery](#parseuriquery) | [pick](#pick)
-[placeKitten](#placekitten) | [pluck](#pluck) | [randomString](#randomstring) | [range](#range)
-[repeat](#repeat) | [round](#round) | [roundDown](#rounddown) | [roundUp](#roundup)
-[safeGet](#safeget) | [sample](#sample) | [sequential](#sequential) | [shuffle](#shuffle)
-[startsWith](#startswith) | [sum](#sum) | [sumBy](#sumby) | [throttle](#throttle)
-[times](#times) | [tryGet](#tryget) | [unique](#unique) | [values](#values)
-[wait](#wait) |  |  | 
+[escapeRegExp](#escaperegexp) | [fill](#fill) | [flexible](#flexible) | [forOwn](#forown)
+[getGlobal](#getglobal) | [getType](#gettype) | [groupBy](#groupby) | [has](#has)
+[ii](#ii) | [inAndroid](#inandroid) | [inBrowser](#inbrowser) | [inIOS](#inios)
+[inNode](#innode) | [inRange](#inrange) | [inWechatMiniProgram](#inwechatminiprogram) | [inWechatWebview](#inwechatwebview)
+[includes](#includes) | [isArguments](#isarguments) | [isArray](#isarray) | [isBoolean](#isboolean)
+[isChineseIDCardNumber](#ischineseidcardnumber) | [isDate](#isdate) | [isEmail](#isemail) | [isEmpty](#isempty)
+[isEqualArray](#isequalarray) | [isFinite](#isfinite) | [isFunction](#isfunction) | [isHan](#ishan)
+[isInteger](#isinteger) | [isNaN](#isnan) | [isNegativeInteger](#isnegativeinteger) | [isNil](#isnil)
+[isNull](#isnull) | [isNumber](#isnumber) | [isNumeric](#isnumeric) | [isObject](#isobject)
+[isPlainObject](#isplainobject) | [isPositiveInteger](#ispositiveinteger) | [isPossibleChineseMobilePhoneNumber](#ispossiblechinesemobilephonenumber) | [isPossibleChineseName](#ispossiblechinesename)
+[isPromiseLike](#ispromiselike) | [isRegExp](#isregexp) | [isString](#isstring) | [isUndefined](#isundefined)
+[isUrl](#isurl) | [jestExpectEqual](#jestexpectequal) | [keyBy](#keyby) | [keys](#keys)
+[last](#last) | [loadResource](#loadresource) | [mapValues](#mapvalues) | [memoize](#memoize)
+[noop](#noop) | [omit](#omit) | [orderBy](#orderby) | [padEnd](#padend)
+[padStart](#padstart) | [parallel](#parallel) | [parseCSSValue](#parsecssvalue) | [parseURIQuery](#parseuriquery)
+[pick](#pick) | [placeKitten](#placekitten) | [pluck](#pluck) | [randomString](#randomstring)
+[range](#range) | [repeat](#repeat) | [round](#round) | [roundDown](#rounddown)
+[roundUp](#roundup) | [safeGet](#safeget) | [sample](#sample) | [sequential](#sequential)
+[shuffle](#shuffle) | [startsWith](#startswith) | [sum](#sum) | [sumBy](#sumby)
+[throttle](#throttle) | [times](#times) | [tryGet](#tryget) | [unique](#unique)
+[values](#values) | [wait](#wait) |  | 
 <!-- 工具函数i目录 -->
 
 ### 📦 工具类
@@ -265,6 +265,16 @@ defaultTo(undefined, 2) // => 2
 ```ts
 endsWith('hello', 'llo') // => true
 endsWith('hello', 'he') // => false
+```
+
+#### escapeRegExp
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/escapeRegExp.ts#L11) | [API](https://fjc0k.github.io/vtils/globals.html#escaperegexp) | [回目录](#目录)</small>
+
+转义正则表达式中的特殊字符。
+
+```ts
+escapeRegExp('github.com') // => 'github\\.com'
 ```
 
 #### fill
