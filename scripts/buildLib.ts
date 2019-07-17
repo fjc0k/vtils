@@ -52,7 +52,14 @@ ii(async function main() {
   _.ls('lib/*.js').forEach(builtFile => {
     _.sed(
       '-i',
-      biliConfig.babel && biliConfig.babel.objectAssign || 'Object.assign',
+      new RegExp(
+        (
+          biliConfig.babel
+            && biliConfig.babel.objectAssign
+            || 'Object.assign'
+        ).replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'),
+        'g',
+      ),
       assign.name,
       builtFile,
     )
