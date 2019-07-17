@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.10.1"></a>
+## [2.10.1](https://github.com/fjc0k/vtils/compare/v2.10.0...v2.10.1) (2019-07-17)
+
+
+### Bug Fixes
+
+* 打包脚本修复 ([7d1ff17](https://github.com/fjc0k/vtils/commit/7d1ff17))
+
+
+
 <a name="2.10.0"></a>
 # [2.10.0](https://github.com/fjc0k/vtils/compare/v2.9.0...v2.10.0) (2019-07-09)
 
