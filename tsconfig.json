@@ -10,6 +10,7 @@
     "outDir": "./lib",
     "newLine": "LF",
     "skipLibCheck": true,
+    "sourceMap": true,
     "lib": [
       "esnext",
       "dom"

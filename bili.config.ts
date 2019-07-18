@@ -7,7 +7,7 @@ const config: Config = {
     dir: 'lib',
     format: ['cjs', 'es', 'umd', 'umd-min'],
     moduleName: 'vtils',
-    sourceMap: false,
+    sourceMap: true,
   },
   babel: {
     minimal: true,
