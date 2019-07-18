@@ -4,6 +4,8 @@ import path from 'path'
 import { chunk, Defined, fill, forOwn, groupBy, ii } from '../src'
 import { Reflection, ReflectionKind } from 'typedoc'
 
+const pkg = require('../package.json') as { version: number }
+
 type Item = Reflection & {
   signatures: Array<Item>,
   parameters?: Array<Item>,
@@ -27,6 +29,14 @@ ii(async function main() {
 
   // 切换至工作目录
   _.cd(wd)
+
+  // 版本号同步
+  _.sed(
+    '-i',
+    /vtils@[^/]+/g,
+    `vtils@${pkg.version}`,
+    readMeFile,
+  )
 
   // 构建包
   _.exec(`typedoc --ignoreCompilerErrors --excludeNotExported --excludePrivate --excludeProtected --json ${typedocDataFile} --mode file src/index.ts`)

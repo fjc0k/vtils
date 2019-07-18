@@ -48,7 +48,7 @@
   },
   "standard-version": {
     "scripts": {
-      "postbump": "yarn docs:build && git add README.md"
+      "postbump": "yarn docs:build && git add README.md README_TYPEDOC.md"
     }
   },
   "eslintConfig": {
