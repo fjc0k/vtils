@@ -32,6 +32,18 @@ yarn add vtils
 npm i vtils --save
 ```
 
+你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.12.2/lib/index.umd.min.js" crossorigin="anonymous"></script>
+
+<script>
+  if (vtils.inBrowser()) {
+    alert('您在浏览器中...')
+  }
+</script>
+```
+
 ## 使用
 
 在线体验：[https://stackblitz.com/edit/vtils](https://stackblitz.com/edit/vtils)
