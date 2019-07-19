@@ -34,8 +34,8 @@ export class EasyStorageAdapterMemory extends EasyStorageAdapter {
   }
 
   clearSync() {
-    Object.keys(EasyStorageAdapterMemory.storage).forEach(k => {
+    for (const k of Object.keys(EasyStorageAdapterMemory.storage)) {
       delete EasyStorageAdapterMemory.storage[k]
-    })
+    }
   }
 }

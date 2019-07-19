@@ -34,11 +34,11 @@ export class Disposer {
    * @param item 待释放项目
    */
   add(item: DisposerItem | DisposerItem[]) {
-    castArray(item).forEach(item => {
-      if (this.jar.indexOf(item) === -1) {
-        this.jar.push(item)
+    for (const _item of castArray(item)) {
+      if (this.jar.indexOf(_item) === -1) {
+        this.jar.push(_item)
       }
-    })
+    }
   }
 
   /**

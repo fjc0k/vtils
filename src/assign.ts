@@ -25,11 +25,11 @@ export function assign<T extends object>(target: T, ...sources: object[]): T {
     return Object['assign'](target, ...sources)
   }
 
-  sources.forEach(source => {
+  for (const source of sources) {
     forOwn(source, (value, key) => {
       target[key] = value
     })
-  })
+  }
 
   return target
 }

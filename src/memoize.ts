@@ -71,9 +71,9 @@ export function memoize<T extends AnyFunction>(
             delete cache[k]
           },
           clear() {
-            Object.keys(cache).forEach(k => {
+            for (const k of Object.keys(cache)) {
               delete cache[k]
-            })
+            }
           },
         }
       }),

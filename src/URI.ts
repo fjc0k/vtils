@@ -50,11 +50,11 @@ export interface ParseURIQueryFormat<T extends Record<string, any>> {
 export function parseURIQuery<T extends Record<string, any> = Record<string, any>>(query: string, format?: ParseURIQueryFormat<T>): T {
   const parameters: T = {} as any
   query = query.charAt(0) === '?' ? query.substring(1) : query
-  query.split('&').forEach(pair => {
+  for (const pair of query.split('&')) {
     const [key, value] = pair.split('=')
     const decodedKey = decodeURIComponent(key)
     const decodedValue = decodeURIComponent(value)
     ;(parameters as any)[decodedKey] = decodedValue
-  })
+  }
   return isFunction(format) ? format(parameters) : parameters
 }
