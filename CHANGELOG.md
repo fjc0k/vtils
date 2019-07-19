@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.12.3"></a>
+## [2.12.3](https://github.com/fjc0k/vtils/compare/v2.12.2...v2.12.3) (2019-07-19)
+
+
+### Performance Improvements
+
+* 用 for of 重写 forEach ([0f6abb3](https://github.com/fjc0k/vtils/commit/0f6abb3))
+
+
+
 <a name="2.12.2"></a>
 ## [2.12.2](https://github.com/fjc0k/vtils/compare/v2.12.1...v2.12.2) (2019-07-18)
 
