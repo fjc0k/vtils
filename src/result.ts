@@ -5,6 +5,14 @@ import { isPromiseLike } from './is'
  *
  * @param action 要执行的异步操作
  * @returns 返回 `[错误信息, 结果数据]`，错误信息为 `null` 表示没有错误
+ * @example
+ * ```ts
+ * // 异步操作成功
+ * const [err, res] = await result(new Promise(resolve => resolve('ok'))) // => [null, 'ok']
+ *
+ * // 异步操作出错
+ * const [err, res] = await result(new Promise((resolve, reject) => reject('err'))) // => ['err']
+ * ```
  */
 export function result<T extends PromiseLike<any>>(action: T): Promise<[
   any,
@@ -16,6 +24,16 @@ export function result<T extends PromiseLike<any>>(action: T): Promise<[
  *
  * @param action 要执行的函数
  * @returns 返回 `[错误信息, 结果数据]`，错误信息为 `null` 表示没有错误
+ * @example
+ * ```ts
+ * // 函数执行成功
+ * await result(() => 'ok') // => [null, 'ok']
+ * await result(() => new Promise(resolve => resolve('ok'))) // => [null, 'ok']
+ *
+ * // 函数执行出错
+ * await result(() => { throw 'err' }) // => ['err']
+ * await result(() => new Promise((resolve, reject) => reject('err'))) // => ['err']
+ * ```
  */
 export function result<T extends () => any, R extends ReturnType<T>>(action: T): Promise<[
   any,
