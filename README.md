@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.13.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.13.1/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -1156,11 +1156,29 @@ repeat('a', 5) // => aaaaa
 
 #### result
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/result.ts#L9) | [API](https://fjc0k.github.io/vtils/globals.html#result) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/result.ts#L17) | [API](https://fjc0k.github.io/vtils/globals.html#result) | [回目录](#目录)</small>
 
 以数组的方式返回异步操作的结果。
 
+```ts
+// 异步操作成功
+const [err, res] = await result(new Promise(resolve => resolve('ok'))) // => [null, 'ok']
+
+// 异步操作出错
+const [err, res] = await result(new Promise((resolve, reject) => reject('err'))) // => ['err']
+```
+
 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。
+
+```ts
+// 函数执行成功
+await result(() => 'ok') // => [null, 'ok']
+await result(() => new Promise(resolve => resolve('ok'))) // => [null, 'ok']
+
+// 函数执行出错
+await result(() => { throw 'err' }) // => ['err']
+await result(() => new Promise((resolve, reject) => reject('err'))) // => ['err']
+```
 
 #### round
 
