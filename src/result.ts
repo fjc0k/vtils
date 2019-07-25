@@ -27,12 +27,12 @@ export function result<T extends PromiseLike<any>>(action: T): Promise<[
  * @example
  * ```ts
  * // 函数执行成功
- * await result(() => 'ok') // => [null, 'ok']
- * await result(() => new Promise(resolve => resolve('ok'))) // => [null, 'ok']
+ * const [err, res] = await result(() => 'ok') // => [null, 'ok']
+ * const [err, res] = await result(() => new Promise(resolve => resolve('ok'))) // => [null, 'ok']
  *
  * // 函数执行出错
- * await result(() => { throw 'err' }) // => ['err']
- * await result(() => new Promise((resolve, reject) => reject('err'))) // => ['err']
+ * const [err, res] = await result(() => { throw 'err' }) // => ['err']
+ * const [err, res] = await result(() => new Promise((resolve, reject) => reject('err'))) // => ['err']
  * ```
  */
 export function result<T extends () => any, R extends ReturnType<T>>(action: T): Promise<[
