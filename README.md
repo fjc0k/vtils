@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.13.1/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.13.2/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -1172,12 +1172,12 @@ const [err, res] = await result(new Promise((resolve, reject) => reject('err')))
 
 ```ts
 // 函数执行成功
-await result(() => 'ok') // => [null, 'ok']
-await result(() => new Promise(resolve => resolve('ok'))) // => [null, 'ok']
+const [err, res] = await result(() => 'ok') // => [null, 'ok']
+const [err, res] = await result(() => new Promise(resolve => resolve('ok'))) // => [null, 'ok']
 
 // 函数执行出错
-await result(() => { throw 'err' }) // => ['err']
-await result(() => new Promise((resolve, reject) => reject('err'))) // => ['err']
+const [err, res] = await result(() => { throw 'err' }) // => ['err']
+const [err, res] = await result(() => new Promise((resolve, reject) => reject('err'))) // => ['err']
 ```
 
 #### round
