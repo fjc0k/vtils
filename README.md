@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.12.3/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.13.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -86,11 +86,11 @@ alert(shuffle([1, 2, 3, 4]))
 [memoize](#memoize) | [noop](#noop) | [omit](#omit) | [orderBy](#orderby)
 [padEnd](#padend) | [padStart](#padstart) | [parallel](#parallel) | [parseCSSValue](#parsecssvalue)
 [parseURIQuery](#parseuriquery) | [pick](#pick) | [placeKitten](#placekitten) | [pluck](#pluck)
-[randomString](#randomstring) | [range](#range) | [repeat](#repeat) | [round](#round)
-[roundDown](#rounddown) | [roundUp](#roundup) | [safeGet](#safeget) | [sample](#sample)
-[sequential](#sequential) | [shuffle](#shuffle) | [startsWith](#startswith) | [sum](#sum)
-[sumBy](#sumby) | [throttle](#throttle) | [times](#times) | [tryGet](#tryget)
-[unique](#unique) | [values](#values) | [wait](#wait) | 
+[randomString](#randomstring) | [range](#range) | [repeat](#repeat) | [result](#result)
+[round](#round) | [roundDown](#rounddown) | [roundUp](#roundup) | [safeGet](#safeget)
+[sample](#sample) | [sequential](#sequential) | [shuffle](#shuffle) | [startsWith](#startswith)
+[sum](#sum) | [sumBy](#sumby) | [throttle](#throttle) | [times](#times)
+[tryGet](#tryget) | [unique](#unique) | [values](#values) | [wait](#wait)
 <!-- 工具函数i目录 -->
 
 ### 📦 工具类
@@ -1153,6 +1153,14 @@ range(0, -5, -1) // => [0, -1, -2, -3, -4]
 ```ts
 repeat('a', 5) // => aaaaa
 ```
+
+#### result
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/result.ts#L9) | [API](https://fjc0k.github.io/vtils/globals.html#result) | [回目录](#目录)</small>
+
+以数组的方式返回异步操作的结果。
+
+以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。
 
 #### round
 
