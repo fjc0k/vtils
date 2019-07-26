@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.14.0"></a>
+# [2.14.0](https://github.com/fjc0k/vtils/compare/v2.13.2...v2.14.0) (2019-07-26)
+
+
+### Features
+
+* 新增 flat ([f1fcdd3](https://github.com/fjc0k/vtils/commit/f1fcdd3))
+* **defaultTo:** 新增 extraPredictions 参数 ([8e3e58d](https://github.com/fjc0k/vtils/commit/8e3e58d))
+
+
+
 <a name="2.13.2"></a>
 ## [2.13.2](https://github.com/fjc0k/vtils/compare/v2.13.1...v2.13.2) (2019-07-25)
 
