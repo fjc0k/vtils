@@ -7,6 +7,11 @@ test('表现正常', () => {
     1,
   )
 
+  jestExpectEqual(
+    defaultTo(1, 2, [1]),
+    2,
+  )
+
   ;[NaN, null, undefined].forEach(item => {
     jestExpectEqual(
       defaultTo(item, 2),
