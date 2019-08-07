@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.19.0"></a>
+# [2.19.0](https://github.com/fjc0k/vtils/compare/v2.18.0...v2.19.0) (2019-08-07)
+
+
+### Features
+
+* **indent:** 支持函数调用 ([1e34dae](https://github.com/fjc0k/vtils/commit/1e34dae))
+
+
+
 <a name="2.18.0"></a>
 # [2.18.0](https://github.com/fjc0k/vtils/compare/v2.17.0...v2.18.0) (2019-08-07)
 
