@@ -1,44 +1,90 @@
 import { dedent } from './dedent'
 import { jestExpectEqual } from './enhanceJest'
 
-test('空字符串', () => {
-  jestExpectEqual(
-    dedent(''),
-    '',
-  )
+describe('支持函数调用', () => {
+  test('空字符串', () => {
+    jestExpectEqual(
+      dedent(''),
+      '',
+    )
+  })
+
+  test('单行字符串', () => {
+    jestExpectEqual(
+      dedent('hello'),
+      'hello',
+    )
+  })
+
+  test('没有缩进的多行字符串', () => {
+    jestExpectEqual(
+      dedent('hello\nworld'),
+      'hello\nworld',
+    )
+  })
+
+  test('有缩进的多行字符串', () => {
+    jestExpectEqual(
+      dedent(' hello\n  world'),
+      'hello\n world',
+    )
+  })
+
+  test('首尾存在换行符的多行字符串', () => {
+    jestExpectEqual(
+      dedent(`
+        ${'  '}
+        hello
+
+        world
+          ---
+
+      `),
+      'hello\n\nworld\n  ---',
+    )
+  })
 })
 
-test('单行字符串', () => {
-  jestExpectEqual(
-    dedent('hello'),
-    'hello',
-  )
-})
+describe('支持标签模板调用', () => {
+  test('空字符串', () => {
+    jestExpectEqual(
+      dedent``,
+      '',
+    )
+  })
 
-test('没有缩进的多行字符串', () => {
-  jestExpectEqual(
-    dedent('hello\nworld'),
-    'hello\nworld',
-  )
-})
+  test('单行字符串', () => {
+    jestExpectEqual(
+      dedent`hello`,
+      'hello',
+    )
+  })
 
-test('有缩进的多行字符串', () => {
-  jestExpectEqual(
-    dedent(' hello\n  world'),
-    'hello\n world',
-  )
-})
+  test('没有缩进的多行字符串', () => {
+    jestExpectEqual(
+      dedent`hello\nworld`,
+      'hello\nworld',
+    )
+  })
 
-test('首尾存在换行符的多行字符串', () => {
-  jestExpectEqual(
-    dedent(`
-      ${'  '}
-      hello
+  test('有缩进的多行字符串', () => {
+    jestExpectEqual(
+      dedent` hello\n  world`,
+      'hello\n world',
+    )
+  })
 
-      world
-        ---
+  test('首尾存在换行符的多行字符串', () => {
+    jestExpectEqual(
+      dedent`
+        ${'  '}
+        hello
 
-    `),
-    'hello\n\nworld\n  ---',
-  )
+        world
+          ---
+
+      `,
+      'hello\n\nworld\n  ---',
+    )
+  })
 })
