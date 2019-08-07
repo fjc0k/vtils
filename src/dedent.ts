@@ -1,5 +1,3 @@
-import { isArray } from './is'
-
 /**
  * 移除文本中每一行的公共前导空白。
  *
@@ -14,40 +12,7 @@ import { isArray } from './is'
  * `) // => 'hello\nworld\n  -.-'
  * ```
  */
-export function dedent(text: string): string
-
-/**
- * 移除文本中每一行的公共前导空白。
- *
- * @param literals 字面值
- * @param interpolations 插入值
- * @returns 返回操作后的文本
- * @example
- * ```ts
- * dedent`
- *   hello
- *   world
- *     -.-
- * ` // => 'hello\nworld\n  -.-'
- * ```
- */
-export function dedent(literals: TemplateStringsArray, ...interpolations: string[]): string
-
-export function dedent(literals: string | TemplateStringsArray, ...interpolations: string[]): string {
-  let text!: string
-
-  // 抹平函数调用和标签模板调用的差异
-  if (isArray(literals)) {
-    text = ''
-    for (let i = 0; i < interpolations.length; i++) {
-      text += literals[i]
-      text += interpolations[i]
-    }
-    text += literals[literals.length - 1]
-  } else {
-    text = literals as any
-  }
-
+export function dedent(text: string): string {
   // 公共的前导空白
   let commonLeadingWhitespace!: string
   // 第一个非空行
