@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.16.0"></a>
+# [2.16.0](https://github.com/fjc0k/vtils/compare/v2.15.0...v2.16.0) (2019-08-07)
+
+
+### Features
+
+* **dedent:** 采取移除公共前导空白的策略 ([dfe1162](https://github.com/fjc0k/vtils/commit/dfe1162))
+
+
+
 <a name="2.15.0"></a>
 # [2.15.0](https://github.com/fjc0k/vtils/compare/v2.14.0...v2.15.0) (2019-08-07)
 
