@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.15.0"></a>
+# [2.15.0](https://github.com/fjc0k/vtils/compare/v2.14.0...v2.15.0) (2019-08-07)
+
+
+### Features
+
+* 新增 dedent ([a3867af](https://github.com/fjc0k/vtils/commit/a3867af))
+
+
+
 <a name="2.14.0"></a>
 # [2.14.0](https://github.com/fjc0k/vtils/compare/v2.13.2...v2.14.0) (2019-07-26)
 
