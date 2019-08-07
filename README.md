@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.17.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.18.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -75,23 +75,23 @@ alert(shuffle([1, 2, 3, 4]))
 [getType](#gettype) | [groupBy](#groupby) | [has](#has) | [ii](#ii)
 [inAndroid](#inandroid) | [inBrowser](#inbrowser) | [inIOS](#inios) | [inNode](#innode)
 [inRange](#inrange) | [inWechatMiniProgram](#inwechatminiprogram) | [inWechatWebview](#inwechatwebview) | [includes](#includes)
-[isArguments](#isarguments) | [isArray](#isarray) | [isBoolean](#isboolean) | [isChineseIDCardNumber](#ischineseidcardnumber)
-[isDate](#isdate) | [isEmail](#isemail) | [isEmpty](#isempty) | [isEqualArray](#isequalarray)
-[isFinite](#isfinite) | [isFunction](#isfunction) | [isHan](#ishan) | [isInteger](#isinteger)
-[isNaN](#isnan) | [isNegativeInteger](#isnegativeinteger) | [isNil](#isnil) | [isNull](#isnull)
-[isNumber](#isnumber) | [isNumeric](#isnumeric) | [isObject](#isobject) | [isPlainObject](#isplainobject)
-[isPositiveInteger](#ispositiveinteger) | [isPossibleChineseMobilePhoneNumber](#ispossiblechinesemobilephonenumber) | [isPossibleChineseName](#ispossiblechinesename) | [isPromiseLike](#ispromiselike)
-[isRegExp](#isregexp) | [isString](#isstring) | [isUndefined](#isundefined) | [isUrl](#isurl)
-[jestExpectEqual](#jestexpectequal) | [keyBy](#keyby) | [keys](#keys) | [last](#last)
-[loadResource](#loadresource) | [mapValues](#mapvalues) | [memoize](#memoize) | [noop](#noop)
-[omit](#omit) | [orderBy](#orderby) | [padEnd](#padend) | [padStart](#padstart)
-[parallel](#parallel) | [parseCSSValue](#parsecssvalue) | [parseURIQuery](#parseuriquery) | [pick](#pick)
-[placeKitten](#placekitten) | [pluck](#pluck) | [randomString](#randomstring) | [range](#range)
-[repeat](#repeat) | [result](#result) | [round](#round) | [roundDown](#rounddown)
-[roundUp](#roundup) | [safeGet](#safeget) | [sample](#sample) | [sequential](#sequential)
-[shuffle](#shuffle) | [startsWith](#startswith) | [sum](#sum) | [sumBy](#sumby)
-[throttle](#throttle) | [times](#times) | [tryGet](#tryget) | [unique](#unique)
-[values](#values) | [wait](#wait) |  | 
+[indent](#indent) | [isArguments](#isarguments) | [isArray](#isarray) | [isBoolean](#isboolean)
+[isChineseIDCardNumber](#ischineseidcardnumber) | [isDate](#isdate) | [isEmail](#isemail) | [isEmpty](#isempty)
+[isEqualArray](#isequalarray) | [isFinite](#isfinite) | [isFunction](#isfunction) | [isHan](#ishan)
+[isInteger](#isinteger) | [isNaN](#isnan) | [isNegativeInteger](#isnegativeinteger) | [isNil](#isnil)
+[isNull](#isnull) | [isNumber](#isnumber) | [isNumeric](#isnumeric) | [isObject](#isobject)
+[isPlainObject](#isplainobject) | [isPositiveInteger](#ispositiveinteger) | [isPossibleChineseMobilePhoneNumber](#ispossiblechinesemobilephonenumber) | [isPossibleChineseName](#ispossiblechinesename)
+[isPromiseLike](#ispromiselike) | [isRegExp](#isregexp) | [isString](#isstring) | [isUndefined](#isundefined)
+[isUrl](#isurl) | [jestExpectEqual](#jestexpectequal) | [keyBy](#keyby) | [keys](#keys)
+[last](#last) | [loadResource](#loadresource) | [mapValues](#mapvalues) | [memoize](#memoize)
+[noop](#noop) | [omit](#omit) | [orderBy](#orderby) | [padEnd](#padend)
+[padStart](#padstart) | [parallel](#parallel) | [parseCSSValue](#parsecssvalue) | [parseURIQuery](#parseuriquery)
+[pick](#pick) | [placeKitten](#placekitten) | [pluck](#pluck) | [randomString](#randomstring)
+[range](#range) | [repeat](#repeat) | [result](#result) | [round](#round)
+[roundDown](#rounddown) | [roundUp](#roundup) | [safeGet](#safeget) | [sample](#sample)
+[sequential](#sequential) | [shuffle](#shuffle) | [startsWith](#startswith) | [sum](#sum)
+[sumBy](#sumby) | [throttle](#throttle) | [times](#times) | [tryGet](#tryget)
+[unique](#unique) | [values](#values) | [wait](#wait) | 
 <!-- 工具函数i目录 -->
 
 ### 📦 工具类
@@ -271,7 +271,7 @@ document.querySelector('#input').oninput = debounce(
 
 #### dedent
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/dedent.ts#L17) | [API](https://fjc0k.github.io/vtils/globals.html#dedent) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/dedent.ts#L15) | [API](https://fjc0k.github.io/vtils/globals.html#dedent) | [回目录](#目录)</small>
 
 移除文本中每一行的公共前导空白。
 
@@ -281,16 +281,6 @@ dedent(`
   world
     -.-
 `) // => 'hello\nworld\n  -.-'
-```
-
-移除文本中每一行的公共前导空白。
-
-```ts
-dedent`
-  hello
-  world
-    -.-
-` // => 'hello\nworld\n  -.-'
 ```
 
 #### defaultTo
@@ -587,6 +577,17 @@ includes({ x: 1, y: 2 }, 3) // => false
 includes('hello', 'h') // => true
 includes('hello', 'll') // => true
 includes('hello', '123') // => false
+```
+
+#### indent
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/indent.ts#L13) | [API](https://fjc0k.github.io/vtils/globals.html#indent) | [回目录](#目录)</small>
+
+每一行紧跟前导空白的插入值为多行时，保持缩进。
+
+```ts
+const text = 'hello\nworld'
+indent`  ${text}` // => '  hello\n  world'
 ```
 
 #### isArguments
