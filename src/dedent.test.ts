@@ -32,6 +32,7 @@ test('有缩进的多行字符串', () => {
 test('首尾存在换行符的多行字符串', () => {
   jestExpectEqual(
     dedent(`
+      ${'  '}
       hello
 
       world
