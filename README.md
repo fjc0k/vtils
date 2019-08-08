@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.19.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.20.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -271,7 +271,19 @@ document.querySelector('#input').oninput = debounce(
 
 #### dedent
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/dedent.ts#L15) | [API](https://fjc0k.github.io/vtils/globals.html#dedent) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/dedent.ts#L21) | [API](https://fjc0k.github.io/vtils/globals.html#dedent) | [回目录](#目录)</small>
+
+首先，每一行紧跟前导空白的插入值为多行时，保持缩进。
+
+然后，移除每一行的公共前导空白。
+
+```ts
+const text = 'hello\nworld'
+dedent`
+  ${text}
+    -.-
+` // => 'hello\nworld\n  -.-'
+```
 
 移除文本中每一行的公共前导空白。
 

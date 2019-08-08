@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.20.0"></a>
+# [2.20.0](https://github.com/fjc0k/vtils/compare/v2.19.0...v2.20.0) (2019-08-08)
+
+
+### Features
+
+* **dedent:** 支持标签模板字符串调用 ([b212c22](https://github.com/fjc0k/vtils/commit/b212c22))
+* **jestExpectEqual:** 支持设置多个期望值 ([a0ccf7e](https://github.com/fjc0k/vtils/commit/a0ccf7e))
+
+
+
 <a name="2.19.0"></a>
 # [2.19.0](https://github.com/fjc0k/vtils/compare/v2.18.0...v2.19.0) (2019-08-07)
 
