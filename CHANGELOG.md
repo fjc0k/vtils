@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.20.1"></a>
+## [2.20.1](https://github.com/fjc0k/vtils/compare/v2.20.0...v2.20.1) (2019-08-08)
+
+
+### Bug Fixes
+
+* **dedent:** interpolations -> ...interpolations ([718319c](https://github.com/fjc0k/vtils/commit/718319c))
+
+
+
 <a name="2.20.0"></a>
 # [2.20.0](https://github.com/fjc0k/vtils/compare/v2.19.0...v2.20.0) (2019-08-08)
 
