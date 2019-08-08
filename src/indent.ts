@@ -1,4 +1,4 @@
-import { isArray } from './is'
+import { isArray, isFunction } from './is'
 
 /**
  * 每一行紧跟前导空白的插入值为多行时，保持缩进。
@@ -28,14 +28,33 @@ export function indent(literals: TemplateStringsArray, ...interpolations: any[])
  */
 export function indent(text: string, leadingString: string): string
 
+/**
+ * 给文本每一行的开始加上一个前导字符串，前导字符串由回调函数返回。
+ *
+ * @param text 要操作的文本
+ * @param callback 回调函数
+ * @returns 返回结果
+ * @example
+ * ```ts
+ * indent(
+ *   'hello\nworld',
+ *   (lineStr, lineIndex) => `${lineIndex + 1}. `,
+ * )
+ * // => '1. hello\n2. world'
+ * ```
+ */
+export function indent(text: string, callback: (lineString: string, lineIndex: number) => string): string
+
 export function indent(literals: string | TemplateStringsArray, ...interpolations: any[]): string {
   let result = ''
 
   // 函数模式
   if (!isArray(literals)) {
+    const leadingString = interpolations[0]
+    const leadingStringIsFn = isFunction(leadingString)
     result = String(literals)
       .split(/[\r\n]/g)
-      .map(item => `${interpolations[0]}${item}`)
+      .map((item, index) => `${leadingStringIsFn ? leadingString(item, index) : leadingString}${item}`)
       .join('\n')
     return result
   }

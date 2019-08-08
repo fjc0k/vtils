@@ -70,4 +70,22 @@ describe('支持函数模式', () => {
       '//# Hello\n//\n//> nice to meet you!',
     )
   })
+
+  test('支持回调函数', () => {
+    jestExpectEqual(
+      indent(
+        'hello\nworld',
+        (lineStr, lineIndex) => `${lineIndex + 1}. `,
+      ),
+      '1. hello\n2. world',
+    )
+
+    jestExpectEqual(
+      indent(
+        'hello\nworld',
+        lineStr => lineStr === 'hello' ? '+ ' : '- ',
+      ),
+      '+ hello\n- world',
+    )
+  })
 })
