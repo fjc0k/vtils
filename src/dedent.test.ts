@@ -62,4 +62,24 @@ describe('标签模板字符串模式', () => {
       'hello\nworld\n  -.-',
     )
   })
+
+  test('bug 1', () => {
+    const x = dedent`
+      String literal, provides the branch for the current build.
+
+      @example
+      \`\`\`sh
+      DRONE_COMMIT_BRANCH=master
+      \`\`\`
+    `
+    const y = dedent(indent`
+      String literal, provides the branch for the current build.
+
+      @example
+      \`\`\`sh
+      DRONE_COMMIT_BRANCH=master
+      \`\`\`
+    `)
+    jestExpectEqual(x, y)
+  })
 })

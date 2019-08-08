@@ -40,7 +40,7 @@ export function dedent(literals: string | TemplateStringsArray, ...interpolation
   let text!: string
 
   if (isArray(literals)) {
-    text = indent(literals as any, interpolations)
+    text = indent(literals as any, ...interpolations)
   } else {
     text = literals as any
   }
