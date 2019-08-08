@@ -1,3 +1,25 @@
+import { indent } from './indent'
+import { isArray } from './is'
+
+/**
+ * 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。
+ *
+ * 然后，移除每一行的公共前导空白。
+ *
+ * @param literals 字面值
+ * @param interpolations 插入值
+ * @returns 返回结果
+ * @example
+ * ```ts
+ * const text = 'hello\nworld'
+ * dedent`
+ *   ${text}
+ *     -.-
+ * ` // => 'hello\nworld\n  -.-'
+ * ```
+ */
+export function dedent(literals: TemplateStringsArray, ...interpolations: any[]): string
+
 /**
  * 移除文本中每一行的公共前导空白。
  *
@@ -12,7 +34,17 @@
  * `) // => 'hello\nworld\n  -.-'
  * ```
  */
-export function dedent(text: string): string {
+export function dedent(text: string): string
+
+export function dedent(literals: string | TemplateStringsArray, ...interpolations: any[]): string {
+  let text!: string
+
+  if (isArray(literals)) {
+    text = indent(literals as any, interpolations)
+  } else {
+    text = literals as any
+  }
+
   // 公共的前导空白
   let commonLeadingWhitespace!: string
   // 第一个非空行
