@@ -64,8 +64,8 @@ export function indent(literals: string | TemplateStringsArray, ...interpolation
     const literal = literals[i]
     let interpolation = interpolations[i]
     const match = i === 0
-      ? literal.match(/[\r\n]?(\s+)$/)
-      : literal.match(/[\r\n](\s+)$/)
+      ? literal.match(/[\r\n]*(\s*)$/)
+      : literal.match(/[\r\n]+(\s*)$/)
     if (match) {
       interpolation = String(interpolation)
         .split(/[\r\n]/g)

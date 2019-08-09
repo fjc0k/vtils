@@ -44,10 +44,15 @@ describe('支持标签模板字符串模式', () => {
   })
 
   test('只处理紧跟前导空白后面的插入值', () => {
-    jestExpectEqual(
-      indent`hi\n  ${text}  ${text}`,
-      'hi\n  a\n  b\n   c  a\nb\n c',
-    )
+    const x = indent`hi\n  ${text}  ${text}`
+    const y = 'hi\n  a\n  b\n   c  a\nb\n c'
+    jestExpectEqual(x, y)
+  })
+
+  test('bug 1', () => {
+    const x = indent`x\n\n${text}`
+    const y = 'x\n\na\nb\n c'
+    jestExpectEqual(x, y)
   })
 })
 

@@ -82,4 +82,22 @@ describe('标签模板字符串模式', () => {
     `)
     jestExpectEqual(x, y)
   })
+
+  // 经排查是 indent 标签模板字符串的 bug，保留做测试
+  test('bug 2', () => {
+    const t = dedent`
+      d
+      e
+    `
+    const x = dedent`
+      a
+      b
+
+      c
+
+      ${t}
+    `
+    const y = 'a\nb\n\nc\n\nd\ne'
+    jestExpectEqual(x, y)
+  })
 })
