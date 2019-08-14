@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.21.1/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.22.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -83,15 +83,15 @@ alert(shuffle([1, 2, 3, 4]))
 [isPlainObject](#isplainobject) | [isPositiveInteger](#ispositiveinteger) | [isPossibleChineseMobilePhoneNumber](#ispossiblechinesemobilephonenumber) | [isPossibleChineseName](#ispossiblechinesename)
 [isPromiseLike](#ispromiselike) | [isRegExp](#isregexp) | [isString](#isstring) | [isUndefined](#isundefined)
 [isUrl](#isurl) | [jestExpectEqual](#jestexpectequal) | [keyBy](#keyby) | [keys](#keys)
-[last](#last) | [loadResource](#loadresource) | [mapValues](#mapvalues) | [memoize](#memoize)
-[noop](#noop) | [omit](#omit) | [orderBy](#orderby) | [padEnd](#padend)
-[padStart](#padstart) | [parallel](#parallel) | [parseCSSValue](#parsecssvalue) | [parseURIQuery](#parseuriquery)
-[pick](#pick) | [placeKitten](#placekitten) | [pluck](#pluck) | [randomString](#randomstring)
-[range](#range) | [repeat](#repeat) | [result](#result) | [round](#round)
-[roundDown](#rounddown) | [roundUp](#roundup) | [safeGet](#safeget) | [sample](#sample)
-[sequential](#sequential) | [shuffle](#shuffle) | [startsWith](#startswith) | [sum](#sum)
-[sumBy](#sumby) | [throttle](#throttle) | [times](#times) | [tryGet](#tryget)
-[unique](#unique) | [values](#values) | [wait](#wait) | 
+[last](#last) | [loadResource](#loadresource) | [loop](#loop) | [mapValues](#mapvalues)
+[memoize](#memoize) | [noop](#noop) | [omit](#omit) | [orderBy](#orderby)
+[padEnd](#padend) | [padStart](#padstart) | [parallel](#parallel) | [parseCSSValue](#parsecssvalue)
+[parseURIQuery](#parseuriquery) | [pick](#pick) | [placeKitten](#placekitten) | [pluck](#pluck)
+[randomString](#randomstring) | [range](#range) | [repeat](#repeat) | [result](#result)
+[round](#round) | [roundDown](#rounddown) | [roundUp](#roundup) | [safeGet](#safeget)
+[sample](#sample) | [sequential](#sequential) | [shuffle](#shuffle) | [startsWith](#startswith)
+[sum](#sum) | [sumBy](#sumby) | [throttle](#throttle) | [times](#times)
+[tryGet](#tryget) | [unique](#unique) | [values](#values) | [wait](#wait)
 <!-- 工具函数i目录 -->
 
 ### 📦 工具类
@@ -1010,6 +1010,20 @@ loadResource([
 ]).then(() => {
   // 资源加载完成后的操作
 })
+```
+
+#### loop
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/loop.ts#L16) | [API](https://fjc0k.github.io/vtils/globals.html#loop) | [回目录](#目录)</small>
+
+每隔 `interval` 毫秒执行一次 `callback`。
+
+```ts
+// 每隔 1000 毫秒输出一次 hello
+const stop = loop(
+  1000,
+  () => console.log('hello'),
+)
 ```
 
 #### mapValues
