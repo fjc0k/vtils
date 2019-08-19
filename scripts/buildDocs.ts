@@ -1,7 +1,7 @@
 import _ from 'shelljs'
 import fs from 'fs-extra'
 import path from 'path'
-import { chunk, Defined, fill, forOwn, groupBy, ii } from '../src'
+import { chunk, dedent, Defined, fill, forOwn, groupBy, ii } from '../src'
 import { Reflection, ReflectionKind } from 'typedoc'
 
 const pkg = require('../package.json') as { version: number }
@@ -67,11 +67,11 @@ ii(async function main() {
             body: (item.signatures || []).map(signature => {
               const desc = getDesc(signature)
               const example = getExample(signature)
-              return `
+              return dedent`
                 ${desc}
 
                 ${example}
-              `.replace(/^ {16}/gm, '').trim()
+              `
             }).join('\n\n'),
             source: item.sources![0],
           })
@@ -81,13 +81,14 @@ ii(async function main() {
         list.forEach(item => {
           const desc = getDesc(item)
           const example = getExample(item)
-            ;(briefListByKind[kind] || (briefListByKind[kind] = [])).push({
+          briefListByKind[kind] = briefListByKind[kind] || []
+          briefListByKind[kind].push({
             name: item.name,
-            body: `
-                ${desc}
+            body: dedent`
+              ${desc}
 
-                ${example}
-              `.replace(/^ {16}/gm, '').trim(),
+              ${example}
+            `,
             source: item.sources![0],
           })
         })
@@ -97,13 +98,14 @@ ii(async function main() {
           if (item.sources![0].fileName !== 'enhanceType.ts') return
           const desc = getDesc(item)
           const example = getExample(item)
-          ;(briefListByKind[kind] || (briefListByKind[kind] = [])).push({
+          briefListByKind[kind] = briefListByKind[kind] || []
+          briefListByKind[kind].push({
             name: item.name,
-            body: `
+            body: dedent`
               ${desc}
 
               ${example}
-            `.replace(/^ {14}/gm, '').trim(),
+            `,
             source: item.sources![0],
           })
         })
@@ -125,9 +127,9 @@ ii(async function main() {
               ...chunk(
                 briefList.map(
                   brief => {
-                    return `
+                    return dedent`
                       [${brief.name}](#${brief.name.toLowerCase()})
-                    `.replace(/^ {22}/gm, '').trim()
+                    `
                   },
                 ),
                 contentItemCountPerLineByKind[kind]!,
@@ -149,13 +151,13 @@ ii(async function main() {
                     ? `https://fjc0k.github.io/vtils/classes/${brief.name.toLowerCase()}.html`
                     : `https://fjc0k.github.io/vtils/globals.html#${brief.name.toLowerCase()}`
                 )
-                return `
+                return dedent`
                   #### ${brief.name}
 
                   <small>[源码](${sourceUrl}) | [API](${apiUrl}) | [回目录](#目录)</small>
 
                   ${brief.body}
-                `.replace(/^ {18}/gm, '').trim()
+                `
               },
             ).join('\n\n')
           }\n$2`,
