@@ -139,3 +139,18 @@ export type If<Condition, Then, Else> = Condition extends true ? Then : Else
  * ```
  */
 export type Defined<T> = Exclude<T, undefined>
+
+/**
+ * 类似 `ReturnType`，不过会返回 `Promise<R>` 中的 `R`。
+ *
+ * @example
+ * ```ts
+ * type Result0 = ReturnType<() => Promise<number>> // => Promise<number>
+ * type Result1 = AsyncReturnType<() => Promise<number>> // => number
+ * ```
+ */
+export type AsyncReturnType<T extends (...args: any[]) => Promise<any>> = (
+  T extends (...args: any[]) => Promise<infer R>
+    ? R
+    : any
+)
