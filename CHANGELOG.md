@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.23.0"></a>
+# [2.23.0](https://github.com/fjc0k/vtils/compare/v2.22.0...v2.23.0) (2019-08-26)
+
+
+### Features
+
+* **enhanceType:** 新增 AsyncReturnType ([5e5682a](https://github.com/fjc0k/vtils/commit/5e5682a))
+
+
+
 <a name="2.22.0"></a>
 # [2.22.0](https://github.com/fjc0k/vtils/compare/v2.21.1...v2.22.0) (2019-08-14)
 

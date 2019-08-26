@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.22.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.23.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -110,8 +110,8 @@ alert(shuffle([1, 2, 3, 4]))
 <!-- 工具类型!目录 -->
 👇 | 👇 | 👇 | 👇 | 👇 | 👇 | 👇 | 👇 | 👇
 --- | --- | --- | --- | --- | --- | --- | --- | ---
-[AnyFunction](#anyfunction) | [AnyObject](#anyobject) | [AsyncOrSync](#asyncorsync) | [Brand](#brand) | [Defined](#defined) | [If](#if) | [IsNever](#isnever) | [LiteralUnion](#literalunion) | [Merge](#merge)
-[Omit](#omit) | [OneOrMore](#oneormore) | [ValueOf](#valueof) |  |  |  |  |  | 
+[AnyFunction](#anyfunction) | [AnyObject](#anyobject) | [AsyncOrSync](#asyncorsync) | [AsyncReturnType](#asyncreturntype) | [Brand](#brand) | [Defined](#defined) | [If](#if) | [IsNever](#isnever) | [LiteralUnion](#literalunion)
+[Merge](#merge) | [Omit](#omit) | [OneOrMore](#oneormore) | [ValueOf](#valueof) |  |  |  |  | 
 <!-- 工具类型i目录 -->
 
 ## 工具列表
@@ -1656,6 +1656,17 @@ wechat.invoke('scanQRCode').then(res => {
 type X = PromiseLike<string> | string
 // after
 type X = AsyncOrSync<string>
+```
+
+#### AsyncReturnType
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/enhanceType.ts#L152) | [API](https://fjc0k.github.io/vtils/globals.html#asyncreturntype) | [回目录](#目录)</small>
+
+类似 `ReturnType`，不过会返回 `Promise<R>` 中的 `R`。
+
+```ts
+type Result0 = ReturnType<() => Promise<number>> // => Promise<number>
+type Result1 = AsyncReturnType<() => Promise<number>> // => number
 ```
 
 #### Brand
