@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.24.0"></a>
+# [2.24.0](https://github.com/fjc0k/vtils/compare/v2.23.0...v2.24.0) (2019-08-30)
+
+
+### Features
+
+* 新增 partial 和 partialBy 类型辅助函数 ([f478751](https://github.com/fjc0k/vtils/commit/f478751))
+
+
+
 <a name="2.23.0"></a>
 # [2.23.0](https://github.com/fjc0k/vtils/compare/v2.22.0...v2.23.0) (2019-08-26)
 
