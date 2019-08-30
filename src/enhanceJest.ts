@@ -9,3 +9,6 @@ export function jestExpectEqual<T>(actual: T, ...expected: T[]) {
     expect(actual).toEqual(item)
   })
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function expectType<T>(value: T) {}
