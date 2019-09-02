@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.25.0"></a>
+# [2.25.0](https://github.com/fjc0k/vtils/compare/v2.24.0...v2.25.0) (2019-09-02)
+
+
+### Features
+
+* 新增 entries ([0423149](https://github.com/fjc0k/vtils/commit/0423149))
+
+
+
 <a name="2.24.0"></a>
 # [2.24.0](https://github.com/fjc0k/vtils/compare/v2.23.0...v2.24.0) (2019-08-30)
 
