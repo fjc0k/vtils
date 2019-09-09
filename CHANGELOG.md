@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.26.0"></a>
+# [2.26.0](https://github.com/fjc0k/vtils/compare/v2.25.0...v2.26.0) (2019-09-09)
+
+
+### Features
+
+* 新增 remove、removeByValue ([a98695c](https://github.com/fjc0k/vtils/commit/a98695c))
+
+
+
 <a name="2.25.0"></a>
 # [2.25.0](https://github.com/fjc0k/vtils/compare/v2.24.0...v2.25.0) (2019-09-02)
 

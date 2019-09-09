@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.25.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.26.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -88,11 +88,12 @@ alert(shuffle([1, 2, 3, 4]))
 [omit](#omit) | [orderBy](#orderby) | [padEnd](#padend) | [padStart](#padstart)
 [parallel](#parallel) | [parseCSSValue](#parsecssvalue) | [parseURIQuery](#parseuriquery) | [partial](#partial)
 [partialBy](#partialby) | [pick](#pick) | [placeKitten](#placekitten) | [pluck](#pluck)
-[randomString](#randomstring) | [range](#range) | [repeat](#repeat) | [result](#result)
-[round](#round) | [roundDown](#rounddown) | [roundUp](#roundup) | [safeGet](#safeget)
-[sample](#sample) | [sequential](#sequential) | [shuffle](#shuffle) | [startsWith](#startswith)
-[sum](#sum) | [sumBy](#sumby) | [throttle](#throttle) | [times](#times)
-[tryGet](#tryget) | [unique](#unique) | [values](#values) | [wait](#wait)
+[randomString](#randomstring) | [range](#range) | [remove](#remove) | [removeByValue](#removebyvalue)
+[repeat](#repeat) | [result](#result) | [round](#round) | [roundDown](#rounddown)
+[roundUp](#roundup) | [safeGet](#safeget) | [sample](#sample) | [sequential](#sequential)
+[shuffle](#shuffle) | [startsWith](#startswith) | [sum](#sum) | [sumBy](#sumby)
+[throttle](#throttle) | [times](#times) | [tryGet](#tryget) | [unique](#unique)
+[values](#values) | [wait](#wait) |  | 
 <!-- 工具函数i目录 -->
 
 ### 📦 工具类
@@ -1266,6 +1267,26 @@ randomString() // => m481rnmse1m
 ```ts
 range(0, 5) // => [0, 1, 2, 3, 4]
 range(0, -5, -1) // => [0, -1, -2, -3, -4]
+```
+
+#### remove
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/remove.ts#L12) | [API](https://fjc0k.github.io/vtils/globals.html#remove) | [回目录](#目录)</small>
+
+根据索引原地删除数组中指定的值。
+
+```ts
+remove([1, 2, 3], 1) // => [1, 3]
+```
+
+#### removeByValue
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/src/removeByValue.ts#L12) | [API](https://fjc0k.github.io/vtils/globals.html#removebyvalue) | [回目录](#目录)</small>
+
+原地删除数组中第一次出现的指定值。
+
+```ts
+removeByValue([1, 2, 3], 1) // => [2, 3]
 ```
 
 #### repeat
