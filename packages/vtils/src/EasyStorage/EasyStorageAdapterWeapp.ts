@@ -17,7 +17,7 @@ export class EasyStorageAdapterWeapp extends EasyStorageAdapter {
       wx.setStorage({
         key: k,
         data: [EasyStorageAdapterWeapp.FLAG, v],
-        success: resolve,
+        success: resolve as any,
         fail: reject,
       })
     })

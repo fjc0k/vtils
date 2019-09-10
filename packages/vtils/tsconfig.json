@@ -1,25 +1,6 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "strict": true,
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "declaration": true,
-    "removeComments": false,
-    "esModuleInterop": true,
-    "outDir": "./lib",
-    "newLine": "LF",
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ]
-  },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "outDir": "./lib"
+  }
 }

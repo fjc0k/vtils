@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": false,
+    "esModuleInterop": true,
+    "newLine": "LF",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ]
+  }
+}
