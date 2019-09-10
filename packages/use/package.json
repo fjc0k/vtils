@@ -47,7 +47,6 @@
     "dts-bundle-generator": "^3.2.0",
     "fs-extra": "^8.1.0",
     "gh-pages": "^2.0.1",
-    "react": "^16.9.0",
     "rollup-plugin-typescript2": "^0.21.1",
     "shelljs": "^0.8.3",
     "ts-node": "^8.0.2",
@@ -55,6 +54,7 @@
     "typescript": "^3.4.5"
   },
   "peerDependencies": {
-    "vtils": "^2.26.1-beta.2"
+    "vtils": "^2.26.0",
+    "react": "^16.8.0"
   }
 }
