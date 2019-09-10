@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.27.0](https://github.com/fjc0k/vtils/compare/v2.27.0-beta.0...v2.27.0) (2019-09-10)
+
+**Note:** Version bump only for package vtils
+
+
+
+
+
 # [2.27.0-beta.0](https://github.com/fjc0k/vtils/compare/v2.26.1-beta.2...v2.27.0-beta.0) (2019-09-10)
 
 
