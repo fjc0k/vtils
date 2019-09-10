@@ -4,5 +4,10 @@
   "packages": [
     "packages/*"
   ],
+  "command": {
+    "version": {
+      "message": "chore(release): publish %s"
+    }
+  },
   "version": "2.26.1-beta.0"
 }

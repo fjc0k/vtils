@@ -8,8 +8,8 @@
     "fix": "yarn lint --fix",
     "lint": "eslint . --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint",
     "test": "jest --coverage",
-    "release": "lerna publish --force-publish=* --exact --skip-temp-tag",
-    "releaseBeta": "lerna publish --force-publish=* --exact --skip-temp-tag --preid=beta --npm-tag=beta"
+    "release": "lerna publish --conventional-commits --force-publish=* --exact --skip-temp-tag",
+    "releaseBeta": "lerna publish --conventional-commits --force-publish=* --exact --skip-temp-tag --preid=beta --npm-tag=beta"
   },
   "jest": {
     "preset": "ts-jest",
