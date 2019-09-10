@@ -30,9 +30,9 @@
     "url": "https://github.com/fjc0k"
   },
   "scripts": {
-    "buildLib": "yarn ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildLib.ts",
-    "buildDocs": "yarn ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildDocs.ts",
-    "releaseDocs": "gh-pages -d .typedoc",
+    "buildLib": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildLib.ts",
+    "buildDocs": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildDocs.ts",
+    "releaseDocs": "gh-pages --dist .typedoc --dest vtils",
     "version": "yarn buildLib && yarn buildDocs && git add README.md README_TYPEDOC.md && yarn releaseDocs"
   },
   "devDependencies": {

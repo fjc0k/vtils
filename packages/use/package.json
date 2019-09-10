@@ -35,15 +35,21 @@
     "url": "https://github.com/fjc0k"
   },
   "scripts": {
-    "buildLib": "yarn ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildLib.ts",
-    "buildDocs": "yarn ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildDocs.ts",
-    "releaseDocs": "gh-pages -d .typedoc",
+    "buildLib": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildLib.ts",
+    "buildDocs": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildDocs.ts",
+    "releaseDocs": "gh-pages --dist .typedoc --dest use",
     "version": "yarn buildLib && yarn buildDocs && git add README.md README_TYPEDOC.md && yarn releaseDocs"
   },
   "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/shelljs": "^0.8.5",
     "bili": "^4.8.0",
+    "dts-bundle-generator": "^3.2.0",
+    "fs-extra": "^8.1.0",
     "gh-pages": "^2.0.1",
+    "react": "^16.9.0",
     "rollup-plugin-typescript2": "^0.21.1",
+    "shelljs": "^0.8.3",
     "ts-node": "^8.0.2",
     "typedoc": "^0.15.0-0",
     "typescript": "^3.4.5"

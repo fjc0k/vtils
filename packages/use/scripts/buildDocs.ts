@@ -1,7 +1,7 @@
 import _ from 'shelljs'
 import fs from 'fs-extra'
 import path from 'path'
-import {chunk, dedent, Defined, fill, forOwn, groupBy, ii} from '../src'
+import {chunk, dedent, Defined, fill, forOwn, groupBy, ii} from 'vtils'
 import {Reflection, ReflectionKind} from 'typedoc'
 
 const pkg = require('../package.json') as { version: number }
@@ -33,8 +33,8 @@ ii(async function main() {
   // 版本号同步
   _.sed(
     '-i',
-    /vtils@[^/]+/g,
-    `vtils@${pkg.version}`,
+    /@vtils\/use@[^/]+/g,
+    `@vtils/use@${pkg.version}`,
     readMeFile,
   )
 
@@ -46,14 +46,10 @@ ii(async function main() {
   const listByKind = groupBy(list, item => item.kind)
   const briefListByKind: Record<ReflectionKind, Brief[]> = {} as any
   const readMeFlagByKind: Partial<Record<ReflectionKind, string>> = {
-    [ReflectionKind.Function]: '工具函数',
-    [ReflectionKind.Class]: '工具类',
-    [ReflectionKind.TypeAlias]: '工具类型',
+    [ReflectionKind.Function]: 'Hooks',
   }
   const contentItemCountPerLineByKind: Partial<Record<ReflectionKind, number>> = {
     [ReflectionKind.Function]: 4,
-    [ReflectionKind.Class]: 3,
-    [ReflectionKind.TypeAlias]: 9,
   }
 
   let readme = (await fs.readFile(readMeFile)).toString()
@@ -73,39 +69,6 @@ ii(async function main() {
                 ${example}
               `
             }).join('\n\n'),
-            source: item.sources![0],
-          })
-        })
-        break
-      case ReflectionKind.Class:
-        list.forEach(item => {
-          const desc = getDesc(item)
-          const example = getExample(item)
-          briefListByKind[kind] = briefListByKind[kind] || []
-          briefListByKind[kind].push({
-            name: item.name,
-            body: dedent`
-              ${desc}
-
-              ${example}
-            `,
-            source: item.sources![0],
-          })
-        })
-        break
-      case ReflectionKind.TypeAlias:
-        list.forEach(item => {
-          if (item.sources![0].fileName !== 'enhanceType.ts') return
-          const desc = getDesc(item)
-          const example = getExample(item)
-          briefListByKind[kind] = briefListByKind[kind] || []
-          briefListByKind[kind].push({
-            name: item.name,
-            body: dedent`
-              ${desc}
-
-              ${example}
-            `,
             source: item.sources![0],
           })
         })
@@ -145,11 +108,11 @@ ii(async function main() {
           `$1\n${
             briefList.map(
               brief => {
-                const sourceUrl = `https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/${brief.source.fileName}#L${brief.source.line}`
+                const sourceUrl = `https://github.com/fjc0k/vtils/blob/master/packages/use/src/${brief.source.fileName}#L${brief.source.line}`
                 const apiUrl = (
                   Number(kind) === ReflectionKind.Class
-                    ? `https://fjc0k.github.io/vtils/vtils/classes/${brief.name.toLowerCase()}.html`
-                    : `https://fjc0k.github.io/vtils/vtils/globals.html#${brief.name.toLowerCase()}`
+                    ? `https://fjc0k.github.io/vtils/use/classes/${brief.name.toLowerCase()}.html`
+                    : `https://fjc0k.github.io/vtils/use/globals.html#${brief.name.toLowerCase()}`
                 )
                 return dedent`
                   #### ${brief.name}

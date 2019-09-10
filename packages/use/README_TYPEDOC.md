@@ -24,25 +24,3 @@ npm i @vtils/use --save
 <script src="https://cdn.jsdelivr.net/npm/@vtils/use@2.26.1-beta.2/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
-<!-- TYPEDOC -->
-
-## 目录
-<!-- Hooks!目录 -->
-👇 | 👇 | 👇 | 👇
---- | --- | --- | ---
-[useEasyValidator](#useeasyvalidator) | [useLiveEasyValidator](#useliveeasyvalidator) |  | 
-<!-- Hooksi目录 -->
-
-## 列表
-
-<!-- Hooks!内容 -->
-#### useEasyValidator
-
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/use/src/useEasyValidator.ts#L21) | [API](https://fjc0k.github.io/vtils/use/globals.html#useeasyvalidator) | [回目录](#目录)</small>
-
-数据校验器。
-
-#### useLiveEasyValidator
-
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/use/src/useLiveEasyValidator.ts#L5) | [API](https://fjc0k.github.io/vtils/use/globals.html#useliveeasyvalidator) | [回目录](#目录)</small>
-<!-- Hooksi内容 -->

@@ -5,7 +5,7 @@
 <h2 align="center">小巧实用的 JavaScript 工具类库。</h2>
 
 <p align="center">
-  <a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/</a>
+  <a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/vtils</a>
 </p>
 
 ## 特性
