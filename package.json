@@ -4,9 +4,12 @@
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "fix": "yarn lint --fix",
     "lint": "eslint . --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "release": "lerna publish --force-publish=* --exact --skip-temp-tag",
+    "releaseBeta": "lerna publish --force-publish=* --exact --skip-temp-tag --preid=beta --npm-tag=beta"
   },
   "jest": {
     "preset": "ts-jest",
