@@ -1,4 +1,4 @@
-import { isFunction, isPositiveInteger } from './is'
+import {isFunction, isPositiveInteger} from './is'
 
 /**
  * 将 `arr` 拆分成多个 `size` 长度的区块，并将它们组合成一个新数组返回。

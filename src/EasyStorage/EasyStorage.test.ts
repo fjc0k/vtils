@@ -1,10 +1,10 @@
 import * as Taro from '@tarojs/taro-h5'
-import { AnyFunction } from '../enhanceType'
-import { EasyStorage } from './EasyStorage'
-import { EasyStorageAdapterMemory } from './EasyStorageAdapterMemory'
-import { EasyStorageAdapterWeapp } from './EasyStorageAdapterWeapp'
-import { EasyStorageDriverBrowserLocalStorage, EasyStorageDriverBrowserSessionStorage } from './EasyStorageAdapterBrowser'
-import { ii } from '../ii'
+import {AnyFunction} from '../enhanceType'
+import {EasyStorage} from './EasyStorage'
+import {EasyStorageAdapterMemory} from './EasyStorageAdapterMemory'
+import {EasyStorageAdapterWeapp} from './EasyStorageAdapterWeapp'
+import {EasyStorageDriverBrowserLocalStorage, EasyStorageDriverBrowserSessionStorage} from './EasyStorageAdapterBrowser'
+import {ii} from '../ii'
 
 ii(function patchWX() {
   const originalTaroGetStorage = Taro.getStorage
@@ -72,8 +72,8 @@ adapters.forEach(Adapter => {
         str: 'str',
         num: 100,
         bool: true,
-        obj: { x: 1, y: '3' },
-        arr: [3, { 2: 4 }, false, 'hello'],
+        obj: {x: 1, y: '3'},
+        arr: [3, {2: 4}, false, 'hello'],
       }
       await Promise.all(
         storageKeys.map(async (key, index) => {

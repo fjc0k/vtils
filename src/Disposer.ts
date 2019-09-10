@@ -1,5 +1,5 @@
-import { castArray } from './castArray'
-import { parallel } from './parallel'
+import {castArray} from './castArray'
+import {parallel} from './parallel'
 
 /**
  * 待释放项目。

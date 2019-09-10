@@ -1,6 +1,6 @@
-import { dedent } from './dedent'
-import { indent } from './indent'
-import { jestExpectEqual } from './enhanceJest'
+import {dedent} from './dedent'
+import {indent} from './indent'
+import {jestExpectEqual} from './enhanceJest'
 
 const text = 'a\nb\n c'
 

@@ -1,4 +1,4 @@
-import { isFunction } from './is'
+import {isFunction} from './is'
 
 export interface PluckGetValueIteratee<T, V> {
   (item: T, index: number, data: T[]): V,

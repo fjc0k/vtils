@@ -1,7 +1,7 @@
-import { jestExpectEqual } from './enhanceJest'
-import { sequential } from './sequential'
-import { sum } from './sum'
-import { wait } from './wait'
+import {jestExpectEqual} from './enhanceJest'
+import {sequential} from './sequential'
+import {sum} from './sum'
+import {wait} from './wait'
 
 test('依次执行任务，并返回各个任务执行结果组成的数组', async () => {
   let i = 0

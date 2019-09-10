@@ -1,5 +1,5 @@
-import { forOwn } from './forOwn'
-import { jestExpectEqual } from './enhanceJest'
+import {forOwn} from './forOwn'
+import {jestExpectEqual} from './enhanceJest'
 
 test('遍历对象正常', () => {
   const obj = {

@@ -1,4 +1,4 @@
-import { isPromiseLike } from './is'
+import {isPromiseLike} from './is'
 
 /**
  * 以数组的方式返回异步操作的结果。

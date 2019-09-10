@@ -1,4 +1,4 @@
-import { isArray, isFunction } from './is'
+import {isArray, isFunction} from './is'
 
 /**
  * 每一行紧跟前导空白的插入值为多行时，保持缩进。

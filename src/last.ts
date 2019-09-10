@@ -1,4 +1,4 @@
-import { If, IsNever } from './enhanceType'
+import {If, IsNever} from './enhanceType'
 
 /**
  * 返回数组 `arr` 的最后一项。

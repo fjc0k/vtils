@@ -1,4 +1,4 @@
-import { AnyObject } from './enhanceType'
+import {AnyObject} from './enhanceType'
 
 /**
  * TypeScript 中 `Partial` 的函数版本。

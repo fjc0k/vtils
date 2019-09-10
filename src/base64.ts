@@ -1,4 +1,4 @@
-import { inNode } from './env'
+import {inNode} from './env'
 
 let encode!: (input: string) => string
 let decode!: (input: string) => string

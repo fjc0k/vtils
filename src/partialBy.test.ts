@@ -1,6 +1,6 @@
-import { expectType, jestExpectEqual } from './enhanceJest'
-import { PartialBy } from './enhanceType'
-import { partialBy } from './partialBy'
+import {expectType, jestExpectEqual} from './enhanceJest'
+import {PartialBy} from './enhanceType'
+import {partialBy} from './partialBy'
 
 test('表现正常', () => {
   const obj = {

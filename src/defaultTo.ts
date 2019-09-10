@@ -1,4 +1,4 @@
-import { isNaN, isNil } from './is'
+import {isNaN, isNil} from './is'
 
 /**
  * 检查 `value` 是否是 `null`、`undefined`、`NaN`，

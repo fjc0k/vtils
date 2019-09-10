@@ -1,5 +1,5 @@
-import { has } from './has'
-import { jestExpectEqual } from './enhanceJest'
+import {has} from './has'
+import {jestExpectEqual} from './enhanceJest'
 
 test('空值时返回 false', () => {
   ['1', 'x', 'ff', ''].forEach(key => {

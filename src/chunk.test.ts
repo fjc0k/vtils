@@ -1,5 +1,5 @@
-import { chunk } from './chunk'
-import { jestExpectEqual } from './enhanceJest'
+import {chunk} from './chunk'
+import {jestExpectEqual} from './enhanceJest'
 
 test('区块长度为非正整数时抛出错误', () => {
   expect(() => chunk([], -111)).toThrowErrorMatchingInlineSnapshot(

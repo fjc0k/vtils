@@ -1,5 +1,5 @@
-import { EasyStorageAdapter } from './EasyStorageAdapter'
-import { isArray } from '../is'
+import {EasyStorageAdapter} from './EasyStorageAdapter'
+import {isArray} from '../is'
 
 /**
  * 微信小程序 `Storage` 适配器。

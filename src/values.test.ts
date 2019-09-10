@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { values } from './values'
+import {jestExpectEqual} from './enhanceJest'
+import {values} from './values'
 
 test('表现正常', () => {
   const sym = Symbol()

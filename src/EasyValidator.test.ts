@@ -1,8 +1,8 @@
-import { EasyValidator, EasyValidatorRules } from './EasyValidator'
-import { ii } from './ii'
-import { jestExpectEqual } from './enhanceJest'
-import { pluck } from './pluck'
-import { wait } from './wait'
+import {EasyValidator, EasyValidatorRules} from './EasyValidator'
+import {ii} from './ii'
+import {jestExpectEqual} from './enhanceJest'
+import {pluck} from './pluck'
+import {wait} from './wait'
 
 type Data = {
   number?: string,
@@ -70,12 +70,12 @@ test('综合测试', async () => {
     },
     {
       key: 'customSyncFn',
-      test: ({ customSyncFn }) => /abc/.test(customSyncFn!),
+      test: ({customSyncFn}) => /abc/.test(customSyncFn!),
       message: '请输入包含abc的文字',
     },
     {
       key: 'customAsyncFn',
-      test: async ({ customAsyncFn }) => {
+      test: async ({customAsyncFn}) => {
         await wait(500)
         return /abc/.test(customAsyncFn!)
       },
@@ -84,12 +84,12 @@ test('综合测试', async () => {
     {
       key: 'pass1',
       required: true,
-      test: ({ pass1 }) => pass1!.length > 6,
+      test: ({pass1}) => pass1!.length > 6,
       message: '请输入大于6位的密码',
     },
     {
       key: 'pass2',
-      test: ({ pass1, pass2 }) => pass2 === pass1,
+      test: ({pass1, pass2}) => pass2 === pass1,
       message: '请输入和密码一相同的密码',
     },
     {
@@ -99,7 +99,7 @@ test('综合测试', async () => {
     },
     {
       key: 'updateMessage',
-      test: (_, { updateMessage }) => {
+      test: (_, {updateMessage}) => {
         if (_.updateMessage !== 'x') {
           updateMessage('出错啦')
           return false
@@ -201,7 +201,7 @@ test('示例', async () => {
     },
     {
       key: 'phoneNumber',
-      test: async ({ phoneNumber }, { updateMessage }) => {
+      test: async ({phoneNumber}, {updateMessage}) => {
         const result = await checkPhoneNumberAsync(phoneNumber)
         if (!result.valid) {
           updateMessage(result.message)
@@ -212,12 +212,12 @@ test('示例', async () => {
     },
     {
       key: 'pass1',
-      test: ({ pass1 }) => pass1.length > 6,
+      test: ({pass1}) => pass1.length > 6,
       message: '密码应大于6位',
     },
     {
       key: 'pass2',
-      test: ({ pass1, pass2 }) => pass2 === pass1,
+      test: ({pass1, pass2}) => pass2 === pass1,
       message: '两次密码应一致',
     },
   ])

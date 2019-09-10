@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { wait } from './wait'
+import {jestExpectEqual} from './enhanceJest'
+import {wait} from './wait'
 
 test('表现正常', async () => {
   const start = Date.now()

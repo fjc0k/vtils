@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { sum, sumBy } from './sum'
+import {jestExpectEqual} from './enhanceJest'
+import {sum, sumBy} from './sum'
 
 test('sum', () => {
   jestExpectEqual(
@@ -12,9 +12,9 @@ test('sumBy', () => {
   jestExpectEqual(
     sumBy(
       [
-        { num: 1 },
-        { num: 2 },
-        { num: 3 },
+        {num: 1},
+        {num: 2},
+        {num: 3},
       ],
       item => item.num,
     ),

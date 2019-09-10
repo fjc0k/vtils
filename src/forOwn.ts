@@ -1,4 +1,4 @@
-import { AnyObject } from './enhanceType'
+import {AnyObject} from './enhanceType'
 
 export interface ForOwnTraverse<T extends AnyObject, K extends string | number = Extract<keyof T, string | number>> {
   /**

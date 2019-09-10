@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { repeat } from './repeat'
+import {jestExpectEqual} from './enhanceJest'
+import {repeat} from './repeat'
 
 test('n 不为 0 或正整数时报错', () => {
   expect(() => repeat('x', -1)).toThrowErrorMatchingInlineSnapshot(

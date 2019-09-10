@@ -1,6 +1,6 @@
-import { debounce } from './debounce'
-import { times } from './times'
-import { wait } from './wait'
+import {debounce} from './debounce'
+import {times} from './times'
+import {wait} from './wait'
 
 test('表现正常', async () => {
   const fn: (x: number, y: number) => number = jest.fn().mockImplementation((x: number, y: number) => x + y)

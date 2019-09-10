@@ -1,5 +1,5 @@
-import { castArray } from './castArray'
-import { OneOrMore } from './enhanceType'
+import {castArray} from './castArray'
+import {OneOrMore} from './enhanceType'
 
 export enum OrderByRuleType {
   /** 降序 */

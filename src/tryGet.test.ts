@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { tryGet } from './tryGet'
+import {jestExpectEqual} from './enhanceJest'
+import {tryGet} from './tryGet'
 
 const obj = {
   x: 1,

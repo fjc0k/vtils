@@ -1,5 +1,5 @@
-import { AnyFunction } from './enhanceType'
-import { isPromiseLike } from './is'
+import {AnyFunction} from './enhanceType'
+import {isPromiseLike} from './is'
 
 /**
  * 并行执行任务，`同步任务`、`异步任务` 皆可。

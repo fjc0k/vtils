@@ -1,6 +1,6 @@
-import { jestExpectEqual } from './enhanceJest'
-import { loop } from './loop'
-import { wait } from './wait'
+import {jestExpectEqual} from './enhanceJest'
+import {loop} from './loop'
+import {wait} from './wait'
 
 test('表现正常', async () => {
   let i = 0

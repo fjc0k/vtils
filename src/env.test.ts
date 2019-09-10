@@ -1,23 +1,23 @@
 import * as env from './env'
-import { has } from './has'
-import { jestExpectEqual } from './enhanceJest'
+import {has} from './has'
+import {jestExpectEqual} from './enhanceJest'
 
 const tests: Record<keyof typeof env, (_: typeof env) => void> = {
-  getGlobal({ getGlobal }) {
+  getGlobal({getGlobal}) {
     jestExpectEqual(
       getGlobal(),
       window,
     )
   },
 
-  inBrowser({ inBrowser }) {
+  inBrowser({inBrowser}) {
     jestExpectEqual(
       inBrowser(),
       true,
     )
   },
 
-  inIOS({ inIOS }) {
+  inIOS({inIOS}) {
     jestExpectEqual(
       inIOS(),
       false,
@@ -33,7 +33,7 @@ const tests: Record<keyof typeof env, (_: typeof env) => void> = {
     )
   },
 
-  inAndroid({ inAndroid }) {
+  inAndroid({inAndroid}) {
     jestExpectEqual(
       inAndroid(),
       false,
@@ -55,14 +55,14 @@ const tests: Record<keyof typeof env, (_: typeof env) => void> = {
     })
   },
 
-  inNode({ inNode }) {
+  inNode({inNode}) {
     jestExpectEqual(
       inNode(),
       true,
     )
   },
 
-  inWechatMiniProgram({ inWechatMiniProgram }) {
+  inWechatMiniProgram({inWechatMiniProgram}) {
     jestExpectEqual(
       inWechatMiniProgram(),
       false,
@@ -80,7 +80,7 @@ const tests: Record<keyof typeof env, (_: typeof env) => void> = {
     )
   },
 
-  inWechatWebview({ inWechatWebview }) {
+  inWechatWebview({inWechatWebview}) {
     jestExpectEqual(
       inWechatWebview(),
       false,

@@ -1,4 +1,4 @@
-import { EasyStorageAdapter } from './EasyStorageAdapter'
+import {EasyStorageAdapter} from './EasyStorageAdapter'
 
 export class EasyStorageAdapterBrowser extends EasyStorageAdapter {
   constructor(private storage: Storage) {

@@ -1,4 +1,4 @@
-import { isArray } from './is'
+import {isArray} from './is'
 
 /**
  * 计算传入值的总和。

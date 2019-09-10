@@ -1,5 +1,5 @@
-import { getType, GetTypeReturn } from './getType'
-import { jestExpectEqual } from './enhanceJest'
+import {getType, GetTypeReturn} from './getType'
+import {jestExpectEqual} from './enhanceJest'
 
 const valueToType: Array<[any, GetTypeReturn]> = [
   [1, 'Number'],

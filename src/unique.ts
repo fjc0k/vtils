@@ -1,4 +1,4 @@
-import { includes } from './includes'
+import {includes} from './includes'
 
 /**
  * 将给定的数组去重后返回。

@@ -1,5 +1,5 @@
-import { fill } from './fill'
-import { jestExpectEqual } from './enhanceJest'
+import {fill} from './fill'
+import {jestExpectEqual} from './enhanceJest'
 
 test('默认 start 为 0，end 为 arr.length', () => {
   jestExpectEqual(

@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { safeGet } from './safeGet'
+import {jestExpectEqual} from './enhanceJest'
+import {safeGet} from './safeGet'
 
 test('表现正常', () => {
   const obj = {

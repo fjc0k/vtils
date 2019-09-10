@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { result } from './result'
+import {jestExpectEqual} from './enhanceJest'
+import {result} from './result'
 
 test('Promise 正常', async () => {
   jestExpectEqual(

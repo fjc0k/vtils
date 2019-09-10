@@ -1,8 +1,8 @@
 import _ from 'shelljs'
 import fs from 'fs-extra'
 import path from 'path'
-import { chunk, dedent, Defined, fill, forOwn, groupBy, ii } from '../src'
-import { Reflection, ReflectionKind } from 'typedoc'
+import {chunk, dedent, Defined, fill, forOwn, groupBy, ii} from '../src'
+import {Reflection, ReflectionKind} from 'typedoc'
 
 const pkg = require('../package.json') as { version: number }
 

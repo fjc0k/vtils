@@ -1,5 +1,5 @@
-import { AnyObject } from './enhanceType'
-import { isNil } from './is'
+import {AnyObject} from './enhanceType'
+import {isNil} from './is'
 
 export function safeGet<
   T extends AnyObject,

@@ -1,4 +1,4 @@
-import { includes } from './includes'
+import {includes} from './includes'
 
 [
   ['存在原生的 includes', () => {}],

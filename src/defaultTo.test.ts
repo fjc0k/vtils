@@ -1,5 +1,5 @@
-import { defaultTo } from './defaultTo'
-import { jestExpectEqual } from './enhanceJest'
+import {defaultTo} from './defaultTo'
+import {jestExpectEqual} from './enhanceJest'
 
 test('表现正常', () => {
   jestExpectEqual(

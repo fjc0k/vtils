@@ -1,6 +1,6 @@
-import { jestExpectEqual } from './enhanceJest'
-import { parallel } from './parallel'
-import { wait } from './wait'
+import {jestExpectEqual} from './enhanceJest'
+import {parallel} from './parallel'
+import {wait} from './wait'
 
 test('并行执行任务，并返回各个任务执行结果组成的数组', async () => {
   let i = 0

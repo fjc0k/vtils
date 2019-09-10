@@ -1,4 +1,4 @@
-import { AnyFunction } from './enhanceType'
+import {AnyFunction} from './enhanceType'
 
 /**
  * 创建一个去抖函数，将触发频繁的事件合并成一次执行。

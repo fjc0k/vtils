@@ -1,4 +1,4 @@
-import { AnyFunction } from './enhanceType'
+import {AnyFunction} from './enhanceType'
 
 /** 取消订阅 */
 export type EventBusUnsubscribe = () => void

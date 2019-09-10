@@ -1,6 +1,6 @@
-import { isChineseIDCardNumber, isEmail, isFunction, isInteger, isNumeric, isPossibleChineseMobilePhoneNumber, isPossibleChineseName, isPromiseLike, isRegExp, isUrl } from './is'
-import { pluck } from './pluck'
-import { sequential } from './sequential'
+import {isChineseIDCardNumber, isEmail, isFunction, isInteger, isNumeric, isPossibleChineseMobilePhoneNumber, isPossibleChineseName, isPromiseLike, isRegExp, isUrl} from './is'
+import {pluck} from './pluck'
+import {sequential} from './sequential'
 
 export type EasyValidatorData = Record<keyof any, any>
 
@@ -137,34 +137,34 @@ export class EasyValidator<D extends EasyValidatorData> {
       /* istanbul ignore if  */
       if (!(key in data)) {
         if (rule.required) {
-          return resolve({ valid: false })
+          return resolve({valid: false})
         }
       } else {
         if ((rule.required || rule.type || rule.test) && (value == null || value === '')) {
-          return resolve({ valid: false })
+          return resolve({valid: false})
         }
         if (rule.type) {
           switch (rule.type) {
             case 'number':
-              if (!isNumeric(value)) return resolve({ valid: false })
+              if (!isNumeric(value)) return resolve({valid: false})
               break
             case 'integer':
-              if (!isNumeric(value) || !isInteger(Number(value))) return resolve({ valid: false })
+              if (!isNumeric(value) || !isInteger(Number(value))) return resolve({valid: false})
               break
             case 'chineseMobilePhoneNumber':
-              if (!isPossibleChineseMobilePhoneNumber(value)) return resolve({ valid: false })
+              if (!isPossibleChineseMobilePhoneNumber(value)) return resolve({valid: false})
               break
             case 'chineseIdCardNumber':
-              if (!isChineseIDCardNumber(value)) return resolve({ valid: false })
+              if (!isChineseIDCardNumber(value)) return resolve({valid: false})
               break
             case 'url':
-              if (!isUrl(value)) return resolve({ valid: false })
+              if (!isUrl(value)) return resolve({valid: false})
               break
             case 'email':
-              if (!isEmail(value)) return resolve({ valid: false })
+              if (!isEmail(value)) return resolve({valid: false})
               break
             case 'chineseName':
-              if (!isPossibleChineseName(value)) return resolve({ valid: false })
+              if (!isPossibleChineseName(value)) return resolve({valid: false})
               break
             /* istanbul ignore next */
             default:
@@ -174,7 +174,7 @@ export class EasyValidator<D extends EasyValidatorData> {
         if (rule.test) {
           if (isRegExp(rule.test)) {
             if (!rule.test.test(value)) {
-              return resolve({ valid: false })
+              return resolve({valid: false})
             }
           } else if (isFunction(rule.test)) {
             let message: any
@@ -188,17 +188,17 @@ export class EasyValidator<D extends EasyValidatorData> {
             if (isPromiseLike(result)) {
               return result
                 .then(
-                  pass => ({ valid: pass !== false, message }),
-                  message => ({ valid: false, message }),
+                  pass => ({valid: pass !== false, message}),
+                  message => ({valid: false, message}),
                 )
                 .then(resolve)
             }
-            return resolve({ valid: result !== false, message })
+            return resolve({valid: result !== false, message})
           }
         }
       }
 
-      return resolve({ valid: true })
+      return resolve({valid: true})
     })
   }
 
@@ -218,13 +218,13 @@ export class EasyValidator<D extends EasyValidatorData> {
           rule => () => {
             return new Promise(resolve => {
               if (unvalidKeys.indexOf(rule.key) === -1) {
-                this.check(rule, data).then(({ valid, message }) => {
+                this.check(rule, data).then(({valid, message}) => {
                   if (!valid) {
                     unvalidKeys.push(rule.key)
                     unvalidRules.push(
                       message == null
                         ? rule
-                        : { ...rule, message },
+                        : {...rule, message},
                     )
                   }
                   resolve()

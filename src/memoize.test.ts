@@ -1,4 +1,4 @@
-import { memoize } from './memoize'
+import {memoize} from './memoize'
 
 const fn = jest.fn(() => 'ok')
 const memoizedFn = memoize(fn)

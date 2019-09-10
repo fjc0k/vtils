@@ -1,9 +1,9 @@
 import * as is from './is'
-import { has } from './has'
-import { ii } from './ii'
+import {has} from './has'
+import {ii} from './ii'
 
 const tests: Record<keyof typeof is, (_: typeof is) => void> = {
-  isArray({ isArray }) {
+  isArray({isArray}) {
     // 不是
     [
       '',
@@ -28,7 +28,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isBoolean({ isBoolean }) {
+  isBoolean({isBoolean}) {
     // 不是
     [
       '',
@@ -51,7 +51,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isChineseIDCardNumber({ isChineseIDCardNumber }) {
+  isChineseIDCardNumber({isChineseIDCardNumber}) {
     // 不是
     [
       '2000',
@@ -80,7 +80,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isPossibleChineseMobilePhoneNumber({ isPossibleChineseMobilePhoneNumber }) {
+  isPossibleChineseMobilePhoneNumber({isPossibleChineseMobilePhoneNumber}) {
     // 不是
     [
       '',
@@ -107,7 +107,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isPossibleChineseName({ isPossibleChineseName }) {
+  isPossibleChineseName({isPossibleChineseName}) {
     // 不是
     [
       '我',
@@ -135,7 +135,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isDate({ isDate }) {
+  isDate({isDate}) {
     // 不是
     [
       1,
@@ -155,7 +155,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isEmail({ isEmail }) {
+  isEmail({isEmail}) {
     // 不是
     [
       'ee@foo.bar.y',
@@ -175,7 +175,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isEmpty({ isEmpty }) {
+  isEmpty({isEmpty}) {
     // 不是
     [
       0,
@@ -183,8 +183,8 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
       ' ',
       /d/,
       () => {},
-      { x: null },
-      { y: undefined },
+      {x: null},
+      {y: undefined},
       [undefined],
     ].forEach(item => {
       expect(isEmpty(item)).toBeFalsy()
@@ -205,7 +205,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isEqualArray({ isEqualArray }) {
+  isEqualArray({isEqualArray}) {
     // 不是
     [
       [[1], [3], [4], [null]],
@@ -226,7 +226,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isFinite({ isFinite }) {
+  isFinite({isFinite}) {
     // 不是
     [
       Infinity,
@@ -248,7 +248,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isFunction({ isFunction }) {
+  isFunction({isFunction}) {
     // 不是
     [
       '',
@@ -272,7 +272,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isHan({ isHan }) {
+  isHan({isHan}) {
     // 不是
     [
       '',
@@ -295,7 +295,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isInteger({ isInteger }) {
+  isInteger({isInteger}) {
     // 不是
     [
       Infinity,
@@ -317,7 +317,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isNaN({ isNaN }) {
+  isNaN({isNaN}) {
     // 不是
     [
       Infinity,
@@ -338,7 +338,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isNegativeInteger({ isNegativeInteger }) {
+  isNegativeInteger({isNegativeInteger}) {
     // 不是
     [
       Infinity,
@@ -363,7 +363,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isNil({ isNil }) {
+  isNil({isNil}) {
     // 不是
     [
       '',
@@ -386,7 +386,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isNull({ isNull }) {
+  isNull({isNull}) {
     // 不是
     [
       '',
@@ -408,7 +408,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isNumber({ isNumber }) {
+  isNumber({isNumber}) {
     // 不是
     [
       '',
@@ -436,7 +436,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isNumeric({ isNumeric }) {
+  isNumeric({isNumeric}) {
     // 不是
     [
       '',
@@ -467,7 +467,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isObject({ isObject }) {
+  isObject({isObject}) {
     // 不是
     [
       '',
@@ -493,7 +493,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isPlainObject({ isPlainObject }) {
+  isPlainObject({isPlainObject}) {
     // 不是
     [
       '',
@@ -521,7 +521,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isPositiveInteger({ isPositiveInteger }) {
+  isPositiveInteger({isPositiveInteger}) {
     // 不是
     [
       Infinity,
@@ -546,7 +546,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isPromiseLike({ isPromiseLike }) {
+  isPromiseLike({isPromiseLike}) {
     // 不是
     [
       () => {},
@@ -564,14 +564,14 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
       new Promise(() => {}),
       Promise.resolve(),
       Promise.reject().catch(() => {}),
-      { then: () => {} },
+      {then: () => {}},
       ii(() => new Promise(resolve => resolve())),
     ].forEach(item => {
       expect(isPromiseLike(item)).toBeTruthy()
     })
   },
 
-  isRegExp({ isRegExp }) {
+  isRegExp({isRegExp}) {
     // 不是
     [
       () => {},
@@ -592,7 +592,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isString({ isString }) {
+  isString({isString}) {
     // 不是
     [
       () => {},
@@ -615,7 +615,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isUndefined({ isUndefined }) {
+  isUndefined({isUndefined}) {
     // 不是
     [
       () => {},
@@ -638,7 +638,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isUrl({ isUrl }) {
+  isUrl({isUrl}) {
     // 不是
     [
       'http://127.0.0.1',
@@ -667,7 +667,7 @@ const tests: Record<keyof typeof is, (_: typeof is) => void> = {
     })
   },
 
-  isArguments({ isArguments }) {
+  isArguments({isArguments}) {
     // 不是
     [
       true,

@@ -1,6 +1,6 @@
-import { getGlobal } from './env'
-import { getType } from './getType'
-import { ii } from './ii'
+import {getGlobal} from './env'
+import {getType} from './getType'
+import {ii} from './ii'
 
 /**
  * 检查 `value` 是否是一个数组。

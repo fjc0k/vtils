@@ -1,6 +1,6 @@
-import { AnyObject, Omit } from './enhanceType'
-import { forOwn } from './forOwn'
-import { includes } from './includes'
+import {AnyObject, Omit} from './enhanceType'
+import {forOwn} from './forOwn'
+import {includes} from './includes'
 
 /**
  * 创建一个从 `obj` 中剔除选中的可枚举属性的对象。

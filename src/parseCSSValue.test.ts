@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { parseCSSValue } from './parseCSSValue'
+import {jestExpectEqual} from './enhanceJest'
+import {parseCSSValue} from './parseCSSValue'
 
 test('数字正常', () => {
   jestExpectEqual(

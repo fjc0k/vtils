@@ -1,4 +1,4 @@
-import { EasyStorageAdapter } from './EasyStorageAdapter'
+import {EasyStorageAdapter} from './EasyStorageAdapter'
 
 export class EasyStorageAdapterMemory extends EasyStorageAdapter {
   private static storage = Object.create(null)

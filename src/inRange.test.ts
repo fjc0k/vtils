@@ -1,4 +1,4 @@
-import { inRange, InRangeIntervalType } from './inRange'
+import {inRange, InRangeIntervalType} from './inRange'
 
 test('开区间', () => {
   expect(inRange(5, 2, 6, InRangeIntervalType.open)).toBeTruthy()

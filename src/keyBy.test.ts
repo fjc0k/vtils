@@ -1,11 +1,11 @@
-import { jestExpectEqual } from './enhanceJest'
-import { keyBy } from './keyBy'
+import {jestExpectEqual} from './enhanceJest'
+import {keyBy} from './keyBy'
 
 test('表现正常', () => {
   const list = [
-    { id: 1, name: 'Jay', age: 20 },
-    { id: 2, name: 'Alan', age: 20 },
-    { id: 3, name: 'Ming', age: 21 },
+    {id: 1, name: 'Jay', age: 20},
+    {id: 2, name: 'Alan', age: 20},
+    {id: 3, name: 'Ming', age: 21},
   ]
 
   jestExpectEqual(

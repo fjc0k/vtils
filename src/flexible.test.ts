@@ -1,5 +1,5 @@
-import { flexible } from './flexible'
-import { jestExpectEqual } from './enhanceJest'
+import {flexible} from './flexible'
+import {jestExpectEqual} from './enhanceJest'
 
 const docEl = document.documentElement
 

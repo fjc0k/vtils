@@ -1,5 +1,5 @@
-import { indent } from './indent'
-import { isArray } from './is'
+import {indent} from './indent'
+import {isArray} from './is'
 
 /**
  * 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。

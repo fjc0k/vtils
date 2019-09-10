@@ -1,8 +1,8 @@
-import { AnyFunction } from './enhanceType'
-import { ii } from './ii'
-import { jestExpectEqual } from './enhanceJest'
-import { wait } from './wait'
-import { Wechat } from './Wechat'
+import {AnyFunction} from './enhanceType'
+import {ii} from './ii'
+import {jestExpectEqual} from './enhanceJest'
+import {wait} from './wait'
+import {Wechat} from './Wechat'
 
 // 微信 JSSDK 模拟
 ii(() => {
@@ -126,8 +126,8 @@ test('正常调用内置方法', async () => {
   expect(wechat.checkJsApi(['chooseImage'])).resolves.toBeUndefined()
   expect(wechat.updateShareData({})).resolves.toBeUndefined()
   expect(wechat.chooseImage()).resolves.toBeUndefined()
-  expect(wechat.previewImage({ urls: ['https://foo.bar'] })).resolves.toBeUndefined()
-  expect(wechat.uploadImage({ localId: 'ss' })).resolves.toBeUndefined()
+  expect(wechat.previewImage({urls: ['https://foo.bar']})).resolves.toBeUndefined()
+  expect(wechat.uploadImage({localId: 'ss'})).resolves.toBeUndefined()
   expect(wechat.closeWindow()).resolves.toBeUndefined()
   expect(wechat.hideNonBaseMenuItems(['menuItem:share:brand'])).resolves.toBeUndefined()
   expect(wechat.showNonBaseMenuItems(['menuItem:originPage'])).resolves.toBeUndefined()

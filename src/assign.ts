@@ -1,4 +1,4 @@
-import { forOwn } from './forOwn'
+import {forOwn} from './forOwn'
 
 /**
  * 分配来源对象的可枚举属性到目标对象上。

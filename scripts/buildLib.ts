@@ -3,7 +3,7 @@ import biliConfig from '../bili.config'
 import fs from 'fs-extra'
 import globby from 'globby'
 import path from 'path'
-import { assign, escapeRegExp, ii, parallel } from '../src'
+import {assign, escapeRegExp, ii, parallel} from '../src'
 
 ii(async function main() {
   // 工作目录

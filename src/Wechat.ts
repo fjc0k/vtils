@@ -1,8 +1,8 @@
-import { EventBus } from './EventBus'
-import { isBoolean } from './is'
-import { loadResource, LoadResourceUrlType } from './loadResource'
-import { noop } from './noop'
-import { sequential } from './sequential'
+import {EventBus} from './EventBus'
+import {isBoolean} from './is'
+import {loadResource, LoadResourceUrlType} from './loadResource'
+import {noop} from './noop'
+import {sequential} from './sequential'
 
 declare const wx: any
 
@@ -309,7 +309,7 @@ export class Wechat {
    * @returns 以键值对的形式返回，可用的 `api` 值 `true`，不可用为 `false`
    */
   checkJsApi<T extends WechatJsApi>(jsApiList: T[]): Promise<Record<T, boolean>> {
-    return this.invoke('checkJsApi', { jsApiList })
+    return this.invoke('checkJsApi', {jsApiList})
       .then(res => res.checkResult)
   }
 
@@ -384,7 +384,7 @@ export class Wechat {
    * @param menuList 要隐藏的非基础菜单项列表
    */
   hideNonBaseMenuItems(menuList: WechatNonBaseMenuItem[]): Promise<any> {
-    return this.invoke('hideMenuItems', { menuList })
+    return this.invoke('hideMenuItems', {menuList})
   }
 
   /**
@@ -393,7 +393,7 @@ export class Wechat {
    * @param menuList 要显示的非基础菜单项列表
    */
   showNonBaseMenuItems(menuList: WechatNonBaseMenuItem[]): Promise<any> {
-    return this.invoke('showMenuItems', { menuList })
+    return this.invoke('showMenuItems', {menuList})
   }
 
   /**

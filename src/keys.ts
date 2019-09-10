@@ -1,4 +1,4 @@
-import { AnyObject, LiteralUnion } from './enhanceType'
+import {AnyObject, LiteralUnion} from './enhanceType'
 
 /**
  * 返回 `obj` 的可枚举属性组成的数组。
@@ -17,9 +17,9 @@ import { AnyObject, LiteralUnion } from './enhanceType'
  */
 export function keys<T extends AnyObject>(obj: T) {
   return Object.keys(obj) as Array<
-    LiteralUnion<
-      Extract<keyof T, string | number>,
-      string | number
-    >
+  LiteralUnion<
+  Extract<keyof T, string | number>,
+  string | number
+  >
   >
 }

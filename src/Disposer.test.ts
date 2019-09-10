@@ -1,4 +1,4 @@
-import { Disposer } from './Disposer'
+import {Disposer} from './Disposer'
 
 test('表现正常', async () => {
   const disposer = new Disposer()

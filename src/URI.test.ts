@@ -1,6 +1,6 @@
 import qs from 'qs'
-import { createURIQuery, parseURIQuery } from './URI'
-import { jestExpectEqual } from './enhanceJest'
+import {createURIQuery, parseURIQuery} from './URI'
+import {jestExpectEqual} from './enhanceJest'
 
 test('createURIQuery', () => {
   const parameters = {

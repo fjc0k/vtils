@@ -1,6 +1,6 @@
-import { AnyObject, Omit, ValueOf } from './enhanceType'
-import { isArray, isNaN, isString } from './is'
-import { values } from './values'
+import {AnyObject, Omit, ValueOf} from './enhanceType'
+import {isArray, isNaN, isString} from './is'
+import {values} from './values'
 
 /**
  * 检索值 `value` 是否在数组 `arr` 中。

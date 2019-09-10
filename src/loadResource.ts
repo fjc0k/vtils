@@ -1,5 +1,5 @@
-import { castArray } from './castArray'
-import { isString } from './is'
+import {castArray} from './castArray'
+import {isString} from './is'
 
 /**
  * 资源类型。

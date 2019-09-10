@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { range } from './range'
+import {jestExpectEqual} from './enhanceJest'
+import {range} from './range'
 
 test('start < end', () => {
   jestExpectEqual(

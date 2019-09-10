@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { padEnd, padStart } from './pad'
+import {jestExpectEqual} from './enhanceJest'
+import {padEnd, padStart} from './pad'
 
 test('padStart', () => {
   [-3.4, -1, 0, 1.2, 5.6].forEach(length => {

@@ -1,4 +1,4 @@
-import { jestExpectEqual } from './enhanceJest'
+import {jestExpectEqual} from './enhanceJest'
 
 const data: Array<[string, string, string]> = [
   ['', '', ''],
@@ -42,14 +42,14 @@ const data: Array<[string, string, string]> = [
     (before as any)()
 
     test('编码正常', async () => {
-      const { base64Encode } = await import('./base64')
+      const {base64Encode} = await import('./base64')
       data.forEach(([str, encodedStr]) => {
         jestExpectEqual(base64Encode(str), encodedStr)
       })
     })
 
     test('解码正常', async () => {
-      const { base64Decode } = await import('./base64')
+      const {base64Decode} = await import('./base64')
 
       data.forEach(([str, encodedStr]) => {
         jestExpectEqual(base64Decode(encodedStr), str)
@@ -57,14 +57,14 @@ const data: Array<[string, string, string]> = [
     })
 
     test('URL 编码正常', async () => {
-      const { base64UrlEncode } = await import('./base64')
+      const {base64UrlEncode} = await import('./base64')
       data.forEach(([str, _encodedStr, encodedUrlStr]) => {
         jestExpectEqual(base64UrlEncode(str), encodedUrlStr)
       })
     })
 
     test('URL 解码正常', async () => {
-      const { base64UrlDecode } = await import('./base64')
+      const {base64UrlDecode} = await import('./base64')
       data.forEach(([str, _encodedStr, encodedUrlStr]) => {
         jestExpectEqual(base64UrlDecode(encodedUrlStr), str)
       })

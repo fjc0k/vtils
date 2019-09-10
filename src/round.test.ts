@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { round, roundDown, roundUp } from './round'
+import {jestExpectEqual} from './enhanceJest'
+import {round, roundDown, roundUp} from './round'
 
 test('round', () => {
   jestExpectEqual(round(0.129, 3), 0.129)

@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { mapValues } from './mapValues'
+import {jestExpectEqual} from './enhanceJest'
+import {mapValues} from './mapValues'
 
 test('表现正常', () => {
   const obj = {

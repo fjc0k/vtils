@@ -1,4 +1,4 @@
-import { isInteger } from './is'
+import {isInteger} from './is'
 
 export interface FillReturnValue<T> {
   /**

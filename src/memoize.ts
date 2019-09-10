@@ -1,5 +1,5 @@
-import { AnyFunction } from './enhanceType'
-import { ii } from './ii'
+import {AnyFunction} from './enhanceType'
+import {ii} from './ii'
 
 export interface MemoizeCache {
   /** 设置缓存 */

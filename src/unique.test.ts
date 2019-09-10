@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { unique } from './unique'
+import {jestExpectEqual} from './enhanceJest'
+import {unique} from './unique'
 
 test('unique', () => {
   jestExpectEqual(

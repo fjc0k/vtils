@@ -1,4 +1,4 @@
-import { AnyFunction } from './enhanceType'
+import {AnyFunction} from './enhanceType'
 
 /**
  * 创建一个节流函数，给函数设置固定的执行速率。

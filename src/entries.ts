@@ -1,5 +1,5 @@
-import { AnyObject } from './enhanceType'
-import { forOwn } from './forOwn'
+import {AnyObject} from './enhanceType'
+import {forOwn} from './forOwn'
 
 /**
  * 创建一个 `data` 对象自身可枚举属性的键值对数组，但不保证每次创建的数组顺序一致。

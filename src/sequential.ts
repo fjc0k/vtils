@@ -1,4 +1,4 @@
-import { isPromiseLike } from './is'
+import {isPromiseLike} from './is'
 
 /**
  * 顺序执行任务，`同步任务`、`异步任务` 皆可。
@@ -31,28 +31,28 @@ export function sequential<
     let rejected = false
     tasks
       .reduce<Promise<R[]>>(
-        (promise, task) => {
-          return promise.then(
-            resultList => {
-              if (rejected) {
-                return resultList
-              }
-              const result = task(resultList)
-              if (isPromiseLike(result)) {
-                return result.then(
-                  result => resultList.concat(result),
-                  reason => {
-                    rejected = true
-                    return resultList.concat(reason)
-                  },
-                )
-              }
-              return resultList.concat(result)
-            },
-          )
-        },
-        Promise.resolve([]),
-      )
+      (promise, task) => {
+        return promise.then(
+          resultList => {
+            if (rejected) {
+              return resultList
+            }
+            const result = task(resultList)
+            if (isPromiseLike(result)) {
+              return result.then(
+                result => resultList.concat(result),
+                reason => {
+                  rejected = true
+                  return resultList.concat(reason)
+                },
+              )
+            }
+            return resultList.concat(result)
+          },
+        )
+      },
+      Promise.resolve([]),
+    )
       .then(resultList => {
         if (rejected) {
           reject(resultList.pop())

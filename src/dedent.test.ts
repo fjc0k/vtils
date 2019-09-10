@@ -1,6 +1,6 @@
-import { dedent } from './dedent'
-import { indent } from './indent'
-import { jestExpectEqual } from './enhanceJest'
+import {dedent} from './dedent'
+import {indent} from './indent'
+import {jestExpectEqual} from './enhanceJest'
 
 describe('函数模式', () => {
   test('空字符串', () => {

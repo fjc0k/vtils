@@ -1,5 +1,5 @@
-import { AnyObject } from './enhanceType'
-import { forOwn } from './forOwn'
+import {AnyObject} from './enhanceType'
+import {forOwn} from './forOwn'
 
 export interface MapValuesTraverse<T extends AnyObject, R, K extends string | number = Extract<keyof T, string | number>> {
   /**

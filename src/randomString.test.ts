@@ -1,6 +1,6 @@
-import { jestExpectEqual } from './enhanceJest'
-import { randomString } from './randomString'
-import { range } from './range'
+import {jestExpectEqual} from './enhanceJest'
+import {randomString} from './randomString'
+import {range} from './range'
 
 test('百万次无重复', () => {
   const strList = range(0, 1000000).map(() => randomString())

@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { last } from './last'
+import {jestExpectEqual} from './enhanceJest'
+import {last} from './last'
 
 test('空数组返回 undefined', () => {
   jestExpectEqual(

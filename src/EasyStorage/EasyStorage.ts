@@ -1,5 +1,5 @@
-import { EasyStorageAdapter } from './EasyStorageAdapter'
-import { isFunction } from '../is'
+import {EasyStorageAdapter} from './EasyStorageAdapter'
+import {isFunction} from '../is'
 
 export class EasyStorage<
   T extends Record<string, any> = Record<string, any>,

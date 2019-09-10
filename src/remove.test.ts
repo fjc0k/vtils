@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { remove } from './remove'
+import {jestExpectEqual} from './enhanceJest'
+import {remove} from './remove'
 
 test('删除正常', () => {
   const arr = [1, 2, 3]

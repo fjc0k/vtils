@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { shuffle } from './shuffle'
+import {jestExpectEqual} from './enhanceJest'
+import {shuffle} from './shuffle'
 
 test('表现正常', () => {
   jestExpectEqual(

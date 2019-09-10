@@ -1,6 +1,6 @@
-import { AnyObject } from './enhanceType'
-import { forOwn } from './forOwn'
-import { isFunction } from './is'
+import {AnyObject} from './enhanceType'
+import {forOwn} from './forOwn'
+import {isFunction} from './is'
 
 /**
  * 创建 URI 查询字符串。

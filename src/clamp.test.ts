@@ -1,5 +1,5 @@
-import { clamp } from './clamp'
-import { jestExpectEqual } from './enhanceJest'
+import {clamp} from './clamp'
+import {jestExpectEqual} from './enhanceJest'
 
 test('上下限值之间返回原值', () => {
   jestExpectEqual(

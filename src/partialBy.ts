@@ -1,4 +1,4 @@
-import { AnyObject, PartialBy } from './enhanceType'
+import {AnyObject, PartialBy} from './enhanceType'
 
 /**
  * TypeScript 中 `PartialBy` 的函数版本。

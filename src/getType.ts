@@ -1,4 +1,4 @@
-import { LiteralUnion } from './enhanceType'
+import {LiteralUnion} from './enhanceType'
 
 export type GetTypeReturn = LiteralUnion<(
   'Undefined' |

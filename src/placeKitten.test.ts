@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { placeKitten } from './placeKitten'
+import {jestExpectEqual} from './enhanceJest'
+import {placeKitten} from './placeKitten'
 
 test('表现正常', () => {
   jestExpectEqual(

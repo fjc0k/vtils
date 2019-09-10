@@ -1,6 +1,6 @@
-import { AnyObject } from './enhanceType'
-import { isArray } from './is'
-import { shuffle } from './shuffle'
+import {AnyObject} from './enhanceType'
+import {isArray} from './is'
+import {shuffle} from './shuffle'
 
 /**
  * 从数组中随机获取一个元素。

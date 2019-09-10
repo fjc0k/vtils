@@ -1,5 +1,5 @@
-import { isPositiveInteger } from './is'
-import { repeat } from './repeat'
+import {isPositiveInteger} from './is'
+import {repeat} from './repeat'
 
 /**
  * 在 `str` 左侧填充字符。

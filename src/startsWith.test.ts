@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { startsWith } from './startsWith'
+import {jestExpectEqual} from './enhanceJest'
+import {startsWith} from './startsWith'
 
 test('needle 为空字符串时返回 true', () => {
   jestExpectEqual(

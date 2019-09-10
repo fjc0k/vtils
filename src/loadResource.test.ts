@@ -1,5 +1,5 @@
-import { jestExpectEqual } from './enhanceJest'
-import { loadResource, LoadResourceUrlType } from './loadResource'
+import {jestExpectEqual} from './enhanceJest'
+import {loadResource, LoadResourceUrlType} from './loadResource'
 
 jest.spyOn(document.head, 'appendChild').mockImplementation((el: any) => {
   if (el.src && /returnError/.test(el.src)) {

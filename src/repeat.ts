@@ -1,4 +1,4 @@
-import { isPositiveInteger } from './is'
+import {isPositiveInteger} from './is'
 
 /**
  * 重复 `n` 次给定字符串。

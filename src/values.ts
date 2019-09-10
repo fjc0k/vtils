@@ -1,5 +1,5 @@
-import { AnyObject } from './enhanceType'
-import { forOwn } from './forOwn'
+import {AnyObject} from './enhanceType'
+import {forOwn} from './forOwn'
 
 /**
  * 返回 `obj` 自身可枚举属性值组成的数组。
