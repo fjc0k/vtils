@@ -7,7 +7,7 @@ cache:
 install:
   - yarn
 script:
-  - yarn lib:cov
+  - yarn test
 after_success:
   - yarn codecov
 branches:
