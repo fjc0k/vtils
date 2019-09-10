@@ -1,25 +1,30 @@
 {
-  "name": "vtils",
+  "name": "@vtils/use",
   "version": "2.26.1-beta.2",
-  "description": "小巧实用的 JavaScript 工具类库。",
+  "description": "vtils 的 React Hooks 封装。",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "unpkg": "lib/index.umd.js",
   "jsdelivr": "lib/index.umd.js",
   "types": "lib/index.d.ts",
-  "homepage": "https://github.com/fjc0k/vtils/tree/master/packages/vtils",
+  "homepage": "https://github.com/fjc0k/vtils/tree/master/packages/use",
   "license": "MIT",
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:fjc0k/vtils.git",
-    "directory": "packages/vtils"
+    "directory": "packages/use"
   },
   "bugs": {
     "url": "https://github.com/fjc0k/vtils/issues"
   },
   "keywords": [
-    "utils"
+    "vtils",
+    "react-hooks",
+    "use"
   ],
   "files": [
     "lib"
@@ -36,21 +41,14 @@
     "version": "yarn buildLib && yarn buildDocs && git add README.md README_TYPEDOC.md && yarn releaseDocs"
   },
   "devDependencies": {
-    "@tarojs/taro-h5": "^1.3.18",
-    "@types/fs-extra": "^7.0.0",
-    "@types/qs": "^6.5.3",
-    "@types/shelljs": "^0.8.5",
     "bili": "^4.8.0",
-    "fs-extra": "^8.0.1",
     "gh-pages": "^2.0.1",
-    "globby": "^9.2.0",
-    "miniprogram-api-typings": "^2.8.2",
-    "nervjs": "^1.4.4",
-    "qs": "^6.7.0",
     "rollup-plugin-typescript2": "^0.21.1",
-    "shelljs": "^0.8.3",
     "ts-node": "^8.0.2",
     "typedoc": "^0.15.0-0",
     "typescript": "^3.4.5"
+  },
+  "peerDependencies": {
+    "vtils": "^2.26.1-beta.2"
   }
 }

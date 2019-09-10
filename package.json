@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
+    "codecov": "^3.1.0",
     "eslint": "^5.16.0",
     "eslint-config-io": "^0.8.1",
     "jest": "^24.9.0",
