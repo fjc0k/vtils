@@ -3,7 +3,29 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "fix": "yarn lint --fix",
+    "lint": "eslint . --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint",
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "collectCoverageFrom": [
+      "packages/*/src/**/*.ts",
+      "!packages/*/src/**/index.ts"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "io"
+  },
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "@types/jest": "^24.0.18",
+    "eslint": "^5.16.0",
+    "eslint-config-io": "^0.8.1",
+    "jest": "^24.9.0",
+    "lerna": "^3.16.4",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.6.2"
   }
 }
