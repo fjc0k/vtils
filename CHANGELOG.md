@@ -1,8 +1,3 @@
-# Change Log
-
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 ## [2.26.1-beta.1](https://github.com/fjc0k/vtils/compare/v2.26.1-beta.0...v2.26.1-beta.1) (2019-09-10)
 
 
@@ -12,13 +7,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [2.26.1-beta.0](https://github.com/fjc0k/vtils/compare/v2.26.0...v2.26.1-beta.0) (2019-09-10)
 
 
-# Change Log
+### Bug Fixes
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* 修复一些类型问题 ([ffadef3](https://github.com/fjc0k/vtils/commit/ffadef3))
 
-<a name="2.26.0"></a>
+
+### Features
+
+* eslint ([68065f3](https://github.com/fjc0k/vtils/commit/68065f3))
+* 初步 ok ([f387ec6](https://github.com/fjc0k/vtils/commit/f387ec6))
+
+
+
 # [2.26.0](https://github.com/fjc0k/vtils/compare/v2.25.0...v2.26.0) (2019-09-09)
 
 
@@ -28,7 +31,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.25.0"></a>
 # [2.25.0](https://github.com/fjc0k/vtils/compare/v2.24.0...v2.25.0) (2019-09-02)
 
 
@@ -38,7 +40,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.24.0"></a>
 # [2.24.0](https://github.com/fjc0k/vtils/compare/v2.23.0...v2.24.0) (2019-08-30)
 
 
@@ -48,7 +49,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.23.0"></a>
 # [2.23.0](https://github.com/fjc0k/vtils/compare/v2.22.0...v2.23.0) (2019-08-26)
 
 
@@ -58,7 +58,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.22.0"></a>
 # [2.22.0](https://github.com/fjc0k/vtils/compare/v2.21.1...v2.22.0) (2019-08-14)
 
 
@@ -68,7 +67,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.21.1"></a>
 ## [2.21.1](https://github.com/fjc0k/vtils/compare/v2.21.0...v2.21.1) (2019-08-09)
 
 
@@ -78,7 +76,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.21.0"></a>
 # [2.21.0](https://github.com/fjc0k/vtils/compare/v2.20.1...v2.21.0) (2019-08-08)
 
 
@@ -88,7 +85,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.20.1"></a>
 ## [2.20.1](https://github.com/fjc0k/vtils/compare/v2.20.0...v2.20.1) (2019-08-08)
 
 
@@ -98,7 +94,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.20.0"></a>
 # [2.20.0](https://github.com/fjc0k/vtils/compare/v2.19.0...v2.20.0) (2019-08-08)
 
 
@@ -109,7 +104,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.19.0"></a>
 # [2.19.0](https://github.com/fjc0k/vtils/compare/v2.18.0...v2.19.0) (2019-08-07)
 
 
@@ -119,7 +113,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.18.0"></a>
 # [2.18.0](https://github.com/fjc0k/vtils/compare/v2.17.0...v2.18.0) (2019-08-07)
 
 
@@ -130,7 +123,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.17.0"></a>
 # [2.17.0](https://github.com/fjc0k/vtils/compare/v2.16.0...v2.17.0) (2019-08-07)
 
 
@@ -140,7 +132,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.16.0"></a>
 # [2.16.0](https://github.com/fjc0k/vtils/compare/v2.15.0...v2.16.0) (2019-08-07)
 
 
@@ -150,7 +141,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.15.0"></a>
 # [2.15.0](https://github.com/fjc0k/vtils/compare/v2.14.0...v2.15.0) (2019-08-07)
 
 
@@ -160,7 +150,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.14.0"></a>
 # [2.14.0](https://github.com/fjc0k/vtils/compare/v2.13.2...v2.14.0) (2019-07-26)
 
 
@@ -171,17 +160,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.13.2"></a>
 ## [2.13.2](https://github.com/fjc0k/vtils/compare/v2.13.1...v2.13.2) (2019-07-25)
 
 
 
-<a name="2.13.1"></a>
 ## [2.13.1](https://github.com/fjc0k/vtils/compare/v2.13.0...v2.13.1) (2019-07-25)
 
 
 
-<a name="2.13.0"></a>
 # [2.13.0](https://github.com/fjc0k/vtils/compare/v2.12.3...v2.13.0) (2019-07-25)
 
 
@@ -191,7 +177,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.12.3"></a>
 ## [2.12.3](https://github.com/fjc0k/vtils/compare/v2.12.2...v2.12.3) (2019-07-19)
 
 
@@ -201,17 +186,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.12.2"></a>
 ## [2.12.2](https://github.com/fjc0k/vtils/compare/v2.12.1...v2.12.2) (2019-07-18)
 
 
 
-<a name="2.12.1"></a>
 ## [2.12.1](https://github.com/fjc0k/vtils/compare/v2.12.0...v2.12.1) (2019-07-18)
 
 
 
-<a name="2.12.0"></a>
 # [2.12.0](https://github.com/fjc0k/vtils/compare/v2.11.0...v2.12.0) (2019-07-18)
 
 
@@ -221,7 +203,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.11.0"></a>
 # [2.11.0](https://github.com/fjc0k/vtils/compare/v2.10.1...v2.11.0) (2019-07-17)
 
 
@@ -231,7 +212,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.10.1"></a>
 ## [2.10.1](https://github.com/fjc0k/vtils/compare/v2.10.0...v2.10.1) (2019-07-17)
 
 
@@ -241,7 +221,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.10.0"></a>
 # [2.10.0](https://github.com/fjc0k/vtils/compare/v2.9.0...v2.10.0) (2019-07-09)
 
 
@@ -251,7 +230,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.9.0"></a>
 # [2.9.0](https://github.com/fjc0k/vtils/compare/v2.8.2...v2.9.0) (2019-07-05)
 
 
@@ -261,17 +239,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.8.2"></a>
 ## [2.8.2](https://github.com/fjc0k/vtils/compare/v2.8.1...v2.8.2) (2019-07-04)
 
 
 
-<a name="2.8.1"></a>
 ## [2.8.1](https://github.com/fjc0k/vtils/compare/v2.8.0...v2.8.1) (2019-07-04)
 
 
 
-<a name="2.8.0"></a>
 # [2.8.0](https://github.com/fjc0k/vtils/compare/v2.7.1...v2.8.0) (2019-07-03)
 
 
@@ -281,12 +256,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.7.1"></a>
 ## [2.7.1](https://github.com/fjc0k/vtils/compare/v2.7.0...v2.7.1) (2019-07-01)
 
 
 
-<a name="2.7.0"></a>
 # [2.7.0](https://github.com/fjc0k/vtils/compare/v2.6.0...v2.7.0) (2019-06-26)
 
 
@@ -296,7 +269,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.6.0"></a>
 # [2.6.0](https://github.com/fjc0k/vtils/compare/v2.5.0...v2.6.0) (2019-06-25)
 
 
@@ -306,7 +278,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.5.0"></a>
 # [2.5.0](https://github.com/fjc0k/vtils/compare/v2.4.0...v2.5.0) (2019-06-19)
 
 
@@ -316,7 +287,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.4.0"></a>
 # [2.4.0](https://github.com/fjc0k/vtils/compare/v2.3.1...v2.4.0) (2019-06-17)
 
 
@@ -328,12 +298,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.3.1"></a>
 ## [2.3.1](https://github.com/fjc0k/vtils/compare/v2.3.0...v2.3.1) (2019-06-14)
 
 
 
-<a name="2.3.0"></a>
 # [2.3.0](https://github.com/fjc0k/vtils/compare/v2.2.1...v2.3.0) (2019-06-14)
 
 
@@ -343,12 +311,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.2.1"></a>
 ## [2.2.1](https://github.com/fjc0k/vtils/compare/v2.2.0...v2.2.1) (2019-06-10)
 
 
 
-<a name="2.2.0"></a>
 # [2.2.0](https://github.com/fjc0k/vtils/compare/v2.1.2...v2.2.0) (2019-06-10)
 
 
@@ -358,7 +324,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.1.2"></a>
 ## [2.1.2](https://github.com/fjc0k/vtils/compare/v2.1.1...v2.1.2) (2019-06-06)
 
 
@@ -368,12 +333,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.1.1"></a>
 ## [2.1.1](https://github.com/fjc0k/vtils/compare/v2.1.0...v2.1.1) (2019-06-06)
 
 
 
-<a name="2.1.0"></a>
 # [2.1.0](https://github.com/fjc0k/vtils/compare/v2.0.0...v2.1.0) (2019-06-06)
 
 
@@ -383,12 +346,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.0.0"></a>
 # [2.0.0](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.8...v2.0.0) (2019-06-06)
 
 
 
-<a name="2.0.0-beta.8"></a>
 # [2.0.0-beta.8](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.7...v2.0.0-beta.8) (2019-06-03)
 
 
@@ -398,7 +359,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.0.0-beta.7"></a>
 # [2.0.0-beta.7](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.6...v2.0.0-beta.7) (2019-06-03)
 
 
@@ -408,17 +368,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.0.0-beta.6"></a>
 # [2.0.0-beta.6](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.4...v2.0.0-beta.6) (2019-06-03)
 
 
 
-<a name="2.0.0-beta.5"></a>
-# [2.0.0-beta.5](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.4...v2.0.0-beta.5) (2019-06-03)
-
-
-
-<a name="2.0.0-beta.4"></a>
 # [2.0.0-beta.4](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2019-06-03)
 
 
@@ -428,7 +381,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.0.0-beta.3"></a>
 # [2.0.0-beta.3](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2019-06-02)
 
 
@@ -438,23 +390,20 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="2.0.0-beta.2"></a>
 # [2.0.0-beta.2](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2019-06-02)
 
 
 ### Features
 
-* 增加示例 ([0fc4767](https://github.com/fjc0k/vtils/commit/0fc4767))
 * **EasyValidator:** 支持动态设置 message ([3827577](https://github.com/fjc0k/vtils/commit/3827577))
+* 增加示例 ([0fc4767](https://github.com/fjc0k/vtils/commit/0fc4767))
 
 
 
-<a name="2.0.0-beta.1"></a>
 # [2.0.0-beta.1](https://github.com/fjc0k/vtils/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2019-05-31)
 
 
 
-<a name="2.0.0-beta.0"></a>
 # [2.0.0-beta.0](https://github.com/fjc0k/vtils/compare/v1.6.3...v2.0.0-beta.0) (2019-05-31)
 
 
@@ -465,10 +414,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* 删除 onResize ([35c7c52](https://github.com/fjc0k/vtils/commit/35c7c52))
-* 完成文档生成脚本 ([7526e59](https://github.com/fjc0k/vtils/commit/7526e59))
 * **Disposer:** API 优化 ([e083763](https://github.com/fjc0k/vtils/commit/e083763))
 * **env:** 状态独立 & 添加 clearCache 方法 ([da8fef0](https://github.com/fjc0k/vtils/commit/da8fef0))
+* 删除 onResize ([35c7c52](https://github.com/fjc0k/vtils/commit/35c7c52))
+* 完成文档生成脚本 ([7526e59](https://github.com/fjc0k/vtils/commit/7526e59))
 * 打包优化 ([048d154](https://github.com/fjc0k/vtils/commit/048d154))
 * 新增 assign ([664b634](https://github.com/fjc0k/vtils/commit/664b634))
 * 新增 round, roundUp, roundDown ([91cfa4b](https://github.com/fjc0k/vtils/commit/91cfa4b))
@@ -477,58 +426,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name=""></a>
-# [](https://github.com/fjc0k/vtils/compare/v1.6.3...v) (2019-05-31)
-
-
-### Bug Fixes
-
-* 解决 env.ts 与 is.ts 的相互依赖 ([4357650](https://github.com/fjc0k/vtils/commit/4357650))
-
-
-### Features
-
-* 删除 onResize ([35c7c52](https://github.com/fjc0k/vtils/commit/35c7c52))
-* 完成文档生成脚本 ([7526e59](https://github.com/fjc0k/vtils/commit/7526e59))
-* **Disposer:** API 优化 ([e083763](https://github.com/fjc0k/vtils/commit/e083763))
-* **env:** 状态独立 & 添加 clearCache 方法 ([da8fef0](https://github.com/fjc0k/vtils/commit/da8fef0))
-* 打包优化 ([048d154](https://github.com/fjc0k/vtils/commit/048d154))
-* 新增 assign ([664b634](https://github.com/fjc0k/vtils/commit/664b634))
-* 新增 round, roundUp, roundDown ([91cfa4b](https://github.com/fjc0k/vtils/commit/91cfa4b))
-* 构建流程优化 ([88daef3](https://github.com/fjc0k/vtils/commit/88daef3))
-* 重构基本完成 ([6ac8b34](https://github.com/fjc0k/vtils/commit/6ac8b34))
-
-
-
-<a name=""></a>
-# [](https://github.com/fjc0k/vtils/compare/v1.6.3...v) (2019-05-31)
-
-
-### Bug Fixes
-
-* 解决 env.ts 与 is.ts 的相互依赖 ([4357650](https://github.com/fjc0k/vtils/commit/4357650))
-
-
-### Features
-
-* 删除 onResize ([35c7c52](https://github.com/fjc0k/vtils/commit/35c7c52))
-* 完成文档生成脚本 ([7526e59](https://github.com/fjc0k/vtils/commit/7526e59))
-* **Disposer:** API 优化 ([e083763](https://github.com/fjc0k/vtils/commit/e083763))
-* **env:** 状态独立 & 添加 clearCache 方法 ([da8fef0](https://github.com/fjc0k/vtils/commit/da8fef0))
-* 打包优化 ([048d154](https://github.com/fjc0k/vtils/commit/048d154))
-* 新增 assign ([664b634](https://github.com/fjc0k/vtils/commit/664b634))
-* 新增 round, roundUp, roundDown ([91cfa4b](https://github.com/fjc0k/vtils/commit/91cfa4b))
-* 构建流程优化 ([88daef3](https://github.com/fjc0k/vtils/commit/88daef3))
-* 重构基本完成 ([6ac8b34](https://github.com/fjc0k/vtils/commit/6ac8b34))
-
-
-
-<a name="1.6.3"></a>
 ## [1.6.3](https://github.com/fjc0k/vtils/compare/v1.6.2...v1.6.3) (2019-05-22)
 
 
 
-<a name="1.6.2"></a>
 ## [1.6.2](https://github.com/fjc0k/vtils/compare/v1.6.1...v1.6.2) (2019-05-22)
 
 
@@ -538,7 +439,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="1.6.1"></a>
 ## [1.6.1](https://github.com/fjc0k/vtils/compare/v1.6.0...v1.6.1) (2019-05-22)
 
 
@@ -548,29 +448,26 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="1.6.0"></a>
 # [1.6.0](https://github.com/fjc0k/vtils/compare/v1.5.0...v1.6.0) (2019-05-22)
 
 
 ### Features
 
-* **Wechat:** 支持自动加载微信 JSSDK ([e7e22e0](https://github.com/fjc0k/vtils/commit/e7e22e0))
 * 新增 loadResource ([64610a0](https://github.com/fjc0k/vtils/commit/64610a0))
+* **Wechat:** 支持自动加载微信 JSSDK ([e7e22e0](https://github.com/fjc0k/vtils/commit/e7e22e0))
 
 
 
-<a name="1.5.0"></a>
 # [1.5.0](https://github.com/fjc0k/vtils/compare/v1.4.0...v1.5.0) (2019-05-22)
 
 
 ### Features
 
-* **Storage:** 新增 getRemember 方法 ([696e62b](https://github.com/fjc0k/vtils/commit/696e62b))
 * 新增 ii ([855e508](https://github.com/fjc0k/vtils/commit/855e508))
+* **Storage:** 新增 getRemember 方法 ([696e62b](https://github.com/fjc0k/vtils/commit/696e62b))
 
 
 
-<a name="1.4.0"></a>
 # [1.4.0](https://github.com/fjc0k/vtils/compare/v1.3.0...v1.4.0) (2019-05-22)
 
 
@@ -580,7 +477,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="1.3.0"></a>
 # [1.3.0](https://github.com/fjc0k/vtils/compare/v1.2.0...v1.3.0) (2019-05-13)
 
 
@@ -590,7 +486,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="1.2.0"></a>
 # [1.2.0](https://github.com/fjc0k/vtils/compare/v1.1.0...v1.2.0) (2019-05-11)
 
 
@@ -600,7 +495,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="1.1.0"></a>
 # [1.1.0](https://github.com/fjc0k/vtils/compare/v1.0.2...v1.1.0) (2019-05-10)
 
 
@@ -611,22 +505,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* **Storage:** API 优化 & 测试完善 ([1341cc8](https://github.com/fjc0k/vtils/commit/1341cc8))
 * 重构 ([2db1403](https://github.com/fjc0k/vtils/commit/2db1403))
+* **Storage:** API 优化 & 测试完善 ([1341cc8](https://github.com/fjc0k/vtils/commit/1341cc8))
 
 
 
-<a name="1.0.2"></a>
 ## [1.0.2](https://github.com/fjc0k/vtils/compare/v1.0.1...v1.0.2) (2019-05-07)
 
 
 
-<a name="1.0.1"></a>
 ## [1.0.1](https://github.com/fjc0k/vtils/compare/v1.0.0...v1.0.1) (2019-05-06)
 
 
 
-<a name="1.0.0"></a>
 # [1.0.0](https://github.com/fjc0k/vtils/compare/v0.93.0...v1.0.0) (2019-05-06)
 
 
@@ -638,7 +529,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.93.0"></a>
 # [0.93.0](https://github.com/fjc0k/vtils/compare/v0.92.0...v0.93.0) (2019-04-25)
 
 
@@ -655,7 +545,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.92.0"></a>
 # [0.92.0](https://github.com/fjc0k/vtils/compare/v0.91.0...v0.92.0) (2019-04-22)
 
 
@@ -665,7 +554,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.91.0"></a>
 # [0.91.0](https://github.com/fjc0k/vtils/compare/v0.90.0...v0.91.0) (2019-04-10)
 
 
@@ -675,7 +563,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.90.0"></a>
 # [0.90.0](https://github.com/fjc0k/vtils/compare/v0.89.1...v0.90.0) (2019-04-10)
 
 
@@ -685,12 +572,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.89.1"></a>
 ## [0.89.1](https://github.com/fjc0k/vtils/compare/v0.89.0...v0.89.1) (2019-04-10)
 
 
 
-<a name="0.89.0"></a>
 # [0.89.0](https://github.com/fjc0k/vtils/compare/v0.88.0...v0.89.0) (2019-04-10)
 
 
@@ -700,7 +585,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.88.0"></a>
 # [0.88.0](https://github.com/fjc0k/vtils/compare/v0.87.1...v0.88.0) (2019-04-10)
 
 
@@ -710,12 +594,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.87.1"></a>
 ## [0.87.1](https://github.com/fjc0k/vtils/compare/v0.87.0...v0.87.1) (2019-04-10)
 
 
 
-<a name="0.87.0"></a>
 # [0.87.0](https://github.com/fjc0k/vtils/compare/v0.86.1...v0.87.0) (2019-04-10)
 
 
@@ -725,12 +607,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.86.1"></a>
 ## [0.86.1](https://github.com/fjc0k/vtils/compare/v0.86.0...v0.86.1) (2019-04-09)
 
 
 
-<a name="0.86.0"></a>
 # [0.86.0](https://github.com/fjc0k/vtils/compare/v0.85.0...v0.86.0) (2019-04-08)
 
 
@@ -740,7 +620,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.85.0"></a>
 # [0.85.0](https://github.com/fjc0k/vtils/compare/v0.84.3...v0.85.0) (2019-04-01)
 
 
@@ -750,7 +629,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.84.3"></a>
 ## [0.84.3](https://github.com/fjc0k/vtils/compare/v0.84.2...v0.84.3) (2019-04-01)
 
 
@@ -760,7 +638,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.84.2"></a>
 ## [0.84.2](https://github.com/fjc0k/vtils/compare/v0.84.1...v0.84.2) (2019-04-01)
 
 
@@ -770,7 +647,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.84.1"></a>
 ## [0.84.1](https://github.com/fjc0k/vtils/compare/v0.84.0...v0.84.1) (2019-04-01)
 
 
@@ -780,7 +656,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.84.0"></a>
 # [0.84.0](https://github.com/fjc0k/vtils/compare/v0.83.2...v0.84.0) (2019-04-01)
 
 
@@ -790,12 +665,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.83.2"></a>
 ## [0.83.2](https://github.com/fjc0k/vtils/compare/v0.83.1...v0.83.2) (2019-04-01)
 
 
 
-<a name="0.83.1"></a>
 ## [0.83.1](https://github.com/fjc0k/vtils/compare/v0.83.0...v0.83.1) (2019-04-01)
 
 
@@ -805,7 +678,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.83.0"></a>
 # [0.83.0](https://github.com/fjc0k/vtils/compare/v0.82.0...v0.83.0) (2019-03-30)
 
 
@@ -815,7 +687,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.82.0"></a>
 # [0.82.0](https://github.com/fjc0k/vtils/compare/v0.81.1...v0.82.0) (2019-03-30)
 
 
@@ -825,12 +696,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.81.1"></a>
 ## [0.81.1](https://github.com/fjc0k/vtils/compare/v0.81.0...v0.81.1) (2019-03-30)
 
 
 
-<a name="0.81.0"></a>
 # [0.81.0](https://github.com/fjc0k/vtils/compare/v0.80.4...v0.81.0) (2019-03-30)
 
 
@@ -840,7 +709,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.80.4"></a>
 ## [0.80.4](https://github.com/fjc0k/vtils/compare/v0.80.3...v0.80.4) (2019-03-30)
 
 
@@ -850,7 +718,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.80.3"></a>
 ## [0.80.3](https://github.com/fjc0k/vtils/compare/v0.80.2...v0.80.3) (2019-03-30)
 
 
@@ -860,7 +727,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.80.2"></a>
 ## [0.80.2](https://github.com/fjc0k/vtils/compare/v0.80.0...v0.80.2) (2019-03-30)
 
 
@@ -871,7 +737,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.80.0"></a>
 # [0.80.0](https://github.com/fjc0k/vtils/compare/v0.79.0...v0.80.0) (2019-03-30)
 
 
@@ -881,7 +746,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.79.0"></a>
 # [0.79.0](https://github.com/fjc0k/vtils/compare/v0.78.0...v0.79.0) (2019-03-30)
 
 
@@ -892,7 +756,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.78.0"></a>
 # [0.78.0](https://github.com/fjc0k/vtils/compare/v0.77.0...v0.78.0) (2019-03-11)
 
 
@@ -902,7 +765,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.77.0"></a>
 # [0.77.0](https://github.com/fjc0k/vtils/compare/v0.76.1...v0.77.0) (2019-03-01)
 
 
@@ -912,12 +774,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.76.1"></a>
 ## [0.76.1](https://github.com/fjc0k/vtils/compare/v0.76.0...v0.76.1) (2019-02-25)
 
 
 
-<a name="0.76.0"></a>
 # [0.76.0](https://github.com/fjc0k/vtils/compare/v0.75.0...v0.76.0) (2019-02-19)
 
 
@@ -927,7 +787,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.75.0"></a>
 # [0.75.0](https://github.com/fjc0k/vtils/compare/v0.74.0...v0.75.0) (2019-02-15)
 
 
@@ -937,7 +796,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.74.0"></a>
 # [0.74.0](https://github.com/fjc0k/vtils/compare/v0.73.0...v0.74.0) (2019-02-15)
 
 
@@ -947,7 +805,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.73.0"></a>
 # [0.73.0](https://github.com/fjc0k/vtils/compare/v0.72.0...v0.73.0) (2019-02-12)
 
 
@@ -957,7 +814,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.72.0"></a>
 # [0.72.0](https://github.com/fjc0k/vtils/compare/v0.71.0...v0.72.0) (2019-01-31)
 
 
@@ -967,7 +823,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.71.0"></a>
 # [0.71.0](https://github.com/fjc0k/vtils/compare/v0.70.0...v0.71.0) (2019-01-31)
 
 
@@ -977,7 +832,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.70.0"></a>
 # [0.70.0](https://github.com/fjc0k/vtils/compare/v0.69.1...v0.70.0) (2019-01-27)
 
 
@@ -987,12 +841,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.69.1"></a>
 ## [0.69.1](https://github.com/fjc0k/vtils/compare/v0.69.0...v0.69.1) (2019-01-26)
 
 
 
-<a name="0.69.0"></a>
 # [0.69.0](https://github.com/fjc0k/vtils/compare/v0.68.1...v0.69.0) (2019-01-22)
 
 
@@ -1002,12 +854,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.68.1"></a>
 ## [0.68.1](https://github.com/fjc0k/vtils/compare/v0.68.0...v0.68.1) (2019-01-22)
 
 
 
-<a name="0.68.0"></a>
 # [0.68.0](https://github.com/fjc0k/vtils/compare/v0.67.0...v0.68.0) (2019-01-21)
 
 
@@ -1019,7 +869,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.67.0"></a>
 # [0.67.0](https://github.com/fjc0k/vtils/compare/v0.66.0...v0.67.0) (2019-01-19)
 
 
@@ -1030,7 +879,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.66.0"></a>
 # [0.66.0](https://github.com/fjc0k/vtils/compare/v0.65.0...v0.66.0) (2019-01-17)
 
 
@@ -1040,7 +888,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.65.0"></a>
 # [0.65.0](https://github.com/fjc0k/vtils/compare/v0.64.1...v0.65.0) (2019-01-15)
 
 
@@ -1050,7 +897,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.64.1"></a>
 ## [0.64.1](https://github.com/fjc0k/vtils/compare/v0.64.0...v0.64.1) (2018-12-25)
 
 
@@ -1060,7 +906,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.64.0"></a>
 # [0.64.0](https://github.com/fjc0k/vtils/compare/v0.63.2...v0.64.0) (2018-12-04)
 
 
@@ -1071,7 +916,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.63.2"></a>
 ## [0.63.2](https://github.com/fjc0k/vtils/compare/v0.63.1...v0.63.2) (2018-12-02)
 
 
@@ -1081,12 +925,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.63.1"></a>
 ## [0.63.1](https://github.com/fjc0k/vtils/compare/v0.63.0...v0.63.1) (2018-12-02)
 
 
 
-<a name="0.63.0"></a>
 # [0.63.0](https://github.com/fjc0k/vtils/compare/v0.62.0...v0.63.0) (2018-12-02)
 
 
@@ -1096,7 +938,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.62.0"></a>
 # [0.62.0](https://github.com/fjc0k/vtils/compare/v0.61.1...v0.62.0) (2018-12-01)
 
 
@@ -1106,7 +947,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.61.1"></a>
 ## [0.61.1](https://github.com/fjc0k/vtils/compare/v0.61.0...v0.61.1) (2018-12-01)
 
 
@@ -1116,7 +956,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.61.0"></a>
 # [0.61.0](https://github.com/fjc0k/vtils/compare/v0.60.4...v0.61.0) (2018-12-01)
 
 
@@ -1126,7 +965,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.60.4"></a>
 ## [0.60.4](https://github.com/fjc0k/vtils/compare/v0.60.3...v0.60.4) (2018-11-30)
 
 
@@ -1136,29 +974,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.60.3"></a>
 ## [0.60.3](https://github.com/fjc0k/vtils/compare/v0.60.0...v0.60.3) (2018-11-30)
 
 
 
-<a name="0.59.1"></a>
-## [0.59.1](https://github.com/fjc0k/vtils/compare/v0.59.0...v0.59.1) (2018-11-26)
-
-
-### Bug Fixes
-
-* **storage:** 微信小程序无值时返回空字符串 ([2257472](https://github.com/fjc0k/vtils/commit/2257472))
-
-
-
-<a name="0.60.0"></a>
-# [0.60.0](https://github.com/fjc0k/vtils/compare/v0.59.0...v0.60.0) (2018-11-30)
+# [0.60.0](https://github.com/fjc0k/vtils/compare/v0.59.1...v0.60.0) (2018-11-30)
 
 
 ### Features
 
 * add FileData ([20b7cc3](https://github.com/fjc0k/vtils/commit/20b7cc3))
-<a name="0.59.1"></a>
+
+
+
 ## [0.59.1](https://github.com/fjc0k/vtils/compare/v0.59.0...v0.59.1) (2018-11-26)
 
 
@@ -1168,7 +996,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.59.0"></a>
 # [0.59.0](https://github.com/fjc0k/vtils/compare/v0.58.0...v0.59.0) (2018-11-24)
 
 
@@ -1178,12 +1005,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.58.0"></a>
 # [0.58.0](https://github.com/fjc0k/vtils/compare/v0.56.5...v0.58.0) (2018-11-22)
 
 
 
-<a name="0.57.0"></a>
+## [0.56.5](https://github.com/fjc0k/vtils/compare/v0.57.0...v0.56.5) (2018-11-22)
+
+
+### Bug Fixes
+
+* **types:** more compatible ([eb34c0e](https://github.com/fjc0k/vtils/commit/eb34c0e))
+
+
+
 # [0.57.0](https://github.com/fjc0k/vtils/compare/v0.56.4...v0.57.0) (2018-11-22)
 
 
@@ -1194,18 +1028,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.57.0"></a>
-# [0.57.0](https://github.com/fjc0k/vtils/compare/v0.56.4...v0.57.0) (2018-11-22)
-
-
-### Features
-
-* add isHan, isChineseName ([3aafede](https://github.com/fjc0k/vtils/commit/3aafede))
-* **Validator:** add name type ([6bcfed7](https://github.com/fjc0k/vtils/commit/6bcfed7))
-
-
-
-<a name="0.56.4"></a>
 ## [0.56.4](https://github.com/fjc0k/vtils/compare/v0.56.1...v0.56.4) (2018-11-17)
 
 
@@ -1215,12 +1037,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.56.1"></a>
 ## [0.56.1](https://github.com/fjc0k/vtils/compare/v0.56.0...v0.56.1) (2018-11-15)
 
 
 
-<a name="0.56.0"></a>
 # [0.56.0](https://github.com/fjc0k/vtils/compare/v0.55.0...v0.56.0) (2018-11-15)
 
 
@@ -1230,7 +1050,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.55.0"></a>
 # [0.55.0](https://github.com/fjc0k/vtils/compare/v0.54.0...v0.55.0) (2018-11-14)
 
 
@@ -1240,7 +1059,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.54.0"></a>
 # [0.54.0](https://github.com/fjc0k/vtils/compare/v0.53.2...v0.54.0) (2018-11-14)
 
 
@@ -1250,17 +1068,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.53.2"></a>
 ## [0.53.2](https://github.com/fjc0k/vtils/compare/v0.53.1...v0.53.2) (2018-11-13)
 
 
 
-<a name="0.53.1"></a>
 ## [0.53.1](https://github.com/fjc0k/vtils/compare/v0.53.0...v0.53.1) (2018-11-13)
 
 
 
-<a name="0.53.0"></a>
 # [0.53.0](https://github.com/fjc0k/vtils/compare/v0.52.0...v0.53.0) (2018-11-13)
 
 
@@ -1270,7 +1085,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.52.0"></a>
 # [0.52.0](https://github.com/fjc0k/vtils/compare/v0.51.0...v0.52.0) (2018-11-13)
 
 
@@ -1280,7 +1094,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.51.0"></a>
 # [0.51.0](https://github.com/fjc0k/vtils/compare/v0.50.6...v0.51.0) (2018-11-12)
 
 
@@ -1290,12 +1103,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.50.6"></a>
 ## [0.50.6](https://github.com/fjc0k/vtils/compare/v0.50.5...v0.50.6) (2018-11-11)
 
 
 
-<a name="0.50.5"></a>
 ## [0.50.5](https://github.com/fjc0k/vtils/compare/v0.50.4...v0.50.5) (2018-11-11)
 
 
@@ -1305,27 +1116,22 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.50.4"></a>
 ## [0.50.4](https://github.com/fjc0k/vtils/compare/v0.50.3...v0.50.4) (2018-11-11)
 
 
 
-<a name="0.50.3"></a>
 ## [0.50.3](https://github.com/fjc0k/vtils/compare/v0.50.2...v0.50.3) (2018-11-11)
 
 
 
-<a name="0.50.2"></a>
 ## [0.50.2](https://github.com/fjc0k/vtils/compare/v0.50.1...v0.50.2) (2018-11-10)
 
 
 
-<a name="0.50.1"></a>
 ## [0.50.1](https://github.com/fjc0k/vtils/compare/v0.50.0...v0.50.1) (2018-11-10)
 
 
 
-<a name="0.50.0"></a>
 # [0.50.0](https://github.com/fjc0k/vtils/compare/v0.49.1...v0.50.0) (2018-11-10)
 
 
@@ -1335,12 +1141,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.49.1"></a>
 ## [0.49.1](https://github.com/fjc0k/vtils/compare/v0.49.0...v0.49.1) (2018-11-10)
 
 
 
-<a name="0.49.0"></a>
 # [0.49.0](https://github.com/fjc0k/vtils/compare/v0.47.1...v0.49.0) (2018-11-09)
 
 
@@ -1355,12 +1159,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.47.1"></a>
 ## [0.47.1](https://github.com/fjc0k/vtils/compare/v0.47.0...v0.47.1) (2018-11-09)
 
 
 
-<a name="0.47.0"></a>
 # [0.47.0](https://github.com/fjc0k/vtils/compare/v0.46.0...v0.47.0) (2018-11-08)
 
 
@@ -1370,7 +1172,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.46.0"></a>
 # [0.46.0](https://github.com/fjc0k/vtils/compare/v0.45.0...v0.46.0) (2018-11-08)
 
 
@@ -1380,7 +1181,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.45.0"></a>
 # [0.45.0](https://github.com/fjc0k/vtils/compare/v0.44.0...v0.45.0) (2018-11-07)
 
 
@@ -1391,7 +1191,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.44.0"></a>
 # [0.44.0](https://github.com/fjc0k/vtils/compare/v0.43.0...v0.44.0) (2018-11-07)
 
 
@@ -1401,7 +1200,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.43.0"></a>
 # [0.43.0](https://github.com/fjc0k/vtils/compare/v0.42.0...v0.43.0) (2018-11-06)
 
 
@@ -1411,7 +1209,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.42.0"></a>
 # [0.42.0](https://github.com/fjc0k/vtils/compare/v0.41.0...v0.42.0) (2018-11-03)
 
 
@@ -1422,7 +1219,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.41.0"></a>
 # [0.41.0](https://github.com/fjc0k/vtils/compare/v0.40.2...v0.41.0) (2018-11-03)
 
 
@@ -1432,17 +1228,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.40.2"></a>
 ## [0.40.2](https://github.com/fjc0k/vtils/compare/v0.40.1...v0.40.2) (2018-11-03)
 
 
 
-<a name="0.40.1"></a>
 ## [0.40.1](https://github.com/fjc0k/vtils/compare/v0.40.0...v0.40.1) (2018-11-03)
 
 
 
-<a name="0.40.0"></a>
 # [0.40.0](https://github.com/fjc0k/vtils/compare/v0.39.0...v0.40.0) (2018-11-03)
 
 
@@ -1452,7 +1245,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.39.0"></a>
 # [0.39.0](https://github.com/fjc0k/vtils/compare/v0.38.0...v0.39.0) (2018-11-02)
 
 
@@ -1462,7 +1254,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.38.0"></a>
 # [0.38.0](https://github.com/fjc0k/vtils/compare/v0.37.0...v0.38.0) (2018-11-02)
 
 
@@ -1472,7 +1263,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.37.0"></a>
 # [0.37.0](https://github.com/fjc0k/vtils/compare/v0.36.0...v0.37.0) (2018-11-02)
 
 
@@ -1482,7 +1272,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.36.0"></a>
 # [0.36.0](https://github.com/fjc0k/vtils/compare/v0.35.0...v0.36.0) (2018-11-01)
 
 
@@ -1492,7 +1281,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.35.0"></a>
 # [0.35.0](https://github.com/fjc0k/vtils/compare/v0.34.2...v0.35.0) (2018-11-01)
 
 
@@ -1502,17 +1290,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.34.2"></a>
 ## [0.34.2](https://github.com/fjc0k/vtils/compare/v0.34.1...v0.34.2) (2018-11-01)
 
 
 
-<a name="0.34.1"></a>
 ## [0.34.1](https://github.com/fjc0k/vtils/compare/v0.34.0...v0.34.1) (2018-11-01)
 
 
 
-<a name="0.34.0"></a>
 # [0.34.0](https://github.com/fjc0k/vtils/compare/v0.33.1...v0.34.0) (2018-11-01)
 
 
@@ -1522,12 +1307,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.33.1"></a>
 ## [0.33.1](https://github.com/fjc0k/vtils/compare/v0.33.0...v0.33.1) (2018-10-31)
 
 
 
-<a name="0.33.0"></a>
 # [0.33.0](https://github.com/fjc0k/vtils/compare/v0.32.0...v0.33.0) (2018-10-31)
 
 
@@ -1538,7 +1321,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.32.0"></a>
 # [0.32.0](https://github.com/fjc0k/vtils/compare/v0.31.2...v0.32.0) (2018-10-31)
 
 
@@ -1548,17 +1330,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.31.2"></a>
 ## [0.31.2](https://github.com/fjc0k/vtils/compare/v0.31.1...v0.31.2) (2018-10-31)
 
 
 
-<a name="0.31.1"></a>
 ## [0.31.1](https://github.com/fjc0k/vtils/compare/v0.31.0...v0.31.1) (2018-10-31)
 
 
 
-<a name="0.31.0"></a>
 # [0.31.0](https://github.com/fjc0k/vtils/compare/v0.30.1...v0.31.0) (2018-10-30)
 
 
@@ -1568,12 +1347,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.30.1"></a>
 ## [0.30.1](https://github.com/fjc0k/vtils/compare/v0.30.0...v0.30.1) (2018-10-30)
 
 
 
-<a name="0.30.0"></a>
 # [0.30.0](https://github.com/fjc0k/vtils/compare/v0.29.0...v0.30.0) (2018-10-30)
 
 
@@ -1583,7 +1360,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.29.0"></a>
 # [0.29.0](https://github.com/fjc0k/vtils/compare/v0.28.1...v0.29.0) (2018-10-30)
 
 
@@ -1593,12 +1369,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.28.1"></a>
 ## [0.28.1](https://github.com/fjc0k/vtils/compare/v0.28.0...v0.28.1) (2018-10-30)
 
 
 
-<a name="0.28.0"></a>
 # [0.28.0](https://github.com/fjc0k/vtils/compare/v0.27.2...v0.28.0) (2018-10-30)
 
 
@@ -1608,17 +1382,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.27.2"></a>
 ## [0.27.2](https://github.com/fjc0k/vtils/compare/v0.27.1...v0.27.2) (2018-10-30)
 
 
 
-<a name="0.27.1"></a>
 ## [0.27.1](https://github.com/fjc0k/vtils/compare/v0.27.0...v0.27.1) (2018-10-29)
 
 
 
-<a name="0.27.0"></a>
 # [0.27.0](https://github.com/fjc0k/vtils/compare/v0.26.0...v0.27.0) (2018-10-29)
 
 
@@ -1628,7 +1399,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.26.0"></a>
 # [0.26.0](https://github.com/fjc0k/vtils/compare/v0.25.1...v0.26.0) (2018-10-28)
 
 
@@ -1638,17 +1408,18 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.25.1"></a>
 ## [0.25.1](https://github.com/fjc0k/vtils/compare/v0.25.0...v0.25.1) (2018-10-27)
 
 
 
-<a name="0.25.0"></a>
 # [0.25.0](https://github.com/fjc0k/vtils/compare/v0.23.6...v0.25.0) (2018-10-27)
 
 
 
-<a name="0.24.0"></a>
+## [0.23.6](https://github.com/fjc0k/vtils/compare/v0.24.0...v0.23.6) (2018-10-27)
+
+
+
 # [0.24.0](https://github.com/fjc0k/vtils/compare/v0.23.5...v0.24.0) (2018-10-26)
 
 
@@ -1658,39 +1429,18 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.23.5"></a>
 ## [0.23.5](https://github.com/fjc0k/vtils/compare/v0.23.4...v0.23.5) (2018-10-25)
 
 
 
-<a name="0.23.6"></a>
-## [0.23.6](https://github.com/fjc0k/vtils/compare/v0.23.4...v0.23.6) (2018-10-27)
-<a name="0.24.0"></a>
-# [0.24.0](https://github.com/fjc0k/vtils/compare/v0.23.5...v0.24.0) (2018-10-26)
-
-
-### Features
-
-* **fill:** support function value ([af268c8](https://github.com/fjc0k/vtils/commit/af268c8))
-
-
-
-<a name="0.23.5"></a>
-## [0.23.5](https://github.com/fjc0k/vtils/compare/v0.23.4...v0.23.5) (2018-10-25)
-
-
-
-<a name="0.23.4"></a>
 ## [0.23.4](https://github.com/fjc0k/vtils/compare/v0.23.2...v0.23.4) (2018-10-24)
 
 
 
-<a name="0.23.2"></a>
 ## [0.23.2](https://github.com/fjc0k/vtils/compare/v0.23.1...v0.23.2) (2018-10-24)
 
 
 
-<a name="0.23.1"></a>
 ## [0.23.1](https://github.com/fjc0k/vtils/compare/v0.23.0...v0.23.1) (2018-10-24)
 
 
@@ -1700,7 +1450,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.23.0"></a>
 # [0.23.0](https://github.com/fjc0k/vtils/compare/v0.22.1...v0.23.0) (2018-10-24)
 
 
@@ -1710,12 +1459,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.22.1"></a>
 ## [0.22.1](https://github.com/fjc0k/vtils/compare/v0.22.0...v0.22.1) (2018-10-24)
 
 
 
-<a name="0.22.0"></a>
 # [0.22.0](https://github.com/fjc0k/vtils/compare/v0.21.0...v0.22.0) (2018-10-24)
 
 
@@ -1725,7 +1472,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.21.0"></a>
 # [0.21.0](https://github.com/fjc0k/vtils/compare/v0.20.1...v0.21.0) (2018-10-23)
 
 
@@ -1735,12 +1481,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.20.1"></a>
 ## [0.20.1](https://github.com/fjc0k/vtils/compare/v0.20.0...v0.20.1) (2018-10-21)
 
 
 
-<a name="0.20.0"></a>
 # [0.20.0](https://github.com/fjc0k/vtils/compare/v0.19.0...v0.20.0) (2018-10-21)
 
 
@@ -1750,7 +1494,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.19.0"></a>
 # [0.19.0](https://github.com/fjc0k/vtils/compare/v0.18.0...v0.19.0) (2018-10-21)
 
 
@@ -1760,7 +1503,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.18.0"></a>
 # [0.18.0](https://github.com/fjc0k/vtils/compare/v0.17.0...v0.18.0) (2018-10-17)
 
 
@@ -1770,9 +1512,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.16.0"></a>
-# [0.16.0](https://github.com/fjc0k/vtils/compare/v0.15.1...v0.16.0) (2018-10-17)
-<a name="0.17.0"></a>
 # [0.17.0](https://github.com/fjc0k/vtils/compare/v0.16.0...v0.17.0) (2018-10-16)
 
 
@@ -1782,18 +1521,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.16.0"></a>
 # [0.16.0](https://github.com/fjc0k/vtils/compare/v0.15.1...v0.16.0) (2018-10-16)
 
 
 ### Features
 
-* add preventEventDefault, stopEventPropagation ([e61b23c](https://github.com/fjc0k/vtils/commit/e61b23c))
 * add fill ([3880400](https://github.com/fjc0k/vtils/commit/3880400))
 
 
 
-<a name="0.15.1"></a>
 ## [0.15.1](https://github.com/fjc0k/vtils/compare/v0.15.0...v0.15.1) (2018-10-15)
 
 
@@ -1803,7 +1539,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.15.0"></a>
 # [0.15.0](https://github.com/fjc0k/vtils/compare/v0.14.4...v0.15.0) (2018-10-15)
 
 
@@ -1813,12 +1548,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.14.4"></a>
 ## [0.14.4](https://github.com/fjc0k/vtils/compare/v0.14.3...v0.14.4) (2018-10-15)
 
 
 
-<a name="0.14.3"></a>
 ## [0.14.3](https://github.com/fjc0k/vtils/compare/v0.14.2...v0.14.3) (2018-10-15)
 
 
@@ -1828,7 +1561,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.14.2"></a>
 ## [0.14.2](https://github.com/fjc0k/vtils/compare/v0.14.1...v0.14.2) (2018-10-15)
 
 
@@ -1838,7 +1570,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.14.1"></a>
 ## [0.14.1](https://github.com/fjc0k/vtils/compare/v0.14.0...v0.14.1) (2018-10-15)
 
 
@@ -1848,7 +1579,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.14.0"></a>
 # [0.14.0](https://github.com/fjc0k/vtils/compare/v0.13.2...v0.14.0) (2018-10-14)
 
 
@@ -1858,7 +1588,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.13.2"></a>
 ## [0.13.2](https://github.com/fjc0k/vtils/compare/v0.13.1...v0.13.2) (2018-10-14)
 
 
@@ -1868,7 +1597,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.13.1"></a>
 ## [0.13.1](https://github.com/fjc0k/vtils/compare/v0.13.0...v0.13.1) (2018-10-14)
 
 
@@ -1878,7 +1606,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.13.0"></a>
 # [0.13.0](https://github.com/fjc0k/vtils/compare/v0.12.0...v0.13.0) (2018-10-14)
 
 
@@ -1888,7 +1615,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.12.0"></a>
 # [0.12.0](https://github.com/fjc0k/vtils/compare/v0.11.1...v0.12.0) (2018-10-14)
 
 
@@ -1898,12 +1624,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.11.1"></a>
 ## [0.11.1](https://github.com/fjc0k/vtils/compare/v0.11.0...v0.11.1) (2018-10-14)
 
 
 
-<a name="0.11.0"></a>
 # [0.11.0](https://github.com/fjc0k/vtils/compare/v0.10.1...v0.11.0) (2018-10-14)
 
 
@@ -1913,12 +1637,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.10.1"></a>
 ## [0.10.1](https://github.com/fjc0k/vtils/compare/v0.10.0...v0.10.1) (2018-10-11)
 
 
 
-<a name="0.10.0"></a>
 # [0.10.0](https://github.com/fjc0k/vtils/compare/v0.9.1...v0.10.0) (2018-10-11)
 
 
@@ -1928,12 +1650,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.9.1"></a>
 ## [0.9.1](https://github.com/fjc0k/vtils/compare/v0.9.0...v0.9.1) (2018-10-11)
 
 
 
-<a name="0.9.0"></a>
 # [0.9.0](https://github.com/fjc0k/vtils/compare/v0.8.0...v0.9.0) (2018-10-11)
 
 
@@ -1943,7 +1663,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.8.0"></a>
 # [0.8.0](https://github.com/fjc0k/vtils/compare/v0.7.0...v0.8.0) (2018-10-11)
 
 
@@ -1953,7 +1672,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.7.0"></a>
 # [0.7.0](https://github.com/fjc0k/vtils/compare/v0.6.0...v0.7.0) (2018-10-11)
 
 
@@ -1963,7 +1681,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.6.0"></a>
 # [0.6.0](https://github.com/fjc0k/vtils/compare/v0.5.2...v0.6.0) (2018-10-10)
 
 
@@ -1973,17 +1690,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.5.2"></a>
 ## [0.5.2](https://github.com/fjc0k/vtils/compare/v0.5.1...v0.5.2) (2018-10-10)
 
 
 
-<a name="0.5.1"></a>
 ## [0.5.1](https://github.com/fjc0k/vtils/compare/v0.5.0...v0.5.1) (2018-10-10)
 
 
 
-<a name="0.5.0"></a>
 # [0.5.0](https://github.com/fjc0k/vtils/compare/v0.4.0...v0.5.0) (2018-10-10)
 
 
@@ -1993,7 +1707,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.4.0"></a>
 # [0.4.0](https://github.com/fjc0k/vtils/compare/v0.3.1...v0.4.0) (2018-10-10)
 
 
@@ -2003,12 +1716,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.3.1"></a>
 ## [0.3.1](https://github.com/fjc0k/vtils/compare/v0.3.0...v0.3.1) (2018-10-10)
 
 
 
-<a name="0.3.0"></a>
 # [0.3.0](https://github.com/fjc0k/vtils/compare/v0.2.2...v0.3.0) (2018-10-10)
 
 
@@ -2018,12 +1729,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.2.2"></a>
 ## [0.2.2](https://github.com/fjc0k/vtils/compare/v0.2.1...v0.2.2) (2018-10-10)
 
 
 
-<a name="0.2.1"></a>
 ## [0.2.1](https://github.com/fjc0k/vtils/compare/v0.2.0...v0.2.1) (2018-10-10)
 
 
@@ -2033,7 +1742,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.2.0"></a>
 # [0.2.0](https://github.com/fjc0k/vtils/compare/v0.1.0...v0.2.0) (2018-10-10)
 
 
@@ -2043,7 +1751,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.1.0"></a>
 # [0.1.0](https://github.com/fjc0k/vtils/compare/v0.0.1...v0.1.0) (2018-10-09)
 
 
@@ -2053,10 +1760,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-<a name="0.0.1"></a>
-## 0.0.1 (2018-10-09)
+## [0.0.1](https://github.com/fjc0k/vtils/compare/6c5e7c7...v0.0.1) (2018-10-09)
 
 
 ### Features
 
 * first commit ([6c5e7c7](https://github.com/fjc0k/vtils/commit/6c5e7c7))
+
+
+
