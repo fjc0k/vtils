@@ -25,6 +25,7 @@ ii(async function main() {
   const typedocPath = path.join(__dirname, '../.typedoc')
   const typedocDataFile = path.join(typedocPath, 'data.json')
   const readMeFile = path.join(__dirname, '../README.md')
+  const mainReadMeFile = path.join(__dirname, '../../../README.md')
   const typedocReadMeFile = path.join(__dirname, '../README_TYPEDOC.md')
 
   // 切换至工作目录
@@ -166,6 +167,7 @@ ii(async function main() {
   })
 
   await fs.writeFile(readMeFile, readme)
+  await fs.writeFile(mainReadMeFile, readme)
 
   // typedoc 主页
   await fs.writeFile(

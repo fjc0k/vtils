@@ -33,7 +33,7 @@
     "buildLib": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildLib.ts",
     "buildDocs": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildDocs.ts",
     "releaseDocs": "gh-pages --dist .typedoc --dest vtils",
-    "version": "yarn buildLib && yarn buildDocs && git add README.md README_TYPEDOC.md && yarn releaseDocs"
+    "version": "yarn buildLib && yarn buildDocs && git add -A && yarn releaseDocs"
   },
   "devDependencies": {
     "@tarojs/taro-h5": "^1.3.18",
