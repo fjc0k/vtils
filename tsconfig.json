@@ -7,7 +7,6 @@
     "declaration": true,
     "removeComments": false,
     "esModuleInterop": true,
-    "outDir": "./lib",
     "newLine": "LF",
     "skipLibCheck": true,
     "sourceMap": true,
@@ -15,12 +14,5 @@
       "esnext",
       "dom"
     ]
-  },
-  "include": [
-    "src",
-    "global.d.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }

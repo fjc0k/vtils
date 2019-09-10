@@ -5,7 +5,7 @@
 <h2 align="center">小巧实用的 JavaScript 工具类库。</h2>
 
 <p align="center">
-  <a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/</a>
+  <a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/vtils</a>
 </p>
 
 ## 特性
@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.26.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.27.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {

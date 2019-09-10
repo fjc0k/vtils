@@ -1,0 +1,1 @@
+import 'miniprogram-api-typings'

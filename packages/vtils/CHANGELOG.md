@@ -5,11 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.27.0](https://github.com/fjc0k/vtils/compare/v2.27.0-beta.0...v2.27.0) (2019-09-10)
 
-
-### Bug Fixes
-
-* **scripts:** 修复发布命令 ([254b726](https://github.com/fjc0k/vtils/commit/254b726))
-* **use:** 修复 peerDependencies ([e0b8e84](https://github.com/fjc0k/vtils/commit/e0b8e84))
+**Note:** Version bump only for package vtils
 
 
 

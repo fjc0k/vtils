@@ -64,7 +64,7 @@ test('可以正常创建实例', () => {
 
   jestExpectEqual(
     wechat.configParams,
-    {},
+    {} as any,
   )
 })
 

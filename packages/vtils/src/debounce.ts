@@ -22,7 +22,7 @@ import {AnyFunction} from './enhanceType'
  * ```
  */
 export function debounce<T extends AnyFunction>(fn: T, wait: number): (...args: Parameters<T>) => void {
-  let timer: NodeJS.Timeout | null = null
+  let timer: any
 
   return function (this: any) {
     if (timer) {

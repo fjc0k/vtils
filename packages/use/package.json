@@ -1,0 +1,60 @@
+{
+  "name": "@vtils/use",
+  "version": "2.27.0",
+  "description": "vtils 的 React Hooks 封装。",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "unpkg": "lib/index.umd.js",
+  "jsdelivr": "lib/index.umd.js",
+  "types": "lib/index.d.ts",
+  "homepage": "https://github.com/fjc0k/vtils/tree/master/packages/use",
+  "license": "MIT",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fjc0k/vtils.git",
+    "directory": "packages/use"
+  },
+  "bugs": {
+    "url": "https://github.com/fjc0k/vtils/issues"
+  },
+  "keywords": [
+    "vtils",
+    "react-hooks",
+    "use"
+  ],
+  "files": [
+    "lib"
+  ],
+  "author": {
+    "name": "Jay Fong",
+    "email": "fjc0kb@gmail.com",
+    "url": "https://github.com/fjc0k"
+  },
+  "scripts": {
+    "buildLib": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildLib.ts",
+    "buildDocs": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildDocs.ts",
+    "releaseDocs": "gh-pages --dist .typedoc --dest use",
+    "version": "yarn buildLib && yarn buildDocs && git add -A && yarn releaseDocs"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/shelljs": "^0.8.5",
+    "bili": "^4.8.0",
+    "dts-bundle-generator": "^3.2.0",
+    "fs-extra": "^8.1.0",
+    "gh-pages": "^2.0.1",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.0.2",
+    "typedoc": "^0.15.0-0",
+    "typescript": "^3.4.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "vtils": "^2.26.0"
+  }
+}

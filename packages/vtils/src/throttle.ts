@@ -28,8 +28,8 @@ import {AnyFunction} from './enhanceType'
  * ```
  */
 export function throttle<T extends AnyFunction>(fn: T, wait: number): (...args: Parameters<T>) => void {
-  let timer: NodeJS.Timeout | null = null
-  let lastTime: number | null = null
+  let timer: any
+  let lastTime: number
 
   return function (this: any) {
     const currentTime = new Date().getTime()

@@ -6,8 +6,9 @@ cache:
     - node_modules
 install:
   - yarn
+  - yarn bootstrap
 script:
-  - yarn lib:cov
+  - yarn test
 after_success:
   - yarn codecov
 branches:

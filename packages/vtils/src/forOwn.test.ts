@@ -10,7 +10,7 @@ test('遍历对象正常', () => {
   }
   const generatedObj: typeof obj = {} as any
   forOwn(obj, (value, key) => {
-    generatedObj[key] = value
+    (generatedObj as any)[key] = value
   })
   jestExpectEqual(generatedObj, obj)
 })
@@ -25,7 +25,7 @@ test('仅遍历可枚举的属性', () => {
   }
   const generatedObj: typeof obj = {} as any
   forOwn(obj, (value, key) => {
-    generatedObj[key] = value
+    (generatedObj as any)[key] = value
   })
   jestExpectEqual(sym in generatedObj, false)
 })
