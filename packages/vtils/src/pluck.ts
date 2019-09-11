@@ -28,7 +28,7 @@ export function pluck<T, V>(
 ): V[]
 
 /**
- * 将数据中每一项的迭代值组合成一个对象返回。
+ * 将数据中每一项的迭代值组合成一个对象返回，后者会覆盖前者。
  *
  * @param data 数据
  * @param getValueIteratee 值的迭代函数
