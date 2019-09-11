@@ -41,7 +41,7 @@ export interface UseEasyValidatorReturn<D extends EasyValidatorData> {
  *     if (res.valid) {
  *       console.log(res.data)
  *     } else {
- *       console.log(res.unvalidRules[0].message)
+ *       console.log(res.firstUnvalidRuleMessage)
  *     }
  *   })
  * }, [])
