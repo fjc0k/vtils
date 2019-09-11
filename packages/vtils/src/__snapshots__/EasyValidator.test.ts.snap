@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`示例: 示例 1`] = `
+Object {
+  "firstUnvalidRuleMessage": "两次密码应一致",
+  "messages": Object {
+    "pass2": "两次密码应一致",
+  },
+  "unvalidRules": Array [
+    Object {
+      "key": "pass2",
+      "message": "两次密码应一致",
+      "test": [Function],
+    },
+  ],
+  "valid": false,
+  "validByKey": Object {
+    "name": true,
+    "pass1": true,
+    "pass2": false,
+    "phoneNumber": true,
+  },
+}
+`;
+
+exports[`综合测试: 验证失败 1`] = `
+Object {
+  "firstUnvalidRuleMessage": "请输入正整数",
+  "messages": Object {
+    "customAsyncFn": "请输入包含abc的文字",
+    "customRegExp": "请输入包含abc的文字",
+    "email": "请输入邮箱",
+    "integer": "请输入正整数",
+    "pass2": "请输入和密码一相同的密码",
+    "required": "请输入",
+    "updateMessage": "出错啦",
+  },
+  "unvalidRules": Array [
+    Object {
+      "key": "integer",
+      "message": "请输入正整数",
+      "type": "integer",
+    },
+    Object {
+      "key": "email",
+      "message": "请输入邮箱",
+      "type": "email",
+    },
+    Object {
+      "key": "customRegExp",
+      "message": "请输入包含abc的文字",
+      "test": /abc/,
+    },
+    Object {
+      "key": "customAsyncFn",
+      "message": "请输入包含abc的文字",
+      "test": [Function],
+    },
+    Object {
+      "key": "pass2",
+      "message": "请输入和密码一相同的密码",
+      "test": [Function],
+    },
+    Object {
+      "key": "required",
+      "message": "请输入",
+      "required": true,
+    },
+    Object {
+      "key": "updateMessage",
+      "message": "出错啦",
+      "test": [Function],
+    },
+  ],
+  "valid": false,
+  "validByKey": Object {
+    "chineseIdCardNumber": true,
+    "chineseMobilePhoneNumber": true,
+    "chineseName": true,
+    "customAsyncFn": false,
+    "customRegExp": false,
+    "customSyncFn": true,
+    "email": false,
+    "integer": false,
+    "number": true,
+    "pass1": true,
+    "pass2": false,
+    "required": false,
+    "updateMessage": false,
+    "url": true,
+  },
+}
+`;
+
+exports[`综合测试: 验证成功 1`] = `
+Object {
+  "firstUnvalidRuleMessage": undefined,
+  "messages": Object {},
+  "unvalidRules": Array [],
+  "valid": true,
+  "validByKey": Object {
+    "chineseIdCardNumber": true,
+    "chineseMobilePhoneNumber": true,
+    "chineseName": true,
+    "customAsyncFn": true,
+    "customRegExp": true,
+    "customSyncFn": true,
+    "email": true,
+    "integer": true,
+    "number": true,
+    "pass1": true,
+    "pass2": true,
+    "required": true,
+    "updateMessage": true,
+    "url": true,
+  },
+}
+`;

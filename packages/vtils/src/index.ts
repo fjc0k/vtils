@@ -1,4 +1,4 @@
-// @index(['./*', '!./*.test.ts'], pp => `export * from '${pp.path}'`)
+// @index(['./*', '!./_*', '!./typings.d.ts', '!./*.test.ts'], pp => `export * from '${pp.path}'`)
 export * from './assign'
 export * from './base64'
 export * from './castArray'

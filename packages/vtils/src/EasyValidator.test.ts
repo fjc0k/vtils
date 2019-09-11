@@ -1,7 +1,4 @@
 import {EasyValidator, EasyValidatorRules} from './EasyValidator'
-import {ii} from './ii'
-import {jestExpectEqual} from './enhanceJest'
-import {pluck} from './pluck'
 import {wait} from './wait'
 
 type Data = {
@@ -111,7 +108,7 @@ test('综合测试', async () => {
 
   const v = new EasyValidator<Data>(rules)
 
-  jestExpectEqual(
+  expect(
     await v.validate({
       number: '122.3',
       integer: '12',
@@ -128,50 +125,26 @@ test('综合测试', async () => {
       required: 'req',
       updateMessage: 'x',
     }),
-    {
-      valid: true,
-      unvalidRules: [],
-      messages: {},
-    },
-  )
-  jestExpectEqual(
+  ).toMatchSnapshot('验证成功')
+
+  expect(
     await v.validate({
       number: '122.3',
-      integer: '12.2', // 1
+      integer: '12.2',
       chineseMobilePhoneNumber: '18842611520',
       chineseIdCardNumber: '130401200101011678',
       url: 'http://github.com',
-      email: 'fjc@163', // 5
-      // email: '', // 6
+      email: 'fjc@163',
       chineseName: '方剑成',
-      customRegExp: 'abd2', // 8
+      customRegExp: 'abd2',
       customSyncFn: '2abc',
-      customAsyncFn: '2abs2', // 10
+      customAsyncFn: '2abs2',
       pass1: '1234567',
-      pass2: '12345678', // 12
-      required: undefined as any, // 13
-      updateMessage: 'y', // 14
+      pass2: '12345678',
+      required: undefined as any,
+      updateMessage: 'y',
     }),
-    ii(() => {
-      const unvalidRules = [
-        rules[1],
-        rules[5],
-        rules[8],
-        rules[10],
-        rules[12],
-        rules[13],
-        {
-          ...rules[14],
-          message: '出错啦',
-        },
-      ]
-      return {
-        valid: false,
-        unvalidRules: unvalidRules,
-        messages: pluck(unvalidRules, item => item.message, item => item.key),
-      }
-    }),
-  )
+  ).toMatchSnapshot('验证失败')
 })
 
 test('示例', async () => {
@@ -227,9 +200,5 @@ test('示例', async () => {
     pass1: '1234567',
     pass2: '12345678',
   })
-  expect(res.valid).toBeFalsy()
-  jestExpectEqual(
-    res.unvalidRules[0].key,
-    'pass2',
-  )
+  expect(res).toMatchSnapshot('示例')
 })

@@ -1,4 +1,5 @@
 import {isChineseIDCardNumber, isEmail, isFunction, isInteger, isNumeric, isPossibleChineseMobilePhoneNumber, isPossibleChineseName, isPromiseLike, isRegExp, isUrl} from './is'
+import {mapValues} from './mapValues'
 import {pluck} from './pluck'
 import {sequential} from './sequential'
 
@@ -58,12 +59,16 @@ export interface EasyValidatorRule<D extends EasyValidatorData> {
 export type EasyValidatorRules<D extends EasyValidatorData> = Array<EasyValidatorRule<D>>
 
 export interface EasyValidatorValidateReturn<D extends EasyValidatorData> {
-  /** 是否验证通过 */
+  /** 数据是否验证通过 */
   valid: boolean,
+  /** 数据中的每个键值是否验证通过 */
+  validByKey: Record<keyof D, boolean>,
   /** 未验证通过的规则组成的列表 */
   unvalidRules: Array<EasyValidatorRule<D>>,
   /** 未验证通过的属性的提示信息 */
   messages: Partial<Record<keyof D, any>>,
+  /** 第一个未验证通过规则的提示信息 */
+  firstUnvalidRuleMessage: any,
 }
 
 /**
@@ -117,7 +122,7 @@ export interface EasyValidatorValidateReturn<D extends EasyValidatorData> {
  *   pass1: '1234567',
  *   pass2: '12345678'
  * }).then(res => {
- *   // => { valid: false, unvalidRules: [{ key: 'pass2', test: ({ pass1, pass2 }) => pass2 === pass1, message: '两次密码应一致' }] }
+ *   // => { valid: false, ... }
  * })
  * ```
  */
@@ -209,6 +214,7 @@ export class EasyValidator<D extends EasyValidatorData> {
    * @returns 返回验证结果
    */
   validate(data: D) {
+    const validByKey: Record<keyof D, boolean> = mapValues(data, () => true) as any
     const unvalidKeys: Array<keyof D> = []
     const unvalidRules: Array<EasyValidatorRule<D>> = []
 
@@ -220,6 +226,7 @@ export class EasyValidator<D extends EasyValidatorData> {
               if (unvalidKeys.indexOf(rule.key) === -1) {
                 this.check(rule, data).then(({valid, message}) => {
                   if (!valid) {
+                    validByKey[rule.key] = false
                     unvalidKeys.push(rule.key)
                     unvalidRules.push(
                       message == null
@@ -237,8 +244,10 @@ export class EasyValidator<D extends EasyValidatorData> {
         ),
       ).then<EasyValidatorValidateReturn<D>>(() => ({
         valid: unvalidRules.length === 0,
+        validByKey: Object.freeze(validByKey),
         unvalidRules: unvalidRules.slice(),
         messages: pluck(unvalidRules, item => item.message, item => item.key),
+        firstUnvalidRuleMessage: unvalidRules[0] && unvalidRules[0].message,
       }))
     )
   }
