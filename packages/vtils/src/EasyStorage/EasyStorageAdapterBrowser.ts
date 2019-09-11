@@ -44,13 +44,13 @@ export class EasyStorageAdapterBrowser extends EasyStorageAdapter {
   }
 }
 
-export class EasyStorageDriverBrowserLocalStorage extends EasyStorageAdapterBrowser {
+export class EasyStorageAdapterBrowserLocalStorage extends EasyStorageAdapterBrowser {
   constructor() {
     super(localStorage)
   }
 }
 
-export class EasyStorageDriverBrowserSessionStorage extends EasyStorageAdapterBrowser {
+export class EasyStorageAdapterBrowserSessionStorage extends EasyStorageAdapterBrowser {
   constructor() {
     super(sessionStorage)
   }

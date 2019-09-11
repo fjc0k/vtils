@@ -1,9 +1,9 @@
 import * as Taro from '@tarojs/taro-h5'
 import {AnyFunction} from '../enhanceType'
 import {EasyStorage} from './EasyStorage'
+import {EasyStorageAdapterBrowserLocalStorage, EasyStorageAdapterBrowserSessionStorage} from './EasyStorageAdapterBrowser'
 import {EasyStorageAdapterMemory} from './EasyStorageAdapterMemory'
 import {EasyStorageAdapterWeapp} from './EasyStorageAdapterWeapp'
-import {EasyStorageDriverBrowserLocalStorage, EasyStorageDriverBrowserSessionStorage} from './EasyStorageAdapterBrowser'
 import {ii} from '../ii'
 
 ii(function patchWX() {
@@ -39,8 +39,8 @@ type StorageKey = keyof StorageValues
 const storageKeys: StorageKey[] = ['str', 'num', 'bool', 'obj', 'arr']
 
 const adapters = [
-  EasyStorageDriverBrowserLocalStorage,
-  EasyStorageDriverBrowserSessionStorage,
+  EasyStorageAdapterBrowserLocalStorage,
+  EasyStorageAdapterBrowserSessionStorage,
   EasyStorageAdapterMemory,
   EasyStorageAdapterWeapp,
 ]
