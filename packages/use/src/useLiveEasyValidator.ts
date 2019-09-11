@@ -1,4 +1,4 @@
-import {EasyValidatorData, EasyValidatorRules} from 'vtils'
+import {EasyValidatorData, EasyValidatorRules, mapValues} from 'vtils'
 import {useEasyValidator, UseEasyValidatorValidateResult} from './useEasyValidator'
 import {useEffect, useState} from 'react'
 
@@ -35,9 +35,11 @@ export function useLiveEasyValidator<D extends EasyValidatorData>(data: D, rules
   const easyValidator = useEasyValidator(data, rules)
   const [result, setResult] = useState<UseEasyValidatorValidateResult<D>>(() => ({
     valid: true,
+    validByKey: mapValues(data, () => true) as any,
     data: data,
     messages: [],
     unvalidRules: [],
+    firstUnvalidRuleMessage: undefined,
   }))
 
   useEffect(() => {
