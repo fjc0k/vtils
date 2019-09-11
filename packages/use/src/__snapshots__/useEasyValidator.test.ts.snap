@@ -6,6 +6,7 @@ Object {
     "name": "",
     "pass": "",
   },
+  "firstUnvalidRuleMessage": "姓名不能为空",
   "messages": Object {
     "name": "姓名不能为空",
     "pass": "密码至少应为6位",
@@ -23,6 +24,10 @@ Object {
     },
   ],
   "valid": false,
+  "validByKey": Object {
+    "name": false,
+    "pass": false,
+  },
 }
 `;
 
@@ -32,9 +37,14 @@ Object {
     "name": "方方",
     "pass": "123456",
   },
+  "firstUnvalidRuleMessage": undefined,
   "messages": Object {},
   "unvalidRules": Array [],
   "valid": true,
+  "validByKey": Object {
+    "name": true,
+    "pass": true,
+  },
 }
 `;
 
@@ -44,6 +54,7 @@ Object {
     "name": "方方",
     "pass": "123",
   },
+  "firstUnvalidRuleMessage": "密码至少应为6位",
   "messages": Object {
     "pass": "密码至少应为6位",
   },
@@ -55,6 +66,10 @@ Object {
     },
   ],
   "valid": false,
+  "validByKey": Object {
+    "name": true,
+    "pass": false,
+  },
 }
 `;
 
@@ -64,6 +79,7 @@ Object {
     "name": "方方",
     "pass": "",
   },
+  "firstUnvalidRuleMessage": "密码至少应为6位",
   "messages": Object {
     "pass": "密码至少应为6位",
   },
@@ -75,5 +91,9 @@ Object {
     },
   ],
   "valid": false,
+  "validByKey": Object {
+    "name": true,
+    "pass": false,
+  },
 }
 `;
