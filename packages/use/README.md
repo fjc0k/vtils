@@ -1,8 +1,8 @@
 <p align="center"><img width="200" src="https://raw.githubusercontent.com/fjc0k/vtils/master/logo.png" alt="logo"></p>
 
-<p align="center"><a href="https://www.npmjs.com/package/vtils"><img src="https://badge.fury.io/js/vtils.svg" alt="NPM Version"></a> <a href="https://travis-ci.org/fjc0k/vtils"><img src="https://travis-ci.org/fjc0k/vtils.svg?branch=master" alt="Build Status"></a> <a href="https://codecov.io/gh/fjc0k/vtils"><img src="https://codecov.io/gh/fjc0k/vtils/branch/master/graph/badge.svg" alt="Coverage Status"></a> <img src="https://badgen.net/bundlephobia/min/vtils" alt="Size"> <img src="https://badgen.net/bundlephobia/minzip/vtils" alt="Gzip Size"> <img src="https://badgen.net/github/license/fjc0k/vtils" alt="License"></p>
+<p align="center"><a href="https://www.npmjs.com/package/@vtils/use"><img src="https://badge.fury.io/js/%40vtils%2Fuse.svg" alt="NPM Version"></a> <a href="https://travis-ci.org/fjc0k/vtils"><img src="https://travis-ci.org/fjc0k/vtils.svg?branch=master" alt="Build Status"></a> <a href="https://codecov.io/gh/fjc0k/vtils"><img src="https://codecov.io/gh/fjc0k/vtils/branch/master/graph/badge.svg" alt="Coverage Status"></a> <img src="https://badgen.net/bundlephobia/min/@vtils/use" alt="Size"> <img src="https://badgen.net/bundlephobia/minzip/@vtils/use" alt="Gzip Size"> <img src="https://badgen.net/github/license/fjc0k/vtils" alt="License"></p>
 
-<h2 align="center">vtils 的 React Hooks 封装。</h2>
+<h2 align="center"><a href="https://github.com/fjc0k/vtils/tree/master/packages/vtils">vtils</a> 的 React Hooks 封装。</h2>
 
 <p align="center">
   <a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/use</a>
@@ -46,3 +46,7 @@ npm i @vtils/use --save
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/use/src/useLiveEasyValidator.ts#L5) | [API](https://fjc0k.github.io/vtils/use/globals.html#useliveeasyvalidator) | [回目录](#目录)</small>
 <!-- Hooksi内容 -->
+
+## 许可
+
+MIT ©️ Jay Fong
