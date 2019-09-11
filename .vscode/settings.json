@@ -21,4 +21,7 @@
       "autoFix": true
     }
   ],
+  "files.associations": {
+    "*.json": "jsonc"
+  }
 }

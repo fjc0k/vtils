@@ -15,9 +15,16 @@ ii(async function main() {
   // 构建包
   _.exec('bili')
 
-  // 删除类型文件
-  _.rm('-rf', 'lib/*.d.ts')
-
   // 生成类型文件
-  _.exec('dts-bundle-generator src/index.ts -o lib/index.d.ts --disable-symlinks-following')
+  try {
+    _.exec('api-extractor run')
+  } catch (err) {}
+
+  // 删除类型文件
+  _.ls('lib/*.d.ts').forEach(file => {
+    if (!file.endsWith('index.d.ts')) {
+      _.rm('-rf', file)
+    }
+  })
+  _.rm('-rf', 'lib/*.json')
 })
