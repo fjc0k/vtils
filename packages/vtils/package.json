@@ -36,6 +36,7 @@
     "version": "yarn buildLib && yarn buildDocs && git add -A && yarn releaseDocs"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.4.1",
     "@tarojs/taro-h5": "^1.3.18",
     "@types/fs-extra": "^7.0.0",
     "@types/qs": "^6.5.3",

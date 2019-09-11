@@ -18,23 +18,18 @@ ii(async function main() {
   // 构建包
   _.exec('yarn bili')
 
+  // 生成类型文件
+  try {
+    _.exec('api-extractor run')
+  } catch (err) {}
+
   // 合并 ***.d.ts 为 index.d.ts
-  const dFiles = await globby('lib/**/*.d.ts', {
-    cwd: wd,
-    absolute: true,
+  _.ls('lib/**/*.d.ts').forEach(file => {
+    if (!file.endsWith('lib/index.d.ts')) {
+      _.rm('-rf', file)
+    }
   })
-  const contentList = await parallel(
-    dFiles.map(dFile => async () => {
-      let content = /(index|test)\.d\.ts$/.test(dFile) ? '' : await fs.readFile(dFile)
-      content = content.toString().replace(/^import .+ from .+$/gm, '')
-      await fs.remove(dFile)
-      return content
-    }),
-  )
-  await fs.writeFile(
-    path.join(wd, 'lib/index.d.ts'),
-    contentList.filter(Boolean).join('\n\n'),
-  )
+  _.rm('-rf', 'lib/*.json')
 
   // 删除空文件夹
   const emptyDirs = await globby('lib/*', {
