@@ -6,7 +6,6 @@ cache:
     - node_modules
 install:
   - yarn
-  - yarn bootstrap
 script:
   - yarn test
 after_success:
