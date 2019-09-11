@@ -6,10 +6,10 @@
   "scripts": {
     "bootstrap": "lerna bootstrap && lerna exec --scope vtils -- yarn buildLib && lerna link",
     "fix": "yarn lint --fix",
-    "lint": "eslint . --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint",
+    "lint": "eslint packages/**/*.ts --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint",
     "test": "jest --coverage",
-    "release": "lerna publish --conventional-commits --conventional-graduate --force-publish=* --exact --skip-temp-tag",
-    "releaseBeta": "lerna publish --conventional-commits --force-publish=* --exact --skip-temp-tag --preid=beta --npm-tag=beta"
+    "release": "yarn lint && yarn test && lerna publish --conventional-commits --conventional-graduate --force-publish=* --exact --skip-temp-tag",
+    "releaseBeta": "yarn lint && yarn test && lerna publish --conventional-commits --force-publish=* --exact --skip-temp-tag --preid=beta --npm-tag=beta"
   },
   "jest": {
     "preset": "ts-jest",
