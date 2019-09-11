@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.29.1](https://github.com/fjc0k/vtils/compare/v2.29.0...v2.29.1) (2019-09-11)
+
+
+### Bug Fixes
+
+* **use:** 更换类型打包工具为 api-extractor ([41f80bc](https://github.com/fjc0k/vtils/commit/41f80bc))
+* **useLiveEasyValidator:** 跟进 EasyValidator ([50025a9](https://github.com/fjc0k/vtils/commit/50025a9))
+
+
+
+
+
 # [2.29.0](https://github.com/fjc0k/vtils/compare/v2.28.0...v2.29.0) (2019-09-11)
 
 
