@@ -5,7 +5,7 @@
 <h2 align="center"><a href="https://github.com/fjc0k/vtils/tree/master/packages/vtils">vtils</a> 的 React Hooks 封装。</h2>
 
 <p align="center">
-  <a href="https://fjc0k.github.io/vtils/">https://fjc0k.github.io/vtils/use</a>
+  <a href="https://fjc0k.github.io/vtils/use">https://fjc0k.github.io/vtils/use</a>
 </p>
 
 ## 安装
