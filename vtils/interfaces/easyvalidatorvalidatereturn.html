@@ -2381,6 +2381,9 @@ img {
 			<a href="easyvalidatorvalidatereturn.html" class="tsd-kind-icon">Easy<wbr>Validator<wbr>Validate<wbr>Return</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="easyvalidatorvalidatereturn.html#firstunvalidrulemessage" class="tsd-kind-icon">first<wbr>Unvalid<wbr>Rule<wbr>Message</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a href="easyvalidatorvalidatereturn.html#messages" class="tsd-kind-icon">messages</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
@@ -2388,6 +2391,9 @@ img {
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a href="easyvalidatorvalidatereturn.html#valid" class="tsd-kind-icon">valid</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="easyvalidatorvalidatereturn.html#validbykey" class="tsd-kind-icon">valid<wbr>ByKey</a>
 				</li>
 			</ul>
 		</li>
@@ -2418,9 +2424,11 @@ img {
 					<section class="tsd-index-section tsd-is-external">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorvalidatereturn.html#firstunvalidrulemessage" class="tsd-kind-icon">first<wbr>Unvalid<wbr>Rule<wbr>Message</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorvalidatereturn.html#messages" class="tsd-kind-icon">messages</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorvalidatereturn.html#unvalidrules" class="tsd-kind-icon">unvalid<wbr>Rules</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorvalidatereturn.html#valid" class="tsd-kind-icon">valid</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="easyvalidatorvalidatereturn.html#validbykey" class="tsd-kind-icon">valid<wbr>ByKey</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2429,12 +2437,27 @@ img {
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="firstunvalidrulemessage" class="tsd-anchor"></a>
+				<h3>first<wbr>Unvalid<wbr>Rule<wbr>Message</h3>
+				<div class="tsd-signature tsd-kind-icon">first<wbr>Unvalid<wbr>Rule<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/7a6375b/packages/vtils/src/EasyValidator.ts#L71">EasyValidator.ts:71</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>第一个未验证通过规则的提示信息</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 				<a name="messages" class="tsd-anchor"></a>
 				<h3>messages</h3>
 				<div class="tsd-signature tsd-kind-icon">messages<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof D</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cf200ec/packages/vtils/src/EasyValidator.ts#L66">EasyValidator.ts:66</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/7a6375b/packages/vtils/src/EasyValidator.ts#L69">EasyValidator.ts:69</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2449,7 +2472,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">unvalid<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="easyvalidatorrule.html" class="tsd-signature-type">EasyValidatorRule</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cf200ec/packages/vtils/src/EasyValidator.ts#L64">EasyValidator.ts:64</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/7a6375b/packages/vtils/src/EasyValidator.ts#L67">EasyValidator.ts:67</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2464,12 +2487,27 @@ img {
 				<div class="tsd-signature tsd-kind-icon">valid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/cf200ec/packages/vtils/src/EasyValidator.ts#L62">EasyValidator.ts:62</a></li>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/7a6375b/packages/vtils/src/EasyValidator.ts#L63">EasyValidator.ts:63</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>是否验证通过</p>
+						<p>数据是否验证通过</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="validbykey" class="tsd-anchor"></a>
+				<h3>valid<wbr>ByKey</h3>
+				<div class="tsd-signature tsd-kind-icon">valid<wbr>ByKey<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof D</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/7a6375b/packages/vtils/src/EasyValidator.ts#L65">EasyValidator.ts:65</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>数据中的每个键值是否验证通过</p>
 					</div>
 				</div>
 			</section>
