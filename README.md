@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.28.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.29.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -102,8 +102,8 @@ alert(shuffle([1, 2, 3, 4]))
 👇 | 👇 | 👇
 --- | --- | ---
 [Disposer](#disposer) | [EasyStorage](#easystorage) | [EasyStorageAdapter](#easystorageadapter)
-[EasyStorageAdapterBrowser](#easystorageadapterbrowser) | [EasyStorageAdapterMemory](#easystorageadaptermemory) | [EasyStorageAdapterWeapp](#easystorageadapterweapp)
-[EasyStorageDriverBrowserLocalStorage](#easystoragedriverbrowserlocalstorage) | [EasyStorageDriverBrowserSessionStorage](#easystoragedriverbrowsersessionstorage) | [EasyValidator](#easyvalidator)
+[EasyStorageAdapterBrowser](#easystorageadapterbrowser) | [EasyStorageAdapterBrowserLocalStorage](#easystorageadapterbrowserlocalstorage) | [EasyStorageAdapterBrowserSessionStorage](#easystorageadapterbrowsersessionstorage)
+[EasyStorageAdapterMemory](#easystorageadaptermemory) | [EasyStorageAdapterWeapp](#easystorageadapterweapp) | [EasyValidator](#easyvalidator)
 [EventBus](#eventbus) | [Wechat](#wechat) | 
 <!-- 工具类i目录 -->
 
@@ -1572,6 +1572,14 @@ document.querySelector('#stop').onclick = () => {
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/EasyStorage/EasyStorageAdapterBrowser.ts#L3) | [API](https://fjc0k.github.io/vtils/vtils/classes/easystorageadapterbrowser.html) | [回目录](#目录)</small>
 
+#### EasyStorageAdapterBrowserLocalStorage
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/EasyStorage/EasyStorageAdapterBrowser.ts#L47) | [API](https://fjc0k.github.io/vtils/vtils/classes/easystorageadapterbrowserlocalstorage.html) | [回目录](#目录)</small>
+
+#### EasyStorageAdapterBrowserSessionStorage
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/EasyStorage/EasyStorageAdapterBrowser.ts#L53) | [API](https://fjc0k.github.io/vtils/vtils/classes/easystorageadapterbrowsersessionstorage.html) | [回目录](#目录)</small>
+
 #### EasyStorageAdapterMemory
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/EasyStorage/EasyStorageAdapterMemory.ts#L3) | [API](https://fjc0k.github.io/vtils/vtils/classes/easystorageadaptermemory.html) | [回目录](#目录)</small>
@@ -1584,17 +1592,9 @@ document.querySelector('#stop').onclick = () => {
 
 由于微信小程序的 `wx.getStorageSync` 方法对于不存在的项目会返回 `空字符串`，导致无法判断项目是否存在，因此，该适配器对存储的内容做了一层封装，以保证相关操作的结果可确定。
 
-#### EasyStorageDriverBrowserLocalStorage
-
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/EasyStorage/EasyStorageAdapterBrowser.ts#L47) | [API](https://fjc0k.github.io/vtils/vtils/classes/easystoragedriverbrowserlocalstorage.html) | [回目录](#目录)</small>
-
-#### EasyStorageDriverBrowserSessionStorage
-
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/EasyStorage/EasyStorageAdapterBrowser.ts#L53) | [API](https://fjc0k.github.io/vtils/vtils/classes/easystoragedriverbrowsersessionstorage.html) | [回目录](#目录)</small>
-
 #### EasyValidator
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/EasyValidator.ts#L124) | [API](https://fjc0k.github.io/vtils/vtils/classes/easyvalidator.html) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/EasyValidator.ts#L129) | [API](https://fjc0k.github.io/vtils/vtils/classes/easyvalidator.html) | [回目录](#目录)</small>
 
 数据对象验证器。
 
@@ -1644,7 +1644,7 @@ ev.validate({
   pass1: '1234567',
   pass2: '12345678'
 }).then(res => {
-  // => { valid: false, unvalidRules: [{ key: 'pass2', test: ({ pass1, pass2 }) => pass2 === pass1, message: '两次密码应一致' }] }
+  // => { valid: false, ... }
 })
 ```
 

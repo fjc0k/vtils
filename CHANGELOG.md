@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.29.0](https://github.com/fjc0k/vtils/compare/v2.28.0...v2.29.0) (2019-09-11)
+
+
+### Bug Fixes
+
+* **EasyStorage:** 修正两处遗留的命名错误 ([9115831](https://github.com/fjc0k/vtils/commit/9115831))
+
+
+### Features
+
+* **EasyValidator:** 验证结果新增 validByKey、firstUnvalidRuleMessage 属性 ([7a6375b](https://github.com/fjc0k/vtils/commit/7a6375b))
+
+
+
+
+
 # [2.28.0](https://github.com/fjc0k/vtils/compare/v2.26.0...v2.28.0) (2019-09-11)
 
 

@@ -21,6 +21,6 @@ npm i @vtils/use --save
 你也可通过 CDN 安装，然后使用全局变量 `vhooks` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@vtils/use@2.28.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vtils/use@2.29.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
