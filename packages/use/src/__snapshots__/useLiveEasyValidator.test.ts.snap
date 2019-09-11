@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`表现正常: 姓名、密码皆为空 1`] = `
+Object {
+  "data": Object {
+    "name": "",
+    "pass": "",
+  },
+  "messages": Object {
+    "name": "姓名不能为空",
+    "pass": "密码至少应为6位",
+  },
+  "unvalidRules": Array [
+    Object {
+      "key": "name",
+      "message": "姓名不能为空",
+      "required": true,
+    },
+    Object {
+      "key": "pass",
+      "message": "密码至少应为6位",
+      "test": [Function],
+    },
+  ],
+  "valid": false,
+}
+`;
+
+exports[`表现正常: 姓名、密码都不为空，且密码等于6位 1`] = `
+Object {
+  "data": Object {
+    "name": "方方",
+    "pass": "123456",
+  },
+  "messages": Object {},
+  "unvalidRules": Array [],
+  "valid": true,
+}
+`;
+
+exports[`表现正常: 姓名、密码都不为空，但密码少于6位 1`] = `
+Object {
+  "data": Object {
+    "name": "方方",
+    "pass": "123",
+  },
+  "messages": Object {
+    "pass": "密码至少应为6位",
+  },
+  "unvalidRules": Array [
+    Object {
+      "key": "pass",
+      "message": "密码至少应为6位",
+      "test": [Function],
+    },
+  ],
+  "valid": false,
+}
+`;
+
+exports[`表现正常: 姓名不为空、密码为空 1`] = `
+Object {
+  "data": Object {
+    "name": "方方",
+    "pass": "",
+  },
+  "messages": Object {
+    "pass": "密码至少应为6位",
+  },
+  "unvalidRules": Array [
+    Object {
+      "key": "pass",
+      "message": "密码至少应为6位",
+      "test": [Function],
+    },
+  ],
+  "valid": false,
+}
+`;

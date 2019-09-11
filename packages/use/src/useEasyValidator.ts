@@ -8,6 +8,9 @@ export interface UseEasyValidatorValidate<D extends EasyValidatorData> {
 }
 
 export interface UseEasyValidatorReturn<D extends EasyValidatorData> {
+  /**
+   * 验证数据。
+   */
   validate: UseEasyValidatorValidate<D>,
 }
 
@@ -17,6 +20,32 @@ export interface UseEasyValidatorReturn<D extends EasyValidatorData> {
  * @param data 数据
  * @param rules 校验规则
  * @returns 返回包含验证函数的对象
+ * @example
+ * ```ts
+ * const [name, setName] = useState('')
+ * const [pass, setPass] = useState('')
+ * const ev = useEasyValidator({ name, pass }, [
+ *   {
+ *     key: 'name',
+ *     required: true,
+ *     message: '姓名不能为空',
+ *   },
+ *   {
+  *     key: 'pass',
+  *     test: data => data.pass.length >= 6,
+  *     message: '密码至少应为6位',
+  *   },
+ * ])
+ * const handleRegisterClick = useCallback(() => {
+ *   ev.validate().then(res => {
+ *     if (res.valid) {
+ *       console.log(res.data)
+ *     } else {
+ *       console.log(res.unvalidRules[0].message)
+ *     }
+ *   })
+ * }, [])
+ * ```
  */
 export function useEasyValidator<D extends EasyValidatorData>(data: D, rules: EasyValidatorRules<D>): UseEasyValidatorReturn<D> {
   const store = useRef<{
