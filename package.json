@@ -4,7 +4,7 @@
     "packages/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap && lerna exec -- yarn buildLib",
+    "bootstrap": "lerna bootstrap && lerna exec --scope vtils -- yarn buildLib && lerna link",
     "fix": "yarn lint --fix",
     "lint": "eslint . --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint",
     "test": "jest --coverage",
