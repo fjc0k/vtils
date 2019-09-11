@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.28.0](https://github.com/fjc0k/vtils/compare/v2.26.0...v2.28.0) (2019-09-11)
+
+
+### Features
+
+* 迁移至 Lerna；新增 @vtils/use ([#5](https://github.com/fjc0k/vtils/issues/5)) ([e5786c5](https://github.com/fjc0k/vtils/commit/e5786c5))
+
+
+
+
+
 # [2.27.0](https://github.com/fjc0k/vtils/compare/v2.27.0-beta.0...v2.27.0) (2019-09-10)
 
 

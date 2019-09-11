@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.27.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.28.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -1238,7 +1238,7 @@ pluck(
 ) // => ['Jay', 'Lily']
 ```
 
-将数据中每一项的迭代值组合成一个对象返回。
+将数据中每一项的迭代值组合成一个对象返回，后者会覆盖前者。
 
 ```ts
 pluck(

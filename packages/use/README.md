@@ -21,7 +21,7 @@ npm i @vtils/use --save
 你也可通过 CDN 安装，然后使用全局变量 `vhooks` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@vtils/use@2.27.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vtils/use@2.28.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
 <!-- TYPEDOC -->
@@ -38,13 +38,63 @@ npm i @vtils/use --save
 <!-- Hooks!内容 -->
 #### useEasyValidator
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/use/src/useEasyValidator.ts#L21) | [API](https://fjc0k.github.io/vtils/use/globals.html#useeasyvalidator) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/use/src/useEasyValidator.ts#L50) | [API](https://fjc0k.github.io/vtils/use/globals.html#useeasyvalidator) | [回目录](#目录)</small>
 
 数据校验器。
 
+```ts
+const [name, setName] = useState('')
+const [pass, setPass] = useState('')
+const ev = useEasyValidator({ name, pass }, [
+  {
+    key: 'name',
+    required: true,
+    message: '姓名不能为空',
+  },
+  {
+    key: 'pass',
+    test: data => data.pass.length >= 6,
+    message: '密码至少应为6位',
+  },
+])
+const handleRegisterClick = useCallback(() => {
+  ev.validate().then(res => {
+    if (res.valid) {
+      console.log(res.data)
+    } else {
+      console.log(res.unvalidRules[0].message)
+    }
+  })
+}, [])
+```
+
 #### useLiveEasyValidator
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/use/src/useLiveEasyValidator.ts#L5) | [API](https://fjc0k.github.io/vtils/use/globals.html#useliveeasyvalidator) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/use/src/useLiveEasyValidator.ts#L34) | [API](https://fjc0k.github.io/vtils/use/globals.html#useliveeasyvalidator) | [回目录](#目录)</small>
+
+实时数据校验器。
+
+```ts
+const [name, setName] = useState('')
+const [pass, setPass] = useState('')
+const evResult = useLiveEasyValidator({ name, pass }, [
+  {
+    key: 'name',
+    required: true,
+    message: '姓名不能为空',
+  },
+  {
+    key: 'pass',
+    test: data => data.pass.length >= 6,
+    message: '密码至少应为6位',
+  },
+])
+const button = (
+  <Button disabled={!evResult.valid}>
+    提交
+  </Button>
+)
+```
 <!-- Hooksi内容 -->
 
 ## 许可
