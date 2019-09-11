@@ -54,7 +54,8 @@
     "shelljs": "^0.8.3",
     "ts-node": "^8.0.2",
     "typedoc": "^0.15.0-0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "vtils": "^2.27.0"
   },
   "peerDependencies": {
     "react": "^16.9.0",
