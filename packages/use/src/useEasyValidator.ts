@@ -1,17 +1,11 @@
 import {EasyValidator, EasyValidatorData, EasyValidatorRules, EasyValidatorValidateReturn} from 'vtils'
 import {useRef} from 'react'
 
-export type UseEasyValidatorValidateResult<D extends EasyValidatorData> = EasyValidatorValidateReturn<D> & { data: D }
-
-export interface UseEasyValidatorValidate<D extends EasyValidatorData> {
-  (): Promise<UseEasyValidatorValidateResult<D>>,
-}
-
 export interface UseEasyValidatorReturn<D extends EasyValidatorData> {
   /**
    * 验证数据。
    */
-  validate: UseEasyValidatorValidate<D>,
+  validate(): Promise<EasyValidatorValidateReturn<D>>,
 }
 
 /**
@@ -51,8 +45,7 @@ export function useEasyValidator<D extends EasyValidatorData>(data: D, rules: Ea
   const store = useRef<{
     data: D,
     easyValidator: EasyValidator<D>,
-    validate: UseEasyValidatorValidate<D>,
-  }>({} as any)
+  } & UseEasyValidatorReturn<D>>({} as any)
 
   store.current.data = data
 

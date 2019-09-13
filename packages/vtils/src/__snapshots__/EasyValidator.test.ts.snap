@@ -2,6 +2,12 @@
 
 exports[`示例: 示例 1`] = `
 Object {
+  "data": Object {
+    "name": "方一一",
+    "pass1": "1234567",
+    "pass2": "12345678",
+    "phoneNumber": "18087030070",
+  },
   "firstUnvalidRuleMessage": "两次密码应一致",
   "messages": Object {
     "pass2": "两次密码应一致",
@@ -25,6 +31,22 @@ Object {
 
 exports[`综合测试: 验证失败 1`] = `
 Object {
+  "data": Object {
+    "chineseIdCardNumber": "130401200101011678",
+    "chineseMobilePhoneNumber": "18842611520",
+    "chineseName": "方剑成",
+    "customAsyncFn": "2abs2",
+    "customRegExp": "abd2",
+    "customSyncFn": "2abc",
+    "email": "fjc@163",
+    "integer": "12.2",
+    "number": "122.3",
+    "pass1": "1234567",
+    "pass2": "12345678",
+    "required": undefined,
+    "updateMessage": "y",
+    "url": "http://github.com",
+  },
   "firstUnvalidRuleMessage": "请输入正整数",
   "messages": Object {
     "customAsyncFn": "请输入包含abc的文字",
@@ -94,6 +116,22 @@ Object {
 
 exports[`综合测试: 验证成功 1`] = `
 Object {
+  "data": Object {
+    "chineseIdCardNumber": "130401200101011678",
+    "chineseMobilePhoneNumber": "18842611520",
+    "chineseName": "方剑成",
+    "customAsyncFn": "2abc2",
+    "customRegExp": "abc2",
+    "customSyncFn": "2abc",
+    "email": "fjc@163.com",
+    "integer": "12",
+    "number": "122.3",
+    "pass1": "1234567",
+    "pass2": "1234567",
+    "required": "req",
+    "updateMessage": "x",
+    "url": "http://github.com",
+  },
   "firstUnvalidRuleMessage": undefined,
   "messages": Object {},
   "unvalidRules": Array [],

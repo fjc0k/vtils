@@ -59,6 +59,8 @@ export interface EasyValidatorRule<D extends EasyValidatorData> {
 export type EasyValidatorRules<D extends EasyValidatorData> = Array<EasyValidatorRule<D>>
 
 export interface EasyValidatorValidateReturn<D extends EasyValidatorData> {
+  /** 传入验证的数据 */
+  data: D,
   /** 数据是否验证通过 */
   valid: boolean,
   /** 数据中的每个键值是否验证通过 */
@@ -243,6 +245,7 @@ export class EasyValidator<D extends EasyValidatorData> {
           },
         ),
       ).then<EasyValidatorValidateReturn<D>>(() => ({
+        data: data,
         valid: unvalidRules.length === 0,
         validByKey: Object.freeze(validByKey),
         unvalidRules: unvalidRules.slice(),
