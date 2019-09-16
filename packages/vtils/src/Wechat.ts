@@ -158,6 +158,35 @@ export interface WechatUploadImageParams {
   isShowProgressTips?: boolean,
 }
 
+export interface WechatOpenLocationParams {
+  /**
+   * 纬度，浮点数，范围为90 ~ -90。
+   */
+  latitude: number,
+  /**
+   * 经度，浮点数，范围为180 ~ -180。
+   */
+  longitude: number,
+  /**
+   * 位置名。
+   */
+  name: string,
+  /**
+   * 地址详情说明。
+   */
+  address?: string,
+  /**
+   * 地图缩放级别，整形值，范围从1 ~ 28。
+   *
+   * @default 28
+   */
+  scale?: number,
+  /**
+   * 在查看位置界面底部显示的超链接，可点击跳转。
+   */
+  infoUrl?: string,
+}
+
 /**
  * 微信内网页的非基础菜单列表。
  */
@@ -369,6 +398,15 @@ export class Wechat {
       localId: params.localId,
       isShowProgressTips: params.isShowProgressTips ? 1 : 0,
     }).then(res => res.serverId)
+  }
+
+  /**
+   * 使用微信内置地图查看位置。
+   *
+   * @param params 参数
+   */
+  openLocation(params: WechatOpenLocationParams): Promise<any> {
+    return this.invoke('openLocation', params)
   }
 
   /**

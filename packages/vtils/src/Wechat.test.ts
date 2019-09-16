@@ -133,4 +133,5 @@ test('正常调用内置方法', async () => {
   expect(wechat.showNonBaseMenuItems(['menuItem:originPage'])).resolves.toBeUndefined()
   expect(wechat.hideAllNonBaseMenuItems()).resolves.toBeUndefined()
   expect(wechat.showAllNonBaseMenuItems()).resolves.toBeUndefined()
+  expect(wechat.openLocation({latitude: 60, longitude: 40, name: '云南'})).resolves.toBeUndefined()
 })
