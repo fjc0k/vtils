@@ -21,7 +21,7 @@ npm i @vtils/use --save
 你也可通过 CDN 安装，然后使用全局变量 `vhooks` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@vtils/use@2.29.1/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vtils/use@2.30.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
 <!-- TYPEDOC -->
@@ -38,7 +38,7 @@ npm i @vtils/use --save
 <!-- Hooks!内容 -->
 #### useEasyValidator
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/use/src/useEasyValidator.ts#L50) | [API](https://fjc0k.github.io/vtils/use/globals.html#useeasyvalidator) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/use/src/useEasyValidator.ts#L44) | [API](https://fjc0k.github.io/vtils/use/globals.html#useeasyvalidator) | [回目录](#目录)</small>
 
 数据校验器。
 
@@ -62,7 +62,7 @@ const handleRegisterClick = useCallback(() => {
     if (res.valid) {
       console.log(res.data)
     } else {
-      console.log(res.unvalidRules[0].message)
+      console.log(res.firstUnvalidRuleMessage)
     }
   })
 }, [])

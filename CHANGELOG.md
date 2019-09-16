@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.30.0](https://github.com/fjc0k/vtils/compare/v2.29.1...v2.30.0) (2019-09-16)
+
+
+### Features
+
+* **EasyValidator:** 验证结果包含传入的数据 ([dd6502a](https://github.com/fjc0k/vtils/commit/dd6502a))
+* **Wechat:** 添加 openLocation 方法 ([e595341](https://github.com/fjc0k/vtils/commit/e595341))
+
+
+
+
+
 ## [2.29.1](https://github.com/fjc0k/vtils/compare/v2.29.0...v2.29.1) (2019-09-11)
 
 
