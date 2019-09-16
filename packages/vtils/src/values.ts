@@ -11,8 +11,11 @@ import {forOwn} from './forOwn'
  * values({ x: 1, 2: 'y' }) // => [1, 'y'] 或 ['y', 1]
  * ```
  */
-export function values<T extends AnyObject>(obj: T) {
-  const result: Array<T[Extract<keyof T, string | number>]> = []
+export function values<T extends AnyObject>(obj: T): Array<T[Extract<keyof T, string | number>]> {
+  if (Object['values']) {
+    return Object['values'](obj)
+  }
+  const result: any[] = []
   forOwn(obj, value => {
     result.push(value)
   })
