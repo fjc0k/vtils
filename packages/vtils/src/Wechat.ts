@@ -1,6 +1,7 @@
 import {EventBus} from './EventBus'
-import {isBoolean} from './is'
+import {isBoolean, isFunction} from './is'
 import {loadResource, LoadResourceUrlType} from './loadResource'
+import {mapValues} from './mapValues'
 import {noop} from './noop'
 import {sequential} from './sequential'
 
@@ -102,13 +103,13 @@ export type WechatErrorCallback = (err: any) => void
 
 export interface WechatUpdateShareDataParams {
   /** 分享标题 */
-  title?: string,
+  title?: string | (() => string),
   /** 分享描述 */
-  desc?: string,
+  desc?: string | (() => string),
   /** 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致 */
-  link?: string,
+  link?: string | (() => string),
   /** 分享图标地址 */
-  imgUrl?: string,
+  imgUrl?: string | (() => string),
 }
 
 export interface WechatChooseImageParams {
@@ -345,6 +346,8 @@ export class Wechat {
   /**
    * 设置分享数据。
    *
+   * **注意**：每次分享的数据会和上次分享的数据合并作为最终分享的数据，因此，可以设置全局的分享数据。
+   *
    * @param params 分享数据
    */
   updateShareData(params: WechatUpdateShareDataParams): Promise<void> {
@@ -353,6 +356,10 @@ export class Wechat {
       ...params,
     }
     this.prevShareParams = params
+    params = mapValues(
+      params,
+      value => isFunction(value) ? value() : value,
+    )
     return sequential(
       shareJsApiList.map(
         jsApi => () => this.invoke(jsApi, params),
