@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.30.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.31.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -1673,7 +1673,7 @@ bus.off('error')
 
 #### Wechat
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/Wechat.ts#L244) | [API](https://fjc0k.github.io/vtils/vtils/classes/wechat.html) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/Wechat.ts#L245) | [API](https://fjc0k.github.io/vtils/vtils/classes/wechat.html) | [回目录](#目录)</small>
 
 对微信 JSSDK 的封装。
 
