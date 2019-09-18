@@ -30,15 +30,21 @@ npm i @vtils/react --save
 <!-- React!目录 -->
 👇 | 👇 | 👇 | 👇
 --- | --- | --- | ---
-[useEasyValidator](#useeasyvalidator) | [useLiveEasyValidator](#useliveeasyvalidator) |  | 
+[buildFunctionComponentCreator](#buildfunctioncomponentcreator) | [useEasyValidator](#useeasyvalidator) | [useLiveEasyValidator](#useliveeasyvalidator) | 
 <!-- Reacti目录 -->
 
 ## 列表
 
 <!-- React!内容 -->
+#### buildFunctionComponentCreator
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/functionComponentCreator.ts#L43) | [API](https://fjc0k.github.io/vtils/react/globals.html#buildfunctioncomponentcreator) | [回目录](#目录)</small>
+
+构造一个函数组件创建器。
+
 #### useEasyValidator
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/useEasyValidator.ts#L44) | [API](https://fjc0k.github.io/vtils/react/globals.html#useeasyvalidator) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/hooks/useEasyValidator.ts#L44) | [API](https://fjc0k.github.io/vtils/react/globals.html#useeasyvalidator) | [回目录](#目录)</small>
 
 数据校验器。
 
@@ -70,7 +76,7 @@ const handleRegisterClick = useCallback(() => {
 
 #### useLiveEasyValidator
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/useLiveEasyValidator.ts#L34) | [API](https://fjc0k.github.io/vtils/react/globals.html#useliveeasyvalidator) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/hooks/useLiveEasyValidator.ts#L34) | [API](https://fjc0k.github.io/vtils/react/globals.html#useliveeasyvalidator) | [回目录](#目录)</small>
 
 实时数据校验器。
 
