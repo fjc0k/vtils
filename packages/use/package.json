@@ -1,6 +1,6 @@
 {
   "name": "@vtils/use",
-  "version": "2.31.0",
+  "version": "2.31.1",
   "description": "vtils 的 React Hooks 封装。",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -55,7 +55,7 @@
     "ts-node": "^8.0.2",
     "typedoc": "^0.15.0-0",
     "typescript": "^3.4.5",
-    "vtils": "2.31.0"
+    "vtils": "2.31.1"
   },
   "peerDependencies": {
     "react": "^16.9.0",

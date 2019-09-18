@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.31.1](https://github.com/fjc0k/vtils/compare/v2.31.0...v2.31.1) (2019-09-18)
+
+
+### Bug Fixes
+
+* **Wechat:** 每次调用 API 前都进行配置，解决使用 hash 路由的单页应用下在安卓中的问题 ([0c6582f](https://github.com/fjc0k/vtils/commit/0c6582f))
+
+
+
+
+
 # [2.31.0](https://github.com/fjc0k/vtils/compare/v2.30.0...v2.31.0) (2019-09-17)
 
 
