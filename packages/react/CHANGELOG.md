@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.32.0](https://github.com/fjc0k/vtils/compare/v2.31.1...v2.32.0) (2019-09-18)
+
+
+### Features
+
+* 将 @vtils/use 更名为 @vtils/react ([9d69baa](https://github.com/fjc0k/vtils/commit/9d69baa))
+
+
+
+
+
 ## [2.31.1](https://github.com/fjc0k/vtils/compare/v2.31.0...v2.31.1) (2019-09-18)
 
 **Note:** Version bump only for package @vtils/use

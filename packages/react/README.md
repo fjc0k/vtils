@@ -21,18 +21,80 @@ npm i @vtils/react --save
 你也可通过 CDN 安装，然后使用全局变量 `vr` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@vtils/react@2.31.1/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vtils/react@2.32.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
 <!-- TYPEDOC -->
 
 ## 目录
 <!-- React!目录 -->
+👇 | 👇 | 👇 | 👇
+--- | --- | --- | ---
+[useEasyValidator](#useeasyvalidator) | [useLiveEasyValidator](#useliveeasyvalidator) |  | 
 <!-- Reacti目录 -->
 
 ## 列表
 
 <!-- React!内容 -->
+#### useEasyValidator
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/useEasyValidator.ts#L44) | [API](https://fjc0k.github.io/vtils/react/globals.html#useeasyvalidator) | [回目录](#目录)</small>
+
+数据校验器。
+
+```ts
+const [name, setName] = useState('')
+const [pass, setPass] = useState('')
+const ev = useEasyValidator({ name, pass }, [
+  {
+    key: 'name',
+    required: true,
+    message: '姓名不能为空',
+  },
+  {
+    key: 'pass',
+    test: data => data.pass.length >= 6,
+    message: '密码至少应为6位',
+  },
+])
+const handleRegisterClick = useCallback(() => {
+  ev.validate().then(res => {
+    if (res.valid) {
+      console.log(res.data)
+    } else {
+      console.log(res.firstUnvalidRuleMessage)
+    }
+  })
+}, [])
+```
+
+#### useLiveEasyValidator
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/useLiveEasyValidator.ts#L34) | [API](https://fjc0k.github.io/vtils/react/globals.html#useliveeasyvalidator) | [回目录](#目录)</small>
+
+实时数据校验器。
+
+```ts
+const [name, setName] = useState('')
+const [pass, setPass] = useState('')
+const evResult = useLiveEasyValidator({ name, pass }, [
+  {
+    key: 'name',
+    required: true,
+    message: '姓名不能为空',
+  },
+  {
+    key: 'pass',
+    test: data => data.pass.length >= 6,
+    message: '密码至少应为6位',
+  },
+])
+const button = (
+  <Button disabled={!evResult.valid}>
+    提交
+  </Button>
+)
+```
 <!-- Reacti内容 -->
 
 ## 许可
