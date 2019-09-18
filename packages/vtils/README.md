@@ -55,7 +55,7 @@ if (inBrowser()) {
   alert('您在浏览器中...')
 }
 
-alert(shuffle([1, 2, 3, 4]))
+alert(shuffle([1, 2, 3, 4, 5]))
 ```
 
 <!-- TYPEDOC -->
