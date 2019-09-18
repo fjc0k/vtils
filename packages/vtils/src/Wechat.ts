@@ -288,7 +288,7 @@ export class Wechat {
    *
    * @param params 配置参数
    */
-  config(params: WechatConfigParams) {
+  config(params: WechatConfigParams = this.configParams) {
     this.configParams = params
 
     const config = () => {
@@ -300,13 +300,15 @@ export class Wechat {
           ...(sharable ? shareJsApiList : []),
         ],
       })
-      wx.ready(() => {
-        this.ready = true
-        this.bus.emit('ready')
-      })
-      wx.error((err: any) => {
-        this.bus.emit('error', err)
-      })
+      if (!this.ready) {
+        wx.ready(() => {
+          this.ready = true
+          this.bus.emit('ready')
+        })
+        wx.error((err: any) => {
+          this.bus.emit('error', err)
+        })
+      }
     }
 
     if (typeof wx !== 'undefined') {
@@ -475,6 +477,7 @@ export class Wechat {
     return new Promise((resolve, reject) => {
       const invoke = () => {
         if (!wx[jsApi]) return reject(`wx.${jsApi} 不可用`)
+        this.config()
         wx[jsApi]({
           ...params,
           success: resolve,
