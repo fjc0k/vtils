@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.33.0](https://github.com/fjc0k/vtils/compare/v2.32.0...v2.33.0) (2019-09-18)
+
+
+### Features
+
+* **@vtils/react:** 新增 buildFunctionComponentCreator ([85d16b9](https://github.com/fjc0k/vtils/commit/85d16b9))
+
+
+
+
+
 # [2.32.0](https://github.com/fjc0k/vtils/compare/v2.31.1...v2.32.0) (2019-09-18)
 
 
