@@ -33,8 +33,8 @@ ii(async function main() {
   // 版本号同步
   _.sed(
     '-i',
-    /@vtils\/use@[^/]+/g,
-    `@vtils/use@${pkg.version}`,
+    /@vtils\/react@[^/]+/g,
+    `@vtils/react@${pkg.version}`,
     readMeFile,
   )
 
@@ -46,7 +46,7 @@ ii(async function main() {
   const listByKind = groupBy(list, item => item.kind)
   const briefListByKind: Record<ReflectionKind, Brief[]> = {} as any
   const readMeFlagByKind: Partial<Record<ReflectionKind, string>> = {
-    [ReflectionKind.Function]: 'Hooks',
+    [ReflectionKind.Function]: 'React',
   }
   const contentItemCountPerLineByKind: Partial<Record<ReflectionKind, number>> = {
     [ReflectionKind.Function]: 4,
@@ -108,11 +108,11 @@ ii(async function main() {
           `$1\n${
             briefList.map(
               brief => {
-                const sourceUrl = `https://github.com/fjc0k/vtils/blob/master/packages/use/src/${brief.source.fileName}#L${brief.source.line}`
+                const sourceUrl = `https://github.com/fjc0k/vtils/blob/master/packages/react/src/${brief.source.fileName}#L${brief.source.line}`
                 const apiUrl = (
                   Number(kind) === ReflectionKind.Class
-                    ? `https://fjc0k.github.io/vtils/use/classes/${brief.name.toLowerCase()}.html`
-                    : `https://fjc0k.github.io/vtils/use/globals.html#${brief.name.toLowerCase()}`
+                    ? `https://fjc0k.github.io/vtils/react/classes/${brief.name.toLowerCase()}.html`
+                    : `https://fjc0k.github.io/vtils/react/globals.html#${brief.name.toLowerCase()}`
                 )
                 return dedent`
                   #### ${brief.name}

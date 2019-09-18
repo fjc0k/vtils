@@ -1,13 +1,13 @@
 {
-  "name": "@vtils/use",
+  "name": "@vtils/react",
   "version": "2.31.1",
-  "description": "vtils 的 React Hooks 封装。",
+  "description": "vtils 在 React 中的应用。",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "unpkg": "lib/index.umd.js",
   "jsdelivr": "lib/index.umd.js",
   "types": "lib/index.d.ts",
-  "homepage": "https://github.com/fjc0k/vtils/tree/master/packages/use",
+  "homepage": "https://github.com/fjc0k/vtils/tree/master/packages/react",
   "license": "MIT",
   "sideEffects": false,
   "publishConfig": {
@@ -16,15 +16,14 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:fjc0k/vtils.git",
-    "directory": "packages/use"
+    "directory": "packages/react"
   },
   "bugs": {
     "url": "https://github.com/fjc0k/vtils/issues"
   },
   "keywords": [
     "vtils",
-    "react-hooks",
-    "use"
+    "react"
   ],
   "files": [
     "lib"
@@ -37,7 +36,7 @@
   "scripts": {
     "buildLib": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildLib.ts",
     "buildDocs": "ts-node --compiler-options '{\"module\":\"commonjs\"}' --files scripts/buildDocs.ts",
-    "releaseDocs": "gh-pages --dist .typedoc --dest use",
+    "releaseDocs": "gh-pages --dist .typedoc --dest react",
     "version": "yarn buildLib && yarn buildDocs && git add -A && yarn releaseDocs"
   },
   "devDependencies": {

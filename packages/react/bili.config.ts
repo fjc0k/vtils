@@ -6,7 +6,7 @@ const config: Config = {
   output: {
     dir: 'lib',
     format: ['cjs', 'es', 'umd', 'umd-min'],
-    moduleName: 'vhooks',
+    moduleName: 'vr',
     sourceMap: true,
   },
   babel: {
