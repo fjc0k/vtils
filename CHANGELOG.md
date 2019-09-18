@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.33.1](https://github.com/fjc0k/vtils/compare/v2.33.0...v2.33.1) (2019-09-18)
+
+
+### Bug Fixes
+
+* **@vtils/react:** 修复 FunctionComponentCreator 的类型错误 ([ad39264](https://github.com/fjc0k/vtils/commit/ad39264))
+
+
+
+
+
 # [2.33.0](https://github.com/fjc0k/vtils/compare/v2.32.0...v2.33.0) (2019-09-18)
 
 
