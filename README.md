@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.33.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.34.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -113,7 +113,7 @@ alert(shuffle([1, 2, 3, 4, 5]))
 👇 | 👇 | 👇 | 👇 | 👇 | 👇 | 👇 | 👇 | 👇
 --- | --- | --- | --- | --- | --- | --- | --- | ---
 [AnyFunction](#anyfunction) | [AnyObject](#anyobject) | [AsyncOrSync](#asyncorsync) | [AsyncReturnType](#asyncreturntype) | [Brand](#brand) | [Defined](#defined) | [If](#if) | [IsNever](#isnever) | [LiteralUnion](#literalunion)
-[Merge](#merge) | [Omit](#omit) | [OneOrMore](#oneormore) | [PartialBy](#partialby) | [ValueOf](#valueof) |  |  |  | 
+[Merge](#merge) | [Omit](#omit) | [OneOrMore](#oneormore) | [PartialBy](#partialby) | [RequiredBy](#requiredby) | [ValueOf](#valueof) |  |  | 
 <!-- 工具类型i目录 -->
 
 ## 工具列表
@@ -1843,7 +1843,39 @@ type X = OneOrMore<number>
 
 #### PartialBy
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/enhanceType.ts#L158) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#partialby) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/enhanceType.ts#L174) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#partialby) | [回目录](#目录)</small>
+
+令 `T` 中的 `K` 可选。
+
+```ts
+interface User {
+  id: number,
+  age: number,
+}
+type UserWithOptionalAge = PartialBy<User, 'age'>
+// type UserWithOptionalAge = {
+//   id: number,
+//   age?: number,
+// }
+```
+
+#### RequiredBy
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/enhanceType.ts#L192) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#requiredby) | [回目录](#目录)</small>
+
+令 `T` 中的 `K` 必填。
+
+```ts
+interface UserWithOptionalAge {
+  id: number,
+  age?: number,
+}
+type User = RequiredBy<UserWithOptionalAge, 'age'>
+// type User = {
+//   id: number,
+//   age: number,
+// }
+```
 
 #### ValueOf
 
