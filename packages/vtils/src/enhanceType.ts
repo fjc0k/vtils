@@ -155,4 +155,38 @@ export type AsyncReturnType<T extends (...args: any[]) => Promise<any>> = (
     : any
 )
 
+/**
+ * 令 `T` 中的 `K` 可选。
+ *
+ * @example
+ * ```ts
+ * interface User {
+ *   id: number,
+ *   age: number,
+ * }
+ * type UserWithOptionalAge = PartialBy<User, 'age'>
+ * // type UserWithOptionalAge = {
+ * //   id: number,
+ * //   age?: number,
+ * // }
+ * ```
+ */
 export type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
+
+/**
+ * 令 `T` 中的 `K` 必填。
+ *
+ * @example
+ * ```ts
+ * interface UserWithOptionalAge {
+ *   id: number,
+ *   age?: number,
+ * }
+ * type User = RequiredBy<UserWithOptionalAge, 'age'>
+ * // type User = {
+ * //   id: number,
+ * //   age: number,
+ * // }
+ * ```
+ */
+export type RequiredBy<T, K extends keyof T> = Omit<T, K> & Required<Pick<T, K>>
