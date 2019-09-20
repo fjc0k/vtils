@@ -26,13 +26,13 @@ export type FunctionComponentCreator<TExtraProps, TTransformedComponent> = {
     TInternalProps extends MakeInternalProps<TExtraProps>,
     TExternalProps extends MakeExternalProps<TExtraProps>,
     TInternalComponent extends React.FunctionComponent<PropsWithStyledHTMLAttributes<TInternalProps>>
-  >(Component: TInternalComponent): Merge<TTransformedComponent, React.FunctionComponent<PropsWithStyledHTMLAttributes<TExternalProps>>>,
+  >(Component: TInternalComponent): Merge<TTransformedComponent, React.FunctionComponent<PropsWithStyledHTMLAttributes<TExternalProps>>> & { IProps: TExternalProps },
   <
     TDefaultProps extends Record<string, any>,
     TInternalProps extends MakeInternalProps<Merge<TDefaultProps, TExtraProps>>,
     TExternalProps extends MakeExternalProps<Merge<TDefaultProps, TExtraProps>>,
     TInternalComponent extends React.FunctionComponent<PropsWithStyledHTMLAttributes<TInternalProps>>
-  >(defaultProps: TDefaultProps, Component: TInternalComponent): Merge<TTransformedComponent, React.FunctionComponent<PropsWithStyledHTMLAttributes<TExternalProps>>>,
+  >(defaultProps: TDefaultProps, Component: TInternalComponent): Merge<TTransformedComponent, React.FunctionComponent<PropsWithStyledHTMLAttributes<TExternalProps>>> & { IProps: TExternalProps },
 }
 
 /**
