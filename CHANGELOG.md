@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.35.0](https://github.com/fjc0k/vtils/compare/v2.34.0...v2.35.0) (2019-09-24)
+
+
+### Features
+
+* **FunctionComponentCreator:** 返回组件加上 IProps 属性，方便获取组件类型 ([3b66f26](https://github.com/fjc0k/vtils/commit/3b66f26))
+
+
+
+
+
 # [2.34.0](https://github.com/fjc0k/vtils/compare/v2.33.1...v2.34.0) (2019-09-19)
 
 
