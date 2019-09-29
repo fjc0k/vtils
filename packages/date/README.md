@@ -21,7 +21,7 @@ npm i @vtils/date --save
 你也可通过 CDN 安装，然后使用全局变量 `vd` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@vtils/date@2.36.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vtils/date@2.37.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
 <!-- TYPEDOC -->

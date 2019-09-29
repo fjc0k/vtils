@@ -1,6 +1,6 @@
 {
   "name": "@vtils/date",
-  "version": "2.36.0",
+  "version": "2.37.0",
   "description": "在 dayjs 基础上封装的常用日期操作类库。",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

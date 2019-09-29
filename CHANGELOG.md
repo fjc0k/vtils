@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.37.0](https://github.com/fjc0k/vtils/compare/v2.36.0...v2.37.0) (2019-09-29)
+
+
+### Features
+
+* **react:** 新增 useLoadMore ([69e4ac3](https://github.com/fjc0k/vtils/commit/69e4ac3))
+
+
+
+
+
 # [2.36.0](https://github.com/fjc0k/vtils/compare/v2.35.0...v2.36.0) (2019-09-28)
 
 
