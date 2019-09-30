@@ -59,5 +59,8 @@
   "peerDependencies": {
     "react": "^16.9.0",
     "vtils": "^2.26.0"
+  },
+  "dependencies": {
+    "react-bottom-scroll-listener": "^3.0.0"
   }
 }
