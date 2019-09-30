@@ -1,4 +1,5 @@
 import _ from 'shelljs'
+import fs from 'fs-extra'
 import path from 'path'
 import {ii} from 'vtils'
 
@@ -20,11 +21,16 @@ ii(async function main() {
     _.exec('api-extractor run')
   } catch (err) {}
 
-  // 删除类型文件
-  _.ls('lib/*.d.ts').forEach(file => {
-    if (!file.endsWith('index.d.ts')) {
+  // 删除多余的文件
+  _.ls('-d', 'lib/*').forEach(file => {
+    if ((
+      file.endsWith('.d.ts')
+        || file.endsWith('.json')
+        || fs.statSync(file).isDirectory()
+    ) && (
+      !file.endsWith('index.d.ts')
+    )) {
       _.rm('-rf', file)
     }
   })
-  _.rm('-rf', 'lib/*.json')
 })

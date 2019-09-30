@@ -1,9 +1,8 @@
 import _ from 'shelljs'
 import biliConfig from '../bili.config'
 import fs from 'fs-extra'
-import globby from 'globby'
 import path from 'path'
-import {assign, escapeRegExp, ii, parallel} from '../src'
+import {assign, escapeRegExp, ii} from '../src'
 
 ii(async function main() {
   // 工作目录
@@ -23,25 +22,18 @@ ii(async function main() {
     _.exec('api-extractor run')
   } catch (err) {}
 
-  // 合并 ***.d.ts 为 index.d.ts
-  _.ls('lib/**/*.d.ts').forEach(file => {
-    if (!file.endsWith('lib/index.d.ts')) {
+  // 删除多余的文件
+  _.ls('-d', 'lib/*').forEach(file => {
+    if ((
+      file.endsWith('.d.ts')
+        || file.endsWith('.json')
+        || fs.statSync(file).isDirectory()
+    ) && (
+      !file.endsWith('index.d.ts')
+    )) {
       _.rm('-rf', file)
     }
   })
-  _.rm('-rf', 'lib/*.json')
-
-  // 删除空文件夹
-  const emptyDirs = await globby('lib/*', {
-    cwd: wd,
-    onlyDirectories: true,
-    absolute: true,
-  })
-  await parallel(
-    emptyDirs.map(emptyDir => async () => {
-      await fs.remove(emptyDir)
-    }),
-  )
 
   // 替换 Object.assign 为自带的 assign
   _.ls('lib/*.js').forEach(builtFile => {
