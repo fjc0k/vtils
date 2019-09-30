@@ -22,10 +22,55 @@ npm i @vtils/taro --save
 
 ## 目录
 <!-- Main!目录 -->
+👇 | 👇 | 👇 | 👇
+--- | --- | --- | ---
+[useAccountInfo](#useaccountinfo) | [useLaunchOptions](#uselaunchoptions) | [useMenuButtonBoundingClientRect](#usemenubuttonboundingclientrect) | [useNavigationBarLoading](#usenavigationbarloading)
+[useNavigationBarTitle](#usenavigationbartitle) | [useScope](#usescope) | [useSystemInfo](#usesysteminfo) | 
 <!-- Maini目录 -->
 
 ## 列表
 <!-- Main!内容 -->
+#### useAccountInfo
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useAccountInfo.ts#L6) | [API](https://fjc0k.github.io/vtils/taro/globals.html#useaccountinfo) | [回目录](#目录)</small>
+
+获取当前帐号信息。
+
+#### useLaunchOptions
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useLaunchOptions.ts#L6) | [API](https://fjc0k.github.io/vtils/taro/globals.html#uselaunchoptions) | [回目录](#目录)</small>
+
+获取小程序启动时的参数。
+
+#### useMenuButtonBoundingClientRect
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useMenuButtonBoundingClientRect.ts#L6) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usemenubuttonboundingclientrect) | [回目录](#目录)</small>
+
+获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。
+
+#### useNavigationBarLoading
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useNavigationBarLoading.ts#L8) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usenavigationbarloading) | [回目录](#目录)</small>
+
+控制导航条加载动画的显示、隐藏。
+
+#### useNavigationBarTitle
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useNavigationBarTitle.ts#L8) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usenavigationbartitle) | [回目录](#目录)</small>
+
+动态设置当前页面的标题。
+
+#### useScope
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useScope.ts#L6) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usescope) | [回目录](#目录)</small>
+
+获取小程序原生作用域。
+
+#### useSystemInfo
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useSystemInfo.ts#L6) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usesysteminfo) | [回目录](#目录)</small>
+
+获取系统信息。
 <!-- Maini内容 -->
 
 ## 许可
