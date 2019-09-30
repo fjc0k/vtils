@@ -25,7 +25,7 @@ npm i @vtils/taro --save
 👇 | 👇 | 👇 | 👇
 --- | --- | --- | ---
 [useAccountInfo](#useaccountinfo) | [useLaunchOptions](#uselaunchoptions) | [useMenuButtonBoundingClientRect](#usemenubuttonboundingclientrect) | [useNavigationBarLoading](#usenavigationbarloading)
-[useNavigationBarTitle](#usenavigationbartitle) | [useScope](#usescope) | [useSystemInfo](#usesysteminfo) | 
+[useNavigationBarTitle](#usenavigationbartitle) | [useScope](#usescope) | [useScrollLoadMore](#usescrollloadmore) | [useSystemInfo](#usesysteminfo)
 <!-- Maini目录 -->
 
 ## 列表
@@ -65,6 +65,12 @@ npm i @vtils/taro --save
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useScope.ts#L6) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usescope) | [回目录](#目录)</small>
 
 获取小程序原生作用域。
+
+#### useScrollLoadMore
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useScrollLoadMore.ts#L11) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usescrollloadmore) | [回目录](#目录)</small>
+
+滚动数据加载。
 
 #### useSystemInfo
 

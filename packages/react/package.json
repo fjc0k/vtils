@@ -1,6 +1,6 @@
 {
   "name": "@vtils/react",
-  "version": "2.38.0",
+  "version": "2.39.0",
   "description": "vtils 在 React 中的应用。",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

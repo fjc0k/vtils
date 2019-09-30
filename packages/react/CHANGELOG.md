@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.39.0](https://github.com/fjc0k/vtils/compare/v2.38.0...v2.39.0) (2019-09-30)
+
+
+### Features
+
+* **react:** 新增 useReachBottom, useScrollLoadMore ([35e42d0](https://github.com/fjc0k/vtils/commit/35e42d0))
+
+
+
+
+
 # [2.38.0](https://github.com/fjc0k/vtils/compare/v2.37.0...v2.38.0) (2019-09-30)
 
 **Note:** Version bump only for package @vtils/react

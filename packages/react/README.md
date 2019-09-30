@@ -21,7 +21,7 @@ npm i @vtils/react --save
 你也可通过 CDN 安装，然后使用全局变量 `vr` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@vtils/react@2.38.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vtils/react@2.39.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
 <!-- TYPEDOC -->
@@ -31,6 +31,7 @@ npm i @vtils/react --save
 👇 | 👇 | 👇 | 👇
 --- | --- | --- | ---
 [buildFunctionComponentCreator](#buildfunctioncomponentcreator) | [useEasyValidator](#useeasyvalidator) | [useLiveEasyValidator](#useliveeasyvalidator) | [useLoadMore](#useloadmore)
+[useScrollLoadMore](#usescrollloadmore) |  |  | 
 <!-- Reacti目录 -->
 
 ## 列表
@@ -107,6 +108,12 @@ const button = (
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/hooks/useLoadMore.ts#L49) | [API](https://fjc0k.github.io/vtils/react/globals.html#useloadmore) | [回目录](#目录)</small>
 
 数据加载。
+
+#### useScrollLoadMore
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/hooks/useScrollLoadMore.ts#L34) | [API](https://fjc0k.github.io/vtils/react/globals.html#usescrollloadmore) | [回目录](#目录)</small>
+
+滚动数据加载。
 <!-- Reacti内容 -->
 
 ## 许可
