@@ -19,6 +19,12 @@ const config: Config = {
     // fix: 软链接
     /vtils\/lib/,
   ],
+  extendRollupConfig: config => {
+    config.inputConfig.treeshake = {
+      moduleSideEffects: false,
+    }
+    return config
+  },
 }
 
 export default config
