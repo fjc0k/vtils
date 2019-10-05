@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.38.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.40.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -70,30 +70,30 @@ alert(shuffle([1, 2, 3, 4, 5]))
 [assign](#assign) | [base64Decode](#base64decode) | [base64Encode](#base64encode) | [base64UrlDecode](#base64urldecode)
 [base64UrlEncode](#base64urlencode) | [castArray](#castarray) | [chunk](#chunk) | [clamp](#clamp)
 [combine](#combine) | [createURIQuery](#createuriquery) | [debounce](#debounce) | [dedent](#dedent)
-[defaultTo](#defaultto) | [endsWith](#endswith) | [entries](#entries) | [escapeRegExp](#escaperegexp)
-[expectType](#expecttype) | [fill](#fill) | [flat](#flat) | [flexible](#flexible)
-[forOwn](#forown) | [getGlobal](#getglobal) | [getType](#gettype) | [groupBy](#groupby)
-[has](#has) | [ii](#ii) | [inAndroid](#inandroid) | [inBrowser](#inbrowser)
-[inIOS](#inios) | [inNode](#innode) | [inRange](#inrange) | [inWechatMiniProgram](#inwechatminiprogram)
-[inWechatWebview](#inwechatwebview) | [includes](#includes) | [indent](#indent) | [isArguments](#isarguments)
-[isArray](#isarray) | [isBoolean](#isboolean) | [isChineseIDCardNumber](#ischineseidcardnumber) | [isDate](#isdate)
-[isEmail](#isemail) | [isEmpty](#isempty) | [isEqualArray](#isequalarray) | [isFinite](#isfinite)
-[isFunction](#isfunction) | [isHan](#ishan) | [isInteger](#isinteger) | [isNaN](#isnan)
-[isNegativeInteger](#isnegativeinteger) | [isNil](#isnil) | [isNull](#isnull) | [isNumber](#isnumber)
-[isNumeric](#isnumeric) | [isObject](#isobject) | [isPlainObject](#isplainobject) | [isPositiveInteger](#ispositiveinteger)
-[isPossibleChineseMobilePhoneNumber](#ispossiblechinesemobilephonenumber) | [isPossibleChineseName](#ispossiblechinesename) | [isPromiseLike](#ispromiselike) | [isRegExp](#isregexp)
-[isString](#isstring) | [isUndefined](#isundefined) | [isUrl](#isurl) | [jestExpectEqual](#jestexpectequal)
-[keyBy](#keyby) | [keys](#keys) | [last](#last) | [loadResource](#loadresource)
-[loop](#loop) | [mapValues](#mapvalues) | [memoize](#memoize) | [noop](#noop)
-[omit](#omit) | [orderBy](#orderby) | [padEnd](#padend) | [padStart](#padstart)
-[parallel](#parallel) | [parseCSSValue](#parsecssvalue) | [parseURIQuery](#parseuriquery) | [partial](#partial)
-[partialBy](#partialby) | [pick](#pick) | [placeKitten](#placekitten) | [pluck](#pluck)
-[randomString](#randomstring) | [range](#range) | [remove](#remove) | [removeByValue](#removebyvalue)
-[repeat](#repeat) | [result](#result) | [round](#round) | [roundDown](#rounddown)
-[roundUp](#roundup) | [safeGet](#safeget) | [sample](#sample) | [sequential](#sequential)
-[shuffle](#shuffle) | [startsWith](#startswith) | [sum](#sum) | [sumBy](#sumby)
-[throttle](#throttle) | [times](#times) | [tryGet](#tryget) | [unique](#unique)
-[values](#values) | [wait](#wait) |  | 
+[defaultIndexTo](#defaultindexto) | [defaultTo](#defaultto) | [endsWith](#endswith) | [entries](#entries)
+[escapeRegExp](#escaperegexp) | [expectType](#expecttype) | [fill](#fill) | [flat](#flat)
+[flexible](#flexible) | [forOwn](#forown) | [getGlobal](#getglobal) | [getType](#gettype)
+[groupBy](#groupby) | [has](#has) | [ii](#ii) | [inAndroid](#inandroid)
+[inBrowser](#inbrowser) | [inIOS](#inios) | [inNode](#innode) | [inRange](#inrange)
+[inWechatMiniProgram](#inwechatminiprogram) | [inWechatWebview](#inwechatwebview) | [includes](#includes) | [indent](#indent)
+[isArguments](#isarguments) | [isArray](#isarray) | [isBoolean](#isboolean) | [isChineseIDCardNumber](#ischineseidcardnumber)
+[isDate](#isdate) | [isEmail](#isemail) | [isEmpty](#isempty) | [isEqualArray](#isequalarray)
+[isFinite](#isfinite) | [isFunction](#isfunction) | [isHan](#ishan) | [isInteger](#isinteger)
+[isNaN](#isnan) | [isNegativeInteger](#isnegativeinteger) | [isNil](#isnil) | [isNull](#isnull)
+[isNumber](#isnumber) | [isNumeric](#isnumeric) | [isObject](#isobject) | [isPlainObject](#isplainobject)
+[isPositiveInteger](#ispositiveinteger) | [isPossibleChineseMobilePhoneNumber](#ispossiblechinesemobilephonenumber) | [isPossibleChineseName](#ispossiblechinesename) | [isPromiseLike](#ispromiselike)
+[isRegExp](#isregexp) | [isString](#isstring) | [isUndefined](#isundefined) | [isUrl](#isurl)
+[jestExpectEqual](#jestexpectequal) | [keyBy](#keyby) | [keys](#keys) | [last](#last)
+[loadResource](#loadresource) | [loop](#loop) | [mapValues](#mapvalues) | [memoize](#memoize)
+[noop](#noop) | [omit](#omit) | [orderBy](#orderby) | [padEnd](#padend)
+[padStart](#padstart) | [parallel](#parallel) | [parseCSSValue](#parsecssvalue) | [parseURIQuery](#parseuriquery)
+[partial](#partial) | [partialBy](#partialby) | [pick](#pick) | [placeKitten](#placekitten)
+[pluck](#pluck) | [randomString](#randomstring) | [range](#range) | [remove](#remove)
+[removeByValue](#removebyvalue) | [repeat](#repeat) | [result](#result) | [round](#round)
+[roundDown](#rounddown) | [roundUp](#roundup) | [safeGet](#safeget) | [sample](#sample)
+[sequential](#sequential) | [shuffle](#shuffle) | [startsWith](#startswith) | [sum](#sum)
+[sumBy](#sumby) | [throttle](#throttle) | [times](#times) | [tryGet](#tryget)
+[unique](#unique) | [values](#values) | [wait](#wait) | 
 <!-- 工具函数i目录 -->
 
 ### 📦 工具类
@@ -295,6 +295,18 @@ dedent(`
   world
     -.-
 `) // => 'hello\nworld\n  -.-'
+```
+
+#### defaultIndexTo
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/defaultIndexTo.ts#L14) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#defaultindexto) | [回目录](#目录)</small>
+
+当 `index` 为 `-1` 时，返回 `defaultIndex`。
+
+```ts
+defaultIndexTo(-1, 0) // => 0
+defaultIndexTo(0, 0) // => 0
+defaultIndexTo(1, 0) // => 1
 ```
 
 #### defaultTo

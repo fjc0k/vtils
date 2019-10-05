@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.40.0](https://github.com/fjc0k/vtils/compare/v2.39.0...v2.40.0) (2019-10-05)
+
+**Note:** Version bump only for package @vtils/taro
+
+
+
+
+
 # [2.39.0](https://github.com/fjc0k/vtils/compare/v2.38.0...v2.39.0) (2019-09-30)
 
 

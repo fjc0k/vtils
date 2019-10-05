@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.40.0](https://github.com/fjc0k/vtils/compare/v2.39.0...v2.40.0) (2019-10-05)
+
+
+### Features
+
+* **date:** 新增 numeralDayToChineseDay ([f316104](https://github.com/fjc0k/vtils/commit/f316104))
+* **vtils:** 新增 defaultIndexTo ([53d5bb4](https://github.com/fjc0k/vtils/commit/53d5bb4))
+
+
+
+
+
 # [2.39.0](https://github.com/fjc0k/vtils/compare/v2.38.0...v2.39.0) (2019-09-30)
 
 

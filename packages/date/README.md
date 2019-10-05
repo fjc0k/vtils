@@ -21,7 +21,7 @@ npm i @vtils/date --save
 你也可通过 CDN 安装，然后使用全局变量 `vd` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@vtils/date@2.38.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vtils/date@2.40.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
 <!-- TYPEDOC -->
@@ -30,7 +30,7 @@ npm i @vtils/date --save
 <!-- Main!目录 -->
 👇 | 👇 | 👇 | 👇
 --- | --- | --- | ---
-[formatDate](#formatdate) | [toDayjs](#todayjs) |  | 
+[formatDate](#formatdate) | [numeralDayToChineseDay](#numeraldaytochineseday) | [toDayjs](#todayjs) | 
 <!-- Maini目录 -->
 
 ## 列表
@@ -43,6 +43,19 @@ npm i @vtils/date --save
 
 ```ts
 formatDate('2019-9-1', 'YYYY年M月D日') // => 2019年9月1日
+```
+
+#### numeralDayToChineseDay
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/date/src/numeralDayToChineseDay.ts#L25) | [API](https://fjc0k.github.io/vtils/date/globals.html#numeraldaytochineseday) | [回目录](#目录)</small>
+
+数字星期转中文星期。`0` 和 `7` 都视为星期日。
+
+```ts
+numeralDayToChineseDay(0) // => 日
+numeralDayToChineseDay(1) // => 一
+numeralDayToChineseDay(5) // => 五
+numeralDayToChineseDay(7) // => 日
 ```
 
 #### toDayjs
