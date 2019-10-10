@@ -106,3 +106,18 @@ test('total, noMore 表现正常', async () => {
   await waitForNextUpdate()
   expect(result.current.loader).toMatchSnapshot('已无更多数据后重新加载后')
 })
+
+test('bug: 修复在第一页 reload 无效', () => {
+  const service = jest.fn().mockImplementation(() => [])
+
+  const {result} = renderHook(() => {
+    const loader = useLoadMore(async () => service(), [])
+    return {loader}
+  })
+
+  expect(service).toBeCalledTimes(1)
+
+  act(() => result.current.loader.reload())
+
+  expect(service).toBeCalledTimes(2)
+})

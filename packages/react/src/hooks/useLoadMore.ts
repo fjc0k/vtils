@@ -100,8 +100,12 @@ export function useLoadMore<TItem>(
   }, [loadingState.loading, noMore])
 
   const reload = useCallback(() => {
-    setPageNumber(1)
-  }, [])
+    if (pageNumber === 1) {
+      load()
+    } else {
+      setPageNumber(1)
+    }
+  }, [pageNumber, load])
 
   useEffect(() => {
     load()
