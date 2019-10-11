@@ -81,6 +81,13 @@ export class StructuredListTransformer<TItem> {
   }
 
   /**
+   * 同 `pack()`，用于返回 HTTP 回复内容时避免类型错误。
+   */
+  packAsHttpResponse(): StructuredList<TItem> {
+    return this.pack() as any
+  }
+
+  /**
    * 解包结构化列表数据。
    *
    * @returns 返回解包后的结构化列表数据
