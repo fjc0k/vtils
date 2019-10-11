@@ -21,7 +21,7 @@ npm i @vtils/react --save
 你也可通过 CDN 安装，然后使用全局变量 `vr` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@vtils/react@2.40.1/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vtils/react@2.41.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
 <!-- TYPEDOC -->

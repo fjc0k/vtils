@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.40.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.41.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -104,7 +104,7 @@ alert(shuffle([1, 2, 3, 4, 5]))
 [Disposer](#disposer) | [EasyStorage](#easystorage) | [EasyStorageAdapter](#easystorageadapter)
 [EasyStorageAdapterBrowser](#easystorageadapterbrowser) | [EasyStorageAdapterBrowserLocalStorage](#easystorageadapterbrowserlocalstorage) | [EasyStorageAdapterBrowserSessionStorage](#easystorageadapterbrowsersessionstorage)
 [EasyStorageAdapterMemory](#easystorageadaptermemory) | [EasyStorageAdapterWeapp](#easystorageadapterweapp) | [EasyValidator](#easyvalidator)
-[EventBus](#eventbus) | [Wechat](#wechat) | 
+[EventBus](#eventbus) | [StructuredListTransformer](#structuredlisttransformer) | [Wechat](#wechat)
 <!-- 工具类i目录 -->
 
 ### 📦 工具类型
@@ -1682,6 +1682,12 @@ bus.emit('error', '出错啦')
 unbindSuccessListener()
 bus.off('error')
 ```
+
+#### StructuredListTransformer
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/StructuredListTransformer.ts#L14) | [API](https://fjc0k.github.io/vtils/vtils/classes/structuredlisttransformer.html) | [回目录](#目录)</small>
+
+结构化列表数据转换器。
 
 #### Wechat
 
