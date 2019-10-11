@@ -15,7 +15,6 @@ test('表现正常', () => {
   const packedStructuredList: PackedStructuredList<Item> = new StructuredListTransformer(structuredList).pack()
   const unpackedStructuredList: StructuredList<Item> = new StructuredListTransformer(packedStructuredList).unpack()
 
-  expect(packedStructuredList).toMatchSnapshot('packedStructuredList')
   expect(unpackedStructuredList).toEqual(structuredList)
   expect(StructuredListTransformer.transformIfNeeded(packedStructuredList)).toEqual(structuredList)
   expect(StructuredListTransformer.transformIfNeeded(1)).toEqual(1)
