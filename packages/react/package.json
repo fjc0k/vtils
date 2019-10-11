@@ -1,6 +1,6 @@
 {
   "name": "@vtils/react",
-  "version": "2.41.0",
+  "version": "2.42.0",
   "description": "vtils 在 React 中的应用。",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -54,7 +54,7 @@
     "ts-node": "^8.0.2",
     "typedoc": "^0.15.0-0",
     "typescript": "^3.4.5",
-    "vtils": "2.41.0"
+    "vtils": "2.42.0"
   },
   "peerDependencies": {
     "react": "^16.9.0",

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.42.0](https://github.com/fjc0k/vtils/compare/v2.41.0...v2.42.0) (2019-10-11)
+
+
+### Features
+
+* **StructuredListTransformer:** transformIfNeeded 支持设置递归层级 ([6b91430](https://github.com/fjc0k/vtils/commit/6b91430))
+* **StructuredListTransformer:** 支持简单的混淆 ([82c296d](https://github.com/fjc0k/vtils/commit/82c296d))
+* **StructuredListTransformer:** 添加 packAsHttpResponse 辅助方法 ([08d2e0e](https://github.com/fjc0k/vtils/commit/08d2e0e))
+
+
+
+
+
 # [2.41.0](https://github.com/fjc0k/vtils/compare/v2.40.1...v2.41.0) (2019-10-11)
 
 
