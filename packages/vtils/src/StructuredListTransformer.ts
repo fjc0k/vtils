@@ -72,7 +72,9 @@ export class StructuredListTransformer<TItem> {
    */
   pack(): PackedStructuredList<TItem> {
     const structuredList: StructuredList<TItem> = this.list as any
-    const keys: Array<keyof TItem> = Object.keys(structuredList[0]) as any
+    const keys: Array<keyof TItem> = structuredList.length
+      ? Object.keys(structuredList[0]) as any
+      : []
     const valueIndexes: number[] = shuffle(range(0, keys.length))
     const values = []
     for (const structuredItem of structuredList) {

@@ -39,4 +39,12 @@ describe('StructuredListTransformer', () => {
       StructuredListTransformer.transformIfNeeded({list: {list: {list: packedStructuredList}}}, 3),
     ).toEqual({list: {list: {list: structuredList}}})
   })
+
+  test('bug: 空数据正常', () => {
+    expect(
+      new StructuredListTransformer(
+        new StructuredListTransformer([]).pack(),
+      ).unpack(),
+    ).toEqual([])
+  })
 })
