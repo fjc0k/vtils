@@ -2387,6 +2387,9 @@ img {
 					<a href="structuredlisttransformer.html#pack" class="tsd-kind-icon">pack</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="structuredlisttransformer.html#packashttpresponse" class="tsd-kind-icon">pack<wbr>AsHttp<wbr>Response</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a href="structuredlisttransformer.html#unpack" class="tsd-kind-icon">unpack</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
@@ -2435,6 +2438,7 @@ img {
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="structuredlisttransformer.html#pack" class="tsd-kind-icon">pack</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="structuredlisttransformer.html#packashttpresponse" class="tsd-kind-icon">pack<wbr>AsHttp<wbr>Response</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="structuredlisttransformer.html#unpack" class="tsd-kind-icon">unpack</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="structuredlisttransformer.html#transformifneeded" class="tsd-kind-icon">transform<wbr>IfNeeded</a></li>
 						</ul>
@@ -2454,7 +2458,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/aa1ab49/packages/vtils/src/StructuredListTransformer.ts#L14">StructuredListTransformer.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6b91430/packages/vtils/src/StructuredListTransformer.ts#L19">StructuredListTransformer.ts:19</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2480,7 +2484,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/aa1ab49/packages/vtils/src/StructuredListTransformer.ts#L35">StructuredListTransformer.ts:35</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6b91430/packages/vtils/src/StructuredListTransformer.ts#L73">StructuredListTransformer.ts:73</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2494,6 +2498,28 @@ img {
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="packashttpresponse" class="tsd-anchor"></a>
+				<h3>pack<wbr>AsHttp<wbr>Response</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">pack<wbr>AsHttp<wbr>Response<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#structuredlist" class="tsd-signature-type">StructuredList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TItem</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6b91430/packages/vtils/src/StructuredListTransformer.ts#L96">StructuredListTransformer.ts:96</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>同 <code>pack()</code>，用于返回 HTTP 回复内容时避免类型错误。</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <a href="../globals.html#structuredlist" class="tsd-signature-type">StructuredList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TItem</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 				<a name="unpack" class="tsd-anchor"></a>
 				<h3>unpack</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
@@ -2503,7 +2529,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/aa1ab49/packages/vtils/src/StructuredListTransformer.ts#L56">StructuredListTransformer.ts:56</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6b91430/packages/vtils/src/StructuredListTransformer.ts#L105">StructuredListTransformer.ts:105</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2520,18 +2546,18 @@ img {
 				<a name="transformifneeded" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagStatic">Static</span> transform<wbr>IfNeeded</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">transform<wbr>IfNeeded<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					<li class="tsd-signature tsd-kind-icon">transform<wbr>IfNeeded<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, depth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/aa1ab49/packages/vtils/src/StructuredListTransformer.ts#L23">StructuredListTransformer.ts:23</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/6b91430/packages/vtils/src/StructuredListTransformer.ts#L29">StructuredListTransformer.ts:29</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>如果是打包后的结构化列表数据，则解包后返回，否则直接返回。</p>
+								<p>如果是打包后的结构化列表数据，则解包后返回，否则直接返回。如果是对象，则递归尝试解包。</p>
 							</div>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2540,6 +2566,12 @@ img {
 								<h5>value: <span class="tsd-signature-type">any</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>数据</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> depth: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;2</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>递归层级，默认：2</p>
 								</div>
 							</li>
 						</ul>
