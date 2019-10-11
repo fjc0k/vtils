@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.1](https://github.com/fjc0k/vtils/compare/v2.42.0...v2.42.1) (2019-10-11)
+
+
+### Bug Fixes
+
+* **StructuredListTransformer:** 正确处理空数据 ([df02f73](https://github.com/fjc0k/vtils/commit/df02f73))
+
+
+
+
+
 # [2.42.0](https://github.com/fjc0k/vtils/compare/v2.41.0...v2.42.0) (2019-10-11)
 
 
