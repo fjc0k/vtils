@@ -1,5 +1,6 @@
 import {base64UrlDecode, base64UrlEncode} from './base64'
 import {isPlainObject} from './is'
+import {mapValues} from './mapValues'
 import {range} from './range'
 import {shuffle} from './shuffle'
 
@@ -19,14 +20,23 @@ export class StructuredListTransformer<TItem> {
   constructor(private list: StructuredList<TItem> | PackedStructuredList<TItem>) {}
 
   /**
-   * 如果是打包后的结构化列表数据，则解包后返回，否则直接返回。
+   * 如果是打包后的结构化列表数据，则解包后返回，否则直接返回。如果是对象，则递归尝试解包。
    *
    * @param value 数据
+   * @param depth 递归层级，默认：2
    * @returns 返回结果数据
    */
-  static transformIfNeeded(value: any) {
-    if (isPlainObject(value) && (value as PackedStructuredList).__IS_PACKED_STRUCTURED_LIST__ === true) {
-      return new StructuredListTransformer(value as any).unpack()
+  static transformIfNeeded(value: any, depth: number = 2): any {
+    if (isPlainObject(value)) {
+      if ((value as PackedStructuredList).__IS_PACKED_STRUCTURED_LIST__ === true) {
+        return new StructuredListTransformer(value as any).unpack()
+      }
+      if (depth > 0) {
+        return mapValues(
+          value,
+          v => StructuredListTransformer.transformIfNeeded(v, depth - 1),
+        )
+      }
     }
     return value
   }
