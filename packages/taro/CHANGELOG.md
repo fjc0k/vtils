@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.43.0](https://github.com/fjc0k/vtils/compare/v2.42.1...v2.43.0) (2019-10-12)
+
+
+### Features
+
+* **taro:** 完善既有 Hooks 的文档 ([d367f02](https://github.com/fjc0k/vtils/commit/d367f02))
+* **taro:** 新增 getCurrentPageUrl ([0a249fc](https://github.com/fjc0k/vtils/commit/0a249fc))
+* **taro:** 新增 useLoading ([a029d71](https://github.com/fjc0k/vtils/commit/a029d71))
+
+
+
+
+
 ## [2.42.1](https://github.com/fjc0k/vtils/compare/v2.42.0...v2.42.1) (2019-10-11)
 
 **Note:** Version bump only for package @vtils/taro

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.43.0](https://github.com/fjc0k/vtils/compare/v2.42.1...v2.43.0) (2019-10-12)
+
+
+### Bug Fixes
+
+* **react:** useLoadMore 应在依赖变化后重新加载 ([df459ba](https://github.com/fjc0k/vtils/commit/df459ba))
+
+
+
+
+
 ## [2.42.1](https://github.com/fjc0k/vtils/compare/v2.42.0...v2.42.1) (2019-10-11)
 
 **Note:** Version bump only for package @vtils/react
