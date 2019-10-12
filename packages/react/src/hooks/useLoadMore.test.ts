@@ -121,3 +121,22 @@ test('bug: 修复在第一页 reload 无效', () => {
 
   expect(service).toBeCalledTimes(2)
 })
+
+test('bug: deps 变化后应 reload', async () => {
+  const service = jest.fn().mockImplementation(({pageNumber, count}: any) => [[pageNumber, count]])
+
+  const {result, waitForNextUpdate} = renderHook(() => {
+    const [count, setCount] = useState(0)
+    const loader = useLoadMore(async ({pageNumber}) => service({pageNumber, count}), [count])
+    return {loader, incCount: () => setCount(count => count + 1)}
+  })
+
+  await waitForNextUpdate()
+  expect(service).toBeCalledTimes(1)
+
+  act(() => result.current.incCount())
+  expect(service).toBeCalledTimes(2)
+  expect(result.current.loader).toMatchSnapshot('deps 变化后加载中')
+  await waitForNextUpdate()
+  expect(result.current.loader).toMatchSnapshot('deps 变化后加载完成')
+})

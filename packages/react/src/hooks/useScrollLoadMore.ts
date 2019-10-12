@@ -27,7 +27,7 @@ export interface UseScrollLoadMoreOptions {
  * 滚动数据加载。
  *
  * @param service 数据加载服务
- * @param deps 依赖，依赖若更新则执行一次数据加载服务
+ * @param deps 依赖，依赖若发生变化则从首页重新加载数据
  * @param options 滚动选项
  * @returns 返回结果
  */

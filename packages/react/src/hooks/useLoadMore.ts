@@ -43,7 +43,7 @@ export interface UseLoadMoreReturn<TItem> {
  * 数据加载。
  *
  * @param service 数据加载服务
- * @param deps 依赖，依赖若更新则执行一次数据加载服务
+ * @param deps 依赖，依赖若发生变化则从首页重新加载数据
  * @returns 返回结果
  */
 export function useLoadMore<TItem>(
@@ -60,14 +60,18 @@ export function useLoadMore<TItem>(
   const [noMore, setNoMore] = useState<boolean>(false)
   const [total, setTotal] = useState<number>(0)
 
-  const load = useCallback(() => {
-    const isFirstPage = pageNumber === 1
+  const load = useCallback((nextPageNumber: number) => {
+    setPageNumber(nextPageNumber)
+    const isFirstPage = nextPageNumber === 1
     setLoadingState({
       loading: true,
       initialLoading: isFirstPage,
       incrementalLoading: !isFirstPage,
     })
-    service({offset: data.length, pageNumber}).then(res => {
+    service({
+      offset: data.length,
+      pageNumber: nextPageNumber,
+    }).then(res => {
       setLoadingState({
         loading: false,
         initialLoading: false,
@@ -91,25 +95,21 @@ export function useLoadMore<TItem>(
         })
       }
     })
-  }, [pageNumber, data, ...deps])
+  }, [data, ...deps])
 
   const loadMore = useCallback(() => {
     if (!noMore && !loadingState.loading) {
-      setPageNumber(pageNumber => pageNumber + 1)
+      load(pageNumber + 1)
     }
-  }, [loadingState.loading, noMore])
+  }, [pageNumber, loadingState.loading, noMore, load])
 
   const reload = useCallback(() => {
-    if (pageNumber === 1) {
-      load()
-    } else {
-      setPageNumber(1)
-    }
-  }, [pageNumber, load])
+    load(1)
+  }, [load])
 
   useEffect(() => {
-    load()
-  }, [pageNumber, ...deps])
+    reload()
+  }, deps)
 
   return {
     pageNumber: pageNumber,
