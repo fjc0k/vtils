@@ -1,5 +1,6 @@
 // @index('./*', (pp, cc) => `export * from '${pp.path}'`)
 export * from './useAccountInfo'
+export * from './useCurrentPageUrl'
 export * from './useLaunchOptions'
 export * from './useLoading'
 export * from './useMenuButtonBoundingClientRect'
