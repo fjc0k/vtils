@@ -66,13 +66,25 @@ export default function Edit() {
 <!-- Main!目录 -->
 👇 | 👇 | 👇
 --- | --- | ---
-[useAccountInfo](#useaccountinfo) | [useLaunchOptions](#uselaunchoptions) | [useMenuButtonBoundingClientRect](#usemenubuttonboundingclientrect)
-[useNavigationBarLoading](#usenavigationbarloading) | [useNavigationBarTitle](#usenavigationbartitle) | [useScope](#usescope)
-[useScrollLoadMore](#usescrollloadmore) | [useSystemInfo](#usesysteminfo) | 
+[getCurrentPageUrl](#getcurrentpageurl) | [useAccountInfo](#useaccountinfo) | [useLaunchOptions](#uselaunchoptions)
+[useLoading](#useloading) | [useMenuButtonBoundingClientRect](#usemenubuttonboundingclientrect) | [useNavigationBarLoading](#usenavigationbarloading)
+[useNavigationBarTitle](#usenavigationbartitle) | [useScope](#usescope) | [useScrollLoadMore](#usescrollloadmore)
+[useSystemInfo](#usesysteminfo) |  | 
 <!-- Maini目录 -->
 
 ## 自产的工具函数、Hooks 列表
 <!-- Main!内容 -->
+#### getCurrentPageUrl
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/getCurrentPageUrl.ts#L13) | [API](https://fjc0k.github.io/vtils/taro/globals.html#getcurrentpageurl) | [回目录](#目录)</small>
+
+获取当前页面的绝对路径，包含查询参数。
+
+```ts
+const currentPageUrl = getCurrentPageUrl()
+// => /pages/Product/Detail?id=10
+```
+
 #### useAccountInfo
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useAccountInfo.ts#L20) | [API](https://fjc0k.github.io/vtils/taro/globals.html#useaccountinfo) | [回目录](#目录)</small>
@@ -101,6 +113,19 @@ const accountInfo = useAccountInfo()
 ```ts
 const launchOptions = useLaunchOptions()
 // { path: '启动小程序的路径', ... }
+```
+
+#### useLoading
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useLoading.ts#L16) | [API](https://fjc0k.github.io/vtils/taro/globals.html#useloading) | [回目录](#目录)</small>
+
+使用加载提示。
+
+```ts
+const getDetail = useAsync(async () => {
+  return getDetailApi()
+})
+useLoading(getDetail.loading, '获取数据中...')
 ```
 
 #### useMenuButtonBoundingClientRect
@@ -149,12 +174,18 @@ useEffect(() => {
 
 #### useScope
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useScope.ts#L11) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usescope) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useScope.ts#L17) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usescope) | [回目录](#目录)</small>
 
 获取小程序原生作用域。同类组件中的 `this.$scope`。
 
 ```ts
 const scope = useScope()
+useEffect(() => {
+  if (scope) {
+    const ctx = Taro.createCanvasContext('canvas', scope)
+    // ...
+  }
+}, [scope])
 ```
 
 #### useScrollLoadMore
