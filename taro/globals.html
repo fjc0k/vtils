@@ -2384,6 +2384,9 @@ img {
 			<a href="globals.html#useaccountinfo" class="tsd-kind-icon">use<wbr>Account<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-function tsd-is-external">
+			<a href="globals.html#usecurrentpageurl" class="tsd-kind-icon">use<wbr>Current<wbr>Page<wbr>Url</a>
+		</li>
+		<li class=" tsd-kind-function tsd-is-external">
 			<a href="globals.html#uselaunchoptions" class="tsd-kind-icon">use<wbr>Launch<wbr>Options</a>
 		</li>
 		<li class=" tsd-kind-function tsd-is-external">
@@ -2447,6 +2450,7 @@ npm i vtils @vtils/taro --save</code></pre>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#getcurrentpageurl" class="tsd-kind-icon">get<wbr>Current<wbr>Page<wbr>Url</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#useaccountinfo" class="tsd-kind-icon">use<wbr>Account<wbr>Info</a></li>
+							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#usecurrentpageurl" class="tsd-kind-icon">use<wbr>Current<wbr>Page<wbr>Url</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#uselaunchoptions" class="tsd-kind-icon">use<wbr>Launch<wbr>Options</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#useloading" class="tsd-kind-icon">use<wbr>Loading</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#usemenubuttonboundingclientrect" class="tsd-kind-icon">use<wbr>Menu<wbr>Button<wbr>Bounding<wbr>Client<wbr>Rect</a></li>
@@ -2472,7 +2476,7 @@ npm i vtils @vtils/taro --save</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/getCurrentPageUrl.ts#L13">getCurrentPageUrl.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/getCurrentPageUrl.ts#L13">getCurrentPageUrl.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2500,7 +2504,7 @@ npm i vtils @vtils/taro --save</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/hooks/useAccountInfo.ts#L20">hooks/useAccountInfo.ts:20</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useAccountInfo.ts#L20">hooks/useAccountInfo.ts:20</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2527,6 +2531,40 @@ npm i vtils @vtils/taro --save</code></pre>
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+				<a name="usecurrentpageurl" class="tsd-anchor"></a>
+				<h3>use<wbr>Current<wbr>Page<wbr>Url</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">use<wbr>Current<wbr>Page<wbr>Url<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useCurrentPageUrl.ts#L16">hooks/useCurrentPageUrl.ts:16</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>获取当前页面的绝对路径，包含查询参数。</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> currentPageUrl = useCurrentPageUrl()
+
+<span class="hljs-keyword">if</span> (currentPageUrl) {
+  <span class="hljs-comment">// =&gt; /pages/Product/Detail?id=10</span>
+}</code></pre>
+								</dd>
+							</dl>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
+							<span class="tsd-signature-symbol"> | </span>
+							<span class="tsd-signature-type">null</span>
+						</h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
 				<a name="uselaunchoptions" class="tsd-anchor"></a>
 				<h3>use<wbr>Launch<wbr>Options</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-is-external">
@@ -2536,7 +2574,7 @@ npm i vtils @vtils/taro --save</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/hooks/useLaunchOptions.ts#L12">hooks/useLaunchOptions.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useLaunchOptions.ts#L12">hooks/useLaunchOptions.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2564,7 +2602,7 @@ npm i vtils @vtils/taro --save</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/hooks/useLoading.ts#L16">hooks/useLoading.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useLoading.ts#L16">hooks/useLoading.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2609,7 +2647,7 @@ useLoading(getDetail.loading, <span class="hljs-string">'获取数据中...'</sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/hooks/useMenuButtonBoundingClientRect.ts#L12">hooks/useMenuButtonBoundingClientRect.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useMenuButtonBoundingClientRect.ts#L12">hooks/useMenuButtonBoundingClientRect.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2639,7 +2677,7 @@ useLoading(getDetail.loading, <span class="hljs-string">'获取数据中...'</sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/hooks/useNavigationBarLoading.ts#L20">hooks/useNavigationBarLoading.ts:20</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useNavigationBarLoading.ts#L20">hooks/useNavigationBarLoading.ts:20</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2683,7 +2721,7 @@ useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/hooks/useNavigationBarTitle.ts#L17">hooks/useNavigationBarTitle.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useNavigationBarTitle.ts#L17">hooks/useNavigationBarTitle.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2724,7 +2762,7 @@ useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/hooks/useScope.ts#L17">hooks/useScope.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useScope.ts#L17">hooks/useScope.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2757,7 +2795,7 @@ useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/hooks/useScrollLoadMore.ts#L45">hooks/useScrollLoadMore.ts:45</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useScrollLoadMore.ts#L45">hooks/useScrollLoadMore.ts:45</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2836,7 +2874,7 @@ useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/a029d71/packages/taro/src/hooks/useSystemInfo.ts#L12">hooks/useSystemInfo.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fjc0k/vtils/blob/18cd0ea/packages/taro/src/hooks/useSystemInfo.ts#L12">hooks/useSystemInfo.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
