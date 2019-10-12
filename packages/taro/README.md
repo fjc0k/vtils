@@ -66,10 +66,10 @@ export default function Edit() {
 <!-- Main!目录 -->
 👇 | 👇 | 👇
 --- | --- | ---
-[getCurrentPageUrl](#getcurrentpageurl) | [useAccountInfo](#useaccountinfo) | [useLaunchOptions](#uselaunchoptions)
-[useLoading](#useloading) | [useMenuButtonBoundingClientRect](#usemenubuttonboundingclientrect) | [useNavigationBarLoading](#usenavigationbarloading)
-[useNavigationBarTitle](#usenavigationbartitle) | [useScope](#usescope) | [useScrollLoadMore](#usescrollloadmore)
-[useSystemInfo](#usesysteminfo) |  | 
+[getCurrentPageUrl](#getcurrentpageurl) | [useAccountInfo](#useaccountinfo) | [useCurrentPageUrl](#usecurrentpageurl)
+[useLaunchOptions](#uselaunchoptions) | [useLoading](#useloading) | [useMenuButtonBoundingClientRect](#usemenubuttonboundingclientrect)
+[useNavigationBarLoading](#usenavigationbarloading) | [useNavigationBarTitle](#usenavigationbartitle) | [useScope](#usescope)
+[useScrollLoadMore](#usescrollloadmore) | [useSystemInfo](#usesysteminfo) | 
 <!-- Maini目录 -->
 
 ## 自产的工具函数、Hooks 列表
@@ -102,6 +102,20 @@ const accountInfo = useAccountInfo()
 //     version: '插件版本号'
 //   }
 // }
+```
+
+#### useCurrentPageUrl
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useCurrentPageUrl.ts#L16) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usecurrentpageurl) | [回目录](#目录)</small>
+
+获取当前页面的绝对路径，包含查询参数。
+
+```ts
+const currentPageUrl = useCurrentPageUrl()
+
+if (currentPageUrl) {
+  // => /pages/Product/Detail?id=10
+}
 ```
 
 #### useLaunchOptions

@@ -1,6 +1,6 @@
 {
   "name": "@vtils/taro",
-  "version": "2.43.0",
+  "version": "2.44.0",
   "description": "vtils 在 Taro 中的应用。",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

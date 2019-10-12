@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.44.0](https://github.com/fjc0k/vtils/compare/v2.43.0...v2.44.0) (2019-10-12)
+
+
+### Features
+
+* **taro:** 新增 useCurrentPageUrl ([18cd0ea](https://github.com/fjc0k/vtils/commit/18cd0ea))
+
+
+
+
+
 # [2.43.0](https://github.com/fjc0k/vtils/compare/v2.42.1...v2.43.0) (2019-10-12)
 
 
