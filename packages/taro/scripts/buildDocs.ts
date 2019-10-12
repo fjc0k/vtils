@@ -49,7 +49,7 @@ ii(async function main() {
     [ReflectionKind.Function]: 'Main',
   }
   const contentItemCountPerLineByKind: Partial<Record<ReflectionKind, number>> = {
-    [ReflectionKind.Function]: 4,
+    [ReflectionKind.Function]: 3,
   }
 
   let readme = (await fs.readFile(readMeFile)).toString()
