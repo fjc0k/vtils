@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.45.1](https://github.com/fjc0k/vtils/compare/v2.45.0...v2.45.1) (2019-10-19)
+
+
+### Bug Fixes
+
+* **taro:** 导出 RequiredProp ([7158907](https://github.com/fjc0k/vtils/commit/7158907))
+
+
+
+
+
 # [2.45.0](https://github.com/fjc0k/vtils/compare/v2.44.0...v2.45.0) (2019-10-19)
 
 
