@@ -21,7 +21,7 @@ npm i @vtils/react --save
 你也可通过 CDN 安装，然后使用全局变量 `vr` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@vtils/react@2.43.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vtils/react@2.46.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 ```
 
 <!-- TYPEDOC -->
@@ -30,8 +30,8 @@ npm i @vtils/react --save
 <!-- React!目录 -->
 👇 | 👇 | 👇 | 👇
 --- | --- | --- | ---
-[buildFunctionComponentCreator](#buildfunctioncomponentcreator) | [useEasyValidator](#useeasyvalidator) | [useLiveEasyValidator](#useliveeasyvalidator) | [useLoadMore](#useloadmore)
-[useScrollLoadMore](#usescrollloadmore) |  |  | 
+[buildFunctionComponentCreator](#buildfunctioncomponentcreator) | [makeProps](#makeprops) | [useEasyValidator](#useeasyvalidator) | [useLiveEasyValidator](#useliveeasyvalidator)
+[useLoadMore](#useloadmore) | [useScrollLoadMore](#usescrollloadmore) |  | 
 <!-- Reacti目录 -->
 
 ## 列表
@@ -39,9 +39,13 @@ npm i @vtils/react --save
 <!-- React!内容 -->
 #### buildFunctionComponentCreator
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/functionComponentCreator.ts#L44) | [API](https://fjc0k.github.io/vtils/react/globals.html#buildfunctioncomponentcreator) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/functionComponentCreator.ts#L53) | [API](https://fjc0k.github.io/vtils/react/globals.html#buildfunctioncomponentcreator) | [回目录](#目录)</small>
 
 构造一个函数组件创建器。
+
+#### makeProps
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/react/src/functionComponentCreator.ts#L24) | [API](https://fjc0k.github.io/vtils/react/globals.html#makeprops) | [回目录](#目录)</small>
 
 #### useEasyValidator
 
