@@ -1,4 +1,4 @@
-import {buildFunctionComponentCreator, createFunctionComponent, RequiredProp} from './functionComponentCreator'
+import {buildFunctionComponentCreator, createFunctionComponent, makeProps, RequiredProp} from './functionComponentCreator'
 import {jestExpectEqual, tryGet} from 'vtils'
 
 describe('createFunctionComponent', () => {
@@ -31,17 +31,17 @@ describe('createFunctionComponent', () => {
   test('有 props 的组件正常', () => {
     let Component!: any
 
-    const defaultProps = {
+    const props = makeProps({
       /** x */
       x: 1,
       /** y */
       y: 2,
       /** z */
       z: null as any as RequiredProp<string>,
-    }
+    })
 
     const Hello = createFunctionComponent(
-      defaultProps,
+      props,
       function MyComponent(props) {
         Component = MyComponent
         return [
@@ -65,7 +65,7 @@ describe('createFunctionComponent', () => {
 
     jestExpectEqual(
       Hello.defaultProps,
-      defaultProps as any,
+      props as any,
     )
   })
 })
@@ -73,9 +73,9 @@ describe('createFunctionComponent', () => {
 describe('buildFunctionComponentCreator', () => {
   test('extraProps 正常', () => {
     const createRedFunctionComponent = buildFunctionComponentCreator({
-      extraProps: {
+      extraProps: makeProps({
         red: false,
-      },
+      }),
     })
 
     const Hello = createRedFunctionComponent(props => {
@@ -120,9 +120,10 @@ describe('buildFunctionComponentCreator', () => {
 
   test('extraProps & transformComponent 正常', () => {
     const createRedFunctionComponent = buildFunctionComponentCreator({
-      extraProps: {
+      extraProps: makeProps({
+        /** 红 */
         red: true,
-      },
+      }),
       transformComponent: Component => {
         (Component as any).__TEST__ = true
         return Component as (typeof Component) & {
