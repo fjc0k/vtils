@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.45.0](https://github.com/fjc0k/vtils/compare/v2.44.0...v2.45.0) (2019-10-19)
+
+
+### Features
+
+* **taro:** 新增 useQuery ([6a8b804](https://github.com/fjc0k/vtils/commit/6a8b804))
+
+
+
+
+
 # [2.44.0](https://github.com/fjc0k/vtils/compare/v2.43.0...v2.44.0) (2019-10-12)
 
 

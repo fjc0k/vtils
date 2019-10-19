@@ -68,8 +68,8 @@ export default function Edit() {
 --- | --- | ---
 [getCurrentPageUrl](#getcurrentpageurl) | [useAccountInfo](#useaccountinfo) | [useCurrentPageUrl](#usecurrentpageurl)
 [useLaunchOptions](#uselaunchoptions) | [useLoading](#useloading) | [useMenuButtonBoundingClientRect](#usemenubuttonboundingclientrect)
-[useNavigationBarLoading](#usenavigationbarloading) | [useNavigationBarTitle](#usenavigationbartitle) | [useScope](#usescope)
-[useScrollLoadMore](#usescrollloadmore) | [useSystemInfo](#usesysteminfo) | 
+[useNavigationBarLoading](#usenavigationbarloading) | [useNavigationBarTitle](#usenavigationbartitle) | [useQuery](#usequery)
+[useScope](#usescope) | [useScrollLoadMore](#usescrollloadmore) | [useSystemInfo](#usesysteminfo)
 <!-- Maini目录 -->
 
 ## 自产的工具函数、Hooks 列表
@@ -186,9 +186,25 @@ useEffect(() => {
 }, [])
 ```
 
+#### useQuery
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useQuery.ts#L18) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usequery) | [回目录](#目录)</small>
+
+获取页面的查询参数，会将类型为数值的参数值转为数字。
+
+```ts
+const query = useQuery<{ id: number }>()
+useEffect(() => {
+  if (query.id != null) {
+    console.log(typeof query.id, query.id)
+    // 假设页面的查询参数为 id=100，则输出为：'number', 100
+  }
+}, [query.id])
+```
+
 #### useScope
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useScope.ts#L17) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usescope) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/taro/src/hooks/useScope.ts#L18) | [API](https://fjc0k.github.io/vtils/taro/globals.html#usescope) | [回目录](#目录)</small>
 
 获取小程序原生作用域。同类组件中的 `this.$scope`。
 
