@@ -9,4 +9,5 @@ export {
   FunctionComponentCreator,
   BuildFunctionComponentCreatorOptions,
   createFunctionComponent,
+  RequiredProp,
 } from '@vtils/react'
