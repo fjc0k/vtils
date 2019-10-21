@@ -1,0 +1,11 @@
+$mixinMaskFeedbackColor: blue;
+$mixinOpacityFeedbackOpacity: 0.5;
+
+@import '../lib/index';
+
+.demo {
+  @include ellipsis;
+  @include maskFeedback;
+  @include opacityFeedback;
+  @include size(40px);
+}

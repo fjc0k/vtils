@@ -1,0 +1,11 @@
+@import './maskFeedback';
+
+// 使用默认的遮罩颜色
+.button {
+  @include maskFeedback;
+
+  // 自定义遮罩颜色
+  &.plain {
+    @include maskFeedback(red);
+  }
+}

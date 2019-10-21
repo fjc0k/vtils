@@ -1,0 +1,11 @@
+@import '../_variables';
+
+// 半透明反馈
+@mixin opacityFeedback($opacity: $mixinOpacityFeedbackOpacity) {
+  user-select: none;
+
+  &:active,
+  &.active {
+    opacity: $opacity;
+  }
+}

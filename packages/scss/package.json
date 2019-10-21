@@ -1,0 +1,45 @@
+{
+  "name": "@vtils/scss",
+  "version": "0.0.0",
+  "description": "SCSS 模块库。",
+  "main": "lib/_index.scss",
+  "homepage": "https://github.com/fjc0k/vtils/tree/master/packages/scss",
+  "license": "MIT",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fjc0k/vtils.git",
+    "directory": "packages/scss"
+  },
+  "bugs": {
+    "url": "https://github.com/fjc0k/vtils/issues"
+  },
+  "keywords": [
+    "scss"
+  ],
+  "files": [
+    "src"
+  ],
+  "author": {
+    "name": "Jay Fong",
+    "email": "fjc0kb@gmail.com",
+    "url": "https://github.com/fjc0k"
+  },
+  "scripts": {
+    "bundle": "bundle-scss -m src/_index.scss -d lib/_index.scss",
+    "version": "yarn bundle"
+  },
+  "devDependencies": {
+    "@csstools/postcss-sass": "^4.0.0",
+    "@types/globby": "^9.1.0",
+    "@types/shelljs": "^0.8.5",
+    "bundle-scss": "^1.4.9",
+    "globby": "^10.0.1",
+    "postcss": "^7.0.18",
+    "postcss-scss": "^2.0.0",
+    "shelljs": "^0.8.3"
+  }
+}

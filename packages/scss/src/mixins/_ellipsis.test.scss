@@ -1,0 +1,16 @@
+@import './_ellipsis';
+
+// 默认单行
+.one-line {
+  @include ellipsis;
+}
+
+// 两行
+.two-lines {
+  @include ellipsis(2);
+}
+
+// 十行
+.ten-lines {
+  @include ellipsis(10);
+}
