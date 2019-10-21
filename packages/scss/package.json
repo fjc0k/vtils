@@ -1,6 +1,6 @@
 {
   "name": "@vtils/scss",
-  "version": "2.47.0",
+  "version": "2.47.1",
   "description": "SCSS 模块库。",
   "main": "lib/_index.scss",
   "homepage": "https://github.com/fjc0k/vtils/tree/master/packages/scss",
