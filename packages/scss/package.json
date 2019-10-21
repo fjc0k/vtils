@@ -21,7 +21,7 @@
     "scss"
   ],
   "files": [
-    "src"
+    "lib"
   ],
   "author": {
     "name": "Jay Fong",
