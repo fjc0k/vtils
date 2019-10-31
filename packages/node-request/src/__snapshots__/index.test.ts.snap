@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cookie jar 开启 cookie jar 支持: 第二次请求 - 有 cookie 1`] = `
+Object {
+  "cookie": "test=1",
+  "method": "GET",
+}
+`;
+
+exports[`cookie jar 开启 cookie jar 支持: 首次请求 - 无 cookie 1`] = `
+Object {
+  "method": "GET",
+}
+`;
+
+exports[`cookie jar 没有开启 cookie jar 支持: 第二次请求 - 同样无 cookie 1`] = `
+Object {
+  "method": "GET",
+}
+`;
+
+exports[`cookie jar 没有开启 cookie jar 支持: 首次请求 - 无 cookie 1`] = `
+Object {
+  "method": "GET",
+}
+`;
+
+exports[`自定义头部 表现正常 1`] = `
+Object {
+  "222": "3333",
+  "accept": "application/json, text/plain, */*",
+  "connection": "close",
+  "content-type": "application/x-www-form-urlencoded",
+  "cookie": "hello=1",
+  "host": "localhost:4447",
+  "user-agent": "axios/0.19.0",
+  "x-token": "test_token",
+}
+`;
+
+exports[`请求数据 fileData 1`] = `
+Object {
+  "contentLength": "1148",
+  "contentType": "multipart/form-data; boundary=___boundary___",
+  "data": "--___boundary___
+Content-Disposition: form-data; name=\\"2\\"
+
+3
+--___boundary___
+Content-Disposition: form-data; name=\\"x\\"
+
+1
+--___boundary___
+Content-Disposition: form-data; name=\\"jsonFile\\"; filename=\\"tsconfig.json\\"
+Content-Type: application/json
+
+{
+  \\"extends\\": \\"../../tsconfig.json\\",
+  \\"compilerOptions\\": {
+    \\"target\\": \\"es6\\",
+    \\"module\\": \\"commonjs\\",
+    \\"outDir\\": \\"./lib\\"
+  },
+  \\"include\\": [
+    \\"src/index.ts\\"
+  ]
+}
+
+--___boundary___
+Content-Disposition: form-data; name=\\"jsonFile2\\"; filename=\\"tsconfig.json\\"
+Content-Type: application/json
+
+{
+  \\"extends\\": \\"../../tsconfig.json\\",
+  \\"compilerOptions\\": {
+    \\"target\\": \\"es6\\",
+    \\"module\\": \\"commonjs\\",
+    \\"outDir\\": \\"./lib\\"
+  },
+  \\"include\\": [
+    \\"src/index.ts\\"
+  ]
+}
+
+--___boundary___
+Content-Disposition: form-data; name=\\"jsonFile3\\"; filename=\\"posts\\"
+Content-Type: application/json; charset=utf-8
+
+{
+  \\"XXXXX\\": \\"YYYYYY\\",
+  \\"id\\": 101
+}
+--___boundary___--
+",
+  "method": "POST",
+  "url": "/?id=100",
+}
+`;
+
+exports[`请求数据 formData 1`] = `
+Object {
+  "contentLength": "17",
+  "contentType": "application/x-www-form-urlencoded",
+  "data": "2=3&x=1&null=null",
+  "method": "POST",
+  "url": "/",
+}
+`;
+
+exports[`请求数据 jsonData 1`] = `
+Object {
+  "contentLength": "25",
+  "contentType": "application/json;charset=utf-8",
+  "data": "{\\"2\\":3,\\"x\\":1,\\"null\\":null}",
+  "method": "POST",
+  "url": "/",
+}
+`;
+
+exports[`请求数据 queryData 1`] = `
+Object {
+  "contentType": "application/x-www-form-urlencoded",
+  "data": "",
+  "method": "GET",
+  "url": "/?2=3&x=1",
+}
+`;
+
+exports[`请求方式 GET 1`] = `
+Object {
+  "method": "GET",
+}
+`;
+
+exports[`请求方式 POST 1`] = `
+Object {
+  "method": "POST",
+}
+`;

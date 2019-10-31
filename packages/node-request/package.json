@@ -1,0 +1,54 @@
+{
+  "name": "@vtils/node-request",
+  "version": "2.42.1",
+  "description": "基于 axios 封装的 node.js 网络请求库。",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "homepage": "https://github.com/fjc0k/vtils/tree/master/packages/node-request",
+  "license": "MIT",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fjc0k/vtils.git",
+    "directory": "packages/node-request"
+  },
+  "bugs": {
+    "url": "https://github.com/fjc0k/vtils/issues"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "https",
+    "request",
+    "axios"
+  ],
+  "files": [
+    "lib"
+  ],
+  "author": {
+    "name": "Jay Fong",
+    "email": "fjc0kb@gmail.com",
+    "url": "https://github.com/fjc0k"
+  },
+  "scripts": {
+    "buildLib": "tsc",
+    "version": "yarn buildLib"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.5",
+    "vtils": "2.42.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "axios-cookiejar-support": "^0.5.0",
+    "form-data": "^2.5.1",
+    "tough-cookie": "^3.0.1",
+    "tough-cookie-redisstore": "^0.0.4"
+  },
+  "peerDependencies": {
+    "vtils": "^2.26.0"
+  }
+}
