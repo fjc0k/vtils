@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.48.0](https://github.com/fjc0k/vtils/compare/v2.47.1...v2.48.0) (2019-10-31)
+
+
+### Features
+
+* 新增 node-request ([017eff2](https://github.com/fjc0k/vtils/commit/017eff2))
+
+
+
+
+
 ## [2.47.1](https://github.com/fjc0k/vtils/compare/v2.47.0...v2.47.1) (2019-10-21)
 
 

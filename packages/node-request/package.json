@@ -1,6 +1,6 @@
 {
   "name": "@vtils/node-request",
-  "version": "2.42.1",
+  "version": "2.48.0",
   "description": "基于 axios 封装的 node.js 网络请求库。",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
