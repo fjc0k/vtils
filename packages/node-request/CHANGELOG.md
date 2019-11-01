@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.52.0](https://github.com/fjc0k/vtils/compare/v2.51.1...v2.52.0) (2019-11-01)
+
+
+### Features
+
+* **node-request:** 新增 request 静态方法 ([b1f0dd3](https://github.com/fjc0k/vtils/commit/b1f0dd3))
+
+
+
+
+
 ## [2.51.1](https://github.com/fjc0k/vtils/compare/v2.51.0...v2.51.1) (2019-11-01)
 
 
