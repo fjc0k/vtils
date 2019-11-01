@@ -236,6 +236,25 @@ describe('静态方法', () => {
   })
   afterAll(() => server.closeServer())
 
+  test('request', async () => {
+    const getRes = await NodeRequest.request({
+      url: server.url,
+      method: 'GET',
+      headers: {
+        'x-request-get': '1',
+      },
+    })
+    expect(getRes.data).toMatchSnapshot('GET')
+    const postRes = await NodeRequest.request({
+      url: server.url,
+      method: 'POST',
+      headers: {
+        'x-request-post': '1',
+      },
+    })
+    expect(postRes.data).toMatchSnapshot('POST')
+  })
+
   test('get', async () => {
     const res = await NodeRequest.get(server.url, {
       headers: {

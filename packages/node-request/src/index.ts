@@ -77,7 +77,14 @@ export class NodeRequest {
 
   private static nodeRequest: NodeRequest
 
-  static get<T = any>(url: string, payload: Omit<INodeRequestRequestPayload, 'url' | 'method' | 'formData' | 'jsonData' | 'fileData'> = {} as any): Promise<AxiosResponse<T>> {
+  static async request<T = any>(payload: INodeRequestRequestPayload): Promise<AxiosResponse<T>> {
+    if (!NodeRequest.nodeRequest) {
+      NodeRequest.nodeRequest = new NodeRequest()
+    }
+    return NodeRequest.nodeRequest.request(payload)
+  }
+
+  static async get<T = any>(url: string, payload: Omit<INodeRequestRequestPayload, 'url' | 'method' | 'formData' | 'jsonData' | 'fileData'> = {} as any): Promise<AxiosResponse<T>> {
     if (!NodeRequest.nodeRequest) {
       NodeRequest.nodeRequest = new NodeRequest()
     }
@@ -88,7 +95,7 @@ export class NodeRequest {
     })
   }
 
-  static post<T = any>(url: string, payload: Omit<INodeRequestRequestPayload, 'url' | 'method'> = {} as any): Promise<AxiosResponse<T>> {
+  static async post<T = any>(url: string, payload: Omit<INodeRequestRequestPayload, 'url' | 'method'> = {} as any): Promise<AxiosResponse<T>> {
     if (!NodeRequest.nodeRequest) {
       NodeRequest.nodeRequest = new NodeRequest()
     }

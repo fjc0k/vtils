@@ -166,3 +166,32 @@ Object {
   "method": "POST",
 }
 `;
+
+exports[`静态方法 request: GET 1`] = `
+Object {
+  "headers": Object {
+    "accept": "application/json, text/plain, */*",
+    "connection": "close",
+    "content-type": "application/x-www-form-urlencoded",
+    "host": "localhost:4449",
+    "user-agent": "axios/0.19.0",
+    "x-request-get": "1",
+  },
+  "method": "GET",
+}
+`;
+
+exports[`静态方法 request: POST 1`] = `
+Object {
+  "headers": Object {
+    "accept": "application/json, text/plain, */*",
+    "connection": "close",
+    "content-length": "2",
+    "content-type": "application/x-www-form-urlencoded",
+    "host": "localhost:4449",
+    "user-agent": "axios/0.19.0",
+    "x-request-post": "1",
+  },
+  "method": "POST",
+}
+`;
