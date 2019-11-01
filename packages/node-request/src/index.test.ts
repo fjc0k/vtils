@@ -221,3 +221,36 @@ describe('cookie jar', () => {
     expect(secondRes.data).toMatchSnapshot('第二次请求 - 有 cookie')
   })
 })
+
+describe('静态方法', () => {
+  let server!: AsyncReturnType<typeof withServer>
+  beforeAll(async () => {
+    server = await withServer({
+      response: async (req) => {
+        return {
+          method: req.method,
+          headers: req.headers,
+        }
+      },
+    })
+  })
+  afterAll(() => server.closeServer())
+
+  test('get', async () => {
+    const res = await NodeRequest.get(server.url, {
+      headers: {
+        'x-get': '1',
+      },
+    })
+    expect(res.data).toMatchSnapshot()
+  })
+
+  test('post', async () => {
+    const res = await NodeRequest.post(server.url, {
+      headers: {
+        'x-post': '1',
+      },
+    })
+    expect(res.data).toMatchSnapshot()
+  })
+})

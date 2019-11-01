@@ -75,6 +75,30 @@ export interface INodeRequestRequestPayload {
 export class NodeRequest {
   private agent!: AxiosInstance
 
+  private static nodeRequest: NodeRequest
+
+  static get<T>(url: string, payload: Omit<INodeRequestRequestPayload, 'url' | 'method' | 'formData' | 'jsonData' | 'fileData'> = {} as any): Promise<AxiosResponse<T>> {
+    if (!NodeRequest.nodeRequest) {
+      NodeRequest.nodeRequest = new NodeRequest()
+    }
+    return NodeRequest.nodeRequest.request({
+      ...payload,
+      url: url,
+      method: 'GET',
+    })
+  }
+
+  static post<T>(url: string, payload: Omit<INodeRequestRequestPayload, 'url' | 'method'> = {} as any): Promise<AxiosResponse<T>> {
+    if (!NodeRequest.nodeRequest) {
+      NodeRequest.nodeRequest = new NodeRequest()
+    }
+    return NodeRequest.nodeRequest.request({
+      ...payload,
+      url: url,
+      method: 'POST',
+    })
+  }
+
   constructor({
     cookieJar = {} as Defined<INodeRequestOptions['cookieJar']>,
     proxy = {} as Defined<INodeRequestOptions['proxy']>,
