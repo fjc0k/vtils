@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.50.0](https://github.com/fjc0k/vtils/compare/v2.49.0...v2.50.0) (2019-11-01)
+
+
+### Features
+
+* **node-request:** responseType 支持 auto ([5e073ba](https://github.com/fjc0k/vtils/commit/5e073ba))
+
+
+
+
+
 # [2.49.0](https://github.com/fjc0k/vtils/compare/v2.48.0...v2.49.0) (2019-11-01)
 
 
