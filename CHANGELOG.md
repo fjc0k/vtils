@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.51.1](https://github.com/fjc0k/vtils/compare/v2.51.0...v2.51.1) (2019-11-01)
+
+
+### Bug Fixes
+
+* **node-request:** 完善类型 ([eef0628](https://github.com/fjc0k/vtils/commit/eef0628))
+
+
+
+
+
 # [2.51.0](https://github.com/fjc0k/vtils/compare/v2.50.0...v2.51.0) (2019-11-01)
 
 
