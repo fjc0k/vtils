@@ -1,11 +1,11 @@
 @import './maskFeedback';
 
-// 使用默认的遮罩颜色
+// 使用默认的 position
 .button {
   @include maskFeedback;
 
-  // 自定义遮罩颜色
-  &.plain {
-    @include maskFeedback(red);
+  // 自定义 position
+  &.absolute {
+    @include maskFeedback(absolute);
   }
 }

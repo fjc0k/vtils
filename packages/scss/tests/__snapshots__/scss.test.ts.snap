@@ -33,7 +33,19 @@ exports[`单测正常: _ellipsis.test.scss 1`] = `
 exports[`单测正常: _maskFeedback.test.scss 1`] = `
 ".button {
   position: relative;
+  cursor: pointer;
   user-select: none;
+}
+.button:hover::after, .button.hover::after {
+  content: \\"\\";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
 }
 .button:active::after, .button.active::after {
   content: \\"\\";
@@ -46,11 +58,12 @@ exports[`单测正常: _maskFeedback.test.scss 1`] = `
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
 }
-.button.plain {
-  position: relative;
+.button.absolute {
+  position: absolute;
+  cursor: pointer;
   user-select: none;
 }
-.button.plain:active::after, .button.plain.active::after {
+.button.absolute:hover::after, .button.absolute.hover::after {
   content: \\"\\";
   position: absolute;
   top: 0;
@@ -59,22 +72,31 @@ exports[`单测正常: _maskFeedback.test.scss 1`] = `
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: red;
+  background: rgba(0, 0, 0, 0.1);
+}
+.button.absolute:active::after, .button.absolute.active::after {
+  content: \\"\\";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
 }"
 `;
 
 exports[`单测正常: _opacityFeedback.test.scss 1`] = `
 ".button {
+  cursor: pointer;
   user-select: none;
 }
-.button:active, .button.active {
+.button:hover, .button.hover {
   opacity: 0.8;
 }
-.button.plain {
-  user-select: none;
-}
-.button.plain:active, .button.plain.active {
-  opacity: 0.1;
+.button:active, .button.active {
+  opacity: 0.6;
 }"
 `;
 
@@ -96,10 +118,23 @@ exports[`打包正常: bundle.test.scss 1`] = `
   white-space: nowrap;
   text-overflow: ellipsis;
   position: relative;
+  cursor: pointer;
   user-select: none;
+  cursor: pointer;
   user-select: none;
   width: 40px;
   height: 40px;
+}
+.demo:hover::after, .demo.hover::after {
+  content: \\"\\";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: green;
 }
 .demo:active::after, .demo.active::after {
   content: \\"\\";
@@ -111,6 +146,9 @@ exports[`打包正常: bundle.test.scss 1`] = `
   width: 100%;
   height: 100%;
   background: blue;
+}
+.demo:hover, .demo.hover {
+  opacity: 0.1;
 }
 .demo:active, .demo.active {
   opacity: 0.5;

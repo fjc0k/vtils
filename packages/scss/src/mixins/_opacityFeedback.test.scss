@@ -3,9 +3,4 @@
 // 使用默认的不透明度
 .button {
   @include opacityFeedback;
-
-  // 自定义不透明度
-  &.plain {
-    @include opacityFeedback(0.1);
-  }
 }

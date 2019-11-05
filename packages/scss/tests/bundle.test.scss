@@ -1,5 +1,7 @@
-$mixinMaskFeedbackColor: blue;
-$mixinOpacityFeedbackOpacity: 0.5;
+$mixinMaskFeedbackActiveColor: blue;
+$mixinMaskFeedbackHoverColor: green;
+$mixinOpacityFeedbackActiveOpacity: 0.5;
+$mixinOpacityFeedbackHoverOpacity: 0.1;
 
 @import '../lib/index';
 

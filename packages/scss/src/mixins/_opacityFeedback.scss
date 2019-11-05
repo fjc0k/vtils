@@ -1,11 +1,17 @@
 @import '../_variables';
 
 // 半透明反馈
-@mixin opacityFeedback($opacity: $mixinOpacityFeedbackOpacity) {
+@mixin opacityFeedback() {
+  cursor: pointer;
   user-select: none;
+
+  &:hover,
+  &.hover {
+    opacity: $mixinOpacityFeedbackHoverOpacity;
+  }
 
   &:active,
   &.active {
-    opacity: $opacity;
+    opacity: $mixinOpacityFeedbackActiveOpacity;
   }
 }
