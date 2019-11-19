@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.42.1/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.54.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -105,6 +105,7 @@ alert(shuffle([1, 2, 3, 4, 5]))
 [EasyStorageAdapterBrowser](#easystorageadapterbrowser) | [EasyStorageAdapterBrowserLocalStorage](#easystorageadapterbrowserlocalstorage) | [EasyStorageAdapterBrowserSessionStorage](#easystorageadapterbrowsersessionstorage)
 [EasyStorageAdapterMemory](#easystorageadaptermemory) | [EasyStorageAdapterWeapp](#easystorageadapterweapp) | [EasyValidator](#easyvalidator)
 [EventBus](#eventbus) | [StructuredListTransformer](#structuredlisttransformer) | [Wechat](#wechat)
+[XUrl](#xurl) |  | 
 <!-- 工具类i目录 -->
 
 ### 📦 工具类型
@@ -1710,6 +1711,12 @@ wechat.invoke('scanQRCode').then(res => {
   // => API 调用结果
 })
 ```
+
+#### XUrl
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/XUrl.ts#L4) | [API](https://fjc0k.github.io/vtils/vtils/classes/xurl.html) | [回目录](#目录)</small>
+
+将 File 转换为字符串。
 <!-- 工具类i内容 -->
 
 ### 📦 工具类型

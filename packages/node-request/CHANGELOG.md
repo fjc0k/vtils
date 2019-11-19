@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.54.0](https://github.com/fjc0k/vtils/compare/v2.53.0...v2.54.0) (2019-11-19)
+
+**Note:** Version bump only for package @vtils/node-request
+
+
+
+
+
 # [2.52.0](https://github.com/fjc0k/vtils/compare/v2.51.1...v2.52.0) (2019-11-01)
 
 

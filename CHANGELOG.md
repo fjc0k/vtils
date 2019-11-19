@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.54.0](https://github.com/fjc0k/vtils/compare/v2.53.0...v2.54.0) (2019-11-19)
+
+
+### Features
+
+* **vtils:** 新增 XUrl ([6a2b103](https://github.com/fjc0k/vtils/commit/6a2b103))
+
+
+
+
+
 # [2.53.0](https://github.com/fjc0k/vtils/compare/v2.52.0...v2.53.0) (2019-11-05)
 
 
