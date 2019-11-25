@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.54.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.55.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -1714,7 +1714,7 @@ wechat.invoke('scanQRCode').then(res => {
 
 #### XUrl
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/XUrl.ts#L4) | [API](https://fjc0k.github.io/vtils/vtils/classes/xurl.html) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/XUrl.ts#L6) | [API](https://fjc0k.github.io/vtils/vtils/classes/xurl.html) | [回目录](#目录)</small>
 
 将 File 转换为字符串。
 <!-- 工具类i内容 -->
