@@ -26,9 +26,36 @@ Object {
 exports[`XUrl extractUrl 1`] = `"http://localhost:56384"`;
 
 exports[`XUrl generate 1`] = `
-"http://localhost:56384
-=^=^=^=^=
+"٦ᄑXUrl㌳ঙ
+http://localhost:56384
 {\\"name\\":\\"test.txt\\",\\"size\\":5,\\"type\\":\\"text/plain\\",\\"lastModified\\":1574155444339}"
+`;
+
+exports[`XUrl transform 1`] = `
+Object {
+  "icon": "url://ok",
+  "id": 1,
+  "title": "hello",
+  "users": Array [
+    Object {
+      "avatar": "url://ok",
+      "id": 2,
+    },
+    Object {
+      "avatar": "url://ok",
+      "id": 3,
+    },
+    Object {
+      "albums": Array [
+        "url://ok",
+        "url://ok",
+        "url://ok",
+      ],
+      "avatar": "url://ok",
+      "id": 4,
+    },
+  ],
+}
 `;
 
 exports[`XUrl 正常的 URL 1`] = `

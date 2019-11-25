@@ -78,4 +78,29 @@ describe('XUrl', () => {
   test('自定义的 URL', async () => {
     expect(await XUrl.extract(['hello'])).toMatchSnapshot()
   })
+
+  test('transform', async () => {
+    const xUrl = XUrl.generate(testFile)
+    const data = {
+      id: 1,
+      title: 'hello',
+      icon: xUrl,
+      users: [
+        {
+          id: 2,
+          avatar: xUrl,
+        },
+        {
+          id: 3,
+          avatar: xUrl,
+        },
+        {
+          id: 4,
+          avatar: xUrl,
+          albums: [xUrl, xUrl, xUrl],
+        },
+      ],
+    } as const
+    expect(await XUrl.transform(data, async () => 'url://ok')).toMatchSnapshot()
+  })
 })
