@@ -54,7 +54,7 @@ export class XUrl {
       .all([
         Promise.resolve(XUrl.extractUrl(url)),
         XUrl.extractFile(url),
-      ])
+      ] as const)
       .then(([url, file]) => ({url, file}))
   }
 

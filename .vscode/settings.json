@@ -1,7 +1,6 @@
 {
   "eslint.enable": true,
   "eslint.nodePath": "./node_modules",
-  "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
   "eslint.run": "onSave",
   "eslint.options": {
@@ -12,16 +11,14 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
+    "typescript",
+    "typescriptreact"
   ],
   "files.associations": {
     "*.json": "jsonc"
-  }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
