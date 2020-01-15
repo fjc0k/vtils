@@ -50,8 +50,7 @@
     "qs": "^6.7.0",
     "rollup-plugin-typescript2": "^0.21.1",
     "shelljs": "^0.8.3",
-    "ts-node": "^8.0.2",
-    "typedoc": "^0.15.0-0",
-    "typescript": "^3.4.5"
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.15.0-0"
   }
 }

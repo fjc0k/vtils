@@ -51,10 +51,12 @@ export class XUrl {
 
   static extract<TUrl>(url: TUrl): Promise<{ url: TUrl, file: File | undefined }> {
     return Promise
-      .all([
+      /* eslint-disable */
+      .all<TUrl, File | undefined>([
         Promise.resolve(XUrl.extractUrl(url)),
         XUrl.extractFile(url),
-      ] as const)
+      ])
+      /* eslint-enable */
       .then(([url, file]) => ({url, file}))
   }
 
