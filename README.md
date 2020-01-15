@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.55.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.56.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -93,7 +93,7 @@ alert(shuffle([1, 2, 3, 4, 5]))
 [roundDown](#rounddown) | [roundUp](#roundup) | [safeGet](#safeget) | [sample](#sample)
 [sequential](#sequential) | [shuffle](#shuffle) | [startsWith](#startswith) | [sum](#sum)
 [sumBy](#sumby) | [throttle](#throttle) | [times](#times) | [tryGet](#tryget)
-[unique](#unique) | [values](#values) | [wait](#wait) | 
+[unique](#unique) | [uniqueBy](#uniqueby) | [values](#values) | [wait](#wait)
 <!-- 工具函数i目录 -->
 
 ### 📦 工具类
@@ -1527,6 +1527,16 @@ tryGet(() => obj.x.y) // => undefined
 
 ```ts
 unique([1, 2, 1, 3]) // => [1, 2, 3]
+```
+
+#### uniqueBy
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/unique.ts#L34) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#uniqueby) | [回目录](#目录)</small>
+
+通过 `iteratee` 返回的值将给定的数组去重后返回。
+
+```ts
+uniqueBy([1, 2, 1, 3], item => item < 3) // => [1, 3]
 ```
 
 #### values

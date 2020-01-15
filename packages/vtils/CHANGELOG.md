@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.56.0](https://github.com/fjc0k/vtils/compare/v2.55.0...v2.56.0) (2020-01-15)
+
+
+### Bug Fixes
+
+* **XUrl:** 解决 extract 的类型问题 ([594c503](https://github.com/fjc0k/vtils/commit/594c503))
+
+
+### Features
+
+* 新增 uniqueBy ([32613ae](https://github.com/fjc0k/vtils/commit/32613ae))
+
+
+
+
+
 # [2.55.0](https://github.com/fjc0k/vtils/compare/v2.54.0...v2.55.0) (2019-11-25)
 
 

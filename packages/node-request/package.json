@@ -1,6 +1,6 @@
 {
   "name": "@vtils/node-request",
-  "version": "2.55.0",
+  "version": "2.56.0",
   "description": "基于 axios 封装的 node.js 网络请求库。",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/mime-types": "^2.1.0",
     "typescript": "^3.4.5",
-    "vtils": "2.55.0"
+    "vtils": "2.56.0"
   },
   "dependencies": {
     "axios": "^0.19.0",
