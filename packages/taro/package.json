@@ -1,6 +1,6 @@
 {
   "name": "@vtils/taro",
-  "version": "2.56.0",
+  "version": "2.57.0",
   "description": "vtils 在 Taro 中的应用。",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -55,14 +55,14 @@
     "ts-node": "^8.0.2",
     "typedoc": "^0.15.0-0",
     "typescript": "^3.4.5",
-    "vtils": "2.56.0"
+    "vtils": "2.57.0"
   },
   "peerDependencies": {
     "@tarojs/taro": "^1.3.19",
     "vtils": "^2.26.0"
   },
   "dependencies": {
-    "@vtils/react": "2.56.0",
+    "@vtils/react": "2.57.0",
     "react-use": "^12.2.2"
   }
 }
