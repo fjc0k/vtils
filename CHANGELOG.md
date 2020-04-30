@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.58.0](https://github.com/fjc0k/vtils/compare/v2.57.0...v2.58.0) (2020-04-30)
+
+
+### Features
+
+* 新增 move ([f5c6516](https://github.com/fjc0k/vtils/commit/f5c6516))
+* 新增 swap ([42e1614](https://github.com/fjc0k/vtils/commit/42e1614))
+
+
+
+
+
 # [2.57.0](https://github.com/fjc0k/vtils/compare/v2.56.0...v2.57.0) (2020-01-19)
 
 

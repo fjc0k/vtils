@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.57.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.58.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -85,16 +85,16 @@ alert(shuffle([1, 2, 3, 4, 5]))
 [isPromiseLike](#ispromiselike) | [isRegExp](#isregexp) | [isString](#isstring) | [isUndefined](#isundefined)
 [isUrl](#isurl) | [jestExpectEqual](#jestexpectequal) | [keyBy](#keyby) | [keys](#keys)
 [last](#last) | [loadResource](#loadresource) | [loop](#loop) | [mapValues](#mapvalues)
-[memoize](#memoize) | [noop](#noop) | [omit](#omit) | [orderBy](#orderby)
-[padEnd](#padend) | [padStart](#padstart) | [parallel](#parallel) | [parseCSSValue](#parsecssvalue)
-[parseURIQuery](#parseuriquery) | [partial](#partial) | [partialBy](#partialby) | [pick](#pick)
-[placeKitten](#placekitten) | [pluck](#pluck) | [randomString](#randomstring) | [range](#range)
-[remove](#remove) | [removeByValue](#removebyvalue) | [repeat](#repeat) | [result](#result)
-[round](#round) | [roundDown](#rounddown) | [roundUp](#roundup) | [safeGet](#safeget)
-[sample](#sample) | [sequential](#sequential) | [shuffle](#shuffle) | [startsWith](#startswith)
-[sum](#sum) | [sumBy](#sumby) | [throttle](#throttle) | [times](#times)
-[tryGet](#tryget) | [unique](#unique) | [uniqueBy](#uniqueby) | [values](#values)
-[wait](#wait) |  |  | 
+[memoize](#memoize) | [move](#move) | [noop](#noop) | [omit](#omit)
+[orderBy](#orderby) | [padEnd](#padend) | [padStart](#padstart) | [parallel](#parallel)
+[parseCSSValue](#parsecssvalue) | [parseURIQuery](#parseuriquery) | [partial](#partial) | [partialBy](#partialby)
+[pick](#pick) | [placeKitten](#placekitten) | [pluck](#pluck) | [randomString](#randomstring)
+[range](#range) | [remove](#remove) | [removeByValue](#removebyvalue) | [repeat](#repeat)
+[result](#result) | [round](#round) | [roundDown](#rounddown) | [roundUp](#roundup)
+[safeGet](#safeget) | [sample](#sample) | [sequential](#sequential) | [shuffle](#shuffle)
+[startsWith](#startswith) | [sum](#sum) | [sumBy](#sumby) | [swap](#swap)
+[throttle](#throttle) | [times](#times) | [tryGet](#tryget) | [unique](#unique)
+[uniqueBy](#uniqueby) | [values](#values) | [wait](#wait) | 
 <!-- 工具函数i目录 -->
 
 ### 📦 工具类
@@ -1092,6 +1092,16 @@ fn() // => 0
 fn() // => 0
 ```
 
+#### move
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/move.ts#L13) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#move) | [回目录](#目录)</small>
+
+原地移动数组中的元素。
+
+```ts
+move([1, 2, 3], 0, 1) // => [2, 1, 3]
+```
+
 #### noop
 
 <small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/noop.ts#L9) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#noop) | [回目录](#目录)</small>
@@ -1466,6 +1476,16 @@ sumBy(
   item => item.count,
 )
 // => 6
+```
+
+#### swap
+
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/swap.ts#L13) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#swap) | [回目录](#目录)</small>
+
+原地交换数组中的两个元素。
+
+```ts
+swap([1, 2, 3], 0, 2) // => [3, 2, 1]
 ```
 
 #### throttle
