@@ -31,6 +31,20 @@ test('只传入字符串时将根据后缀判断当作何种资源加载', async
     styleEl.tagName,
     'LINK',
   )
+
+  // 视频后缀
+  const [videoEl] = await loadResource('https://foo.bar/video.mp4')
+  jestExpectEqual(
+    videoEl.tagName,
+    'VIDEO',
+  )
+
+  // 音频后缀
+  const [audioEl] = await loadResource('https://foo.bar/audio.mp3')
+  jestExpectEqual(
+    audioEl.tagName,
+    'AUDIO',
+  )
 })
 
 test('可传入 LoadResourceUrl 指定加载的资源类型', async () => {
@@ -59,6 +73,24 @@ test('可传入 LoadResourceUrl 指定加载的资源类型', async () => {
   jestExpectEqual(
     imgEl.tagName,
     'IMG',
+  )
+
+  const [videoEl] = await loadResource({
+    type: LoadResourceUrlType.video,
+    path: 'https://foo.bar/video',
+  })
+  jestExpectEqual(
+    videoEl.tagName,
+    'VIDEO',
+  )
+
+  const [audioEl] = await loadResource({
+    type: LoadResourceUrlType.audio,
+    path: 'https://foo.bar/audio',
+  })
+  jestExpectEqual(
+    audioEl.tagName,
+    'AUDIO',
   )
 })
 

@@ -8,6 +8,8 @@ export enum LoadResourceUrlType {
   css = 'css',
   js = 'js',
   img = 'img',
+  video = 'video',
+  audio = 'audio'
 }
 
 /**
@@ -22,9 +24,9 @@ export interface LoadResourceUrl {
   alternatePath?: string,
 }
 
-function _loadResource(url: LoadResourceUrl): Promise<HTMLScriptElement | HTMLLinkElement | HTMLImageElement> {
+function _loadResource(url: LoadResourceUrl): Promise<HTMLScriptElement | HTMLLinkElement | HTMLImageElement | HTMLVideoElement | HTMLAudioElement> {
   return new Promise((resolve, reject) => {
-    let el!: HTMLScriptElement | HTMLLinkElement | HTMLImageElement
+    let el!: HTMLScriptElement | HTMLLinkElement | HTMLImageElement | HTMLVideoElement | HTMLAudioElement
     switch (url.type) {
       case LoadResourceUrlType.js:
         el = document.createElement('script')
@@ -37,6 +39,14 @@ function _loadResource(url: LoadResourceUrl): Promise<HTMLScriptElement | HTMLLi
         break
       case LoadResourceUrlType.img:
         el = document.createElement('img')
+        el.src = url.path
+        break
+      case LoadResourceUrlType.video:
+        el = document.createElement('video')
+        el.src = url.path
+        break
+      case LoadResourceUrlType.audio:
+        el = document.createElement('audio')
         el.src = url.path
         break
       /* istanbul ignore next */
@@ -79,7 +89,7 @@ function _loadResource(url: LoadResourceUrl): Promise<HTMLScriptElement | HTMLLi
  * })
  * ```
  */
-export function loadResource(url: string | LoadResourceUrl | Array<string | LoadResourceUrl>): Promise<Array<HTMLScriptElement | HTMLLinkElement | HTMLImageElement>> {
+export function loadResource(url: string | LoadResourceUrl | Array<string | LoadResourceUrl>): Promise<Array<HTMLScriptElement | HTMLLinkElement | HTMLImageElement | HTMLVideoElement | HTMLAudioElement>> {
   const urls: LoadResourceUrl[] = castArray(url)
     .map(item => {
       return !isString(item) ? item : {
@@ -88,7 +98,11 @@ export function loadResource(url: string | LoadResourceUrl | Array<string | Load
             ? LoadResourceUrlType.css
             : /\.(png|jpg|jpeg|gif|svg)$/i.test(item)
               ? LoadResourceUrlType.img
-              : LoadResourceUrlType.js
+              : /\.(mp4|mov|m4v|3gp|avi|m3u8|webm)$/i.test(item)
+                ? LoadResourceUrlType.video
+                : /\.(m4a|aac|mp3|wav)$/i.test(item)
+                  ? LoadResourceUrlType.audio
+                  : LoadResourceUrlType.js
         ),
         path: item,
       }
