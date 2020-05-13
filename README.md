@@ -35,7 +35,7 @@ npm i vtils --save
 你也可通过 CDN 安装，然后使用全局变量 `vtils` 访问相关工具：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vtils@2.58.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vtils@2.59.0/lib/index.umd.min.js" crossorigin="anonymous"></script>
 
 <script>
   if (vtils.inBrowser()) {
@@ -1032,7 +1032,7 @@ last([1, 2, 3]) // => 3
 
 #### loadResource
 
-<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/loadResource.ts#L82) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#loadresource) | [回目录](#目录)</small>
+<small>[源码](https://github.com/fjc0k/vtils/blob/master/packages/vtils/src/loadResource.ts#L92) | [API](https://fjc0k.github.io/vtils/vtils/globals.html#loadresource) | [回目录](#目录)</small>
 
 加载图片、代码、样式等资源。
 
