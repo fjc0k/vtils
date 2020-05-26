@@ -1,7 +1,0 @@
-// @index(['./**/*.scss', '!./**/*.test.scss'], (pp, cc, {isFile}) => `@import '${isFile ? pp.path : pp.path+'/_index'}';`)
-@import './_variables';
-@import './mixins/_ellipsis';
-@import './mixins/_maskFeedback';
-@import './mixins/_opacityFeedback';
-@import './mixins/_size';
-// @endindex

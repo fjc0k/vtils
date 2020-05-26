@@ -1,35 +1,43 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "bootstrap": "lerna bootstrap && lerna exec --scope vtils -- yarn buildLib && lerna link",
-    "fix": "yarn lint --fix",
-    "lint": "eslint packages/**/*.ts --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint",
-    "test": "jest --coverage",
-    "release": "yarn lint && yarn test && lerna publish --conventional-commits --conventional-graduate --force-publish=* --exact --skip-temp-tag",
-    "releaseBeta": "yarn lint && yarn test && lerna publish --conventional-commits --force-publish=* --exact --skip-temp-tag --preid=beta --npm-tag=beta"
+  "name": "vtils",
+  "version": "3.0.0",
+  "description": "",
+  "homepage": "https://github.com/fjc0k/vtils#readme",
+  "bugs": {
+    "url": "https://github.com/fjc0k/vtils/issues"
   },
-  "jest": {
-    "preset": "ts-jest",
-    "collectCoverageFrom": [
-      "packages/*/src/**/*.ts",
-      "!packages/*/src/**/index.ts"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjc0k/vtils.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,less,scss,sass,html,htm,vue,yml,yaml,json,md}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
-  "eslintConfig": {
-    "root": true,
-    "extends": "io"
-  },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "codecov": "^3.1.0",
-    "eslint": "^5.16.0",
-    "eslint-config-io": "^0.8.1",
-    "jest": "^24.9.0",
-    "lerna": "^3.16.4",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.7.4"
+    "codecov": "^3",
+    "eslint": "^6",
+    "haoma": "^1.13.0",
+    "husky": "^4",
+    "jest": "^25",
+    "lint-staged": "^10",
+    "prettier": "^2",
+    "typescript": "^3"
   }
 }
