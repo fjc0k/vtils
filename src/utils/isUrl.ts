@@ -1,6 +1,11 @@
 /**
  * 检测传入值是否是 URL。
  *
+ * ```
+ * isUrl('foo.bar') // => false
+ * isUrl('http://foo.bar') // => true
+ * ```
+ *
  * @param value 要检测的值
  * @returns 返回检测结果
  */
