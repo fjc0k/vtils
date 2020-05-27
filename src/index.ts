@@ -6,4 +6,5 @@ export * from './utils/EventBus'
 export * from './utils/indent'
 export * from './utils/isPossibleChineseMobilePhoneNumber'
 export * from './utils/isUrl'
+export * from './utils/wait'
 // @endindex
