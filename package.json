@@ -36,7 +36,7 @@
     "generate-index": "vgis ./src/index.ts",
     "generate-util": "ts-node -T -P ./tsconfig.scripts.json ./scripts/generateUtil.ts",
     "prepublishOnly": "npm run build",
-    "release": "standard-version -a && npm run pupu",
+    "release": "standard-version -a && npm run release-pupu",
     "release-beta": "standard-version -a --prerelease beta && npm run release-pupu -- --tag next",
     "release-major": "standard-version -a --release-as major && npm run release-pupu",
     "release-major-beta": "standard-version -a --release-as major --prerelease beta && npm run release-pupu -- --tag next",
