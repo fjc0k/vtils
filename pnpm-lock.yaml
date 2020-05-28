@@ -1,6 +1,5 @@
 dependencies:
   '@types/lodash-es': registry.npm.taobao.org/@types/lodash-es/4.17.3
-  lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
 devDependencies:
   '@rollup/plugin-node-resolve': registry.npm.taobao.org/@rollup/plugin-node-resolve/8.0.0_rollup@2.11.0
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
@@ -14,6 +13,7 @@ devDependencies:
   husky: registry.npm.taobao.org/husky/4.2.5
   jest: registry.npm.taobao.org/jest/26.0.1
   lint-staged: registry.npm.taobao.org/lint-staged/10.2.6
+  lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
   prettier: registry.npm.taobao.org/prettier/2.0.5
   prompts: registry.npm.taobao.org/prompts/2.3.2
@@ -7631,7 +7631,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/locate-path/download/locate-path-5.0.0.tgz'
     version: 5.0.0
   registry.npm.taobao.org/lodash-es/4.17.15:
-    dev: false
+    dev: true
     name: lodash-es
     resolution:
       integrity: sha1-Ib2Wg5NUQS8j16EDQOXqxu5FXXg=

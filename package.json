@@ -55,8 +55,7 @@
     ]
   },
   "dependencies": {
-    "@types/lodash-es": "^4.17.3",
-    "lodash-es": "^4.17.15"
+    "@types/lodash-es": "^4.17.3"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^8.0.0",
@@ -71,6 +70,7 @@
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lint-staged": "^10.2.6",
+    "lodash-es": "^4.17.15",
     "open-cli": "^6.0.1",
     "prettier": "^2.0.5",
     "prompts": "^2.3.2",

@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "ES5",
     "module": "ESNext",
-    "declaration": false,
+    "declaration": true,
     "sourceMap": true,
     "outDir": "./node_modules/.cache/build"
   },

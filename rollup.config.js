@@ -1,3 +1,4 @@
+import dts from 'rollup-plugin-dts'
 import pkg from './package.json'
 import resolve from '@rollup/plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
@@ -9,7 +10,7 @@ const defineConfig = config => config
 
 /**
  * @param {import('rollup').ModuleFormat[]} formats
- * @param {(format: import('rollup').ModuleFormat) => import('rollup').OutputOptions[]} fn
+ * @param {(format: import('rollup').ModuleFormat) => import('rollup').OutputOptions} fn
  */
 const defineOutput = (formats, fn) => formats.map(format => fn(format))
 
@@ -33,5 +34,19 @@ export default [
       sourcemap: true,
     })),
     plugins: [terser()],
+  }),
+  defineConfig({
+    input: './node_modules/.cache/build/index.d.ts',
+    output: defineOutput(['esm'], format => ({
+      format: format,
+      file: './lib/index.d.ts',
+    })),
+    external: ['lodash-es'],
+    plugins: [
+      resolve({
+        extensions: ['.d.ts'],
+      }),
+      dts(),
+    ],
   }),
 ]
