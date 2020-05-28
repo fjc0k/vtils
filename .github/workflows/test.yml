@@ -17,5 +17,6 @@ jobs:
           npx pnpm install
           npm run build
           npm run test-with-coverage
+          npx codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
