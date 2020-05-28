@@ -1,40 +1,37 @@
-import dts from 'rollup-plugin-dts'
 import pkg from './package.json'
 import resolve from '@rollup/plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
 
 /**
- * @param {'cjs' | 'esm' | 'umd' | 'dts'} format
- * @param {boolean} minify
- * @returns {import('rollup').RollupOptions}
+ * @param {import('rollup').RollupOptions} config
  */
-const getConfig = (format, minify) => ({
-  input:
-    format === 'dts'
-      ? './src/index.ts'
-      : './node_modules/.cache/build/index.js',
-  output: {
-    dir: './lib',
-    name: pkg.name,
-    format: format === 'dts' ? 'es' : format,
-    sourcemap: format !== 'dts',
-    entryFileNames:
-      format === 'dts'
-        ? 'index.d.ts'
-        : `index${format === 'cjs' ? '' : `.${format}`}${
-            minify ? '.min' : ''
-          }.js`,
-  },
-  treeshake: true,
-  plugins: format === 'dts' ? [dts()] : [resolve(), minify && terser()],
-})
+const defineConfig = config => config
+
+/**
+ * @param {import('rollup').ModuleFormat[]} formats
+ * @param {(format: import('rollup').ModuleFormat) => import('rollup').OutputOptions[]} fn
+ */
+const defineOutput = (formats, fn) => formats.map(format => fn(format))
 
 export default [
-  getConfig('esm'),
-  getConfig('esm', true),
-  getConfig('cjs'),
-  getConfig('cjs', true),
-  getConfig('umd'),
-  getConfig('umd', true),
-  getConfig('dts'),
+  defineConfig({
+    input: './node_modules/.cache/build/index.js',
+    output: defineOutput(['esm', 'cjs', 'umd'], format => ({
+      name: pkg.name,
+      format: format,
+      file: `./lib/index${format === 'cjs' ? '' : `.${format}`}.js`,
+      sourcemap: true,
+    })),
+    plugins: [resolve()],
+  }),
+  defineConfig({
+    input: './lib/index.esm.js',
+    output: defineOutput(['esm', 'cjs', 'umd'], format => ({
+      name: pkg.name,
+      format: format,
+      file: `./lib/index${format === 'cjs' ? '' : `.${format}`}.min.js`,
+      sourcemap: true,
+    })),
+    plugins: [terser()],
+  }),
 ]
