@@ -1,7 +1,7 @@
 {
   "name": "vtils",
   "version": "3.0.0",
-  "description": "An extended JavaScript utility library based on Lodash.",
+  "description": "A business-oriented JavaScript utility library based on Lodash.",
   "keywords": [
     "util",
     "utils",
@@ -31,14 +31,20 @@
     "lib"
   ],
   "scripts": {
-    "prebuild": "shx rm -rf ./node_modules/.cache/build && tsc -p tsconfig.build.json",
+    "prebuild": "shx rm -rf ./node_modules/.cache/build && tsc -p tsconfig.build.json && npm run generate-index",
     "build": "shx rm -rf ./lib && rollup -c",
     "generate-index": "vgis ./src/index.ts",
     "generate-util": "ts-node -T -P ./tsconfig.scripts.json ./scripts/generateUtil.ts",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version -a && npm run pupu",
+    "release-beta": "standard-version -a --prerelease beta && npm run release-pupu -- --tag next",
+    "release-major": "standard-version -a --release-as major && npm run release-pupu",
+    "release-major-beta": "standard-version -a --release-as major --prerelease beta && npm run release-pupu -- --tag next",
+    "release-pupu": "git push --follow-tags origin v3 && npm publish",
     "test": "jest",
-    "test-coverage": "jest --coverage",
-    "test-coverage-open": "jest --coverage && open-cli ./coverage/lcov-report/index.html",
-    "test-update-snapshot": "jest --updateSnapshot"
+    "test-update-snapshot": "jest --updateSnapshot",
+    "test-with-coverage": "jest --coverage",
+    "test-with-coverage-open": "jest --coverage && open-cli ./coverage/lcov-report/index.html"
   },
   "husky": {
     "hooks": {
@@ -78,6 +84,7 @@
     "rollup-plugin-dts": "^1.4.7",
     "rollup-plugin-terser": "^6.1.0",
     "shx": "^0.3.2",
+    "standard-version": "^8.0.0",
     "ts-node": "^8.10.1",
     "typescript": "^3.9.3",
     "vscode-generate-index-standalone": "^1.3.0"

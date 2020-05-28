@@ -6,21 +6,28 @@ A business-oriented JavaScript utility library based on Lodash.
 
 <!-- TOC depthFrom:2 -->
 
-- [Why vtils?](#why-vtils)
+- [Features](#features)
 - [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
 <!-- /TOC -->
 
-## Why vtils?
+## Features
 
-- Based on [Lodash](https://lodash.com/), all its modules are re-exported.
-- Added many utilities, especially for Chinese developers.
-- Available in a variety of module formats: `ESModule(esm)`, `CommonJS(cjs)`, `UMD(umd)`.
-- Native [TypeScript](https://www.typescriptlang.org/) & [tree-shaking](https://webpack.js.org/guides/tree-shaking/) support.
+- **🧰 Lodash-based**
+
+  `vtils` based on [Lodash](https://lodash.com/), all its modules are re-exported.
+
+- **🛠️ Business-oriented**
+
+  `vtils` added many utilities to meet daily business development needs, especially for Chinese developers.
+
+- **🌈 Modern**
+
+  `vtils` support [TypeScript](https://www.typescriptlang.org/) & [tree-shaking](https://webpack.js.org/guides/tree-shaking/) natively.
 
 ## Installation
-
-Using package managers to install `vtils`:
 
 ```bash
 # npm
@@ -33,8 +40,12 @@ yarn add vtils
 pnpm add vtils
 ```
 
-Importing utilities from `vtils`:
+## Usage
 
 ```ts
 import { wait, isNumber, EventBus } from 'vtils'
 ```
+
+## License
+
+Jay Fong (c) MIT
