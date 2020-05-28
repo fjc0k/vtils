@@ -16,7 +16,7 @@ export class EventBus<TEvents extends Record<string, (...args: any[]) => any>> {
   /**
    * 回调列表。
    */
-  #callbacks: {
+  private callbacks: {
     [Key in keyof TEvents]: Array<TEvents[Key]>
   } = Object.create(null)
 
@@ -31,12 +31,12 @@ export class EventBus<TEvents extends Record<string, (...args: any[]) => any>> {
     eventName: TName,
     callback: TEvents[TName],
   ): () => any {
-    if (!this.#callbacks[eventName]) {
-      this.#callbacks[eventName] = []
+    if (!this.callbacks[eventName]) {
+      this.callbacks[eventName] = []
     }
-    const index = this.#callbacks[eventName].indexOf(callback)
+    const index = this.callbacks[eventName].indexOf(callback)
     if (index === -1) {
-      this.#callbacks[eventName].push(callback)
+      this.callbacks[eventName].push(callback)
     }
     return () => this.off(eventName, callback)
   }
@@ -69,13 +69,13 @@ export class EventBus<TEvents extends Record<string, (...args: any[]) => any>> {
     eventName: TName,
     callback?: TEvents[TName],
   ): void {
-    if (this.#callbacks[eventName] && callback) {
-      const index = this.#callbacks[eventName].indexOf(callback)
+    if (this.callbacks[eventName] && callback) {
+      const index = this.callbacks[eventName].indexOf(callback)
       if (index > -1) {
-        this.#callbacks[eventName].splice(index, 1)
+        this.callbacks[eventName].splice(index, 1)
       }
     } else {
-      delete this.#callbacks[eventName]
+      delete this.callbacks[eventName]
     }
   }
 
@@ -90,7 +90,7 @@ export class EventBus<TEvents extends Record<string, (...args: any[]) => any>> {
     eventName: TName,
     ...args: Parameters<TEvents[TName]>
   ): Array<ReturnType<TEvents[TName]>> {
-    return (this.#callbacks[eventName] || []).map(callback => {
+    return (this.callbacks[eventName] || []).map(callback => {
       return callback(...args)
     })
   }

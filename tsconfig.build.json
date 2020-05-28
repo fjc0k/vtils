@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "declaration": false,
+    "sourceMap": true,
+    "outDir": "./node_modules/.cache/build"
+  },
+  "include": ["src/index.ts"]
+}

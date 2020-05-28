@@ -1,7 +1,12 @@
 {
   "name": "vtils",
   "version": "3.0.0",
-  "description": "",
+  "description": "An extended JavaScript utility library based on Lodash.",
+  "keywords": [
+    "util",
+    "utils",
+    "lodash"
+  ],
   "homepage": "https://github.com/fjc0k/vtils#readme",
   "bugs": {
     "url": "https://github.com/fjc0k/vtils/issues"
@@ -10,10 +15,24 @@
     "type": "git",
     "url": "git+https://github.com/fjc0k/vtils.git"
   },
-  "license": "ISC",
-  "author": "",
-  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Jay Fong",
+    "email": "fjc0kb@gmail.com",
+    "url": "https://github.com/fjc0k"
+  },
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "jsdelivr": "lib/index.umd.min.js",
+  "unpkg": "lib/index.umd.min.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
+    "prebuild": "shx rm -rf ./node_modules/.cache/build && tsc -p tsconfig.build.json",
+    "build": "shx rm -rf ./lib && rollup -c",
     "generate-index": "vgis ./src/index.ts",
     "generate-util": "ts-node -T -P ./tsconfig.scripts.json ./scripts/generateUtil.ts",
     "test": "jest",
@@ -40,9 +59,11 @@
     "lodash-es": "^4.17.15"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^8.0.0",
     "@types/fs-extra": "^9.0.1",
     "@types/prompts": "^2.0.8",
     "codecov": "^3.7.0",
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "execa": "^4.0.2",
     "fs-extra": "^9.0.0",
@@ -53,6 +74,10 @@
     "open-cli": "^6.0.1",
     "prettier": "^2.0.5",
     "prompts": "^2.3.2",
+    "rollup": "^2.11.0",
+    "rollup-plugin-dts": "^1.4.7",
+    "rollup-plugin-terser": "^6.1.0",
+    "shx": "^0.3.2",
     "ts-node": "^8.10.1",
     "typescript": "^3.9.3",
     "vscode-generate-index-standalone": "^1.3.0"
