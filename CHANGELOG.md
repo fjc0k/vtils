@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1-beta.1](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.0...v3.0.1-beta.1) (2020-05-29)
+
+### Features
+
+- add isChineseIDCardNumber ([bad0b2b](https://github.com/fjc0k/vtils/commit/bad0b2b3c6bf99ae8d066177770f32b72974b3d1))
+- support deno ([9a38de3](https://github.com/fjc0k/vtils/commit/9a38de33686b7f2cdbd250a6d0342c9621b4aaea))
+
 ### [3.0.1-beta.0](https://github.com/fjc0k/vtils/compare/v2.59.0...v3.0.1-beta.0) (2020-05-28)
 
 ### Features
