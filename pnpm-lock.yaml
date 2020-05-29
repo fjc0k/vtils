@@ -1,6 +1,10 @@
 dependencies:
   '@types/lodash-es': registry.npm.taobao.org/@types/lodash-es/4.17.3
+  lodash: registry.npm.taobao.org/lodash/4.17.15
+  lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
+  tslib: registry.npm.taobao.org/tslib/2.0.0
 devDependencies:
+  '@rollup/plugin-alias': registry.npm.taobao.org/@rollup/plugin-alias/3.1.0_rollup@2.11.0
   '@rollup/plugin-node-resolve': registry.npm.taobao.org/@rollup/plugin-node-resolve/8.0.0_rollup@2.11.0
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.8
@@ -14,7 +18,6 @@ devDependencies:
   husky: registry.npm.taobao.org/husky/4.2.5
   jest: registry.npm.taobao.org/jest/26.0.1
   lint-staged: registry.npm.taobao.org/lint-staged/10.2.6
-  lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
   prettier: registry.npm.taobao.org/prettier/2.0.5
   prompts: registry.npm.taobao.org/prompts/2.3.2
@@ -1978,6 +1981,22 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@nodelib/fs.walk/download/@nodelib/fs.walk-1.2.4.tgz'
     version: 1.2.4
+  registry.npm.taobao.org/@rollup/plugin-alias/3.1.0_rollup@2.11.0:
+    dependencies:
+      rollup: registry.npm.taobao.org/rollup/2.11.0
+      slash: registry.npm.taobao.org/slash/3.0.0
+    dev: true
+    engines:
+      node: '>=8.0.0'
+    id: registry.npm.taobao.org/@rollup/plugin-alias/3.1.0
+    name: '@rollup/plugin-alias'
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    resolution:
+      integrity: sha1-T3vJ0V4DDXXakiSqpRBRKcVKP/0=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@rollup/plugin-alias/download/@rollup/plugin-alias-3.1.0.tgz'
+    version: 3.1.0
   registry.npm.taobao.org/@rollup/plugin-node-resolve/8.0.0_rollup@2.11.0:
     dependencies:
       '@rollup/pluginutils': registry.npm.taobao.org/@rollup/pluginutils/3.0.10_rollup@2.11.0
@@ -8358,7 +8377,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/locate-path/download/locate-path-5.0.0.tgz'
     version: 5.0.0
   registry.npm.taobao.org/lodash-es/4.17.15:
-    dev: true
+    dev: false
     name: lodash-es
     resolution:
       integrity: sha1-Ib2Wg5NUQS8j16EDQOXqxu5FXXg=
@@ -8419,7 +8438,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/lodash.unescape/download/lodash.unescape-4.0.1.tgz'
     version: 4.0.1
   registry.npm.taobao.org/lodash/4.17.15:
-    dev: true
     name: lodash
     resolution:
       integrity: sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
@@ -12098,6 +12116,14 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/tslib/download/tslib-1.13.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.13.0.tgz'
     version: 1.13.0
+  registry.npm.taobao.org/tslib/2.0.0:
+    dev: false
+    name: tslib
+    resolution:
+      integrity: sha1-GNE/wtzgQFHiDwdMyDh/2Aic5PM=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/tslib/download/tslib-2.0.0.tgz'
+    version: 2.0.0
   registry.npm.taobao.org/tsutils/3.17.1_typescript@3.9.3:
     dependencies:
       tslib: registry.npm.taobao.org/tslib/1.13.0
@@ -12798,6 +12824,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/yn/download/yn-3.1.1.tgz'
     version: 3.1.1
 specifiers:
+  '@rollup/plugin-alias': ^3.1.0
   '@rollup/plugin-node-resolve': ^8.0.0
   '@types/fs-extra': ^9.0.1
   '@types/lodash-es': ^4.17.3
@@ -12812,6 +12839,7 @@ specifiers:
   husky: ^4.2.5
   jest: ^26.0.1
   lint-staged: ^10.2.6
+  lodash: ^4.17.15
   lodash-es: ^4.17.15
   open-cli: ^6.0.1
   prettier: ^2.0.5
@@ -12822,5 +12850,6 @@ specifiers:
   shx: ^0.3.2
   standard-version: ^8.0.0
   ts-node: ^8.10.1
+  tslib: ^2.0.0
   typescript: ^3.9.3
   vscode-generate-index-standalone: ^1.3.0

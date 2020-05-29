@@ -3,9 +3,10 @@
   "compilerOptions": {
     "target": "ES5",
     "module": "ESNext",
-    "declaration": true,
-    "sourceMap": true,
-    "outDir": "./node_modules/.cache/build"
+    "importHelpers": true,
+    "declaration": false,
+    "sourceMap": false,
+    "outDir": "./lib/esm"
   },
   "include": ["src/index.ts"]
 }

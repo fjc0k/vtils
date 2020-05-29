@@ -1,3 +1,4 @@
+import alias from '@rollup/plugin-alias'
 import dts from 'rollup-plugin-dts'
 import pkg from './package.json'
 import resolve from '@rollup/plugin-node-resolve'
@@ -9,44 +10,44 @@ import { terser } from 'rollup-plugin-terser'
 const defineConfig = config => config
 
 /**
- * @param {import('rollup').ModuleFormat[]} formats
- * @param {(format: import('rollup').ModuleFormat) => import('rollup').OutputOptions} fn
+ * @param {import('rollup').ModuleFormat} format
+ * @param {Boolean} minify
  */
-const defineOutput = (formats, fn) => formats.map(format => fn(format))
+const createConfig = (format, minify) =>
+  defineConfig({
+    input: './lib/esm/index.js',
+    external: ['lodash', ...(format === 'umd' ? [] : ['tslib'])],
+    output: {
+      name: pkg.name,
+      format: format,
+      file: `./lib/${format}/index${minify ? '.min' : ''}.js`,
+      sourcemap: true,
+      globals: {
+        lodash: '_',
+      },
+    },
+    plugins: [
+      alias({
+        entries: {
+          'lodash-es': 'lodash',
+        },
+      }),
+      resolve(),
+      minify && terser(),
+    ],
+  })
 
 export default [
+  createConfig('cjs'),
+  createConfig('umd'),
+  createConfig('cjs', true),
+  createConfig('umd', true),
   defineConfig({
-    input: './node_modules/.cache/build/index.js',
-    output: defineOutput(['esm', 'cjs', 'umd'], format => ({
-      name: pkg.name,
-      format: format,
-      file: `./lib/index${format === 'cjs' ? '' : `.${format}`}.js`,
-      sourcemap: true,
-    })),
-    plugins: [resolve()],
-  }),
-  defineConfig({
-    input: './lib/index.esm.js',
-    output: defineOutput(['esm', 'cjs', 'umd'], format => ({
-      name: pkg.name,
-      format: format,
-      file: `./lib/index${format === 'cjs' ? '' : `.${format}`}.min.js`,
-      sourcemap: true,
-    })),
-    plugins: [terser()],
-  }),
-  defineConfig({
-    input: './node_modules/.cache/build/index.d.ts',
-    output: defineOutput(['esm'], format => ({
-      format: format,
+    input: './src/index.ts',
+    output: {
+      format: 'esm',
       file: './lib/index.d.ts',
-    })),
-    external: ['lodash-es'],
-    plugins: [
-      resolve({
-        extensions: ['.d.ts'],
-      }),
-      dts(),
-    ],
+    },
+    plugins: [dts()],
   }),
 ]
