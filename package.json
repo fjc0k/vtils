@@ -67,6 +67,7 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@types/fs-extra": "^9.0.1",
     "@types/prompts": "^2.0.8",
+    "@types/standard-version": "^7.0.0",
     "codecov": "^3.7.0",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",

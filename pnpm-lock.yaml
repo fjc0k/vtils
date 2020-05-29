@@ -4,6 +4,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': registry.npm.taobao.org/@rollup/plugin-node-resolve/8.0.0_rollup@2.11.0
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.8
+  '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
   codecov: registry.npm.taobao.org/codecov/3.7.0
   cross-env: registry.npm.taobao.org/cross-env/7.0.2
   eslint: registry.npm.taobao.org/eslint/6.8.0
@@ -2179,6 +2180,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/color-name/download/@types/color-name-1.1.1.tgz'
     version: 1.1.1
+  registry.npm.taobao.org/@types/conventional-changelog-config-spec/2.1.0:
+    dependencies:
+      '@types/json-schema': registry.npm.taobao.org/@types/json-schema/7.0.4
+    dev: true
+    name: '@types/conventional-changelog-config-spec'
+    resolution:
+      integrity: sha1-m0wxIf62GfgBAX54puHCWMz/HOs=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@types/conventional-changelog-config-spec/download/@types/conventional-changelog-config-spec-2.1.0.tgz'
+    version: 2.1.0
   registry.npm.taobao.org/@types/debug/4.1.5:
     dev: true
     name: '@types/debug'
@@ -2420,6 +2431,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/stack-utils/download/@types/stack-utils-1.0.1.tgz'
     version: 1.0.1
+  registry.npm.taobao.org/@types/standard-version/7.0.0:
+    dependencies:
+      '@types/conventional-changelog-config-spec': registry.npm.taobao.org/@types/conventional-changelog-config-spec/2.1.0
+      '@types/node': registry.npm.taobao.org/@types/node/14.0.5
+    dev: true
+    name: '@types/standard-version'
+    resolution:
+      integrity: sha1-dhG99kjggzEApUgoqENT5ZIoYvw=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@types/standard-version/download/@types/standard-version-7.0.0.tgz'
+    version: 7.0.0
   registry.npm.taobao.org/@types/testing-library__jest-dom/5.7.0:
     dependencies:
       '@types/jest': registry.npm.taobao.org/@types/jest/25.2.3
@@ -12780,6 +12802,7 @@ specifiers:
   '@types/fs-extra': ^9.0.1
   '@types/lodash-es': ^4.17.3
   '@types/prompts': ^2.0.8
+  '@types/standard-version': ^7.0.0
   codecov: ^3.7.0
   cross-env: ^7.0.2
   eslint: ^6.8.0
