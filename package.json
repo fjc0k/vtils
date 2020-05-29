@@ -28,7 +28,8 @@
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "mod.ts"
   ],
   "scripts": {
     "prebuild": "shx rm -rf ./node_modules/.cache/build && tsc -p tsconfig.build.json && npm run generate-index",
