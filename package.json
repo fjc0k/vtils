@@ -1,6 +1,6 @@
 {
   "name": "vtils",
-  "version": "3.0.1-beta.2",
+  "version": "3.0.1-beta.3",
   "description": "A business-oriented JavaScript utility library based on Lodash.",
   "keywords": [
     "util",
