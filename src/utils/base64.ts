@@ -42,7 +42,6 @@ const binaryToAscii: XToY =
   (value => value.replace(/[\s\S]{1,3}/g, binaryToAsciiReplacer))
 
 // utf8ToBinary
-// eslint-disable-next-line no-control-regex
 const utf8ToBinaryRegExp = /[\uD800-\uDBFF][\uDC00-\uDFFFF]|[^\x00-\x7F]/g
 function utf8ToBinaryReplacer(str: string) {
   if (str.length < 2) {
@@ -97,7 +96,7 @@ const asciiToBinary: XToY =
 const binaryToUtf8RegExp = /[\xC0-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF7][\x80-\xBF]{3}/g
 function binaryToUtf8Replacer(str: string) {
   switch (str.length) {
-    case 4: {
+    case 4:
       const cp =
         ((0x07 & str.charCodeAt(0)) << 18) |
         ((0x3f & str.charCodeAt(1)) << 12) |
@@ -108,7 +107,6 @@ function binaryToUtf8Replacer(str: string) {
         fromCharCode((offset >>> 10) + 0xd800) +
         fromCharCode((offset & 0x3ff) + 0xdc00)
       )
-    }
     case 3:
       return fromCharCode(
         ((0x0f & str.charCodeAt(0)) << 12) |
@@ -129,10 +127,16 @@ const asciiToUtf8: XToY = value =>
   binaryToUtf8(asciiToBinary(value.replace(/=+$/, '')))
 
 /**
- * base64Encode。
+ * Create a base64 encoded ASCII string from the given UTF8 string.
  *
- * @param value 值
- * @returns 返回结果
+ * ```
+ * base64Encode('v') // => 'dg=='
+ * base64Encode('龙') // => '6b6Z'
+ * base64Encode('🐱') // => '8J+QsQ=='
+ * ```
+ *
+ * @param value The given UTF8 string
+ * @returns A base64 encoded ASCII string
  */
 export function base64Encode(value: string): string {
   if (canUseBufferFrom) {
@@ -143,10 +147,16 @@ export function base64Encode(value: string): string {
 }
 
 /**
- * base64Encode。
+ * Create an UTF8 string from the given base64 encoded ASCII string.
  *
- * @param value 值
- * @returns 返回结果
+ * ```
+ * base64Decode('dg==') // => 'v'
+ * base64Decode('6b6Z') // => '龙'
+ * base64Decode('8J+QsQ==') // => '🐱'
+ * ```
+ *
+ * @param value The given base64 encoded ASCII string
+ * @returns A UTF8 string
  */
 export function base64Decode(value: string): string {
   if (canUseBufferFrom) {
@@ -156,6 +166,18 @@ export function base64Decode(value: string): string {
   return asciiToUtf8(value)
 }
 
+/**
+ * Create a base64url encoded ASCII string from the given UTF8 string.
+ *
+ * ```
+ * base64UrlEncode('v') // => 'dg'
+ * base64UrlEncode('龙') // => '6b6Z'
+ * base64UrlEncode('🐱') // => '8J-QsQ'
+ * ```
+ *
+ * @param value The given UTF8 string
+ * @returns A base64url encoded ASCII string
+ */
 export function base64UrlEncode(value: string): string {
   return base64Encode(value)
     .replace(/\+/g, '-')
@@ -163,6 +185,18 @@ export function base64UrlEncode(value: string): string {
     .replace(/=+$/, '')
 }
 
+/**
+ * Create an UTF8 string from the given base64url encoded ASCII string.
+ *
+ * ```
+ * base64UrlDecode('dg') // => 'v'
+ * base64UrlDecode('6b6Z') // => '龙'
+ * base64UrlDecode('8J-QsQ') // => '🐱'
+ * ```
+ *
+ * @param value The given base64url encoded ASCII string
+ * @returns A UTF8 string
+ */
 export function base64UrlDecode(value: string): string {
   return base64Decode(value.replace(/-/g, '+').replace(/_/g, '/'))
 }
