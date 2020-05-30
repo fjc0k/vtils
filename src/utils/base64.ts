@@ -127,7 +127,7 @@ const asciiToUtf8: XToY = value =>
   binaryToUtf8(asciiToBinary(value.replace(/=+$/, '')))
 
 /**
- * Create a base64 encoded ASCII string from the given UTF8 string.
+ * Encodes the given UTF8 string to a base64 encoded ASCII string.
  *
  * ```
  * base64Encode('v') // => 'dg=='
@@ -135,8 +135,8 @@ const asciiToUtf8: XToY = value =>
  * base64Encode('🐱') // => '8J+QsQ=='
  * ```
  *
- * @param value The given UTF8 string
- * @returns A base64 encoded ASCII string
+ * @param value The given UTF8 string.
+ * @returns Returns the base64 encoded ASCII string.
  */
 export function base64Encode(value: string): string {
   if (canUseBufferFrom) {
@@ -147,7 +147,7 @@ export function base64Encode(value: string): string {
 }
 
 /**
- * Create an UTF8 string from the given base64 encoded ASCII string.
+ * Decodes a UTF8 string from the given base64 encoded ASCII string.
  *
  * ```
  * base64Decode('dg==') // => 'v'
@@ -155,8 +155,8 @@ export function base64Encode(value: string): string {
  * base64Decode('8J+QsQ==') // => '🐱'
  * ```
  *
- * @param value The given base64 encoded ASCII string
- * @returns A UTF8 string
+ * @param value The given base64 encoded ASCII string.
+ * @returns Returns the decoded UTF8 string.
  */
 export function base64Decode(value: string): string {
   if (canUseBufferFrom) {
@@ -167,7 +167,7 @@ export function base64Decode(value: string): string {
 }
 
 /**
- * Create a base64url encoded ASCII string from the given UTF8 string.
+ * Encodes the given UTF8 string to a URL-safe base64url encoded ASCII string.
  *
  * ```
  * base64UrlEncode('v') // => 'dg'
@@ -175,8 +175,8 @@ export function base64Decode(value: string): string {
  * base64UrlEncode('🐱') // => '8J-QsQ'
  * ```
  *
- * @param value The given UTF8 string
- * @returns A base64url encoded ASCII string
+ * @param value The given UTF8 string.
+ * @returns Returns the URL-safe base64url encoded ASCII string.
  */
 export function base64UrlEncode(value: string): string {
   return base64Encode(value)
@@ -186,7 +186,7 @@ export function base64UrlEncode(value: string): string {
 }
 
 /**
- * Create an UTF8 string from the given base64url encoded ASCII string.
+ * Decodes a UTF8 string from the given URL-safe base64url encoded ASCII string.
  *
  * ```
  * base64UrlDecode('dg') // => 'v'
@@ -194,8 +194,8 @@ export function base64UrlEncode(value: string): string {
  * base64UrlDecode('8J-QsQ') // => '🐱'
  * ```
  *
- * @param value The given base64url encoded ASCII string
- * @returns A UTF8 string
+ * @param value The given URL-safe base64url encoded ASCII string.
+ * @returns Returns the decoded UTF8 string.
  */
 export function base64UrlDecode(value: string): string {
   return base64Decode(value.replace(/-/g, '+').replace(/_/g, '/'))
