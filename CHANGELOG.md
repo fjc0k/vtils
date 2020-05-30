@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1-beta.5](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.4...v3.0.1-beta.5) (2020-05-30)
+
+### Features
+
+- add base64 ([348e8cb](https://github.com/fjc0k/vtils/commit/348e8cb3e275a7f70f79e586958c69d1b54876a4))
+
 ### [3.0.1-beta.4](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.3...v3.0.1-beta.4) (2020-05-29)
 
 ### [3.0.1-beta.3](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.2...v3.0.1-beta.3) (2020-05-29)
