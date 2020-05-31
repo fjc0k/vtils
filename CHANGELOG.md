@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1-beta.6](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.5...v3.0.1-beta.6) (2020-05-31)
+
+### Features
+
+- add readFile ([8704e3c](https://github.com/fjc0k/vtils/commit/8704e3c32dc87af6019b8d638f683619ef6ab8d0))
+
 ### [3.0.1-beta.5](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.4...v3.0.1-beta.5) (2020-05-30)
 
 ### Features
