@@ -8,5 +8,6 @@ export * from './utils/indent'
 export * from './utils/isChineseIDCardNumber'
 export * from './utils/isPossibleChineseMobilePhoneNumber'
 export * from './utils/isUrl'
+export * from './utils/readFile'
 export * from './utils/wait'
 // @endindex
