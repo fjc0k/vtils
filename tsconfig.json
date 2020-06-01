@@ -15,5 +15,6 @@
     "newLine": "LF",
     "jsx": "react",
     "lib": ["esnext", "dom"]
-  }
+  },
+  "exclude": ["node_modules", "lib", "dist"]
 }
