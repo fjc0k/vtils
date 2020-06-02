@@ -9,6 +9,8 @@ export * from './isChineseIDCardNumber'
 export * from './isPossibleChineseMobilePhoneNumber'
 export * from './isUrl'
 export * from './loadResource'
+export * from './omitStrict'
+export * from './pickStrict'
 export * from './readFile'
 export * from './wait'
 // @endindex

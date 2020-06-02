@@ -30,4 +30,5 @@ export type {
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
 export * from './Defined'
 export * from './FirstParameter'
+export * from './OneOrMany'
 // @endindex
