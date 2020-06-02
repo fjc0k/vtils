@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": false,
+    "outDir": "./lib",
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.cache/tsBuildInfoFile"
+  },
+  "include": ["src/*/index.ts"]
+}

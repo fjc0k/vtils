@@ -12,6 +12,7 @@
     "skipLibCheck": true,
     "sourceMap": false,
     "preserveSymlinks": true,
+    "resolveJsonModule": true,
     "newLine": "LF",
     "jsx": "react",
     "lib": ["esnext", "dom"]
