@@ -12,10 +12,9 @@ async function main(rootDir: string) {
   await Promise.all(
     files.map(async file => {
       const content = await fs.readFile(file, 'utf8')
-      const newContent = content.replace(
-        /require\("lodash-es"\)/g,
-        'require("lodash")',
-      )
+      const newContent = content
+        .replace(/require\("lodash-es"\)/g, 'require("lodash")')
+        .replace(/require\("date-fns\/esm/g, 'require("date-fns')
       if (newContent !== content) {
         await fs.writeFile(file, newContent)
       }

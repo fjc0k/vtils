@@ -1,1 +1,6 @@
-export * from 'date-fns'
+export * from 'date-fns/esm'
+export * from 'date-fns/esm/locale'
+
+// @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
+export * from './numeralDayToChineseDay'
+// @endindex
