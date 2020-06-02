@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1-beta.7](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.6...v3.0.1-beta.7) (2020-06-02)
+
+### Features
+
+- add loadResource ([675d7a9](https://github.com/fjc0k/vtils/commit/675d7a94686e9bef0a3340a6d06f63d62e10c6f0))
+
 ### [3.0.1-beta.6](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.5...v3.0.1-beta.6) (2020-05-31)
 
 ### Features
