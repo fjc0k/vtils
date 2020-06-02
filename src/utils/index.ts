@@ -14,4 +14,5 @@ export * from './omitStrict'
 export * from './pickStrict'
 export * from './readFile'
 export * from './wait'
+export * from './Wechat'
 // @endindex

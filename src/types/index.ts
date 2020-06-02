@@ -28,6 +28,8 @@ export type {
 } from 'ts-essentials'
 
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
+export * from './AnyFunction'
+export * from './AnyObject'
 export * from './Defined'
 export * from './FirstParameter'
 export * from './OneOrMany'
