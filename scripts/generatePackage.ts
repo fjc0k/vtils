@@ -16,7 +16,7 @@ async function main(rootDir: string) {
 
   await Promise.all([
     fs.writeJSON(packageJsonFile, packageInfo, { spaces: 2 }),
-    ...['LICENSE', 'README.md', 'mod.ts'].map(file => {
+    ...['LICENSE', 'README.md'].map(file => {
       return fs.copyFile(join(rootDir, file), join(packageDir, file))
     }),
   ])
