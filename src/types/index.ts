@@ -7,14 +7,16 @@ export type {
 } from 'type-fest'
 
 export type {
+  AnyArray,
   ValueOf,
   AsyncOrSync,
-  AnyArray,
   Buildable,
   Writable,
   Merge,
   Head,
   Tail,
+  PickProperties as PickBy,
+  OmitProperties as OmitBy,
   MarkOptional as PartialBy,
   MarkRequired as RequiredBy,
   StrictOmit as OmitStrict,
