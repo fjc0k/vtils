@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useLoadMore bug: deps 变化后应 reload: deps 变化后加载中 1`] = `
+Object {
+  "data": Array [
+    Array [
+      1,
+      0,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": true,
+  "loadMore": [Function anonymous],
+  "loading": true,
+  "noMore": false,
+  "pageNumber": 1,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
+
+exports[`useLoadMore bug: deps 变化后应 reload: deps 变化后加载完成 1`] = `
+Object {
+  "data": Array [
+    Array [
+      1,
+      1,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": false,
+  "noMore": false,
+  "pageNumber": 1,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
+
+exports[`useLoadMore total, noMore 表现正常: 已无更多数据 1`] = `
+Object {
+  "data": Array [
+    Array [
+      0,
+      1,
+    ],
+    Array [
+      1,
+      2,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": false,
+  "noMore": true,
+  "pageNumber": 2,
+  "reload": [Function anonymous],
+  "total": 2,
+}
+`;
+
+exports[`useLoadMore total, noMore 表现正常: 已无更多数据仍继续加载 1`] = `
+Object {
+  "data": Array [
+    Array [
+      0,
+      1,
+    ],
+    Array [
+      1,
+      2,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": false,
+  "noMore": true,
+  "pageNumber": 2,
+  "reload": [Function anonymous],
+  "total": 2,
+}
+`;
+
+exports[`useLoadMore total, noMore 表现正常: 已无更多数据后重新加载中 1`] = `
+Object {
+  "data": Array [
+    Array [
+      0,
+      1,
+    ],
+    Array [
+      1,
+      2,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": true,
+  "loadMore": [Function anonymous],
+  "loading": true,
+  "noMore": true,
+  "pageNumber": 1,
+  "reload": [Function anonymous],
+  "total": 2,
+}
+`;
+
+exports[`useLoadMore total, noMore 表现正常: 已无更多数据后重新加载后 1`] = `
+Object {
+  "data": Array [
+    Array [
+      2,
+      1,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": false,
+  "noMore": false,
+  "pageNumber": 1,
+  "reload": [Function anonymous],
+  "total": 2,
+}
+`;
+
+exports[`useLoadMore 加载表现正常: 第三次加载中 1`] = `
+Object {
+  "data": Array [
+    Array [
+      0,
+      1,
+    ],
+    Array [
+      1,
+      2,
+    ],
+  ],
+  "incrementalLoading": true,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": true,
+  "noMore": false,
+  "pageNumber": 3,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
+
+exports[`useLoadMore 加载表现正常: 第三次加载完成 1`] = `
+Object {
+  "data": Array [
+    Array [
+      0,
+      1,
+    ],
+    Array [
+      1,
+      2,
+    ],
+    Array [
+      2,
+      3,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": false,
+  "noMore": false,
+  "pageNumber": 3,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
+
+exports[`useLoadMore 加载表现正常: 第二次加载中 1`] = `
+Object {
+  "data": Array [
+    Array [
+      0,
+      1,
+    ],
+  ],
+  "incrementalLoading": true,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": true,
+  "noMore": false,
+  "pageNumber": 2,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
+
+exports[`useLoadMore 加载表现正常: 第二次加载完成 1`] = `
+Object {
+  "data": Array [
+    Array [
+      0,
+      1,
+    ],
+    Array [
+      1,
+      2,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": false,
+  "noMore": false,
+  "pageNumber": 2,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
+
+exports[`useLoadMore 加载表现正常: 重新加载中 1`] = `
+Object {
+  "data": Array [
+    Array [
+      0,
+      1,
+    ],
+    Array [
+      1,
+      2,
+    ],
+    Array [
+      2,
+      3,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": true,
+  "loadMore": [Function anonymous],
+  "loading": true,
+  "noMore": false,
+  "pageNumber": 1,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
+
+exports[`useLoadMore 加载表现正常: 重新加载完成 1`] = `
+Object {
+  "data": Array [
+    Array [
+      3,
+      1,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": false,
+  "noMore": false,
+  "pageNumber": 1,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
+
+exports[`useLoadMore 加载表现正常: 首次加载中 1`] = `
+Object {
+  "data": Array [],
+  "incrementalLoading": false,
+  "initialLoading": true,
+  "loadMore": [Function anonymous],
+  "loading": true,
+  "noMore": false,
+  "pageNumber": 1,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
+
+exports[`useLoadMore 加载表现正常: 首次加载完成 1`] = `
+Object {
+  "data": Array [
+    Array [
+      0,
+      1,
+    ],
+  ],
+  "incrementalLoading": false,
+  "initialLoading": false,
+  "loadMore": [Function anonymous],
+  "loading": false,
+  "noMore": false,
+  "pageNumber": 1,
+  "reload": [Function anonymous],
+  "total": 0,
+}
+`;
