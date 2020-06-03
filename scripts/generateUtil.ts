@@ -51,9 +51,9 @@ async function main(rootDir: string) {
       `
         import { ${util} } from './${util}'
 
-        describe(${util}.name, () => {
+        describe('${util}', () => {
           test('ok', () => {
-            expect(1).toBe(1)
+            expect(${util}).toBe(${util})
           })
         })
       `,

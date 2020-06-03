@@ -2,7 +2,7 @@ import { AnyFunction } from '../types'
 import { wait } from './wait'
 import { Wechat } from './Wechat'
 
-describe(Wechat.name, () => {
+describe('Wechat', () => {
   beforeAll(() => {
     let ready = false
     const readyCbs: AnyFunction[] = []

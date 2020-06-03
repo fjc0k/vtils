@@ -72,13 +72,17 @@
     "date-fns": "^2.14.0",
     "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
+    "react-use": "^15.1.1",
     "ts-essentials": "^6.0.5",
     "tslib": "^2.0.0",
     "type-fest": "^0.15.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^10.0.6",
+    "@testing-library/react-hooks": "^3.2.1",
     "@types/fs-extra": "^9.0.1",
     "@types/prompts": "^2.0.8",
+    "@types/react": "^16.9.35",
     "@types/standard-version": "^7.0.0",
     "codecov": "^3.7.0",
     "cross-env": "^7.0.2",
@@ -93,10 +97,13 @@
     "open-cli": "^6.0.1",
     "prettier": "^2.0.5",
     "prompts": "^2.3.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "shx": "^0.3.2",
     "standard-version": "^8.0.0",
     "ts-node": "^8.10.1",
     "typescript": "^3.9.3",
+    "typescript-snapshots-plugin": "^1.7.0",
     "vscode-generate-index-standalone": "^1.3.0"
   },
   "engines": {

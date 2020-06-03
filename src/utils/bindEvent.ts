@@ -2,25 +2,47 @@
 import { AnyFunction } from '../types'
 
 export type BindEventResult<T> = <
-  E extends T extends typeof window // window
+  // prettier-ignore
+  E extends
+    // window
+    T extends typeof window
     ? WindowEventMap
-    : T extends HTMLVideoElement // video
-    ? HTMLVideoElementEventMap
-    : T extends HTMLMediaElement // media
+
+    // 打包时报错: Cannot find name 'HTMLVideoElementEventMap'
+    // video
+    // : T extends HTMLVideoElement
+    // ? HTMLVideoElementEventMap
+
+    // media
+    : T extends HTMLMediaElement
     ? HTMLMediaElementEventMap
-    : T extends HTMLBodyElement // body
+
+    // body
+    : T extends HTMLBodyElement
     ? HTMLBodyElementEventMap
-    : T extends HTMLFrameSetElement // frame set
+
+    // frame set
+    : T extends HTMLFrameSetElement
     ? HTMLFrameSetElementEventMap
-    : T extends FileReader // FileReader
+
+    // FileReader
+    : T extends FileReader
     ? FileReaderEventMap
-    : T extends WebSocket // WebSocket
+
+    // WebSocket
+    : T extends WebSocket
     ? WebSocketEventMap
-    : T extends SVGElement // svg element
+
+    // svg element
+    : T extends SVGElement
     ? SVGElementEventMap
-    : T extends HTMLElement // html element
+
+    // html element
+    : T extends HTMLElement
     ? HTMLElementEventMap
-    : Record<string, any>, // others
+
+    // others
+    : Record<string, any>,
   K extends keyof E
 >(
   type: K,

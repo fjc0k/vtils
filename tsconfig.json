@@ -15,7 +15,17 @@
     "resolveJsonModule": true,
     "newLine": "LF",
     "jsx": "react",
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "plugins": [
+      {
+        "name": "typescript-snapshots-plugin",
+        "snapshotCallIdentifiers": [
+          "toMatchSnapshot",
+          "toThrowErrorMatchingSnapshot",
+          "toMatchDiffSnapshot"
+        ]
+      }
+    ]
   },
   "exclude": ["node_modules", "lib", "dist"]
 }

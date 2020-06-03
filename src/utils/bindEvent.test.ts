@@ -1,6 +1,6 @@
 import { bindEvent } from './bindEvent'
 
-describe(bindEvent.name, () => {
+describe('bindEvent', () => {
   test('绑定事件正常', () => {
     const handleClick = jest.fn()
     const handleTouch = jest.fn()
