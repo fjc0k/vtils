@@ -19,6 +19,7 @@ const dayMap: Record<0 | 1 | 2 | 3 | 4 | 5 | 6 | 7, string> = {
  * numeralDayToChineseDay(7) // => 日
  * ```
  *
+ * @public
  * @param day 数字的星期几
  * @returns 返回中文的星期几
  */

@@ -10,6 +10,7 @@
  * // => 控制台输出: 提交成功
  * ```
  *
+ * @public
  * @template TEvents 事件名称及其对应的回调描述
  */
 export class EventBus<TEvents extends Record<string, (...args: any[]) => any>> {

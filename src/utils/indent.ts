@@ -5,6 +5,7 @@
  * indent` ${'a\nb'}` // => ' a\n b'
  * ```
  *
+ * @public
  * @param literals 字面值
  * @param interpolations 插入值
  * @returns 返回处理后的结果

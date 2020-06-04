@@ -135,6 +135,7 @@ const asciiToUtf8: XToY = value =>
  * base64Encode('🐱') // => '8J+QsQ=='
  * ```
  *
+ * @public
  * @param value The given UTF8 string.
  * @returns Returns the base64 encoded ASCII string.
  */
@@ -155,6 +156,7 @@ export function base64Encode(value: string): string {
  * base64Decode('8J+QsQ==') // => '🐱'
  * ```
  *
+ * @public
  * @param value The given base64 encoded ASCII string.
  * @returns Returns the decoded UTF8 string.
  */
@@ -175,6 +177,7 @@ export function base64Decode(value: string): string {
  * base64UrlEncode('🐱') // => '8J-QsQ'
  * ```
  *
+ * @public
  * @param value The given UTF8 string.
  * @returns Returns the URL-safe base64url encoded ASCII string.
  */
@@ -194,6 +197,7 @@ export function base64UrlEncode(value: string): string {
  * base64UrlDecode('8J-QsQ') // => '🐱'
  * ```
  *
+ * @public
  * @param value The given URL-safe base64url encoded ASCII string.
  * @returns Returns the decoded UTF8 string.
  */

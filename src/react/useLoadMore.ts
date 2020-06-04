@@ -1,5 +1,8 @@
 import { DependencyList, useCallback, useEffect, useState } from 'react'
 
+/**
+ * @public
+ */
 export interface UseLoadMoreServicePayload {
   /** 已加载的数据量 */
   offset: number
@@ -7,6 +10,9 @@ export interface UseLoadMoreServicePayload {
   pageNumber: number
 }
 
+/**
+ * @public
+ */
 export type UseLoadMoreServiceResult<TItem> =
   | TItem[]
   | {
@@ -16,10 +22,16 @@ export type UseLoadMoreServiceResult<TItem> =
       data: TItem[]
     }
 
+/**
+ * @public
+ */
 export interface UseLoadMoreService<TItem> {
   (payload: UseLoadMoreServicePayload): Promise<UseLoadMoreServiceResult<TItem>>
 }
 
+/**
+ * @public
+ */
 export interface UseLoadMoreResult<TItem> {
   /** 当前页码 */
   pageNumber: number
@@ -44,6 +56,7 @@ export interface UseLoadMoreResult<TItem> {
 /**
  * 数据加载。
  *
+ * @public
  * @param service 数据加载服务
  * @param deps 依赖，依赖若发生变化则从首页重新加载数据
  * @returns 返回结果

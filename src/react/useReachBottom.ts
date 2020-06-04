@@ -2,13 +2,21 @@
  * Modified from https://github.com/karl-run/react-bottom-scroll-listener/blob/master/src/hook/index.tsx
  */
 import { bindEvent, debounce } from '../utils'
-import { useEffect, useRef } from 'react'
+import { MutableRefObject, useEffect, useRef } from 'react'
 import { useLatest } from 'react-use'
 
+/**
+ * 到达页面底部时触发回调。
+ *
+ * @public
+ * @param callback - 回调
+ * @param offset - 阈值
+ * @returns ref
+ */
 export function useReachBottom<T extends HTMLElement>(
   callback: () => any,
   offset = 0,
-) {
+): MutableRefObject<T> {
   const containerRef = useRef<T>(null)
 
   const latestCallback = useLatest(callback)
@@ -48,5 +56,5 @@ export function useReachBottom<T extends HTMLElement>(
     }
   }, [offset])
 
-  return containerRef
+  return containerRef as any
 }

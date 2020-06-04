@@ -20,6 +20,7 @@ const isValidDate = (year: number, month: number, day: number): boolean => {
  * isChineseIDCardNumber('123456') // => false
  * ```
  *
+ * @public
  * @param value 要检测的值
  * @returns 返回检测结果
  */

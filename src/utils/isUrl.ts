@@ -9,6 +9,7 @@ const re = /^(?:(?:https?):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!12
  * isUrl('http://foo.bar') // => true
  * ```
  *
+ * @public
  * @param value 要检测的值
  * @returns 返回检测结果
  */

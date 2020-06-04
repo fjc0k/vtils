@@ -1,3 +1,6 @@
+/**
+ * @public
+ */
 export interface ReadFileResult {
   /**
    * Returns the text contents.
@@ -28,6 +31,7 @@ export interface ReadFileResult {
 /**
  * Reads the contents of the given file.
  *
+ * @public
  * @param file The given file.
  * @returns Returns the contents getters.
  */

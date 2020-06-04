@@ -3,6 +3,8 @@ import { OmitStrict, OneOrMany } from '../types'
 
 /**
  * 同 omit，不过采用了严格的类型定义。
+ *
+ * @public
  */
 export const omitStrict = (omit as any) as <
   T extends Record<any, any>,

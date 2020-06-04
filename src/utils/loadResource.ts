@@ -2,6 +2,8 @@ import { castArray } from 'lodash-es'
 
 /**
  * 资源类型。
+ *
+ * @public
  */
 export enum LoadResourceUrlType {
   /** 样式资源 */
@@ -16,6 +18,8 @@ export enum LoadResourceUrlType {
 
 /**
  * 资源地址。
+ *
+ * @public
  */
 export interface LoadResourceUrl {
   /** 资源类型 */
@@ -86,6 +90,7 @@ function loadSpecificResource(
  * })
  * ```
  *
+ * @public
  * @param url 要加载的资源地址
  * @returns 返回各资源的 HTML 元素组成的数组
  */

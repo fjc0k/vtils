@@ -1,8 +1,9 @@
 .DS_Store
 Thumbs.db
 node_modules
-coverage
-lib
-dist
 *.tsbuildinfo
 *.log*
+/lib
+/dist
+/coverage
+/docs

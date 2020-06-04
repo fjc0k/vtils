@@ -8,6 +8,7 @@ const re = /^1[3-9][0-9]{9}$/
  * isPossibleChineseMobilePhoneNumber('18087030088') // => true
  * ```
  *
+ * @public
  * @param value 要检测的值
  * @returns 返回检测结果
  */

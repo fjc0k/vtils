@@ -1,3 +1,6 @@
+/**
+ * @public
+ */
 export interface WaitResult extends Promise<void> {
   /**
    * 取消等待，不执行后续逻辑。
@@ -14,6 +17,7 @@ export interface WaitResult extends Promise<void> {
  * }) // => 1秒后在控制台打印字符串: ok
  * ```
  *
+ * @public
  * @param milliseconds 等待时间(毫秒)
  */
 export function wait(milliseconds: number): WaitResult {

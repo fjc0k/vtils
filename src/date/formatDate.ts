@@ -1,6 +1,9 @@
 import { format } from 'date-fns/esm'
 import { zhCN } from 'date-fns/esm/locale'
 
+/**
+ * @public
+ */
 export enum FormatDatePattern {
   /**
    * AD, BC
@@ -818,6 +821,9 @@ export enum FormatDatePattern {
   PPPPpppp = 'PPPPpppp',
 }
 
+/**
+ * @public
+ */
 export enum FormatDateSimplePattern {
   /**
    * 年：`44, 1, 1900, 2017`
@@ -880,6 +886,9 @@ export enum FormatDateSimplePattern {
   ss = 'ss',
 }
 
+/**
+ * @public
+ */
 export type FormatDateFormatter = (
   simplePatterns: typeof FormatDateSimplePattern,
   patterns: typeof FormatDatePattern,
@@ -895,6 +904,7 @@ export type FormatDateFormatter = (
  * ) // => '2020-05-20 13:14:21'
  * ```
  *
+ * @public
  * @param date 要格式化的日期，支持 Date、秒或毫秒时间戳
  * @param formatter 格式化器
  * @param options 选项

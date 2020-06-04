@@ -1,6 +1,9 @@
 /* eslint-disable prefer-rest-params, prefer-spread */
 import { AnyFunction } from '../types'
 
+/**
+ * @public
+ */
 export type BindEventResult<T> = <
   // prettier-ignore
   E extends
@@ -50,6 +53,9 @@ export type BindEventResult<T> = <
   options?: boolean | AddEventListenerOptions,
 ) => () => any
 
+/**
+ * @public
+ */
 export function bindEvent<
   T extends Record<'addEventListener' | 'removeEventListener', AnyFunction>
 >(target: T): BindEventResult<T> {

@@ -6,6 +6,8 @@ declare const wx: any
 
 /**
  * 微信 JSSDK 支持的 API。
+ *
+ * @public
  */
 export type WechatJsApi =
   | 'checkJsApi'
@@ -46,6 +48,9 @@ export type WechatJsApi =
   | 'chooseCard'
   | 'openCard'
 
+/**
+ * @public
+ */
 export interface WechatConfigParams {
   /**
    * 开启调试模式。
@@ -106,8 +111,14 @@ export interface WechatConfigParams {
   autoLoadJSSDK?: false | string
 }
 
+/**
+ * @public
+ */
 export type WechatErrorCallback = (err: any) => void
 
+/**
+ * @public
+ */
 export interface WechatUpdateShareDataParams {
   /** 分享标题 */
   title?: string | (() => string)
@@ -122,6 +133,9 @@ export interface WechatUpdateShareDataParams {
   imgUrl?: string | (() => string)
 }
 
+/**
+ * @public
+ */
 export interface WechatChooseImageParams {
   /**
    * 选择图片数量。
@@ -145,6 +159,9 @@ export interface WechatChooseImageParams {
   sourceType?: Array<'album' | 'camera'>
 }
 
+/**
+ * @public
+ */
 export interface WechatPreviewImageParams {
   /**
    * 当前显示图片的链接。
@@ -159,6 +176,9 @@ export interface WechatPreviewImageParams {
   urls: string[]
 }
 
+/**
+ * @public
+ */
 export interface WechatUploadImageParams {
   /**
    * 需要上传的图片的本地 ID，由 chooseImage 接口获得。
@@ -173,6 +193,9 @@ export interface WechatUploadImageParams {
   isShowProgressTips?: boolean
 }
 
+/**
+ * @public
+ */
 export interface WechatOpenLocationParams {
   /**
    * 纬度，浮点数，范围为 90 ~ -90。
@@ -209,6 +232,8 @@ export interface WechatOpenLocationParams {
 
 /**
  * 微信内网页的非基础菜单列表。
+ *
+ * @public
  */
 export type WechatNonBaseMenuItem =
   | 'menuItem:share:appMessage'
@@ -258,6 +283,8 @@ const shareJsApiList: WechatJsApi[] = [
  *   // => API 调用结果
  * })
  * ```
+ *
+ * @public
  */
 export class Wechat {
   /**
