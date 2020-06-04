@@ -46,7 +46,7 @@ export function useReachBottom<T extends HTMLElement>(
       unbindEvent()
       latestDebouncedCallback.cancel()
     }
-  }, [])
+  }, [offset])
 
   return containerRef
 }
