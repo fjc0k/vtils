@@ -897,18 +897,18 @@ export type FormatDateFormatter = (
 /**
  * 格式化日期。
  *
- * ```
- * formatDate(
- *   new Date(2020, 5 - 1, 20, 13, 14, 21),
- *   _ => `${_.yyyy}-${_.mm}-${_.dd} ${_.hh}:${_.ii}:${_.ss}`,
- * ) // => '2020-05-20 13:14:21'
- * ```
- *
  * @public
  * @param date 要格式化的日期，支持 Date、秒或毫秒时间戳
  * @param formatter 格式化器
  * @param options 选项
  * @returns 返回格式化后的日期
+ * @example
+ * ```typescript
+ * formatDate(
+ *   new Date(2020, 5 - 1, 20, 13, 14, 21),
+ *   _ => `${_.yyyy}-${_.mm}-${_.dd} ${_.hh}:${_.ii}:${_.ss}`,
+ * ) // => '2020-05-20 13:14:21'
+ * ```
  */
 export function formatDate(
   date: Date | number,

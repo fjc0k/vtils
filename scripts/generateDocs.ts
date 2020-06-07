@@ -18,9 +18,7 @@ async function main(rootDir: string) {
       cwd: libDir,
       onlyDirectories: true,
     })
-  )
-    .map(cat => basename(cat))
-    .filter(cat => cat === 'date')
+  ).map(cat => basename(cat))
 
   await Promise.all(
     cats.map(async cat => {
@@ -41,6 +39,7 @@ async function main(rootDir: string) {
           compiler: {
             tsconfigFilePath: join(rootDir, './tsconfig.json'),
           },
+          newlineKind: 'lf',
         },
         packageJsonFullPath: join(rootDir, './package.json'),
         packageJson: {
