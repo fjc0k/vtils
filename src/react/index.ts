@@ -1,3 +1,9 @@
+/**
+ * React 工具库。
+ *
+ * @packageDocumentation
+ */
+
 export * from 'react-use'
 
 // @index(['./**/*.ts', '!./**/*.test.*', '!./useToggle.*'], f => `export * from '${f.path}'`)

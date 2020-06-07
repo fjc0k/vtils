@@ -1,3 +1,9 @@
+/**
+ * 类型工具库。
+ *
+ * @packageDocumentation
+ */
+
 export type {
   LiteralUnion,
   AsyncReturnType,

@@ -2,9 +2,11 @@ import { format } from 'date-fns/esm'
 import { zhCN } from 'date-fns/esm/locale'
 
 /**
+ * 日期格式化占位符。
+ *
  * @public
  */
-export enum FormatDatePattern {
+export enum FormatDatePlaceholder {
   /**
    * AD, BC
    */
@@ -822,9 +824,11 @@ export enum FormatDatePattern {
 }
 
 /**
+ * 简易的日期格式化占位符。
+ *
  * @public
  */
-export enum FormatDateSimplePattern {
+export enum FormatDateSimplePlaceholder {
   /**
    * 年：`44, 1, 1900, 2017`
    */
@@ -887,11 +891,16 @@ export enum FormatDateSimplePattern {
 }
 
 /**
+ * 日期格式化渲染器。
+ *
  * @public
+ * @param simplePlaceholders 简易占位符
+ * @param placeholders 占位符
+ * @returns 返回渲染字符串
  */
-export type FormatDateFormatter = (
-  simplePatterns: typeof FormatDateSimplePattern,
-  patterns: typeof FormatDatePattern,
+export type FormatDateRenderer = (
+  simplePlaceholders: typeof FormatDateSimplePlaceholder,
+  placeholders: typeof FormatDatePlaceholder,
 ) => string
 
 /**
@@ -899,7 +908,7 @@ export type FormatDateFormatter = (
  *
  * @public
  * @param date 要格式化的日期，支持 Date、秒或毫秒时间戳
- * @param formatter 格式化器
+ * @param renderer 渲染器
  * @param options 选项
  * @returns 返回格式化后的日期
  * @example
@@ -912,15 +921,19 @@ export type FormatDateFormatter = (
  */
 export function formatDate(
   date: Date | number,
-  formatter: FormatDateFormatter,
+  renderer: FormatDateRenderer,
   options?: Parameters<typeof format>[2],
 ) {
   if (typeof date === 'number' && String(date).length === 10) {
     date *= 1000
   }
 
-  return format(date, formatter(FormatDateSimplePattern, FormatDatePattern), {
-    locale: zhCN,
-    ...options,
-  })
+  return format(
+    date,
+    renderer(FormatDateSimplePlaceholder, FormatDatePlaceholder),
+    {
+      locale: zhCN,
+      ...options,
+    },
+  )
 }

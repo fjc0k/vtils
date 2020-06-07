@@ -1,3 +1,9 @@
+/**
+ * 基础工具库。
+ *
+ * @packageDocumentation
+ */
+
 export * from 'lodash-es'
 
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)

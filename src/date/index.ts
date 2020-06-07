@@ -1,3 +1,9 @@
+/**
+ * 日期时间工具库。
+ *
+ * @packageDocumentation
+ */
+
 // prettier-ignore
 export {
   // 手动导出以解决 @microsoft/api-extractor 的问题
