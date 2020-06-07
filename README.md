@@ -64,6 +64,8 @@ import { useClassName, useToggle, useScrollLoadMore } from 'vtils/react'
 import { OmitStrict, LiteralUnion, PartialDeep } from 'vtils/types'
 ```
 
+详细用法见文档：[https://fjc0k.github.io/vtils/v3/](https://fjc0k.github.io/vtils/v3/)。
+
 ## 许可
 
 Jay Fong (c) MIT
