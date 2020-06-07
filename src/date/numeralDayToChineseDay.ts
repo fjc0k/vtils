@@ -1,4 +1,11 @@
-const dayMap: Record<0 | 1 | 2 | 3 | 4 | 5 | 6 | 7, string> = {
+/**
+ * 数字星期。
+ *
+ * @public
+ */
+export type NumeralDay = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+
+const dayMap: Record<NumeralDay, string> = {
   0: '日',
   1: '一',
   2: '二',
@@ -23,6 +30,6 @@ const dayMap: Record<0 | 1 | 2 | 3 | 4 | 5 | 6 | 7, string> = {
  * numeralDayToChineseDay(7) // => 日
  * ```
  */
-export function numeralDayToChineseDay(day: keyof typeof dayMap): string {
+export function numeralDayToChineseDay(day: NumeralDay): string {
   return dayMap[day]
 }
