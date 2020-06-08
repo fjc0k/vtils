@@ -1,0 +1,36 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - v3
+
+jobs:
+  publish:
+    if: |
+      startsWith(github.event.push.commits[0].message, 'chore(release):')
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: v3
+      - uses: actions/setup-node@v1
+        with:
+          registry-url: 'https://registry.npmjs.org'
+      - run: |
+          echo "$IS_BETA"
+          if [[ $IS_BETA -gt true ]]
+          then
+            echo "is beta"
+          else
+            echo "not beta"
+          fi
+          # npx pnpm install
+          # npm run build
+          # npm run test
+          # cd ./lib
+          # npm publish
+        env:
+          IS_BETA: ${{ contains(github.event.push.commits[0].message, 'beta') }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
