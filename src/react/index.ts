@@ -1,5 +1,5 @@
 /**
- * React 工具库。
+ * React 工具库。基于 [react-use](https://github.com/streamich/react-use#readme)。
  *
  * @packageDocumentation
  */

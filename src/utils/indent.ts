@@ -1,14 +1,14 @@
 /**
  * 每一行紧跟前导空白的插入值为多行时，保持缩进。
  *
- * ```
- * indent` ${'a\nb'}` // => ' a\n b'
- * ```
- *
  * @public
  * @param literals 字面值
  * @param interpolations 插入值
  * @returns 返回处理后的结果
+ * @example
+ * ```typescript
+ * indent` ${'a\nb'}` // => ' a\n b'
+ * ```
  */
 export function indent(
   literals: TemplateStringsArray,

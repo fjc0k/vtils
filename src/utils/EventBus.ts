@@ -1,7 +1,10 @@
 /**
  * 事件巴士，管理事件的发布与订阅。
  *
- * ```
+ * @public
+ * @template TEvents 事件名称及其对应的回调描述
+ * @example
+ * ```typescript
  * const bus = new EventBus<{
  *   success: (payload: { message: string }) => any
  * }>()
@@ -9,9 +12,6 @@
  * bus.emit('success', { message: '提交成功' })
  * // => 控制台输出: 提交成功
  * ```
- *
- * @public
- * @template TEvents 事件名称及其对应的回调描述
  */
 export class EventBus<TEvents extends Record<string, (...args: any[]) => any>> {
   /**

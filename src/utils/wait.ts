@@ -11,14 +11,14 @@ export interface WaitResult extends Promise<void> {
 /**
  * 等待一段时间。
  *
- * ```
+ * @public
+ * @param milliseconds 等待时间(毫秒)
+ * @example
+ * ```typescript
  * wait(1000).then(() => {
  *   console.log('ok')
  * }) // => 1秒后在控制台打印字符串: ok
  * ```
- *
- * @public
- * @param milliseconds 等待时间(毫秒)
  */
 export function wait(milliseconds: number): WaitResult {
   let timer: number

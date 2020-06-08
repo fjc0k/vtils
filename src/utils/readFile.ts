@@ -1,42 +1,51 @@
 /**
+ * 各种内容类型的读取器。
+ *
  * @public
  */
-export interface ReadFileResult {
+export interface ReadFileReader {
   /**
-   * Returns the text contents.
+   * 读取并返回文本内容。
    */
   text(): Promise<string>
 
   /**
-   * Returns the JSON contents.
+   * 读取并返回 JSON 内容。
    */
   json<T>(): Promise<T>
 
   /**
-   * Returns the dataURL contents.
+   * 读取并返回 dataURL 内容。
    */
   dataUrl(): Promise<string>
 
   /**
-   * Returns the base64 contents.
+   * 读取并返回 base64 内容。
    */
   base64(): Promise<string>
 
   /**
-   * Returns the ArrayBuffer contents.
+   * 读取并返回 ArrayBuffer 内容。
    */
   arrayBuffer(): Promise<ArrayBuffer>
 }
 
 /**
- * Reads the contents of the given file.
+ * 读取给定文件的内容。
  *
  * @public
- * @param file The given file.
- * @returns Returns the contents getters.
+ * @param file 要读取的文件
+ * @returns 返回各种内容类型的读取器
+ * @example
+ * ```typescript
+ * const file = new File(['{"x":1}'], 'x.json')
+ * const reader = readFile(file)
+ * console.log(await reader.text()) // => '{"x":1}'
+ * console.log(await reader.json()) // => {x: 1}
+ * ```
  */
-export function readFile(file: File): ReadFileResult {
-  const text: ReadFileResult['text'] = () => {
+export function readFile(file: File): ReadFileReader {
+  const text: ReadFileReader['text'] = () => {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader()
       fileReader.onload = () => {
@@ -49,7 +58,7 @@ export function readFile(file: File): ReadFileResult {
     })
   }
 
-  const json: ReadFileResult['json'] = () => {
+  const json: ReadFileReader['json'] = () => {
     return text().then(data => {
       try {
         return JSON.parse(data)
@@ -59,7 +68,7 @@ export function readFile(file: File): ReadFileResult {
     })
   }
 
-  const dataUrl: ReadFileResult['dataUrl'] = () => {
+  const dataUrl: ReadFileReader['dataUrl'] = () => {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader()
       fileReader.onload = () => {
@@ -72,13 +81,13 @@ export function readFile(file: File): ReadFileResult {
     })
   }
 
-  const base64: ReadFileResult['base64'] = () => {
+  const base64: ReadFileReader['base64'] = () => {
     return dataUrl().then(url => {
       return url.split(';base64,')[1]
     })
   }
 
-  const arrayBuffer: ReadFileResult['arrayBuffer'] = () => {
+  const arrayBuffer: ReadFileReader['arrayBuffer'] = () => {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader()
       fileReader.onload = () => {

@@ -268,7 +268,9 @@ const shareJsApiList: WechatJsApi[] = [
 /**
  * 对微信 JSSDK 的封装。
  *
- * ```
+ * @public
+ * @example
+ * ```typescript
  * const wechat = new Wechat()
  * getWechatConfigAsync().then(config => {
  *   wechat.config(config)
@@ -283,8 +285,6 @@ const shareJsApiList: WechatJsApi[] = [
  *   // => API 调用结果
  * })
  * ```
- *
- * @public
  */
 export class Wechat {
   /**

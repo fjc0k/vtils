@@ -75,7 +75,11 @@ function loadSpecificResource(
 /**
  * 加载图片、代码、样式等资源。
  *
- * ```
+ * @public
+ * @param url 要加载的资源地址
+ * @returns 返回各资源的 HTML 元素组成的数组
+ * @example
+ * ```typescript
  * loadResource([
  *   'https://foo.bar/all.js',
  *   'https://foo.bar/all.css',
@@ -89,10 +93,6 @@ function loadSpecificResource(
  *   // 资源加载完成后的操作
  * })
  * ```
- *
- * @public
- * @param url 要加载的资源地址
- * @returns 返回各资源的 HTML 元素组成的数组
  */
 export function loadResource(
   url: string | LoadResourceUrl | Array<string | LoadResourceUrl>,

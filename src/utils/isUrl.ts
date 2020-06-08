@@ -4,14 +4,14 @@ const re = /^(?:(?:https?):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!12
 /**
  * 检测传入值是否是 URL。
  *
- * ```
- * isUrl('foo.bar') // => false
- * isUrl('http://foo.bar') // => true
- * ```
- *
  * @public
  * @param value 要检测的值
  * @returns 返回检测结果
+ * @example
+ * ```typescript
+ * isUrl('foo.bar') // => false
+ * isUrl('http://foo.bar') // => true
+ * ```
  */
 export function isUrl(value: string) {
   return re.test(value)

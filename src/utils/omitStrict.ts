@@ -2,7 +2,7 @@ import { omit } from 'lodash-es'
 import { OmitStrict, OneOrMany } from '../types'
 
 /**
- * 同 omit，不过采用了严格的类型定义。
+ * 同 [omit](https://lodash.com/docs/4.17.15#omit)，不过采用了严格的类型定义。
  *
  * @public
  */

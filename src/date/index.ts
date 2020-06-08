@@ -1,5 +1,5 @@
 /**
- * 日期时间工具库。
+ * 日期时间工具库。基于 [date-fns](https://date-fns.org/v2.14.0/docs/Getting-Started)。
  *
  * @packageDocumentation
  */

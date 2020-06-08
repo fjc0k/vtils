@@ -16,13 +16,13 @@ const isValidDate = (year: number, month: number, day: number): boolean => {
 /**
  * 检测传入的值是否是合法的中国大陆居民 `18` 位身份证号码。
  *
- * ```
- * isChineseIDCardNumber('123456') // => false
- * ```
- *
  * @public
  * @param value 要检测的值
  * @returns 返回检测结果
+ * @example
+ * ```typescript
+ * isChineseIDCardNumber('123456') // => false
+ * ```
  */
 export function isChineseIDCardNumber(value: string): boolean {
   const len = value.length
