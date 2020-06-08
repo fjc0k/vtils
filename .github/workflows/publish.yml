@@ -31,7 +31,7 @@ jobs:
           npm run test
 
           if $IS_BETA; then
-            npm run publish-package -- --tag next
+            npm run publish-package-next
           else
             npm run publish-package
           fi
