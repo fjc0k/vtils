@@ -127,17 +127,17 @@ const asciiToUtf8: XToY = value =>
   binaryToUtf8(asciiToBinary(value.replace(/=+$/, '')))
 
 /**
- * Encodes the given UTF8 string to a base64 encoded ASCII string.
+ * 将给定的 UTF8 字符串编码为 base64 字符串。
  *
- * ```
+ * @public
+ * @param value 要编码的 UTF8 字符串
+ * @returns 返回编码后的 base64 字符串
+ * @example
+ * ```typescript
  * base64Encode('v') // => 'dg=='
  * base64Encode('龙') // => '6b6Z'
  * base64Encode('🐱') // => '8J+QsQ=='
  * ```
- *
- * @public
- * @param value The given UTF8 string.
- * @returns Returns the base64 encoded ASCII string.
  */
 export function base64Encode(value: string): string {
   if (canUseBufferFrom) {
@@ -148,17 +148,17 @@ export function base64Encode(value: string): string {
 }
 
 /**
- * Decodes a UTF8 string from the given base64 encoded ASCII string.
+ * 将给定的 base64 字符串解码为 UTF8 字符串。
  *
- * ```
+ * @public
+ * @param value 要解码的 base64 字符串
+ * @returns 返回解码后的 UTF8 字符串
+ * @example
+ * ```typescript
  * base64Decode('dg==') // => 'v'
  * base64Decode('6b6Z') // => '龙'
  * base64Decode('8J+QsQ==') // => '🐱'
  * ```
- *
- * @public
- * @param value The given base64 encoded ASCII string.
- * @returns Returns the decoded UTF8 string.
  */
 export function base64Decode(value: string): string {
   if (canUseBufferFrom) {
@@ -169,17 +169,17 @@ export function base64Decode(value: string): string {
 }
 
 /**
- * Encodes the given UTF8 string to a URL-safe base64url encoded ASCII string.
+ * 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。
  *
- * ```
+ * @public
+ * @param value 要编码的 UTF8 字符串
+ * @returns 返回编码后的 base64url 字符串
+ * @example
+ * ```typescript
  * base64UrlEncode('v') // => 'dg'
  * base64UrlEncode('龙') // => '6b6Z'
  * base64UrlEncode('🐱') // => '8J-QsQ'
  * ```
- *
- * @public
- * @param value The given UTF8 string.
- * @returns Returns the URL-safe base64url encoded ASCII string.
  */
 export function base64UrlEncode(value: string): string {
   return base64Encode(value)
@@ -189,17 +189,17 @@ export function base64UrlEncode(value: string): string {
 }
 
 /**
- * Decodes a UTF8 string from the given URL-safe base64url encoded ASCII string.
+ * 将给定的 base64url 字符串解码为 UTF8 字符串。
  *
- * ```
+ * @public
+ * @param value 要解码的 base64url 字符串
+ * @returns 返回解码后的 UTF8 字符串
+ * @example
+ * ```typescript
  * base64UrlDecode('dg') // => 'v'
  * base64UrlDecode('6b6Z') // => '龙'
  * base64UrlDecode('8J-QsQ') // => '🐱'
  * ```
- *
- * @public
- * @param value The given URL-safe base64url encoded ASCII string.
- * @returns Returns the decoded UTF8 string.
  */
 export function base64UrlDecode(value: string): string {
   return base64Decode(value.replace(/-/g, '+').replace(/_/g, '/'))
