@@ -11,7 +11,7 @@ import { useReachBottom } from './useReachBottom'
  */
 export interface UseScrollLoadMoreOptions {
   /**
-   * 距离底部阈值（单位：像素），小于该值时触发加载。
+   * 距离底部偏移量（单位：像素），小于该值时触发加载。
    *
    * @default 0
    */
@@ -34,7 +34,6 @@ export interface UseScrollLoadMoreOptions {
  * @param options 滚动选项
  * @returns 返回结果
  */
-// TODO: 待测试
 export function useScrollLoadMore<TItem>(
   service: UseLoadMoreService<TItem>,
   deps: DependencyList,
