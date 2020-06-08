@@ -1,6 +1,9 @@
-import { DependencyList, useCallback, useEffect, useState } from 'react'
+import { DependencyList, useCallback, useEffect, useRef, useState } from 'react'
+import { useLatest } from 'react-use'
 
 /**
+ * 加载服务载荷。
+ *
  * @public
  */
 export interface UseLoadMoreServicePayload {
@@ -11,6 +14,8 @@ export interface UseLoadMoreServicePayload {
 }
 
 /**
+ * 加载服务结果。
+ *
  * @public
  */
 export type UseLoadMoreServiceResult<TItem> =
@@ -23,6 +28,8 @@ export type UseLoadMoreServiceResult<TItem> =
     }
 
 /**
+ * 加载服务。
+ *
  * @public
  */
 export interface UseLoadMoreService<TItem> {
@@ -30,6 +37,8 @@ export interface UseLoadMoreService<TItem> {
 }
 
 /**
+ * 加载更多结果。
+ *
  * @public
  */
 export interface UseLoadMoreResult<TItem> {
@@ -48,9 +57,9 @@ export interface UseLoadMoreResult<TItem> {
   /** 数据是否已加载完 */
   noMore: boolean
   /** 加载更多数据 */
-  loadMore: () => void
+  loadMore: () => Promise<void>
   /** 从首页重新加载数据 */
-  reload: () => void
+  reload: () => Promise<void>
 }
 
 /**
@@ -58,7 +67,7 @@ export interface UseLoadMoreResult<TItem> {
  *
  * @public
  * @param service 数据加载服务
- * @param deps 依赖，依赖若发生变化则从首页重新加载数据
+ * @param deps 依赖若发生变化则从首页重新加载数据
  * @returns 返回结果
  */
 export function useLoadMore<TItem>(
@@ -67,74 +76,83 @@ export function useLoadMore<TItem>(
 ): UseLoadMoreResult<TItem> {
   const [data, setData] = useState<TItem[]>([])
   const [pageNumber, setPageNumber] = useState<number>(1)
-  const [loadingState, setLoadingState] = useState(() => ({
-    loading: true,
-    initialLoading: true,
-    incrementalLoading: true,
-  }))
+  const [initialLoading, setInitialLoading] = useState(true)
+  const [incrementalLoading, setIncrementalLoading] = useState(false)
+  const loading = initialLoading || incrementalLoading
   const [noMore, setNoMore] = useState<boolean>(false)
   const [total, setTotal] = useState<number>(0)
+  const firstRef = useRef(true)
 
-  const load = useCallback(
-    (nextPageNumber: number) => {
-      setPageNumber(nextPageNumber)
+  const latest = useLatest({
+    service,
+    data,
+    loading,
+    pageNumber,
+    noMore,
+  })
+
+  const load = useCallback((nextPageNumber: number): Promise<void> => {
+    return new Promise<void>((resolve, reject) => {
+      const { data, service } = latest.current
       const isFirstPage = nextPageNumber === 1
-      setLoadingState({
-        loading: true,
-        initialLoading: isFirstPage,
-        incrementalLoading: !isFirstPage,
-      })
+      setInitialLoading(isFirstPage)
+      setIncrementalLoading(!isFirstPage)
+      setPageNumber(nextPageNumber)
       service({
         offset: data.length,
         pageNumber: nextPageNumber,
-      }).then(res => {
-        setLoadingState({
-          loading: false,
-          initialLoading: false,
-          incrementalLoading: false,
-        })
-
-        if (Array.isArray(res)) {
-          setNoMore(res.length === 0)
-          setData(data => (isFirstPage ? res : [...data, ...res]))
-        } else {
-          setTotal(res.total)
-          setData(data => {
-            setNoMore(
-              (isFirstPage ? res.data.length : data.length + res.data.length) >=
-                res.total,
-            )
-            return isFirstPage ? res.data : [...data, ...res.data]
-          })
-        }
       })
-    },
-    [data, ...deps],
-  )
+        .then(res => {
+          setInitialLoading(false)
+          setIncrementalLoading(false)
+
+          if (Array.isArray(res)) {
+            setNoMore(res.length === 0)
+            setData(isFirstPage ? res : [...data, ...res])
+          } else {
+            setTotal(res.total)
+            setNoMore(
+              (isFirstPage ? 0 : data.length) + res.data.length >= res.total,
+            )
+            setData(isFirstPage ? res.data : [...data, ...res.data])
+          }
+
+          resolve()
+        })
+        .catch(reject)
+    })
+  }, [])
 
   const loadMore = useCallback(() => {
-    if (!noMore && !loadingState.loading) {
-      load(pageNumber + 1)
+    const { noMore, loading, pageNumber } = latest.current
+    if (!noMore && !loading) {
+      return load(pageNumber + 1)
     }
-  }, [pageNumber, loadingState.loading, noMore, load])
+    return Promise.resolve()
+  }, [])
 
   const reload = useCallback(() => {
-    load(1)
-  }, [load])
+    const { loading } = latest.current
+    if (firstRef.current || !loading) {
+      firstRef.current = false
+      return load(1)
+    }
+    return Promise.resolve()
+  }, [])
 
   useEffect(() => {
     reload()
   }, deps)
 
   return {
-    pageNumber: pageNumber,
-    data: data,
-    total: total,
-    loading: loadingState.loading,
-    initialLoading: loadingState.initialLoading,
-    incrementalLoading: loadingState.incrementalLoading,
-    noMore: noMore,
-    loadMore: loadMore,
-    reload: reload,
+    pageNumber,
+    data,
+    total,
+    loading,
+    initialLoading,
+    incrementalLoading,
+    noMore,
+    loadMore,
+    reload,
   }
 }

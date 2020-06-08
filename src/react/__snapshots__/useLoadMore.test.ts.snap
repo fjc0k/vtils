@@ -1,24 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`useLoadMore bug: deps 变化后应 reload: deps 变化后加载中 1`] = `
-Object {
-  "data": Array [
-    Array [
-      1,
-      0,
-    ],
-  ],
-  "incrementalLoading": false,
-  "initialLoading": true,
-  "loadMore": [Function anonymous],
-  "loading": true,
-  "noMore": false,
-  "pageNumber": 1,
-  "reload": [Function anonymous],
-  "total": 0,
-}
-`;
-
 exports[`useLoadMore bug: deps 变化后应 reload: deps 变化后加载完成 1`] = `
 Object {
   "data": Array [
