@@ -7,8 +7,7 @@ on:
 
 jobs:
   publish:
-    # if: |
-    #   startsWith(github.event.push.commits[0].message, 'chore(release):')
+    if: ${{ startsWith(github.event.commits[0].message, 'chore(release):') }}
     name: Publish
     runs-on: ubuntu-latest
     steps:
@@ -19,20 +18,20 @@ jobs:
         with:
           registry-url: 'https://registry.npmjs.org'
       - run: |
-          echo $XX
-          echo "$IS_BETA"
+          npx pnpm install
+          npm run build
+          npm run test
+
+          # Publish package
           if $IS_BETA; then
-            echo "is beta"
+            npm run publish-package -- --tag next
           else
-            echo "not beta"
+            npm run publish-package
           fi
-          # 12 chore(release): test
-          # npx pnpm install
-          # npm run build
-          # npm run test
-          # cd ./lib
-          # npm publish
+
+          # Publish docs
+          npm run publish-docs -- --user "github-actions-bot <support+actions@github.com>"
         env:
-          XX: ${{ toJSON(github.event) }}
-          IS_BETA: ${{ contains(github.event.commits[0].message, 'beta') }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          IS_BETA: ${{ contains(github.event.commits[0].message, 'beta') }}
