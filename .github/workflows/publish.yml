@@ -16,9 +16,16 @@ jobs:
           ref: v3
       - uses: actions/setup-node@v1
         with:
+          node-version: '13'
           registry-url: 'https://registry.npmjs.org'
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ hashFiles('pnpm-lock.yaml') }}
+      - if: ${{ steps.cache.outputs.cache-hit != 'true' }}
+        run: npx pnpm install
       - run: |
-          npx pnpm install
           npm run build
           npm run test
 
