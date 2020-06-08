@@ -4,14 +4,7 @@
 
 ## base64Decode() function
 
-Decodes a UTF8 string from the given base64 encoded ASCII string.
-
-```
-base64Decode('dg==') // => 'v'
-base64Decode('6b6Z') // => '龙'
-base64Decode('8J+QsQ==') // => '🐱'
-
-```
+将给定的 base64 字符串解码为 UTF8 字符串。
 
 <b>Signature:</b>
 
@@ -23,11 +16,21 @@ export declare function base64Decode(value: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  value | string | The given base64 encoded ASCII string. |
+|  value | string | 要解码的 base64 字符串 |
 
 <b>Returns:</b>
 
 string
 
-Returns the decoded UTF8 string.
+返回解码后的 UTF8 字符串
+
+## Example
+
+
+```typescript
+base64Decode('dg==') // => 'v'
+base64Decode('6b6Z') // => '龙'
+base64Decode('8J+QsQ==') // => '🐱'
+
+```
 

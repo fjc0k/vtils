@@ -4,39 +4,14 @@
 
 ## utils package
 
+基础工具库。基于 [Lodash](https://lodash.com/docs/4.17.15)<!-- -->。
+
 ## Classes
 
 |  Class | Description |
 |  --- | --- |
-|  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。
-```
-const bus = new EventBus<{
-  success: (payload: { message: string }) => any
-}>()
-bus.on('success', ({ message }) => console.log(message))
-bus.emit('success', { message: '提交成功' })
-// => 控制台输出: 提交成功
-
-```
- TEvents 事件名称及其对应的回调描述 |
-|  [Wechat](./utils.wechat.md) | 对微信 JSSDK 的封装。
-```
-const wechat = new Wechat()
-getWechatConfigAsync().then(config => {
-  wechat.config(config)
-})
-wechat.updateShareData({
-  title: '分享标题',
-  desc: '分享描述',
-  link: '分享链接',
-  imgUrl: '缩略图地址',
-})
-wechat.invoke('scanQRCode').then(res => {
-  // => API 调用结果
-})
-
-```
- |
+|  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TEvents 事件名称及其对应的回调描述 |
+|  [Wechat](./utils.wechat.md) | 对微信 JSSDK 的封装。 |
 
 ## Enumerations
 
@@ -48,104 +23,26 @@ wechat.invoke('scanQRCode').then(res => {
 
 |  Function | Description |
 |  --- | --- |
-|  [base64Decode(value)](./utils.base64decode.md) | Decodes a UTF8 string from the given base64 encoded ASCII string.
-```
-base64Decode('dg==') // => 'v'
-base64Decode('6b6Z') // => '龙'
-base64Decode('8J+QsQ==') // => '🐱'
-
-```
- |
-|  [base64Encode(value)](./utils.base64encode.md) | Encodes the given UTF8 string to a base64 encoded ASCII string.
-```
-base64Encode('v') // => 'dg=='
-base64Encode('龙') // => '6b6Z'
-base64Encode('🐱') // => '8J+QsQ=='
-
-```
- |
-|  [base64UrlDecode(value)](./utils.base64urldecode.md) | Decodes a UTF8 string from the given URL-safe base64url encoded ASCII string.
-```
-base64UrlDecode('dg') // => 'v'
-base64UrlDecode('6b6Z') // => '龙'
-base64UrlDecode('8J-QsQ') // => '🐱'
-
-```
- |
-|  [base64UrlEncode(value)](./utils.base64urlencode.md) | Encodes the given UTF8 string to a URL-safe base64url encoded ASCII string.
-```
-base64UrlEncode('v') // => 'dg'
-base64UrlEncode('龙') // => '6b6Z'
-base64UrlEncode('🐱') // => '8J-QsQ'
-
-```
- |
-|  [bindEvent(target)](./utils.bindevent.md) |  |
-|  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。
-```
-dedent` a\n b` // => 'a\nb'
-
-```
- |
-|  [indent(literals, interpolations)](./utils.indent.md) | 每一行紧跟前导空白的插入值为多行时，保持缩进。
-```
-indent` ${'a\nb'}` // => ' a\n b'
-
-```
- |
-|  [isChineseIDCardNumber(value)](./utils.ischineseidcardnumber.md) | 检测传入的值是否是合法的中国大陆居民 <code>18</code> 位身份证号码。
-```
-isChineseIDCardNumber('123456') // => false
-
-```
- |
-|  [isPossibleChineseMobilePhoneNumber(value)](./utils.ispossiblechinesemobilephonenumber.md) | 检测传入的值是否可能是中国的手机号码。
-```
-isPossibleChineseMobilePhoneNumber('10086') // => false
-isPossibleChineseMobilePhoneNumber('18087030088') // => true
-
-```
- |
-|  [isUrl(value)](./utils.isurl.md) | 检测传入值是否是 URL。
-```
-isUrl('foo.bar') // => false
-isUrl('http://foo.bar') // => true
-
-```
- |
-|  [loadResource(url)](./utils.loadresource.md) | 加载图片、代码、样式等资源。
-```
-loadResource([
-  'https://foo.bar/all.js',
-  'https://foo.bar/all.css',
-  'https://foo.bar/logo.png',
-  {
-    type: LoadResourceUrlType.js,
-    path: 'https://s1.foo.bar/js/full',
-    alternatePath: 'https://s2.foo.bar/js/full',
-  },
-]).then(() => {
-  // 资源加载完成后的操作
-})
-
-```
- |
-|  [readFile(file)](./utils.readfile.md) | Reads the contents of the given file. |
-|  [wait(milliseconds)](./utils.wait.md) | 等待一段时间。
-```
-wait(1000).then(() => {
-  console.log('ok')
-}) // => 1秒后在控制台打印字符串: ok
-
-```
- |
+|  [base64Decode(value)](./utils.base64decode.md) | 将给定的 base64 字符串解码为 UTF8 字符串。 |
+|  [base64Encode(value)](./utils.base64encode.md) | 将给定的 UTF8 字符串编码为 base64 字符串。 |
+|  [base64UrlDecode(value)](./utils.base64urldecode.md) | 将给定的 base64url 字符串解码为 UTF8 字符串。 |
+|  [base64UrlEncode(value)](./utils.base64urlencode.md) | 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。 |
+|  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
+|  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
+|  [indent(literals, interpolations)](./utils.indent.md) | 每一行紧跟前导空白的插入值为多行时，保持缩进。 |
+|  [isChineseIDCardNumber(value)](./utils.ischineseidcardnumber.md) | 检测传入的值是否是合法的中国大陆居民 <code>18</code> 位身份证号码。 |
+|  [isPossibleChineseMobilePhoneNumber(value)](./utils.ispossiblechinesemobilephonenumber.md) | 检测传入的值是否可能是中国的手机号码。 |
+|  [isUrl(value)](./utils.isurl.md) | 检测传入值是否是 URL。 |
+|  [loadResource(url)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
+|  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
+|  [wait(milliseconds)](./utils.wait.md) | 等待一段时间。 |
 
 ## Interfaces
 
 |  Interface | Description |
 |  --- | --- |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
-|  [ReadFileResult](./utils.readfileresult.md) |  |
+|  [ReadFileReader](./utils.readfilereader.md) | 各种内容类型的读取器。 |
 |  [WaitResult](./utils.waitresult.md) |  |
 |  [WechatChooseImageParams](./utils.wechatchooseimageparams.md) |  |
 |  [WechatConfigParams](./utils.wechatconfigparams.md) |  |
@@ -158,15 +55,15 @@ wait(1000).then(() => {
 
 |  Variable | Description |
 |  --- | --- |
-|  [keysStrict](./utils.keysstrict.md) | 同 keys，不过采用了严格的类型定义。 |
-|  [omitStrict](./utils.omitstrict.md) | 同 omit，不过采用了严格的类型定义。 |
-|  [pickStrict](./utils.pickstrict.md) | 同 pick，不过采用了严格的类型定义。 |
+|  [keysStrict](./utils.keysstrict.md) | 同 [keys](https://lodash.com/docs/4.17.15#keys)<!-- -->，不过采用了严格的类型定义。 |
+|  [omitStrict](./utils.omitstrict.md) | 同 [omit](https://lodash.com/docs/4.17.15#omit)<!-- -->，不过采用了严格的类型定义。 |
+|  [pickStrict](./utils.pickstrict.md) | 同 [pick](https://lodash.com/docs/4.17.15#pick)<!-- -->，不过采用了严格的类型定义。 |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [BindEventResult](./utils.bindeventresult.md) |  |
+|  [BindEventFunction](./utils.bindeventfunction.md) | 绑定事件函数。 |
 |  [WechatErrorCallback](./utils.wechaterrorcallback.md) |  |
 |  [WechatJsApi](./utils.wechatjsapi.md) | 微信 JSSDK 支持的 API。 |
 |  [WechatNonBaseMenuItem](./utils.wechatnonbasemenuitem.md) | 微信内网页的非基础菜单列表。 |

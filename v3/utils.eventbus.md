@@ -6,7 +6,18 @@
 
 事件巴士，管理事件的发布与订阅。
 
+ TEvents 事件名称及其对应的回调描述
+
+<b>Signature:</b>
+
+```typescript
+export declare class EventBus<TEvents extends Record<string, (...args: any[]) => any>> 
 ```
+
+## Example
+
+
+```typescript
 const bus = new EventBus<{
   success: (payload: { message: string }) => any
 }>()
@@ -14,13 +25,6 @@ bus.on('success', ({ message }) => console.log(message))
 bus.emit('success', { message: '提交成功' })
 // => 控制台输出: 提交成功
 
-```
- TEvents 事件名称及其对应的回调描述
-
-<b>Signature:</b>
-
-```typescript
-export declare class EventBus<TEvents extends Record<string, (...args: any[]) => any>> 
 ```
 
 ## Methods

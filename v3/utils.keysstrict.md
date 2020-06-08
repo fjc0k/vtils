@@ -4,7 +4,7 @@
 
 ## keysStrict variable
 
-同 keys，不过采用了严格的类型定义。
+同 [keys](https://lodash.com/docs/4.17.15#keys)<!-- -->，不过采用了严格的类型定义。
 
 <b>Signature:</b>
 

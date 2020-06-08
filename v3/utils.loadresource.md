@@ -6,22 +6,6 @@
 
 加载图片、代码、样式等资源。
 
-```
-loadResource([
-  'https://foo.bar/all.js',
-  'https://foo.bar/all.css',
-  'https://foo.bar/logo.png',
-  {
-    type: LoadResourceUrlType.js,
-    path: 'https://s1.foo.bar/js/full',
-    alternatePath: 'https://s2.foo.bar/js/full',
-  },
-]).then(() => {
-  // 资源加载完成后的操作
-})
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -39,4 +23,23 @@ export declare function loadResource(url: string | LoadResourceUrl | Array<strin
 Promise&lt;Array&lt;HTMLScriptElement \| HTMLLinkElement \| HTMLImageElement&gt;&gt;
 
 返回各资源的 HTML 元素组成的数组
+
+## Example
+
+
+```typescript
+loadResource([
+  'https://foo.bar/all.js',
+  'https://foo.bar/all.css',
+  'https://foo.bar/logo.png',
+  {
+    type: LoadResourceUrlType.js,
+    path: 'https://s1.foo.bar/js/full',
+    alternatePath: 'https://s2.foo.bar/js/full',
+  },
+]).then(() => {
+  // 资源加载完成后的操作
+})
+
+```
 

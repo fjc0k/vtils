@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function formatDate(date: Date | number, formatter: FormatDateFormatter, options?: Parameters<typeof format>[2]): string;
+export declare function formatDate(date: Date | number, renderer: FormatDateRenderer, options?: Parameters<typeof format>[2]): string;
 ```
 
 ## Parameters
@@ -17,7 +17,7 @@ export declare function formatDate(date: Date | number, formatter: FormatDateFor
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  date | Date \| number | 要格式化的日期，支持 Date、秒或毫秒时间戳 |
-|  formatter | [FormatDateFormatter](./date.formatdateformatter.md) | 格式化器 |
+|  renderer | [FormatDateRenderer](./date.formatdaterenderer.md) | 渲染器 |
 |  options | Parameters&lt;typeof format&gt;\[2\] | 选项 |
 
 <b>Returns:</b>

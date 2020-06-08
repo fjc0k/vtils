@@ -6,7 +6,16 @@
 
 对微信 JSSDK 的封装。
 
+<b>Signature:</b>
+
+```typescript
+export declare class Wechat 
 ```
+
+## Example
+
+
+```typescript
 const wechat = new Wechat()
 getWechatConfigAsync().then(config => {
   wechat.config(config)
@@ -21,12 +30,6 @@ wechat.invoke('scanQRCode').then(res => {
   // => API 调用结果
 })
 
-```
-
-<b>Signature:</b>
-
-```typescript
-export declare class Wechat 
 ```
 
 ## Constructors

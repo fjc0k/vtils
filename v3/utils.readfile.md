@@ -4,23 +4,34 @@
 
 ## readFile() function
 
-Reads the contents of the given file.
+读取给定文件的内容。
 
 <b>Signature:</b>
 
 ```typescript
-export declare function readFile(file: File): ReadFileResult;
+export declare function readFile(file: File): ReadFileReader;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  file | File | The given file. |
+|  file | File | 要读取的文件 |
 
 <b>Returns:</b>
 
-[ReadFileResult](./utils.readfileresult.md)
+[ReadFileReader](./utils.readfilereader.md)
 
-Returns the contents getters.
+返回各种内容类型的读取器
+
+## Example
+
+
+```typescript
+const file = new File(['{"x":1}'], 'x.json')
+const reader = readFile(file)
+console.log(await reader.text()) // => '{"x":1}'
+console.log(await reader.json()) // => {x: 1}
+
+```
 

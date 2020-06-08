@@ -4,14 +4,7 @@
 
 ## base64UrlDecode() function
 
-Decodes a UTF8 string from the given URL-safe base64url encoded ASCII string.
-
-```
-base64UrlDecode('dg') // => 'v'
-base64UrlDecode('6b6Z') // => '龙'
-base64UrlDecode('8J-QsQ') // => '🐱'
-
-```
+将给定的 base64url 字符串解码为 UTF8 字符串。
 
 <b>Signature:</b>
 
@@ -23,11 +16,21 @@ export declare function base64UrlDecode(value: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  value | string | The given URL-safe base64url encoded ASCII string. |
+|  value | string | 要解码的 base64url 字符串 |
 
 <b>Returns:</b>
 
 string
 
-Returns the decoded UTF8 string.
+返回解码后的 UTF8 字符串
+
+## Example
+
+
+```typescript
+base64UrlDecode('dg') // => 'v'
+base64UrlDecode('6b6Z') // => '龙'
+base64UrlDecode('8J-QsQ') // => '🐱'
+
+```
 

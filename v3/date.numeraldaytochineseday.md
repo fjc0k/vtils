@@ -9,14 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function numeralDayToChineseDay(day: keyof typeof dayMap): string;
+export declare function numeralDayToChineseDay(day: NumeralDay): string;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  day | keyof typeof dayMap | 数字的星期几 |
+|  day | [NumeralDay](./date.numeralday.md) | 数字的星期几 |
 
 <b>Returns:</b>
 

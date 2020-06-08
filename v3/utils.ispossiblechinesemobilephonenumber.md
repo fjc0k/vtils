@@ -6,12 +6,6 @@
 
 检测传入的值是否可能是中国的手机号码。
 
-```
-isPossibleChineseMobilePhoneNumber('10086') // => false
-isPossibleChineseMobilePhoneNumber('18087030088') // => true
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -29,4 +23,13 @@ export declare function isPossibleChineseMobilePhoneNumber(value: string | numbe
 boolean
 
 返回检测结果
+
+## Example
+
+
+```typescript
+isPossibleChineseMobilePhoneNumber('10086') // => false
+isPossibleChineseMobilePhoneNumber('18087030088') // => true
+
+```
 

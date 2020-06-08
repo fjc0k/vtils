@@ -4,23 +4,26 @@
 
 ## date package
 
+日期时间工具库。基于 [date-fns](https://date-fns.org/v2.14.0/docs/Getting-Started)<!-- -->。
+
 ## Enumerations
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [FormatDatePattern](./date.formatdatepattern.md) |  |
-|  [FormatDateSimplePattern](./date.formatdatesimplepattern.md) |  |
+|  [FormatDatePlaceholder](./date.formatdateplaceholder.md) | 日期格式化占位符。 |
+|  [FormatDateSimplePlaceholder](./date.formatdatesimpleplaceholder.md) | 简易的日期格式化占位符。 |
 
 ## Functions
 
 |  Function | Description |
 |  --- | --- |
-|  [formatDate(date, formatter, options)](./date.formatdate.md) | 格式化日期。 |
+|  [formatDate(date, renderer, options)](./date.formatdate.md) | 格式化日期。 |
 |  [numeralDayToChineseDay(day)](./date.numeraldaytochineseday.md) | 数字星期转中文星期。<code>0</code> 和 <code>7</code> 都视为星期日。 |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [FormatDateFormatter](./date.formatdateformatter.md) |  |
+|  [FormatDateRenderer](./date.formatdaterenderer.md) | 日期格式化渲染器。 |
+|  [NumeralDay](./date.numeralday.md) | 数字星期。 |
 

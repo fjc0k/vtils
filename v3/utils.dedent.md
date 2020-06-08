@@ -6,11 +6,6 @@
 
 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。
 
-```
-dedent` a\n b` // => 'a\nb'
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -29,4 +24,12 @@ export declare function dedent(literals: TemplateStringsArray, ...interpolations
 string
 
 返回处理后的结果
+
+## Example
+
+
+```typescript
+dedent` a\n b` // => 'a\nb'
+
+```
 

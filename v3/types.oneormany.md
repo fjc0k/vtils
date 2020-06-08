@@ -11,3 +11,12 @@
 ```typescript
 export declare type OneOrMany<T> = T | T[];
 ```
+
+## Example
+
+
+```typescript
+type X = OneOrMany<number> // => number | number[]
+
+```
+

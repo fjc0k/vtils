@@ -6,11 +6,6 @@
 
 每一行紧跟前导空白的插入值为多行时，保持缩进。
 
-```
-indent` ${'a\nb'}` // => ' a\n b'
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -29,4 +24,12 @@ export declare function indent(literals: TemplateStringsArray, ...interpolations
 string
 
 返回处理后的结果
+
+## Example
+
+
+```typescript
+indent` ${'a\nb'}` // => ' a\n b'
+
+```
 

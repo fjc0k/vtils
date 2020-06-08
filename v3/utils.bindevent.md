@@ -4,20 +4,33 @@
 
 ## bindEvent() function
 
+绑定事件。
 
 <b>Signature:</b>
 
 ```typescript
-export declare function bindEvent<T extends Record<'addEventListener' | 'removeEventListener', AnyFunction>>(target: T): BindEventResult<T>;
+export declare function bindEvent<T extends Record<'addEventListener' | 'removeEventListener', AnyFunction>>(target: T): BindEventFunction<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  target | T |  |
+|  target | T | 事件绑定的目标 |
 
 <b>Returns:</b>
 
-[BindEventResult](./utils.bindeventresult.md)<!-- -->&lt;T&gt;
+[BindEventFunction](./utils.bindeventfunction.md)<!-- -->&lt;T&gt;
+
+返回事件绑定函数
+
+## Example
+
+
+```typescript
+const bindWindowEvent = bindEvent(window)
+const unbindClick = bindWindowEvent('click', console.log)
+const unbindScroll = bindWindowEvent('scroll', console.log)
+
+```
 

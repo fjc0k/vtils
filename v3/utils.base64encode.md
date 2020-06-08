@@ -4,14 +4,7 @@
 
 ## base64Encode() function
 
-Encodes the given UTF8 string to a base64 encoded ASCII string.
-
-```
-base64Encode('v') // => 'dg=='
-base64Encode('龙') // => '6b6Z'
-base64Encode('🐱') // => '8J+QsQ=='
-
-```
+将给定的 UTF8 字符串编码为 base64 字符串。
 
 <b>Signature:</b>
 
@@ -23,11 +16,21 @@ export declare function base64Encode(value: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  value | string | The given UTF8 string. |
+|  value | string | 要编码的 UTF8 字符串 |
 
 <b>Returns:</b>
 
 string
 
-Returns the base64 encoded ASCII string.
+返回编码后的 base64 字符串
+
+## Example
+
+
+```typescript
+base64Encode('v') // => 'dg=='
+base64Encode('龙') // => '6b6Z'
+base64Encode('🐱') // => '8J+QsQ=='
+
+```
 

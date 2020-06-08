@@ -4,14 +4,7 @@
 
 ## base64UrlEncode() function
 
-Encodes the given UTF8 string to a URL-safe base64url encoded ASCII string.
-
-```
-base64UrlEncode('v') // => 'dg'
-base64UrlEncode('龙') // => '6b6Z'
-base64UrlEncode('🐱') // => '8J-QsQ'
-
-```
+将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。
 
 <b>Signature:</b>
 
@@ -23,11 +16,21 @@ export declare function base64UrlEncode(value: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  value | string | The given UTF8 string. |
+|  value | string | 要编码的 UTF8 字符串 |
 
 <b>Returns:</b>
 
 string
 
-Returns the URL-safe base64url encoded ASCII string.
+返回编码后的 base64url 字符串
+
+## Example
+
+
+```typescript
+base64UrlEncode('v') // => 'dg'
+base64UrlEncode('龙') // => '6b6Z'
+base64UrlEncode('🐱') // => '8J-QsQ'
+
+```
 

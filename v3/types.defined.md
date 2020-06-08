@@ -11,3 +11,13 @@
 ```typescript
 export declare type Defined<T> = Exclude<T, undefined>;
 ```
+
+## Example
+
+
+```typescript
+type X = string | undefined
+type Y = Defined<X> // => string
+
+```
+

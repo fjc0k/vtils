@@ -6,11 +6,6 @@
 
 检测传入的值是否是合法的中国大陆居民 `18` 位身份证号码。
 
-```
-isChineseIDCardNumber('123456') // => false
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -28,4 +23,12 @@ export declare function isChineseIDCardNumber(value: string): boolean;
 boolean
 
 返回检测结果
+
+## Example
+
+
+```typescript
+isChineseIDCardNumber('123456') // => false
+
+```
 

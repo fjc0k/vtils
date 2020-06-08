@@ -6,13 +6,6 @@
 
 等待一段时间。
 
-```
-wait(1000).then(() => {
-  console.log('ok')
-}) // => 1秒后在控制台打印字符串: ok
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -28,4 +21,14 @@ export declare function wait(milliseconds: number): WaitResult;
 <b>Returns:</b>
 
 [WaitResult](./utils.waitresult.md)
+
+## Example
+
+
+```typescript
+wait(1000).then(() => {
+  console.log('ok')
+}) // => 1秒后在控制台打印字符串: ok
+
+```
 
