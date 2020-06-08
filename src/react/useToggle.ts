@@ -17,10 +17,15 @@ export type UseToggleResult = [
  * 布尔值切换器。
  *
  * @public
- * @param initialValue - 初始值
+ * @param initialValue 初始值
+ * @returns 返回结果和操作
  * @example
  * ```typescript
- * useToggle(false)
+ * const [value, toggle] = useToggle(false) // value: false
+ * toggle() // value: true
+ * toggle.set(false) // value: false
+ * toggle.true() // => value: true
+ * toggle.false() // => value: false
  * ```
  */
 export function useToggle(initialValue: boolean): UseToggleResult {
