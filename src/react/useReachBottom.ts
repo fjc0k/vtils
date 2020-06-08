@@ -6,12 +6,12 @@ import { MutableRefObject, useEffect, useRef } from 'react'
 import { useLatest } from 'react-use'
 
 /**
- * 到达页面底部时触发回调。
+ * 立即触发一次回调，并且每当到达页面底部时触发回调。
  *
  * @public
- * @param callback - 回调
- * @param offset - 阈值
- * @returns ref
+ * @param callback 回调
+ * @param offset 触底偏移量
+ * @returns 返回
  */
 export function useReachBottom<T extends HTMLElement>(
   callback: () => any,
@@ -25,8 +25,12 @@ export function useReachBottom<T extends HTMLElement>(
     const latestDebouncedCallback = debounce(
       () => latestCallback.current(),
       200,
-      { leading: true },
+      {
+        leading: true,
+        trailing: true,
+      },
     )
+
     const unbindEvent = bindEvent(
       (containerRef.current as HTMLElement | null) || window,
     )('scroll', function () {
@@ -50,6 +54,10 @@ export function useReachBottom<T extends HTMLElement>(
         }
       }
     })
+
+    // 立即触发一次回调
+    latestDebouncedCallback()
+
     return () => {
       unbindEvent()
       latestDebouncedCallback.cancel()

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { render } from '@testing-library/react'
 import { renderHook } from '@testing-library/react-hooks'
 import { useReachBottom } from './useReachBottom'
+import { wait } from '../utils'
 
 Object.defineProperty(HTMLElement.prototype, 'scrollHeight', {
   configurable: true,
@@ -25,38 +26,48 @@ Object.defineProperty(HTMLElement.prototype, 'clientHeight', {
 
 describe('useReachBottom', () => {
   describe('window', () => {
-    test('未到达底部，不触发(offset 默认为 0)', () => {
+    test('未到达底部，不触发(offset 默认为 0)', async () => {
       const handleReachBottom = jest.fn()
 
       renderHook(() => useReachBottom(handleReachBottom))
 
-      // @ts-ignore
-      document.documentElement.scrollHeight = window.innerHeight * 2
-      document.documentElement.scrollTop = window.innerHeight - 1
-
-      window.dispatchEvent(new Event('scroll'))
-
-      expect(handleReachBottom).not.toBeCalled()
-    })
-
-    test('未到达底部，但通过改变 offset 使其触发', () => {
-      const handleReachBottom = jest.fn()
-
-      renderHook(() => useReachBottom(handleReachBottom, 1))
+      expect(handleReachBottom).toBeCalled().toBeCalledTimes(1)
 
       // @ts-ignore
       document.documentElement.scrollHeight = window.innerHeight * 2
       document.documentElement.scrollTop = window.innerHeight - 1
 
       window.dispatchEvent(new Event('scroll'))
+
+      await wait(300)
 
       expect(handleReachBottom).toBeCalled().toBeCalledTimes(1)
     })
 
-    test('到达底部，触发', () => {
+    test('未到达底部，但通过改变 offset 使其触发', async () => {
+      const handleReachBottom = jest.fn()
+
+      renderHook(() => useReachBottom(handleReachBottom, 1))
+
+      expect(handleReachBottom).toBeCalled().toBeCalledTimes(1)
+
+      // @ts-ignore
+      document.documentElement.scrollHeight = window.innerHeight * 2
+      document.documentElement.scrollTop = window.innerHeight - 1
+
+      window.dispatchEvent(new Event('scroll'))
+
+      await wait(300)
+
+      expect(handleReachBottom).toBeCalled().toBeCalledTimes(2)
+    })
+
+    test('到达底部，触发', async () => {
       const handleReachBottom = jest.fn()
 
       renderHook(() => useReachBottom(handleReachBottom, 0))
+
+      expect(handleReachBottom).toBeCalled().toBeCalledTimes(1)
 
       // @ts-ignore
       document.documentElement.scrollHeight = window.innerHeight * 2
@@ -64,7 +75,9 @@ describe('useReachBottom', () => {
 
       window.dispatchEvent(new Event('scroll'))
 
-      expect(handleReachBottom).toBeCalled().toBeCalledTimes(1)
+      await wait(300)
+
+      expect(handleReachBottom).toBeCalled().toBeCalledTimes(2)
     })
   })
 
@@ -84,7 +97,7 @@ describe('useReachBottom', () => {
       return <div ref={ref} />
     }
 
-    test('未到达底部，不触发', () => {
+    test('未到达底部，不触发', async () => {
       const handleReachBottom = jest.fn()
       render(
         <ScrollArea
@@ -100,10 +113,11 @@ describe('useReachBottom', () => {
           }}
         />,
       )
-      expect(handleReachBottom).not.toBeCalled()
+      await wait(300)
+      expect(handleReachBottom).toBeCalled().toBeCalledTimes(1)
     })
 
-    test('未到达底部，但通过改变 offset 使其触发', () => {
+    test('未到达底部，但通过改变 offset 使其触发', async () => {
       const handleReachBottom = jest.fn()
       render(
         <ScrollArea
@@ -119,10 +133,13 @@ describe('useReachBottom', () => {
           }}
         />,
       )
-      expect(handleReachBottom).toBeCalled().toBeCalledTimes(1)
+
+      await wait(300)
+
+      expect(handleReachBottom).toBeCalled().toBeCalledTimes(2)
     })
 
-    test('到达底部，触发', () => {
+    test('到达底部，触发', async () => {
       const handleReachBottom = jest.fn()
       render(
         <ScrollArea
@@ -138,7 +155,10 @@ describe('useReachBottom', () => {
           }}
         />,
       )
-      expect(handleReachBottom).toBeCalled().toBeCalledTimes(1)
+
+      await wait(300)
+
+      expect(handleReachBottom).toBeCalled().toBeCalledTimes(2)
     })
   })
 })
