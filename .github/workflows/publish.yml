@@ -7,7 +7,8 @@ on:
 
 jobs:
   publish:
-    if: startsWith(github.event.commits[0].message, 'chore(release):')
+    if: |
+      startsWith(github.event.commits[0].message, 'chore(release):')
     name: Publish
     runs-on: ubuntu-latest
     steps:
