@@ -2,7 +2,7 @@ import { OneOrMany } from '../types'
 import { pick } from 'lodash-es'
 
 /**
- * 同 [pick](https://lodash.com/docs/4.17.15#pick)，不过采用了严格的类型定义。
+ * 同 {@link https://lodash.com/docs/4.17.15#pick | pick}，不过采用了严格的类型定义。
  *
  * @public
  */

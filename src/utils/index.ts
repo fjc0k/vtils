@@ -1,5 +1,5 @@
 /**
- * 基础工具库。基于 [Lodash](https://lodash.com/docs/4.17.15)。
+ * 基础工具库。基于 {@link https://lodash.com/docs/4.17.15 | Lodash}。
  *
  * @packageDocumentation
  */
