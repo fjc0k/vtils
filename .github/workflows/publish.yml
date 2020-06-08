@@ -27,7 +27,7 @@ jobs:
           else
             echo "not beta"
           fi
-          # 1 chore(release): test
+          # 12 chore(release): test
           # npx pnpm install
           # npm run build
           # npm run test
