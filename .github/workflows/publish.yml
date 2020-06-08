@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: v3
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false
       - uses: actions/setup-node@v1
         with:
           node-version: '13'
@@ -30,15 +30,17 @@ jobs:
           npm run build
           npm run test
 
-          # Publish package
           if $IS_BETA; then
             npm run publish-package -- --tag next
           else
             npm run publish-package
           fi
-
-          # Publish docs
-          npm run publish-docs -- --user "github-actions-bot <support+actions@github.com>"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           IS_BETA: ${{ contains(github.event.head_commit.message, 'beta') }}
+      - uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs/dist
+          TARGET_FOLDER: v3
