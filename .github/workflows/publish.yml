@@ -20,13 +20,13 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: |
           echo $XX
-          # echo "$IS_BETA"
-          # if [[ $IS_BETA -gt true ]]
-          # then
-          #   echo "is beta"
-          # else
-          #   echo "not beta"
-          # fi
+          echo "$IS_BETA"
+          if [[ $IS_BETA -gt true ]]
+          then
+            echo "is beta"
+          else
+            echo "not beta"
+          fi
           # 1 chore(release): test
           # npx pnpm install
           # npm run build
@@ -35,5 +35,5 @@ jobs:
           # npm publish
         env:
           XX: ${{ toJSON(github.event) }}
-          IS_BETA: ${{ contains(github.event.push.commits[0].message, 'beta') }}
+          IS_BETA: ${{ contains(github.event.commits[0].message, 'beta') }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
