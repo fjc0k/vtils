@@ -36,7 +36,6 @@ async function main(rootDir: string) {
             enabled: true,
             apiJsonFilePath: metaDataFile,
           },
-          bundledPackages: ['type-fest', 'ts-essentials'],
           compiler: {
             tsconfigFilePath: join(rootDir, './tsconfig.json'),
           },
