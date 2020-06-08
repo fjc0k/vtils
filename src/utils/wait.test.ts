@@ -3,7 +3,7 @@ import { wait } from './wait'
 describe(wait.name, () => {
   test('表现正常', async () => {
     const start = Date.now()
-    await wait(100)
+    await wait(110)
     const end = Date.now()
     expect(end - start >= 100).toBeTrue()
   })
