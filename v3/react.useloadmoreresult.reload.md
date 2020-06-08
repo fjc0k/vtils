@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-reload: () => void;
+reload: () => Promise<void>;
 ```

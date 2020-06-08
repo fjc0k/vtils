@@ -4,6 +4,7 @@
 
 ## UseLoadMoreService interface
 
+加载服务。
 
 <b>Signature:</b>
 

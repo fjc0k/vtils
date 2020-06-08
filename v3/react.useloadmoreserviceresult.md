@@ -4,6 +4,7 @@
 
 ## UseLoadMoreServiceResult type
 
+加载服务结果。
 
 <b>Signature:</b>
 

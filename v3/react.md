@@ -12,7 +12,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  --- | --- |
 |  [useClassName(getClassValues, deps)](./react.useclassname.md) | 获取类名字符串。 |
 |  [useLoadMore(service, deps)](./react.useloadmore.md) | 数据加载。 |
-|  [useReachBottom(callback, offset)](./react.usereachbottom.md) | 到达页面底部时触发回调。 |
+|  [useReachBottom(callback, offset)](./react.usereachbottom.md) | 立即触发一次回调，并且每当到达页面底部时触发回调。 |
 |  [useScrollLoadMore(service, deps, options)](./react.usescrollloadmore.md) | 滚动数据加载。 |
 |  [useToggle(initialValue)](./react.usetoggle.md) | 布尔值切换器。 |
 
@@ -20,15 +20,15 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 
 |  Interface | Description |
 |  --- | --- |
-|  [UseLoadMoreResult](./react.useloadmoreresult.md) |  |
-|  [UseLoadMoreService](./react.useloadmoreservice.md) |  |
-|  [UseLoadMoreServicePayload](./react.useloadmoreservicepayload.md) |  |
+|  [UseLoadMoreResult](./react.useloadmoreresult.md) | 加载更多结果。 |
+|  [UseLoadMoreService](./react.useloadmoreservice.md) | 加载服务。 |
+|  [UseLoadMoreServicePayload](./react.useloadmoreservicepayload.md) | 加载服务载荷。 |
 |  [UseScrollLoadMoreOptions](./react.usescrollloadmoreoptions.md) |  |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [UseLoadMoreServiceResult](./react.useloadmoreserviceresult.md) |  |
+|  [UseLoadMoreServiceResult](./react.useloadmoreserviceresult.md) | 加载服务结果。 |
 |  [UseToggleResult](./react.usetoggleresult.md) |  |
 

@@ -4,6 +4,7 @@
 
 ## UseLoadMoreServicePayload interface
 
+加载服务载荷。
 
 <b>Signature:</b>
 

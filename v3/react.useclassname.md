@@ -17,11 +17,26 @@ export declare function useClassName(getClassValues: () => any[] | undefined, de
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  getClassValues | () =&gt; any\[\] \| undefined | 获取类名列表函数 |
-|  deps | DependencyList | 依赖 |
+|  deps | DependencyList | 当依赖变更时重新获取 |
 
 <b>Returns:</b>
 
 string \| undefined
 
 返回类名字符串
+
+## Example
+
+
+```typescript
+const [mini, setMini] = useState(true)
+const buttonClassName = useClassName(() => [
+  'ui-btn',
+  mini && 'ui-btn_mini',
+], [mini])
+console.log(buttonClassName) // => 'ui-btn ui-btn_mini'
+setMini(false)
+console.log(buttonClassName) // => 'ui-btn'
+
+```
 

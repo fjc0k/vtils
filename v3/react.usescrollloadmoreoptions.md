@@ -16,5 +16,5 @@ export interface UseScrollLoadMoreOptions
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [containerRef](./react.usescrollloadmoreoptions.containerref.md) | ReturnType&lt;typeof useReachBottom&gt; | 滚动容器，默认以窗口作为滚动容器。 window |
-|  [offset](./react.usescrollloadmoreoptions.offset.md) | number | 距离底部阈值（单位：像素），小于该值时触发加载。 0 |
+|  [offset](./react.usescrollloadmoreoptions.offset.md) | number | 距离底部偏移量（单位：像素），小于该值时触发加载。 0 |
 

@@ -22,11 +22,17 @@ export declare function useToggle(initialValue: boolean): UseToggleResult;
 
 [UseToggleResult](./react.usetoggleresult.md)
 
+返回结果和操作
+
 ## Example
 
 
 ```typescript
-useToggle(false)
+const [value, toggle] = useToggle(false) // value: false
+toggle() // value: true
+toggle.set(false) // value: false
+toggle.true() // => value: true
+toggle.false() // => value: false
 
 ```
 

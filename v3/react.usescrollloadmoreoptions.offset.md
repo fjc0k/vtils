@@ -4,7 +4,7 @@
 
 ## UseScrollLoadMoreOptions.offset property
 
-距离底部阈值（单位：像素），小于该值时触发加载。
+距离底部偏移量（单位：像素），小于该值时触发加载。
 
  0
 

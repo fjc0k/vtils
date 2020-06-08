@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-loadMore: () => void;
+loadMore: () => Promise<void>;
 ```

@@ -17,7 +17,7 @@ export declare function useLoadMore<TItem>(service: UseLoadMoreService<TItem>, d
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  service | [UseLoadMoreService](./react.useloadmoreservice.md)<!-- -->&lt;TItem&gt; | 数据加载服务 |
-|  deps | DependencyList | 依赖，依赖若发生变化则从首页重新加载数据 |
+|  deps | DependencyList | 依赖若发生变化则从首页重新加载数据 |
 
 <b>Returns:</b>
 

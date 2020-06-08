@@ -4,7 +4,7 @@
 
 ## useReachBottom() function
 
-到达页面底部时触发回调。
+立即触发一次回调，并且每当到达页面底部时触发回调。
 
 <b>Signature:</b>
 
@@ -17,11 +17,11 @@ export declare function useReachBottom<T extends HTMLElement>(callback: () => an
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  callback | () =&gt; any | 回调 |
-|  offset | number | 阈值 |
+|  offset | number | 触底偏移量 |
 
 <b>Returns:</b>
 
 MutableRefObject&lt;T&gt;
 
-ref
+返回
 
