@@ -39,7 +39,7 @@
   "scripts": {
     "build": "shx rm -rf ./lib && npm run generate-index && npm run build-esm && npm run build-cjs && npm run generate-package && npm run generate-docs",
     "build-cjs": "tsc -p tsconfig.build-cjs.json && ts-node -T ./scripts/fixCJSBuild.ts",
-    "build-esm": "tsc -p tsconfig.build-esm.json",
+    "build-esm": "tsc -p tsconfig.build-esm.json && ts-node -T ./scripts/fixTypesBuild.ts",
     "generate-docs": "ts-node -T ./scripts/generateDocs.ts",
     "generate-index": "vgis './src/**/index.ts'",
     "generate-package": "ts-node -T ./scripts/generatePackage.ts",
@@ -76,9 +76,7 @@
     "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
     "react-use": "^15.1.1",
-    "ts-essentials": "^6.0.5",
-    "tslib": "^2.0.0",
-    "type-fest": "^0.15.0"
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@microsoft/api-documenter": "^7.8.10",
@@ -104,9 +102,13 @@
     "prompts": "^2.3.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "rollup": "^2.15.0",
+    "rollup-plugin-dts": "^1.4.7",
     "shx": "^0.3.2",
     "standard-version": "^8.0.0",
+    "ts-essentials": "^6.0.5",
     "ts-node": "^8.10.1",
+    "type-fest": "^0.15.0",
     "typescript": "^3.9.3",
     "typescript-snapshots-plugin": "^1.7.0",
     "vscode-generate-index-standalone": "^1.3.0"
