@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type FormatDateRenderer = (simplePlaceholders: typeof FormatDateSimplePlaceholder, placeholders: typeof FormatDatePlaceholder) => string;
+export declare type FormatDateRenderer = (placeholders: typeof FormatDatePlaceholder) => string;
 ```

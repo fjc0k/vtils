@@ -4,15 +4,36 @@
 
 ## types package
 
-类型工具库。
-
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
+|  [AnyArray](./types.anyarray.md) |  |
 |  [AnyFunction](./types.anyfunction.md) | 任意函数。 |
 |  [AnyObject](./types.anyobject.md) | 任意对象。 |
+|  [AsyncOrSync](./types.asyncorsync.md) | Useful as a return type in interfaces or abstract classes with missing implementation |
+|  [AsyncReturnType](./types.asyncreturntype.md) | Unwrap the return type of a function that returns a <code>Promise</code>.<!-- -->There has been \[discussion\](https://github.com/microsoft/TypeScript/pull/35998) about implementing this type in TypeScript. |
+|  [Buildable](./types.buildable.md) | Combination of DeepPartial and DeepWritable |
 |  [Defined](./types.defined.md) | 去除类型 T 中的 undefined。 |
 |  [FirstParameter](./types.firstparameter.md) | 返回函数 T 第一个参数的类型。 |
+|  [FixedLengthArray](./types.fixedlengtharray.md) | Create a type that represents an array of the given type and length. The array's length and the <code>Array</code> prototype methods that manipulate its length are excluded in the resulting type.<!-- -->Please participate in \[this issue\](https://github.com/microsoft/TypeScript/issues/26223) if you want to have a similiar type built into TypeScript.<!-- -->Use-cases: - Declaring fixed-length tuples or arrays with a large number of items. - Creating a range union (for example, <code>0 &#124; 1 &#124; 2 &#124; 3 &#124; 4</code> from the keys of such a type) without having to resort to recursive types. - Creating an array of coordinates with a static length, for example, length of 3 for a 3D vector. |
+|  [Head](./types.head.md) | Functional programming essentials |
+|  [LiteralUnion](./types.literalunion.md) | Allows creating a union type by combining primitive types and literal types without sacrificing auto-completion in IDEs for the literal type part of the union.<!-- -->Currently, when a union type of a primitive type is combined with literal types, TypeScript loses all information about the combined literals. Thus, when such type is used in an IDE with autocompletion, no suggestions are made for the declared literals.<!-- -->This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com/Microsoft/TypeScript/issues/29729). It will be removed as soon as it's not needed anymore. |
+|  [Merge](./types.merge.md) | Merge 2 types, properties types from the latter override the ones defined on the former type |
+|  [NonNullableDeep](./types.nonnullabledeep.md) | Like NonNullable but recursive |
+|  [NullableDeep](./types.nullabledeep.md) | Recursive nullable |
+|  [OmitBy](./types.omitby.md) | Omit all properties of given type in object type |
+|  [OmitDeep](./types.omitdeep.md) | Recursively omit deep properties |
+|  [OmitStrict](./types.omitstrict.md) | Similar to the builtin Omit, but checks the filter strictly. |
 |  [OneOrMany](./types.oneormany.md) | 同 <code>T &#124; T[]</code>。 |
+|  [PartialBy](./types.partialby.md) | Mark some properties as optional, leaving others unchanged |
+|  [PartialDeep](./types.partialdeep.md) | Like Partial but recursive |
+|  [PickBy](./types.pickby.md) | Pick all properties of given type in object type |
+|  [ReadonlyDeep](./types.readonlydeep.md) | Like Readonly but recursive |
+|  [RequiredBy](./types.requiredby.md) | Mark some properties as required, leaving others unchanged |
+|  [RequiredDeep](./types.requireddeep.md) | Like Required but recursive |
+|  [Tail](./types.tail.md) |  |
+|  [ValueOf](./types.valueof.md) | Easily extract the type of a given object's values |
+|  [Writable](./types.writable.md) | Make readonly object writable |
+|  [WritableDeep](./types.writabledeep.md) | Like Writable but recursive |
 

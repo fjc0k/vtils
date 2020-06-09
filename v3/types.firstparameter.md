@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type FirstParameter<T extends (...args: any[]) => any> = Head<Parameters<T>>;
+declare type FirstParameter<T extends (...args: any[]) => any> = Head<Parameters<T>>;
 ```
 
 ## Example

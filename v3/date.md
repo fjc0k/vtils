@@ -11,13 +11,12 @@
 |  Enumeration | Description |
 |  --- | --- |
 |  [FormatDatePlaceholder](./date.formatdateplaceholder.md) | 日期格式化占位符。 |
-|  [FormatDateSimplePlaceholder](./date.formatdatesimpleplaceholder.md) | 简易的日期格式化占位符。 |
 
 ## Functions
 
 |  Function | Description |
 |  --- | --- |
-|  [formatDate(date, renderer, options)](./date.formatdate.md) | 格式化日期。 |
+|  [formatDate(date, renderer)](./date.formatdate.md) | 格式化日期。 |
 |  [numeralDayToChineseDay(day)](./date.numeraldaytochineseday.md) | 数字星期转中文星期。<code>0</code> 和 <code>7</code> 都视为星期日。 |
 
 ## Type Aliases
