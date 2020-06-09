@@ -209,9 +209,10 @@ export {
 // prettier-ignore
 export {
   // 手动导出以解决 @microsoft/api-extractor 的问题
-  // @index(['../../node_modules/date-fns/esm/locale/*', '!**/_*'], (f, _) => `${f.name.replace(/-/g, '')},`, { onlyDirectories: true })
+  // ref: https://github.com/date-fns/date-fns/blob/master/scripts/_lib/listLocales.js#L13
+  // ref: https://github.com/date-fns/date-fns/blob/master/outdatedLocales.json
+  // @index(['../../node_modules/date-fns/esm/locale/*', '!**/{_*,ar,fil,fr-CH,nl-BE}'], (f, _) => `${f.name.replace(/-/g, '')},`, { onlyDirectories: true })
   af,
-  ar,
   arDZ,
   arMA,
   arSA,
@@ -236,10 +237,8 @@ export {
   eu,
   faIR,
   fi,
-  fil,
   fr,
   frCA,
-  frCH,
   gl,
   gu,
   he,
@@ -262,7 +261,6 @@ export {
   mt,
   nb,
   nl,
-  nlBE,
   nn,
   pl,
   pt,
