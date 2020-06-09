@@ -9,8 +9,11 @@
 
 type XToY = (value: string) => string
 
+// 使用 global['Buffer'] 而不是 Buffer 以防止 webpack 等工具自动加 polyfill
 const canUseBufferFrom =
-  typeof Buffer !== 'undefined' && typeof Buffer.from === 'function'
+  typeof global !== 'undefined' &&
+  typeof global['Buffer'] !== 'undefined' &&
+  typeof global['Buffer']['from'] === 'function'
 
 const base64Chars =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
@@ -141,7 +144,7 @@ const asciiToUtf8: XToY = value =>
  */
 export function base64Encode(value: string): string {
   if (canUseBufferFrom) {
-    return Buffer.from(value, 'utf8').toString('base64')
+    return global['Buffer']['from'](value, 'utf8').toString('base64')
   }
 
   return utf8ToAscii(value)
@@ -162,7 +165,7 @@ export function base64Encode(value: string): string {
  */
 export function base64Decode(value: string): string {
   if (canUseBufferFrom) {
-    return Buffer.from(value, 'base64').toString('utf8')
+    return global['Buffer']['from'](value, 'base64').toString('utf8')
   }
 
   return asciiToUtf8(value)
