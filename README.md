@@ -50,6 +50,8 @@ tpm add vtils
 
 ## 使用
 
+### NodeJS
+
 ```ts
 // 基础工具库
 import { wait, isNumber, EventBus, base64Encode } from 'vtils'
@@ -65,6 +67,18 @@ import { OmitStrict, LiteralUnion, PartialDeep } from 'vtils/types'
 ```
 
 详细用法见文档：[https://fjc0k.github.io/vtils/v3/](https://fjc0k.github.io/vtils/v3/)。
+
+### Deno
+
+```ts
+// 基础工具库
+import {
+  wait,
+  isNumber,
+  EventBus,
+  base64Encode,
+} from 'https://cdn.pika.dev/vtils@3.0.1-beta.19'
+```
 
 ## 许可
 

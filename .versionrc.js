@@ -7,8 +7,8 @@ module.exports = {
       type: 'json',
     },
     {
-      filename: 'mod.ts',
-      updater: '.versionrc.mod-updater.js',
+      filename: 'README.md',
+      updater: '.versionrc.README-updater.js',
     },
   ],
 }
