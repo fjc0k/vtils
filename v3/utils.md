@@ -37,10 +37,15 @@
 |  [inNodeJS()](./utils.innodejs.md) | 检查是否在 Node.js 中。 |
 |  [inWechat()](./utils.inwechat.md) | 检查是否在微信内置浏览器中。 |
 |  [isChineseIDCardNumber(value)](./utils.ischineseidcardnumber.md) | 检测传入的值是否是合法的中国大陆居民 <code>18</code> 位身份证号码。 |
+|  [isNumeric(value)](./utils.isnumeric.md) | 检查 <code>value</code> 是否是数值，需要注意的是 <code>Infinity</code>、<code>-Infinity</code>、<code>NaN</code> 不被认为是数值。 |
 |  [isPossibleChineseMobilePhoneNumber(value)](./utils.ispossiblechinesemobilephonenumber.md) | 检测传入的值是否可能是中国的手机号码。 |
+|  [isPromiseLike(value)](./utils.ispromiselike.md) | 检查 <code>value</code> 是否像 <code>Promise</code>。 |
 |  [isUrl(value)](./utils.isurl.md) | 检测传入值是否是 URL。 |
 |  [loadResource(url)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
+|  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
+|  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
+|  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
 |  [wait(milliseconds)](./utils.wait.md) | 等待一段时间。 |
 
 ## Interfaces
