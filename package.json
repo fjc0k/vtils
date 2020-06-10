@@ -1,6 +1,6 @@
 {
   "name": "vtils",
-  "version": "3.0.1-beta.20",
+  "version": "3.0.1-beta.19",
   "description": "一个面向业务的 JavaScript/TypeScript 实用程序库。",
   "keywords": [
     "util",
@@ -27,18 +27,11 @@
       "require": "./_cjs/utils/index.js",
       "import": "./utils/index.js"
     },
-    "./date": {
-      "require": "./_cjs/date/index.js",
-      "import": "./date/index.js"
+    "./": {
+      "require": "./_cjs/",
+      "import": "./"
     },
-    "./package.json": "./package.json",
-    "./react": {
-      "require": "./_cjs/react/index.js",
-      "import": "./react/index.js"
-    },
-    "./types": {
-      "import": "./types/index.d.ts"
-    }
+    "./package.json": "./package.json"
   },
   "main": "_cjs/utils/index.js",
   "module": "utils/index.js",
