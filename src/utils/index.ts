@@ -26,6 +26,7 @@ export * from './loadResource'
 export * from './omitStrict'
 export * from './pickStrict'
 export * from './readFile'
+export * from './swap'
 export * from './wait'
 export * from './Wechat'
 // @endindex
