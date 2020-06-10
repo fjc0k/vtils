@@ -29,7 +29,13 @@
 |  [base64UrlEncode(value)](./utils.base64urlencode.md) | 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。 |
 |  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
 |  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
+|  [inAndroid()](./utils.inandroid.md) | 检查是否在 Android 设备中。 |
+|  [inBrowser()](./utils.inbrowser.md) | 检查是否在浏览器环境中。 |
+|  [inDeno()](./utils.indeno.md) | 检查是否在 Deno 中。 |
 |  [indent(literals, interpolations)](./utils.indent.md) | 每一行紧跟前导空白的插入值为多行时，保持缩进。 |
+|  [inIOS()](./utils.inios.md) | 检查是否在 iOS 设备中。 |
+|  [inNodeJS()](./utils.innodejs.md) | 检查是否在 Node.js 中。 |
+|  [inWechat()](./utils.inwechat.md) | 检查是否在微信内置浏览器中。 |
 |  [isChineseIDCardNumber(value)](./utils.ischineseidcardnumber.md) | 检测传入的值是否是合法的中国大陆居民 <code>18</code> 位身份证号码。 |
 |  [isPossibleChineseMobilePhoneNumber(value)](./utils.ispossiblechinesemobilephonenumber.md) | 检测传入的值是否可能是中国的手机号码。 |
 |  [isUrl(value)](./utils.isurl.md) | 检测传入值是否是 URL。 |
