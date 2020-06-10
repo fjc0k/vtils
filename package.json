@@ -27,11 +27,18 @@
       "require": "./_cjs/utils/index.js",
       "import": "./utils/index.js"
     },
-    "./": {
-      "require": "./_cjs/",
-      "import": "./"
+    "./date": {
+      "require": "./_cjs/date/index.js",
+      "import": "./date/index.js"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./react": {
+      "require": "./_cjs/react/index.js",
+      "import": "./react/index.js"
+    },
+    "./types": {
+      "import": "./types/index.d.ts"
+    }
   },
   "main": "_cjs/utils/index.js",
   "module": "utils/index.js",
