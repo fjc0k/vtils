@@ -35,4 +35,5 @@ export * from './AnyObject'
 export * from './Defined'
 export * from './FirstParameter'
 export * from './OneOrMany'
+export * from './Path'
 // @endindex
