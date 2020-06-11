@@ -29,6 +29,7 @@
 |  [base64UrlEncode(value)](./utils.base64urlencode.md) | 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。 |
 |  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
 |  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
+|  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
 |  [inAndroid()](./utils.inandroid.md) | 检查是否在 Android 设备中。 |
 |  [inBrowser()](./utils.inbrowser.md) | 检查是否在浏览器环境中。 |
 |  [inDeno()](./utils.indeno.md) | 检查是否在 Deno 中。 |
@@ -52,6 +53,7 @@
 
 |  Interface | Description |
 |  --- | --- |
+|  [FormatNumberOptions](./utils.formatnumberoptions.md) | 格式化数字选项。 |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
 |  [ReadFileReader](./utils.readfilereader.md) | 各种内容类型的读取器。 |
 |  [WaitResult](./utils.waitresult.md) |  |

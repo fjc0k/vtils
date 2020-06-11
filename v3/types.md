@@ -4,6 +4,8 @@
 
 ## types package
 
+类型工具库。
+
 ## Type Aliases
 
 |  Type Alias | Description |
