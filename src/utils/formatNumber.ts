@@ -34,8 +34,7 @@ export function formatNumber(
   value: number,
   options?: FormatNumberOptions,
 ): string {
-  const thousandsSeparator = options?.thousandsSeparator ?? ','
-  const thousandthsSeparator = options?.thousandthsSeparator ?? ''
+  const { thousandsSeparator = ',', thousandthsSeparator = '' } = options || {}
 
   let [integer, decimal = ''] = String(Math.abs(value)).split('.')
 
