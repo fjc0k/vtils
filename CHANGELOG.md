@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1-beta.24](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.23...v3.0.1-beta.24) (2020-06-11)
+
 ### [3.0.1-beta.23](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.22...v3.0.1-beta.23) (2020-06-10)
 
 ### [3.0.1-beta.22](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.21...v3.0.1-beta.22) (2020-06-10)
