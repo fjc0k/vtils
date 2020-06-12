@@ -15,6 +15,7 @@ async function main(rootDir: string) {
       const newContent = content
         .replace(/require\("lodash-es"\)/g, 'require("lodash")')
         .replace(/require\("date-fns\/esm/g, 'require("date-fns')
+        .replace(/require\("yup\/es/g, 'require("yup/lib')
       if (newContent !== content) {
         await fs.writeFile(file, newContent)
       }

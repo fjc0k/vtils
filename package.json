@@ -76,7 +76,8 @@
     "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
     "react-use": "^15.1.1",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "yup": "^0.29.1"
   },
   "devDependencies": {
     "@microsoft/api-documenter": "^7.8.10",

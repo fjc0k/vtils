@@ -6,9 +6,7 @@
     "importHelpers": true,
     "declaration": true,
     "sourceMap": false,
-    "outDir": "./lib",
-    "incremental": true,
-    "tsBuildInfoFile": "./node_modules/.cache/tsBuildInfoFile"
+    "outDir": "./lib"
   },
   "include": ["src/*/index.ts"]
 }
