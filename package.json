@@ -1,6 +1,6 @@
 {
   "name": "vtils",
-  "version": "3.0.1-beta.24",
+  "version": "3.0.1-beta.25",
   "description": "一个面向业务的 JavaScript/TypeScript 实用程序库。",
   "keywords": [
     "util",
