@@ -30,6 +30,8 @@
 |  [OneOrMany](./types.oneormany.md) | 同 <code>T &#124; T[]</code>。 |
 |  [PartialBy](./types.partialby.md) | Mark some properties as optional, leaving others unchanged |
 |  [PartialDeep](./types.partialdeep.md) | Like Partial but recursive |
+|  [Path](./types.path.md) | 获取对象的路径。最多支持 7 级路径。 |
+|  [PathValue](./types.pathvalue.md) | 获取对象的路径值。最多支持 7 级路径。 |
 |  [PickBy](./types.pickby.md) | Pick all properties of given type in object type |
 |  [ReadonlyDeep](./types.readonlydeep.md) | Like Readonly but recursive |
 |  [RequiredBy](./types.requiredby.md) | Mark some properties as required, leaving others unchanged |
