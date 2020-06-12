@@ -715,58 +715,67 @@ declare module 'yup/es' {
   // tslint:disable-next-line:no-empty-interface
   export interface Lazy extends Schema<any> {}
 
-  export interface FormatErrorParams {
+  export type LocaleValueFnParams<TExtra extends Record<string, any> = {}> = {
     path: string
     type: string
-    value?: any
-    originalValue?: any
-  }
+    label?: string
+    value: any
+    originalValue: any
+  } & TExtra
 
-  export type LocaleValue = string | ((params: FormatErrorParams) => string)
+  export type LocaleValueFn<TExtra extends Record<string, any> = {}> = (
+    params: LocaleValueFnParams<TExtra>,
+  ) => string
+
+  export type LocaleValue<TExtra extends Record<string, any> = {}> =
+    | string
+    | LocaleValueFn<TExtra>
 
   export interface MixedLocale {
-    default?: TestOptionsMessage
-    required?: TestOptionsMessage
-    oneOf?: TestOptionsMessage<{ values: any }>
-    notOneOf?: TestOptionsMessage<{ values: any }>
-    notType?: LocaleValue
-    defined?: TestOptionsMessage
+    default?: LocaleValue
+    required?: LocaleValue
+    oneOf?: LocaleValue<{ values: string }>
+    notOneOf?: LocaleValue<{ values: string }>
+    defined?: LocaleValue
   }
 
   export interface StringLocale {
-    length?: TestOptionsMessage<{ length: number }>
-    min?: TestOptionsMessage<{ min: number }>
-    max?: TestOptionsMessage<{ max: number }>
-    matches?: TestOptionsMessage<{ regex: RegExp }>
-    email?: TestOptionsMessage<{ regex: RegExp }>
-    url?: TestOptionsMessage<{ regex: RegExp }>
-    trim?: TestOptionsMessage
-    lowercase?: TestOptionsMessage
-    uppercase?: TestOptionsMessage
+    length?: LocaleValue<{ length: number }>
+    min?: LocaleValue<{ min: number }>
+    max?: LocaleValue<{ max: number }>
+    matches?: LocaleValue<{ regex: RegExp }>
+    email?: LocaleValue<{ regex: RegExp }>
+    url?: LocaleValue<{ regex: RegExp }>
+    trim?: LocaleValue
+    lowercase?: LocaleValue
+    uppercase?: LocaleValue
   }
 
   export interface NumberLocale {
-    min?: TestOptionsMessage<{ min: number }>
-    max?: TestOptionsMessage<{ max: number }>
-    lessThan?: TestOptionsMessage<{ less: number }>
-    moreThan?: TestOptionsMessage<{ more: number }>
-    positive?: TestOptionsMessage<{ more: number }>
-    negative?: TestOptionsMessage<{ less: number }>
-    integer?: TestOptionsMessage
+    min?: LocaleValue<{ min: number }>
+    max?: LocaleValue<{ max: number }>
+    lessThan?: LocaleValue<{ less: number }>
+    moreThan?: LocaleValue<{ more: number }>
+    positive?: LocaleValue<{ more: number }>
+    negative?: LocaleValue<{ less: number }>
+    integer?: LocaleValue
   }
 
   export interface DateLocale {
-    min?: TestOptionsMessage<{ min: Date | string }>
-    max?: TestOptionsMessage<{ max: Date | string }>
+    min?: LocaleValue<{ min: Date | string }>
+    max?: LocaleValue<{ max: Date | string }>
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface BooleanLocale {}
+
   export interface ObjectLocale {
-    noUnknown?: TestOptionsMessage
+    noUnknown?: LocaleValue<{ unknown: string }>
   }
 
   export interface ArrayLocale {
-    min?: TestOptionsMessage<{ min: number }>
-    max?: TestOptionsMessage<{ max: number }>
+    min?: LocaleValue<{ min: number }>
+    max?: LocaleValue<{ max: number }>
   }
 
   export interface LocaleObject {
@@ -774,7 +783,7 @@ declare module 'yup/es' {
     string?: StringLocale
     number?: NumberLocale
     date?: DateLocale
-    boolean?: {}
+    boolean?: BooleanLocale
     object?: ObjectLocale
     array?: ArrayLocale
   }

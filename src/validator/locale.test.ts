@@ -1,4 +1,5 @@
 import { enUS } from './locale/enUS'
+import { yup } from './yup'
 import { zhCN } from './locale/zhCN'
 
 describe('locale', () => {
@@ -15,4 +16,13 @@ describe('locale', () => {
       ])
     })
   }
+
+  test('中文', async () => {
+    await expect(yup.number().integer().validate(9.2)).rejects.toThrowError(
+      /此项必须是一个整数/,
+    )
+    await expect(
+      yup.number().label('年龄').integer().validate(9.2),
+    ).rejects.toThrowError(/年龄必须是一个整数/)
+  })
 })

@@ -7,25 +7,6 @@ export const enUS: yup.LocaleObjectRequired = {
     required: '${path} is a required field',
     oneOf: '${path} must be one of the following values: ${values}',
     notOneOf: '${path} must not be one of the following values: ${values}',
-    notType: ({ path, type, value, originalValue }) => {
-      const isCast = originalValue != null && originalValue !== value
-      const msg = [
-        `${path} must be a \`${type}\` type, `,
-        `but the final value was: \`${yup._printValue(value, true)}\``,
-        !isCast
-          ? '.'
-          : ` (cast from the value \`${yup._printValue(
-              originalValue,
-              true,
-            )}\`).`,
-        value !== null
-          ? ''
-          : '\n If "null" is intended as an empty value be sure to mark the schema as `.nullable()`',
-      ]
-        .filter(Boolean)
-        .join('')
-      return msg
-    },
     defined: '${path} must be defined',
   },
   string: {
