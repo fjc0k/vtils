@@ -11,6 +11,7 @@ export * from './useClassName'
 export * from './useLoadMore'
 export * from './useReachBottom'
 export * from './useScrollLoadMore'
+export * from './useValidator'
 // @endindex
 
 // 与 react-use 同名的应手动指定导出的模块

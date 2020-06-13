@@ -1,0 +1,18 @@
+// @index('./*.ts', f => `import '${f.path}'`)
+import './addMethod'
+import './array'
+import './boolean'
+import './date'
+import './getLocale'
+import './lazy'
+import './Locale'
+import './mixed'
+import './number'
+import './object'
+import './printValue'
+import './reach'
+import './ref'
+import './setLocale'
+import './string'
+import './ValidationError'
+// @endindex

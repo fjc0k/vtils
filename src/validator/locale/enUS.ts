@@ -1,13 +1,32 @@
 import { yup } from '../yup'
 
 // ref: https://github.com/jquense/yup/blob/master/src/locale.js
-export const enUS: yup.LocaleObjectRequired = {
+export const enUS: yup.Locale = {
   mixed: {
     default: '${path} is invalid',
     required: '${path} is a required field',
     oneOf: '${path} must be one of the following values: ${values}',
     notOneOf: '${path} must not be one of the following values: ${values}',
     defined: '${path} must be defined',
+    notType: ({ path, type, value, originalValue }) => {
+      const isCast = originalValue != null && originalValue !== value
+      const msg = [
+        `${path} must be a \`${type}\` type, `,
+        `but the final value was: \`${yup.printValue(value, true)}\``,
+        !isCast
+          ? '.'
+          : ` (cast from the value \`${yup.printValue(
+              originalValue,
+              true,
+            )}\`).`,
+        value !== null
+          ? ''
+          : '\n If "null" is intended as an empty value be sure to mark the schema as `.nullable()`',
+      ]
+        .filter(Boolean)
+        .join('')
+      return msg
+    },
   },
   string: {
     length: '${path} must be exactly ${length} characters',

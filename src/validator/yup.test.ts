@@ -4,9 +4,12 @@ import { zhCN } from './locale/zhCN'
 
 describe('yup', () => {
   test('默认语言为中文', async () => {
-    await expect(yup.string().validate(1)).rejects.toThrowError(
-      /此项必须是一个字符串/,
-    )
+    await expect(
+      yup
+        .string()
+        // @ts-expect-error
+        .validate(1),
+    ).rejects.toThrowError(/此项必须是一个字符串/)
   })
 
   test('可切换语言', () => {

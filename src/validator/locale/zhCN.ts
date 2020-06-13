@@ -1,6 +1,6 @@
 import { yup } from '../yup'
 
-export const zhCN: yup.LocaleObjectRequired = {
+export const zhCN: yup.Locale = {
   mixed: {
     default: ({ label }) => `${label || '此项'}错误`,
     required: ({ label }) => `${label || '此项'}必填`,
@@ -9,6 +9,22 @@ export const zhCN: yup.LocaleObjectRequired = {
     notOneOf: ({ label, values }) =>
       `${label || '此项'}必须不是下列值之一: ${values}`,
     defined: ({ label }) => `${label || '此项'}必须已定义`,
+    notType: ({ path, type, value, originalValue }) => {
+      const isCast = originalValue != null && originalValue !== value
+      const msg = [
+        `${path} 必须是一个 \`${type}\` 类型的值，`,
+        `但传入的值经转换后是: \`${yup.printValue(value, true)}\``,
+        !isCast
+          ? '。'
+          : ` (传入的原始值是 \`${yup.printValue(originalValue, true)}\`)。`,
+        value !== null
+          ? ''
+          : '\n若用 `null` 表示空值，务必将模式标记为 `.nullable()`。',
+      ]
+        .filter(Boolean)
+        .join('')
+      return msg
+    },
   },
   string: {
     length: ({ label, length }) =>
