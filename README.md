@@ -1,4 +1,4 @@
-# vtils ![Test](https://github.com/fjc0k/vtils/workflows/Test/badge.svg?branch=v3) ![Coverage](https://codecov.io/gh/fjc0k/vtils/branch/v3/graph/badge.svg)
+# vtils ![Test](https://github.com/fjc0k/vtils/workflows/Test/badge.svg?branch=master) ![Coverage](https://codecov.io/gh/fjc0k/vtils/branch/master/graph/badge.svg)
 
 一个面向业务的 JavaScript/TypeScript 实用程序库。
 
@@ -11,12 +11,13 @@ console.log(dedent`
   - react-use
   - type-fest
   - ts-essentials
+  - yup
 `)
 ```
 
 ## 特性
 
-- **🙅‍♀️ 拒绝重复**：基于社区优质程序库（[Lodash](https://lodash.com/)、[date-fns](https://date-fns.org/)、[react-use](https://github.com/streamich/react-use#readme)、[type-fest](https://github.com/sindresorhus/type-fest#readme)、[ts-essentials](https://github.com/krzkaczor/ts-essentials#readme) 等），补充常用业务代码。
+- **🙅‍♀️ 拒绝重复**：基于社区优质程序库（[Lodash](https://lodash.com/)、[date-fns](https://date-fns.org/)、[react-use](https://github.com/streamich/react-use#readme)、[type-fest](https://github.com/sindresorhus/type-fest#readme)、[ts-essentials](https://github.com/krzkaczor/ts-essentials#readme)、[yup](https://github.com/jquense/yup) 等），补充常用业务代码。
 
 - **🌸 精致优雅**：为每一个工具都添加了注释、测试，不看文档亦可直接使用。
 
@@ -61,6 +62,9 @@ import { formatRelative, subDays, zhCN } from 'vtils/date'
 
 // React 工具库
 import { useClassName, useToggle, useScrollLoadMore } from 'vtils/react'
+
+// 验证工具库
+import { yup } from 'vtils/validator'
 
 // 类型工具库
 import { OmitStrict, LiteralUnion, PartialDeep } from 'vtils/types'

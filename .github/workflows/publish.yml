@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     branches:
-      - v3
+      - master
 
 jobs:
   publish:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: v3
+          ref: master
           persist-credentials: false
       - uses: actions/setup-node@v1
         with:

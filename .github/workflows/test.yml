@@ -3,7 +3,7 @@ name: Test
 on:
   push:
     branches:
-      - v3
+      - master
 
 jobs:
   test:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: v3
+          ref: master
       - uses: actions/setup-node@v1
         with:
           node-version: '13'
