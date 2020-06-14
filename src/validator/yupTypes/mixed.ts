@@ -39,6 +39,17 @@ declare module 'yup/es' {
   }
 
   export interface MixedSchema<T = any> {
+    __isYupSchema__: true
+
+    type:
+      | 'mixed'
+      | 'string'
+      | 'number'
+      | 'boolean'
+      | 'object'
+      | 'date'
+      | 'array'
+
     clone(): this
 
     label(label: string): this
@@ -88,7 +99,7 @@ declare module 'yup/es' {
 
     nullable(isNullable?: boolean): this
 
-    required(message?: LocaleValue): this
+    required(message?: MixedLocale['required']): this
 
     notRequired(): this
 
@@ -96,11 +107,11 @@ declare module 'yup/es' {
 
     typeError(message: LocaleValue): this
 
-    oneOf(arrayOfValues: T[], message?: LocaleValue): this
+    oneOf(arrayOfValues: T[], message?: MixedLocale['oneOf']): this
 
-    equals(arrayOfValues: T[], message?: LocaleValue): this
+    equals(arrayOfValues: T[], message?: MixedLocale['oneOf']): this
 
-    notOneOf(arrayOfValues: T[], message?: LocaleValue): this
+    notOneOf(arrayOfValues: T[], message?: MixedLocale['notOneOf']): this
 
     /** @仅保留了类型友好的用法 */
     when(builder: (value: T, schema: this) => this): this

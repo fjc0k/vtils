@@ -9,10 +9,10 @@ export const zhCN: yup.Locale = {
     notOneOf: ({ label, values }) =>
       `${label || '此项'}必须不是下列值之一: ${values}`,
     defined: ({ label }) => `${label || '此项'}必须已定义`,
-    notType: ({ path, type, value, originalValue }) => {
+    notType: ({ label, type, value, originalValue }) => {
       const isCast = originalValue != null && originalValue !== value
       const msg = [
-        `${path} 必须是一个 \`${type}\` 类型的值，`,
+        `${label || '此项'} 必须是一个 \`${type}\` 类型的值，`,
         `但传入的值经转换后是: \`${yup.printValue(value, true)}\``,
         !isCast
           ? '。'

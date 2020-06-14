@@ -6,7 +6,7 @@ declare module 'yup/es' {
 
     type: string
 
-    errors: any[]
+    errors: string[]
 
     inner: any[]
 

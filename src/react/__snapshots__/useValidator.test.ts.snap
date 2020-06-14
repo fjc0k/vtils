@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useValidator object 完整示例: 两次密码一致 1`] = `
+Object {
+  "data": Object {
+    "password": "123456",
+    "password2": "123456",
+    "phoneNumber": "13907199856",
+  },
+  "valid": true,
+}
+`;
+
+exports[`useValidator object 完整示例: 两次密码不一致 1`] = `
+Object {
+  "data": Object {
+    "password": "123456",
+    "password2": "1234567",
+    "phoneNumber": "13907199856",
+  },
+  "error": [ValidationError: 两次密码必须一致],
+  "valid": false,
+}
+`;
+
+exports[`useValidator object 完整示例: 首次验证 1`] = `
+Object {
+  "data": Object {
+    "password": "",
+    "password2": "",
+    "phoneNumber": "",
+  },
+  "error": [ValidationError: 手机号必填],
+  "valid": false,
+}
+`;
