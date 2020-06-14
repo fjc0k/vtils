@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/fjc0k/vtils/compare/v2.59.0...v3.1.0) (2020-06-14)
+
+### Features
+
+- 完成 v3 ([#13](https://github.com/fjc0k/vtils/issues/13)) ([8791ed8](https://github.com/fjc0k/vtils/commit/8791ed819f99267653fc96f6fe4c24a6d4e89142))
+
 ### [3.0.1-beta.26](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.25...v3.0.1-beta.26) (2020-06-14)
 
 ### [3.0.1-beta.25](https://github.com/fjc0k/vtils/compare/v3.0.1-beta.24...v3.0.1-beta.25) (2020-06-12)
