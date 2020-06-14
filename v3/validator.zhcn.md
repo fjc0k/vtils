@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-zhCN: yup.LocaleObjectRequired
+zhCN: yup.Locale
 ```

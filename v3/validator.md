@@ -4,6 +4,8 @@
 
 ## validator package
 
+验证工具库。基于 [yup](https://github.com/jquense/yup#readme)<!-- -->。
+
 ## Variables
 
 |  Variable | Description |

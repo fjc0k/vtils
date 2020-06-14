@@ -15,6 +15,8 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  [useReachBottom(callback, offset)](./react.usereachbottom.md) | 立即触发一次回调，并且每当到达页面底部时触发回调。 |
 |  [useScrollLoadMore(service, deps, options)](./react.usescrollloadmore.md) | 滚动数据加载。 |
 |  [useToggle(initialValue)](./react.usetoggle.md) | 布尔值切换器。 |
+|  [useValidator(data, dataDeps, schema, schemaDeps)](./react.usevalidator.md) |  |
+|  [useValidator(data, schema, schemaDeps)](./react.usevalidator_1.md) |  |
 
 ## Interfaces
 
@@ -24,6 +26,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  [UseLoadMoreService](./react.useloadmoreservice.md) | 加载服务。 |
 |  [UseLoadMoreServicePayload](./react.useloadmoreservicepayload.md) | 加载服务载荷。 |
 |  [UseScrollLoadMoreOptions](./react.usescrollloadmoreoptions.md) |  |
+|  [UseValidatorResult](./react.usevalidatorresult.md) |  |
 
 ## Type Aliases
 
@@ -31,4 +34,5 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  --- | --- |
 |  [UseLoadMoreServiceResult](./react.useloadmoreserviceresult.md) | 加载服务结果。 |
 |  [UseToggleResult](./react.usetoggleresult.md) |  |
+|  [UseValidatorSchema](./react.usevalidatorschema.md) |  |
 

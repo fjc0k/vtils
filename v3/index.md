@@ -12,5 +12,5 @@
 |  [react](./react.md) | React 工具库。基于 [react-use](https://github.com/streamich/react-use#readme)<!-- -->。 |
 |  [types](./types.md) | 类型工具库。 |
 |  [utils](./utils.md) | 基础工具库。基于 [Lodash](https://lodash.com/docs/4.17.15)<!-- -->。 |
-|  [validator](./validator.md) |  |
+|  [validator](./validator.md) | 验证工具库。基于 [yup](https://github.com/jquense/yup#readme)<!-- -->。 |
 

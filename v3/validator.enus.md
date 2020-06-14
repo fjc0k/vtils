@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-enUS: yup.LocaleObjectRequired
+enUS: yup.Locale
 ```
