@@ -47,7 +47,7 @@
     "publish-package": "cd ./lib && npm publish",
     "publish-package-next": "npm run publish-package -- --tag next",
     "release": "standard-version -a",
-    "postrelease": "git push --follow-tags origin v3",
+    "postrelease": "git push --follow-tags origin master",
     "release-beta": "npm run release -- --release-as patch --prerelease beta",
     "release-major": "npm run release -- --release-as major",
     "release-major-beta": "npm run release -- --release-as major --prerelease beta",
