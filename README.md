@@ -81,7 +81,7 @@ import {
   isNumber,
   EventBus,
   base64Encode,
-} from 'https://cdn.pika.dev/vtils@3.1.0'
+} from 'https://cdn.pika.dev/vtils@3.1.1'
 ```
 
 ## 许可
