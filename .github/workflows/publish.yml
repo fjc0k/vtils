@@ -1,0 +1,46 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    if: ${{ startsWith(github.event.head_commit.message, 'chore(release):') }}
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+          persist-credentials: false
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '13'
+          registry-url: 'https://registry.npmjs.org'
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ hashFiles('pnpm-lock.yaml') }}
+      - if: ${{ steps.cache.outputs.cache-hit != 'true' }}
+        run: npx pnpm install
+      - run: |
+          npm run build
+          npm run test
+
+          if $IS_BETA; then
+            npm run publish-package-next
+          else
+            npm run publish-package
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          IS_BETA: ${{ contains(github.event.head_commit.message, 'beta') }}
+      - uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs/dist
+          TARGET_FOLDER: v3

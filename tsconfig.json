@@ -1,18 +1,31 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ES2019",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "declaration": true,
     "removeComments": false,
     "esModuleInterop": true,
-    "newLine": "LF",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
     "skipLibCheck": true,
-    "sourceMap": true,
-    "lib": [
-      "esnext",
-      "dom"
+    "sourceMap": false,
+    "preserveSymlinks": true,
+    "resolveJsonModule": true,
+    "newLine": "LF",
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "plugins": [
+      {
+        "name": "typescript-snapshots-plugin",
+        "snapshotCallIdentifiers": [
+          "toMatchSnapshot",
+          "toThrowErrorMatchingSnapshot",
+          "toMatchDiffSnapshot"
+        ]
+      }
     ]
-  }
+  },
+  "exclude": ["node_modules", "lib", "dist"]
 }

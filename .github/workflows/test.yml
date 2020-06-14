@@ -1,0 +1,32 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '13'
+          registry-url: 'https://registry.npmjs.org'
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ hashFiles('pnpm-lock.yaml') }}
+      - if: ${{ steps.cache.outputs.cache-hit != 'true' }}
+        run: npx pnpm install
+      - run: |
+          npm run build
+          npm run test-with-coverage
+          npx codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

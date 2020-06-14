@@ -1,7 +1,9 @@
-*.log
+.DS_Store
+Thumbs.db
 node_modules
-*.stackdump
-.rpt2_cache
-coverage
-lib
-.typedoc
+*.tsbuildinfo
+*.log*
+/lib
+/dist
+/coverage
+/docs
