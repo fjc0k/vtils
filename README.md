@@ -82,6 +82,13 @@ import {
   EventBus,
   base64Encode,
 } from 'https://cdn.pika.dev/vtils@3.1.2'
+
+// 类型工具库
+import {
+  OmitStrict,
+  LiteralUnion,
+  PartialDeep,
+} from 'https://cdn.pika.dev/vtils@3.1.2/types'
 ```
 
 ## 许可
