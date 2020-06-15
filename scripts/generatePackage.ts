@@ -14,6 +14,8 @@ async function main(rootDir: string) {
     'scripts',
   ] as Array<keyof typeof rawPackageInfo>) as any)
 
+  ;(packageInfo as any).type = 'module'
+
   await Promise.all([
     fs.writeJSON(packageJsonFile, packageInfo, { spaces: 2 }),
     ...['LICENSE', 'README.md'].map(file => {

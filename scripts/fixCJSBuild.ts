@@ -4,6 +4,7 @@ import { join } from 'path'
 
 async function main(rootDir: string) {
   const cjsDir = join(rootDir, './lib/_cjs')
+  const cjsPackageFile = join(cjsDir, './package.json')
   const files = await globby('**/*.js', {
     onlyFiles: true,
     absolute: true,
@@ -20,6 +21,13 @@ async function main(rootDir: string) {
         await fs.writeFile(file, newContent)
       }
     }),
+  )
+  await fs.writeJSON(
+    cjsPackageFile,
+    {
+      type: 'commonjs',
+    },
+    { spaces: 2 },
   )
 }
 

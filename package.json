@@ -27,11 +27,27 @@
       "require": "./_cjs/utils/index.js",
       "import": "./utils/index.js"
     },
-    "./": {
-      "require": "./_cjs/",
-      "import": "./"
+    "./date": {
+      "require": "./_cjs/date/index.js",
+      "import": "./date/index.js"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./react": {
+      "require": "./_cjs/react/index.js",
+      "import": "./react/index.js"
+    },
+    "./types": {
+      "require": "./_cjs/types/index.js",
+      "import": "./types/index.js"
+    },
+    "./utils": {
+      "require": "./_cjs/utils/index.js",
+      "import": "./utils/index.js"
+    },
+    "./validator": {
+      "require": "./_cjs/validator/index.js",
+      "import": "./validator/index.js"
+    }
   },
   "main": "_cjs/utils/index.js",
   "module": "utils/index.js",
