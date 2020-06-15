@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/fjc0k/vtils/compare/v3.1.2...v3.2.0) (2020-06-15)
+
+### Features
+
+- **utils:** 新增 md5 ([7a23391](https://github.com/fjc0k/vtils/commit/7a23391e3af57eee3fc81e1ef352a4b01959f600))
+
 ### [3.1.2](https://github.com/fjc0k/vtils/compare/v3.1.1...v3.1.2) (2020-06-15)
 
 ### [3.1.1](https://github.com/fjc0k/vtils/compare/v3.1.0...v3.1.1) (2020-06-14)
