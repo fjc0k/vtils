@@ -43,6 +43,7 @@
 |  [isPromiseLike(value)](./utils.ispromiselike.md) | 检查 <code>value</code> 是否像 <code>Promise</code>。 |
 |  [isUrl(value)](./utils.isurl.md) | 检测传入值是否是 URL。 |
 |  [loadResource(url)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
+|  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
 |  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
