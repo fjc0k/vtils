@@ -21,7 +21,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.0.2
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.1.0_4437229400866382d628c05c9380b3f8
+  haoma: registry.npm.taobao.org/haoma/2.2.0_895010006990dc093f40f2269fa3a59d
   husky: registry.npm.taobao.org/husky/4.2.5
   jest: registry.npm.taobao.org/jest/26.0.1
   lint-staged: registry.npm.taobao.org/lint-staged/10.2.10
@@ -1211,7 +1211,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/@types/jest/download/@types/jest-25.2.3.tgz'
     version: 25.2.3
   registry.npm.taobao.org/@types/js-cookie/2.2.6:
-    dev: false
     name: '@types/js-cookie'
     resolution:
       integrity: sha1-8aHLNa/0e8XPsFywxEHKkekUwm8=
@@ -1229,7 +1228,6 @@ packages:
   registry.npm.taobao.org/@types/lodash-es/4.17.3:
     dependencies:
       '@types/lodash': registry.npm.taobao.org/@types/lodash/4.14.152
-    dev: false
     name: '@types/lodash-es'
     resolution:
       integrity: sha1-h+sLNnOwdrjuZV8YkCYKE2rwmi0=
@@ -1237,7 +1235,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/@types/lodash-es/download/@types/lodash-es-4.17.3.tgz'
     version: 4.17.3
   registry.npm.taobao.org/@types/lodash/4.14.152:
-    dev: false
     name: '@types/lodash'
     resolution:
       integrity: sha1-fnZ5JQrc4U50kwTNtXCWn3fsmXw=
@@ -1508,7 +1505,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/@typescript-eslint/typescript-estree/download/@typescript-eslint/typescript-estree-3.2.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Ftypescript-estree%2Fdownload%2F%40typescript-eslint%2Ftypescript-estree-3.2.0.tgz'
     version: 3.2.0
   registry.npm.taobao.org/@xobotyi/scrollbar-width/1.9.5:
-    dev: false
     name: '@xobotyi/scrollbar-width'
     resolution:
       integrity: sha1-gCJKaRknL0Bbh5E8oTuSkpvfPE0=
@@ -2146,7 +2142,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/binary-extensions/download/binary-extensions-2.0.0.tgz'
     version: 2.0.0
   registry.npm.taobao.org/bowser/1.9.4:
-    dev: false
     name: bowser
     resolution:
       integrity: sha1-iQxYooE6nTJDcEM0+oG5alwVDJo=
@@ -3034,7 +3029,6 @@ packages:
   registry.npm.taobao.org/copy-to-clipboard/3.3.1:
     dependencies:
       toggle-selection: registry.npm.taobao.org/toggle-selection/1.0.6
-    dev: false
     name: copy-to-clipboard
     resolution:
       integrity: sha1-EVqhqZmP+rYZb5MHatbaO5E2Yq4=
@@ -3123,7 +3117,6 @@ packages:
     dependencies:
       hyphenate-style-name: registry.npm.taobao.org/hyphenate-style-name/1.0.3
       isobject: registry.npm.taobao.org/isobject/3.0.1
-    dev: false
     name: css-in-js-utils
     resolution:
       integrity: sha1-O0crOYeHKRtHz+PkT+z92ekUupk=
@@ -3134,7 +3127,6 @@ packages:
     dependencies:
       mdn-data: registry.npm.taobao.org/mdn-data/2.0.6
       source-map: registry.npm.taobao.org/source-map/0.6.1
-    dev: false
     engines:
       node: '>=8.0.0'
     name: css-tree
@@ -3250,7 +3242,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/data-urls/download/data-urls-2.0.0.tgz'
     version: 2.0.0
   registry.npm.taobao.org/date-fns/2.14.0:
-    dev: false
     name: date-fns
     resolution:
       integrity: sha1-NZqHomW7NO8uOPk+z2OsRT+bx7o=
@@ -3698,7 +3689,6 @@ packages:
   registry.npm.taobao.org/error-stack-parser/2.0.6:
     dependencies:
       stackframe: registry.npm.taobao.org/stackframe/1.2.0
-    dev: false
     name: error-stack-parser
     resolution:
       integrity: sha1-WpmnB716TFinl5AtSNgoA+3mqtg=
@@ -4277,7 +4267,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/extsprintf/download/extsprintf-1.3.0.tgz'
     version: 1.3.0
   registry.npm.taobao.org/fast-deep-equal/3.1.1:
-    dev: false
     name: fast-deep-equal
     resolution:
       integrity: sha1-VFFFB3xQFJHjOxXsQIwpQ3bpSuQ=
@@ -4326,7 +4315,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/fast-levenshtein/download/fast-levenshtein-2.0.6.tgz'
     version: 2.0.6
   registry.npm.taobao.org/fast-shallow-equal/1.0.0:
-    dev: false
     name: fast-shallow-equal
     resolution:
       integrity: sha1-1NyvZHJEDc76b4i5jjJR4n8lYos=
@@ -4334,7 +4322,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/fast-shallow-equal/download/fast-shallow-equal-1.0.0.tgz'
     version: 1.0.0
   registry.npm.taobao.org/fastest-stable-stringify/1.0.1:
-    dev: false
     name: fastest-stable-stringify
     resolution:
       integrity: sha1-kSLUBtTJ2YvqZEpraFPVh0uHsCg=
@@ -4524,7 +4511,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/flatted/download/flatted-2.0.2.tgz'
     version: 2.0.2
   registry.npm.taobao.org/fn-name/3.0.0:
-    dev: false
     engines:
       node: '>=8'
     name: fn-name
@@ -4995,7 +4981,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.1.0_4437229400866382d628c05c9380b3f8:
+  registry.npm.taobao.org/haoma/2.2.0_895010006990dc093f40f2269fa3a59d:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.10.2
       '@babel/plugin-transform-modules-commonjs': registry.npm.taobao.org/@babel/plugin-transform-modules-commonjs/7.10.1_@babel+core@7.10.2
@@ -5029,24 +5015,25 @@ packages:
       snapshot-diff: registry.npm.taobao.org/snapshot-diff/0.7.0_jest@26.0.1
       ts-jest: registry.npm.taobao.org/ts-jest/26.1.0_jest@26.0.1+typescript@3.9.5
       typescript: registry.npm.taobao.org/typescript/3.9.5
-      vtils: registry.npm.taobao.org/vtils/2.59.0
+      vtils: registry.npm.taobao.org/vtils/3.2.0_react-dom@16.13.1+react@16.13.1
       yargs: registry.npm.taobao.org/yargs/15.3.1
     dev: true
     hasBin: true
-    id: registry.npm.taobao.org/haoma/2.1.0
+    id: registry.npm.taobao.org/haoma/2.2.0
     name: haoma
     peerDependencies:
       eslint: ^7
       jest: ^26
       prettier: ^2
       react: '*'
+      react-dom: '*'
       typescript: ^3
     requiresBuild: true
     resolution:
-      integrity: sha1-YWF86g+prj5aZke3tlAzDMzvlpo=
+      integrity: sha1-lyuY6x2NL9Ex0UgVNQQra6kWvwY=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.1.0.tgz'
-    version: 2.1.0
+      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.2.0.tgz?cache=0&sync_timestamp=1592309575380&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhaoma%2Fdownload%2Fhaoma-2.2.0.tgz'
+    version: 2.2.0
   registry.npm.taobao.org/har-schema/2.0.0:
     dev: true
     engines:
@@ -5303,7 +5290,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/husky/download/husky-4.2.5.tgz'
     version: 4.2.5
   registry.npm.taobao.org/hyphenate-style-name/1.0.3:
-    dev: false
     name: hyphenate-style-name
     resolution:
       integrity: sha1-CXu3+guPGpzwvVxzTPlYmZgam0g=
@@ -5460,7 +5446,6 @@ packages:
     dependencies:
       bowser: registry.npm.taobao.org/bowser/1.9.4
       css-in-js-utils: registry.npm.taobao.org/css-in-js-utils/2.0.1
-    dev: false
     name: inline-style-prefixer
     resolution:
       integrity: sha1-05CVfSbygSVf4QHahjFYrG62CRE=
@@ -6505,6 +6490,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-7NrmBMB3p/vHDe+21RfDwciYkjo=
       registry: 'https://r.npm.taobao.org/'
@@ -6520,6 +6508,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-7NrmBMB3p/vHDe+21RfDwciYkjo=
       registry: 'https://r.npm.taobao.org/'
@@ -6851,7 +6842,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/jju/download/jju-1.4.0.tgz'
     version: 1.4.0
   registry.npm.taobao.org/js-cookie/2.2.1:
-    dev: false
     name: js-cookie
     resolution:
       integrity: sha1-aeEG3F1YBolFYpAqpbrsN0Tpsrg=
@@ -6931,6 +6921,9 @@ packages:
     name: jsdom
     peerDependencies:
       canvas: ^2.5.0
+    peerDependenciesMeta:
+      canvas:
+        optional: true
     resolution:
       integrity: sha1-dvL3VBZGvrRqk49dxHa4hwW+3ys=
       registry: 'https://r.npm.taobao.org/'
@@ -7276,7 +7269,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/locate-path/download/locate-path-5.0.0.tgz?cache=0&sync_timestamp=1590057804946&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flocate-path%2Fdownload%2Flocate-path-5.0.0.tgz'
     version: 5.0.0
   registry.npm.taobao.org/lodash-es/4.17.15:
-    dev: false
     name: lodash-es
     resolution:
       integrity: sha1-Ib2Wg5NUQS8j16EDQOXqxu5FXXg=
@@ -7510,7 +7502,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/map-visit/download/map-visit-1.0.0.tgz'
     version: 1.0.0
   registry.npm.taobao.org/mdn-data/2.0.6:
-    dev: false
     name: mdn-data
     resolution:
       integrity: sha1-hS3GD8ql2qLoz2yRicRA7T4EKXg=
@@ -7855,7 +7846,6 @@ packages:
       sourcemap-codec: registry.npm.taobao.org/sourcemap-codec/1.4.8
       stacktrace-js: registry.npm.taobao.org/stacktrace-js/2.0.2
       stylis: registry.npm.taobao.org/stylis/3.5.0
-    dev: false
     id: registry.npm.taobao.org/nano-css/5.3.0
     name: nano-css
     peerDependencies:
@@ -8889,7 +8879,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz'
     version: 15.7.2
   registry.npm.taobao.org/property-expr/2.0.2:
-    dev: false
     name: property-expr
     resolution:
       integrity: sha1-//KkORkTVVOjvC/dlL24QZZbIzA=
@@ -9010,7 +8999,6 @@ packages:
     dependencies:
       react: registry.npm.taobao.org/react/16.13.1
       tslib: registry.npm.taobao.org/tslib/2.0.0
-    dev: false
     id: registry.npm.taobao.org/react-universal-interface/0.6.2
     name: react-universal-interface
     peerDependencies:
@@ -9039,7 +9027,6 @@ packages:
       throttle-debounce: registry.npm.taobao.org/throttle-debounce/2.1.0
       ts-easing: registry.npm.taobao.org/ts-easing/0.2.0
       tslib: registry.npm.taobao.org/tslib/2.0.0
-    dev: false
     id: registry.npm.taobao.org/react-use/15.1.1
     name: react-use
     peerDependencies:
@@ -9435,7 +9422,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/require-main-filename/download/require-main-filename-2.0.0.tgz'
     version: 2.0.0
   registry.npm.taobao.org/resize-observer-polyfill/1.5.1:
-    dev: false
     name: resize-observer-polyfill
     resolution:
       integrity: sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ=
@@ -9600,7 +9586,6 @@ packages:
   registry.npm.taobao.org/rtl-css-js/1.14.0:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.10.2
-    dev: false
     name: rtl-css-js
     resolution:
       integrity: sha1-2qTxkqklCeKSoFGfSyVebjwHa30=
@@ -9715,7 +9700,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/scheduler/download/scheduler-0.19.1.tgz'
     version: 0.19.1
   registry.npm.taobao.org/screenfull/5.0.2:
-    dev: false
     engines:
       node: '>=0.10.0'
     name: screenfull
@@ -9811,7 +9795,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/set-blocking/download/set-blocking-2.0.0.tgz'
     version: 2.0.0
   registry.npm.taobao.org/set-harmonic-interval/1.0.1:
-    dev: false
     engines:
       node: '>=6.9'
     name: set-harmonic-interval
@@ -10137,7 +10120,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/source-map-url/download/source-map-url-0.4.0.tgz'
     version: 0.4.0
   registry.npm.taobao.org/source-map/0.5.6:
-    dev: false
     engines:
       node: '>=0.10.0'
     name: source-map
@@ -10176,7 +10158,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/source-map/download/source-map-0.7.3.tgz'
     version: 0.7.3
   registry.npm.taobao.org/sourcemap-codec/1.4.8:
-    dev: false
     name: sourcemap-codec
     resolution:
       integrity: sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=
@@ -10285,7 +10266,6 @@ packages:
   registry.npm.taobao.org/stack-generator/2.0.5:
     dependencies:
       stackframe: registry.npm.taobao.org/stackframe/1.2.0
-    dev: false
     name: stack-generator
     resolution:
       integrity: sha1-+wDltO6X3mA+B3PqeM6UTYFZbDY=
@@ -10315,7 +10295,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/stack-utils/download/stack-utils-2.0.2.tgz'
     version: 2.0.2
   registry.npm.taobao.org/stackframe/1.2.0:
-    dev: false
     name: stackframe
     resolution:
       integrity: sha1-UkKUktY8YuuYmATBFVLj0i53kwM=
@@ -10326,7 +10305,6 @@ packages:
     dependencies:
       source-map: registry.npm.taobao.org/source-map/0.5.6
       stackframe: registry.npm.taobao.org/stackframe/1.2.0
-    dev: false
     name: stacktrace-gps
     resolution:
       integrity: sha1-dojcL8Cf+zoTFl6+DbyvQbzwxpo=
@@ -10338,7 +10316,6 @@ packages:
       error-stack-parser: registry.npm.taobao.org/error-stack-parser/2.0.6
       stack-generator: registry.npm.taobao.org/stack-generator/2.0.5
       stacktrace-gps: registry.npm.taobao.org/stacktrace-gps/3.0.4
-    dev: false
     name: stacktrace-js
     resolution:
       integrity: sha1-TKk+qfSUdS1VcJoIHUAP2uvuiXs=
@@ -10680,7 +10657,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/stubs/download/stubs-3.0.0.tgz'
     version: 3.0.0
   registry.npm.taobao.org/stylis/3.5.0:
-    dev: false
     name: stylis
     resolution:
       integrity: sha1-AW+iOWY9d/ho/vW2fPIBxLfHAeE=
@@ -10744,7 +10720,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/symbol-tree/download/symbol-tree-3.2.4.tgz'
     version: 3.2.4
   registry.npm.taobao.org/synchronous-promise/2.0.13:
-    dev: false
     name: synchronous-promise
     resolution:
       integrity: sha1-nYwWXd7mnFplQoYrQFvFAJWSZwI=
@@ -10860,7 +10835,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/throat/download/throat-5.0.0.tgz'
     version: 5.0.0
   registry.npm.taobao.org/throttle-debounce/2.1.0:
-    dev: false
     engines:
       node: '>=8'
     name: throttle-debounce
@@ -11000,7 +10974,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/to-regex/download/to-regex-3.0.2.tgz'
     version: 3.0.2
   registry.npm.taobao.org/toggle-selection/1.0.6:
-    dev: false
     name: toggle-selection
     resolution:
       integrity: sha1-bkWxJj8gF/oKzH2J14sVuL932jI=
@@ -11021,7 +10994,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/token-types/download/token-types-2.0.0.tgz'
     version: 2.0.0
   registry.npm.taobao.org/toposort/2.0.2:
-    dev: false
     name: toposort
     resolution:
       integrity: sha1-riF2gXXRVZ1IvvNUILL0li8JwzA=
@@ -11108,7 +11080,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/trim-off-newlines/download/trim-off-newlines-1.0.1.tgz'
     version: 1.0.1
   registry.npm.taobao.org/ts-easing/0.2.0:
-    dev: false
     name: ts-easing
     resolution:
       integrity: sha1-yKijUCUQVWZYjYfb2gXdf7+lpOw=
@@ -11186,7 +11157,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/tslib/download/tslib-1.13.0.tgz'
     version: 1.13.0
   registry.npm.taobao.org/tslib/2.0.0:
-    dev: false
     name: tslib
     resolution:
       integrity: sha1-GNE/wtzgQFHiDwdMyDh/2Aic5PM=
@@ -11585,6 +11555,28 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/vtils/download/vtils-2.59.0.tgz'
     version: 2.59.0
+  registry.npm.taobao.org/vtils/3.2.0_react-dom@16.13.1+react@16.13.1:
+    dependencies:
+      '@types/lodash-es': registry.npm.taobao.org/@types/lodash-es/4.17.3
+      date-fns: registry.npm.taobao.org/date-fns/2.14.0
+      lodash: registry.npm.taobao.org/lodash/4.17.15
+      lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
+      react-use: registry.npm.taobao.org/react-use/15.1.1_react-dom@16.13.1+react@16.13.1
+      tslib: registry.npm.taobao.org/tslib/2.0.0
+      yup: registry.npm.taobao.org/yup/0.29.1
+    dev: true
+    engines:
+      node: '>=13.2.0'
+    id: registry.npm.taobao.org/vtils/3.2.0
+    name: vtils
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    resolution:
+      integrity: sha1-S70p8pWrNFw7T6dzofKIqrsBYn0=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/vtils/download/vtils-3.2.0.tgz'
+    version: 3.2.0
   registry.npm.taobao.org/w3c-hr-time/1.0.2:
     dependencies:
       browser-process-hrtime: registry.npm.taobao.org/browser-process-hrtime/1.0.0
@@ -11782,6 +11774,11 @@ packages:
     peerDependencies:
       bufferutil: ^4.0.1
       utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
     resolution:
       integrity: sha1-Sy9/IZs9Nze8Gi+/FF2CW5TTj/0=
       registry: 'https://r.npm.taobao.org/'
@@ -11905,7 +11902,6 @@ packages:
       property-expr: registry.npm.taobao.org/property-expr/2.0.2
       synchronous-promise: registry.npm.taobao.org/synchronous-promise/2.0.13
       toposort: registry.npm.taobao.org/toposort/2.0.2
-    dev: false
     name: yup
     resolution:
       integrity: sha1-NdJaq0cKDDlQ9mBAug/0sbbv4Nk=
@@ -11944,7 +11940,7 @@ specifiers:
   execa: 4.0.2
   fs-extra: 9.0.1
   globby: 11.0.1
-  haoma: 2.1.0
+  haoma: 2.2.0
   husky: 4.2.5
   jest: 26.0.1
   lint-staged: 10.2.10
