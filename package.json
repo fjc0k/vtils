@@ -74,7 +74,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "post-merge": "pnpm install"
     }
   },
   "lint-staged": {
