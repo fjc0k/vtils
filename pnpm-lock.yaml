@@ -24,7 +24,7 @@ devDependencies:
   haoma: registry.npm.taobao.org/haoma/2.2.0_895010006990dc093f40f2269fa3a59d
   husky: registry.npm.taobao.org/husky/4.2.5
   jest: registry.npm.taobao.org/jest/26.0.1
-  lint-staged: registry.npm.taobao.org/lint-staged/10.2.10
+  lint-staged: registry.npm.taobao.org/lint-staged/10.2.11
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
   prettier: registry.npm.taobao.org/prettier/2.0.5
   prompts: registry.npm.taobao.org/prompts/2.3.2
@@ -7174,7 +7174,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz'
     version: 1.1.6
-  registry.npm.taobao.org/lint-staged/10.2.10:
+  registry.npm.taobao.org/lint-staged/10.2.11:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
       cli-truncate: registry.npm.taobao.org/cli-truncate/2.1.0
@@ -7195,10 +7195,10 @@ packages:
     hasBin: true
     name: lint-staged
     resolution:
-      integrity: sha1-8PeL+HhrvpDhd1oNxUD38StqebI=
+      integrity: sha1-cTyAh38tyLYJsFvFkCAjTnZslyA=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.2.10.tgz'
-    version: 10.2.10
+      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.2.11.tgz?cache=0&sync_timestamp=1592387231843&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.2.11.tgz'
+    version: 10.2.11
   registry.npm.taobao.org/listr2/2.1.7_enquirer@2.3.5:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
@@ -7220,7 +7220,7 @@ packages:
     resolution:
       integrity: sha1-gQfBLGmbrHePFWdzkpgFLY67nCc=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/listr2/download/listr2-2.1.7.tgz'
+      tarball: 'https://registry.npm.taobao.org/listr2/download/listr2-2.1.7.tgz?cache=0&sync_timestamp=1592388938640&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flistr2%2Fdownload%2Flistr2-2.1.7.tgz'
     version: 2.1.7
   registry.npm.taobao.org/load-json-file/1.1.0:
     dependencies:
@@ -11966,7 +11966,7 @@ specifiers:
   haoma: 2.2.0
   husky: 4.2.5
   jest: 26.0.1
-  lint-staged: 10.2.10
+  lint-staged: 10.2.11
   lodash: ^4.17.15
   lodash-es: ^4.17.15
   open-cli: 6.0.1
