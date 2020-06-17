@@ -114,7 +114,7 @@
     "haoma": "2.2.0",
     "husky": "4.2.5",
     "jest": "26.0.1",
-    "lint-staged": "10.2.10",
+    "lint-staged": "10.2.11",
     "open-cli": "6.0.1",
     "prettier": "2.0.5",
     "prompts": "2.3.2",
