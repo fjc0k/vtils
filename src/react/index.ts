@@ -4,6 +4,8 @@
  * @packageDocumentation
  */
 
+/* istanbul ignore file */
+
 export * from 'react-use'
 
 // @index(['./**/*.ts', '!./**/*.test.*', '!./useToggle.*'], f => `export * from '${f.path}'`)

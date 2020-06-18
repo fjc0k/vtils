@@ -4,6 +4,8 @@
  * @packageDocumentation
  */
 
+/* istanbul ignore file */
+
 // @index(['./**/*.ts', '!**/*.test.*', '!./yupTypes'], f => `export * from '${f.path}'`)
 export * from './locale/enUS'
 export * from './locale/zhCN'

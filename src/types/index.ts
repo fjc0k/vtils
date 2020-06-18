@@ -4,6 +4,8 @@
  * @packageDocumentation
  */
 
+/* istanbul ignore file */
+
 export type { LiteralUnion, AsyncReturnType, FixedLengthArray } from 'type-fest'
 
 export type {

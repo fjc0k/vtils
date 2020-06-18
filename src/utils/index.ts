@@ -4,6 +4,8 @@
  * @packageDocumentation
  */
 
+/* istanbul ignore file */
+
 export * from 'lodash-es'
 
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)

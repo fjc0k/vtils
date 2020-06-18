@@ -4,6 +4,8 @@
  * @packageDocumentation
  */
 
+/* istanbul ignore file */
+
 // prettier-ignore
 export {
   // 手动导出以解决 @microsoft/api-extractor 的问题
