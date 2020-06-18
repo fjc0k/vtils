@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.1](https://github.com/fjc0k/vtils/compare/v3.3.0...v3.3.1) (2020-06-18)
+
+### Bug Fixes
+
+- 设置发布包的 registry 为 https://registry.npmjs.org/ ([bbcf828](https://github.com/fjc0k/vtils/commit/bbcf828b5f814e9ce30c7b15d6e1bec70e38b3ab))
+
 ## [3.3.0](https://github.com/fjc0k/vtils/compare/v3.2.0...v3.3.0) (2020-06-18)
 
 ### Features
