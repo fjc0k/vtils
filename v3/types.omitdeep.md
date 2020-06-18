@@ -44,11 +44,24 @@ declare type DeepOmit<T extends DeepOmitModify<Filter>, Filter> = T extends Buil
     ? Promise<DeepOmit<ItemType, Filter>>
     : T
   : {
-      [K in Exclude<keyof T, keyof Filter>]: T[K];
+      [K in Exclude<OptionalKeys<T>, keyof Filter>]+?: T[K];
     } &
       OmitProperties<
         {
-          [K in Extract<keyof T, keyof Filter>]: Filter[K] extends true
+          [K in Extract<OptionalKeys<T>, keyof Filter>]+?: Filter[K] extends true
+            ? never
+            : T[K] extends DeepOmitModify<Filter[K]>
+            ? DeepOmit<T[K], Filter[K]>
+            : T[K];
+        },
+        never
+      > &
+      {
+        [K in Exclude<RequiredKeys<T>, keyof Filter>]: T[K];
+      } &
+      OmitProperties<
+        {
+          [K in Extract<RequiredKeys<T>, keyof Filter>]: Filter[K] extends true
             ? never
             : T[K] extends DeepOmitModify<Filter[K]>
             ? DeepOmit<T[K], Filter[K]>

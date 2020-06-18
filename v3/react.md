@@ -10,6 +10,8 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 
 |  Function | Description |
 |  --- | --- |
+|  [createGlobalState()](./react.createglobalstate.md) |  |
+|  [createGlobalState(initialState)](./react.createglobalstate_1.md) |  |
 |  [useClassName(getClassValues, deps)](./react.useclassname.md) | 获取类名字符串。 |
 |  [useLoadMore(service, deps)](./react.useloadmore.md) | 数据加载。 |
 |  [useReachBottom(callback, offset)](./react.usereachbottom.md) | 立即触发一次回调，并且每当到达页面底部时触发回调。 |
@@ -22,6 +24,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 
 |  Interface | Description |
 |  --- | --- |
+|  [CreateGlobalStateResult](./react.createglobalstateresult.md) |  |
 |  [UseLoadMoreResult](./react.useloadmoreresult.md) | 加载更多结果。 |
 |  [UseLoadMoreService](./react.useloadmoreservice.md) | 加载服务。 |
 |  [UseLoadMoreServicePayload](./react.useloadmoreservicepayload.md) | 加载服务载荷。 |
