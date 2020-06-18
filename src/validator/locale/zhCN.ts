@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { yup } from '../yup'
 
 export const zhCN: yup.Locale = {

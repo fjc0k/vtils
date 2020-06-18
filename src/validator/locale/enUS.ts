@@ -1,6 +1,8 @@
+/* istanbul ignore file */
 import { yup } from '../yup'
 
 // ref: https://github.com/jquense/yup/blob/master/src/locale.js
+
 export const enUS: yup.Locale = {
   mixed: {
     default: '${path} is invalid',
