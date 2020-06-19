@@ -1,9 +1,13 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { createGlobalState } from './createGlobalState'
+import { createGlobalState, CreateGlobalStateResult } from './createGlobalState'
 
 describe('createGlobalState', () => {
   describe('有初始值', () => {
-    const useGlobalName = createGlobalState('')
+    let useGlobalName: CreateGlobalStateResult<string>
+
+    beforeEach(() => {
+      useGlobalName = createGlobalState('')
+    })
 
     test('getState 正常', () => {
       expect(useGlobalName.getState()).toBe('')
@@ -12,6 +16,17 @@ describe('createGlobalState', () => {
     test('setState 正常', () => {
       useGlobalName.setState('Jay')
       expect(useGlobalName.getState()).toBe('Jay')
+    })
+
+    test('watchState 正常', () => {
+      const cb = jest.fn()
+      const off = useGlobalName.watchState(cb)
+      useGlobalName.setState('Jay')
+      expect(cb).toBeCalled().toBeCalledTimes(1).toBeCalledWith('Jay', '')
+      useGlobalName.setState('Jay2')
+      expect(cb).toBeCalled().toBeCalledTimes(2).toBeCalledWith('Jay2', 'Jay')
+      off()
+      expect(cb).toBeCalled().toBeCalledTimes(2).toBeCalledWith('Jay2', 'Jay')
     })
 
     test('跨组件状态共享正常', () => {
@@ -43,7 +58,11 @@ describe('createGlobalState', () => {
   })
 
   describe('无初始值', () => {
-    const useGlobalName = createGlobalState<string>()
+    let useGlobalName: CreateGlobalStateResult<string | undefined>
+
+    beforeEach(() => {
+      useGlobalName = createGlobalState()
+    })
 
     test('getState 正常', () => {
       expect(useGlobalName.getState()).toBe(undefined)
@@ -52,6 +71,20 @@ describe('createGlobalState', () => {
     test('setState 正常', () => {
       useGlobalName.setState('Jay')
       expect(useGlobalName.getState()).toBe('Jay')
+    })
+
+    test('watchState 正常', () => {
+      const cb = jest.fn()
+      const off = useGlobalName.watchState(cb)
+      useGlobalName.setState('Jay')
+      expect(cb)
+        .toBeCalled()
+        .toBeCalledTimes(1)
+        .toBeCalledWith('Jay', undefined)
+      useGlobalName.setState('Jay2')
+      expect(cb).toBeCalled().toBeCalledTimes(2).toBeCalledWith('Jay2', 'Jay')
+      off()
+      expect(cb).toBeCalled().toBeCalledTimes(2).toBeCalledWith('Jay2', 'Jay')
     })
 
     test('跨组件状态共享正常', () => {

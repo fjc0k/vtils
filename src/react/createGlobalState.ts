@@ -1,9 +1,11 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { EventBus } from '../utils'
 
 export interface CreateGlobalStateResult<S> {
   (): readonly [S, Dispatch<SetStateAction<S>>]
   getState(): S
   setState(nextState: SetStateAction<S>): void
+  watchState(callback: (nextState: S, prevState: S) => any): () => void
 }
 
 export function createGlobalState<S>(): CreateGlobalStateResult<S | undefined>
@@ -15,33 +17,42 @@ export function createGlobalState<S>(
 export function createGlobalState<S>(
   initialState?: S,
 ): CreateGlobalStateResult<S | undefined> {
-  let currentState: S | undefined = initialState
-  const stateSetters: Dispatch<SetStateAction<S | undefined>>[] = []
-  const getState: () => S | undefined = () => currentState
-  const setState: Dispatch<SetStateAction<S | undefined>> = nextState => {
-    if (typeof nextState === 'function') {
-      nextState = (nextState as any)(currentState)
+  const bus = new EventBus<{
+    setGlobalState: (
+      nextGlobalState: S | undefined,
+      prevGlobalState: S | undefined,
+    ) => void
+  }>()
+  let currentGlobalState: S | undefined = initialState
+  const getGlobalState: () => S | undefined = () => currentGlobalState
+  const setGlobalState: Dispatch<SetStateAction<
+    S | undefined
+  >> = nextGlobalState => {
+    if (typeof nextGlobalState === 'function') {
+      nextGlobalState = (nextGlobalState as any)(currentGlobalState)
     }
-    currentState = nextState as any
-    for (const setter of stateSetters) {
-      setter(nextState)
+    if (nextGlobalState !== currentGlobalState) {
+      bus.emit('setGlobalState', nextGlobalState as any, currentGlobalState)
+      currentGlobalState = nextGlobalState as any
     }
   }
+  const watchGlobalState: (
+    callback: (
+      nextGlobalState: S | undefined,
+      prevGlobalState: S | undefined,
+    ) => any,
+  ) => () => void = callback => {
+    return bus.on('setGlobalState', callback)
+  }
   const useGlobalState: CreateGlobalStateResult<S | undefined> = (() => {
-    const [globalState, setGlobalState] = useState(currentState)
+    const [state, setState] = useState(currentGlobalState)
     useEffect(() => {
-      stateSetters.push(setGlobalState)
-      return () => {
-        const i = stateSetters.indexOf(setGlobalState)
-        /* istanbul ignore else */
-        if (i !== -1) {
-          stateSetters.splice(i, 1)
-        }
-      }
+      return bus.on('setGlobalState', setState)
     }, [])
-    return [globalState, setState] as const
+    return [state, setGlobalState] as const
   }) as any
-  useGlobalState.getState = getState
-  useGlobalState.setState = setState
+  useGlobalState.getState = getGlobalState
+  useGlobalState.setState = setGlobalState
+  useGlobalState.watchState = watchGlobalState
   return useGlobalState
 }
