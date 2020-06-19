@@ -16,4 +16,5 @@ export interface CreateGlobalStateResult<S>
 |  --- | --- |
 |  [getState()](./react.createglobalstateresult.getstate.md) |  |
 |  [setState(nextState)](./react.createglobalstateresult.setstate.md) |  |
+|  [watchState(callback)](./react.createglobalstateresult.watchstate.md) |  |
 
