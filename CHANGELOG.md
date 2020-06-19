@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/fjc0k/vtils/compare/v3.3.1...v3.4.0) (2020-06-19)
+
+### Features
+
+- **createGlobalState:** 支持 watchState ([2412f3a](https://github.com/fjc0k/vtils/commit/2412f3a94076d9d5da368b88e6665c5b0a575bc5))
+
 ### [3.3.1](https://github.com/fjc0k/vtils/compare/v3.3.0...v3.3.1) (2020-06-18)
 
 ### Bug Fixes
