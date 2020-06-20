@@ -124,7 +124,7 @@
     "rollup-plugin-dts": "1.4.7",
     "shx": "0.3.2",
     "standard-version": "8.0.0",
-    "ts-essentials": "6.0.7",
+    "ts-essentials": "7.0.0",
     "ts-node": "8.10.2",
     "type-fest": "0.15.1",
     "typescript": "3.9.5",
