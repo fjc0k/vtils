@@ -7,7 +7,7 @@ dependencies:
   tslib: registry.npm.taobao.org/tslib/2.0.0
   yup: registry.npm.taobao.org/yup/0.29.1
 devDependencies:
-  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.8.13
+  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.8.14
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.8.12
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/10.3.0_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.3.0_react@16.13.1
@@ -804,7 +804,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@jest/types/download/@jest/types-26.0.1.tgz'
     version: 26.0.1
-  registry.npm.taobao.org/@microsoft/api-documenter/7.8.13:
+  registry.npm.taobao.org/@microsoft/api-documenter/7.8.14:
     dependencies:
       '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.8.8
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -817,10 +817,10 @@ packages:
     hasBin: true
     name: '@microsoft/api-documenter'
     resolution:
-      integrity: sha1-UF5J+pENaWQpCDgZNXv5/xEn0HY=
+      integrity: sha1-vO2qB6WY7gLPhFeba48kEIIZyQg=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.8.13.tgz'
-    version: 7.8.13
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.8.14.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-documenter%2Fdownload%2F%40microsoft%2Fapi-documenter-7.8.14.tgz'
+    version: 7.8.14
   registry.npm.taobao.org/@microsoft/api-extractor-model/7.8.8:
     dependencies:
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -11947,7 +11947,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/z-schema/download/z-schema-3.18.4.tgz'
     version: 3.18.4
 specifiers:
-  '@microsoft/api-documenter': 7.8.13
+  '@microsoft/api-documenter': 7.8.14
   '@microsoft/api-extractor': 7.8.12
   '@testing-library/react': 10.3.0
   '@testing-library/react-hooks': 3.3.0
