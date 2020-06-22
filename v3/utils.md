@@ -11,6 +11,12 @@
 |  Class | Description |
 |  --- | --- |
 |  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TEvents 事件名称及其对应的回调描述 |
+|  [RichUrl](./utils.richurl.md) | 富链接，同普通链接相比，富链接可包含一些描述信息。<!-- -->结构描述：
+```text
+rich://{"url":"***","desc":"***"}
+
+```
+ |
 |  [Wechat](./utils.wechat.md) | 对微信 JSSDK 的封装。 |
 
 ## Enumerations
@@ -56,6 +62,8 @@
 |  --- | --- |
 |  [FormatNumberOptions](./utils.formatnumberoptions.md) | 格式化数字选项。 |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
+|  [ParsedFileRichUrl](./utils.parsedfilerichurl.md) |  |
+|  [ParsedRichUrl](./utils.parsedrichurl.md) |  |
 |  [ReadFileReader](./utils.readfilereader.md) | 各种内容类型的读取器。 |
 |  [WaitResult](./utils.waitresult.md) |  |
 |  [WechatChooseImageParams](./utils.wechatchooseimageparams.md) |  |

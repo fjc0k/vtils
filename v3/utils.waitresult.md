@@ -10,6 +10,7 @@
 ```typescript
 export interface WaitResult extends Promise<void> 
 ```
+<b>Extends:</b> Promise&lt;void&gt;
 
 ## Properties
 
