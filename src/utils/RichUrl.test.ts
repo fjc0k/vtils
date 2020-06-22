@@ -120,7 +120,7 @@ describe('RichUrl', () => {
         RichUrl.fromFile(
           new File([''], 'h.css', {
             type: 'text/css',
-            lastModified: new Date(2010, 10, 1).getTime(),
+            lastModified: 1574155444339,
           }),
         ),
       ).toMatchSnapshot()
@@ -158,7 +158,7 @@ describe('RichUrl', () => {
         RichUrl.fromFile(
           new File([''], 'h.css', {
             type: 'text/css',
-            lastModified: new Date(2010, 10, 1).getTime(),
+            lastModified: 1574155444339,
           }),
         ),
       )
@@ -213,7 +213,7 @@ describe('RichUrl', () => {
                 avatar: RichUrl.fromFile(
                   new File([''], 'h.css', {
                     type: 'text/css',
-                    lastModified: new Date(2010, 10, 1).getTime(),
+                    lastModified: 1574155444339,
                   }),
                 ),
                 albums: [

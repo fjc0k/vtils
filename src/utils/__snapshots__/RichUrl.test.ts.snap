@@ -14,7 +14,7 @@ exports[`RichUrl build 有描述: 描述为 desc 1`] = `"rich://{\\"url\\":\\"\\
 
 exports[`RichUrl build 有描述: 描述为 null 1`] = `"rich://{\\"url\\":\\"\\",\\"desc\\":null}"`;
 
-exports[`RichUrl fromFile 表现正常 1`] = `"rich://{\\"url\\":\\"blob:http://localhost/ffsfeeer44\\",\\"desc\\":{\\"name\\":\\"h.css\\",\\"size\\":0,\\"type\\":\\"text/css\\",\\"lastModified\\":1288540800000}}"`;
+exports[`RichUrl fromFile 表现正常 1`] = `"rich://{\\"url\\":\\"blob:http://localhost/ffsfeeer44\\",\\"desc\\":{\\"name\\":\\"h.css\\",\\"size\\":0,\\"type\\":\\"text/css\\",\\"lastModified\\":1574155444339}}"`;
 
 exports[`RichUrl parse 富链接时解析正常: url不为空 1`] = `
 Object {
@@ -67,7 +67,7 @@ Object {
 
 exports[`RichUrl toFile 文件富链接正常 1`] = `
 Object {
-  "lastModified": 1288540800000,
+  "lastModified": 1574155444339,
   "name": "h.css",
   "size": 0,
   "type": "text/css",
