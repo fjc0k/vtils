@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/fjc0k/vtils/compare/v3.4.0...v3.5.0) (2020-06-22)
+
+### Features
+
+- **utils:** 新增 RichUrl ([c44f488](https://github.com/fjc0k/vtils/commit/c44f48889f35031c987fa60030d4f27c8bd4ee42))
+
 ## [3.4.0](https://github.com/fjc0k/vtils/compare/v3.3.1...v3.4.0) (2020-06-19)
 
 ### Features
