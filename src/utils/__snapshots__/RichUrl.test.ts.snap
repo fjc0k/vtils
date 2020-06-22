@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RichUrl build 无描述: url不为空 1`] = `"rich://{\\"url\\":\\"http://gg.gg\\"}"`;
+
+exports[`RichUrl build 无描述: url为空 1`] = `"rich://{\\"url\\":\\"\\"}"`;
+
+exports[`RichUrl build 有描述: 描述为 [] 1`] = `"rich://{\\"url\\":\\"\\",\\"desc\\":[]}"`;
+
+exports[`RichUrl build 有描述: 描述为 { x: 1 } 1`] = `"rich://{\\"url\\":\\"\\",\\"desc\\":{\\"x\\":1}}"`;
+
+exports[`RichUrl build 有描述: 描述为 1 1`] = `"rich://{\\"url\\":\\"\\",\\"desc\\":1}"`;
+
+exports[`RichUrl build 有描述: 描述为 desc 1`] = `"rich://{\\"url\\":\\"\\",\\"desc\\":\\"desc\\"}"`;
+
+exports[`RichUrl build 有描述: 描述为 null 1`] = `"rich://{\\"url\\":\\"\\",\\"desc\\":null}"`;
+
+exports[`RichUrl fromFile 表现正常 1`] = `"rich://{\\"url\\":\\"blob:http://localhost/ffsfeeer44\\",\\"desc\\":{\\"name\\":\\"h.css\\",\\"size\\":0,\\"type\\":\\"text/css\\",\\"lastModified\\":1288540800000}}"`;
+
+exports[`RichUrl parse 富链接时解析正常: url不为空 1`] = `
+Object {
+  "url": "http://gg.gg",
+}
+`;
+
+exports[`RichUrl parse 富链接时解析正常: url为空 1`] = `
+Object {
+  "url": "",
+}
+`;
+
+exports[`RichUrl parse 富链接时解析正常: 描述为 [] 1`] = `
+Object {
+  "desc": Array [],
+  "url": "",
+}
+`;
+
+exports[`RichUrl parse 富链接时解析正常: 描述为 { x: 1 } 1`] = `
+Object {
+  "desc": Object {
+    "x": 1,
+  },
+  "url": "",
+}
+`;
+
+exports[`RichUrl parse 富链接时解析正常: 描述为 1 1`] = `
+Object {
+  "desc": 1,
+  "url": "",
+}
+`;
+
+exports[`RichUrl parse 富链接时解析正常: 描述为 desc 1`] = `
+Object {
+  "desc": "desc",
+  "url": "",
+}
+`;
+
+exports[`RichUrl parse 富链接时解析正常: 描述为 null 1`] = `
+Object {
+  "desc": null,
+  "url": "",
+}
+`;
+
+exports[`RichUrl toFile 文件富链接正常 1`] = `
+Object {
+  "lastModified": 1288540800000,
+  "name": "h.css",
+  "size": 0,
+  "type": "text/css",
+  "url": "blob:http://localhost/ffsfeeer44",
+}
+`;
+
+exports[`RichUrl toFile 非文件富链接报错 1`] = `"richUrl 不是一个合法的文件富链接: rich://{\\"url\\":\\"http://gg.gg\\",\\"desc\\":{\\"x\\":1}}"`;
+
+exports[`RichUrl transform 表现正常 1`] = `
+Object {
+  "icon": "url: icon, desc: {\\"name\\":\\"icon\\"}",
+  "id": 1,
+  "title": "hello",
+  "users": Array [
+    Object {
+      "avatar": "url: 2-avatar, desc: undefined",
+      "id": 2,
+    },
+    Object {
+      "avatar": "url: 3-avatar, desc: {\\"url\\":\\".\\"}",
+      "id": 3,
+    },
+    Object {
+      "albums": Array [
+        "url: http://gg.gg, desc: undefined",
+        "url: https://gg.gg, desc: undefined",
+        "url: ftp://gg.gg, desc: {\\"ftp\\":true}",
+      ],
+      "avatar": "url: , desc: {\\"avatar\\":\\"4\\",\\"id\\":4}",
+      "id": 4,
+    },
+  ],
+}
+`;
+
+exports[`RichUrl transformFile 表现正常 1`] = `
+Object {
+  "icon": "rich://{\\"url\\":\\"icon\\",\\"desc\\":{\\"name\\":\\"icon\\"}}",
+  "id": 1,
+  "title": "hello",
+  "users": Array [
+    Object {
+      "avatar": "rich://{\\"url\\":\\"2-avatar\\"}",
+      "id": 2,
+    },
+    Object {
+      "avatar": "rich://{\\"url\\":\\"3-avatar\\",\\"desc\\":{\\"url\\":\\".\\"}}",
+      "id": 3,
+    },
+    Object {
+      "albums": Array [
+        "rich://{\\"url\\":\\"http://gg.gg\\"}",
+        "rich://{\\"url\\":\\"https://gg.gg\\"}",
+        "rich://{\\"url\\":\\"ftp://gg.gg\\",\\"desc\\":{\\"ftp\\":true}}",
+      ],
+      "avatar": "url: blob:http://localhost/ffsfeeer44, file: h.css",
+      "id": 4,
+    },
+  ],
+}
+`;
