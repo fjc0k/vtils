@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/fjc0k/vtils/compare/v3.5.1...v3.6.0) (2020-06-24)
+
+### Features
+
+- **react:** 新增 useTitle ([9f86c3f](https://github.com/fjc0k/vtils/commit/9f86c3f41d3459f6915abdd45246499abcc0a307))
+
 ### [3.5.1](https://github.com/fjc0k/vtils/compare/v3.5.0...v3.5.1) (2020-06-22)
 
 ## [3.5.0](https://github.com/fjc0k/vtils/compare/v3.4.0...v3.5.0) (2020-06-22)
