@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/fjc0k/vtils/compare/v3.6.0...v3.7.0) (2020-06-24)
+
+### Features
+
+- **react:** 新增 useReachBottom.taro ([9afc481](https://github.com/fjc0k/vtils/commit/9afc481bff89fbe7a65fc74d7fe047f73116d174))
+
 ## [3.6.0](https://github.com/fjc0k/vtils/compare/v3.5.1...v3.6.0) (2020-06-24)
 
 ### Features
