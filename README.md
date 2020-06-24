@@ -21,7 +21,7 @@ console.log(dedent`
 
 - **🌸 精致优雅**：为每一个工具都添加了注释、测试，不看文档亦可直接使用。
 
-- **🌈 面向未来**：使用 [TypeScript](https://www.typescriptlang.org/) 编写，支持 [Tree Shaking](https://webpack.js.org/guides/tree-shaking/)、[ECMAScript Modules](https://nodejs.org/api/esm.html)，也可以在 [Deno](https://deno.land/) 中使用。
+- **🌈 面向未来**：使用 [TypeScript](https://www.typescriptlang.org/) 编写，支持 [Tree Shaking](https://webpack.js.org/guides/tree-shaking/)、[ECMAScript Modules](https://nodejs.org/api/esm.html)，也可以在 [Taro 3](https://taro.js.org/)、 [Deno](https://deno.land/) 中使用。
 
 ## 安装
 
