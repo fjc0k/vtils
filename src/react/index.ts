@@ -8,7 +8,7 @@
 
 export * from 'react-use'
 
-// @index(['./**/*.ts', '!./**/*.test.*', '!./{useToggle,createGlobalState}.*'], f => `export * from '${f.path}'`)
+// @index(['./**/*.ts', '!./**/*.{test,taro}.*', '!./{useToggle,createGlobalState,useTitle}.*'], f => `export * from '${f.path}'`)
 export * from './useClassName'
 export * from './useLoadMore'
 export * from './useReachBottom'
@@ -19,3 +19,4 @@ export * from './useValidator'
 // 与 react-use 同名的应手动指定导出的模块
 export { useToggle, UseToggleResult } from './useToggle'
 export { createGlobalState, CreateGlobalStateResult } from './createGlobalState'
+export { useTitle } from './useTitle'

@@ -8,5 +8,5 @@
     "sourceMap": false,
     "outDir": "./lib"
   },
-  "include": ["src/*/index.ts"]
+  "include": ["src/*/index.ts", "src/**/*.taro.ts"]
 }
