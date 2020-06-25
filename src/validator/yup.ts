@@ -24,7 +24,7 @@ Object.defineProperty(yup, 'printValue', {
 
 // 实现 chineseMobilePhoneNumber 验证器
 yup.addMethod(yup.string, 'chineseMobilePhoneNumber', function (
-  message: yup.LocaleValue = yup.getLocale().string.chineseMobilePhoneNumber,
+  message: yup.LocaleValue = locale.string.chineseMobilePhoneNumber,
 ) {
   return this.test(
     'chineseMobilePhoneNumber',
@@ -35,7 +35,7 @@ yup.addMethod(yup.string, 'chineseMobilePhoneNumber', function (
 
 // 实现 chineseIDCardNumber 验证器
 yup.addMethod(yup.string, 'chineseIDCardNumber', function (
-  message: yup.LocaleValue = yup.getLocale().string.chineseIDCardNumber,
+  message: yup.LocaleValue = locale.string.chineseIDCardNumber,
 ) {
   return this.test('chineseIDCardNumber', message, isChineseIDCardNumber)
 })
