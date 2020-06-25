@@ -97,7 +97,7 @@
     "yup": "^0.29.1"
   },
   "devDependencies": {
-    "@microsoft/api-documenter": "7.8.16",
+    "@microsoft/api-documenter": "7.8.17",
     "@microsoft/api-extractor": "7.8.14",
     "@tarojs/taro": "3.0.0-rc.6",
     "@testing-library/react": "10.4.3",
