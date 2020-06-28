@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.7.1](https://github.com/fjc0k/vtils/compare/v3.7.0...v3.7.1) (2020-06-28)
+
+### Bug Fixes
+
+- **yup:** 修复 webpack 报警告问题 ([2e03e0c](https://github.com/fjc0k/vtils/commit/2e03e0cdcfe873e57de3ad4fdb800a02d5004910))
+
 ## [3.7.0](https://github.com/fjc0k/vtils/compare/v3.6.0...v3.7.0) (2020-06-24)
 
 ### Features
