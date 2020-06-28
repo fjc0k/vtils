@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`traverse 综合示例正常 1`] = `
+Object {
+  "x": Object {
+    "extra": Array [
+      Object {},
+      Object {
+        "ttt": 1,
+      },
+    ],
+    "name": "dd",
+  },
+  "y": Array [
+    1,
+    Object {
+      "z": true,
+    },
+  ],
+}
+`;

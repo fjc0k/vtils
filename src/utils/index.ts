@@ -36,6 +36,7 @@ export * from './readFile'
 export * from './RichUrl'
 export * from './run'
 export * from './swap'
+export * from './traverse'
 export * from './wait'
 export * from './Wechat'
 // @endindex
