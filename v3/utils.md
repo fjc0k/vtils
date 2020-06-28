@@ -54,6 +54,7 @@ rich://{"url":"***","desc":"***"}
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
 |  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
 |  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
+|  [traverse(value, callback)](./utils.traverse.md) | 遍历对象和数组。 |
 |  [wait(milliseconds)](./utils.wait.md) | 等待一段时间。 |
 
 ## Interfaces
