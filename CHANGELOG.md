@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/fjc0k/vtils/compare/v3.7.1...v3.8.0) (2020-06-28)
+
+### Features
+
+- **utils:** 新增 traverse ([36d67e9](https://github.com/fjc0k/vtils/commit/36d67e9226aa79e687cbbb36e971a6a511c4291a))
+
 ### [3.7.1](https://github.com/fjc0k/vtils/compare/v3.7.0...v3.7.1) (2020-06-28)
 
 ### Bug Fixes
