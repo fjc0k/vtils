@@ -46,9 +46,7 @@ export function createGlobalState<S>(
   }
   const useGlobalState: CreateGlobalStateResult<S | undefined> = (() => {
     const [state, setState] = useState(currentGlobalState)
-    useEffect(() => {
-      return bus.on('setGlobalState', setState)
-    }, [])
+    useEffect(() => watchGlobalState(setState), [])
     return [state, setGlobalState] as const
   }) as any
   useGlobalState.getState = getGlobalState
