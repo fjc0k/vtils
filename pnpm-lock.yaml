@@ -9,7 +9,7 @@ dependencies:
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.8.19
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.8.15
-  '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.0-rc.6
+  '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.0
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/10.4.3_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.3.0_react@16.13.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
@@ -995,42 +995,42 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@sinonjs/fake-timers/download/@sinonjs/fake-timers-6.0.1.tgz'
     version: 6.0.1
-  registry.npm.taobao.org/@tarojs/api/3.0.0-rc.6:
+  registry.npm.taobao.org/@tarojs/api/3.0.0:
     dependencies:
-      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.0-rc.6
+      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.0
     dev: true
     name: '@tarojs/api'
     resolution:
-      integrity: sha1-Ge98o5sMFm906erTPnuQC6T+jN4=
+      integrity: sha1-BQTC5m5BuuZ0dAuQyJDlKFLb+4M=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/api/download/@tarojs/api-3.0.0-rc.6.tgz'
-    version: 3.0.0-rc.6
-  registry.npm.taobao.org/@tarojs/router/3.0.0-rc.6:
+      tarball: 'https://registry.npm.taobao.org/@tarojs/api/download/@tarojs/api-3.0.0.tgz'
+    version: 3.0.0
+  registry.npm.taobao.org/@tarojs/router/3.0.0:
     dependencies:
-      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.0-rc.6
+      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.0
       history: registry.npm.taobao.org/history/4.10.1
       universal-router: registry.npm.taobao.org/universal-router/8.3.0
       url-parse: registry.npm.taobao.org/url-parse/1.4.7
     dev: true
     name: '@tarojs/router'
     resolution:
-      integrity: sha1-Eb/kR5QlK8UZNztuljo4ZKwB+XY=
+      integrity: sha1-bmkDmdwTdRshLo+O4YFu2vxoX5U=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/router/download/@tarojs/router-3.0.0-rc.6.tgz'
-    version: 3.0.0-rc.6
-  registry.npm.taobao.org/@tarojs/runtime/3.0.0-rc.6:
+      tarball: 'https://registry.npm.taobao.org/@tarojs/router/download/@tarojs/router-3.0.0.tgz'
+    version: 3.0.0
+  registry.npm.taobao.org/@tarojs/runtime/3.0.0:
     dev: true
     name: '@tarojs/runtime'
     resolution:
-      integrity: sha1-EIYXnGbgdIJBrkLwJA6HP7+/928=
+      integrity: sha1-lEjL/9FglNmkn+fA989qtV5SvOY=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/runtime/download/@tarojs/runtime-3.0.0-rc.6.tgz'
-    version: 3.0.0-rc.6
-  registry.npm.taobao.org/@tarojs/taro-h5/3.0.0-rc.6:
+      tarball: 'https://registry.npm.taobao.org/@tarojs/runtime/download/@tarojs/runtime-3.0.0.tgz'
+    version: 3.0.0
+  registry.npm.taobao.org/@tarojs/taro-h5/3.0.0:
     dependencies:
-      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.0-rc.6
-      '@tarojs/router': registry.npm.taobao.org/@tarojs/router/3.0.0-rc.6
-      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.0-rc.6
+      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.0
+      '@tarojs/router': registry.npm.taobao.org/@tarojs/router/3.0.0
+      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.0
       base64-js: registry.npm.taobao.org/base64-js/1.3.1
       jsonp-retry: registry.npm.taobao.org/jsonp-retry/1.0.3
       mobile-detect: registry.npm.taobao.org/mobile-detect/1.4.4
@@ -1040,21 +1040,21 @@ packages:
     dev: true
     name: '@tarojs/taro-h5'
     resolution:
-      integrity: sha1-rEsfjll3DQAinIC9Z3jMK7UUaK4=
+      integrity: sha1-pcnXH9s2XJXrtFWxtfd6T6DSNjk=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/taro-h5/download/@tarojs/taro-h5-3.0.0-rc.6.tgz'
-    version: 3.0.0-rc.6
-  registry.npm.taobao.org/@tarojs/taro/3.0.0-rc.6:
+      tarball: 'https://registry.npm.taobao.org/@tarojs/taro-h5/download/@tarojs/taro-h5-3.0.0.tgz'
+    version: 3.0.0
+  registry.npm.taobao.org/@tarojs/taro/3.0.0:
     dependencies:
-      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.0-rc.6
-      '@tarojs/taro-h5': registry.npm.taobao.org/@tarojs/taro-h5/3.0.0-rc.6
+      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.0
+      '@tarojs/taro-h5': registry.npm.taobao.org/@tarojs/taro-h5/3.0.0
     dev: true
     name: '@tarojs/taro'
     resolution:
-      integrity: sha1-SDxDF+hsI6OIGNJLAIY08LinzOQ=
+      integrity: sha1-ej0pnXB9q3SRaq9WSaPQNgM3Tqw=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.0.0-rc.6.tgz'
-    version: 3.0.0-rc.6
+      tarball: 'https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.0.0.tgz'
+    version: 3.0.0
   registry.npm.taobao.org/@testing-library/dom/7.17.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.10.3
@@ -12037,7 +12037,7 @@ packages:
     resolution:
       integrity: sha1-3eal3zFfnTmZGqF2IYU9cguFVm8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/whatwg-fetch/download/whatwg-fetch-2.0.4.tgz'
+      tarball: 'https://registry.npm.taobao.org/whatwg-fetch/download/whatwg-fetch-2.0.4.tgz?cache=0&sync_timestamp=1593555402514&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwhatwg-fetch%2Fdownload%2Fwhatwg-fetch-2.0.4.tgz'
     version: 2.0.4
   registry.npm.taobao.org/whatwg-mimetype/2.3.0:
     dev: true
@@ -12326,7 +12326,7 @@ packages:
 specifiers:
   '@microsoft/api-documenter': 7.8.19
   '@microsoft/api-extractor': 7.8.15
-  '@tarojs/taro': 3.0.0-rc.6
+  '@tarojs/taro': 3.0.0
   '@testing-library/react': 10.4.3
   '@testing-library/react-hooks': 3.3.0
   '@types/fs-extra': 9.0.1
