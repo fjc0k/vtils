@@ -1,5 +1,7 @@
+import React from 'react'
 import { act, renderHook } from '@testing-library/react-hooks'
 import { createGlobalState, CreateGlobalStateResult } from './createGlobalState'
+import { render } from '@testing-library/react'
 
 describe('createGlobalState', () => {
   describe('有初始值', () => {
@@ -112,6 +114,32 @@ describe('createGlobalState', () => {
         .toBe(result2.current[0])
         .toBe(result3.current[0])
         .toBe('jj')
+    })
+  })
+
+  describe('bug', () => {
+    test('延后注册的订阅不能获取最新值', async () => {
+      const useGlobalName = createGlobalState('o')
+
+      function Child() {
+        const [name] = useGlobalName()
+        return <div id='child'>{name}</div>
+      }
+
+      function Parent() {
+        const [name] = useGlobalName()
+        return (
+          <>
+            <div id='parent'>{name}</div>
+            {name === 'ok' && <Child />}
+          </>
+        )
+      }
+
+      const { asFragment } = render(<Parent />)
+      expect(asFragment()).toMatchSnapshot('只有 parent 且值为 o')
+      useGlobalName.setState('ok')
+      expect(asFragment()).toMatchSnapshot('有 parent 和 child 且值都为 ok')
     })
   })
 })

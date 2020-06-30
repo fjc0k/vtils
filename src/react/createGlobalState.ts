@@ -32,8 +32,9 @@ export function createGlobalState<S>(
       nextGlobalState = (nextGlobalState as any)(currentGlobalState)
     }
     if (nextGlobalState !== currentGlobalState) {
-      bus.emit('setGlobalState', nextGlobalState as any, currentGlobalState)
+      const prevGlobalState = currentGlobalState
       currentGlobalState = nextGlobalState as any
+      bus.emit('setGlobalState', nextGlobalState as any, prevGlobalState)
     }
   }
   const watchGlobalState: (
