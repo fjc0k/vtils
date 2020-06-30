@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.8.1](https://github.com/fjc0k/vtils/compare/v3.8.0...v3.8.1) (2020-06-30)
+
+### Bug Fixes
+
+- **createGlobalState:** 延后注册的订阅不能获取最新值 ([c4a0062](https://github.com/fjc0k/vtils/commit/c4a0062ae6dbac9416a53775f1dd417452c98b0b))
+
 ## [3.8.0](https://github.com/fjc0k/vtils/compare/v3.7.1...v3.8.0) (2020-06-28)
 
 ### Features
