@@ -36,6 +36,10 @@
       "require": "./_cjs/react/index.js",
       "import": "./react/index.js"
     },
+    "./taro": {
+      "require": "./_cjs/taro/index.js",
+      "import": "./taro/index.js"
+    },
     "./types": {
       "require": "./_cjs/types/index.js",
       "import": "./types/index.js"
