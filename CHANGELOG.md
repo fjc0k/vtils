@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.9.0](https://github.com/fjc0k/vtils/compare/v3.8.1...v3.9.0) (2020-06-30)
+
+### Features
+
+- **taro:** 新增 submit ([4f1d662](https://github.com/fjc0k/vtils/commit/4f1d662e4c97722f2b21002daa7ab3caa7d2ed87))
+
 ### [3.8.1](https://github.com/fjc0k/vtils/compare/v3.8.0...v3.8.1) (2020-06-30)
 
 ### Bug Fixes
