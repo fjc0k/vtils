@@ -10,7 +10,7 @@ devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.8.21
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.9.1
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.2
-  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/10.4.3_react-dom@16.13.1+react@16.13.1
+  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/10.4.4_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.3.0_react@16.13.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.8
@@ -1109,25 +1109,26 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@testing-library/react-hooks/download/@testing-library/react-hooks-3.3.0.tgz'
     version: 3.3.0
-  registry.npm.taobao.org/@testing-library/react/10.4.3_react-dom@16.13.1+react@16.13.1:
+  registry.npm.taobao.org/@testing-library/react/10.4.4_react-dom@16.13.1+react@16.13.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.10.3
       '@testing-library/dom': registry.npm.taobao.org/@testing-library/dom/7.17.1
       react: registry.npm.taobao.org/react/16.13.1
       react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
+      semver: registry.npm.taobao.org/semver/7.3.2
     dev: true
     engines:
       node: '>=10'
-    id: registry.npm.taobao.org/@testing-library/react/10.4.3
+    id: registry.npm.taobao.org/@testing-library/react/10.4.4
     name: '@testing-library/react'
     peerDependencies:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha1-xvNWaIz/xR9rNThVg9ZkuxGhYfQ=
+      integrity: sha1-8F7fgn3yiMbHsZ/pb/8rM83buAk=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@testing-library/react/download/@testing-library/react-10.4.3.tgz?cache=0&sync_timestamp=1593059559249&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact%2Fdownload%2F%40testing-library%2Freact-10.4.3.tgz'
-    version: 10.4.3
+      tarball: 'https://registry.npm.taobao.org/@testing-library/react/download/@testing-library/react-10.4.4.tgz?cache=0&sync_timestamp=1593969050222&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact%2Fdownload%2F%40testing-library%2Freact-10.4.4.tgz'
+    version: 10.4.4
   registry.npm.taobao.org/@tokenizer/token/0.1.1:
     dev: true
     name: '@tokenizer/token'
@@ -12308,7 +12309,7 @@ specifiers:
   '@microsoft/api-documenter': 7.8.21
   '@microsoft/api-extractor': 7.9.1
   '@tarojs/taro': 3.0.2
-  '@testing-library/react': 10.4.3
+  '@testing-library/react': 10.4.4
   '@testing-library/react-hooks': 3.3.0
   '@types/fs-extra': 9.0.1
   '@types/lodash-es': ^4.17.3
