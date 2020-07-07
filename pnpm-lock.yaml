@@ -19,7 +19,7 @@ devDependencies:
   codecov: registry.npm.taobao.org/codecov/3.7.0
   cross-env: registry.npm.taobao.org/cross-env/7.0.2
   eslint: registry.npm.taobao.org/eslint/7.4.0
-  execa: registry.npm.taobao.org/execa/4.0.2
+  execa: registry.npm.taobao.org/execa/4.0.3
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
   haoma: registry.npm.taobao.org/haoma/2.2.0_05575ce68cba8c8e21915eb4bb2fe852
@@ -4311,6 +4311,26 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/execa/download/execa-4.0.2.tgz'
     version: 4.0.2
+  registry.npm.taobao.org/execa/4.0.3:
+    dependencies:
+      cross-spawn: registry.npm.taobao.org/cross-spawn/7.0.3
+      get-stream: registry.npm.taobao.org/get-stream/5.1.0
+      human-signals: registry.npm.taobao.org/human-signals/1.1.1
+      is-stream: registry.npm.taobao.org/is-stream/2.0.0
+      merge-stream: registry.npm.taobao.org/merge-stream/2.0.0
+      npm-run-path: registry.npm.taobao.org/npm-run-path/4.0.1
+      onetime: registry.npm.taobao.org/onetime/5.1.0
+      signal-exit: registry.npm.taobao.org/signal-exit/3.0.3
+      strip-final-newline: registry.npm.taobao.org/strip-final-newline/2.0.0
+    dev: true
+    engines:
+      node: '>=10'
+    name: execa
+    resolution:
+      integrity: sha1-CjTau61tZhAL1vLFdshmlAPzF/I=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/execa/download/execa-4.0.3.tgz?cache=0&sync_timestamp=1594150423254&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexeca%2Fdownload%2Fexeca-4.0.3.tgz'
+    version: 4.0.3
   registry.npm.taobao.org/exit/0.1.2:
     dev: true
     engines:
@@ -12320,7 +12340,7 @@ specifiers:
   cross-env: 7.0.2
   date-fns: ^2.14.0
   eslint: 7.4.0
-  execa: 4.0.2
+  execa: 4.0.3
   fs-extra: 9.0.1
   globby: 11.0.1
   haoma: 2.2.0
