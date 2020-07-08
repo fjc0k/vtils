@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface CreateGlobalStateResult<S> 
+export interface CreateGlobalStateResult<S extends CreateGlobalStateState | undefined, R = never> 
 ```
 
 ## Methods

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function createGlobalState<S>(initialState: S): CreateGlobalStateResult<S>;
+export declare function createGlobalState<S extends CreateGlobalStateState, R = never>(initialState: S, customResult?: CreateGlobalStateCustomResult<S, R>): CreateGlobalStateResult<S, R>;
 ```
 
 ## Parameters
@@ -15,8 +15,9 @@ export declare function createGlobalState<S>(initialState: S): CreateGlobalState
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  initialState | S |  |
+|  customResult | [CreateGlobalStateCustomResult](./react.createglobalstatecustomresult.md)<!-- -->&lt;S, R&gt; |  |
 
 <b>Returns:</b>
 
-[CreateGlobalStateResult](./react.createglobalstateresult.md)<!-- -->&lt;S&gt;
+[CreateGlobalStateResult](./react.createglobalstateresult.md)<!-- -->&lt;S, R&gt;
 

@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-data: TItem[];
+data?: TItem[];
 ```
