@@ -16,6 +16,7 @@
 
 |  Function | Description |
 |  --- | --- |
+|  [anyToDate(value)](./date.anytodate.md) | 增强版的 toDate，支持： - 秒时间戳、毫秒时间戳； - Date 实例； - 符合 ISO 标准的时间字符串。 |
 |  [formatDate(date, renderer)](./date.formatdate.md) | 格式化日期。 |
 |  [numeralDayToChineseDay(day)](./date.numeraldaytochineseday.md) | 数字星期转中文星期。<code>0</code> 和 <code>7</code> 都视为星期日。 |
 
