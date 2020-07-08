@@ -45,7 +45,7 @@ export interface UseLoadMoreResult<TItem> {
   /** 当前页码 */
   pageNumber: number
   /** 已加载的数据 */
-  data: TItem[]
+  data?: TItem[]
   /** 总数据量 */
   total: number
   /** 是否正在加载数据 */
