@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.11.0](https://github.com/fjc0k/vtils/compare/v3.10.1...v3.11.0) (2020-07-08)
+
+### Features
+
+- **createGlobalState:** 支持自定义结果 ([e481ce0](https://github.com/fjc0k/vtils/commit/e481ce0c928c421133889a78a273c08f35b370cb))
+
+### Bug Fixes
+
+- **useLoadMore:** 修复 data 的类型定义 ([7cc7972](https://github.com/fjc0k/vtils/commit/7cc7972257821dfc98a17591b460732f8c6222c1))
+
 ### [3.10.1](https://github.com/fjc0k/vtils/compare/v3.10.0...v3.10.1) (2020-07-08)
 
 ## [3.10.0](https://github.com/fjc0k/vtils/compare/v3.9.0...v3.10.0) (2020-07-08)
