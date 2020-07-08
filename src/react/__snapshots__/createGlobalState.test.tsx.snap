@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`createGlobalState bug 延后注册的订阅不能获取最新值: 只有 parent 且值为 o 1`] = `
+exports[`createGlobalState 自定义 result bug 延后注册的订阅不能获取最新值: 只有 parent 且值为 o 1`] = `
 <DocumentFragment>
   <div
     id="parent"
@@ -10,7 +10,32 @@ exports[`createGlobalState bug 延后注册的订阅不能获取最新值: 只�
 </DocumentFragment>
 `;
 
-exports[`createGlobalState bug 延后注册的订阅不能获取最新值: 有 parent 和 child 且值都为 ok 1`] = `
+exports[`createGlobalState 自定义 result bug 延后注册的订阅不能获取最新值: 有 parent 和 child 且值都为 ok 1`] = `
+<DocumentFragment>
+  <div
+    id="parent"
+  >
+    ok
+  </div>
+  <div
+    id="child"
+  >
+    ok
+  </div>
+</DocumentFragment>
+`;
+
+exports[`createGlobalState 默认 actions bug 延后注册的订阅不能获取最新值: 只有 parent 且值为 o 1`] = `
+<DocumentFragment>
+  <div
+    id="parent"
+  >
+    o
+  </div>
+</DocumentFragment>
+`;
+
+exports[`createGlobalState 默认 actions bug 延后注册的订阅不能获取最新值: 有 parent 和 child 且值都为 ok 1`] = `
 <DocumentFragment>
   <div
     id="parent"

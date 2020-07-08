@@ -1,22 +1,57 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { EventBus } from '../utils'
 
-export interface CreateGlobalStateResult<S> {
-  (): readonly [S, Dispatch<SetStateAction<S>>]
+export type CreateGlobalStateState = any
+
+export type CreateGlobalStateCustomResult<
+  S extends CreateGlobalStateState | undefined,
+  R = never
+> = (payload: {
+  state: CreateGlobalStateResultResult<S, never>[0]
+  setState: CreateGlobalStateResultResult<S, never>[1]
+}) => R
+
+export type CreateGlobalStateResultResult<
+  S extends CreateGlobalStateState | undefined,
+  R = never
+> = [R] extends [never] ? readonly [S, Dispatch<SetStateAction<S>>] : R
+
+export interface CreateGlobalStateResult<
+  S extends CreateGlobalStateState | undefined,
+  R = never
+> {
+  (): CreateGlobalStateResultResult<S, R>
   getState(): S
   setState(nextState: SetStateAction<S>): void
   watchState(callback: (nextState: S, prevState: S) => any): () => void
 }
 
-export function createGlobalState<S>(): CreateGlobalStateResult<S | undefined>
+export function createGlobalState<S extends CreateGlobalStateState, R = never>(
+  customResult?: CreateGlobalStateCustomResult<S, R>,
+): CreateGlobalStateResult<S | undefined, R>
 
-export function createGlobalState<S>(
+export function createGlobalState<S extends CreateGlobalStateState, R = never>(
   initialState: S,
-): CreateGlobalStateResult<S>
+  customResult?: CreateGlobalStateCustomResult<S, R>,
+): CreateGlobalStateResult<S, R>
 
-export function createGlobalState<S>(
-  initialState?: S,
-): CreateGlobalStateResult<S | undefined> {
+export function createGlobalState<S extends CreateGlobalStateState, R = never>(
+  _initialState?: S,
+  _customResult?: CreateGlobalStateCustomResult<S | undefined, R>,
+): CreateGlobalStateResult<S | undefined, R> {
+  let initialState: S | undefined
+  let customResult: CreateGlobalStateCustomResult<S | undefined, R> | undefined
+  if (typeof _customResult === 'function') {
+    initialState = _initialState
+    customResult = _customResult
+  } else if (typeof _initialState === 'function') {
+    initialState = undefined
+    customResult = _initialState as any
+  } else {
+    initialState = _initialState
+    customResult = undefined
+  }
+
   const bus = new EventBus<{
     setGlobalState: (
       nextGlobalState: S | undefined,
@@ -45,10 +80,16 @@ export function createGlobalState<S>(
   ) => () => void = callback => {
     return bus.on('setGlobalState', callback)
   }
-  const useGlobalState: CreateGlobalStateResult<S | undefined> = (() => {
+  const useCustomResult = typeof customResult === 'function'
+  const useGlobalState: CreateGlobalStateResult<S | undefined, R> = (() => {
     const [state, setState] = useState(currentGlobalState)
     useEffect(() => watchGlobalState(setState), [])
-    return [state, setGlobalState] as const
+    return useCustomResult
+      ? customResult!({
+          state: state,
+          setState: setGlobalState,
+        })
+      : [state, setGlobalState]
   }) as any
   useGlobalState.getState = getGlobalState
   useGlobalState.setState = setGlobalState
