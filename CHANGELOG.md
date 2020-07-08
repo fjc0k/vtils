@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.10.0](https://github.com/fjc0k/vtils/compare/v3.9.0...v3.10.0) (2020-07-08)
+
+### Features
+
+- **date:** 新增 anyToDate ([06d502c](https://github.com/fjc0k/vtils/commit/06d502c53295d02750d632e788d1cbe59fc35111))
+
 ## [3.9.0](https://github.com/fjc0k/vtils/compare/v3.8.1...v3.9.0) (2020-06-30)
 
 ### Features
