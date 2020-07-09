@@ -13,6 +13,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  [createGlobalState(customResult)](./react.createglobalstate.md) |  |
 |  [createGlobalState(initialState, customResult)](./react.createglobalstate_1.md) |  |
 |  [useClassName(getClassValues, deps)](./react.useclassname.md) | 获取类名字符串。 |
+|  [useInterval(callback, delay)](./react.useinterval.md) |  |
 |  [useLoadMore(service, deps)](./react.useloadmore.md) | 数据加载。 |
 |  [useReachBottom(callback, offset)](./react.usereachbottom.md) | 立即触发一次回调，并且每当到达页面底部时触发回调。 |
 |  [useScrollLoadMore(service, deps, options)](./react.usescrollloadmore.md) | 滚动数据加载。 |
@@ -38,6 +39,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  [CreateGlobalStateCustomResult](./react.createglobalstatecustomresult.md) |  |
 |  [CreateGlobalStateResultResult](./react.createglobalstateresultresult.md) |  |
 |  [CreateGlobalStateState](./react.createglobalstatestate.md) |  |
+|  [UseIntervalResult](./react.useintervalresult.md) |  |
 |  [UseLoadMoreServiceResult](./react.useloadmoreserviceresult.md) | 加载服务结果。 |
 |  [UseToggleResult](./react.usetoggleresult.md) |  |
 |  [UseValidatorSchema](./react.usevalidatorschema.md) |  |
