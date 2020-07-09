@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.14.0](https://github.com/fjc0k/vtils/compare/v3.13.0...v3.14.0) (2020-07-09)
+
+### Features
+
+- **react:** 新增 useSearchParam ([119a864](https://github.com/fjc0k/vtils/commit/119a864eebd1b038a423fea3fc1e4f737973efb5))
+
 ## [3.13.0](https://github.com/fjc0k/vtils/compare/v3.12.0...v3.13.0) (2020-07-09)
 
 ### Features
