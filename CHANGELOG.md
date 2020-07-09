@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.13.0](https://github.com/fjc0k/vtils/compare/v3.12.0...v3.13.0) (2020-07-09)
+
+### Features
+
+- **react:** 新增 useInterval ([d7e942c](https://github.com/fjc0k/vtils/commit/d7e942c7b6a209c293ddf19a7432c3816e063cf1))
+
 ## [3.12.0](https://github.com/fjc0k/vtils/compare/v3.11.1...v3.12.0) (2020-07-09)
 
 ### Features
