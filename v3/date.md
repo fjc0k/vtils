@@ -18,12 +18,20 @@
 |  --- | --- |
 |  [anyToDate(value)](./date.anytodate.md) | 增强版的 toDate，支持： - 秒时间戳、毫秒时间戳； - Date 实例； - 符合 ISO 标准的时间字符串。 |
 |  [formatDate(date, renderer)](./date.formatdate.md) | 格式化日期。 |
+|  [intervalToRestrictiveDuration(start, end, target)](./date.intervaltorestrictiveduration.md) |  |
 |  [numeralDayToChineseDay(day)](./date.numeraldaytochineseday.md) | 数字星期转中文星期。<code>0</code> 和 <code>7</code> 都视为星期日。 |
+
+## Interfaces
+
+|  Interface | Description |
+|  --- | --- |
+|  [IntervalToRestrictiveDurationResult](./date.intervaltorestrictivedurationresult.md) |  |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
 |  [FormatDateRenderer](./date.formatdaterenderer.md) | 日期格式化渲染器。 |
+|  [IntervalToRestrictiveDurationTarget](./date.intervaltorestrictivedurationtarget.md) |  |
 |  [NumeralDay](./date.numeralday.md) | 数字星期。 |
 
