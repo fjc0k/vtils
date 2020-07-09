@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.11.1](https://github.com/fjc0k/vtils/compare/v3.11.0...v3.11.1) (2020-07-09)
+
+### Bug Fixes
+
+- **useLoadMore:** 重新加载应重置 data ([10389c5](https://github.com/fjc0k/vtils/commit/10389c5cc57ac91e10bf8bf8d803587227827660))
+
 ## [3.11.0](https://github.com/fjc0k/vtils/compare/v3.10.1...v3.11.0) (2020-07-08)
 
 ### Features
