@@ -8,7 +8,7 @@ dependencies:
   yup: registry.npm.taobao.org/yup/0.29.1
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.8.21
-  '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.9.1
+  '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.9.2
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.2
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/10.4.5_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.3.0_react@16.13.1
@@ -884,7 +884,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor-model/download/@microsoft/api-extractor-model-7.8.12.tgz?cache=0&sync_timestamp=1593789100823&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-extractor-model%2Fdownload%2F%40microsoft%2Fapi-extractor-model-7.8.12.tgz'
     version: 7.8.12
-  registry.npm.taobao.org/@microsoft/api-extractor/7.9.1:
+  registry.npm.taobao.org/@microsoft/api-extractor/7.9.2:
     dependencies:
       '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.8.12
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -900,10 +900,10 @@ packages:
     hasBin: true
     name: '@microsoft/api-extractor'
     resolution:
-      integrity: sha1-EuIcGv5Q2f4n8IGpC+iDALI4STg=
+      integrity: sha1-O7jJP0KA/LlBceQhTXFOFjn0+9Q=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor/download/@microsoft/api-extractor-7.9.1.tgz'
-    version: 7.9.1
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor/download/@microsoft/api-extractor-7.9.2.tgz'
+    version: 7.9.2
   registry.npm.taobao.org/@microsoft/tsdoc/0.12.19:
     dev: true
     name: '@microsoft/tsdoc'
@@ -12327,7 +12327,7 @@ packages:
     version: 3.18.4
 specifiers:
   '@microsoft/api-documenter': 7.8.21
-  '@microsoft/api-extractor': 7.9.1
+  '@microsoft/api-extractor': 7.9.2
   '@tarojs/taro': 3.0.2
   '@testing-library/react': 10.4.5
   '@testing-library/react-hooks': 3.3.0
