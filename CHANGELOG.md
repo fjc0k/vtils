@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.12.0](https://github.com/fjc0k/vtils/compare/v3.11.1...v3.12.0) (2020-07-09)
+
+### Features
+
+- **date:** 新增 intervalToRestrictiveDuration ([cfdcc45](https://github.com/fjc0k/vtils/commit/cfdcc45f0693d34eeb42d2fc2a1ff8cde2dd77bc))
+
 ### [3.11.1](https://github.com/fjc0k/vtils/compare/v3.11.0...v3.11.1) (2020-07-09)
 
 ### Bug Fixes
