@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.15.0](https://github.com/fjc0k/vtils/compare/v3.14.0...v3.15.0) (2020-07-09)
+
+### Features
+
+- **useInterval:** 支持通过 delay 控制 ([9da9d11](https://github.com/fjc0k/vtils/commit/9da9d11f129ce5d5e811c655d9eeb1591104e5eb))
+
 ## [3.14.0](https://github.com/fjc0k/vtils/compare/v3.13.0...v3.14.0) (2020-07-09)
 
 ### Features
