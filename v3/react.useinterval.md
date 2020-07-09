@@ -4,20 +4,24 @@
 
 ## useInterval() function
 
+以一定的间隔时间重复调用某函数，并返回调用结果。
+
 <b>Signature:</b>
 
 ```typescript
-export declare function useInterval<TResult>(callback: () => TResult, delay: number): UseIntervalResult<TResult>;
+export declare function useInterval<TResult>(callback: () => TResult, delay: any): UseIntervalResult<TResult>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  callback | () =&gt; TResult |  |
-|  delay | number |  |
+|  callback | () =&gt; TResult | 回调函数 |
+|  delay | any | 间隔时间（毫秒），非数字时将不调用或停止调用函数 |
 
 <b>Returns:</b>
 
 [UseIntervalResult](./react.useintervalresult.md)<!-- -->&lt;TResult&gt;
+
+返回调用结果
 

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type UseIntervalResult<TResult> = [TResult, {
+export declare type UseIntervalResult<TResult> = [TResult | undefined, {
     start: () => void;
     stop: () => void;
 }];
