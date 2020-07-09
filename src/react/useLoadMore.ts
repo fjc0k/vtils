@@ -95,6 +95,9 @@ export function useLoadMore<TItem>(
     return new Promise<void>((resolve, reject) => {
       const { data, service } = latest.current
       const isFirstPage = nextPageNumber === 1
+      if (isFirstPage) {
+        setData([])
+      }
       setInitialLoading(isFirstPage)
       setIncrementalLoading(!isFirstPage)
       setPageNumber(nextPageNumber)

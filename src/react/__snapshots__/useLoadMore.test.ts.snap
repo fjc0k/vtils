@@ -67,16 +67,7 @@ Object {
 
 exports[`useLoadMore total, noMore 表现正常: 已无更多数据后重新加载中 1`] = `
 Object {
-  "data": Array [
-    Array [
-      0,
-      1,
-    ],
-    Array [
-      1,
-      2,
-    ],
-  ],
+  "data": Array [],
   "incrementalLoading": false,
   "initialLoading": true,
   "loadMore": [Function anonymous],
@@ -201,20 +192,7 @@ Object {
 
 exports[`useLoadMore 加载表现正常: 重新加载中 1`] = `
 Object {
-  "data": Array [
-    Array [
-      0,
-      1,
-    ],
-    Array [
-      1,
-      2,
-    ],
-    Array [
-      2,
-      3,
-    ],
-  ],
+  "data": Array [],
   "incrementalLoading": false,
   "initialLoading": true,
   "loadMore": [Function anonymous],
