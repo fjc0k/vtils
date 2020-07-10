@@ -11,6 +11,7 @@ Taro 3 工具库。
 |  Function | Description |
 |  --- | --- |
 |  [submit(action)](./taro.submit.md) | 对提交类行为的封装。 |
+|  [useAutoStopPullDownRefresh(callback)](./taro.useautostoppulldownrefresh.md) | 同 <code>Taro.usePullDownRefresh</code>，不过在回调函数完成后会自动调用 <code>Taro.stopPullDownRefresh()</code>。 |
 
 ## Interfaces
 
