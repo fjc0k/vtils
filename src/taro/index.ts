@@ -7,4 +7,5 @@
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
 export * from './submit'
 export * from './useAutoStopPullDownRefresh'
+export * from './useSubmit'
 // @endindex
