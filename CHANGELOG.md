@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.15.1](https://github.com/fjc0k/vtils/compare/v3.15.0...v3.15.1) (2020-07-10)
+
+### Bug Fixes
+
+- **useReachBottom.taro:** 立即触发一次回调有误 ([71323b0](https://github.com/fjc0k/vtils/commit/71323b0bc984dab114920388c590d860ea149059))
+
 ## [3.15.0](https://github.com/fjc0k/vtils/compare/v3.14.0...v3.15.0) (2020-07-09)
 
 ### Features
