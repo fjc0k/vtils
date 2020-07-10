@@ -10,7 +10,9 @@ export const useReachBottom: typeof _useReachBottom = (
   const ref = useRef<any>()
 
   // 立即触发一次回调
-  useEffect(callback, [])
+  useEffect(() => {
+    callback()
+  }, [])
 
   useTaroReachBottom(callback)
 
