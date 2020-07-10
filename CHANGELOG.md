@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.17.0](https://github.com/fjc0k/vtils/compare/v3.16.0...v3.17.0) (2020-07-10)
+
+### Features
+
+- **taro:** 新增 useSubmit ([fbe8d8a](https://github.com/fjc0k/vtils/commit/fbe8d8a72e505db18cf77dca93ca397fc9502993))
+
 ## [3.16.0](https://github.com/fjc0k/vtils/compare/v3.15.1...v3.16.0) (2020-07-10)
 
 ### Features
