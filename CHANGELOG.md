@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.16.0](https://github.com/fjc0k/vtils/compare/v3.15.1...v3.16.0) (2020-07-10)
+
+### Features
+
+- **taro:** 新增 useAutoStopPullDownRefresh ([4338980](https://github.com/fjc0k/vtils/commit/433898027306cd9cc0c07421451c69c5f16eb6df))
+
 ### [3.15.1](https://github.com/fjc0k/vtils/compare/v3.15.0...v3.15.1) (2020-07-10)
 
 ### Bug Fixes
