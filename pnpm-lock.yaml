@@ -34,7 +34,7 @@ devDependencies:
   rollup: registry.npm.taobao.org/rollup/2.21.0
   rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.7_rollup@2.21.0+typescript@3.9.6
   shx: registry.npm.taobao.org/shx/0.3.2
-  standard-version: registry.npm.taobao.org/standard-version/8.0.0
+  standard-version: registry.npm.taobao.org/standard-version/8.0.1
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.0_typescript@3.9.6
   ts-node: registry.npm.taobao.org/ts-node/8.10.2_typescript@3.9.6
   type-fest: registry.npm.taobao.org/type-fest/0.16.0
@@ -2999,20 +2999,20 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/conventional-changelog-config-spec/download/conventional-changelog-config-spec-2.1.0.tgz'
     version: 2.1.0
-  registry.npm.taobao.org/conventional-changelog-conventionalcommits/4.2.3:
+  registry.npm.taobao.org/conventional-changelog-conventionalcommits/4.3.0:
     dependencies:
       compare-func: registry.npm.taobao.org/compare-func/1.3.4
       lodash: registry.npm.taobao.org/lodash/4.17.15
       q: registry.npm.taobao.org/q/1.5.1
     dev: true
     engines:
-      node: '>=6.9.0'
+      node: '>=10'
     name: conventional-changelog-conventionalcommits
     resolution:
-      integrity: sha1-IoVbMtV9AyiVHBwtwBsXKl8k6jc=
+      integrity: sha1-xCBaZZ98qdeIHynueKTn1q64s8I=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/conventional-changelog-conventionalcommits/download/conventional-changelog-conventionalcommits-4.2.3.tgz'
-    version: 4.2.3
+      tarball: 'https://registry.npm.taobao.org/conventional-changelog-conventionalcommits/download/conventional-changelog-conventionalcommits-4.3.0.tgz'
+    version: 4.3.0
   registry.npm.taobao.org/conventional-changelog-core/4.1.7:
     dependencies:
       add-stream: registry.npm.taobao.org/add-stream/1.0.0
@@ -3075,18 +3075,18 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/conventional-changelog-express/download/conventional-changelog-express-2.0.5.tgz'
     version: 2.0.5
-  registry.npm.taobao.org/conventional-changelog-jquery/3.0.6:
+  registry.npm.taobao.org/conventional-changelog-jquery/3.0.10:
     dependencies:
       q: registry.npm.taobao.org/q/1.5.1
     dev: true
     engines:
-      node: '>=6.9.0'
+      node: '>=10'
     name: conventional-changelog-jquery
     resolution:
-      integrity: sha1-RgI2rY+x0p/5MqFP5OOkU3m2PF4=
+      integrity: sha1-/o62r/MiqpgK9etoSXYipfYlfOc=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/conventional-changelog-jquery/download/conventional-changelog-jquery-3.0.6.tgz'
-    version: 3.0.6
+      tarball: 'https://registry.npm.taobao.org/conventional-changelog-jquery/download/conventional-changelog-jquery-3.0.10.tgz'
+    version: 3.0.10
   registry.npm.taobao.org/conventional-changelog-jshint/2.0.7:
     dependencies:
       compare-func: registry.npm.taobao.org/compare-func/1.3.4
@@ -3132,28 +3132,28 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/conventional-changelog-writer/download/conventional-changelog-writer-4.0.16.tgz'
     version: 4.0.16
-  registry.npm.taobao.org/conventional-changelog/3.1.18:
+  registry.npm.taobao.org/conventional-changelog/3.1.21:
     dependencies:
       conventional-changelog-angular: registry.npm.taobao.org/conventional-changelog-angular/5.0.10
       conventional-changelog-atom: registry.npm.taobao.org/conventional-changelog-atom/2.0.7
       conventional-changelog-codemirror: registry.npm.taobao.org/conventional-changelog-codemirror/2.0.7
-      conventional-changelog-conventionalcommits: registry.npm.taobao.org/conventional-changelog-conventionalcommits/4.2.3
+      conventional-changelog-conventionalcommits: registry.npm.taobao.org/conventional-changelog-conventionalcommits/4.3.0
       conventional-changelog-core: registry.npm.taobao.org/conventional-changelog-core/4.1.7
       conventional-changelog-ember: registry.npm.taobao.org/conventional-changelog-ember/2.0.8
       conventional-changelog-eslint: registry.npm.taobao.org/conventional-changelog-eslint/3.0.8
       conventional-changelog-express: registry.npm.taobao.org/conventional-changelog-express/2.0.5
-      conventional-changelog-jquery: registry.npm.taobao.org/conventional-changelog-jquery/3.0.6
+      conventional-changelog-jquery: registry.npm.taobao.org/conventional-changelog-jquery/3.0.10
       conventional-changelog-jshint: registry.npm.taobao.org/conventional-changelog-jshint/2.0.7
       conventional-changelog-preset-loader: registry.npm.taobao.org/conventional-changelog-preset-loader/2.3.4
     dev: true
     engines:
-      node: '>=6.9.0'
+      node: '>=10'
     name: conventional-changelog
     resolution:
-      integrity: sha1-faClqzSmBLkguL9xxs9dlS8OgF4=
+      integrity: sha1-SndOa/UDrP1+RoW7dQ2owOzPHg0=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/conventional-changelog/download/conventional-changelog-3.1.18.tgz'
-    version: 3.1.18
+      tarball: 'https://registry.npm.taobao.org/conventional-changelog/download/conventional-changelog-3.1.21.tgz'
+    version: 3.1.21
   registry.npm.taobao.org/conventional-commits-filter/2.0.6:
     dependencies:
       lodash.ismatch: registry.npm.taobao.org/lodash.ismatch/4.4.0
@@ -3186,26 +3186,26 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/conventional-commits-parser/download/conventional-commits-parser-3.1.0.tgz'
     version: 3.1.0
-  registry.npm.taobao.org/conventional-recommended-bump/6.0.5:
+  registry.npm.taobao.org/conventional-recommended-bump/6.0.9:
     dependencies:
       concat-stream: registry.npm.taobao.org/concat-stream/2.0.0
       conventional-changelog-preset-loader: registry.npm.taobao.org/conventional-changelog-preset-loader/2.3.4
       conventional-commits-filter: registry.npm.taobao.org/conventional-commits-filter/2.0.6
       conventional-commits-parser: registry.npm.taobao.org/conventional-commits-parser/3.1.0
       git-raw-commits: registry.npm.taobao.org/git-raw-commits/2.0.0
-      git-semver-tags: registry.npm.taobao.org/git-semver-tags/3.0.1
-      meow: registry.npm.taobao.org/meow/5.0.0
+      git-semver-tags: registry.npm.taobao.org/git-semver-tags/4.0.0
+      meow: registry.npm.taobao.org/meow/7.0.1
       q: registry.npm.taobao.org/q/1.5.1
     dev: true
     engines:
-      node: '>=6.9.0'
+      node: '>=10'
     hasBin: true
     name: conventional-recommended-bump
     resolution:
-      integrity: sha1-vn7CS0O+9XEIBC6h1JdYtYvqvAM=
+      integrity: sha1-Se509S+6/MY+ieIpfQICef6jGPA=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/conventional-recommended-bump/download/conventional-recommended-bump-6.0.5.tgz'
-    version: 6.0.5
+      tarball: 'https://registry.npm.taobao.org/conventional-recommended-bump/download/conventional-recommended-bump-6.0.9.tgz'
+    version: 6.0.9
   registry.npm.taobao.org/convert-source-map/1.7.0:
     dependencies:
       safe-buffer: registry.npm.taobao.org/safe-buffer/5.1.2
@@ -4568,18 +4568,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/fb-watchman/download/fb-watchman-2.0.1.tgz'
     version: 2.0.1
-  registry.npm.taobao.org/figures/3.1.0:
-    dependencies:
-      escape-string-regexp: registry.npm.taobao.org/escape-string-regexp/1.0.5
-    dev: true
-    engines:
-      node: '>=8'
-    name: figures
-    resolution:
-      integrity: sha1-SxmN0H2NcVMGQoZK8tRd2eRZxOw=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/figures/download/figures-3.1.0.tgz'
-    version: 3.1.0
   registry.npm.taobao.org/figures/3.2.0:
     dependencies:
       escape-string-regexp: registry.npm.taobao.org/escape-string-regexp/1.0.5
@@ -5024,20 +5012,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/git-remote-origin-url/download/git-remote-origin-url-2.0.0.tgz'
     version: 2.0.0
-  registry.npm.taobao.org/git-semver-tags/3.0.1:
-    dependencies:
-      meow: registry.npm.taobao.org/meow/5.0.0
-      semver: registry.npm.taobao.org/semver/6.3.0
-    dev: true
-    engines:
-      node: '>=6.9.0'
-    hasBin: true
-    name: git-semver-tags
-    resolution:
-      integrity: sha1-nLnkl0Q33h9x8y2jv+dPTTWvsbk=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/git-semver-tags/download/git-semver-tags-3.0.1.tgz'
-    version: 3.0.1
   registry.npm.taobao.org/git-semver-tags/4.0.0:
     dependencies:
       meow: registry.npm.taobao.org/meow/7.0.1
@@ -7860,26 +7834,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/meow/download/meow-4.0.1.tgz'
     version: 4.0.1
-  registry.npm.taobao.org/meow/5.0.0:
-    dependencies:
-      camelcase-keys: registry.npm.taobao.org/camelcase-keys/4.2.0
-      decamelize-keys: registry.npm.taobao.org/decamelize-keys/1.1.0
-      loud-rejection: registry.npm.taobao.org/loud-rejection/1.6.0
-      minimist-options: registry.npm.taobao.org/minimist-options/3.0.2
-      normalize-package-data: registry.npm.taobao.org/normalize-package-data/2.5.0
-      read-pkg-up: registry.npm.taobao.org/read-pkg-up/3.0.0
-      redent: registry.npm.taobao.org/redent/2.0.0
-      trim-newlines: registry.npm.taobao.org/trim-newlines/2.0.0
-      yargs-parser: registry.npm.taobao.org/yargs-parser/10.1.0
-    dev: true
-    engines:
-      node: '>=6'
-    name: meow
-    resolution:
-      integrity: sha1-38c9Y6mvxxSl43F2DrXIi5EHiqQ=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/meow/download/meow-5.0.0.tgz'
-    version: 5.0.0
   registry.npm.taobao.org/meow/6.1.1:
     dependencies:
       '@types/minimist': registry.npm.taobao.org/@types/minimist/1.2.0
@@ -10105,17 +10059,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/semver/download/semver-6.3.0.tgz'
     version: 6.3.0
-  registry.npm.taobao.org/semver/7.1.1:
-    dev: true
-    engines:
-      node: '>=10'
-    hasBin: true
-    name: semver
-    resolution:
-      integrity: sha1-KRBFmKGX1svkcz7uy+lo97Q6lmc=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/semver/download/semver-7.1.1.tgz'
-    version: 7.1.1
   registry.npm.taobao.org/semver/7.3.2:
     dev: true
     engines:
@@ -10674,21 +10617,21 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/stacktrace-js/download/stacktrace-js-2.0.2.tgz'
     version: 2.0.2
-  registry.npm.taobao.org/standard-version/8.0.0:
+  registry.npm.taobao.org/standard-version/8.0.1:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/2.4.2
-      conventional-changelog: registry.npm.taobao.org/conventional-changelog/3.1.18
+      conventional-changelog: registry.npm.taobao.org/conventional-changelog/3.1.21
       conventional-changelog-config-spec: registry.npm.taobao.org/conventional-changelog-config-spec/2.1.0
-      conventional-changelog-conventionalcommits: registry.npm.taobao.org/conventional-changelog-conventionalcommits/4.2.3
-      conventional-recommended-bump: registry.npm.taobao.org/conventional-recommended-bump/6.0.5
+      conventional-changelog-conventionalcommits: registry.npm.taobao.org/conventional-changelog-conventionalcommits/4.3.0
+      conventional-recommended-bump: registry.npm.taobao.org/conventional-recommended-bump/6.0.9
       detect-indent: registry.npm.taobao.org/detect-indent/6.0.0
       detect-newline: registry.npm.taobao.org/detect-newline/3.1.0
       dotgitignore: registry.npm.taobao.org/dotgitignore/2.1.0
-      figures: registry.npm.taobao.org/figures/3.1.0
+      figures: registry.npm.taobao.org/figures/3.2.0
       find-up: registry.npm.taobao.org/find-up/4.1.0
       fs-access: registry.npm.taobao.org/fs-access/1.0.1
-      git-semver-tags: registry.npm.taobao.org/git-semver-tags/3.0.1
-      semver: registry.npm.taobao.org/semver/7.1.1
+      git-semver-tags: registry.npm.taobao.org/git-semver-tags/4.0.0
+      semver: registry.npm.taobao.org/semver/7.3.2
       stringify-package: registry.npm.taobao.org/stringify-package/1.0.1
       yargs: registry.npm.taobao.org/yargs/15.3.1
     dev: true
@@ -10697,10 +10640,10 @@ packages:
     hasBin: true
     name: standard-version
     resolution:
-      integrity: sha1-O7GrSVcCzwGp3GArK5HfGt5vAI4=
+      integrity: sha1-RjjTzuE2XJ1nc8OsM0KeRWLz9pY=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/standard-version/download/standard-version-8.0.0.tgz'
-    version: 8.0.0
+      tarball: 'https://registry.npm.taobao.org/standard-version/download/standard-version-8.0.1.tgz'
+    version: 8.0.1
   registry.npm.taobao.org/static-extend/0.1.2:
     dependencies:
       define-property: registry.npm.taobao.org/define-property/0.2.5
@@ -12240,16 +12183,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/yaml/download/yaml-1.10.0.tgz'
     version: 1.10.0
-  registry.npm.taobao.org/yargs-parser/10.1.0:
-    dependencies:
-      camelcase: registry.npm.taobao.org/camelcase/4.1.0
-    dev: true
-    name: yargs-parser
-    resolution:
-      integrity: sha1-cgImW4n36eny5XZeD+c1qQXtuqg=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/yargs-parser/download/yargs-parser-10.1.0.tgz'
-    version: 10.1.0
   registry.npm.taobao.org/yargs-parser/18.1.3:
     dependencies:
       camelcase: registry.npm.taobao.org/camelcase/5.3.1
@@ -12358,7 +12291,7 @@ specifiers:
   rollup: 2.21.0
   rollup-plugin-dts: 1.4.7
   shx: 0.3.2
-  standard-version: 8.0.0
+  standard-version: 8.0.1
   ts-essentials: 7.0.0
   ts-node: 8.10.2
   tslib: ^2.0.0
