@@ -32,7 +32,7 @@ devDependencies:
   react: registry.npm.taobao.org/react/16.13.1
   react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
   rollup: registry.npm.taobao.org/rollup/2.21.0
-  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.7_rollup@2.21.0+typescript@3.9.6
+  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.8_rollup@2.21.0+typescript@3.9.6
   shx: registry.npm.taobao.org/shx/0.3.2
   standard-version: registry.npm.taobao.org/standard-version/8.0.1
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.0_typescript@3.9.6
@@ -53,6 +53,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@babel/code-frame/download/@babel/code-frame-7.10.1.tgz'
     version: 7.10.1
+  registry.npm.taobao.org/@babel/code-frame/7.10.4:
+    dependencies:
+      '@babel/highlight': registry.npm.taobao.org/@babel/highlight/7.10.4
+    dev: true
+    name: '@babel/code-frame'
+    optional: true
+    resolution:
+      integrity: sha1-Fo2ho26Q2miujUnA8bSMfGJJITo=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@babel/code-frame/download/@babel/code-frame-7.10.4.tgz'
+    version: 7.10.4
   registry.npm.taobao.org/@babel/core/7.10.2:
     dependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.1
@@ -211,6 +222,15 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@babel/helper-validator-identifier/download/@babel/helper-validator-identifier-7.10.1.tgz'
     version: 7.10.1
+  registry.npm.taobao.org/@babel/helper-validator-identifier/7.10.4:
+    dev: true
+    name: '@babel/helper-validator-identifier'
+    optional: true
+    resolution:
+      integrity: sha1-p4x6clHgH2FlEtMbEK3PUq2l4NI=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@babel/helper-validator-identifier/download/@babel/helper-validator-identifier-7.10.4.tgz'
+    version: 7.10.4
   registry.npm.taobao.org/@babel/helpers/7.10.1:
     dependencies:
       '@babel/template': registry.npm.taobao.org/@babel/template/7.10.1
@@ -235,6 +255,19 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@babel/highlight/download/@babel/highlight-7.10.1.tgz'
     version: 7.10.1
+  registry.npm.taobao.org/@babel/highlight/7.10.4:
+    dependencies:
+      '@babel/helper-validator-identifier': registry.npm.taobao.org/@babel/helper-validator-identifier/7.10.4
+      chalk: registry.npm.taobao.org/chalk/2.4.2
+      js-tokens: registry.npm.taobao.org/js-tokens/4.0.0
+    dev: true
+    name: '@babel/highlight'
+    optional: true
+    resolution:
+      integrity: sha1-fRvf1ldTU4+r5sOFls23bZrGAUM=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@babel/highlight/download/@babel/highlight-7.10.4.tgz'
+    version: 7.10.4
   registry.npm.taobao.org/@babel/parser/7.10.2:
     dev: true
     engines:
@@ -9858,23 +9891,23 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rimraf/download/rimraf-3.0.2.tgz'
     version: 3.0.2
-  registry.npm.taobao.org/rollup-plugin-dts/1.4.7_rollup@2.21.0+typescript@3.9.6:
+  registry.npm.taobao.org/rollup-plugin-dts/1.4.8_rollup@2.21.0+typescript@3.9.6:
     dependencies:
       rollup: registry.npm.taobao.org/rollup/2.21.0
       typescript: registry.npm.taobao.org/typescript/3.9.6
     dev: true
-    id: registry.npm.taobao.org/rollup-plugin-dts/1.4.7
+    id: registry.npm.taobao.org/rollup-plugin-dts/1.4.8
     name: rollup-plugin-dts
     optionalDependencies:
-      '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.1
+      '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
     peerDependencies:
-      rollup: ^2.10.2
-      typescript: ^3.9.2
+      rollup: ^2.19.0
+      typescript: ^3.9.6
     resolution:
-      integrity: sha1-YlUUesd3MUwHJaHvy0LfEP4oIkM=
+      integrity: sha1-Ow6twoWu3hHD9c7XK1a193Nd+Vw=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/rollup-plugin-dts/download/rollup-plugin-dts-1.4.7.tgz'
-    version: 1.4.7
+      tarball: 'https://registry.npm.taobao.org/rollup-plugin-dts/download/rollup-plugin-dts-1.4.8.tgz'
+    version: 1.4.8
   registry.npm.taobao.org/rollup/2.21.0:
     dev: true
     engines:
@@ -12289,7 +12322,7 @@ specifiers:
   react-dom: 16.13.1
   react-use: ^15.1.1
   rollup: 2.21.0
-  rollup-plugin-dts: 1.4.7
+  rollup-plugin-dts: 1.4.8
   shx: 0.3.2
   standard-version: 8.0.1
   ts-essentials: 7.0.0
