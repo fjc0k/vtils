@@ -10,13 +10,16 @@ Taro 3 工具库。
 
 |  Function | Description |
 |  --- | --- |
+|  [getTopBarInfo()](./taro.gettopbarinfo.md) | 获取顶栏信息。 |
 |  [submit(action)](./taro.submit.md) | 对提交类行为的封装。 |
 |  [useAutoStopPullDownRefresh(callback)](./taro.useautostoppulldownrefresh.md) | 同 <code>Taro.usePullDownRefresh</code>，不过在回调函数完成后会自动调用 <code>Taro.stopPullDownRefresh()</code>。 |
 |  [useSubmit(action, deps)](./taro.usesubmit.md) |  |
+|  [useTopBarInfo()](./taro.usetopbarinfo.md) |  |
 
 ## Interfaces
 
 |  Interface | Description |
 |  --- | --- |
+|  [GetTopBarInfoResult](./taro.gettopbarinforesult.md) |  |
 |  [SubmitActionPayload](./taro.submitactionpayload.md) |  |
 
