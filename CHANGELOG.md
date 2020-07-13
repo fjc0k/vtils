@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.18.2](https://github.com/fjc0k/vtils/compare/v3.18.1...v3.18.2) (2020-07-13)
+
+### Bug Fixes
+
+- 锁定 standard-version 版本 ([fc10dd3](https://github.com/fjc0k/vtils/commit/fc10dd3789ae91ffc3461e3d09eddd98165a6e0c))
+
 ### [3.18.1](https://github.com/fjc0k/vtils/compare/v3.18.0...v3.18.1) (2020-07-13)
 
 ## [3.18.0](https://github.com/fjc0k/vtils/compare/v3.17.0...v3.18.0) (2020-07-13)
