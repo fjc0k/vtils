@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.18.0](https://github.com/fjc0k/vtils/compare/v3.17.0...v3.18.0) (2020-07-13)
+
+### Features
+
+- **taro:** 新增 getTopBarInfo, useTopBarInfo ([72e3f26](https://github.com/fjc0k/vtils/commit/72e3f26a548fbd06f49375e70bae4e6b76d8401d))
+
 ## [3.17.0](https://github.com/fjc0k/vtils/compare/v3.16.0...v3.17.0) (2020-07-10)
 
 ### Features
