@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.18.3](https://github.com/fjc0k/vtils/compare/v3.18.2...v3.18.3) (2020-07-14)
+
+### Bug Fixes
+
+- **indent:** 后行断言部分浏览器暂不支持 ([3262fa0](https://github.com/fjc0k/vtils/commit/3262fa0c6f627369b6dc8a19763d419f8a41cfad))
+
 ### [3.18.2](https://github.com/fjc0k/vtils/compare/v3.18.1...v3.18.2) (2020-07-13)
 
 ### Bug Fixes
