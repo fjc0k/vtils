@@ -4,6 +4,5 @@
     ":automergeAll",
     ":automergeBranch",
     ":automergeRequireAllStatusChecks"
-  ],
-  "ignoreDeps": ["standard-version"]
+  ]
 }
