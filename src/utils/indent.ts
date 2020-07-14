@@ -22,8 +22,10 @@ export function indent(
     const match = literal.match(/(?:^|[\r\n]+)([^\S\r\n]*)$/)
     if (match && match[1]) {
       interpolation = interpolation.replace(
-        /(?<=[\r\n]+)(?=[^\r\n])/g,
-        match[1],
+        // fix: 后行断言部分浏览器暂不支持
+        // /(?<=[\r\n]+)(?=[^\r\n])/g,
+        /([\r\n]+)(?=[^\r\n])/g,
+        `$1${match[1]}`,
       )
     }
     result += literal

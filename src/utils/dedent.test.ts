@@ -1,7 +1,7 @@
 import { dedent } from './dedent'
 import { indent } from './indent'
 
-describe(dedent.name, () => {
+describe('dedent', () => {
   test('空字符串正常', () => {
     expect(dedent``).toBe('')
   })

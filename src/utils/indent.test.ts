@@ -1,6 +1,6 @@
 import { indent } from './indent'
 
-describe(indent.name, () => {
+describe('indent', () => {
   test('空字符串正常', () => {
     expect(indent``).toBe('')
   })
