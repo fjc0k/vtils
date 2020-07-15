@@ -51,6 +51,8 @@ rich://{"url":"***","desc":"***"}
 |  [loadResource(url)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
+|  [placeKitten(size)](./utils.placekitten.md) | 给定大小获取占位猫咪图片。 |
+|  [placeKitten(width, height)](./utils.placekitten_1.md) | 给定宽高获取占位猫咪图片。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
 |  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
 |  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
