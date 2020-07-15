@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.20.0](https://github.com/fjc0k/vtils/compare/v3.19.0...v3.20.0) (2020-07-15)
+
+### Features
+
+- **types:** 新增 AnyAsyncFunction ([b6d0602](https://github.com/fjc0k/vtils/commit/b6d06022bc5cca295b1689d742b9f6a55d59aad5))
+- **utils:** 新增 onceMeanwhile ([bfa244e](https://github.com/fjc0k/vtils/commit/bfa244e3ea20e38ecc978b0686b556e24afc9a06))
+
 ## [3.19.0](https://github.com/fjc0k/vtils/compare/v3.18.3...v3.19.0) (2020-07-15)
 
 ### Features
