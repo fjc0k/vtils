@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`placeKitten 表现正常: 1 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/10.jpg"`;
+
+exports[`placeKitten 表现正常: 1, 500 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/500.jpg"`;
+
+exports[`placeKitten 表现正常: 5 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/10.jpg"`;
+
+exports[`placeKitten 表现正常: 5, 3 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/10.jpg"`;
+
+exports[`placeKitten 表现正常: 9 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/10.jpg"`;
+
+exports[`placeKitten 表现正常: 9, 88.4 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/90.jpg"`;
+
+exports[`placeKitten 表现正常: 9.9 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/10.jpg"`;
+
+exports[`placeKitten 表现正常: 9.9, 100 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/100.jpg"`;
+
+exports[`placeKitten 表现正常: 10 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/10.jpg"`;
+
+exports[`placeKitten 表现正常: 10, 95 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/100.jpg"`;
+
+exports[`placeKitten 表现正常: 10.1 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/10.jpg"`;
+
+exports[`placeKitten 表现正常: 10.1, 1300.3 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/1000.jpg"`;
+
+exports[`placeKitten 表现正常: 11 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/10.jpg"`;
+
+exports[`placeKitten 表现正常: 11, 34 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/30.jpg"`;
+
+exports[`placeKitten 表现正常: 12 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/10.jpg"`;
+
+exports[`placeKitten 表现正常: 12, 56 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/10/60.jpg"`;
+
+exports[`placeKitten 表现正常: 16 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/20/20.jpg"`;
+
+exports[`placeKitten 表现正常: 16, 90 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/20/90.jpg"`;
+
+exports[`placeKitten 表现正常: 121 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/120/120.jpg"`;
+
+exports[`placeKitten 表现正常: 121, 220 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/120/220.jpg"`;
+
+exports[`placeKitten 表现正常: 500.44 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/500/500.jpg"`;
+
+exports[`placeKitten 表现正常: 500.44, 778 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/500/780.jpg"`;
+
+exports[`placeKitten 表现正常: 999 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/1000/1000.jpg"`;
+
+exports[`placeKitten 表现正常: 999, 1 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/1000/10.jpg"`;
+
+exports[`placeKitten 表现正常: 1000 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/1000/1000.jpg"`;
+
+exports[`placeKitten 表现正常: 1000, 45 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/1000/50.jpg"`;
+
+exports[`placeKitten 表现正常: 1200 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/1000/1000.jpg"`;
+
+exports[`placeKitten 表现正常: 1200, 60 1`] = `"https://cdn.jsdelivr.net/gh/fjc0k/placekitten/images/1000/60.jpg"`;
