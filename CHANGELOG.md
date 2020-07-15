@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.19.0](https://github.com/fjc0k/vtils/compare/v3.18.3...v3.19.0) (2020-07-15)
+
+### Features
+
+- **utils:** 新增 placeKitten ([b154e21](https://github.com/fjc0k/vtils/commit/b154e21585d1008890760e2c0d4a82461c1c5169))
+
 ### [3.18.3](https://github.com/fjc0k/vtils/compare/v3.18.2...v3.18.3) (2020-07-14)
 
 ### Bug Fixes
