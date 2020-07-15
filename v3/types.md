@@ -11,6 +11,7 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [AnyArray](./types.anyarray.md) |  |
+|  [AnyAsyncFunction](./types.anyasyncfunction.md) | 任意异步函数。 |
 |  [AnyFunction](./types.anyfunction.md) | 任意函数。 |
 |  [AnyObject](./types.anyobject.md) | 任意对象。 |
 |  [AsyncOrSync](./types.asyncorsync.md) | Useful as a return type in interfaces or abstract classes with missing implementation |

@@ -51,6 +51,7 @@ rich://{"url":"***","desc":"***"}
 |  [loadResource(url)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
+|  [onceMeanwhile(fn)](./utils.oncemeanwhile.md) | 同一时间对函数的调用只会触发一次运行。 |
 |  [placeKitten(size)](./utils.placekitten.md) | 给定大小获取占位猫咪图片。 |
 |  [placeKitten(width, height)](./utils.placekitten_1.md) | 给定宽高获取占位猫咪图片。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
