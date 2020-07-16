@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.21.1](https://github.com/fjc0k/vtils/compare/v3.21.0...v3.21.1) (2020-07-16)
+
+### Bug Fixes
+
+- **useLocalStorage:** 更新实现 ([1d44804](https://github.com/fjc0k/vtils/commit/1d4480435768080643290fd22ef6ae86ac64424e))
+
 ## [3.21.0](https://github.com/fjc0k/vtils/compare/v3.20.0...v3.21.0) (2020-07-16)
 
 ### Features
