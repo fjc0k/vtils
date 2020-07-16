@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.21.0](https://github.com/fjc0k/vtils/compare/v3.20.0...v3.21.0) (2020-07-16)
+
+### Features
+
+- **react:** 新增 useLocalStorage ([7a415e0](https://github.com/fjc0k/vtils/commit/7a415e0fcd7ce7331ceb3bd786eac10c13b6e8a2))
+
 ## [3.20.0](https://github.com/fjc0k/vtils/compare/v3.19.0...v3.20.0) (2020-07-15)
 
 ### Features
