@@ -1,35 +1,57 @@
-import { useLocalStorage as _useLocalStorage, useUpdateEffect } from 'react-use'
+import {
+  useLocalStorage as _useLocalStorage,
+  UseLocalStorageResult,
+} from './useLocalStorage'
 import { getStorageSync, removeStorage, setStorage } from '@tarojs/taro'
 import { useCallback, useState } from 'react'
+import { useLatest, useUpdateEffect } from 'react-use'
 
-export const useLocalStorage: typeof _useLocalStorage = (
-  key,
-  initialValue,
-  // 忽略选项
-  _options,
-) => {
-  const [value, setValue] = useState<ReturnType<typeof _useLocalStorage>[0]>(
-    () => getStorageSync(key) || initialValue,
-  )
-  useUpdateEffect(() => {
-    setValue(getStorageSync(key) || initialValue)
-  }, [key])
-  const set: ReturnType<typeof _useLocalStorage>[1] = useCallback(
-    valueOrSetter => {
-      if (typeof valueOrSetter === 'function') {
-        valueOrSetter = valueOrSetter(value)
+export const useLocalStorage: typeof _useLocalStorage = <S>(
+  key: string,
+  initialState?: S,
+): UseLocalStorageResult<S | undefined> => {
+  const getLocalStorageItem = useCallback(() => {
+    try {
+      const data = getStorageSync(key)
+      if (data != null) {
+        return JSON.parse(data)
       }
-      setStorage({
-        key: key,
-        data: valueOrSetter,
-      })
-      setValue(valueOrSetter)
-    },
-    [key, value],
-  )
-  const remove: ReturnType<typeof _useLocalStorage>[2] = useCallback(() => {
-    removeStorage({ key })
-    setValue(undefined)
+      return initialState
+    } catch {
+      return initialState
+    }
+  }, [key, initialState])
+
+  const [state, setState] = useState(getLocalStorageItem)
+
+  const latestKey = useLatest(key)
+  const latestInitialState = useLatest(initialState)
+  const latestState = useLatest(state)
+
+  useUpdateEffect(() => {
+    setState(getLocalStorageItem())
   }, [key])
-  return [value as any, set, remove]
+
+  const set: UseLocalStorageResult<S | undefined>[1] = useCallback(
+    nextState => {
+      if (typeof nextState === 'function') {
+        nextState = (nextState as any)(latestState.current)
+      }
+      setState(nextState)
+      setStorage({
+        key: latestKey.current,
+        data: JSON.stringify(nextState),
+      })
+    },
+    [],
+  )
+
+  const reset: UseLocalStorageResult<S | undefined>[2] = useCallback(() => {
+    setState(latestInitialState.current)
+    removeStorage({
+      key: latestKey.current,
+    })
+  }, [])
+
+  return [state, set, reset]
 }

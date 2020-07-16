@@ -1,29 +1,8 @@
-import * as Taro from '@tarojs/taro'
 import { act, renderHook } from '@testing-library/react-hooks'
+import { useLocalStorage } from './useLocalStorage'
 
 describe('useLocalStorage', () => {
-  const storage: Record<any, any> = {}
-
-  beforeAll(() => {
-    jest.mock(
-      '@tarojs/taro',
-      () =>
-        ({
-          getStorageSync: key => {
-            return storage[key]
-          },
-          removeStorage: payload => {
-            delete storage[payload.key]
-          },
-          setStorage: payload => {
-            storage[payload.key] = payload.data
-          },
-        } as typeof Taro),
-    )
-  })
-
   test('表现正常', async () => {
-    const { useLocalStorage } = await import('./useLocalStorage.taro')
     const { result: resx } = renderHook(() => useLocalStorage<string>('x'))
     expect(resx.current[0]).toBe(undefined)
     act(() => resx.current[1]('1'))

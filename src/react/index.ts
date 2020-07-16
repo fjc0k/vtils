@@ -28,4 +28,4 @@ export {
 export { useTitle } from './useTitle'
 export { useInterval, UseIntervalResult } from './useInterval'
 export { useSearchParam } from './useSearchParam'
-export { useLocalStorage } from './useLocalStorage'
+export { useLocalStorage, UseLocalStorageResult } from './useLocalStorage'
