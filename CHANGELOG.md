@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.22.0](https://github.com/fjc0k/vtils/compare/v3.21.1...v3.22.0) (2020-07-16)
+
+### Features
+
+- **useInterval:** 支持 duration ([15b7b2c](https://github.com/fjc0k/vtils/commit/15b7b2c24969dd8bfb1b2a78cc1779f10465b974))
+
 ### [3.21.1](https://github.com/fjc0k/vtils/compare/v3.21.0...v3.21.1) (2020-07-16)
 
 ### Bug Fixes
