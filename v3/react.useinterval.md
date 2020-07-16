@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function useInterval<TResult>(callback: () => TResult, delay: any): UseIntervalResult<TResult>;
+export declare function useInterval<TResult>(callback: () => TResult, delay: any, duration?: number): UseIntervalResult<TResult>;
 ```
 
 ## Parameters
@@ -18,6 +18,7 @@ export declare function useInterval<TResult>(callback: () => TResult, delay: any
 |  --- | --- | --- |
 |  callback | () =&gt; TResult | 回调函数 |
 |  delay | any | 间隔时间（毫秒），非数字时将不调用或停止调用函数 |
+|  duration | number | 持续时间（毫秒） |
 
 <b>Returns:</b>
 

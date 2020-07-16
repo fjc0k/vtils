@@ -13,7 +13,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  [createGlobalState(customResult)](./react.createglobalstate.md) |  |
 |  [createGlobalState(initialState, customResult)](./react.createglobalstate_1.md) |  |
 |  [useClassName(getClassValues, deps)](./react.useclassname.md) | 获取类名字符串。 |
-|  [useInterval(callback, delay)](./react.useinterval.md) | 以一定的间隔时间重复调用某函数，并返回调用结果。 |
+|  [useInterval(callback, delay, duration)](./react.useinterval.md) | 以一定的间隔时间重复调用某函数，并返回调用结果。 |
 |  [useLoadMore(service, deps)](./react.useloadmore.md) | 数据加载。 |
 |  [useLocalStorage(key)](./react.uselocalstorage.md) |  |
 |  [useLocalStorage(key, initialState)](./react.uselocalstorage_1.md) |  |
