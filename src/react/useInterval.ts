@@ -4,7 +4,7 @@ import { useLatest } from 'react-use'
 export type UseIntervalResult<TResult> = [
   TResult | undefined,
   {
-    start: () => void
+    start: (delay?: number, duration?: number) => void
     stop: () => void
   },
 ]
@@ -14,15 +14,18 @@ export type UseIntervalResult<TResult> = [
  *
  * @param callback 回调函数
  * @param delay 间隔时间（毫秒），非数字时将不调用或停止调用函数
+ * @param duration 持续时间（毫秒）
  * @returns 返回调用结果
  */
 export function useInterval<TResult>(
   callback: () => TResult,
   delay: any,
+  duration?: number,
 ): UseIntervalResult<TResult> {
   const [result, setResult] = useState<TResult>()
   const latestCallback = useLatest(callback)
   const latestDelay = useLatest(delay)
+  const latestDuration = useLatest(duration)
   const interval = useRef<any>()
 
   const stop = useCallback(() => {
@@ -31,13 +34,20 @@ export function useInterval<TResult>(
     }
   }, [])
 
-  const start = useCallback(() => {
+  const start = useCallback((delay?: number, duration?: number) => {
     stop()
-    if (typeof latestDelay.current === 'number') {
+    delay = delay ?? latestDelay.current
+    duration = duration ?? latestDuration.current
+    if (typeof delay === 'number') {
       setResult(latestCallback.current())
       interval.current = setInterval(() => {
         setResult(latestCallback.current())
-      }, latestDelay.current)
+      }, delay)
+    }
+    if (typeof duration === 'number') {
+      setTimeout(() => {
+        stop()
+      }, duration)
     }
   }, [])
 
