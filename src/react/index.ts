@@ -8,7 +8,7 @@
 
 export * from 'react-use'
 
-// @index(['./**/*.ts', '!./**/*.{test,taro}.*', '!./{useToggle,createGlobalState,useTitle,useInterval,useSearchParam,useLocalStorage}.*'], f => `export * from '${f.path}'`)
+// @index(['./**/*.ts', '!./**/*.{test,taro}.*', '!./{useToggle,createGlobalState,useTitle,useInterval,useSearchParam,useLocalStorage,useWindowSize}.*'], f => `export * from '${f.path}'`)
 export * from './useClassName'
 export * from './useLoadMore'
 export * from './useReachBottom'
@@ -29,3 +29,4 @@ export { useTitle } from './useTitle'
 export { useInterval, UseIntervalResult } from './useInterval'
 export { useSearchParam } from './useSearchParam'
 export { useLocalStorage, UseLocalStorageResult } from './useLocalStorage'
+export { useWindowSize } from './useWindowSize'
