@@ -110,7 +110,7 @@
     "@types/prompts": "2.0.8",
     "@types/react": "16.9.43",
     "@types/standard-version": "7.0.0",
-    "codecov": "3.7.0",
+    "codecov": "3.7.1",
     "cross-env": "7.0.2",
     "eslint": "7.4.0",
     "execa": "4.0.3",

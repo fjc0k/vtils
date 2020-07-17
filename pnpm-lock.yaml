@@ -16,7 +16,7 @@ devDependencies:
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.8
   '@types/react': registry.npm.taobao.org/@types/react/16.9.43
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
-  codecov: registry.npm.taobao.org/codecov/3.7.0
+  codecov: registry.npm.taobao.org/codecov/3.7.1
   cross-env: registry.npm.taobao.org/cross-env/7.0.2
   eslint: registry.npm.taobao.org/eslint/7.4.0
   execa: registry.npm.taobao.org/execa/4.0.3
@@ -1758,7 +1758,7 @@ packages:
     resolution:
       integrity: sha1-6Ps/JClZ20TWO+Zl23qOc5U3oyw=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/agent-base/download/agent-base-5.1.1.tgz?cache=0&sync_timestamp=1590632156872&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fagent-base%2Fdownload%2Fagent-base-5.1.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/agent-base/download/agent-base-5.1.1.tgz'
     version: 5.1.1
   registry.npm.taobao.org/agent-base/6.0.0:
     dependencies:
@@ -1770,7 +1770,7 @@ packages:
     resolution:
       integrity: sha1-XQEB8Zu/rtOZgLIq6GbeFTuT8Jo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/agent-base/download/agent-base-6.0.0.tgz?cache=0&sync_timestamp=1590632156872&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fagent-base%2Fdownload%2Fagent-base-6.0.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/agent-base/download/agent-base-6.0.0.tgz'
     version: 6.0.0
   registry.npm.taobao.org/aggregate-error/3.0.1:
     dependencies:
@@ -2805,7 +2805,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/co/download/co-4.6.0.tgz'
     version: 4.6.0
-  registry.npm.taobao.org/codecov/3.7.0:
+  registry.npm.taobao.org/codecov/3.7.1:
     dependencies:
       argv: registry.npm.taobao.org/argv/0.0.2
       ignore-walk: registry.npm.taobao.org/ignore-walk/3.0.3
@@ -2818,10 +2818,10 @@ packages:
     hasBin: true
     name: codecov
     resolution:
-      integrity: sha1-SgmTnN4kRHpD820GjotOAYjcPyc=
+      integrity: sha1-Q0y41V8Y7wFnLlc509JmaWvrwgI=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/codecov/download/codecov-3.7.0.tgz'
-    version: 3.7.0
+      tarball: 'https://registry.npm.taobao.org/codecov/download/codecov-3.7.1.tgz?cache=0&sync_timestamp=1595003273777&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcodecov%2Fdownload%2Fcodecov-3.7.1.tgz'
+    version: 3.7.1
   registry.npm.taobao.org/collect-v8-coverage/1.0.1:
     dev: true
     name: collect-v8-coverage
@@ -12309,7 +12309,7 @@ specifiers:
   '@types/prompts': 2.0.8
   '@types/react': 16.9.43
   '@types/standard-version': 7.0.0
-  codecov: 3.7.0
+  codecov: 3.7.1
   cross-env: 7.0.2
   date-fns: ^2.14.0
   eslint: 7.4.0
