@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.23.0](https://github.com/fjc0k/vtils/compare/v3.22.0...v3.23.0) (2020-07-17)
+
+### Features
+
+- **react:** 新增 useWindowSize ([7abcb23](https://github.com/fjc0k/vtils/commit/7abcb23ff8deddaf6bbf9e6b5283adf3e0637161))
+
 ## [3.22.0](https://github.com/fjc0k/vtils/compare/v3.21.1...v3.22.0) (2020-07-16)
 
 ### Features
