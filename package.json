@@ -125,7 +125,7 @@
     "prompts": "2.3.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "rollup": "2.21.0",
+    "rollup": "2.22.0",
     "rollup-plugin-dts": "1.4.8",
     "shx": "0.3.2",
     "standard-version": "8.0.2",
