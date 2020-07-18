@@ -3,17 +3,25 @@
 一个面向业务的 JavaScript/TypeScript 实用程序库。
 
 ```ts
-import { dedent } from 'vtils'
+import { md5 } from 'vtils'
 
-console.log(dedent`
-  - Lodash
-  - date-fns
-  - react-use
-  - type-fest
-  - ts-essentials
-  - yup
-`)
+console.log(md5('龙'))
+// => 682570a229cbd3d67e76ad99b3152060
 ```
+
+---
+
+<!-- TOC depthFrom:2 -->
+
+- [特性](#特性)
+- [安装](#安装)
+- [使用](#使用)
+  - [在 NodeJS 中使用](#在-nodejs-中使用)
+  - [在 Taro 3 中使用](#在-taro-3-中使用)
+  - [在 Deno 中使用](#在-deno-中使用)
+- [许可](#许可)
+
+<!-- /TOC -->
 
 ## 特性
 
@@ -51,7 +59,7 @@ tpm add vtils
 
 ## 使用
 
-### NodeJS
+### 在 NodeJS 中使用
 
 ```ts
 // 基础工具库
@@ -72,7 +80,40 @@ import { OmitStrict, LiteralUnion, PartialDeep } from 'vtils/types'
 
 详细用法见文档：[https://fjc0k.github.io/vtils/v3/](https://fjc0k.github.io/vtils/v3/)。
 
-### Deno
+### 在 Taro 3 中使用
+
+在 [Taro 3](https://taro.js.org/) 中使用前需要修改 Webpack 配置，在 `config/index.js` 中的 `mini` 字段下设置：
+
+```ts
+mini: {
+  webpackChain(config) {
+    // 该插件会影响 resolve.extensions 的表现，删去
+    config.resolve.plugins.delete('MultiPlatformPlugin')
+    // 支持 .taro.js 后缀
+    config.resolve.extensions.prepend('.taro.js')
+  },
+}
+```
+
+然后，就可以愉快地使用了：
+
+```ts
+// React 工具库
+import { useSearchParam } from 'vtils/react'
+
+// Taro 3 工具库
+import { useTopBarInfo } from 'vtils/taro'
+
+export default function () {
+  const id = +useSearchParam('id')!
+  const topBarInfo = useTopBarInfo()
+  // ...
+}
+```
+
+### 在 Deno 中使用
+
+[Deno](https://deno.land/) 下暂只支持基础工具库、类型工具库。
 
 ```ts
 // 基础工具库
