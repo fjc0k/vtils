@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.24.0](https://github.com/fjc0k/vtils/compare/v3.23.0...v3.24.0) (2020-07-18)
+
+### Features
+
+- **utils:** 新增 getWechatPublicAccountQrcodeUrl ([398c886](https://github.com/fjc0k/vtils/commit/398c886d823842e632144419939238d8f257464c))
+
 ## [3.23.0](https://github.com/fjc0k/vtils/compare/v3.22.0...v3.23.0) (2020-07-17)
 
 ### Features
