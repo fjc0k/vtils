@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.25.0](https://github.com/fjc0k/vtils/compare/v3.24.1...v3.25.0) (2020-07-20)
+
+### Features
+
+- **react:** 新增 defineComponent ([a9c95d7](https://github.com/fjc0k/vtils/commit/a9c95d7398d98915f852d772f3510e075e4222a0))
+- **react:** 新增 ExtendComponentProps ([a1c30c1](https://github.com/fjc0k/vtils/commit/a1c30c1026088d10bbbf7aad18f982c641bea0f0))
+- **react:** 新增 isVisibleValue ([a368e51](https://github.com/fjc0k/vtils/commit/a368e51add413de69d60d82787f83d1e0c065c9b))
+- **react:** 新增 renderComponent ([ceecb28](https://github.com/fjc0k/vtils/commit/ceecb28913fe66356667de89b9e28bd01acd3beb))
+- **react:** 新增 useControllableValue ([da57d15](https://github.com/fjc0k/vtils/commit/da57d15e3f6603d5fd5c1ee45c585371778d6bf1))
+
+### Bug Fixes
+
+- **defineComponent:** 组件的内部属性去除 key 和 ref ([57196ff](https://github.com/fjc0k/vtils/commit/57196ffd707b019bc3d3f42e24c7d9fe9ddd4354))
+
 ### [3.24.1](https://github.com/fjc0k/vtils/compare/v3.24.0...v3.24.1) (2020-07-18)
 
 ## [3.24.0](https://github.com/fjc0k/vtils/compare/v3.23.0...v3.24.0) (2020-07-18)
