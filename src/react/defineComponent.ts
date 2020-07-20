@@ -53,8 +53,11 @@ export type DefineComponentOptions<
      * 组件。
      */
     component: TForwardRef extends true
-      ? React.ForwardRefRenderFunction<TRef, RequiredBy<TProps, keyof TProps>>
-      : React.FC<RequiredBy<TProps, keyof TProps>>
+      ? React.ForwardRefRenderFunction<
+          TRef,
+          Omit<RequiredBy<TProps, keyof TProps>, 'key' | 'ref'>
+        >
+      : React.FC<Omit<RequiredBy<TProps, keyof TProps>, 'key' | 'ref'>>
   }
 
 /**
