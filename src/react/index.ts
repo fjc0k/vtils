@@ -9,6 +9,7 @@
 export * from 'react-use'
 
 // @index(['./**/*.ts', '!./**/*.{test,taro}.*', '!./{useToggle,createGlobalState,useTitle,useInterval,useSearchParam,useLocalStorage,useWindowSize}.*'], f => `export * from '${f.path}'`)
+export * from './defineComponent'
 export * from './useClassName'
 export * from './useLoadMore'
 export * from './useReachBottom'

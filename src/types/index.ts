@@ -11,6 +11,7 @@ export type { LiteralUnion, AsyncReturnType, FixedLengthArray } from 'type-fest'
 export type {
   AnyArray,
   ValueOf,
+  ElementOf,
   AsyncOrSync,
   Buildable,
   Writable,
@@ -29,6 +30,10 @@ export type {
   DeepWritable as WritableDeep,
   DeepNullable as NullableDeep,
   DeepNonNullable as NonNullableDeep,
+  ReadonlyKeys,
+  WritableKeys,
+  OptionalKeys,
+  RequiredKeys,
 } from 'ts-essentials'
 
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
