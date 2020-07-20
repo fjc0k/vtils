@@ -12,7 +12,12 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  --- | --- |
 |  [createGlobalState(customResult)](./react.createglobalstate.md) |  |
 |  [createGlobalState(initialState, customResult)](./react.createglobalstate_1.md) |  |
+|  [defineComponent(options)](./react.definecomponent.md) | 定义组件。 |
+|  [defineComponent(options)](./react.definecomponent_1.md) | 定义组件。 |
+|  [isVisibleValue(value)](./react.isvisiblevalue.md) | 是否是渲染后可见的值。 渲染后不可见的值包括：<code>undefined</code>、<code>null</code>、<code>true</code>、<code>false</code>、空字符串。 |
+|  [renderComponent(Component, initialProps, injectCallbacks)](./react.rendercomponent.md) | 独立渲染一个组件在 document.body 下，常应用于弹窗类组件。 |
 |  [useClassName(getClassValues, deps)](./react.useclassname.md) | 获取类名字符串。 |
+|  [useControllableValue(props, defaultValuePropName, valuePropName, callbackPropName)](./react.usecontrollablevalue.md) | 受控值。 |
 |  [useInterval(callback, delay, duration)](./react.useinterval.md) | 以一定的间隔时间重复调用某函数，并返回调用结果。 |
 |  [useLoadMore(service, deps)](./react.useloadmore.md) | 数据加载。 |
 |  [useLocalStorage(key)](./react.uselocalstorage.md) |  |
@@ -28,6 +33,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  Interface | Description |
 |  --- | --- |
 |  [CreateGlobalStateResult](./react.createglobalstateresult.md) |  |
+|  [RenderComponentResult](./react.rendercomponentresult.md) |  |
 |  [UseLoadMoreResult](./react.useloadmoreresult.md) | 加载更多结果。 |
 |  [UseLoadMoreService](./react.useloadmoreservice.md) | 加载服务。 |
 |  [UseLoadMoreServicePayload](./react.useloadmoreservicepayload.md) | 加载服务载荷。 |
@@ -41,6 +47,9 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  [CreateGlobalStateCustomResult](./react.createglobalstatecustomresult.md) |  |
 |  [CreateGlobalStateResultResult](./react.createglobalstateresultresult.md) |  |
 |  [CreateGlobalStateState](./react.createglobalstatestate.md) |  |
+|  [DefineComponentOptions](./react.definecomponentoptions.md) | 定义组件的选项。 |
+|  [ExtendComponentProps](./react.extendcomponentprops.md) | 继承组件属性。 TComponent 组件  TExclude 需去除的属性  TRef 新的 ref  TOverride 覆盖属性 |
+|  [UseControllableValueResult](./react.usecontrollablevalueresult.md) |  |
 |  [UseIntervalResult](./react.useintervalresult.md) |  |
 |  [UseLoadMoreServiceResult](./react.useloadmoreserviceresult.md) | 加载服务结果。 |
 |  [UseLocalStorageResult](./react.uselocalstorageresult.md) |  |

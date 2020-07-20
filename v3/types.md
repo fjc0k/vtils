@@ -18,6 +18,7 @@
 |  [AsyncReturnType](./types.asyncreturntype.md) | Unwrap the return type of a function that returns a <code>Promise</code>.<!-- -->There has been \[discussion\](https://github.com/microsoft/TypeScript/pull/35998) about implementing this type in TypeScript. |
 |  [Buildable](./types.buildable.md) | Combination of DeepPartial and DeepWritable |
 |  [Defined](./types.defined.md) | 去除类型 T 中的 undefined。 |
+|  [ElementOf](./types.elementof.md) | Easily extract the type of a given array's elements |
 |  [FirstParameter](./types.firstparameter.md) | 返回函数 T 第一个参数的类型。 |
 |  [FixedLengthArray](./types.fixedlengtharray.md) | Create a type that represents an array of the given type and length. The array's length and the <code>Array</code> prototype methods that manipulate its length are excluded in the resulting type.<!-- -->Please participate in \[this issue\](https://github.com/microsoft/TypeScript/issues/26223) if you want to have a similiar type built into TypeScript.<!-- -->Use-cases: - Declaring fixed-length tuples or arrays with a large number of items. - Creating a range union (for example, <code>0 &#124; 1 &#124; 2 &#124; 3 &#124; 4</code> from the keys of such a type) without having to resort to recursive types. - Creating an array of coordinates with a static length, for example, length of 3 for a 3D vector. |
 |  [Head](./types.head.md) | Functional programming essentials |
@@ -29,16 +30,20 @@
 |  [OmitDeep](./types.omitdeep.md) | Recursively omit deep properties |
 |  [OmitStrict](./types.omitstrict.md) | Similar to the builtin Omit, but checks the filter strictly. |
 |  [OneOrMany](./types.oneormany.md) | 同 <code>T &#124; T[]</code>。 |
+|  [OptionalKeys](./types.optionalkeys.md) | Gets keys of an object which are optional |
 |  [PartialBy](./types.partialby.md) | Mark some properties as optional, leaving others unchanged |
 |  [PartialDeep](./types.partialdeep.md) | Like Partial but recursive |
 |  [Path](./types.path.md) | 获取对象的路径。最多支持 7 级路径。 |
 |  [PathValue](./types.pathvalue.md) | 获取对象的路径值。最多支持 7 级路径。 |
 |  [PickBy](./types.pickby.md) | Pick all properties of given type in object type |
 |  [ReadonlyDeep](./types.readonlydeep.md) | Like Readonly but recursive |
+|  [ReadonlyKeys](./types.readonlykeys.md) | Gets keys of an object which are readonly |
 |  [RequiredBy](./types.requiredby.md) | Mark some properties as required, leaving others unchanged |
 |  [RequiredDeep](./types.requireddeep.md) | Like Required but recursive |
+|  [RequiredKeys](./types.requiredkeys.md) | Gets keys of an object which are required |
 |  [Tail](./types.tail.md) |  |
 |  [ValueOf](./types.valueof.md) | Easily extract the type of a given object's values |
 |  [Writable](./types.writable.md) | Make readonly object writable |
 |  [WritableDeep](./types.writabledeep.md) | Like Writable but recursive |
+|  [WritableKeys](./types.writablekeys.md) | Gets keys of an object which are writable |
 
