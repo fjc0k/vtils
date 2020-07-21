@@ -25,7 +25,7 @@ TRef extends any = never> = ([OptionalKeys<TProps>] extends [never] ? {
     defaultProps?: never;
 } : {
     defaultProps: {
-        [K in OptionalKeys<TProps>]: Defined<TProps[K]>;
+        [K in OptionalKeys<TProps>]?: TProps[K];
     };
 }) & (TForwardRef extends true ? {
     forwardRef?: true;
@@ -33,6 +33,6 @@ TRef extends any = never> = ([OptionalKeys<TProps>] extends [never] ? {
     forwardRef: false;
 }) & {
     displayName?: string;
-    component: TForwardRef extends true ? React.ForwardRefRenderFunction<TRef, Omit<RequiredBy<TProps, keyof TProps>, 'key' | 'ref'>> : React.FC<Omit<RequiredBy<TProps, keyof TProps>, 'key' | 'ref'>>;
+    component: TForwardRef extends true ? React.ForwardRefRenderFunction<TRef, Omit<TProps, 'key' | 'ref'>> : React.FC<Omit<TProps, 'key' | 'ref'>>;
 };
 ```
