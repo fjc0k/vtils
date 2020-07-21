@@ -15,7 +15,7 @@ describe('useInterval', () => {
     expect(result.current[0]).toBe(1)
     result.current[1].start()
     expect(result.current[0]).toBe(2)
-    await wait(20)
+    await wait(25)
     expect(result.current[0]).toBe(3)
   })
 
@@ -26,7 +26,7 @@ describe('useInterval', () => {
       return { interval: useInterval(() => i++, delay), setDelay }
     })
     expect(result.current.interval[0]).toBe(0)
-    await wait(20)
+    await wait(25)
     expect(result.current.interval[0]).toBe(1)
     act(() => result.current.setDelay(false))
     await wait(40)
@@ -34,7 +34,7 @@ describe('useInterval', () => {
     act(() => result.current.setDelay(20))
     await wait(0)
     expect(result.current.interval[0]).toBe(2)
-    await wait(20)
+    await wait(25)
     expect(result.current.interval[0]).toBe(3)
   })
 
@@ -53,11 +53,9 @@ describe('useInterval', () => {
       return useInterval(() => i++, null)[1]
     })
     expect(i).toBe(0)
-    act(() => result.current.start(10, 42))
+    act(() => result.current.start(10, 3))
     expect(i).toBe(1)
     await wait(12)
-    expect(i).toBe(2)
-    await wait(60)
-    expect(i).toBe(4)
+    expect(i).toBe(1)
   })
 })
