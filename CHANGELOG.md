@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.25.3](https://github.com/fjc0k/vtils/compare/v3.25.2...v3.25.3) (2020-07-21)
+
+### Bug Fixes
+
+- **useInterval:** 修复测试问题 ([7688b13](https://github.com/fjc0k/vtils/commit/7688b139d7909343393603daad34038d6f61fb30))
+
 ### [3.25.2](https://github.com/fjc0k/vtils/compare/v3.25.1...v3.25.2) (2020-07-21)
 
 ### Bug Fixes
