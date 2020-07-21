@@ -21,18 +21,15 @@ TForwardRef extends boolean,
 /**
  * 要转发的 ref。
  */
-TRef extends any = never> = ([OptionalKeys<TProps>] extends [never] ? {
-    defaultProps?: never;
-} : {
-    defaultProps: {
+TRef extends any = never> = {
+    defaultProps?: {
         [K in OptionalKeys<TProps>]?: TProps[K];
     };
-}) & (TForwardRef extends true ? {
+    displayName?: string;
+    component: TForwardRef extends true ? React.ForwardRefRenderFunction<TRef, Omit<TProps, 'key' | 'ref'>> : React.FC<Omit<TProps, 'key' | 'ref'>>;
+} & (TForwardRef extends true ? {
     forwardRef?: true;
 } : {
     forwardRef: false;
-}) & {
-    displayName?: string;
-    component: TForwardRef extends true ? React.ForwardRefRenderFunction<TRef, Omit<TProps, 'key' | 'ref'>> : React.FC<Omit<TProps, 'key' | 'ref'>>;
-};
+});
 ```
