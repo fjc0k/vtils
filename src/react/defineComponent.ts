@@ -1,5 +1,5 @@
 import React from 'react'
-import { Defined, OptionalKeys, RequiredBy } from '../types'
+import { OptionalKeys } from '../types'
 
 /**
  * 定义组件的选项。
@@ -29,7 +29,7 @@ export type DefineComponentOptions<
        * 可选属性的默认值。
        */
       defaultProps: {
-        [K in OptionalKeys<TProps>]: Defined<TProps[K]>
+        [K in OptionalKeys<TProps>]?: TProps[K]
       }
     }) &
   (TForwardRef extends true
@@ -53,11 +53,8 @@ export type DefineComponentOptions<
      * 组件。
      */
     component: TForwardRef extends true
-      ? React.ForwardRefRenderFunction<
-          TRef,
-          Omit<RequiredBy<TProps, keyof TProps>, 'key' | 'ref'>
-        >
-      : React.FC<Omit<RequiredBy<TProps, keyof TProps>, 'key' | 'ref'>>
+      ? React.ForwardRefRenderFunction<TRef, Omit<TProps, 'key' | 'ref'>>
+      : React.FC<Omit<TProps, 'key' | 'ref'>>
   }
 
 /**
