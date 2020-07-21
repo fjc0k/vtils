@@ -17,45 +17,38 @@ export type DefineComponentOptions<
    * 要转发的 ref。
    */
   TRef extends any = never
-> = ([OptionalKeys<TProps>] extends [never]
+> = {
+  /**
+   * 可选属性的默认值。
+   */
+  defaultProps?: {
+    [K in OptionalKeys<TProps>]?: TProps[K]
+  }
+
+  /**
+   * 组件展示名称。
+   */
+  displayName?: string
+
+  /**
+   * 组件。
+   */
+  component: TForwardRef extends true
+    ? React.ForwardRefRenderFunction<TRef, Omit<TProps, 'key' | 'ref'>>
+    : React.FC<Omit<TProps, 'key' | 'ref'>>
+} & (TForwardRef extends true
   ? {
       /**
-       * 可选属性的默认值。
+       * 是否转发 ref。
        */
-      defaultProps?: never
+      forwardRef?: true
     }
   : {
       /**
-       * 可选属性的默认值。
+       * 是否转发 ref。
        */
-      defaultProps: {
-        [K in OptionalKeys<TProps>]?: TProps[K]
-      }
-    }) &
-  (TForwardRef extends true
-    ? {
-        /**
-         * 是否转发 ref。
-         */
-        forwardRef?: true
-      }
-    : {
-        /**
-         * 是否转发 ref。
-         */
-        forwardRef: false
-      }) & {
-    /**
-     * 组件展示名称。
-     */
-    displayName?: string
-    /**
-     * 组件。
-     */
-    component: TForwardRef extends true
-      ? React.ForwardRefRenderFunction<TRef, Omit<TProps, 'key' | 'ref'>>
-      : React.FC<Omit<TProps, 'key' | 'ref'>>
-  }
+      forwardRef: false
+    })
 
 /**
  * 定义组件。
