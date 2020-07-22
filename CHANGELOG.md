@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.26.0](https://github.com/fjc0k/vtils/compare/v3.25.4...v3.26.0) (2020-07-22)
+
+### Features
+
+- **react:** 新增 useHover ([59b4e38](https://github.com/fjc0k/vtils/commit/59b4e38cfd7f08727e348aa3be917b27d76b8fa3))
+
+### Bug Fixes
+
+- **useInterval:** 修正测试用例 ([8d45de0](https://github.com/fjc0k/vtils/commit/8d45de0db007baf468ac296a2b5c27059d86a2b2))
+
 ### [3.25.4](https://github.com/fjc0k/vtils/compare/v3.25.3...v3.25.4) (2020-07-22)
 
 ### Bug Fixes
