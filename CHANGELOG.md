@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.27.0](https://github.com/fjc0k/vtils/compare/v3.26.0...v3.27.0) (2020-07-22)
+
+### Features
+
+- **utils:** 新增 inMiniProgram ([7685872](https://github.com/fjc0k/vtils/commit/76858724e74064f6aac945be0952ae46bc8d16dd))
+- **utils:** 新增 inTaro ([19ad7f3](https://github.com/fjc0k/vtils/commit/19ad7f37587a34e337f2c3a3c1061dd0d1302247))
+
 ## [3.26.0](https://github.com/fjc0k/vtils/compare/v3.25.4...v3.26.0) (2020-07-22)
 
 ### Features
