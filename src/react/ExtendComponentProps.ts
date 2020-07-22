@@ -16,7 +16,9 @@ export type ExtendComponentProps<
     | React.JSXElementConstructor<any>,
   TExclude extends keyof React.ComponentProps<TComponent>,
   TRef extends any = never,
-  TOverride extends Partial<React.ComponentProps<TComponent>> = never
+  TOverride extends Partial<
+    Record<keyof React.ComponentProps<TComponent>, any>
+  > = never
 > = Merge<
   Merge<
     Omit<React.ComponentProps<TComponent>, TExclude>,
