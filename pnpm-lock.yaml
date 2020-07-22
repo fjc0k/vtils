@@ -17,7 +17,7 @@ devDependencies:
   '@types/react': registry.npm.taobao.org/@types/react/16.9.43
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/16.9.8
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
-  codecov: registry.npm.taobao.org/codecov/3.7.1
+  codecov: registry.npm.taobao.org/codecov/3.7.2
   cross-env: registry.npm.taobao.org/cross-env/7.0.2
   eslint: registry.npm.taobao.org/eslint/7.5.0
   execa: registry.npm.taobao.org/execa/4.0.3
@@ -3245,7 +3245,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/co/download/co-4.6.0.tgz'
     version: 4.6.0
-  registry.npm.taobao.org/codecov/3.7.1:
+  registry.npm.taobao.org/codecov/3.7.2:
     dependencies:
       argv: registry.npm.taobao.org/argv/0.0.2
       ignore-walk: registry.npm.taobao.org/ignore-walk/3.0.3
@@ -3258,10 +3258,10 @@ packages:
     hasBin: true
     name: codecov
     resolution:
-      integrity: sha1-Q0y41V8Y7wFnLlc509JmaWvrwgI=
+      integrity: sha1-mY5oyMHvS1XPzxHNRWhm014T1pM=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/codecov/download/codecov-3.7.1.tgz?cache=0&sync_timestamp=1595003273777&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcodecov%2Fdownload%2Fcodecov-3.7.1.tgz'
-    version: 3.7.1
+      tarball: 'https://registry.npm.taobao.org/codecov/download/codecov-3.7.2.tgz'
+    version: 3.7.2
   registry.npm.taobao.org/collect-v8-coverage/1.0.1:
     dev: true
     name: collect-v8-coverage
@@ -12753,7 +12753,7 @@ specifiers:
   '@types/react': 16.9.43
   '@types/react-dom': 16.9.8
   '@types/standard-version': 7.0.0
-  codecov: 3.7.1
+  codecov: 3.7.2
   cross-env: 7.0.2
   date-fns: ^2.14.0
   eslint: 7.5.0
