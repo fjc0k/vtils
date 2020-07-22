@@ -8,7 +8,7 @@
 
 export * from 'react-use'
 
-// @index(['./**/*.ts', '!./**/*.{test,taro}.*', '!./{useToggle,createGlobalState,useTitle,useInterval,useSearchParam,useLocalStorage,useWindowSize}.*'], f => `export * from '${f.path}'`)
+// @index(['./**/*.ts', '!./**/*.{test,taro}.*', '!./{useToggle,createGlobalState,useTitle,useInterval,useSearchParam,useLocalStorage,useWindowSize,useHover}.*'], f => `export * from '${f.path}'`)
 export * from './defineComponent'
 export * from './ExtendComponentProps'
 export * from './isVisibleValue'
@@ -35,3 +35,4 @@ export { useInterval, UseIntervalResult } from './useInterval'
 export { useSearchParam } from './useSearchParam'
 export { useLocalStorage, UseLocalStorageResult } from './useLocalStorage'
 export { useWindowSize } from './useWindowSize'
+export { useHover, UseHoverOptions, UseHoverResult } from './useHover'
