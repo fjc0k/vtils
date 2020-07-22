@@ -18,6 +18,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  [renderComponent(Component, initialProps, injectCallbacks)](./react.rendercomponent.md) | 独立渲染一个组件在 document.body 下，常应用于弹窗类组件。 |
 |  [useClassName(getClassValues, deps)](./react.useclassname.md) | 获取类名字符串。 |
 |  [useControllableValue(props, defaultValuePropName, valuePropName, callbackPropName)](./react.usecontrollablevalue.md) | 受控值。 |
+|  [useHover(options)](./react.usehover.md) |  |
 |  [useInterval(callback, delay, duration)](./react.useinterval.md) | 以一定的间隔时间重复调用某函数，并返回调用结果。 |
 |  [useLoadMore(service, deps)](./react.useloadmore.md) | 数据加载。 |
 |  [useLocalStorage(key)](./react.uselocalstorage.md) |  |
@@ -34,6 +35,8 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  --- | --- |
 |  [CreateGlobalStateResult](./react.createglobalstateresult.md) |  |
 |  [RenderComponentResult](./react.rendercomponentresult.md) |  |
+|  [UseHoverOptions](./react.usehoveroptions.md) |  |
+|  [UseHoverResult](./react.usehoverresult.md) |  |
 |  [UseLoadMoreResult](./react.useloadmoreresult.md) | 加载更多结果。 |
 |  [UseLoadMoreService](./react.useloadmoreservice.md) | 加载服务。 |
 |  [UseLoadMoreServicePayload](./react.useloadmoreservicepayload.md) | 加载服务载荷。 |
