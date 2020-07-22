@@ -111,7 +111,7 @@
     "@types/react": "16.9.43",
     "@types/react-dom": "16.9.8",
     "@types/standard-version": "7.0.0",
-    "codecov": "3.7.1",
+    "codecov": "3.7.2",
     "cross-env": "7.0.2",
     "eslint": "7.5.0",
     "execa": "4.0.3",
