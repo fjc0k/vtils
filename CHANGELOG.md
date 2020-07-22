@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.25.4](https://github.com/fjc0k/vtils/compare/v3.25.3...v3.25.4) (2020-07-22)
+
+### Bug Fixes
+
+- **ExtendComponentProps:** 修复 TOverride 的类型定义 ([3051055](https://github.com/fjc0k/vtils/commit/30510553e20198f32bc672478f1c6e61a7b9b07f))
+
 ### [3.25.3](https://github.com/fjc0k/vtils/compare/v3.25.2...v3.25.3) (2020-07-21)
 
 ### Bug Fixes

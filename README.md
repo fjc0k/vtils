@@ -122,14 +122,14 @@ import {
   isNumber,
   EventBus,
   base64Encode,
-} from 'https://cdn.pika.dev/vtils@3.25.3'
+} from 'https://cdn.pika.dev/vtils@3.25.4'
 
 // 类型工具库
 import {
   OmitStrict,
   LiteralUnion,
   PartialDeep,
-} from 'https://cdn.pika.dev/vtils@3.25.3/types'
+} from 'https://cdn.pika.dev/vtils@3.25.4/types'
 ```
 
 ## 许可
