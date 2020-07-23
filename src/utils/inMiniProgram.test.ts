@@ -1,8 +1,9 @@
+/// <reference types="miniprogram-api-typings" />
 import { inMiniProgram } from './inMiniProgram'
 
-const fakeMiniProgramFactory = {
-  getSystemInfo() {
-    return {}
+const fakeMiniProgramFactory: Partial<WechatMiniprogram.Wx> = {
+  getSystemInfoSync() {
+    return {} as any
   },
 }
 
@@ -16,13 +17,13 @@ describe('inMiniProgram', () => {
       wx: fakeMiniProgramFactory,
       my: fakeMiniProgramFactory,
     })
-    expect(inMiniProgram()).toBeTrue()
-    expect(inMiniProgram('微信')).toBeTrue()
+    expect(inMiniProgram()).toBe(fakeMiniProgramFactory)
+    expect(inMiniProgram('微信')).toBe(fakeMiniProgramFactory)
     expect(inMiniProgram('百度')).toBeFalse()
-    expect(inMiniProgram(['微信', '支付宝'])).toBeTrue()
+    expect(inMiniProgram(['微信', '支付宝'])).toBe(fakeMiniProgramFactory)
     Object.assign(window, {
       swan: fakeMiniProgramFactory,
     })
-    expect(inMiniProgram('百度')).toBeTrue()
+    expect(inMiniProgram('百度')).toBe(fakeMiniProgramFactory)
   })
 })
