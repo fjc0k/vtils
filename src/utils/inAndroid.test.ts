@@ -20,4 +20,32 @@ describe('inAndroid', () => {
     window.navigator.userAgent = 'xx android yy'
     expect(inAndroid()).toBeTrue()
   })
+
+  test('<小程序> 不在 Android 设备中', async () => {
+    const { inAndroid } = await import('./inAndroid')
+    // @ts-ignore
+    window.wx = {
+      getSystemInfoSync() {
+        return {
+          platform: 'devtools',
+          system: '123',
+        }
+      },
+    } as Partial<WechatMiniprogram.Wx>
+    expect(inAndroid()).toBeFalse()
+  })
+
+  test('<小程序> 在 Android 设备中', async () => {
+    const { inAndroid } = await import('./inAndroid')
+    // @ts-ignore
+    window.wx = {
+      getSystemInfoSync() {
+        return {
+          platform: 'android',
+          system: '123',
+        }
+      },
+    } as Partial<WechatMiniprogram.Wx>
+    expect(inAndroid()).toBeTrue()
+  })
 })

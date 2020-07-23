@@ -1,4 +1,5 @@
 import { inBrowser } from './inBrowser'
+import { inMiniProgram } from './inMiniProgram'
 
 let yes!: boolean
 
@@ -15,10 +16,16 @@ let yes!: boolean
  */
 export function inAndroid(): boolean {
   if (yes == null) {
-    yes =
-      inBrowser() &&
-      typeof window.navigator === 'object' &&
-      /Android/i.test(window.navigator.userAgent || '')
+    const mp = inMiniProgram()
+    if (mp) {
+      const sysInfo = mp.getSystemInfoSync()
+      yes = sysInfo.platform === 'android' || /Android/i.test(sysInfo.system)
+    } else {
+      yes =
+        inBrowser() &&
+        typeof window.navigator === 'object' &&
+        /Android/i.test(window.navigator.userAgent || '')
+    }
   }
   return yes
 }
