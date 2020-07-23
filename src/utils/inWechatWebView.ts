@@ -8,12 +8,12 @@ let yes!: boolean
  * @returns 返回检查结果
  * @example
  * ```typescript
- * if (inWechat()) {
+ * if (inWechatWebView()) {
  *   console.log('你在微信内置浏览器中')
  * }
  * ```
  */
-export function inWechat(): boolean {
+export function inWechatWebView(): boolean {
   if (yes == null) {
     yes =
       inBrowser() &&

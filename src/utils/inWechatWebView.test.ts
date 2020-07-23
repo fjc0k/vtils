@@ -2,22 +2,22 @@ Object.defineProperty(window.navigator, 'userAgent', {
   writable: true,
 })
 
-describe('inWechat', () => {
+describe('inWechatWebView', () => {
   afterEach(() => {
     jest.resetModules()
   })
 
   test('不在微信内置浏览器中', async () => {
-    const { inWechat } = await import('./inWechat')
+    const { inWechatWebView } = await import('./inWechatWebView')
     // @ts-ignore
     window.navigator.userAgent = 'x'
-    expect(inWechat()).toBeFalse()
+    expect(inWechatWebView()).toBeFalse()
   })
 
   test('在微信内置浏览器中', async () => {
-    const { inWechat } = await import('./inWechat')
+    const { inWechatWebView } = await import('./inWechatWebView')
     // @ts-ignore
     window.navigator.userAgent = 'xx MicroMessenger yy'
-    expect(inWechat()).toBeTrue()
+    expect(inWechatWebView()).toBeTrue()
   })
 })
