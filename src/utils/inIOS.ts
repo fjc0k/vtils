@@ -1,4 +1,5 @@
 import { inBrowser } from './inBrowser'
+import { inMiniProgram } from './inMiniProgram'
 
 let yes!: boolean
 
@@ -15,10 +16,16 @@ let yes!: boolean
  */
 export function inIOS(): boolean {
   if (yes == null) {
-    yes =
-      inBrowser() &&
-      typeof window.navigator === 'object' &&
-      /iPad|iPhone|iPod/i.test(window.navigator.platform || '')
+    const mp = inMiniProgram()
+    if (mp) {
+      const sysInfo = mp.getSystemInfoSync()
+      yes = sysInfo.platform === 'ios' || /iOS/i.test(sysInfo.system)
+    } else {
+      yes =
+        inBrowser() &&
+        typeof window.navigator === 'object' &&
+        /iPad|iPhone|iPod/i.test(window.navigator.platform || '')
+    }
   }
   return yes
 }
