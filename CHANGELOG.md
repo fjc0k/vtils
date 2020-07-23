@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.28.0](https://github.com/fjc0k/vtils/compare/v3.27.0...v3.28.0) (2020-07-23)
+
+### Features
+
+- **inAndroid:** 支持在小程序中使用 ([b3db043](https://github.com/fjc0k/vtils/commit/b3db043c15a3dd30fac061876f6a14cbbb194ea7))
+- **inIOS:** 支持在小程序中使用 ([e804fb8](https://github.com/fjc0k/vtils/commit/e804fb81c5b2a255ca80e7204c887cc7f370a597))
+- **inMiniProgram:** 在小程序中时，现在会返回小程序 API 挂载的全局对象 ([ba90ab8](https://github.com/fjc0k/vtils/commit/ba90ab87af6a19f0007f8f17650a08026a132722))
+- **utils:** inWechat 更名为 inWechatWebView ([1d341e4](https://github.com/fjc0k/vtils/commit/1d341e47d41a829bbaea59cbf0eae51f6d87e92b))
+
 ## [3.27.0](https://github.com/fjc0k/vtils/compare/v3.26.0...v3.27.0) (2020-07-22)
 
 ### Features
