@@ -4,12 +4,12 @@
 
 ## inMiniProgram() function
 
-检查是否在指定的小程序平台中。
+检查是否在指定的小程序平台中，若在，返回承载其 API 的全局对象，若不在，返回 false。
 
 <b>Signature:</b>
 
 ```typescript
-export declare function inMiniProgram(platform?: InMiniProgramPlatform | InMiniProgramPlatform[]): boolean;
+export declare function inMiniProgram(platform?: InMiniProgramPlatform | InMiniProgramPlatform[]): WechatMiniprogram.Wx | false;
 ```
 
 ## Parameters
@@ -20,7 +20,7 @@ export declare function inMiniProgram(platform?: InMiniProgramPlatform | InMiniP
 
 <b>Returns:</b>
 
-boolean
+WechatMiniprogram.Wx \| false
 
 返回检查结果
 

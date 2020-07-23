@@ -42,10 +42,10 @@ rich://{"url":"***","desc":"***"}
 |  [inDeno()](./utils.indeno.md) | 检查是否在 Deno 中。 |
 |  [indent(literals, interpolations)](./utils.indent.md) | 每一行紧跟前导空白的插入值为多行时，保持缩进。 |
 |  [inIOS()](./utils.inios.md) | 检查是否在 iOS 设备中。 |
-|  [inMiniProgram(platform)](./utils.inminiprogram.md) | 检查是否在指定的小程序平台中。 |
+|  [inMiniProgram(platform)](./utils.inminiprogram.md) | 检查是否在指定的小程序平台中，若在，返回承载其 API 的全局对象，若不在，返回 false。 |
 |  [inNodeJS()](./utils.innodejs.md) | 检查是否在 Node.js 中。 |
 |  [inTaro()](./utils.intaro.md) | 检查是否在 \[Taro 3\](https://taro.js.org/) 中。 |
-|  [inWechat()](./utils.inwechat.md) | 检查是否在微信内置浏览器中。 |
+|  [inWechatWebView()](./utils.inwechatwebview.md) | 检查是否在微信内置浏览器中。 |
 |  [isChineseIDCardNumber(value)](./utils.ischineseidcardnumber.md) | 检测传入的值是否是合法的中国大陆居民 <code>18</code> 位身份证号码。 |
 |  [isNumeric(value)](./utils.isnumeric.md) | 检查 <code>value</code> 是否是数值，需要注意的是 <code>Infinity</code>、<code>-Infinity</code>、<code>NaN</code> 不被认为是数值。 |
 |  [isPossibleChineseMobilePhoneNumber(value)](./utils.ispossiblechinesemobilephonenumber.md) | 检测传入的值是否可能是中国的手机号码。 |
