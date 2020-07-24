@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.29.0](https://github.com/fjc0k/vtils/compare/v3.28.0...v3.29.0) (2020-07-24)
+
+### Features
+
+- **react:** 新增 useEnvironment ([7db160e](https://github.com/fjc0k/vtils/commit/7db160e653451366cf8e3e2032fc4e7350477e18))
+- **utils:** 新增 getEnvironment ([6e09372](https://github.com/fjc0k/vtils/commit/6e093725a70e1a360ad8ecfe12ceed8aba90d1e2))
+
+### Bug Fixes
+
+- **deps:** update dependency miniprogram-api-typings to ^2.11.0 ([4b31555](https://github.com/fjc0k/vtils/commit/4b31555529f4ec01bca225005ec09efef79dba3a))
+
 ## [3.28.0](https://github.com/fjc0k/vtils/compare/v3.27.0...v3.28.0) (2020-07-23)
 
 ### Features
