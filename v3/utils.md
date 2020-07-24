@@ -36,6 +36,7 @@ rich://{"url":"***","desc":"***"}
 |  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
 |  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
+|  [getEnvironment()](./utils.getenvironment.md) | 获取运行环境信息。 |
 |  [getWechatPublicAccountQrcodeUrl(accountId)](./utils.getwechatpublicaccountqrcodeurl.md) | 获取微信公众号的二维码链接。 |
 |  [inAndroid()](./utils.inandroid.md) | 检查是否在 Android 设备中。 |
 |  [inBrowser()](./utils.inbrowser.md) | 检查是否在浏览器环境中。 |
@@ -68,6 +69,7 @@ rich://{"url":"***","desc":"***"}
 |  Interface | Description |
 |  --- | --- |
 |  [FormatNumberOptions](./utils.formatnumberoptions.md) | 格式化数字选项。 |
+|  [GetEnvironmentResult](./utils.getenvironmentresult.md) |  |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
 |  [ParsedFileRichUrl](./utils.parsedfilerichurl.md) |  |
 |  [ParsedRichUrl](./utils.parsedrichurl.md) |  |
