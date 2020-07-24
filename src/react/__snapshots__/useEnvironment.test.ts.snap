@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useEnvironment 表现正常 1`] = `
+Object {
+  "android": false,
+  "browser": true,
+  "deno": false,
+  "ios": false,
+  "miniProgram": false,
+  "nodejs": true,
+  "taro": false,
+  "wechatMiniProgram": false,
+  "wechatWebView": false,
+}
+`;
