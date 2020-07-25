@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.30.0](https://github.com/fjc0k/vtils/compare/v3.29.0...v3.30.0) (2020-07-25)
+
+### Features
+
+- **react:** 新增 CommonComponentProps ([edcd28d](https://github.com/fjc0k/vtils/commit/edcd28d0a1a4c46a2d26a909f2702c9e2196db06))
+
 ## [3.29.0](https://github.com/fjc0k/vtils/compare/v3.28.0...v3.29.0) (2020-07-24)
 
 ### Features
