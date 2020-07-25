@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.31.1](https://github.com/fjc0k/vtils/compare/v3.31.0...v3.31.1) (2020-07-25)
+
+### Bug Fixes
+
+- **defineComponent:** 修复类型定义 ([472aecd](https://github.com/fjc0k/vtils/commit/472aecd2d2cd8bbebcf1680e8ef16893e0c2c9e7))
+
 ## [3.31.0](https://github.com/fjc0k/vtils/compare/v3.30.0...v3.31.0) (2020-07-25)
 
 ### Features
