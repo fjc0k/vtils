@@ -2,14 +2,14 @@ import React from 'react'
 import { Merge } from '../types'
 
 /**
- * 继承组件属性。
+ * 派生新的组件属性。
  *
- * @template TComponent 组件
+ * @template TComponent 原组件
  * @template TExclude 需去除的属性
  * @template TRef 新的 ref
  * @template TOverride 覆盖属性
  */
-export type ExtendComponentProps<
+export type DeriveComponentProps<
   TComponent extends
     | React.ComponentType
     | keyof JSX.IntrinsicElements
@@ -24,5 +24,5 @@ export type ExtendComponentProps<
     Omit<React.ComponentProps<TComponent>, TExclude>,
     [TOverride] extends [never] ? {} : TOverride
   >,
-  [TRef] extends [never] ? {} : React.RefAttributes<TRef>
+  { ref?: React.Ref<TRef> }
 >

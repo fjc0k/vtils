@@ -60,9 +60,7 @@ export function defineComponent<
   TRef extends any = any
 >(
   options: DefineComponentOptions<TProps, true, TRef>,
-): React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<TProps> & React.RefAttributes<TRef>
->
+): React.ForwardRefExoticComponent<TProps>
 
 /**
  * 定义组件。

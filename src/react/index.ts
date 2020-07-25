@@ -11,7 +11,7 @@ export * from 'react-use'
 // @index(['./**/*.ts', '!./**/*.{test,taro}.*', '!./{useToggle,createGlobalState,useTitle,useInterval,useSearchParam,useLocalStorage,useWindowSize,useHover}.*'], f => `export * from '${f.path}'`)
 export * from './CommonComponentProps'
 export * from './defineComponent'
-export * from './ExtendComponentProps'
+export * from './DeriveComponentProps'
 export * from './isVisibleValue'
 export * from './renderComponent'
 export * from './useClassName'
