@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.31.0](https://github.com/fjc0k/vtils/compare/v3.30.0...v3.31.0) (2020-07-25)
+
+### Features
+
+- **react:** ExtendComponentProps 更名为 DeriveComponentProps ([f7fe455](https://github.com/fjc0k/vtils/commit/f7fe4551fbb4d0d4f6b7b6bc2b2df8b84eed0874))
+
 ## [3.30.0](https://github.com/fjc0k/vtils/compare/v3.29.0...v3.30.0) (2020-07-25)
 
 ### Features
