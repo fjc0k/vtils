@@ -9,7 +9,9 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function defineComponent<TProps extends Record<string, any>, TRef extends any = any>(options: DefineComponentOptions<TProps, true, TRef>): React.ForwardRefExoticComponent<React.PropsWithoutRef<TProps> & React.RefAttributes<TRef>>;
+export declare function defineComponent<TProps extends Record<string, any>, TRef extends any = any>(options: DefineComponentOptions<TProps, true, TRef>): React.ForwardRefExoticComponent<TProps & {
+    ref?: React.Ref<TRef>;
+}>;
 ```
 
 ## Parameters
@@ -20,5 +22,5 @@ export declare function defineComponent<TProps extends Record<string, any>, TRef
 
 <b>Returns:</b>
 
-React.ForwardRefExoticComponent&lt;React.PropsWithoutRef&lt;TProps&gt; &amp; React.RefAttributes&lt;TRef&gt;&gt;
+React.ForwardRefExoticComponent&lt;TProps &amp; { ref?: React.Ref&lt;TRef&gt;; }&gt;
 
