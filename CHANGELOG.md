@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.32.0](https://github.com/fjc0k/vtils/compare/v3.31.1...v3.32.0) (2020-07-27)
+
+### Features
+
+- **useControllableValue:** 支持设置默认值 ([e9fa831](https://github.com/fjc0k/vtils/commit/e9fa831736c720db7da62b1ea86db4de4eaf0cb8))
+
 ### [3.31.1](https://github.com/fjc0k/vtils/compare/v3.31.0...v3.31.1) (2020-07-25)
 
 ### Bug Fixes
