@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function useControllableValue<TProps, TDefaultValuePropName extends keyof TProps, TValuePropName extends keyof TProps, TCallbackPropName extends keyof TProps>(props: TProps, defaultValuePropName: TDefaultValuePropName, valuePropName: TValuePropName, callbackPropName: TCallbackPropName): UseControllableValueResult<TProps, TValuePropName, TCallbackPropName>;
+export declare function useControllableValue<TProps, TDefaultValuePropName extends keyof TProps, TValuePropName extends keyof TProps, TCallbackPropName extends keyof TProps, TDefaultValue extends TProps[TValuePropName]>(props: TProps, defaultValuePropName: TDefaultValuePropName, valuePropName: TValuePropName, callbackPropName: TCallbackPropName, defaultValue?: TDefaultValue): UseControllableValueResult<TProps, TValuePropName, TCallbackPropName, TDefaultValue>;
 ```
 
 ## Parameters
@@ -20,8 +20,9 @@ export declare function useControllableValue<TProps, TDefaultValuePropName exten
 |  defaultValuePropName | TDefaultValuePropName | 默认值的属性名 |
 |  valuePropName | TValuePropName | 值的属性名 |
 |  callbackPropName | TCallbackPropName | 值改变时的回调函数的属性名 |
+|  defaultValue | TDefaultValue |  |
 
 <b>Returns:</b>
 
-[UseControllableValueResult](./react.usecontrollablevalueresult.md)<!-- -->&lt;TProps, TValuePropName, TCallbackPropName&gt;
+[UseControllableValueResult](./react.usecontrollablevalueresult.md)<!-- -->&lt;TProps, TValuePropName, TCallbackPropName, TDefaultValue&gt;
 
