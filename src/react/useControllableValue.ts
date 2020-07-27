@@ -5,8 +5,14 @@ import { useUpdateEffect } from 'react-use'
 export type UseControllableValueResult<
   TProps,
   TValuePropName extends keyof TProps,
-  TCallbackPropName extends keyof TProps
-> = [TProps[TValuePropName], Defined<TProps[TCallbackPropName]>]
+  TCallbackPropName extends keyof TProps,
+  TDefaultValue extends TProps[TValuePropName]
+> = [
+  TDefaultValue extends undefined
+    ? TProps[TValuePropName]
+    : Defined<TProps[TValuePropName]>,
+  Defined<TProps[TCallbackPropName]>,
+]
 
 /**
  * 受控值。
@@ -20,13 +26,20 @@ export function useControllableValue<
   TProps,
   TDefaultValuePropName extends keyof TProps,
   TValuePropName extends keyof TProps,
-  TCallbackPropName extends keyof TProps
+  TCallbackPropName extends keyof TProps,
+  TDefaultValue extends TProps[TValuePropName]
 >(
   props: TProps,
   defaultValuePropName: TDefaultValuePropName,
   valuePropName: TValuePropName,
   callbackPropName: TCallbackPropName,
-): UseControllableValueResult<TProps, TValuePropName, TCallbackPropName> {
+  defaultValue?: TDefaultValue,
+): UseControllableValueResult<
+  TProps,
+  TValuePropName,
+  TCallbackPropName,
+  TDefaultValue
+> {
   const [value, setValue] = useState(() => {
     if (valuePropName in props) {
       return props[valuePropName]
@@ -34,6 +47,7 @@ export function useControllableValue<
     if (defaultValuePropName in props) {
       return props[defaultValuePropName]
     }
+    return defaultValue
   })
 
   useUpdateEffect(() => {
