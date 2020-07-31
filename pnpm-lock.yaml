@@ -15,7 +15,7 @@ devDependencies:
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.3.0_react@16.13.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.8
-  '@types/react': registry.npm.taobao.org/@types/react/16.9.43
+  '@types/react': registry.npm.taobao.org/@types/react/16.9.44
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/16.9.8
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
   codecov: registry.npm.taobao.org/codecov/3.7.2
@@ -1528,6 +1528,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.43.tgz'
     version: 16.9.43
+  registry.npm.taobao.org/@types/react/16.9.44:
+    dependencies:
+      '@types/prop-types': registry.npm.taobao.org/@types/prop-types/15.7.3
+      csstype: registry.npm.taobao.org/csstype/3.0.2
+    dev: true
+    name: '@types/react'
+    resolution:
+      integrity: sha1-2oSxecAxrvZ9ySwzvTQB8dovo7w=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.44.tgz?cache=0&sync_timestamp=1596226934331&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.44.tgz'
+    version: 16.9.44
   registry.npm.taobao.org/@types/stack-utils/1.0.1:
     dev: true
     name: '@types/stack-utils'
@@ -3498,6 +3509,14 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/csstype/download/csstype-2.6.10.tgz'
     version: 2.6.10
+  registry.npm.taobao.org/csstype/3.0.2:
+    dev: true
+    name: csstype
+    resolution:
+      integrity: sha1-7l/48gjIzWE7OJ97IiyYAcpis/c=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/csstype/download/csstype-3.0.2.tgz'
+    version: 3.0.2
   registry.npm.taobao.org/currently-unhandled/0.4.1:
     dependencies:
       array-find-index: registry.npm.taobao.org/array-find-index/1.0.2
@@ -6866,6 +6885,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -6881,6 +6903,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -7338,6 +7363,9 @@ packages:
     name: jsdom
     peerDependencies:
       canvas: ^2.5.0
+    peerDependenciesMeta:
+      canvas:
+        optional: true
     resolution:
       integrity: sha1-dvL3VBZGvrRqk49dxHa4hwW+3ys=
       registry: 'https://r.npm.taobao.org/'
@@ -12326,6 +12354,11 @@ packages:
     peerDependencies:
       bufferutil: ^4.0.1
       utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
     resolution:
       integrity: sha1-Sy9/IZs9Nze8Gi+/FF2CW5TTj/0=
       registry: 'https://r.npm.taobao.org/'
@@ -12481,7 +12514,7 @@ specifiers:
   '@types/fs-extra': 9.0.1
   '@types/lodash-es': ^4.17.3
   '@types/prompts': 2.0.8
-  '@types/react': 16.9.43
+  '@types/react': 16.9.44
   '@types/react-dom': 16.9.8
   '@types/standard-version': 7.0.0
   codecov: 3.7.2

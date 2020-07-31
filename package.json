@@ -111,7 +111,7 @@
     "@testing-library/react-hooks": "3.3.0",
     "@types/fs-extra": "9.0.1",
     "@types/prompts": "2.0.8",
-    "@types/react": "16.9.43",
+    "@types/react": "16.9.44",
     "@types/react-dom": "16.9.8",
     "@types/standard-version": "7.0.0",
     "codecov": "3.7.2",
