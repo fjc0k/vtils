@@ -34,7 +34,7 @@ devDependencies:
   react: registry.npm.taobao.org/react/16.13.1
   react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
   rollup: registry.npm.taobao.org/rollup/2.23.0
-  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.9_rollup@2.23.0+typescript@3.9.7
+  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.23.0+typescript@3.9.7
   shx: registry.npm.taobao.org/shx/0.3.2
   standard-version: registry.npm.taobao.org/standard-version/8.0.2
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.0_typescript@3.9.7
@@ -10025,23 +10025,23 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rimraf/download/rimraf-3.0.2.tgz'
     version: 3.0.2
-  registry.npm.taobao.org/rollup-plugin-dts/1.4.9_rollup@2.23.0+typescript@3.9.7:
+  registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.23.0+typescript@3.9.7:
     dependencies:
       rollup: registry.npm.taobao.org/rollup/2.23.0
       typescript: registry.npm.taobao.org/typescript/3.9.7
     dev: true
-    id: registry.npm.taobao.org/rollup-plugin-dts/1.4.9
+    id: registry.npm.taobao.org/rollup-plugin-dts/1.4.10
     name: rollup-plugin-dts
     optionalDependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
     peerDependencies:
-      rollup: ^2.22.1
+      rollup: ^2.23.0
       typescript: ^3.9.7
     resolution:
-      integrity: sha1-k25MwROdgcXAzmTcHp/gJbs+zK8=
+      integrity: sha1-A3PEKEorpNLXLfacKJJxqBa8JzY=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/rollup-plugin-dts/download/rollup-plugin-dts-1.4.9.tgz'
-    version: 1.4.9
+      tarball: 'https://registry.npm.taobao.org/rollup-plugin-dts/download/rollup-plugin-dts-1.4.10.tgz'
+    version: 1.4.10
   registry.npm.taobao.org/rollup/2.23.0:
     dev: true
     engines:
@@ -12505,7 +12505,7 @@ specifiers:
   react-dom: 16.13.1
   react-use: ^15.1.1
   rollup: 2.23.0
-  rollup-plugin-dts: 1.4.9
+  rollup-plugin-dts: 1.4.10
   shx: 0.3.2
   standard-version: 8.0.2
   ts-essentials: 7.0.0
