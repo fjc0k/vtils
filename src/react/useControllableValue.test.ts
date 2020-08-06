@@ -93,4 +93,28 @@ describe('useControllableValue', () => {
     act(() => result2.current.setValue('2'))
     expect(result2.current.value).toBe('2')
   })
+
+  test('reset', () => {
+    const { result } = renderHook(() => {
+      const [value, setValue, resetValue] = useControllableValue(
+        { value: '1' } as Partial<{
+          value: string
+          defaultValue: string
+          onChange: (value: string) => any
+        }>,
+        {
+          defaultValuePropName: 'defaultValue',
+          valuePropName: 'value',
+          callbackPropName: 'onChange',
+          alwaysUpdateValue: true,
+        },
+      )
+      return { value, setValue, resetValue }
+    })
+    expect(result.current.value).toBe('1')
+    act(() => result.current.setValue('2'))
+    expect(result.current.value).toBe('2')
+    act(() => result.current.resetValue())
+    expect(result.current.value).toBe('1')
+  })
 })

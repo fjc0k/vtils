@@ -1,6 +1,6 @@
 import { Defined } from '../types'
 import { useCallback, useState } from 'react'
-import { useUpdateEffect } from 'react-use'
+import { useLatest, useUpdateEffect } from 'react-use'
 
 export type UseControllableValueOptions<
   TProps,
@@ -45,6 +45,7 @@ export type UseControllableValueResult<
     ? TProps[TValuePropName]
     : Defined<TProps[TValuePropName]>,
   Defined<TProps[TCallbackPropName]>,
+  () => void,
 ]
 
 /**
@@ -74,15 +75,20 @@ export function useControllableValue<
   TCallbackPropName,
   TDefaultValue
 > {
-  const [value, setValue] = useState(() => {
-    if (options.valuePropName in props) {
-      return props[options.valuePropName]
+  const latestProps = useLatest(props)
+  const latestOptions = useLatest(options)
+
+  const getInitialValue = useCallback(() => {
+    if (latestOptions.current.valuePropName in latestProps.current) {
+      return latestProps.current[latestOptions.current.valuePropName]
     }
-    if (options.defaultValuePropName in props) {
-      return props[options.defaultValuePropName]
+    if (latestOptions.current.defaultValuePropName in latestProps.current) {
+      return latestProps.current[latestOptions.current.defaultValuePropName]
     }
-    return options.defaultValue
-  })
+    return latestOptions.current.defaultValue
+  }, [])
+
+  const [value, setValue] = useState(getInitialValue)
 
   useUpdateEffect(() => {
     if (options.valuePropName in props) {
@@ -90,17 +96,26 @@ export function useControllableValue<
     }
   }, [props[options.valuePropName]])
 
-  const handleSetValue = useCallback(
-    (nextValue: typeof value) => {
-      if (!(options.valuePropName in props) || options.alwaysUpdateValue) {
-        setValue(nextValue)
-      }
-      if (typeof props[options.callbackPropName] === 'function') {
-        ;(props[options.callbackPropName] as any)(nextValue)
-      }
-    },
-    [props, options.valuePropName, options.callbackPropName],
-  )
+  const handleSetValue = useCallback((nextValue: typeof value) => {
+    if (
+      !(latestOptions.current.valuePropName in latestProps.current) ||
+      latestOptions.current.alwaysUpdateValue
+    ) {
+      setValue(nextValue)
+    }
+    if (
+      typeof latestProps.current[latestOptions.current.callbackPropName] ===
+      'function'
+    ) {
+      ;(latestProps.current[latestOptions.current.callbackPropName] as any)(
+        nextValue,
+      )
+    }
+  }, [])
 
-  return [value, handleSetValue] as any
+  const handleResetValue = useCallback(() => {
+    handleSetValue(getInitialValue())
+  }, [])
+
+  return [value, handleSetValue, handleResetValue] as any
 }
