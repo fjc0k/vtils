@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.34.0](https://github.com/fjc0k/vtils/compare/v3.33.0...v3.34.0) (2020-08-06)
+
+### Features
+
+- **useControllableValue:** 支持重置值 ([0ffb359](https://github.com/fjc0k/vtils/commit/0ffb35918f3b0dcbb97ad7a34b447c7c385a9ce6))
+
 ## [3.33.0](https://github.com/fjc0k/vtils/compare/v3.32.1...v3.33.0) (2020-08-06)
 
 ### Features
