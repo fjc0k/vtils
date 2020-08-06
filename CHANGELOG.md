@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.32.1](https://github.com/fjc0k/vtils/compare/v3.32.0...v3.32.1) (2020-08-06)
+
+### Bug Fixes
+
+- **deps:** update dependency miniprogram-api-typings to v3 ([410ece7](https://github.com/fjc0k/vtils/commit/410ece7010b7c9b6c2240c389ac13b7dfdbcf2d6))
+
 ## [3.32.0](https://github.com/fjc0k/vtils/compare/v3.31.1...v3.32.0) (2020-07-27)
 
 ### Features
