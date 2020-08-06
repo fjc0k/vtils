@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.33.0](https://github.com/fjc0k/vtils/compare/v3.32.1...v3.33.0) (2020-08-06)
+
+### Features
+
+- **useControllableValue:** 支持 alwaysUpdateValue ([18c0379](https://github.com/fjc0k/vtils/commit/18c0379073d16b1bfecc7a3f2496ff3295450223))
+
 ### [3.32.1](https://github.com/fjc0k/vtils/compare/v3.32.0...v3.32.1) (2020-08-06)
 
 ### Bug Fixes
