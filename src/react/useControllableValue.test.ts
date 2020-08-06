@@ -17,12 +17,11 @@ describe('useControllableValue', () => {
           updateProps({ value })
         },
       })
-      const [value, setValue] = useControllableValue(
-        props,
-        'defaultValue',
-        'value',
-        'onChange',
-      )
+      const [value, setValue] = useControllableValue(props, {
+        defaultValuePropName: 'defaultValue',
+        valuePropName: 'value',
+        callbackPropName: 'onChange',
+      })
       return { props, value, setValue, updateProps }
     })
     expect(result.current.value).toBe('0')
@@ -32,5 +31,66 @@ describe('useControllableValue', () => {
     expect(result.current.props.value).toBe(result.current.value).toBe('1')
     act(() => result.current.updateProps({ value: '2' }))
     expect(result.current.props.value).toBe(result.current.value).toBe('2')
+  })
+
+  test('defaultValue', () => {
+    const { result } = renderHook(() => {
+      const [value] = useControllableValue(
+        {} as Partial<{
+          value: string
+          defaultValue: string
+          onChange: (value: string) => any
+        }>,
+        {
+          defaultValuePropName: 'defaultValue',
+          valuePropName: 'value',
+          callbackPropName: 'onChange',
+          defaultValue: 'hello',
+        },
+      )
+      return value
+    })
+    expect(result.current).toBe('hello')
+  })
+
+  test('alwaysUpdateValue', () => {
+    const { result } = renderHook(() => {
+      const [value, setValue] = useControllableValue(
+        { value: '1' } as Partial<{
+          value: string
+          defaultValue: string
+          onChange: (value: string) => any
+        }>,
+        {
+          defaultValuePropName: 'defaultValue',
+          valuePropName: 'value',
+          callbackPropName: 'onChange',
+        },
+      )
+      return { value, setValue }
+    })
+    expect(result.current.value).toBe('1')
+    act(() => result.current.setValue('2'))
+    expect(result.current.value).toBe('1')
+
+    const { result: result2 } = renderHook(() => {
+      const [value, setValue] = useControllableValue(
+        { value: '1' } as Partial<{
+          value: string
+          defaultValue: string
+          onChange: (value: string) => any
+        }>,
+        {
+          defaultValuePropName: 'defaultValue',
+          valuePropName: 'value',
+          callbackPropName: 'onChange',
+          alwaysUpdateValue: true,
+        },
+      )
+      return { value, setValue }
+    })
+    expect(result2.current.value).toBe('1')
+    act(() => result2.current.setValue('2'))
+    expect(result2.current.value).toBe('2')
   })
 })

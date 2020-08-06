@@ -2,6 +2,39 @@ import { Defined } from '../types'
 import { useCallback, useState } from 'react'
 import { useUpdateEffect } from 'react-use'
 
+export type UseControllableValueOptions<
+  TProps,
+  TDefaultValuePropName extends keyof TProps,
+  TValuePropName extends keyof TProps,
+  TCallbackPropName extends keyof TProps,
+  TDefaultValue extends TProps[TValuePropName]
+> = {
+  /**
+   * 默认值的属性名。
+   */
+  defaultValuePropName: TDefaultValuePropName
+
+  /**
+   * 值的属性名。
+   */
+  valuePropName: TValuePropName
+
+  /**
+   * 值改变时的回调函数的属性名。
+   */
+  callbackPropName: TCallbackPropName
+
+  /**
+   * 默认值。
+   */
+  defaultValue?: TDefaultValue
+
+  /**
+   * 是否总是更新值。
+   */
+  alwaysUpdateValue?: boolean
+}
+
 export type UseControllableValueResult<
   TProps,
   TValuePropName extends keyof TProps,
@@ -18,9 +51,7 @@ export type UseControllableValueResult<
  * 受控值。
  *
  * @param props 组件的属性
- * @param defaultValuePropName 默认值的属性名
- * @param valuePropName 值的属性名
- * @param callbackPropName 值改变时的回调函数的属性名
+ * @param options 选项
  */
 export function useControllableValue<
   TProps,
@@ -30,10 +61,13 @@ export function useControllableValue<
   TDefaultValue extends TProps[TValuePropName]
 >(
   props: TProps,
-  defaultValuePropName: TDefaultValuePropName,
-  valuePropName: TValuePropName,
-  callbackPropName: TCallbackPropName,
-  defaultValue?: TDefaultValue,
+  options: UseControllableValueOptions<
+    TProps,
+    TDefaultValuePropName,
+    TValuePropName,
+    TCallbackPropName,
+    TDefaultValue
+  >,
 ): UseControllableValueResult<
   TProps,
   TValuePropName,
@@ -41,31 +75,31 @@ export function useControllableValue<
   TDefaultValue
 > {
   const [value, setValue] = useState(() => {
-    if (valuePropName in props) {
-      return props[valuePropName]
+    if (options.valuePropName in props) {
+      return props[options.valuePropName]
     }
-    if (defaultValuePropName in props) {
-      return props[defaultValuePropName]
+    if (options.defaultValuePropName in props) {
+      return props[options.defaultValuePropName]
     }
-    return defaultValue
+    return options.defaultValue
   })
 
   useUpdateEffect(() => {
-    if (valuePropName in props) {
-      setValue(props[valuePropName])
+    if (options.valuePropName in props) {
+      setValue(props[options.valuePropName])
     }
-  }, [props[valuePropName]])
+  }, [props[options.valuePropName]])
 
   const handleSetValue = useCallback(
     (nextValue: typeof value) => {
-      if (!(valuePropName in props)) {
+      if (!(options.valuePropName in props) || options.alwaysUpdateValue) {
         setValue(nextValue)
       }
-      if (typeof props[callbackPropName] === 'function') {
-        ;(props[callbackPropName] as any)(nextValue)
+      if (typeof props[options.callbackPropName] === 'function') {
+        ;(props[options.callbackPropName] as any)(nextValue)
       }
     },
-    [props, valuePropName, callbackPropName],
+    [props, options.valuePropName, options.callbackPropName],
   )
 
   return [value, handleSetValue] as any
