@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.34.2](https://github.com/fjc0k/vtils/compare/v3.34.1...v3.34.2) (2020-08-07)
+
+### Bug Fixes
+
+- **react:** 将导出加入 prettier-ignore ([6b01d1a](https://github.com/fjc0k/vtils/commit/6b01d1a497d1fbb6a456863638b1f70ffb82abe1))
+
 ### [3.34.1](https://github.com/fjc0k/vtils/compare/v3.34.0...v3.34.1) (2020-08-07)
 
 ### Bug Fixes
