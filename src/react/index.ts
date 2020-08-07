@@ -6,6 +6,7 @@
 
 /* istanbul ignore file */
 
+// prettier-ignore
 export {
   // 手动导出以解决 cjs 下 Cannot redefine property 的问题
   // @index(['../../node_modules/react-use/esm/{use,create}*.js', '!**/{useToggle,createGlobalState,useTitle,useInterval,useSearchParam,useLocalStorage,useWindowSize,useHover,createRouter,useKeyboardJs,useMeasureDirty,useSpring,useWait}.js'], (f, _) => `${f.name},`)
@@ -111,7 +112,8 @@ export {
   useUpsert,
   useVibrate,
   useVideo,
-  useWindowScroll, // @endindex
+  useWindowScroll,
+  // @endindex
 } from 'react-use'
 
 // @index(['./**/*.ts', '!./**/*.{test,taro}.*', '!./{useToggle,createGlobalState,useTitle,useInterval,useSearchParam,useLocalStorage,useWindowSize,useHover}.*'], f => `export * from '${f.path}'`)
