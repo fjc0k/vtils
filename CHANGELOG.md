@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.34.1](https://github.com/fjc0k/vtils/compare/v3.34.0...v3.34.1) (2020-08-07)
+
+### Bug Fixes
+
+- **react:** 手动导出以解决 cjs 下 Cannot redefine property 的问题 ([11fb15c](https://github.com/fjc0k/vtils/commit/11fb15c1f18b220afffd3fc50f79e9e7bf9fd13b))
+
 ## [3.34.0](https://github.com/fjc0k/vtils/compare/v3.33.0...v3.34.0) (2020-08-06)
 
 ### Features
