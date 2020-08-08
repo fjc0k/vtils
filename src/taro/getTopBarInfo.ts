@@ -26,6 +26,8 @@ export interface GetTopBarInfoResult {
 
   /**
    * 菜单按钮水平外边距。
+   *
+   * **注意: QQ 小程序下该项为 0，请自行选取默认值**
    */
   menuButtonHorizontalMargin: number
 
