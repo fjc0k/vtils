@@ -15,7 +15,7 @@ export interface GetTopBarInfoResult
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [menuButtonHeight](./taro.gettopbarinforesult.menubuttonheight.md) | number | 菜单按钮高度。 |
-|  [menuButtonHorizontalMargin](./taro.gettopbarinforesult.menubuttonhorizontalmargin.md) | number | 菜单按钮水平外边距。 |
+|  [menuButtonHorizontalMargin](./taro.gettopbarinforesult.menubuttonhorizontalmargin.md) | number | 菜单按钮水平外边距。<!-- -->\*\*注意: QQ 小程序下该项为 0，请自行选取默认值\*\* |
 |  [menuButtonVerticalMargin](./taro.gettopbarinforesult.menubuttonverticalmargin.md) | number | 菜单按钮垂直外边距。 |
 |  [menuButtonWidth](./taro.gettopbarinforesult.menubuttonwidth.md) | number | 菜单按钮宽度。 |
 |  [navigationBarHeight](./taro.gettopbarinforesult.navigationbarheight.md) | number | 导航栏高度。 |
