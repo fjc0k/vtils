@@ -15,7 +15,7 @@ devDependencies:
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.3.0_react@16.13.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.8
-  '@types/react': registry.npm.taobao.org/@types/react/16.9.44
+  '@types/react': registry.npm.taobao.org/@types/react/16.9.45
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/16.9.8
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
   codecov: registry.npm.taobao.org/codecov/3.7.2
@@ -1518,17 +1518,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.43.tgz'
     version: 16.9.43
-  registry.npm.taobao.org/@types/react/16.9.44:
+  registry.npm.taobao.org/@types/react/16.9.45:
     dependencies:
       '@types/prop-types': registry.npm.taobao.org/@types/prop-types/15.7.3
       csstype: registry.npm.taobao.org/csstype/3.0.2
     dev: true
     name: '@types/react'
     resolution:
-      integrity: sha1-2oSxecAxrvZ9ySwzvTQB8dovo7w=
+      integrity: sha1-tDzPPYo9ICDmpIyMhJLlpLwQ8Jc=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.44.tgz?cache=0&sync_timestamp=1596226934331&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.44.tgz'
-    version: 16.9.44
+      tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.45.tgz?cache=0&sync_timestamp=1596881507717&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.45.tgz'
+    version: 16.9.45
   registry.npm.taobao.org/@types/stack-utils/1.0.1:
     dev: true
     name: '@types/stack-utils'
@@ -4956,6 +4956,8 @@ packages:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     name: fsevents
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-+3OHA66NL5/pAMM4Nt3r7ouX8j4=
       registry: 'https://r.npm.taobao.org/'
@@ -12468,7 +12470,7 @@ specifiers:
   '@types/fs-extra': 9.0.1
   '@types/lodash-es': ^4.17.3
   '@types/prompts': 2.0.8
-  '@types/react': 16.9.44
+  '@types/react': 16.9.45
   '@types/react-dom': 16.9.8
   '@types/standard-version': 7.0.0
   codecov: 3.7.2
