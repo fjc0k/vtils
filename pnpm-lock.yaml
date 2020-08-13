@@ -33,8 +33,8 @@ devDependencies:
   prompts: registry.npm.taobao.org/prompts/2.3.2
   react: registry.npm.taobao.org/react/16.13.1
   react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
-  rollup: registry.npm.taobao.org/rollup/2.23.1
-  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.23.1+typescript@3.9.7
+  rollup: registry.npm.taobao.org/rollup/2.24.0
+  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.24.0+typescript@3.9.7
   shx: registry.npm.taobao.org/shx/0.3.2
   standard-version: registry.npm.taobao.org/standard-version/8.0.2
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.0_typescript@3.9.7
@@ -4966,8 +4966,6 @@ packages:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     name: fsevents
     optional: true
-    os:
-      - darwin
     resolution:
       integrity: sha1-+3OHA66NL5/pAMM4Nt3r7ouX8j4=
       registry: 'https://r.npm.taobao.org/'
@@ -10035,9 +10033,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rimraf/download/rimraf-3.0.2.tgz'
     version: 3.0.2
-  registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.23.1+typescript@3.9.7:
+  registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.24.0+typescript@3.9.7:
     dependencies:
-      rollup: registry.npm.taobao.org/rollup/2.23.1
+      rollup: registry.npm.taobao.org/rollup/2.24.0
       typescript: registry.npm.taobao.org/typescript/3.9.7
     dev: true
     id: registry.npm.taobao.org/rollup-plugin-dts/1.4.10
@@ -10052,7 +10050,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rollup-plugin-dts/download/rollup-plugin-dts-1.4.10.tgz'
     version: 1.4.10
-  registry.npm.taobao.org/rollup/2.23.1:
+  registry.npm.taobao.org/rollup/2.24.0:
     dev: true
     engines:
       node: '>=10.0.0'
@@ -10061,10 +10059,10 @@ packages:
     optionalDependencies:
       fsevents: registry.npm.taobao.org/fsevents/2.1.3
     resolution:
-      integrity: sha1-1FjSg4bcdmDC6KSXi+pvlJQEbCA=
+      integrity: sha1-1RtTamdmQCkTjryFcF776IVY2jo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/rollup/download/rollup-2.23.1.tgz?cache=0&sync_timestamp=1596828440706&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-2.23.1.tgz'
-    version: 2.23.1
+      tarball: 'https://registry.npm.taobao.org/rollup/download/rollup-2.24.0.tgz?cache=0&sync_timestamp=1597347418509&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-2.24.0.tgz'
+    version: 2.24.0
   registry.npm.taobao.org/rsvp/4.8.5:
     dev: true
     engines:
@@ -12503,7 +12501,7 @@ specifiers:
   react: 16.13.1
   react-dom: 16.13.1
   react-use: ^15.1.1
-  rollup: 2.23.1
+  rollup: 2.24.0
   rollup-plugin-dts: 1.4.10
   shx: 0.3.2
   standard-version: 8.0.2
