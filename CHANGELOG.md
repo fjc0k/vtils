@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.35.0](https://github.com/fjc0k/vtils/compare/v3.34.3...v3.35.0) (2020-08-13)
+
+### Features
+
+- **utils:** 新增 createSubmit ([9f07d41](https://github.com/fjc0k/vtils/commit/9f07d41ecc5292807dfa52a13416b76a62427e85))
+
 ### [3.34.3](https://github.com/fjc0k/vtils/compare/v3.34.2...v3.34.3) (2020-08-08)
 
 ### [3.34.2](https://github.com/fjc0k/vtils/compare/v3.34.1...v3.34.2) (2020-08-07)
