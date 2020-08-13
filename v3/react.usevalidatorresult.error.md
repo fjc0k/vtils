@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-error?: _yup.ValidationError;
+error?: _yup.ValidationError | undefined;
 ```

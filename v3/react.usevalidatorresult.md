@@ -15,6 +15,6 @@ export interface UseValidatorResult<T>
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [data](./react.usevalidatorresult.data.md) | T |  |
-|  [error](./react.usevalidatorresult.error.md) | \_yup.ValidationError |  |
+|  [error](./react.usevalidatorresult.error.md) | \_yup.ValidationError \| undefined |  |
 |  [valid](./react.usevalidatorresult.valid.md) | boolean |  |
 
