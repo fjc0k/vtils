@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.36.0](https://github.com/fjc0k/vtils/compare/v3.35.0...v3.36.0) (2020-08-13)
+
+### Features
+
+- **yup:** 添加 validateInOrder, validateInOrderSync 支持按顺序验证对象 ([50a1c42](https://github.com/fjc0k/vtils/commit/50a1c4249d1c354ed258ad81914dd33f219227aa))
+- **yup:** 添加 validatePlus, validatePlusSync 方法 ([8dbc288](https://github.com/fjc0k/vtils/commit/8dbc28802e3102aea3c8953de6a67ec2d964cf80))
+
 ## [3.35.0](https://github.com/fjc0k/vtils/compare/v3.34.3...v3.35.0) (2020-08-13)
 
 ### Features
