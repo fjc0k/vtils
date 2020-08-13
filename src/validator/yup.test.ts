@@ -95,4 +95,54 @@ describe('yup', () => {
       pass: 101,
     })
   })
+
+  test('validatePlus 正常', async () => {
+    const rule = yup.object({
+      name: yup.string().label('姓名').required(),
+      pass: yup.number().label('密码').required().min(100),
+    })
+    expect(
+      await rule.validatePlus({
+        name: '',
+        pass: 99,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      await rule.validatePlus({
+        pass: 99,
+        name: '',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      await rule.validatePlus({
+        name: '8',
+        pass: 101,
+      }),
+    ).toMatchSnapshot()
+  })
+
+  test('validatePlusSync 正常', async () => {
+    const rule = yup.object({
+      name: yup.string().label('姓名').required(),
+      pass: yup.number().label('密码').required().min(100),
+    })
+    expect(
+      rule.validatePlusSync({
+        name: '',
+        pass: 99,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      rule.validatePlusSync({
+        pass: 99,
+        name: '',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      rule.validatePlusSync({
+        name: '8',
+        pass: 101,
+      }),
+    ).toMatchSnapshot()
+  })
 })

@@ -26,7 +26,7 @@ export type UseValidatorSchema<T> = (
 export interface UseValidatorResult<T> {
   data: T
   valid: boolean
-  error?: _yup.ValidationError
+  error?: _yup.ValidationError | undefined
 }
 
 export function useValidator<T>(
@@ -69,23 +69,11 @@ export function useValidator<T>(
     return _yup.object(schemaOrObjectDefinitions as any)
   }, _schemaDeps)
   const result = useMemo((): UseValidatorResult<T> => {
-    try {
-      // yup 不能保证验证顺序，但通常顺序又是很重要的，因此对于 object 特殊处理
-      if (yupSchema.type === 'object') {
-        ;(yupSchema as _yup.ObjectSchema).validateInOrderSync(data)
-      } else {
-        yupSchema.validateSync(data, validateOptions)
-      }
-      return {
-        data: data,
-        valid: true,
-      }
-    } catch (error) {
-      return {
-        data: data,
-        valid: false,
-        error: error,
-      }
+    const r = yupSchema.validatePlusSync(data, validateOptions)
+    return {
+      data: r.data,
+      valid: !r.error,
+      error: r.error,
     }
   }, [..._dataDeps, yupSchema])
   return result

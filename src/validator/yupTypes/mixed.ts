@@ -65,6 +65,28 @@ declare module 'yup/es' {
 
     validateSync(value: T, options?: SchemaValidateOptions): T
 
+    /**
+     * 验证增强，包括：对象顺序验证、返回结果包含错误信息。
+     */
+    validatePlus(
+      value: T,
+      options?: SchemaValidateOptions,
+    ): Promise<{
+      error?: ValidationError
+      data: T
+    }>
+
+    /**
+     * 验证增强，包括：对象顺序验证、返回结果包含错误信息。
+     */
+    validatePlusSync(
+      value: T,
+      options?: SchemaValidateOptions,
+    ): {
+      error?: ValidationError
+      data: T
+    }
+
     /** @类型不友好 */
     validateAt(
       path: string,

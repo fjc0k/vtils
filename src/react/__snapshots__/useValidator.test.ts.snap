@@ -7,6 +7,7 @@ Object {
     "password2": "123456",
     "phoneNumber": "13907199856",
   },
+  "error": undefined,
   "valid": true,
 }
 `;

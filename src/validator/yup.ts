@@ -63,6 +63,32 @@ yup.addMethod(yup.object, 'validateInOrderSync', function (
   return this.cast(data)
 })
 
+// 实现 validatePlus 方法
+yup.addMethod(yup.mixed, 'validatePlus', function (data: any, options: any) {
+  return (this.type === 'object'
+    ? (this as yup.ObjectSchema).validateInOrder(data, options)
+    : this.validate(data, options)
+  )
+    .then(data => ({ data }))
+    .catch(error => ({ error, data })) as any
+})
+
+// 实现 validatePlusSync 方法
+yup.addMethod(yup.mixed, 'validatePlusSync', function (
+  data: any,
+  options: any,
+) {
+  try {
+    const _data =
+      this.type === 'object'
+        ? (this as yup.ObjectSchema).validateInOrderSync(data, options)
+        : this.validateSync(data, options)
+    return { data: _data } as any
+  } catch (error) {
+    return { error, data } as any
+  }
+})
+
 // 设置中文为默认语言
 yup.setLocale(zhCN)
 
