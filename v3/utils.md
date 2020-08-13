@@ -34,6 +34,7 @@ rich://{"url":"***","desc":"***"}
 |  [base64UrlDecode(value)](./utils.base64urldecode.md) | 将给定的 base64url 字符串解码为 UTF8 字符串。 |
 |  [base64UrlEncode(value)](./utils.base64urlencode.md) | 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。 |
 |  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
+|  [createSubmit(options)](./utils.createsubmit.md) | 创建提交类行为。 |
 |  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
 |  [getEnvironment()](./utils.getenvironment.md) | 获取运行环境信息。 |
@@ -68,12 +69,14 @@ rich://{"url":"***","desc":"***"}
 
 |  Interface | Description |
 |  --- | --- |
+|  [CreateSubmitOptions](./utils.createsubmitoptions.md) |  |
 |  [FormatNumberOptions](./utils.formatnumberoptions.md) | 格式化数字选项。 |
 |  [GetEnvironmentResult](./utils.getenvironmentresult.md) |  |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
 |  [ParsedFileRichUrl](./utils.parsedfilerichurl.md) |  |
 |  [ParsedRichUrl](./utils.parsedrichurl.md) |  |
 |  [ReadFileReader](./utils.readfilereader.md) | 各种内容类型的读取器。 |
+|  [SubmitActionPayload](./utils.submitactionpayload.md) |  |
 |  [WaitResult](./utils.waitresult.md) |  |
 |  [WechatChooseImageParams](./utils.wechatchooseimageparams.md) |  |
 |  [WechatConfigParams](./utils.wechatconfigparams.md) |  |
@@ -95,6 +98,7 @@ rich://{"url":"***","desc":"***"}
 |  Type Alias | Description |
 |  --- | --- |
 |  [BindEventFunction](./utils.bindeventfunction.md) | 绑定事件函数。 |
+|  [CreateSubmitResult](./utils.createsubmitresult.md) |  |
 |  [InMiniProgramPlatform](./utils.inminiprogramplatform.md) |  |
 |  [WechatErrorCallback](./utils.wechaterrorcallback.md) |  |
 |  [WechatJsApi](./utils.wechatjsapi.md) | 微信 JSSDK 支持的 API。 |
