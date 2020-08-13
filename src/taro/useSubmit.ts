@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react'
-import { submit, SubmitActionPayload } from './submit'
+import { submit } from './submit'
+import { SubmitActionPayload } from '../utils'
 
 export function useSubmit<TResult>(
   action: (payload: SubmitActionPayload) => Promise<TResult>,
