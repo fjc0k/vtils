@@ -15,6 +15,10 @@ declare module 'yup/es' {
     camelCase(): this
 
     constantCase(): this
+
+    validateInOrder(value: T, options?: SchemaValidateOptions): Promise<T>
+
+    validateInOrderSync(value: T, options?: SchemaValidateOptions): T
   }
 
   export function object<T extends {} = {}>(

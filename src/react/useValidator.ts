@@ -72,9 +72,7 @@ export function useValidator<T>(
     try {
       // yup 不能保证验证顺序，但通常顺序又是很重要的，因此对于 object 特殊处理
       if (yupSchema.type === 'object') {
-        for (const key of Object.keys(data)) {
-          yupSchema.validateSyncAt(key, data, validateOptions)
-        }
+        ;(yupSchema as _yup.ObjectSchema).validateInOrderSync(data)
       } else {
         yupSchema.validateSync(data, validateOptions)
       }

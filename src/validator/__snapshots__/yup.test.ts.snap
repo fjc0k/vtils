@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`yup validateInOrder 正常: 姓名必填 1`] = `[ValidationError: 姓名必填]`;
+
+exports[`yup validateInOrder 正常: 密码有误 1`] = `[ValidationError: 密码必须大于或等于100]`;
+
+exports[`yup validateInOrderSync 正常: 姓名必填 1`] = `[ValidationError: 姓名必填]`;
+
+exports[`yup validateInOrderSync 正常: 密码有误 1`] = `[ValidationError: 密码必须大于或等于100]`;

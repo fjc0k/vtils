@@ -40,6 +40,29 @@ yup.addMethod(yup.string, 'chineseIDCardNumber', function (
   return this.test('chineseIDCardNumber', message, isChineseIDCardNumber)
 })
 
+// 实现 validateInOrder 方法
+yup.addMethod(yup.object, 'validateInOrder', function (
+  data: any,
+  options: any,
+) {
+  return Object.keys(data)
+    .reduce((prev, key) => {
+      return prev.then(() => this.validateAt(key, data, options))
+    }, Promise.resolve())
+    .then(() => this.cast(data)) as any
+})
+
+// 实现 validateInOrderSync 方法
+yup.addMethod(yup.object, 'validateInOrderSync', function (
+  data: any,
+  options: any,
+) {
+  for (const key of Object.keys(data)) {
+    this.validateSyncAt(key, data, options)
+  }
+  return this.cast(data)
+})
+
 // 设置中文为默认语言
 yup.setLocale(zhCN)
 
