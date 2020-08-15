@@ -24,7 +24,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.0.3
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.4.0_00133c1edb4d827d6be58f28327faa83
+  haoma: registry.npm.taobao.org/haoma/2.4.1_00133c1edb4d827d6be58f28327faa83
   husky: registry.npm.taobao.org/husky/4.2.5
   jest: registry.npm.taobao.org/jest/26.4.0
   lint-staged: registry.npm.taobao.org/lint-staged/10.2.11
@@ -45,6 +45,16 @@ devDependencies:
   vscode-generate-index-standalone: registry.npm.taobao.org/vscode-generate-index-standalone/1.3.0
 lockfileVersion: 5.1
 packages:
+  registry.npm.taobao.org/@babel/code-frame/7.0.0:
+    dependencies:
+      '@babel/highlight': registry.npm.taobao.org/@babel/highlight/7.10.4
+    dev: true
+    name: '@babel/code-frame'
+    resolution:
+      integrity: sha1-BuKrGb21NThVWaq7W6WXKUgoAPg=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@babel/code-frame/download/@babel/code-frame-7.0.0.tgz'
+    version: 7.0.0
   registry.npm.taobao.org/@babel/code-frame/7.10.4:
     dependencies:
       '@babel/highlight': registry.npm.taobao.org/@babel/highlight/7.10.4
@@ -1586,9 +1596,6 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
@@ -1632,9 +1639,6 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
@@ -1668,9 +1672,6 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-pckfzFSXzOeSL/hrw31eWJHc3vo=
       registry: 'https://r.npm.taobao.org/'
@@ -2151,7 +2152,7 @@ packages:
     resolution:
       integrity: sha1-bZUX654DDSQ2ZmZR6GvZ9vE1M8k=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/atob/download/atob-2.1.2.tgz'
+      tarball: 'https://registry.npm.taobao.org/atob/download/atob-2.1.2.tgz?cache=0&sync_timestamp=1590057809158&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fatob%2Fdownload%2Fatob-2.1.2.tgz'
     version: 2.1.2
   registry.npm.taobao.org/aws-sign2/0.7.0:
     dev: true
@@ -4019,6 +4020,22 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/eslint-config-prettier/download/eslint-config-prettier-6.11.0.tgz'
     version: 6.11.0
+  registry.npm.taobao.org/eslint-formatter-friendly/7.0.0:
+    dependencies:
+      '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.0.0
+      chalk: registry.npm.taobao.org/chalk/2.4.2
+      extend: registry.npm.taobao.org/extend/3.0.2
+      strip-ansi: registry.npm.taobao.org/strip-ansi/5.2.0
+      text-table: registry.npm.taobao.org/text-table/0.2.0
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    name: eslint-formatter-friendly
+    resolution:
+      integrity: sha1-MqSZirq6CjmZSu1im4Mf2n2ryGQ=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/eslint-formatter-friendly/download/eslint-formatter-friendly-7.0.0.tgz'
+    version: 7.0.0
   registry.npm.taobao.org/eslint-plugin-react/7.20.3_eslint@7.7.0:
     dependencies:
       array-includes: registry.npm.taobao.org/array-includes/3.1.1
@@ -4888,6 +4905,8 @@ packages:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     name: fsevents
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-+3OHA66NL5/pAMM4Nt3r7ouX8j4=
       registry: 'https://r.npm.taobao.org/'
@@ -5251,7 +5270,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.4.0_00133c1edb4d827d6be58f28327faa83:
+  registry.npm.taobao.org/haoma/2.4.1_00133c1edb4d827d6be58f28327faa83:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.10.5
       '@babel/plugin-transform-modules-commonjs': registry.npm.taobao.org/@babel/plugin-transform-modules-commonjs/7.10.4_@babel+core@7.10.5
@@ -5269,6 +5288,7 @@ packages:
       deepmerge: registry.npm.taobao.org/deepmerge/4.2.2
       eslint: registry.npm.taobao.org/eslint/7.7.0
       eslint-config-prettier: registry.npm.taobao.org/eslint-config-prettier/6.11.0_eslint@7.7.0
+      eslint-formatter-friendly: registry.npm.taobao.org/eslint-formatter-friendly/7.0.0
       eslint-plugin-react: registry.npm.taobao.org/eslint-plugin-react/7.20.3_eslint@7.7.0
       eslint-plugin-sort-imports-es6-autofix: registry.npm.taobao.org/eslint-plugin-sort-imports-es6-autofix/0.5.0
       eslint-plugin-vue: registry.npm.taobao.org/eslint-plugin-vue/6.2.2_eslint@7.7.0
@@ -5291,7 +5311,7 @@ packages:
       yargs: registry.npm.taobao.org/yargs/15.4.1
     dev: true
     hasBin: true
-    id: registry.npm.taobao.org/haoma/2.4.0
+    id: registry.npm.taobao.org/haoma/2.4.1
     name: haoma
     peerDependencies:
       eslint: ^7
@@ -5302,10 +5322,10 @@ packages:
       typescript: ^3
     requiresBuild: true
     resolution:
-      integrity: sha1-DhxZM8JZlWQQqkMTBs8zEYGDvc0=
+      integrity: sha1-lXiG3UjRBmjtB+BGSYWKOtHKXLw=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.4.0.tgz'
-    version: 2.4.0
+      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.4.1.tgz'
+    version: 2.4.1
   registry.npm.taobao.org/har-schema/2.0.0:
     dev: true
     engines:
@@ -12391,7 +12411,7 @@ specifiers:
   execa: 4.0.3
   fs-extra: 9.0.1
   globby: 11.0.1
-  haoma: 2.4.0
+  haoma: 2.4.1
   husky: 4.2.5
   jest: 26.4.0
   lint-staged: 10.2.11
