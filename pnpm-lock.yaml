@@ -33,8 +33,8 @@ devDependencies:
   prompts: registry.npm.taobao.org/prompts/2.3.2
   react: registry.npm.taobao.org/react/16.13.1
   react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
-  rollup: registry.npm.taobao.org/rollup/2.26.1
-  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.26.1+typescript@3.9.7
+  rollup: registry.npm.taobao.org/rollup/2.26.2
+  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.26.2+typescript@3.9.7
   shx: registry.npm.taobao.org/shx/0.3.2
   standard-version: registry.npm.taobao.org/standard-version/9.0.0
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.0_typescript@3.9.7
@@ -9930,9 +9930,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rimraf/download/rimraf-3.0.2.tgz'
     version: 3.0.2
-  registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.26.1+typescript@3.9.7:
+  registry.npm.taobao.org/rollup-plugin-dts/1.4.10_rollup@2.26.2+typescript@3.9.7:
     dependencies:
-      rollup: registry.npm.taobao.org/rollup/2.26.1
+      rollup: registry.npm.taobao.org/rollup/2.26.2
       typescript: registry.npm.taobao.org/typescript/3.9.7
     dev: true
     id: registry.npm.taobao.org/rollup-plugin-dts/1.4.10
@@ -9947,7 +9947,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rollup-plugin-dts/download/rollup-plugin-dts-1.4.10.tgz'
     version: 1.4.10
-  registry.npm.taobao.org/rollup/2.26.1:
+  registry.npm.taobao.org/rollup/2.26.2:
     dev: true
     engines:
       node: '>=10.0.0'
@@ -9956,10 +9956,10 @@ packages:
     optionalDependencies:
       fsevents: registry.npm.taobao.org/fsevents/2.1.3
     resolution:
-      integrity: sha1-48goOsPsQ07ZH6PVu7kjHzJ2kT8=
+      integrity: sha1-3jLCwooLX7hD0SDis6JSoY53QOk=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/rollup/download/rollup-2.26.1.tgz?cache=0&sync_timestamp=1597555909515&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-2.26.1.tgz'
-    version: 2.26.1
+      tarball: 'https://registry.npm.taobao.org/rollup/download/rollup-2.26.2.tgz'
+    version: 2.26.2
   registry.npm.taobao.org/rsvp/4.8.5:
     dev: true
     engines:
@@ -12419,7 +12419,7 @@ specifiers:
   react: 16.13.1
   react-dom: 16.13.1
   react-use: ^15.1.1
-  rollup: 2.26.1
+  rollup: 2.26.2
   rollup-plugin-dts: 1.4.10
   shx: 0.3.2
   standard-version: 9.0.0
