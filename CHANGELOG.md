@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.36.1](https://github.com/fjc0k/vtils/compare/v3.36.0...v3.36.1) (2020-08-17)
+
+### Bug Fixes
+
+- **validateInOrder, validateInOrderSync:** 支持未定义的键 ([7296494](https://github.com/fjc0k/vtils/commit/72964947402aba1c3fae665dd02951cd6a750afb))
+
 ## [3.36.0](https://github.com/fjc0k/vtils/compare/v3.35.0...v3.36.0) (2020-08-13)
 
 ### Features
