@@ -47,7 +47,13 @@ yup.addMethod(yup.object, 'validateInOrder', function (
 ) {
   return Object.keys(data)
     .reduce((prev, key) => {
-      return prev.then(() => this.validateAt(key, data, options))
+      return prev.then(() => {
+        let schema: yup.MixedSchema | undefined
+        try {
+          schema = yup.reach(this as any, key)
+        } catch (e) {}
+        return schema ? this.validateAt(key, data, options) : undefined
+      })
     }, Promise.resolve())
     .then(() => this.cast(data)) as any
 })
@@ -58,7 +64,13 @@ yup.addMethod(yup.object, 'validateInOrderSync', function (
   options: any,
 ) {
   for (const key of Object.keys(data)) {
-    this.validateSyncAt(key, data, options)
+    let schema: yup.MixedSchema | undefined
+    try {
+      schema = yup.reach(this as any, key)
+    } catch (e) {}
+    if (schema) {
+      this.validateSyncAt(key, data, options)
+    }
   }
   return this.cast(data)
 })

@@ -37,6 +37,16 @@ Object {
 }
 `;
 
+exports[`yup validatePlus 正常 4`] = `
+Object {
+  "data": Object {
+    "name": "8",
+    "pass": 101,
+    "xxx": "sss",
+  },
+}
+`;
+
 exports[`yup validatePlusSync 正常 1`] = `
 Object {
   "data": Object {
@@ -62,6 +72,16 @@ Object {
   "data": Object {
     "name": "8",
     "pass": 101,
+  },
+}
+`;
+
+exports[`yup validatePlusSync 正常 4`] = `
+Object {
+  "data": Object {
+    "name": "8",
+    "pass": 101,
+    "xxx": "sss",
   },
 }
 `;

@@ -119,6 +119,14 @@ describe('yup', () => {
         pass: 101,
       }),
     ).toMatchSnapshot()
+    expect(
+      await rule.validatePlus({
+        name: '8',
+        pass: 101,
+        // @ts-ignore
+        xxx: 'sss',
+      }),
+    ).toMatchSnapshot()
   })
 
   test('validatePlusSync 正常', async () => {
@@ -142,6 +150,14 @@ describe('yup', () => {
       rule.validatePlusSync({
         name: '8',
         pass: 101,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      rule.validatePlusSync({
+        name: '8',
+        pass: 101,
+        // @ts-ignore
+        xxx: 'sss',
       }),
     ).toMatchSnapshot()
   })
