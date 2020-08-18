@@ -24,7 +24,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.0.3
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.4.1_00133c1edb4d827d6be58f28327faa83
+  haoma: registry.npm.taobao.org/haoma/2.4.2_00133c1edb4d827d6be58f28327faa83
   husky: registry.npm.taobao.org/husky/4.2.5
   jest: registry.npm.taobao.org/jest/26.4.0
   lint-staged: registry.npm.taobao.org/lint-staged/10.2.11
@@ -486,7 +486,7 @@ packages:
     resolution:
       integrity: sha1-d85GT1sli+Jlr2GNj93wU28gtWQ=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@babel/traverse/download/@babel/traverse-7.10.5.tgz'
+      tarball: 'https://registry.npm.taobao.org/@babel/traverse/download/@babel/traverse-7.10.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Ftraverse%2Fdownload%2F%40babel%2Ftraverse-7.10.5.tgz'
     version: 7.10.5
   registry.npm.taobao.org/@babel/types/7.10.5:
     dependencies:
@@ -1290,7 +1290,7 @@ packages:
     resolution:
       integrity: sha1-S6jdtyAiH0MuRDvV+RF/0iz9R2I=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/istanbul-lib-coverage/download/@types/istanbul-lib-coverage-2.0.3.tgz'
+      tarball: 'https://registry.npm.taobao.org/@types/istanbul-lib-coverage/download/@types/istanbul-lib-coverage-2.0.3.tgz?cache=0&sync_timestamp=1597059506193&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fistanbul-lib-coverage%2Fdownload%2F%40types%2Fistanbul-lib-coverage-2.0.3.tgz'
     version: 2.0.3
   registry.npm.taobao.org/@types/istanbul-lib-report/3.0.0:
     dependencies:
@@ -1311,7 +1311,7 @@ packages:
     resolution:
       integrity: sha1-6HXMaJ5HvOVJ7IHz315vbxHPrrI=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/istanbul-reports/download/@types/istanbul-reports-1.1.2.tgz'
+      tarball: 'https://registry.npm.taobao.org/@types/istanbul-reports/download/@types/istanbul-reports-1.1.2.tgz?cache=0&sync_timestamp=1597059506328&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fistanbul-reports%2Fdownload%2F%40types%2Fistanbul-reports-1.1.2.tgz'
     version: 1.1.2
   registry.npm.taobao.org/@types/istanbul-reports/3.0.0:
     dependencies:
@@ -1395,7 +1395,7 @@ packages:
     resolution:
       integrity: sha1-6bLoX6/BXyqKqP3UEJG5g9pf1u4=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/node/download/@types/node-12.12.50.tgz'
+      tarball: 'https://registry.npm.taobao.org/@types/node/download/@types/node-12.12.50.tgz?cache=0&sync_timestamp=1597724769163&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-12.12.50.tgz'
     version: 12.12.50
   registry.npm.taobao.org/@types/node/14.0.6:
     dev: true
@@ -1562,7 +1562,7 @@ packages:
     resolution:
       integrity: sha1-lH6aZWFIO97prf/Jg+kaaQKvi3k=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/yargs/download/@types/yargs-15.0.5.tgz'
+      tarball: 'https://registry.npm.taobao.org/@types/yargs/download/@types/yargs-15.0.5.tgz?cache=0&sync_timestamp=1597059506541&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fyargs%2Fdownload%2F%40types%2Fyargs-15.0.5.tgz'
     version: 15.0.5
   registry.npm.taobao.org/@typescript-eslint/eslint-plugin/3.6.1_38c6d58d3df7a188f0997b743010a258:
     dependencies:
@@ -1584,13 +1584,10 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-3.6.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-3.6.1.tgz?cache=0&sync_timestamp=1597753386604&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Feslint-plugin%2Fdownload%2F%40typescript-eslint%2Feslint-plugin-3.6.1.tgz'
     version: 3.6.1
   registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.6.1_eslint@7.7.0+typescript@3.9.7:
     dependencies:
@@ -1611,7 +1608,7 @@ packages:
     resolution:
       integrity: sha1-taJzjrvOs/qQxbB9ULsSJUA8SlQ=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/experimental-utils/download/@typescript-eslint/experimental-utils-3.6.1.tgz?cache=0&sync_timestamp=1597458923623&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Fexperimental-utils%2Fdownload%2F%40typescript-eslint%2Fexperimental-utils-3.6.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/experimental-utils/download/@typescript-eslint/experimental-utils-3.6.1.tgz'
     version: 3.6.1
   registry.npm.taobao.org/@typescript-eslint/parser/3.6.1_eslint@7.7.0+typescript@3.9.7:
     dependencies:
@@ -1630,13 +1627,10 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/parser/download/@typescript-eslint/parser-3.6.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/parser/download/@typescript-eslint/parser-3.6.1.tgz?cache=0&sync_timestamp=1597753380661&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Fparser%2Fdownload%2F%40typescript-eslint%2Fparser-3.6.1.tgz'
     version: 3.6.1
   registry.npm.taobao.org/@typescript-eslint/types/3.6.1:
     dev: true
@@ -1666,13 +1660,10 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-pckfzFSXzOeSL/hrw31eWJHc3vo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/typescript-estree/download/@typescript-eslint/typescript-estree-3.6.1.tgz?cache=0&sync_timestamp=1597458924758&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Ftypescript-estree%2Fdownload%2F%40typescript-eslint%2Ftypescript-estree-3.6.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/typescript-estree/download/@typescript-eslint/typescript-estree-3.6.1.tgz'
     version: 3.6.1
   registry.npm.taobao.org/@typescript-eslint/visitor-keys/3.6.1:
     dependencies:
@@ -5267,7 +5258,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.4.1_00133c1edb4d827d6be58f28327faa83:
+  registry.npm.taobao.org/haoma/2.4.2_00133c1edb4d827d6be58f28327faa83:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.10.5
       '@babel/plugin-transform-modules-commonjs': registry.npm.taobao.org/@babel/plugin-transform-modules-commonjs/7.10.4_@babel+core@7.10.5
@@ -5308,7 +5299,7 @@ packages:
       yargs: registry.npm.taobao.org/yargs/15.4.1
     dev: true
     hasBin: true
-    id: registry.npm.taobao.org/haoma/2.4.1
+    id: registry.npm.taobao.org/haoma/2.4.2
     name: haoma
     peerDependencies:
       eslint: ^7
@@ -5319,10 +5310,10 @@ packages:
       typescript: ^3
     requiresBuild: true
     resolution:
-      integrity: sha1-lXiG3UjRBmjtB+BGSYWKOtHKXLw=
+      integrity: sha1-XvoOu8oMut2rTISzRWFVkReCqIQ=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.4.1.tgz'
-    version: 2.4.1
+      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.4.2.tgz?cache=0&sync_timestamp=1597753365221&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhaoma%2Fdownload%2Fhaoma-2.4.2.tgz'
+    version: 2.4.2
   registry.npm.taobao.org/har-schema/2.0.0:
     dev: true
     engines:
@@ -6810,9 +6801,6 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
-    peerDependenciesMeta:
-      jest-resolve:
-        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -6828,9 +6816,6 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
-    peerDependenciesMeta:
-      jest-resolve:
-        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -11678,7 +11663,7 @@ packages:
     resolution:
       integrity: sha1-jSojcNPfiG61yQraHFv2GIrPg4s=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/type-fest/download/type-fest-0.6.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/type-fest/download/type-fest-0.6.0.tgz?cache=0&sync_timestamp=1593290715760&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftype-fest%2Fdownload%2Ftype-fest-0.6.0.tgz'
     version: 0.6.0
   registry.npm.taobao.org/type-fest/0.8.1:
     dev: true
@@ -12408,7 +12393,7 @@ specifiers:
   execa: 4.0.3
   fs-extra: 9.0.1
   globby: 11.0.1
-  haoma: 2.4.1
+  haoma: 2.4.2
   husky: 4.2.5
   jest: 26.4.0
   lint-staged: 10.2.11
