@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-declare type Defined<T> = Exclude<T, undefined>;
+export declare type Defined<T> = Exclude<T, undefined>;
 ```
 
 ## Example

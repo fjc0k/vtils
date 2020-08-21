@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-declare type AnyFunction = Record<any, any> & {
+export declare type AnyFunction = Record<any, any> & {
     (...args: any[]): any;
 };
 ```

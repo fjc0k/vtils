@@ -8,10 +8,13 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type UseToggleResult = [boolean, {
-    (): void;
-    set(value: boolean): void;
-    true(): void;
-    false(): void;
-}];
+export declare type UseToggleResult = [
+    boolean,
+    {
+        (): void;
+        set(value: boolean): void;
+        true(): void;
+        false(): void;
+    }
+];
 ```

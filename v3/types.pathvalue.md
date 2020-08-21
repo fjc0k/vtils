@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-declare type PathValue<T, L extends Path<T, L>> = L extends PathArray<T, L> ? PathArrayValue<T, L> : L extends keyof T ? T[L] : any;
+export declare type PathValue<T, L extends Path<T, L>> = L extends PathArray<T, L> ? PathArrayValue<T, L> : L extends keyof T ? T[L] : any;
 ```
 
 ## Example

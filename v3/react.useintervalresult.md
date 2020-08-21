@@ -7,8 +7,11 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type UseIntervalResult<TResult> = [TResult | undefined, {
-    start: (delay?: number, duration?: number) => void;
-    stop: () => void;
-}];
+export declare type UseIntervalResult<TResult> = [
+    TResult | undefined,
+    {
+        start: (delay?: number, duration?: number) => void;
+        stop: () => void;
+    }
+];
 ```

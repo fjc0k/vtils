@@ -11,7 +11,9 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type DeriveComponentProps<TComponent extends React.ComponentType | keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>, TExclude extends keyof React.ComponentProps<TComponent>, TRef extends any = never, TOverride extends Partial<Record<keyof React.ComponentProps<TComponent>, any>> = never> = Merge<Merge<Omit<React.ComponentProps<TComponent>, TExclude>, [TOverride] extends [never] ? {} : TOverride>, {
+export declare type DeriveComponentProps<TComponent extends React.ComponentType | keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>, TExclude extends keyof React.ComponentProps<TComponent>, TRef extends any = never, TOverride extends Partial<Record<keyof React.ComponentProps<TComponent>, any>> = never> = Merge<Merge<Omit<React.ComponentProps<TComponent>, TExclude>, [
+    TOverride
+] extends [never] ? {} : TOverride>, {
     ref?: React.Ref<TRef>;
 }>;
 ```

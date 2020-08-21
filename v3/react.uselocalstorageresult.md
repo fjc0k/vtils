@@ -7,5 +7,9 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type UseLocalStorageResult<S> = readonly [S, Dispatch<SetStateAction<S>>, () => void];
+export declare type UseLocalStorageResult<S> = readonly [
+    S,
+    Dispatch<SetStateAction<S>>,
+    () => void
+];
 ```

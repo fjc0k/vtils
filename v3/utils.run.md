@@ -9,7 +9,10 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function run<T extends () => any, R extends ReturnType<T>>(fn: T): Promise<[unknown, R extends PromiseLike<any> ? R extends PromiseLike<infer X> ? X : unknown : R]>;
+export declare function run<T extends () => any, R extends ReturnType<T>>(fn: T): Promise<[
+    unknown,
+    R extends PromiseLike<any> ? R extends PromiseLike<infer X> ? X : unknown : R
+]>;
 ```
 
 ## Parameters
@@ -20,7 +23,7 @@ export declare function run<T extends () => any, R extends ReturnType<T>>(fn: T)
 
 <b>Returns:</b>
 
-Promise&lt;\[unknown, R extends PromiseLike&lt;any&gt; ? R extends PromiseLike&lt;infer X&gt; ? X : unknown : R\]&gt;
+Promise&lt;\[ unknown, R extends PromiseLike&lt;any&gt; ? R extends PromiseLike&lt;infer X&gt; ? X : unknown : R \]&gt;
 
 返回 `[错误信息, 结果数据]`<!-- -->，错误信息为 `null` 表示没有错误
 
