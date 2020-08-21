@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.36.2](https://github.com/fjc0k/vtils/compare/v3.36.1...v3.36.2) (2020-08-21)
+
+### Bug Fixes
+
+- 支持 TypeScript 4 ([b0128d6](https://github.com/fjc0k/vtils/commit/b0128d677ff8f52ef2176f072ab06dbce07bd7c1))
+
 ### [3.36.1](https://github.com/fjc0k/vtils/compare/v3.36.0...v3.36.1) (2020-08-17)
 
 ### Bug Fixes
