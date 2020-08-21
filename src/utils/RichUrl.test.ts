@@ -112,6 +112,7 @@ describe('RichUrl', () => {
     })
 
     afterAll(() => {
+      // @ts-ignore
       delete window.URL.createObjectURL
     })
 
@@ -143,6 +144,7 @@ describe('RichUrl', () => {
     })
 
     afterAll(() => {
+      // @ts-ignore
       delete window.URL.createObjectURL
       window.XMLHttpRequest.prototype.send = rawSend
     })
@@ -188,6 +190,7 @@ describe('RichUrl', () => {
     })
 
     afterAll(() => {
+      // @ts-ignore
       delete window.URL.createObjectURL
       window.XMLHttpRequest.prototype.send = rawSend
     })
