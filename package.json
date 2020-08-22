@@ -105,7 +105,7 @@
   },
   "devDependencies": {
     "@microsoft/api-documenter": "7.8.33",
-    "@microsoft/api-extractor": "7.9.8",
+    "@microsoft/api-extractor": "7.9.9",
     "@tarojs/taro": "3.0.7",
     "@testing-library/react": "10.4.9",
     "@testing-library/react-hooks": "3.4.1",
