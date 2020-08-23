@@ -34,7 +34,7 @@ devDependencies:
   react: registry.npm.taobao.org/react/16.13.1
   react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
   rollup: registry.npm.taobao.org/rollup/2.26.5
-  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.11_rollup@2.26.5+typescript@4.0.2
+  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.12_rollup@2.26.5+typescript@4.0.2
   shx: registry.npm.taobao.org/shx/0.3.2
   standard-version: registry.npm.taobao.org/standard-version/9.0.0
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.0_typescript@4.0.2
@@ -9971,12 +9971,12 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rimraf/download/rimraf-3.0.2.tgz'
     version: 3.0.2
-  registry.npm.taobao.org/rollup-plugin-dts/1.4.11_rollup@2.26.5+typescript@4.0.2:
+  registry.npm.taobao.org/rollup-plugin-dts/1.4.12_rollup@2.26.5+typescript@4.0.2:
     dependencies:
       rollup: registry.npm.taobao.org/rollup/2.26.5
       typescript: registry.npm.taobao.org/typescript/4.0.2
     dev: true
-    id: registry.npm.taobao.org/rollup-plugin-dts/1.4.11
+    id: registry.npm.taobao.org/rollup-plugin-dts/1.4.12
     name: rollup-plugin-dts
     optionalDependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
@@ -9984,10 +9984,10 @@ packages:
       rollup: ^2.26.4
       typescript: ^4.0.2
     resolution:
-      integrity: sha1-rt8Le7kdUeILdV4sGOhA7fx696E=
+      integrity: sha1-vnElGhQsqEs8bK0XSe9/FyUHqQc=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/rollup-plugin-dts/download/rollup-plugin-dts-1.4.11.tgz'
-    version: 1.4.11
+      tarball: 'https://registry.npm.taobao.org/rollup-plugin-dts/download/rollup-plugin-dts-1.4.12.tgz'
+    version: 1.4.12
   registry.npm.taobao.org/rollup/2.26.5:
     dev: true
     engines:
@@ -12472,7 +12472,7 @@ specifiers:
   react-dom: 16.13.1
   react-use: ^15.1.1
   rollup: 2.26.5
-  rollup-plugin-dts: 1.4.11
+  rollup-plugin-dts: 1.4.12
   shx: 0.3.2
   standard-version: 9.0.0
   ts-essentials: 7.0.0
