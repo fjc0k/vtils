@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type Path<T, L> = PathArray<T, L> | keyof T;
+declare type Path<T, L> = PathArray<T, L> | keyof T;
 ```
 
 ## Example
