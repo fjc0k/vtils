@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.36.3](https://github.com/fjc0k/vtils/compare/v3.36.2...v3.36.3) (2020-08-23)
+
+### Bug Fixes
+
+- **useSearchParam.taro:** 兼容 taro 3.0.8 ([c797ed2](https://github.com/fjc0k/vtils/commit/c797ed253c569b8bb169ebb1707cede5ee284b48))
+- pika -> skypack ([dfa769a](https://github.com/fjc0k/vtils/commit/dfa769a0b9ef2dc5f8ade95136f894a4fadbf109))
+
 ### [3.36.2](https://github.com/fjc0k/vtils/compare/v3.36.1...v3.36.2) (2020-08-21)
 
 ### Bug Fixes
