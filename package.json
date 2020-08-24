@@ -31,6 +31,10 @@
       "require": "./_cjs/date/index.js",
       "import": "./date/index.js"
     },
+    "./mp": {
+      "require": "./_cjs/mp/index.js",
+      "import": "./mp/index.js"
+    },
     "./package.json": "./package.json",
     "./react": {
       "require": "./_cjs/react/index.js",
