@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getTopBarInfo 表现正常 1`] = `
+Object {
+  "menuButtonHeight": 32,
+  "menuButtonHorizontalMargin": 10,
+  "menuButtonVerticalMargin": 4,
+  "menuButtonWidth": 87,
+  "navigationBarHeight": 40,
+  "statusBarHeight": 20,
+  "topBarHeight": 60,
+}
+`;
