@@ -4,23 +4,23 @@
 
 ## inMiniProgram() function
 
-检查是否在指定的小程序平台中，若在，返回承载其 API 的全局对象，若不在，返回 false。
+检查是否在指定品牌的小程序中，若在，返回承载其 API 的全局对象，若不在，返回 false。
 
 <b>Signature:</b>
 
 ```typescript
-export declare function inMiniProgram(platform?: InMiniProgramPlatform | InMiniProgramPlatform[]): WechatMiniprogram.Wx | false;
+export declare function inMiniProgram(brand?: MiniProgramBrand | MiniProgramBrand[]): MiniProgramApi | false;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  platform | [InMiniProgramPlatform](./utils.inminiprogramplatform.md) \| [InMiniProgramPlatform](./utils.inminiprogramplatform.md)<!-- -->\[\] | 指定的小程序平台，若未指定，则表示所有小程序平台 |
+|  brand | [MiniProgramBrand](./utils.miniprogrambrand.md) \| [MiniProgramBrand](./utils.miniprogrambrand.md)<!-- -->\[\] | 指定的小程序品牌，若未指定，则表示所有小程序品牌 |
 
 <b>Returns:</b>
 
-WechatMiniprogram.Wx \| false
+[MiniProgramApi](./utils.miniprogramapi.md) \| false
 
 返回检查结果
 

@@ -45,7 +45,7 @@ rich://{"url":"***","desc":"***"}
 |  [inDeno()](./utils.indeno.md) | 检查是否在 Deno 中。 |
 |  [indent(literals, interpolations)](./utils.indent.md) | 每一行紧跟前导空白的插入值为多行时，保持缩进。 |
 |  [inIOS()](./utils.inios.md) | 检查是否在 iOS 设备中。 |
-|  [inMiniProgram(platform)](./utils.inminiprogram.md) | 检查是否在指定的小程序平台中，若在，返回承载其 API 的全局对象，若不在，返回 false。 |
+|  [inMiniProgram(brand)](./utils.inminiprogram.md) | 检查是否在指定品牌的小程序中，若在，返回承载其 API 的全局对象，若不在，返回 false。 |
 |  [inNodeJS()](./utils.innodejs.md) | 检查是否在 Node.js 中。 |
 |  [inTaro()](./utils.intaro.md) | 检查是否在 \[Taro 3\](https://taro.js.org/) 中。 |
 |  [inWechatWebView()](./utils.inwechatwebview.md) | 检查是否在微信内置浏览器中。 |
@@ -102,7 +102,8 @@ rich://{"url":"***","desc":"***"}
 |  --- | --- |
 |  [BindEventFunction](./utils.bindeventfunction.md) | 绑定事件函数。 |
 |  [CreateSubmitResult](./utils.createsubmitresult.md) |  |
-|  [InMiniProgramPlatform](./utils.inminiprogramplatform.md) |  |
+|  [MiniProgramApi](./utils.miniprogramapi.md) |  |
+|  [MiniProgramBrand](./utils.miniprogrambrand.md) |  |
 |  [WechatErrorCallback](./utils.wechaterrorcallback.md) |  |
 |  [WechatJsApi](./utils.wechatjsapi.md) | 微信 JSSDK 支持的 API。 |
 |  [WechatNonBaseMenuItem](./utils.wechatnonbasemenuitem.md) | 微信内网页的非基础菜单列表。 |
