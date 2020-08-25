@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.39.0](https://github.com/fjc0k/vtils/compare/v3.38.0...v3.39.0) (2020-08-25)
+
+### Features
+
+- **mp:** navigatePageTo 支持 query ([71b461e](https://github.com/fjc0k/vtils/commit/71b461e45745f68fdec5eaa27131fe6277a35667))
+- **mp:** 完善注释 ([f0781f7](https://github.com/fjc0k/vtils/commit/f0781f733831f8d5f59273cbe6f3604179afa8ac))
+- **mp:** 新增 getCurrentPagePath, getCurrentPageQuery, getCurrentPageUrl ([9308bec](https://github.com/fjc0k/vtils/commit/9308becbed470145685b7dbdb40175877e76cf14))
+
 ## [3.38.0](https://github.com/fjc0k/vtils/compare/v3.37.2...v3.38.0) (2020-08-25)
 
 ### Features
