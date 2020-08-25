@@ -34,5 +34,5 @@ describe('submit', () => {
     expect(showToast).toBeCalled().toBeCalledTimes(2)
     expect(hideLoading).toBeCalled().toBeCalledTimes(3)
     expect(res).toBe(1)
-  })
+  }, 10000)
 })
