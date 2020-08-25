@@ -27,6 +27,7 @@ jobs:
       - if: ${{ steps.cache.outputs.cache-hit != 'true' }}
         run: npx pnpm install
       - run: |
+          rm -rf node_modules/.cache
           npm run build
           npm run test-with-coverage
           npx codecov
