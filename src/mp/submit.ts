@@ -1,6 +1,9 @@
 import { createSubmit } from '../utils'
 import { ensureInMiniProgram } from './ensureInMiniProgram'
 
+/**
+ * 对提交类行为的封装。
+ */
 export const submit = createSubmit({
   start(message) {
     ensureInMiniProgram(mp => {

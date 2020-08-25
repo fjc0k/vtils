@@ -3,6 +3,13 @@ import { createUrlQueryString, isUrl } from '../utils'
 import { ensureInMiniProgram } from './ensureInMiniProgram'
 import { getMiniProgramConfig } from './miniProgramConfig'
 
+/**
+ * 跳转至某个页面。
+ *
+ * @param url 要跳转去的页面地址
+ * @param query 查询参数
+ * @param redirect 是否关闭当前页面后跳转
+ */
 export function navigatePageTo(
   url: string,
   query?: AnyObject,
