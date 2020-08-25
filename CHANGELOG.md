@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.38.0](https://github.com/fjc0k/vtils/compare/v3.37.2...v3.38.0) (2020-08-25)
+
+### Features
+
+- **utils:** 新增 createUrlQueryString, parseUrlQueryString ([7cd3152](https://github.com/fjc0k/vtils/commit/7cd3152766dfbc6441f93336ae49b3d9ca1b8588))
+
 ### [3.37.2](https://github.com/fjc0k/vtils/compare/v3.37.1...v3.37.2) (2020-08-25)
 
 ### [3.37.1](https://github.com/fjc0k/vtils/compare/v3.37.0...v3.37.1) (2020-08-25)
