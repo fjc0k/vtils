@@ -10,6 +10,7 @@
 export * from './ensureInMiniProgram'
 export * from './getTopBarInfo'
 export * from './miniProgramConfig'
+export * from './navigatePageBack'
 export * from './navigatePageTo'
 export * from './redirectPageTo'
 export * from './submit'
