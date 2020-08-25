@@ -9,7 +9,7 @@ declare const swan: WechatMiniprogram.Wx | undefined
 declare const tt: WechatMiniprogram.Wx | undefined
 declare const dd: WechatMiniprogram.Wx | undefined
 
-const platforms = [
+const brands = [
   '微信',
   'QQ',
   '支付宝',
@@ -19,10 +19,15 @@ const platforms = [
   '钉钉',
 ] as const
 
-export type InMiniProgramPlatform = typeof platforms[number]
+export type MiniProgramBrand = typeof brands[number]
+
+export type MiniProgramApi = WechatMiniprogram.Wx & {
+  /** 小程序品牌 */
+  readonly $brand: MiniProgramBrand
+}
 
 const factories: Record<
-  InMiniProgramPlatform,
+  MiniProgramBrand,
   () => false | WechatMiniprogram.Wx
 > = {
   微信: () => typeof wx !== 'undefined' && wx,
@@ -35,19 +40,21 @@ const factories: Record<
 }
 
 /**
- * 检查是否在指定的小程序平台中，若在，返回承载其 API 的全局对象，若不在，返回 false。
+ * 检查是否在指定品牌的小程序中，若在，返回承载其 API 的全局对象，若不在，返回 false。
  *
- * @param platform 指定的小程序平台，若未指定，则表示所有小程序平台
+ * @param brand 指定的小程序品牌，若未指定，则表示所有小程序品牌
  * @returns 返回检查结果
  */
 export function inMiniProgram(
-  platform?: InMiniProgramPlatform | InMiniProgramPlatform[],
-): WechatMiniprogram.Wx | false {
-  for (const currentPlatform of platform ? castArray(platform) : platforms) {
-    if (factories[currentPlatform]) {
-      const mp = factories[currentPlatform]()
+  brand?: MiniProgramBrand | MiniProgramBrand[],
+): MiniProgramApi | false {
+  for (const currentBrand of brand ? castArray(brand) : brands) {
+    if (factories[currentBrand]) {
+      const mp = factories[currentBrand]()
       if (mp && typeof mp.getSystemInfoSync === 'function') {
-        return mp
+        // @ts-ignore
+        ;((mp as any) as MiniProgramApi).$brand = currentBrand
+        return mp as any
       }
     }
   }
