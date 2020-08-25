@@ -8,6 +8,9 @@
 
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
 export * from './ensureInMiniProgram'
+export * from './getCurrentPagePath'
+export * from './getCurrentPageQuery'
+export * from './getCurrentPageUrl'
 export * from './getTopBarInfo'
 export * from './miniProgramConfig'
 export * from './navigatePageBack'
