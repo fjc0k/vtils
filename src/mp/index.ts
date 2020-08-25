@@ -15,6 +15,7 @@ export * from './getTopBarInfo'
 export * from './miniProgramConfig'
 export * from './navigatePageBack'
 export * from './navigatePageTo'
+export * from './patchMiniProgram'
 export * from './redirectPageTo'
 export * from './submit'
 // @endindex
