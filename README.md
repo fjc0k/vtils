@@ -76,6 +76,9 @@ import { yup } from 'vtils/validator'
 
 // 类型工具库
 import { OmitStrict, LiteralUnion, PartialDeep } from 'vtils/types'
+
+// 小程序工具库
+import { getTopBarInfo, navigatePageTo, redirectPageTo } from 'vtils/mp'
 ```
 
 详细用法见文档：[https://fjc0k.github.io/vtils/v3/](https://fjc0k.github.io/vtils/v3/)。

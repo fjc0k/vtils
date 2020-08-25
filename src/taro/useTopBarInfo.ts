@@ -1,4 +1,4 @@
-import { getTopBarInfo, GetTopBarInfoResult } from './getTopBarInfo'
+import { getTopBarInfo, GetTopBarInfoResult } from '../mp'
 import { useMemo } from 'react'
 
 export function useTopBarInfo(): GetTopBarInfoResult {

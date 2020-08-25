@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { submit } from './submit'
+import { submit } from '../mp'
 import { SubmitActionPayload } from '../utils'
 
 export function useSubmit<TResult>(
