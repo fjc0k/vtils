@@ -18,7 +18,7 @@ describe('submit', () => {
     const { wait } = await import('../utils')
     const res = await submit(async _ => {
       await _.start('加载中...')
-      await wait(500)
+      await wait(10)
       await _.fail('加载失败')
       await _.success('加载成功')
       return 1
