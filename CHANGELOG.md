@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.40.0](https://github.com/fjc0k/vtils/compare/v3.39.0...v3.40.0) (2020-08-25)
+
+### Features
+
+- **inMiniProgram:** 添加 \$brand 表示小程序品牌 ([7e84e77](https://github.com/fjc0k/vtils/commit/7e84e77d2494261ba68f6688c57de0681733d098))
+- **mp:** 添加 patchMiniProgram ([b6d0669](https://github.com/fjc0k/vtils/commit/b6d0669b11fd9b24596e4545d580341b64c3fc95))
+
+### Bug Fixes
+
+- **getCurrentPagePath:** 兼容字节跳动小程序 ([7c33241](https://github.com/fjc0k/vtils/commit/7c33241ece42811ab71e0158529592d89fb58160))
+- **navigatePageTo:** 兼容支付宝小程序 ([f102307](https://github.com/fjc0k/vtils/commit/f102307fbce31084ff3ec092783ba42a96424d79))
+
 ## [3.39.0](https://github.com/fjc0k/vtils/compare/v3.38.0...v3.39.0) (2020-08-25)
 
 ### Features
