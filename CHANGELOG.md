@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.37.0](https://github.com/fjc0k/vtils/compare/v3.36.3...v3.37.0) (2020-08-25)
+
+### Features
+
+- **mp:** 新增 getTopBarInfo, submit ([8cfa77d](https://github.com/fjc0k/vtils/commit/8cfa77dc53091aa4aaa5e9d6b3688766cc3541b8))
+- **mp:** 新增 navigatePageBack ([0b5224e](https://github.com/fjc0k/vtils/commit/0b5224e2058d17d2784f59b78dd4023ef66737be))
+- 新增 mp 系列工具 ([2cf912a](https://github.com/fjc0k/vtils/commit/2cf912a2fb6f669b25a568925cced219afcb5395))
+
 ### [3.36.3](https://github.com/fjc0k/vtils/compare/v3.36.2...v3.36.3) (2020-08-23)
 
 ### Bug Fixes
