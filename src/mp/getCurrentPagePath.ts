@@ -9,7 +9,9 @@ export function getCurrentPagePath(): string {
   return ensureInMiniProgram(() => {
     const pages = getCurrentPages()
     const currentPage = pages[pages.length - 1]
-    const path = `/${currentPage.route}`.replace(/\/{2,}/g, '/')
+    const path = `/${
+      currentPage.route || /* 字节跳动 */ currentPage.__route__
+    }`.replace(/\/{2,}/g, '/')
     return path
   })
 }
