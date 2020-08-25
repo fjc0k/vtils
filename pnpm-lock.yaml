@@ -27,7 +27,7 @@ devDependencies:
   haoma: registry.npm.taobao.org/haoma/2.4.3_688bfbe50fba9c556d5028b4b039c607
   husky: registry.npm.taobao.org/husky/4.2.5
   jest: registry.npm.taobao.org/jest/26.4.2
-  lint-staged: registry.npm.taobao.org/lint-staged/10.2.11
+  lint-staged: registry.npm.taobao.org/lint-staged/10.2.12
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
   prettier: registry.npm.taobao.org/prettier/2.1.0
   prompts: registry.npm.taobao.org/prompts/2.3.2
@@ -1856,6 +1856,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/ansi-colors/download/ansi-colors-3.2.4.tgz'
     version: 3.2.4
+  registry.npm.taobao.org/ansi-colors/4.1.1:
+    dev: true
+    engines:
+      node: '>=6'
+    name: ansi-colors
+    resolution:
+      integrity: sha1-y7muJWv3UK8eqzRPIpqif+lLo0g=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/ansi-colors/download/ansi-colors-4.1.1.tgz'
+    version: 4.1.1
   registry.npm.taobao.org/ansi-escapes/4.3.1:
     dependencies:
       type-fest: registry.npm.taobao.org/type-fest/0.11.0
@@ -2923,16 +2933,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/commander/download/commander-2.20.3.tgz?cache=0&sync_timestamp=1596656743107&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcommander%2Fdownload%2Fcommander-2.20.3.tgz'
     version: 2.20.3
-  registry.npm.taobao.org/commander/5.1.0:
+  registry.npm.taobao.org/commander/6.0.0:
     dev: true
     engines:
       node: '>= 6'
     name: commander
     resolution:
-      integrity: sha1-Rqu9FlL44Fm92u+Zu9yyrZzxea4=
+      integrity: sha1-KycNqU+PuQFEVTEvgpoRKdv4iH4=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/commander/download/commander-5.1.0.tgz'
-    version: 5.1.0
+      tarball: 'https://registry.npm.taobao.org/commander/download/commander-6.0.0.tgz?cache=0&sync_timestamp=1596656743107&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcommander%2Fdownload%2Fcommander-6.0.0.tgz'
+    version: 6.0.0
   registry.npm.taobao.org/compare-func/2.0.0:
     dependencies:
       array-ify: registry.npm.taobao.org/array-ify/1.0.0
@@ -3308,6 +3318,22 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/cosmiconfig/download/cosmiconfig-6.0.0.tgz'
     version: 6.0.0
+  registry.npm.taobao.org/cosmiconfig/7.0.0:
+    dependencies:
+      '@types/parse-json': registry.npm.taobao.org/@types/parse-json/4.0.0
+      import-fresh: registry.npm.taobao.org/import-fresh/3.2.1
+      parse-json: registry.npm.taobao.org/parse-json/5.0.0
+      path-type: registry.npm.taobao.org/path-type/4.0.0
+      yaml: registry.npm.taobao.org/yaml/1.10.0
+    dev: true
+    engines:
+      node: '>=10'
+    name: cosmiconfig
+    resolution:
+      integrity: sha1-75tE13OVnK5j3ezRIt4jhTtg+NM=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/cosmiconfig/download/cosmiconfig-7.0.0.tgz'
+    version: 7.0.0
   registry.npm.taobao.org/cross-env/7.0.2:
     dependencies:
       cross-spawn: registry.npm.taobao.org/cross-spawn/7.0.3
@@ -3917,6 +3943,18 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/enquirer/download/enquirer-2.3.5.tgz'
     version: 2.3.5
+  registry.npm.taobao.org/enquirer/2.3.6:
+    dependencies:
+      ansi-colors: registry.npm.taobao.org/ansi-colors/4.1.1
+    dev: true
+    engines:
+      node: '>=8.6'
+    name: enquirer
+    resolution:
+      integrity: sha1-Kn/l3WNKHkElqXXsmU/1RW3Dc00=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/enquirer/download/enquirer-2.3.6.tgz'
+    version: 2.3.6
   registry.npm.taobao.org/entities/1.1.2:
     dev: true
     name: entities
@@ -4382,26 +4420,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/execa/download/execa-1.0.0.tgz?cache=0&sync_timestamp=1594150423254&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexeca%2Fdownload%2Fexeca-1.0.0.tgz'
     version: 1.0.0
-  registry.npm.taobao.org/execa/4.0.2:
-    dependencies:
-      cross-spawn: registry.npm.taobao.org/cross-spawn/7.0.3
-      get-stream: registry.npm.taobao.org/get-stream/5.1.0
-      human-signals: registry.npm.taobao.org/human-signals/1.1.1
-      is-stream: registry.npm.taobao.org/is-stream/2.0.0
-      merge-stream: registry.npm.taobao.org/merge-stream/2.0.0
-      npm-run-path: registry.npm.taobao.org/npm-run-path/4.0.1
-      onetime: registry.npm.taobao.org/onetime/5.1.0
-      signal-exit: registry.npm.taobao.org/signal-exit/3.0.3
-      strip-final-newline: registry.npm.taobao.org/strip-final-newline/2.0.0
-    dev: true
-    engines:
-      node: '>=10'
-    name: execa
-    resolution:
-      integrity: sha1-rYf7ey2dVk9w0rYtURvuQdXLskA=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/execa/download/execa-4.0.2.tgz'
-    version: 4.0.2
   registry.npm.taobao.org/execa/4.0.3:
     dependencies:
       cross-spawn: registry.npm.taobao.org/cross-spawn/7.0.3
@@ -7529,17 +7547,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz'
     version: 1.1.6
-  registry.npm.taobao.org/lint-staged/10.2.11:
+  registry.npm.taobao.org/lint-staged/10.2.12:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
       cli-truncate: registry.npm.taobao.org/cli-truncate/2.1.0
-      commander: registry.npm.taobao.org/commander/5.1.0
-      cosmiconfig: registry.npm.taobao.org/cosmiconfig/6.0.0
+      commander: registry.npm.taobao.org/commander/6.0.0
+      cosmiconfig: registry.npm.taobao.org/cosmiconfig/7.0.0
       debug: registry.npm.taobao.org/debug/4.1.1
       dedent: registry.npm.taobao.org/dedent/0.7.0
-      enquirer: registry.npm.taobao.org/enquirer/2.3.5
-      execa: registry.npm.taobao.org/execa/4.0.2
-      listr2: registry.npm.taobao.org/listr2/2.1.7_enquirer@2.3.5
+      enquirer: registry.npm.taobao.org/enquirer/2.3.6
+      execa: registry.npm.taobao.org/execa/4.0.3
+      listr2: registry.npm.taobao.org/listr2/2.6.0_enquirer@2.3.6
       log-symbols: registry.npm.taobao.org/log-symbols/4.0.0
       micromatch: registry.npm.taobao.org/micromatch/4.0.2
       normalize-path: registry.npm.taobao.org/normalize-path/3.0.0
@@ -7550,33 +7568,33 @@ packages:
     hasBin: true
     name: lint-staged
     resolution:
-      integrity: sha1-cTyAh38tyLYJsFvFkCAjTnZslyA=
+      integrity: sha1-iCyBT1OZeapuhUGZVg1ju/gHVC8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.2.11.tgz?cache=0&sync_timestamp=1592387231843&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.2.11.tgz'
-    version: 10.2.11
-  registry.npm.taobao.org/listr2/2.1.7_enquirer@2.3.5:
+      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.2.12.tgz'
+    version: 10.2.12
+  registry.npm.taobao.org/listr2/2.6.0_enquirer@2.3.6:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
       cli-truncate: registry.npm.taobao.org/cli-truncate/2.1.0
-      enquirer: registry.npm.taobao.org/enquirer/2.3.5
+      enquirer: registry.npm.taobao.org/enquirer/2.3.6
       figures: registry.npm.taobao.org/figures/3.2.0
       indent-string: registry.npm.taobao.org/indent-string/4.0.0
       log-update: registry.npm.taobao.org/log-update/4.0.0
       p-map: registry.npm.taobao.org/p-map/4.0.0
-      rxjs: registry.npm.taobao.org/rxjs/6.5.5
+      rxjs: registry.npm.taobao.org/rxjs/6.6.2
       through: registry.npm.taobao.org/through/2.3.8
     dev: true
     engines:
       node: '>=10.0.0'
-    id: registry.npm.taobao.org/listr2/2.1.7
+    id: registry.npm.taobao.org/listr2/2.6.0
     name: listr2
     peerDependencies:
       enquirer: '>= 2.3.0 < 3'
     resolution:
-      integrity: sha1-gQfBLGmbrHePFWdzkpgFLY67nCc=
+      integrity: sha1-eIo9ICl4obhYIGKVLLxJJyyOIGo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/listr2/download/listr2-2.1.7.tgz?cache=0&sync_timestamp=1592388938640&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flistr2%2Fdownload%2Flistr2-2.1.7.tgz'
-    version: 2.1.7
+      tarball: 'https://registry.npm.taobao.org/listr2/download/listr2-2.6.0.tgz'
+    version: 2.6.0
   registry.npm.taobao.org/load-json-file/1.1.0:
     dependencies:
       graceful-fs: registry.npm.taobao.org/graceful-fs/4.2.4
@@ -10049,18 +10067,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/run-parallel/download/run-parallel-1.1.9.tgz'
     version: 1.1.9
-  registry.npm.taobao.org/rxjs/6.5.5:
-    dependencies:
-      tslib: registry.npm.taobao.org/tslib/1.13.0
-    dev: true
-    engines:
-      npm: '>=2.0.0'
-    name: rxjs
-    resolution:
-      integrity: sha1-xciE4wlMjP7jG/J+uH5UzPyH+ew=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/rxjs/download/rxjs-6.5.5.tgz'
-    version: 6.5.5
   registry.npm.taobao.org/rxjs/6.6.0:
     dependencies:
       tslib: registry.npm.taobao.org/tslib/1.13.0
@@ -10073,6 +10079,18 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rxjs/download/rxjs-6.6.0.tgz'
     version: 6.6.0
+  registry.npm.taobao.org/rxjs/6.6.2:
+    dependencies:
+      tslib: registry.npm.taobao.org/tslib/1.13.0
+    dev: true
+    engines:
+      npm: '>=2.0.0'
+    name: rxjs
+    resolution:
+      integrity: sha1-gJanrAPyzE/lhg725XKBDZ4BwNI=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/rxjs/download/rxjs-6.6.2.tgz'
+    version: 6.6.2
   registry.npm.taobao.org/safe-buffer/5.1.2:
     dev: true
     name: safe-buffer
@@ -12472,7 +12490,7 @@ specifiers:
   haoma: 2.4.3
   husky: 4.2.5
   jest: 26.4.2
-  lint-staged: 10.2.11
+  lint-staged: 10.2.12
   lodash: ^4.17.15
   lodash-es: ^4.17.15
   miniprogram-api-typings: ^3.0.0
