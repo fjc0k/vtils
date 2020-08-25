@@ -35,6 +35,7 @@ rich://{"url":"***","desc":"***"}
 |  [base64UrlEncode(value)](./utils.base64urlencode.md) | 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。 |
 |  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
 |  [createSubmit(options)](./utils.createsubmit.md) | 创建提交类行为。 |
+|  [createUrlQueryString(parameters)](./utils.createurlquerystring.md) | 创建 url 查询字符串。 |
 |  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
 |  [getEnvironment()](./utils.getenvironment.md) | 获取运行环境信息。 |
@@ -57,6 +58,7 @@ rich://{"url":"***","desc":"***"}
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
 |  [onceMeanwhile(fn)](./utils.oncemeanwhile.md) | 同一时间对函数的调用只会触发一次运行。 |
+|  [parseUrlQueryString(query, format)](./utils.parseurlquerystring.md) | 解析 url 查询字符串。<!-- -->兼容以 <code>?</code> 开头的查询字符串，因此你可以直接传入 <code>location.search</code> 的值。 |
 |  [placeKitten(size)](./utils.placekitten.md) | 给定大小获取占位猫咪图片。 |
 |  [placeKitten(width, height)](./utils.placekitten_1.md) | 给定宽高获取占位猫咪图片。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
@@ -75,6 +77,7 @@ rich://{"url":"***","desc":"***"}
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
 |  [ParsedFileRichUrl](./utils.parsedfilerichurl.md) |  |
 |  [ParsedRichUrl](./utils.parsedrichurl.md) |  |
+|  [ParseUrlQueryStringFormat](./utils.parseurlquerystringformat.md) |  |
 |  [ReadFileReader](./utils.readfilereader.md) | 各种内容类型的读取器。 |
 |  [SubmitActionPayload](./utils.submitactionpayload.md) |  |
 |  [WaitResult](./utils.waitresult.md) |  |
