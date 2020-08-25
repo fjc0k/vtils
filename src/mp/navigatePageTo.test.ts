@@ -41,7 +41,7 @@ describe('navigatePageTo', () => {
 
   test('redirect 正常', async () => {
     const { navigatePageTo } = await import('./navigatePageTo')
-    await navigatePageTo('/', true)
+    await navigatePageTo('/', undefined, true)
     expect(navigateTo).not.toBeCalled()
     expect(redirectTo).toBeCalled().toBeCalledTimes(1)
   })
@@ -67,6 +67,32 @@ describe('navigatePageTo', () => {
       .toBeCalledWith(
         expect.objectContaining({
           url: `/webview?url=${encodeURIComponent('http://foo.bar')}`,
+        }),
+      )
+  })
+
+  test('无 query，支持 query', async () => {
+    const { navigatePageTo } = await import('./navigatePageTo')
+    await navigatePageTo('/detail', { id: 1 })
+    expect(navigateTo)
+      .toBeCalled()
+      .toBeCalledTimes(1)
+      .toBeCalledWith(
+        expect.objectContaining({
+          url: `/detail?id=1`,
+        }),
+      )
+  })
+
+  test('有 query，支持 query', async () => {
+    const { navigatePageTo } = await import('./navigatePageTo')
+    await navigatePageTo('/detail?key=2', { id: 1 })
+    expect(navigateTo)
+      .toBeCalled()
+      .toBeCalledTimes(1)
+      .toBeCalledWith(
+        expect.objectContaining({
+          url: `/detail?key=2&id=1`,
         }),
       )
   })
