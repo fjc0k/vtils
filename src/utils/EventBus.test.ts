@@ -6,7 +6,7 @@ type Events = {
   error: (payload: { message: string }) => any
 }
 
-describe(EventBus.name, () => {
+describe('EventBus', () => {
   test('可订阅发布', () => {
     const bus = new EventBus<Events>()
     const enterCallback = jest.fn()
@@ -86,5 +86,86 @@ describe(EventBus.name, () => {
     bus.on('enter', enterCallback2)
     const results = bus.emit('enter')
     expect(results).toEqual([1, 2])
+  })
+
+  test('支持 beforeOn', () => {
+    const bus = new EventBus<Events>({
+      beforeOn: {
+        error(cb) {
+          cb.__EVENT_BUS_TAG__ = 200
+          return cb
+        },
+      },
+    })
+    const errorCallback = jest.fn().mockImplementation(() => 1)
+    const errorCallback2 = jest.fn().mockImplementation(() => 2)
+    bus.on('error', errorCallback)
+    bus.on('error', errorCallback2)
+    const results = bus.emit('error', { message: 'hello' })
+    expect(results).toEqual([1, 2])
+    expect(errorCallback).toBeCalled().toBeCalledTimes(1)
+    expect(errorCallback2).toBeCalled().toBeCalledTimes(1)
+    bus.off('error', 200)
+    const results2 = bus.emit('error', { message: 'hello2' })
+    expect(results2).toEqual([])
+    expect(errorCallback).toBeCalled().toBeCalledTimes(1)
+    expect(errorCallback2).toBeCalled().toBeCalledTimes(1)
+  })
+
+  test('支持 beforeEmit', () => {
+    const bus = new EventBus<Events>({
+      beforeEmit: {
+        error() {
+          this.emit({
+            name: 'success',
+          })
+        },
+      },
+    })
+    const errorCallback = jest.fn().mockImplementation(() => 1)
+    const errorCallback2 = jest.fn().mockImplementation(() => 2)
+    const successCallback = jest.fn().mockImplementation(() => 'x')
+    const successCallback2 = jest.fn().mockImplementation(() => 'y')
+    bus.on('error', errorCallback)
+    bus.on('error', errorCallback2)
+    bus.on('success', successCallback)
+    bus.on('success', successCallback2)
+    const results = bus.emit('error', { message: 'hello' })
+    expect(results).toEqual([1, 2])
+    expect(errorCallback).toBeCalled().toBeCalledTimes(1)
+    expect(errorCallback2).toBeCalled().toBeCalledTimes(1)
+    expect(successCallback).toBeCalled().toBeCalledTimes(1)
+    expect(successCallback2).toBeCalled().toBeCalledTimes(1)
+  })
+
+  test('支持按 tag emit', () => {
+    let i = 0
+    const bus = new EventBus<Events>({
+      beforeOn: {
+        error(cb) {
+          cb.__EVENT_BUS_TAG__ = i++
+          return cb
+        },
+      },
+    })
+    const errorCallback = jest.fn().mockImplementation(() => 1)
+    const errorCallback2 = jest.fn().mockImplementation(() => 2)
+    bus.on('error', errorCallback)
+    bus.on('error', errorCallback2)
+
+    const results = bus.emit('error', { message: 'hello' })
+    expect(results).toEqual([1, 2])
+    expect(errorCallback).toBeCalled().toBeCalledTimes(1)
+    expect(errorCallback2).toBeCalled().toBeCalledTimes(1)
+
+    const results2 = bus.emit({ name: 'error', tag: 0 }, { message: 'hello2' })
+    expect(results2).toEqual([1])
+    expect(errorCallback).toBeCalled().toBeCalledTimes(2)
+    expect(errorCallback2).toBeCalled().toBeCalledTimes(1)
+
+    const results3 = bus.emit({ name: 'error', tag: 1 }, { message: 'hello3' })
+    expect(results3).toEqual([2])
+    expect(errorCallback).toBeCalled().toBeCalledTimes(2)
+    expect(errorCallback2).toBeCalled().toBeCalledTimes(2)
   })
 })
