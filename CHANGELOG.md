@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.41.0](https://github.com/fjc0k/vtils/compare/v3.40.0...v3.41.0) (2020-08-26)
+
+### Features
+
+- **EventBus:** 支持 beforeEmit, beforeOn, tag ([ed28ce6](https://github.com/fjc0k/vtils/commit/ed28ce6f1e1750f9528bba146202e303028efb26))
+- **mp:** 新增 miniProgramBus ([9538763](https://github.com/fjc0k/vtils/commit/9538763ff6597a8ae93fb48e1f7178e8db7602c8))
+
 ## [3.40.0](https://github.com/fjc0k/vtils/compare/v3.39.0...v3.40.0) (2020-08-25)
 
 ### Features
