@@ -129,7 +129,7 @@
     "jest": "26.4.2",
     "lint-staged": "10.2.13",
     "open-cli": "6.0.1",
-    "prettier": "2.1.0",
+    "prettier": "2.1.1",
     "prompts": "2.3.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
