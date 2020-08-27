@@ -73,53 +73,57 @@ export interface MiniProgramBusListeners {
   >
 }
 
+const pageListenerToCurrentPageListener: Partial<Record<
+  keyof MiniProgramBusListeners,
+  keyof MiniProgramBusListeners
+>> = {
+  pageShow: 'currentPageShow',
+  pageHide: 'currentPageHide',
+  pageReady: 'currentPageReady',
+  pageUnload: 'currentPageUnload',
+  pagePullDownRefresh: 'currentPagePullDownRefresh',
+  pageReachBottom: 'currentPageReachBottom',
+  pageShareAppMessage: 'currentPageShareAppMessage',
+  pageShareTimeline: 'currentPageShareTimeline',
+  pageAddToFavorites: 'currentPageAddToFavorites',
+  pageResize: 'currentPageResize',
+  pageTabItemTap: 'currentPageTabItemTap',
+}
+
+const pageListeners = Object.keys(pageListenerToCurrentPageListener) as Array<
+  keyof MiniProgramBusListeners
+>
+const currentPageListeners = pageListeners.map(
+  pageListener => pageListenerToCurrentPageListener[pageListener],
+) as Array<keyof MiniProgramBusListeners>
+
 // @ts-ignore
 export const miniProgramBus = new EventBus<MiniProgramBusListeners>({
-  beforeOn: ([
-    'currentPageShow',
-    'currentPageHide',
-    'currentPageReady',
-    'currentPageUnload',
-    'currentPagePullDownRefresh',
-    'currentPageReachBottom',
-    'currentPageShareAppMessage',
-    'currentPageShareTimeline',
-    'currentPageAddToFavorites',
-    'currentPageResize',
-    'currentPageTabItemTap',
-  ] as Array<keyof MiniProgramBusListeners>).reduce<
+  beforeOn: currentPageListeners.reduce<
     // @ts-ignore
     EventBusBeforeOn<MiniProgramBusListeners>
-  >((res, name) => {
-    res[name] = function (cb: any) {
-      ;(cb as EventBusListener).__EVENT_BUS_TAG__ =
-        patchMiniProgram.__CURRENT_PAGE_ID__
+  >((res, currentPageListenerName) => {
+    res[currentPageListenerName] = function (cb: EventBusListener) {
+      cb.__EVENT_BUS_TAG__ = patchMiniProgram.__CURRENT_PAGE_ID__
       return cb
     }
     return res
   }, {}),
-  beforeEmit: ([
-    'pageShow',
-    'pageHide',
-    'pageReady',
-    'pageUnload',
-    'pagePullDownRefresh',
-    'pageReachBottom',
-    'pageShareAppMessage',
-    'pageShareTimeline',
-    'pageAddToFavorites',
-    'pageResize',
-    'pageTabItemTap',
-  ] as Array<keyof MiniProgramBusListeners>).reduce<
+  beforeEmit: pageListeners.reduce<
     // @ts-ignore
     EventBusBeforeEmit<MiniProgramBusListeners>
-  >((res, name) => {
-    res[name] = function (ctx) {
+  >((res, pageListenerName) => {
+    res[pageListenerName] = function (ctx) {
       this.emit({
-        name: `current${name[0].toUpperCase()}${name.slice(1)}` as any,
+        name: pageListenerToCurrentPageListener[pageListenerName]!,
         context: ctx,
         tag: ctx.__PAGE_ID__,
       })
+      if (pageListenerName === 'pageUnload') {
+        for (const currentPageListenerName of currentPageListeners) {
+          this.off(currentPageListenerName, ctx.__PAGE_ID__)
+        }
+      }
     }
     return res
   }, {}),
