@@ -1,3 +1,4 @@
+import { AnyObject } from '../types'
 import { navigatePageTo } from './navigatePageTo'
 
 /**

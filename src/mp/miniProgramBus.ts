@@ -116,7 +116,7 @@ export const miniProgramBus = new EventBus<MiniProgramBusListeners>({
   >((res, name) => {
     res[name] = function (ctx) {
       this.emit({
-        name: `current${name[0].toLocaleLowerCase()}${name.slice(1)}` as any,
+        name: `current${name[0].toUpperCase()}${name.slice(1)}` as any,
         context: ctx,
         tag: ctx.__PAGE_ID__,
       })
