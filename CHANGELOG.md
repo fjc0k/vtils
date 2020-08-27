@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.42.0](https://github.com/fjc0k/vtils/compare/v3.41.1...v3.42.0) (2020-08-27)
+
+### Features
+
+- **miniProgramBus:** 优化实现，支持返回数据类回调 ([aa9a690](https://github.com/fjc0k/vtils/commit/aa9a690c1c2ed8675726a9fef903acec90066ce8))
+
+### Bug Fixes
+
+- **miniProgramBus:** 页面卸载时移除对当前页面的监听 ([b04d161](https://github.com/fjc0k/vtils/commit/b04d161b00f8fa26fd94859801ccd8da1208c69b))
+
 ### [3.41.1](https://github.com/fjc0k/vtils/compare/v3.41.0...v3.41.1) (2020-08-27)
 
 ### Bug Fixes
