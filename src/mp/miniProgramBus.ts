@@ -1,11 +1,6 @@
 /// <reference types="miniprogram-api-typings" />
 import { Defined } from '../types'
-import {
-  EventBus,
-  EventBusBeforeEmit,
-  EventBusBeforeOn,
-  EventBusListener,
-} from '../utils'
+import { EventBus, EventBusBeforeOn, EventBusListener } from '../utils'
 import { patchMiniProgram } from './patchMiniProgram'
 
 export interface MiniProgramBusListeners {
@@ -73,7 +68,8 @@ export interface MiniProgramBusListeners {
   >
 }
 
-const pageListenerToCurrentPageListener: Partial<Record<
+/** @private */
+export const pageListenerToCurrentPageListener: Partial<Record<
   keyof MiniProgramBusListeners,
   keyof MiniProgramBusListeners
 >> = {
@@ -90,10 +86,12 @@ const pageListenerToCurrentPageListener: Partial<Record<
   pageTabItemTap: 'currentPageTabItemTap',
 }
 
-const pageListeners = Object.keys(pageListenerToCurrentPageListener) as Array<
-  keyof MiniProgramBusListeners
->
-const currentPageListeners = pageListeners.map(
+/** @private */
+export const pageListeners = Object.keys(
+  pageListenerToCurrentPageListener,
+) as Array<keyof MiniProgramBusListeners>
+/** @private */
+export const currentPageListeners = pageListeners.map(
   pageListener => pageListenerToCurrentPageListener[pageListener],
 ) as Array<keyof MiniProgramBusListeners>
 
@@ -106,24 +104,6 @@ export const miniProgramBus = new EventBus<MiniProgramBusListeners>({
     res[currentPageListenerName] = function (cb: EventBusListener) {
       cb.__EVENT_BUS_TAG__ = patchMiniProgram.__CURRENT_PAGE_ID__
       return cb
-    }
-    return res
-  }, {}),
-  beforeEmit: pageListeners.reduce<
-    // @ts-ignore
-    EventBusBeforeEmit<MiniProgramBusListeners>
-  >((res, pageListenerName) => {
-    res[pageListenerName] = function (ctx) {
-      this.emit({
-        name: pageListenerToCurrentPageListener[pageListenerName]!,
-        context: ctx,
-        tag: ctx.__PAGE_ID__,
-      })
-      if (pageListenerName === 'pageUnload') {
-        for (const currentPageListenerName of currentPageListeners) {
-          this.off(currentPageListenerName, ctx.__PAGE_ID__)
-        }
-      }
     }
     return res
   }, {}),

@@ -1,6 +1,6 @@
+import { currentPageListeners, miniProgramBus } from './miniProgramBus'
 import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { MiniProgramApi } from '../utils'
-import { miniProgramBus } from './miniProgramBus'
+import { last, MiniProgramApi } from '../utils'
 
 function patchAppOptions(
   mp: MiniProgramApi,
@@ -69,68 +69,163 @@ function patchPageOptions(
 
   const onShow = pageOptions.onShow
   pageOptions.onShow = function () {
+    miniProgramBus.emit({
+      name: 'currentPageShow',
+      context: this,
+      tag: (this as any).__PAGE_ID__,
+    })
     miniProgramBus.emit({ name: 'pageShow', context: this })
     return onShow?.call(this)
   }
 
   const onReady = pageOptions.onReady
   pageOptions.onReady = function () {
+    miniProgramBus.emit({
+      name: 'currentPageReady',
+      context: this,
+      tag: (this as any).__PAGE_ID__,
+    })
     miniProgramBus.emit({ name: 'pageReady', context: this })
     return onReady?.call(this)
   }
 
   const onHide = pageOptions.onHide
   pageOptions.onHide = function () {
+    miniProgramBus.emit({
+      name: 'currentPageHide',
+      context: this,
+      tag: (this as any).__PAGE_ID__,
+    })
     miniProgramBus.emit({ name: 'pageHide', context: this })
     return onHide?.call(this)
   }
 
   const onUnload = pageOptions.onUnload
   pageOptions.onUnload = function () {
+    miniProgramBus.emit({
+      name: 'currentPageUnload',
+      context: this,
+      tag: (this as any).__PAGE_ID__,
+    })
     miniProgramBus.emit({ name: 'pageUnload', context: this })
-    return onUnload?.call(this)
+    const res = onUnload?.call(this)
+    for (const currentPageListenerName of currentPageListeners) {
+      miniProgramBus.off(currentPageListenerName, (this as any).__PAGE_ID__)
+    }
+    return res
   }
 
   const onPullDownRefresh = pageOptions.onPullDownRefresh
   pageOptions.onPullDownRefresh = function () {
+    miniProgramBus.emit({
+      name: 'currentPagePullDownRefresh',
+      context: this,
+      tag: (this as any).__PAGE_ID__,
+    })
     miniProgramBus.emit({ name: 'pagePullDownRefresh', context: this })
     return onPullDownRefresh?.call(this)
   }
 
   const onReachBottom = pageOptions.onReachBottom
   pageOptions.onReachBottom = function () {
+    miniProgramBus.emit({
+      name: 'currentPageReachBottom',
+      context: this,
+      tag: (this as any).__PAGE_ID__,
+    })
     miniProgramBus.emit({ name: 'pageReachBottom', context: this })
     return onReachBottom?.call(this)
   }
 
   const onShareAppMessage = pageOptions.onShareAppMessage
   pageOptions.onShareAppMessage = function (payload) {
-    miniProgramBus.emit({ name: 'pageShareAppMessage', context: this }, payload)
-    return onShareAppMessage?.call(this, payload)
+    const pageListenerData = miniProgramBus.emit(
+      {
+        name: 'currentPageShareAppMessage',
+        context: this,
+        tag: (this as any).__PAGE_ID__,
+      },
+      payload,
+    )
+    const globalListenerData = miniProgramBus.emit(
+      { name: 'pageShareAppMessage', context: this },
+      payload,
+    )
+    const originalListenerData = onShareAppMessage?.call(this, payload)
+    return (
+      originalListenerData || last(pageListenerData) || last(globalListenerData)
+    )
   }
 
   // @ts-ignore
   const onShareTimeline = pageOptions.onShareTimeline
   // @ts-ignore
   pageOptions.onShareTimeline = function (payload) {
-    miniProgramBus.emit({ name: 'pageShareTimeline', context: this }, payload)
-    return onShareTimeline?.call(this, payload)
+    const pageListenerData = miniProgramBus.emit(
+      {
+        name: 'currentPageShareTimeline',
+        context: this,
+        tag: (this as any).__PAGE_ID__,
+      },
+      payload,
+    )
+    const globalListenerData = miniProgramBus.emit(
+      { name: 'pageShareTimeline', context: this },
+      payload,
+    )
+    const originalListenerData = onShareTimeline?.call(this, payload)
+    return (
+      originalListenerData || last(pageListenerData) || last(globalListenerData)
+    )
   }
 
   const onAddToFavorites = pageOptions.onAddToFavorites
   pageOptions.onAddToFavorites = function (payload) {
-    miniProgramBus.emit({ name: 'pageAddToFavorites', context: this }, payload)
-    return onAddToFavorites?.call(this, payload) || {}
+    const pageListenerData = miniProgramBus.emit(
+      {
+        name: 'currentPageAddToFavorites',
+        context: this,
+        tag: (this as any).__PAGE_ID__,
+      },
+      payload,
+    )
+    const globalListenerData = miniProgramBus.emit(
+      { name: 'pageAddToFavorites', context: this },
+      payload,
+    )
+    const originalListenerData = onAddToFavorites?.call(this, payload)
+    return (
+      originalListenerData ||
+      last(pageListenerData) ||
+      last(globalListenerData) ||
+      {}
+    )
   }
 
   const onResize = pageOptions.onResize
   pageOptions.onResize = function (payload) {
+    miniProgramBus.emit(
+      {
+        name: 'currentPageResize',
+        context: this,
+        tag: (this as any).__PAGE_ID__,
+      },
+      payload,
+    )
     miniProgramBus.emit({ name: 'pageResize', context: this }, payload)
     return onResize?.call(this, payload)
   }
 
   const onTabItemTap = pageOptions.onTabItemTap
   pageOptions.onTabItemTap = function (payload) {
+    miniProgramBus.emit(
+      {
+        name: 'currentPageTabItemTap',
+        context: this,
+        tag: (this as any).__PAGE_ID__,
+      },
+      payload,
+    )
     miniProgramBus.emit({ name: 'pageTabItemTap', context: this }, payload)
     return onTabItemTap?.call(this, payload)
   }
