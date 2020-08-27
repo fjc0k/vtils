@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.41.1](https://github.com/fjc0k/vtils/compare/v3.41.0...v3.41.1) (2020-08-27)
+
+### Bug Fixes
+
+- **miniProgramBus:** toUpperCase ([d50819b](https://github.com/fjc0k/vtils/commit/d50819ba343dbd19063c268de583f7a3d8b575df))
+
 ## [3.41.0](https://github.com/fjc0k/vtils/compare/v3.40.0...v3.41.0) (2020-08-26)
 
 ### Features
