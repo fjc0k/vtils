@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.43.1](https://github.com/fjc0k/vtils/compare/v3.43.0...v3.43.1) (2020-08-28)
+
+### Bug Fixes
+
+- **getCurrentPageQuery:** 对值执行 decodeURIComponent ([c46cacd](https://github.com/fjc0k/vtils/commit/c46cacdae094b0218e6758c8886724cfdab195d4))
+
 ## [3.43.0](https://github.com/fjc0k/vtils/compare/v3.42.0...v3.43.0) (2020-08-28)
 
 ### Features
