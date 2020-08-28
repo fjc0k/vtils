@@ -69,6 +69,7 @@ function patchPageOptions(
 
   const onShow = pageOptions.onShow
   pageOptions.onShow = function () {
+    patchMiniProgram.__CURRENT_PAGE_ID__ = (this as any).__PAGE_ID__
     miniProgramBus.emit({
       name: 'currentPageShow',
       context: this,
