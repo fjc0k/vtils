@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.43.0](https://github.com/fjc0k/vtils/compare/v3.42.0...v3.43.0) (2020-08-28)
+
+### Features
+
+- **mp:** 新增 useShareAppMessage ([b5b39fe](https://github.com/fjc0k/vtils/commit/b5b39fe81957c8af24ccbc6e35bdb8aa2c7034de))
+- **mp:** 新增 useTopBarInfo, useSubmit, usePullDownRefresh ([19073ec](https://github.com/fjc0k/vtils/commit/19073ecc43d3f1d272e7823b95330184fcaab74d))
+
+### Bug Fixes
+
+- **patchMiniProgram:** 页面展示时更新当前页面 ID ([033a818](https://github.com/fjc0k/vtils/commit/033a818998858c74eaced1cd69d276201b1d404f))
+
 ## [3.42.0](https://github.com/fjc0k/vtils/compare/v3.41.1...v3.42.0) (2020-08-27)
 
 ### Features
