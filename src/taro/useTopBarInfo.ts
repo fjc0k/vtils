@@ -1,6 +1,6 @@
-import { getTopBarInfo, GetTopBarInfoResult } from '../mp'
-import { useMemo } from 'react'
+import { useTopBarInfo as mpUseTopBarInfo } from '../mp'
 
-export function useTopBarInfo(): GetTopBarInfoResult {
-  return useMemo(getTopBarInfo, [])
-}
+/**
+ * @deprecated 使用 `import { useTopBarInfo } from 'vtils/mp'` 代替
+ */
+export const useTopBarInfo = mpUseTopBarInfo

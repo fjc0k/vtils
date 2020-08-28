@@ -1,10 +1,6 @@
-import React, { useCallback } from 'react'
-import { submit } from '../mp'
-import { SubmitActionPayload } from '../utils'
+import { useSubmit as mpUseSubmit } from '../mp'
 
-export function useSubmit<TResult>(
-  action: (payload: SubmitActionPayload) => Promise<TResult>,
-  deps: React.DependencyList,
-): () => Promise<TResult> {
-  return useCallback(() => submit(action), deps)
-}
+/**
+ * @deprecated 使用 `import { useSubmit } from 'vtils/mp'` 代替
+ */
+export const useSubmit = mpUseSubmit

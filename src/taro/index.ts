@@ -1,5 +1,5 @@
 /**
- * Taro 3 工具库。
+ * Taro 3 工具库。(已废弃，使用小程序工具库代替)
  *
  * @packageDocumentation
  */
