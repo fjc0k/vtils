@@ -20,6 +20,7 @@ export * from './patchMiniProgram'
 export * from './redirectPageTo'
 export * from './submit'
 export * from './usePullDownRefresh'
+export * from './useShareAppMessage'
 export * from './useSubmit'
 export * from './useTopBarInfo'
 // @endindex
