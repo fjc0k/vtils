@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.44.0](https://github.com/fjc0k/vtils/compare/v3.43.1...v3.44.0) (2020-08-29)
+
+### Features
+
+- **miniProgramBus:** 新增 routeChange ([5981d30](https://github.com/fjc0k/vtils/commit/5981d30292e9b9c3d1fdd6f3838831c5f1b76275))
+
 ### [3.43.1](https://github.com/fjc0k/vtils/compare/v3.43.0...v3.43.1) (2020-08-28)
 
 ### Bug Fixes
