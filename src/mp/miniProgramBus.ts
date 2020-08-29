@@ -1,7 +1,21 @@
 /// <reference types="miniprogram-api-typings" />
-import { Defined } from '../types'
+import { AnyObject, Defined } from '../types'
 import { EventBus, EventBusBeforeOn, EventBusListener } from '../utils'
 import { patchMiniProgram } from './patchMiniProgram'
+
+export interface MiniProgramBusRouteChangePageInfo {
+  url: string
+  path: string
+  query: AnyObject
+}
+
+export type MiniProgramBusRouteChangeAction = 'replace' | 'pop' | 'push'
+
+export interface MiniProgramBusRouteChangePayload {
+  from: MiniProgramBusRouteChangePageInfo | undefined
+  to: MiniProgramBusRouteChangePageInfo
+  action: MiniProgramBusRouteChangeAction
+}
 
 export interface MiniProgramBusListeners {
   appLaunch: Defined<WechatMiniprogram.App.Options<{}>['onLaunch']>
@@ -66,6 +80,7 @@ export interface MiniProgramBusListeners {
   currentPageTabItemTap: Defined<
     WechatMiniprogram.Page.Options<{}, {}>['onTabItemTap']
   >
+  routeChange: (payload: MiniProgramBusRouteChangePayload) => any
 }
 
 /** @private */

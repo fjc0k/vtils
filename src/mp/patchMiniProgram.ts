@@ -1,6 +1,19 @@
+import { AnyObject } from '../types'
 import { currentPageListeners, miniProgramBus } from './miniProgramBus'
 import { ensureInMiniProgram } from './ensureInMiniProgram'
+import { getCurrentPagePath } from './getCurrentPagePath'
+import { getCurrentPageQuery } from './getCurrentPageQuery'
+import { getCurrentPageUrl } from './getCurrentPageUrl'
 import { last, MiniProgramApi } from '../utils'
+
+let prevPagesInfo:
+  | {
+      count: number
+      lastPageUrl: string
+      lastPagePath: string
+      lastPageQuery: AnyObject
+    }
+  | undefined
 
 function patchAppOptions(
   mp: MiniProgramApi,
@@ -69,6 +82,39 @@ function patchPageOptions(
 
   const onShow = pageOptions.onShow
   pageOptions.onShow = function () {
+    const currentPagesInfo = {
+      count: getCurrentPages().length,
+      lastPageUrl: getCurrentPageUrl(),
+      lastPagePath: getCurrentPagePath(),
+      lastPageQuery: getCurrentPageQuery(),
+    }
+    if (
+      !(
+        prevPagesInfo &&
+        currentPagesInfo.count === prevPagesInfo.count &&
+        currentPagesInfo.lastPageUrl === prevPagesInfo.lastPageUrl
+      )
+    ) {
+      miniProgramBus.emit('routeChange', {
+        from: prevPagesInfo && {
+          url: prevPagesInfo.lastPageUrl,
+          path: prevPagesInfo.lastPagePath,
+          query: prevPagesInfo.lastPageQuery,
+        },
+        to: {
+          url: currentPagesInfo.lastPageUrl,
+          path: currentPagesInfo.lastPagePath,
+          query: currentPagesInfo.lastPageQuery,
+        },
+        action:
+          !prevPagesInfo || currentPagesInfo.count > prevPagesInfo.count
+            ? 'push'
+            : currentPagesInfo.count < prevPagesInfo.count
+            ? 'pop'
+            : 'replace',
+      })
+    }
+
     patchMiniProgram.__CURRENT_PAGE_ID__ = (this as any).__PAGE_ID__
     miniProgramBus.emit({
       name: 'currentPageShow',
@@ -92,6 +138,13 @@ function patchPageOptions(
 
   const onHide = pageOptions.onHide
   pageOptions.onHide = function () {
+    prevPagesInfo = {
+      count: getCurrentPages().length,
+      lastPageUrl: getCurrentPageUrl(),
+      lastPagePath: getCurrentPagePath(),
+      lastPageQuery: getCurrentPageQuery(),
+    }
+
     miniProgramBus.emit({
       name: 'currentPageHide',
       context: this,
@@ -103,6 +156,13 @@ function patchPageOptions(
 
   const onUnload = pageOptions.onUnload
   pageOptions.onUnload = function () {
+    prevPagesInfo = {
+      count: getCurrentPages().length,
+      lastPageUrl: getCurrentPageUrl(),
+      lastPagePath: getCurrentPagePath(),
+      lastPageQuery: getCurrentPageQuery(),
+    }
+
     miniProgramBus.emit({
       name: 'currentPageUnload',
       context: this,
