@@ -1,7 +1,7 @@
 /// <reference types="miniprogram-api-typings" />
 import { AnyObject } from '../types'
 import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { last } from 'lodash'
+import { last } from '../utils'
 
 /**
  * 获取当前页面的路径（不含查询参数），始终以 `/` 开头。
