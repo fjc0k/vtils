@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.44.1](https://github.com/fjc0k/vtils/compare/v3.44.0...v3.44.1) (2020-08-31)
+
+### Bug Fixes
+
+- **getCurrentPagePath:** 从 utils 引入 last ([6a5ef5f](https://github.com/fjc0k/vtils/commit/6a5ef5f3fd5884286c6c45c1ddc24b30aee369d0))
+
 ## [3.44.0](https://github.com/fjc0k/vtils/compare/v3.43.1...v3.44.0) (2020-08-29)
 
 ### Features
