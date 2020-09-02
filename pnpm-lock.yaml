@@ -11,7 +11,7 @@ devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.8.37
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.9.11
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.8
-  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/10.4.9_react-dom@16.13.1+react@16.13.1
+  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.0.0_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.1_react@16.13.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.8
@@ -431,7 +431,7 @@ packages:
   registry.npm.taobao.org/@babel/runtime-corejs3/7.10.5:
     dependencies:
       core-js-pure: registry.npm.taobao.org/core-js-pure/3.6.5
-      regenerator-runtime: registry.npm.taobao.org/regenerator-runtime/0.13.5
+      regenerator-runtime: registry.npm.taobao.org/regenerator-runtime/0.13.7
     dev: true
     name: '@babel/runtime-corejs3'
     resolution:
@@ -1079,22 +1079,24 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.0.8.tgz'
     version: 3.0.8
-  registry.npm.taobao.org/@testing-library/dom/7.22.3:
+  registry.npm.taobao.org/@testing-library/dom/7.24.0:
     dependencies:
-      '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.10.5
+      '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
+      '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
       '@types/aria-query': registry.npm.taobao.org/@types/aria-query/4.2.0
       aria-query: registry.npm.taobao.org/aria-query/4.2.2
+      chalk: registry.npm.taobao.org/chalk/4.1.0
       dom-accessibility-api: registry.npm.taobao.org/dom-accessibility-api/0.5.1
-      pretty-format: registry.npm.taobao.org/pretty-format/25.5.0
+      pretty-format: registry.npm.taobao.org/pretty-format/26.4.2
     dev: true
     engines:
       node: '>=10'
     name: '@testing-library/dom'
     resolution:
-      integrity: sha1-EsCxuXEV53MdpqhrRXTq5AHLmsU=
+      integrity: sha1-tQBmEAlH5NG9Dy9oVcf/PyqHcOI=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@testing-library/dom/download/@testing-library/dom-7.22.3.tgz'
-    version: 7.22.3
+      tarball: 'https://registry.npm.taobao.org/@testing-library/dom/download/@testing-library/dom-7.24.0.tgz'
+    version: 7.24.0
   registry.npm.taobao.org/@testing-library/jest-dom/5.11.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.10.5
@@ -1134,25 +1136,25 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@testing-library/react-hooks/download/@testing-library/react-hooks-3.4.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact-hooks%2Fdownload%2F%40testing-library%2Freact-hooks-3.4.1.tgz'
     version: 3.4.1
-  registry.npm.taobao.org/@testing-library/react/10.4.9_react-dom@16.13.1+react@16.13.1:
+  registry.npm.taobao.org/@testing-library/react/11.0.0_react-dom@16.13.1+react@16.13.1:
     dependencies:
-      '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.10.5
-      '@testing-library/dom': registry.npm.taobao.org/@testing-library/dom/7.22.3
+      '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
+      '@testing-library/dom': registry.npm.taobao.org/@testing-library/dom/7.24.0
       react: registry.npm.taobao.org/react/16.13.1
       react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
     dev: true
     engines:
       node: '>=10'
-    id: registry.npm.taobao.org/@testing-library/react/10.4.9
+    id: registry.npm.taobao.org/@testing-library/react/11.0.0
     name: '@testing-library/react'
     peerDependencies:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha1-n6opxqGiF7+Lu5aii9KdeoR8oVA=
+      integrity: sha1-uKsYdS27CZhpJc2nPaeJw828T/A=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@testing-library/react/download/@testing-library/react-10.4.9.tgz?cache=0&sync_timestamp=1597991791241&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact%2Fdownload%2F%40testing-library%2Freact-10.4.9.tgz'
-    version: 10.4.9
+      tarball: 'https://registry.npm.taobao.org/@testing-library/react/download/@testing-library/react-11.0.0.tgz?cache=0&sync_timestamp=1599070251383&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact%2Fdownload%2F%40testing-library%2Freact-11.0.0.tgz'
+    version: 11.0.0
   registry.npm.taobao.org/@tokenizer/token/0.1.1:
     dev: true
     name: '@tokenizer/token'
@@ -2036,7 +2038,7 @@ packages:
     version: 0.0.2
   registry.npm.taobao.org/aria-query/4.2.2:
     dependencies:
-      '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.10.5
+      '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
       '@babel/runtime-corejs3': registry.npm.taobao.org/@babel/runtime-corejs3/7.10.5
     dev: true
     engines:
@@ -12510,7 +12512,7 @@ specifiers:
   '@microsoft/api-documenter': 7.8.37
   '@microsoft/api-extractor': 7.9.11
   '@tarojs/taro': 3.0.8
-  '@testing-library/react': 10.4.9
+  '@testing-library/react': 11.0.0
   '@testing-library/react-hooks': 3.4.1
   '@types/fs-extra': 9.0.1
   '@types/lodash-es': ^4.17.3
