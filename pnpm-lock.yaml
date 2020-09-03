@@ -27,7 +27,7 @@ devDependencies:
   haoma: registry.npm.taobao.org/haoma/2.4.3_9a8b8cfece8ff384bf55e68257ca8c72
   husky: registry.npm.taobao.org/husky/4.2.5
   jest: registry.npm.taobao.org/jest/26.4.2
-  lint-staged: registry.npm.taobao.org/lint-staged/10.2.13
+  lint-staged: registry.npm.taobao.org/lint-staged/10.3.0
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
   prettier: registry.npm.taobao.org/prettier/2.1.1
   prompts: registry.npm.taobao.org/prompts/2.3.2
@@ -2992,7 +2992,7 @@ packages:
     resolution:
       integrity: sha1-KycNqU+PuQFEVTEvgpoRKdv4iH4=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/commander/download/commander-6.0.0.tgz?cache=0&sync_timestamp=1596656743107&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcommander%2Fdownload%2Fcommander-6.0.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/commander/download/commander-6.0.0.tgz'
     version: 6.0.0
   registry.npm.taobao.org/compare-func/2.0.0:
     dependencies:
@@ -7587,7 +7587,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz'
     version: 1.1.6
-  registry.npm.taobao.org/lint-staged/10.2.13:
+  registry.npm.taobao.org/lint-staged/10.3.0:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
       cli-truncate: registry.npm.taobao.org/cli-truncate/2.1.0
@@ -7608,10 +7608,10 @@ packages:
     hasBin: true
     name: lint-staged
     resolution:
-      integrity: sha1-ucUEaDRw7fxGS30/44RaWh782BQ=
+      integrity: sha1-OIw9RAWQxFwznnFj9mnqaa6QseA=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.2.13.tgz?cache=0&sync_timestamp=1598371594148&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.2.13.tgz'
-    version: 10.2.13
+      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.3.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.3.0.tgz'
+    version: 10.3.0
   registry.npm.taobao.org/listr2/2.6.0_enquirer@2.3.6:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
@@ -12530,7 +12530,7 @@ specifiers:
   haoma: 2.4.3
   husky: 4.2.5
   jest: 26.4.2
-  lint-staged: 10.2.13
+  lint-staged: 10.3.0
   lodash: ^4.17.15
   lodash-es: ^4.17.15
   miniprogram-api-typings: ^3.0.0
