@@ -134,7 +134,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "rollup": "2.26.10",
-    "rollup-plugin-dts": "1.4.12",
+    "rollup-plugin-dts": "1.4.13",
     "shx": "0.3.2",
     "standard-version": "9.0.0",
     "ts-essentials": "7.0.0",
