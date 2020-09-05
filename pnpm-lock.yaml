@@ -9,7 +9,7 @@ dependencies:
   yup: registry.npm.taobao.org/yup/0.29.1
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.8.41
-  '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.9.11
+  '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.9.12
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.9
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.0.2_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.1_react@16.13.1
@@ -893,17 +893,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.8.41.tgz'
     version: 7.8.41
-  registry.npm.taobao.org/@microsoft/api-extractor-model/7.8.19:
-    dependencies:
-      '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
-      '@rushstack/node-core-library': registry.npm.taobao.org/@rushstack/node-core-library/3.30.0
-    dev: true
-    name: '@microsoft/api-extractor-model'
-    resolution:
-      integrity: sha1-pJ+xs/RUlmxPYOjWP/riWZ7qrOM=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor-model/download/@microsoft/api-extractor-model-7.8.19.tgz'
-    version: 7.8.19
   registry.npm.taobao.org/@microsoft/api-extractor-model/7.8.20:
     dependencies:
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -915,9 +904,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor-model/download/@microsoft/api-extractor-model-7.8.20.tgz'
     version: 7.8.20
-  registry.npm.taobao.org/@microsoft/api-extractor/7.9.11:
+  registry.npm.taobao.org/@microsoft/api-extractor/7.9.12:
     dependencies:
-      '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.8.19
+      '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.8.20
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
       '@rushstack/node-core-library': registry.npm.taobao.org/@rushstack/node-core-library/3.30.0
       '@rushstack/ts-command-line': registry.npm.taobao.org/@rushstack/ts-command-line/4.6.4
@@ -931,10 +920,10 @@ packages:
     hasBin: true
     name: '@microsoft/api-extractor'
     resolution:
-      integrity: sha1-ukJ2vxND9unfJWDnfnhhr06HQN0=
+      integrity: sha1-Gd70InrU22434ToNQQQX0576k64=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor/download/@microsoft/api-extractor-7.9.11.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-extractor%2Fdownload%2F%40microsoft%2Fapi-extractor-7.9.11.tgz'
-    version: 7.9.11
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor/download/@microsoft/api-extractor-7.9.12.tgz?cache=0&sync_timestamp=1599332519739&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-extractor%2Fdownload%2F%40microsoft%2Fapi-extractor-7.9.12.tgz'
+    version: 7.9.12
   registry.npm.taobao.org/@microsoft/tsdoc/0.12.19:
     dev: true
     name: '@microsoft/tsdoc'
@@ -11844,7 +11833,7 @@ packages:
     resolution:
       integrity: sha1-mNYApevcOPQMsndSLxLcgA6eJfo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/typescript/download/typescript-3.9.7.tgz?cache=0&sync_timestamp=1598530564478&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-3.9.7.tgz'
+      tarball: 'https://registry.npm.taobao.org/typescript/download/typescript-3.9.7.tgz'
     version: 3.9.7
   registry.npm.taobao.org/typescript/4.0.2:
     dev: true
@@ -12521,7 +12510,7 @@ packages:
     version: 3.18.4
 specifiers:
   '@microsoft/api-documenter': 7.8.41
-  '@microsoft/api-extractor': 7.9.11
+  '@microsoft/api-extractor': 7.9.12
   '@tarojs/taro': 3.0.9
   '@testing-library/react': 11.0.2
   '@testing-library/react-hooks': 3.4.1
