@@ -25,7 +25,7 @@ devDependencies:
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
   haoma: registry.npm.taobao.org/haoma/2.4.3_9a8b8cfece8ff384bf55e68257ca8c72
-  husky: registry.npm.taobao.org/husky/4.2.5
+  husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.4.2
   lint-staged: registry.npm.taobao.org/lint-staged/10.3.0
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
@@ -3353,22 +3353,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz'
     version: 1.0.2
-  registry.npm.taobao.org/cosmiconfig/6.0.0:
-    dependencies:
-      '@types/parse-json': registry.npm.taobao.org/@types/parse-json/4.0.0
-      import-fresh: registry.npm.taobao.org/import-fresh/3.2.1
-      parse-json: registry.npm.taobao.org/parse-json/5.0.0
-      path-type: registry.npm.taobao.org/path-type/4.0.0
-      yaml: registry.npm.taobao.org/yaml/1.10.0
-    dev: true
-    engines:
-      node: '>=8'
-    name: cosmiconfig
-    resolution:
-      integrity: sha1-2k/uhTxS9rHmk19BwaL8UL1KmYI=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/cosmiconfig/download/cosmiconfig-6.0.0.tgz'
-    version: 6.0.0
   registry.npm.taobao.org/cosmiconfig/7.0.0:
     dependencies:
       '@types/parse-json': registry.npm.taobao.org/@types/parse-json/4.0.0
@@ -5661,12 +5645,12 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/human-signals/download/human-signals-1.1.1.tgz'
     version: 1.1.1
-  registry.npm.taobao.org/husky/4.2.5:
+  registry.npm.taobao.org/husky/4.3.0:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
       ci-info: registry.npm.taobao.org/ci-info/2.0.0
       compare-versions: registry.npm.taobao.org/compare-versions/3.6.0
-      cosmiconfig: registry.npm.taobao.org/cosmiconfig/6.0.0
+      cosmiconfig: registry.npm.taobao.org/cosmiconfig/7.0.0
       find-versions: registry.npm.taobao.org/find-versions/3.2.0
       opencollective-postinstall: registry.npm.taobao.org/opencollective-postinstall/2.0.2
       pkg-dir: registry.npm.taobao.org/pkg-dir/4.2.0
@@ -5680,10 +5664,10 @@ packages:
     name: husky
     requiresBuild: true
     resolution:
-      integrity: sha1-K092Imc6cVefkB2Yhe1Eg5S1+jY=
+      integrity: sha1-Cy7B1mQk6SGdNZ4mpRxY7FJ48N4=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/husky/download/husky-4.2.5.tgz'
-    version: 4.2.5
+      tarball: 'https://registry.npm.taobao.org/husky/download/husky-4.3.0.tgz'
+    version: 4.3.0
   registry.npm.taobao.org/hyphenate-style-name/1.0.3:
     name: hyphenate-style-name
     resolution:
@@ -12528,7 +12512,7 @@ specifiers:
   fs-extra: 9.0.1
   globby: 11.0.1
   haoma: 2.4.3
-  husky: 4.2.5
+  husky: 4.3.0
   jest: 26.4.2
   lint-staged: 10.3.0
   lodash: ^4.17.15
