@@ -111,7 +111,7 @@
     "@microsoft/api-documenter": "7.8.46",
     "@microsoft/api-extractor": "7.9.15",
     "@tarojs/taro": "3.0.10",
-    "@testing-library/react": "11.0.3",
+    "@testing-library/react": "11.0.4",
     "@testing-library/react-hooks": "3.4.1",
     "@types/fs-extra": "9.0.1",
     "@types/prompts": "2.0.8",
