@@ -14,7 +14,7 @@ devDependencies:
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.0.4_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.1_react@16.13.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
-  '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.8
+  '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
   '@types/react': registry.npm.taobao.org/@types/react/16.9.49
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/16.9.8
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
@@ -1448,7 +1448,7 @@ packages:
     resolution:
       integrity: sha1-+eF4stoxpLDsYLZGSeJEwxzhja8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/node/download/@types/node-14.0.6.tgz'
+      tarball: 'https://registry.npm.taobao.org/@types/node/download/@types/node-14.0.6.tgz?cache=0&sync_timestamp=1599962713609&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.0.6.tgz'
     version: 14.0.6
   registry.npm.taobao.org/@types/normalize-package-data/2.4.0:
     dev: true
@@ -1482,16 +1482,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/prettier/download/@types/prettier-2.0.2.tgz'
     version: 2.0.2
-  registry.npm.taobao.org/@types/prompts/2.0.8:
+  registry.npm.taobao.org/@types/prompts/2.0.9:
     dependencies:
       '@types/node': registry.npm.taobao.org/@types/node/14.0.6
     dev: true
     name: '@types/prompts'
     resolution:
-      integrity: sha1-NQ/INBQmsraKVvh06juuOZ93GAA=
+      integrity: sha1-GfQZMQ6qIkpSBHaxnUGD9qKzvY8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/prompts/download/@types/prompts-2.0.8.tgz'
-    version: 2.0.8
+      tarball: 'https://registry.npm.taobao.org/@types/prompts/download/@types/prompts-2.0.9.tgz'
+    version: 2.0.9
   registry.npm.taobao.org/@types/prop-types/15.7.3:
     dev: true
     name: '@types/prop-types'
@@ -12500,7 +12500,7 @@ specifiers:
   '@testing-library/react-hooks': 3.4.1
   '@types/fs-extra': 9.0.1
   '@types/lodash-es': ^4.17.3
-  '@types/prompts': 2.0.8
+  '@types/prompts': 2.0.9
   '@types/react': 16.9.49
   '@types/react-dom': 16.9.8
   '@types/standard-version': 7.0.0
