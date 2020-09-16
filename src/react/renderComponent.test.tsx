@@ -17,8 +17,10 @@ describe('renderComponent', () => {
       destroy,
     } = renderComponent(Test, { a: -2 })
 
-    const getSum = () =>
-      Number(document.querySelector('.test')?.innerHTML.trim() || -1)
+    const getSum = () => {
+      const sum = document.querySelector('.test')?.innerHTML || ''
+      return Number(sum.trim() || -1)
+    }
 
     test('基本渲染', () => {
       expect(getSum()).toEqual(-2)
