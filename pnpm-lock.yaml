@@ -24,7 +24,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.0.3
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.4.3_23b49e8887fbcb5ae90d4f44855c41d1
+  haoma: registry.npm.taobao.org/haoma/2.4.4_23b49e8887fbcb5ae90d4f44855c41d1
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.4.2
   lint-staged: registry.npm.taobao.org/lint-staged/10.3.0
@@ -90,7 +90,7 @@ packages:
     resolution:
       integrity: sha1-HxXizKitmh14o43bphL158270zA=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@babel/core/download/@babel/core-7.10.5.tgz?cache=0&sync_timestamp=1597059511813&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fcore%2Fdownload%2F%40babel%2Fcore-7.10.5.tgz'
+      tarball: 'https://registry.npm.taobao.org/@babel/core/download/@babel/core-7.10.5.tgz'
     version: 7.10.5
   registry.npm.taobao.org/@babel/generator/7.10.5:
     dependencies:
@@ -496,7 +496,7 @@ packages:
     resolution:
       integrity: sha1-d85GT1sli+Jlr2GNj93wU28gtWQ=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@babel/traverse/download/@babel/traverse-7.10.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Ftraverse%2Fdownload%2F%40babel%2Ftraverse-7.10.5.tgz'
+      tarball: 'https://registry.npm.taobao.org/@babel/traverse/download/@babel/traverse-7.10.5.tgz'
     version: 7.10.5
   registry.npm.taobao.org/@babel/types/7.10.5:
     dependencies:
@@ -858,7 +858,7 @@ packages:
     resolution:
       integrity: sha1-TWpHk/e5WZ/DaAh3uFapfbzPKp0=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@jest/types/download/@jest/types-25.5.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/@jest/types/download/@jest/types-25.5.0.tgz?cache=0&sync_timestamp=1597057749754&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40jest%2Ftypes%2Fdownload%2F%40jest%2Ftypes-25.5.0.tgz'
     version: 25.5.0
   registry.npm.taobao.org/@jest/types/26.3.0:
     dependencies:
@@ -932,6 +932,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@microsoft/tsdoc/download/@microsoft/tsdoc-0.12.19.tgz?cache=0&sync_timestamp=1599237510621&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Ftsdoc%2Fdownload%2F%40microsoft%2Ftsdoc-0.12.19.tgz'
     version: 0.12.19
+  registry.npm.taobao.org/@node-rs/helper/0.4.0:
+    dependencies:
+      tslib: registry.npm.taobao.org/tslib/2.0.1
+    dev: true
+    name: '@node-rs/helper'
+    resolution:
+      integrity: sha1-3ux9lar6kFNZgKUcvVM2uLvv6To=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@node-rs/helper/download/@node-rs/helper-0.4.0.tgz'
+    version: 0.4.0
   registry.npm.taobao.org/@nodelib/fs.scandir/2.1.3:
     dependencies:
       '@nodelib/fs.stat': registry.npm.taobao.org/@nodelib/fs.stat/2.0.3
@@ -1019,6 +1029,59 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@sinonjs/fake-timers/download/@sinonjs/fake-timers-6.0.1.tgz'
     version: 6.0.1
+  registry.npm.taobao.org/@swc-node/core-darwin/0.7.5:
+    dev: true
+    name: '@swc-node/core-darwin'
+    optional: true
+    resolution:
+      integrity: sha1-OX9HN5E2VI1+kAFQ9GOXGUw9Ok4=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc-node/core-darwin/download/@swc-node/core-darwin-0.7.5.tgz'
+    version: 0.7.5
+  registry.npm.taobao.org/@swc-node/core-linux/0.7.5:
+    dev: true
+    name: '@swc-node/core-linux'
+    optional: true
+    resolution:
+      integrity: sha1-p8vCyExj8eLoNoMXs91eA508gzA=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc-node/core-linux/download/@swc-node/core-linux-0.7.5.tgz'
+    version: 0.7.5
+  registry.npm.taobao.org/@swc-node/core-win32/0.7.5:
+    dev: true
+    name: '@swc-node/core-win32'
+    optional: true
+    resolution:
+      integrity: sha1-o9P/ic2fRmVsoQqlCWTliKKR/UE=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc-node/core-win32/download/@swc-node/core-win32-0.7.5.tgz'
+    version: 0.7.5
+  registry.npm.taobao.org/@swc-node/core/0.7.5:
+    dependencies:
+      '@node-rs/helper': registry.npm.taobao.org/@node-rs/helper/0.4.0
+    dev: true
+    engines:
+      node: '>= 8.9'
+    name: '@swc-node/core'
+    optionalDependencies:
+      '@swc-node/core-darwin': registry.npm.taobao.org/@swc-node/core-darwin/0.7.5
+      '@swc-node/core-linux': registry.npm.taobao.org/@swc-node/core-linux/0.7.5
+      '@swc-node/core-win32': registry.npm.taobao.org/@swc-node/core-win32/0.7.5
+    resolution:
+      integrity: sha1-7XiG3ocd7YWbm2BRi5pXuB0J5so=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc-node/core/download/@swc-node/core-0.7.5.tgz'
+    version: 0.7.5
+  registry.npm.taobao.org/@swc-node/jest/0.3.7:
+    dependencies:
+      '@swc-node/core': registry.npm.taobao.org/@swc-node/core/0.7.5
+    dev: true
+    name: '@swc-node/jest'
+    resolution:
+      integrity: sha1-WqFsnNN3qeSs07bi8uysr/Hc4kk=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc-node/jest/download/@swc-node/jest-0.3.7.tgz'
+    version: 0.3.7
   registry.npm.taobao.org/@tarojs/api/3.0.10:
     dependencies:
       '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.10
@@ -1099,7 +1162,7 @@ packages:
     version: 7.24.2
   registry.npm.taobao.org/@testing-library/jest-dom/5.11.1:
     dependencies:
-      '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.10.5
+      '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
       '@types/testing-library__jest-dom': registry.npm.taobao.org/@types/testing-library__jest-dom/5.9.1
       aria-query: registry.npm.taobao.org/aria-query/4.2.2
       chalk: registry.npm.taobao.org/chalk/3.0.0
@@ -1440,7 +1503,7 @@ packages:
     resolution:
       integrity: sha1-6bLoX6/BXyqKqP3UEJG5g9pf1u4=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/node/download/@types/node-12.12.50.tgz?cache=0&sync_timestamp=1597724769163&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-12.12.50.tgz'
+      tarball: 'https://registry.npm.taobao.org/@types/node/download/@types/node-12.12.50.tgz'
     version: 12.12.50
   registry.npm.taobao.org/@types/node/14.0.6:
     dev: true
@@ -1640,13 +1703,10 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-3.6.1.tgz?cache=0&sync_timestamp=1597753386604&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Feslint-plugin%2Fdownload%2F%40typescript-eslint%2Feslint-plugin-3.6.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-3.6.1.tgz'
     version: 3.6.1
   registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.6.1_eslint@7.9.0+typescript@4.0.2:
     dependencies:
@@ -1686,13 +1746,10 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/parser/download/@typescript-eslint/parser-3.6.1.tgz?cache=0&sync_timestamp=1597753380661&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Fparser%2Fdownload%2F%40typescript-eslint%2Fparser-3.6.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/parser/download/@typescript-eslint/parser-3.6.1.tgz'
     version: 3.6.1
   registry.npm.taobao.org/@typescript-eslint/types/3.6.1:
     dev: true
@@ -1722,9 +1779,6 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-pckfzFSXzOeSL/hrw31eWJHc3vo=
       registry: 'https://r.npm.taobao.org/'
@@ -1780,19 +1834,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/acorn-globals/download/acorn-globals-6.0.0.tgz'
     version: 6.0.0
-  registry.npm.taobao.org/acorn-jsx/5.2.0_acorn@7.3.1:
-    dependencies:
-      acorn: registry.npm.taobao.org/acorn/7.3.1
-    dev: true
-    id: registry.npm.taobao.org/acorn-jsx/5.2.0
-    name: acorn-jsx
-    peerDependencies:
-      acorn: ^6.0.0 || ^7.0.0
-    resolution:
-      integrity: sha1-TGYGkXPW/daO2FI5/CViJhgrLr4=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/acorn-jsx/download/acorn-jsx-5.2.0.tgz'
-    version: 5.2.0
   registry.npm.taobao.org/acorn-jsx/5.2.0_acorn@7.4.0:
     dependencies:
       acorn: registry.npm.taobao.org/acorn/7.4.0
@@ -4230,7 +4271,7 @@ packages:
   registry.npm.taobao.org/eslint/6.8.0:
     dependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
-      ajv: registry.npm.taobao.org/ajv/6.12.3
+      ajv: registry.npm.taobao.org/ajv/6.12.4
       chalk: registry.npm.taobao.org/chalk/2.4.2
       cross-spawn: registry.npm.taobao.org/cross-spawn/6.0.5
       debug: registry.npm.taobao.org/debug/4.1.1
@@ -4274,7 +4315,7 @@ packages:
     resolution:
       integrity: sha1-YiYtZylzn5J1cjgkMC+yJ8jJP/s=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/eslint/download/eslint-6.8.0.tgz?cache=0&sync_timestamp=1597441320988&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint%2Fdownload%2Feslint-6.8.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/eslint/download/eslint-6.8.0.tgz'
     version: 6.8.0
   registry.npm.taobao.org/eslint/7.9.0:
     dependencies:
@@ -4327,8 +4368,8 @@ packages:
     version: 7.9.0
   registry.npm.taobao.org/espree/6.2.1:
     dependencies:
-      acorn: registry.npm.taobao.org/acorn/7.3.1
-      acorn-jsx: registry.npm.taobao.org/acorn-jsx/5.2.0_acorn@7.3.1
+      acorn: registry.npm.taobao.org/acorn/7.4.0
+      acorn-jsx: registry.npm.taobao.org/acorn-jsx/5.2.0_acorn@7.4.0
       eslint-visitor-keys: registry.npm.taobao.org/eslint-visitor-keys/1.3.0
     dev: true
     engines:
@@ -4507,7 +4548,7 @@ packages:
     resolution:
       integrity: sha1-t1FltIFwdPpKFXeU9G/p8boVtso=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/expect/download/expect-24.9.0.tgz?cache=0&sync_timestamp=1597266736438&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexpect%2Fdownload%2Fexpect-24.9.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/expect/download/expect-24.9.0.tgz'
     version: 24.9.0
   registry.npm.taobao.org/expect/25.5.0:
     dependencies:
@@ -4524,7 +4565,7 @@ packages:
     resolution:
       integrity: sha1-8H+EhxKigTu1kWfaP7goyiH1i7o=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/expect/download/expect-25.5.0.tgz?cache=0&sync_timestamp=1597266736438&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexpect%2Fdownload%2Fexpect-25.5.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/expect/download/expect-25.5.0.tgz'
     version: 25.5.0
   registry.npm.taobao.org/expect/26.4.2:
     dependencies:
@@ -5341,11 +5382,12 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.4.3_23b49e8887fbcb5ae90d4f44855c41d1:
+  registry.npm.taobao.org/haoma/2.4.4_23b49e8887fbcb5ae90d4f44855c41d1:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.10.5
       '@babel/plugin-transform-modules-commonjs': registry.npm.taobao.org/@babel/plugin-transform-modules-commonjs/7.10.4_@babel+core@7.10.5
       '@jest/types': registry.npm.taobao.org/@jest/types/26.3.0
+      '@swc-node/jest': registry.npm.taobao.org/@swc-node/jest/0.3.7
       '@testing-library/jest-dom': registry.npm.taobao.org/@testing-library/jest-dom/5.11.1
       '@types/eslint': registry.npm.taobao.org/@types/eslint/7.2.0
       '@types/jest': registry.npm.taobao.org/@types/jest/25.2.3
@@ -5368,6 +5410,7 @@ packages:
       jest-extended: registry.npm.taobao.org/jest-extended/0.11.5
       jest-serializer-html: registry.npm.taobao.org/jest-serializer-html/7.0.0
       jest-snapshot-serializer-function-name: registry.npm.taobao.org/jest-snapshot-serializer-function-name/1.1.0
+      json5: registry.npm.taobao.org/json5/2.1.3
       pkg-dir: registry.npm.taobao.org/pkg-dir/4.2.0
       prettier: registry.npm.taobao.org/prettier/2.1.1
       prettier-plugin-packagejson: registry.npm.taobao.org/prettier-plugin-packagejson/2.2.5_prettier@2.1.1
@@ -5382,7 +5425,7 @@ packages:
       yargs: registry.npm.taobao.org/yargs/15.4.1
     dev: true
     hasBin: true
-    id: registry.npm.taobao.org/haoma/2.4.3
+    id: registry.npm.taobao.org/haoma/2.4.4
     name: haoma
     peerDependencies:
       eslint: ^7
@@ -5393,10 +5436,10 @@ packages:
       typescript: ^3
     requiresBuild: true
     resolution:
-      integrity: sha1-AZ+xTbjz8GKFG771AYAzbI9i78E=
+      integrity: sha1-WU4be4QmwoUsv3950XPFHF18oWM=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.4.3.tgz?cache=0&sync_timestamp=1597836308983&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhaoma%2Fdownload%2Fhaoma-2.4.3.tgz'
-    version: 2.4.3
+      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.4.4.tgz?cache=0&sync_timestamp=1600219627386&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhaoma%2Fdownload%2Fhaoma-2.4.4.tgz'
+    version: 2.4.4
   registry.npm.taobao.org/har-schema/2.0.0:
     dev: true
     engines:
@@ -5852,7 +5895,7 @@ packages:
       lodash: registry.npm.taobao.org/lodash/4.17.19
       mute-stream: registry.npm.taobao.org/mute-stream/0.0.8
       run-async: registry.npm.taobao.org/run-async/2.4.1
-      rxjs: registry.npm.taobao.org/rxjs/6.6.0
+      rxjs: registry.npm.taobao.org/rxjs/6.6.2
       string-width: registry.npm.taobao.org/string-width/4.2.0
       strip-ansi: registry.npm.taobao.org/strip-ansi/6.0.0
       through: registry.npm.taobao.org/through/2.3.8
@@ -6544,7 +6587,7 @@ packages:
     resolution:
       integrity: sha1-kxt9DVd4obr3RSy4FuMl43JAVdo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/jest-diff/download/jest-diff-24.9.0.tgz?cache=0&sync_timestamp=1597266735821&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-diff%2Fdownload%2Fjest-diff-24.9.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/jest-diff/download/jest-diff-24.9.0.tgz'
     version: 24.9.0
   registry.npm.taobao.org/jest-diff/25.5.0:
     dependencies:
@@ -6559,7 +6602,7 @@ packages:
     resolution:
       integrity: sha1-HdJu1k+WZnwGjO8Ca2d9+gGvz6k=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/jest-diff/download/jest-diff-25.5.0.tgz?cache=0&sync_timestamp=1597266735821&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-diff%2Fdownload%2Fjest-diff-25.5.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/jest-diff/download/jest-diff-25.5.0.tgz'
     version: 25.5.0
   registry.npm.taobao.org/jest-diff/26.4.2:
     dependencies:
@@ -6767,7 +6810,7 @@ packages:
     resolution:
       integrity: sha1-RjL+Qo68c+vBlNPHtl03sWH3EP8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/jest-matcher-utils/download/jest-matcher-utils-22.4.3.tgz?cache=0&sync_timestamp=1597266736268&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-matcher-utils%2Fdownload%2Fjest-matcher-utils-22.4.3.tgz'
+      tarball: 'https://registry.npm.taobao.org/jest-matcher-utils/download/jest-matcher-utils-22.4.3.tgz'
     version: 22.4.3
   registry.npm.taobao.org/jest-matcher-utils/24.9.0:
     dependencies:
@@ -6782,7 +6825,7 @@ packages:
     resolution:
       integrity: sha1-9bNmHV5ijf/m3WUlHf2uDofDoHM=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/jest-matcher-utils/download/jest-matcher-utils-24.9.0.tgz?cache=0&sync_timestamp=1597266736268&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-matcher-utils%2Fdownload%2Fjest-matcher-utils-24.9.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/jest-matcher-utils/download/jest-matcher-utils-24.9.0.tgz'
     version: 24.9.0
   registry.npm.taobao.org/jest-matcher-utils/25.5.0:
     dependencies:
@@ -6797,7 +6840,7 @@ packages:
     resolution:
       integrity: sha1-+8mKEtcw5dJFPX8e1KTZSONLeGc=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/jest-matcher-utils/download/jest-matcher-utils-25.5.0.tgz?cache=0&sync_timestamp=1597266736268&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-matcher-utils%2Fdownload%2Fjest-matcher-utils-25.5.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/jest-matcher-utils/download/jest-matcher-utils-25.5.0.tgz'
     version: 25.5.0
   registry.npm.taobao.org/jest-matcher-utils/26.4.2:
     dependencies:
@@ -6894,9 +6937,6 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
-    peerDependenciesMeta:
-      jest-resolve:
-        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -6912,9 +6952,6 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
-    peerDependenciesMeta:
-      jest-resolve:
-        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -7133,7 +7170,7 @@ packages:
     resolution:
       integrity: sha1-GipXZJH5lh640AwuX9R5vCjl/38=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/jest-snapshot/download/jest-snapshot-25.5.1.tgz?cache=0&sync_timestamp=1597266721928&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-snapshot%2Fdownload%2Fjest-snapshot-25.5.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/jest-snapshot/download/jest-snapshot-25.5.1.tgz'
     version: 25.5.1
   registry.npm.taobao.org/jest-snapshot/26.4.2:
     dependencies:
@@ -9223,7 +9260,7 @@ packages:
     resolution:
       integrity: sha1-+HPXgIOanALpZkyKCC6e556qwW8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/pretty-format/download/pretty-format-22.4.3.tgz?cache=0&sync_timestamp=1597266735384&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpretty-format%2Fdownload%2Fpretty-format-22.4.3.tgz'
+      tarball: 'https://registry.npm.taobao.org/pretty-format/download/pretty-format-22.4.3.tgz'
     version: 22.4.3
   registry.npm.taobao.org/pretty-format/24.9.0:
     dependencies:
@@ -9238,7 +9275,7 @@ packages:
     resolution:
       integrity: sha1-EvrDGzcBmk7qPBGqmpWet2KKp8k=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/pretty-format/download/pretty-format-24.9.0.tgz?cache=0&sync_timestamp=1597266735384&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpretty-format%2Fdownload%2Fpretty-format-24.9.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/pretty-format/download/pretty-format-24.9.0.tgz'
     version: 24.9.0
   registry.npm.taobao.org/pretty-format/25.5.0:
     dependencies:
@@ -9253,7 +9290,7 @@ packages:
     resolution:
       integrity: sha1-eHPB13T2gsNLjUi2dDor8qxVeRo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/pretty-format/download/pretty-format-25.5.0.tgz?cache=0&sync_timestamp=1597266735384&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpretty-format%2Fdownload%2Fpretty-format-25.5.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/pretty-format/download/pretty-format-25.5.0.tgz'
     version: 25.5.0
   registry.npm.taobao.org/pretty-format/26.4.2:
     dependencies:
@@ -10091,18 +10128,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/run-parallel/download/run-parallel-1.1.9.tgz'
     version: 1.1.9
-  registry.npm.taobao.org/rxjs/6.6.0:
-    dependencies:
-      tslib: registry.npm.taobao.org/tslib/1.13.0
-    dev: true
-    engines:
-      npm: '>=2.0.0'
-    name: rxjs
-    resolution:
-      integrity: sha1-rykB7t8C46g/+n+IYkD/kBi77IQ=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/rxjs/download/rxjs-6.6.0.tgz'
-    version: 6.6.0
   registry.npm.taobao.org/rxjs/6.6.2:
     dependencies:
       tslib: registry.npm.taobao.org/tslib/1.13.0
@@ -11664,6 +11689,14 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/tslib/download/tslib-2.0.0.tgz'
     version: 2.0.0
+  registry.npm.taobao.org/tslib/2.0.1:
+    dev: true
+    name: tslib
+    resolution:
+      integrity: sha1-QQ6w0RPltjVkkO7HSWA3JbAhtD4=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/tslib/download/tslib-2.0.1.tgz'
+    version: 2.0.1
   registry.npm.taobao.org/tsutils/3.17.1_typescript@4.0.2:
     dependencies:
       tslib: registry.npm.taobao.org/tslib/1.13.0
@@ -12511,7 +12544,7 @@ specifiers:
   execa: 4.0.3
   fs-extra: 9.0.1
   globby: 11.0.1
-  haoma: 2.4.3
+  haoma: 2.4.4
   husky: 4.3.0
   jest: 26.4.2
   lint-staged: 10.3.0
