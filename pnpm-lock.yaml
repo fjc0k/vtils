@@ -38,7 +38,6 @@ devDependencies:
   shx: registry.npm.taobao.org/shx/0.3.2
   standard-version: registry.npm.taobao.org/standard-version/9.0.0
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.0_typescript@4.0.2
-  ts-node: registry.npm.taobao.org/ts-node/9.0.0_typescript@4.0.2
   type-fest: registry.npm.taobao.org/type-fest/0.16.0
   typescript: registry.npm.taobao.org/typescript/4.0.2
   typescript-snapshots-plugin: registry.npm.taobao.org/typescript-snapshots-plugin/1.7.0
@@ -1769,6 +1768,9 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
@@ -1812,6 +1814,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
@@ -1845,6 +1850,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-pckfzFSXzOeSL/hrw31eWJHc3vo=
       registry: 'https://r.npm.taobao.org/'
@@ -2115,14 +2123,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/anymatch/download/anymatch-3.1.1.tgz'
     version: 3.1.1
-  registry.npm.taobao.org/arg/4.1.3:
-    dev: true
-    name: arg
-    resolution:
-      integrity: sha1-Jp/HrVuOQstjyJbVZmAXJhwUQIk=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/arg/download/arg-4.1.3.tgz'
-    version: 4.1.3
   registry.npm.taobao.org/argparse/1.0.10:
     dependencies:
       sprintf-js: registry.npm.taobao.org/sprintf-js/1.0.3
@@ -3867,16 +3867,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/diff-sequences/download/diff-sequences-26.3.0.tgz'
     version: 26.3.0
-  registry.npm.taobao.org/diff/4.0.2:
-    dev: true
-    engines:
-      node: '>=0.3.1'
-    name: diff
-    resolution:
-      integrity: sha1-YPOuy4nV+uUgwRqhnvwruYKq3n0=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/diff/download/diff-4.0.2.tgz'
-    version: 4.0.2
   registry.npm.taobao.org/diffable-html/4.0.0:
     dependencies:
       htmlparser2: registry.npm.taobao.org/htmlparser2/3.10.1
@@ -11726,27 +11716,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/ts-jest/download/ts-jest-26.1.3.tgz'
     version: 26.1.3
-  registry.npm.taobao.org/ts-node/9.0.0_typescript@4.0.2:
-    dependencies:
-      arg: registry.npm.taobao.org/arg/4.1.3
-      diff: registry.npm.taobao.org/diff/4.0.2
-      make-error: registry.npm.taobao.org/make-error/1.3.6
-      source-map-support: registry.npm.taobao.org/source-map-support/0.5.19
-      typescript: registry.npm.taobao.org/typescript/4.0.2
-      yn: registry.npm.taobao.org/yn/3.1.1
-    dev: true
-    engines:
-      node: '>=10.0.0'
-    hasBin: true
-    id: registry.npm.taobao.org/ts-node/9.0.0
-    name: ts-node
-    peerDependencies:
-      typescript: '>=2.7'
-    resolution:
-      integrity: sha1-52mdKhEMyMDTuDFxXkF2iGg0YLM=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/ts-node/download/ts-node-9.0.0.tgz?cache=0&sync_timestamp=1598033491214&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fts-node%2Fdownload%2Fts-node-9.0.0.tgz'
-    version: 9.0.0
   registry.npm.taobao.org/tslib/1.13.0:
     dev: true
     name: tslib
@@ -12558,16 +12527,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/yargs/download/yargs-15.4.1.tgz'
     version: 15.4.1
-  registry.npm.taobao.org/yn/3.1.1:
-    dev: true
-    engines:
-      node: '>=6'
-    name: yn
-    resolution:
-      integrity: sha1-HodAGgnXZ8HV6rJqbkwYUYLS61A=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/yn/download/yn-3.1.1.tgz'
-    version: 3.1.1
   registry.npm.taobao.org/yup/0.29.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
@@ -12635,7 +12594,6 @@ specifiers:
   shx: 0.3.2
   standard-version: 9.0.0
   ts-essentials: 7.0.0
-  ts-node: 9.0.0
   tslib: ^2.0.0
   type-fest: 0.16.0
   typescript: 4.0.2
