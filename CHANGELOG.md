@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.45.0](https://github.com/fjc0k/vtils/compare/v3.44.1...v3.45.0) (2020-09-17)
+
+### Features
+
+- **navigatePageTo:** 在页面真正切换后 Promise 才会被 resolve ([35a5721](https://github.com/fjc0k/vtils/commit/35a5721510e992b128aa61bf6071585c399c2623))
+
 ### [3.44.1](https://github.com/fjc0k/vtils/compare/v3.44.0...v3.44.1) (2020-08-31)
 
 ### Bug Fixes
