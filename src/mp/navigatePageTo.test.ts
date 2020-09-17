@@ -27,6 +27,17 @@ describe('navigatePageTo', () => {
         switchTab: switchTab,
       }),
     }))
+    jest.mock(
+      './miniProgramBus',
+      () =>
+        ({
+          miniProgramBus: {
+            once: (name, cb) => {
+              cb()
+            },
+          },
+        } as typeof import('./miniProgramBus')),
+    )
   })
 
   afterEach(() => {
