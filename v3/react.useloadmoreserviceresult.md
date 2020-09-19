@@ -12,5 +12,8 @@
 export declare type UseLoadMoreServiceResult<TItem> = TItem[] | {
     total: number;
     data: TItem[];
+} | {
+    total: number;
+    list: TItem[];
 };
 ```
