@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.47.0](https://github.com/fjc0k/vtils/compare/v3.46.0...v3.47.0) (2020-09-19)
+
+### Features
+
+- **useLoadMore:** 返回数据兼容 list 属性代替 data 属性的情况 ([f28212f](https://github.com/fjc0k/vtils/commit/f28212fd6cdd704e5e1690f43e9244add8bfa42b))
+
 ## [3.46.0](https://github.com/fjc0k/vtils/compare/v3.45.0...v3.46.0) (2020-09-19)
 
 ### Features
