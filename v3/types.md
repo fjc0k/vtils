@@ -6,6 +6,20 @@
 
 类型工具库。
 
+## Interfaces
+
+|  Interface | Description |
+|  --- | --- |
+|  [JsonArray](./types.jsonarray.md) | Matches a JSON array. |
+|  [TsConfigJson](./types.tsconfigjson.md) |  |
+
+## Namespaces
+
+|  Namespace | Description |
+|  --- | --- |
+|  [PackageJson](./types.packagejson.md) |  |
+|  [TsConfigJson](./types.tsconfigjson.md) |  |
+
 ## Type Aliases
 
 |  Type Alias | Description |
@@ -22,6 +36,8 @@
 |  [FirstParameter](./types.firstparameter.md) | 返回函数 T 第一个参数的类型。 |
 |  [FixedLengthArray](./types.fixedlengtharray.md) | Create a type that represents an array of the given type and length. The array's length and the <code>Array</code> prototype methods that manipulate its length are excluded in the resulting type.<!-- -->Please participate in \[this issue\](https://github.com/microsoft/TypeScript/issues/26223) if you want to have a similiar type built into TypeScript.<!-- -->Use-cases: - Declaring fixed-length tuples or arrays with a large number of items. - Creating a range union (for example, <code>0 &#124; 1 &#124; 2 &#124; 3 &#124; 4</code> from the keys of such a type) without having to resort to recursive types. - Creating an array of coordinates with a static length, for example, length of 3 for a 3D vector. |
 |  [Head](./types.head.md) | Functional programming essentials |
+|  [JsonObject](./types.jsonobject.md) | Matches a JSON object.<!-- -->This type can be useful to enforce some input to be JSON-compatible or as a super-type to be extended from. Don't use this as a direct return type as the user would have to double-cast it: <code>jsonObject as unknown as CustomResponse</code>. Instead, you could extend your CustomResponse type from it to ensure your type only uses JSON-compatible types: <code>interface CustomResponse extends JsonObject { … }</code>. |
+|  [JsonValue](./types.jsonvalue.md) | Matches any valid JSON value. |
 |  [LiteralUnion](./types.literalunion.md) | Allows creating a union type by combining primitive types and literal types without sacrificing auto-completion in IDEs for the literal type part of the union.<!-- -->Currently, when a union type of a primitive type is combined with literal types, TypeScript loses all information about the combined literals. Thus, when such type is used in an IDE with autocompletion, no suggestions are made for the declared literals.<!-- -->This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com/Microsoft/TypeScript/issues/29729). It will be removed as soon as it's not needed anymore. |
 |  [Merge](./types.merge.md) | Merge 2 types, properties types from the latter override the ones defined on the former type |
 |  [NonNullableDeep](./types.nonnullabledeep.md) | Like NonNullable but recursive |
@@ -31,6 +47,7 @@
 |  [OmitStrict](./types.omitstrict.md) | Similar to the builtin Omit, but checks the filter strictly. |
 |  [OneOrMany](./types.oneormany.md) | 同 <code>T &#124; T[]</code>。 |
 |  [OptionalKeys](./types.optionalkeys.md) | Gets keys of an object which are optional |
+|  [PackageJson](./types.packagejson.md) | Type for \[npm's <code>package.json</code> file\](https://docs.npmjs.com/creating-a-package-json-file). Also includes types for fields used by other popular projects, like TypeScript and Yarn. |
 |  [PartialBy](./types.partialby.md) | Mark some properties as optional, leaving others unchanged |
 |  [PartialDeep](./types.partialdeep.md) | Like Partial but recursive |
 |  [Path](./types.path.md) | 获取对象的路径。最多支持 7 级路径。 |

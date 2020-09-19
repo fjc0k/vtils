@@ -26,6 +26,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  [useLocalStorage(key, initialState)](./react.uselocalstorage_1.md) |  |
 |  [useReachBottom(callback, offset)](./react.usereachbottom.md) | 立即触发一次回调，并且每当到达页面底部时触发回调。 |
 |  [useScrollLoadMore(service, deps, options)](./react.usescrollloadmore.md) | 滚动数据加载。 |
+|  [useStateWithDeps(state, deps)](./react.usestatewithdeps.md) | 给 useState 插上依赖的翅膀。依赖变化时会更新状态。 |
 |  [useToggle(initialValue)](./react.usetoggle.md) | 布尔值切换器。 |
 |  [useValidator(data, dataDeps, schema, schemaDeps)](./react.usevalidator.md) |  |
 |  [useValidator(data, schema, schemaDeps)](./react.usevalidator_1.md) |  |
