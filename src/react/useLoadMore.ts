@@ -26,6 +26,12 @@ export type UseLoadMoreServiceResult<TItem> =
       /** 当前页数据 */
       data: TItem[]
     }
+  | {
+      /** 总数据量 */
+      total: number
+      /** 当前页数据 */
+      list: TItem[]
+    }
 
 /**
  * 加载服务。
@@ -114,10 +120,12 @@ export function useLoadMore<TItem>(
             setData(isFirstPage ? res : [...data, ...res])
           } else {
             setTotal(res.total)
+            const pageData: TItem[] =
+              (res as any).data || (res as any).list || []
             setNoMore(
-              (isFirstPage ? 0 : data.length) + res.data.length >= res.total,
+              (isFirstPage ? 0 : data.length) + pageData.length >= res.total,
             )
-            setData(isFirstPage ? res.data : [...data, ...res.data])
+            setData(isFirstPage ? pageData : [...data, ...pageData])
           }
 
           resolve()
