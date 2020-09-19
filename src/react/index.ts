@@ -128,6 +128,7 @@ export * from './useEnvironment'
 export * from './useLoadMore'
 export * from './useReachBottom'
 export * from './useScrollLoadMore'
+export * from './useStateWithDeps'
 export * from './useValidator'
 // @endindex
 
