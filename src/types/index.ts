@@ -6,7 +6,16 @@
 
 /* istanbul ignore file */
 
-export type { LiteralUnion, AsyncReturnType, FixedLengthArray } from 'type-fest'
+export type {
+  LiteralUnion,
+  AsyncReturnType,
+  FixedLengthArray,
+  PackageJson,
+  TsConfigJson,
+  JsonValue,
+  JsonArray,
+  JsonObject,
+} from 'type-fest'
 
 export type {
   AnyArray,
