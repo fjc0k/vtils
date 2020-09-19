@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.46.0](https://github.com/fjc0k/vtils/compare/v3.45.0...v3.46.0) (2020-09-19)
+
+### Features
+
+- **react:** 新增 useStateWithDeps ([dff9b73](https://github.com/fjc0k/vtils/commit/dff9b73a26196257a6a837b66131be97b40e5e87))
+- **types:** 导出 PackageJson, TsConfigJson, JsonValue, JsonArray, JsonObject ([59ecc3d](https://github.com/fjc0k/vtils/commit/59ecc3d07a5e392791ec15fd6de63acc22af7c39))
+
 ## [3.45.0](https://github.com/fjc0k/vtils/compare/v3.44.1...v3.45.0) (2020-09-17)
 
 ### Features
