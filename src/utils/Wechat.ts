@@ -230,6 +230,33 @@ export interface WechatOpenLocationParams {
   infoUrl?: string
 }
 
+export interface WechatRequestPaymentParams {
+  /**
+   * 支付签名时间戳。
+   */
+  timestamp: number
+
+  /**
+   * 支付签名随机串。
+   */
+  nonceStr: string
+
+  /**
+   * 统一支付接口返回的 prepay_id 参数值，如：`prepay_id=xxx`。
+   */
+  package: string
+
+  /**
+   * 签名方式。
+   */
+  signType: string
+
+  /**
+   * 支付签名。
+   */
+  paySign: string
+}
+
 /**
  * 微信内网页的非基础菜单列表。
  *
@@ -538,6 +565,15 @@ export class Wechat {
   }
 
   /**
+   * 发起微信支付。
+   *
+   * @param params 参数
+   */
+  requestPayment(params: WechatRequestPaymentParams): Promise<any> {
+    return this.invoke('chooseWXPay', params)
+  }
+
+  /**
    * 错误处理。
    *
    * @param callback 出错时的回调函数
@@ -565,6 +601,7 @@ export class Wechat {
           ...params,
           success: resolve,
           fail: reject,
+          cancel: reject,
         })
       }
       if (typeof wx === 'undefined' || !this.ready) {
