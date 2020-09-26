@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.48.0](https://github.com/fjc0k/vtils/compare/v3.47.0...v3.48.0) (2020-09-26)
+
+### Features
+
+- **Wechat:** 添加 requestPayment 方法 ([3827479](https://github.com/fjc0k/vtils/commit/3827479793ffcf51d87c58344fda0e61249aed7c))
+
 ## [3.47.0](https://github.com/fjc0k/vtils/compare/v3.46.0...v3.47.0) (2020-09-19)
 
 ### Features
