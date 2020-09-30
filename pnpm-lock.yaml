@@ -9,7 +9,7 @@ dependencies:
   yup: registry.npm.taobao.org/yup/0.29.1
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.0
-  '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.9.22
+  '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.10.0
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.11
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.0.4_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@16.13.1
@@ -892,23 +892,13 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor-model/download/@microsoft/api-extractor-model-7.10.0.tgz'
     version: 7.10.0
-  registry.npm.taobao.org/@microsoft/api-extractor-model/7.9.7:
+  registry.npm.taobao.org/@microsoft/api-extractor/7.10.0:
     dependencies:
+      '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.0
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
-      '@rushstack/node-core-library': registry.npm.taobao.org/@rushstack/node-core-library/3.33.6
-    dev: true
-    name: '@microsoft/api-extractor-model'
-    resolution:
-      integrity: sha1-XkHO5YgnaXnuLqn97HGrNRv/arQ=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor-model/download/@microsoft/api-extractor-model-7.9.7.tgz'
-    version: 7.9.7
-  registry.npm.taobao.org/@microsoft/api-extractor/7.9.22:
-    dependencies:
-      '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.9.7
-      '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
-      '@rushstack/node-core-library': registry.npm.taobao.org/@rushstack/node-core-library/3.33.6
-      '@rushstack/ts-command-line': registry.npm.taobao.org/@rushstack/ts-command-line/4.6.10
+      '@rushstack/node-core-library': registry.npm.taobao.org/@rushstack/node-core-library/3.34.0
+      '@rushstack/rig-package': registry.npm.taobao.org/@rushstack/rig-package/0.2.0
+      '@rushstack/ts-command-line': registry.npm.taobao.org/@rushstack/ts-command-line/4.7.0
       colors: registry.npm.taobao.org/colors/1.2.5
       lodash: registry.npm.taobao.org/lodash/4.17.19
       resolve: registry.npm.taobao.org/resolve/1.17.0
@@ -919,10 +909,10 @@ packages:
     hasBin: true
     name: '@microsoft/api-extractor'
     resolution:
-      integrity: sha1-a0Y/5t2O7V7IRHbF7MvS8VkLhzA=
+      integrity: sha1-LgjCWdI5DCqgjQbsveZvrdbTWpQ=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor/download/@microsoft/api-extractor-7.9.22.tgz'
-    version: 7.9.22
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor/download/@microsoft/api-extractor-7.10.0.tgz'
+    version: 7.10.0
   registry.npm.taobao.org/@microsoft/tsdoc/0.12.19:
     dev: true
     name: '@microsoft/tsdoc'
@@ -977,24 +967,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@nodelib/fs.walk/download/@nodelib/fs.walk-1.2.4.tgz'
     version: 1.2.4
-  registry.npm.taobao.org/@rushstack/node-core-library/3.33.6:
-    dependencies:
-      '@types/node': registry.npm.taobao.org/@types/node/10.17.13
-      colors: registry.npm.taobao.org/colors/1.2.5
-      fs-extra: registry.npm.taobao.org/fs-extra/7.0.1
-      import-lazy: registry.npm.taobao.org/import-lazy/4.0.0
-      jju: registry.npm.taobao.org/jju/1.4.0
-      resolve: registry.npm.taobao.org/resolve/1.17.0
-      semver: registry.npm.taobao.org/semver/7.3.2
-      timsort: registry.npm.taobao.org/timsort/0.3.0
-      z-schema: registry.npm.taobao.org/z-schema/3.18.4
-    dev: true
-    name: '@rushstack/node-core-library'
-    resolution:
-      integrity: sha1-pJg8QrxCQvMm6vq4w2bf1Ej2fkA=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@rushstack/node-core-library/download/@rushstack/node-core-library-3.33.6.tgz'
-    version: 3.33.6
   registry.npm.taobao.org/@rushstack/node-core-library/3.34.0:
     dependencies:
       '@types/node': registry.npm.taobao.org/@types/node/10.17.13
@@ -1013,19 +985,18 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@rushstack/node-core-library/download/@rushstack/node-core-library-3.34.0.tgz'
     version: 3.34.0
-  registry.npm.taobao.org/@rushstack/ts-command-line/4.6.10:
+  registry.npm.taobao.org/@rushstack/rig-package/0.2.0:
     dependencies:
-      '@types/argparse': registry.npm.taobao.org/@types/argparse/1.0.38
-      argparse: registry.npm.taobao.org/argparse/1.0.10
-      colors: registry.npm.taobao.org/colors/1.2.5
-      string-argv: registry.npm.taobao.org/string-argv/0.3.1
+      '@types/node': registry.npm.taobao.org/@types/node/10.17.13
+      resolve: registry.npm.taobao.org/resolve/1.17.0
+      strip-json-comments: registry.npm.taobao.org/strip-json-comments/3.1.1
     dev: true
-    name: '@rushstack/ts-command-line'
+    name: '@rushstack/rig-package'
     resolution:
-      integrity: sha1-3GIa6IaDY/DCe67aWCuVqm7sXvY=
+      integrity: sha1-sS3ixqvZCnHYLnZ8VNQpBeLG8o0=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@rushstack/ts-command-line/download/@rushstack/ts-command-line-4.6.10.tgz'
-    version: 4.6.10
+      tarball: 'https://registry.npm.taobao.org/@rushstack/rig-package/download/@rushstack/rig-package-0.2.0.tgz'
+    version: 0.2.0
   registry.npm.taobao.org/@rushstack/ts-command-line/4.7.0:
     dependencies:
       '@types/argparse': registry.npm.taobao.org/@types/argparse/1.0.38
@@ -1612,7 +1583,7 @@ packages:
     resolution:
       integrity: sha1-zOvNuZC9YTnNFuhMOdwvsQI8qQw=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/node/download/@types/node-10.17.13.tgz?cache=0&sync_timestamp=1600735461623&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-10.17.13.tgz'
+      tarball: 'https://registry.npm.taobao.org/@types/node/download/@types/node-10.17.13.tgz'
     version: 10.17.13
   registry.npm.taobao.org/@types/node/12.12.50:
     dev: true
@@ -11968,7 +11939,7 @@ packages:
     resolution:
       integrity: sha1-mNYApevcOPQMsndSLxLcgA6eJfo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/typescript/download/typescript-3.9.7.tgz'
+      tarball: 'https://registry.npm.taobao.org/typescript/download/typescript-3.9.7.tgz?cache=0&sync_timestamp=1601464629437&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-3.9.7.tgz'
     version: 3.9.7
   registry.npm.taobao.org/typescript/4.0.3:
     dev: true
@@ -12635,7 +12606,7 @@ packages:
     version: 3.18.4
 specifiers:
   '@microsoft/api-documenter': 7.9.0
-  '@microsoft/api-extractor': 7.9.22
+  '@microsoft/api-extractor': 7.10.0
   '@tarojs/taro': 3.0.11
   '@testing-library/react': 11.0.4
   '@testing-library/react-hooks': 3.4.2
