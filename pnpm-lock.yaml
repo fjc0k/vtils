@@ -18,7 +18,7 @@ devDependencies:
   '@types/react': registry.npm.taobao.org/@types/react/16.9.51
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/16.9.8
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
-  codecov: registry.npm.taobao.org/codecov/3.7.2
+  codecov: registry.npm.taobao.org/codecov/3.8.0
   cross-env: registry.npm.taobao.org/cross-env/7.0.2
   eslint: registry.npm.taobao.org/eslint/7.10.0
   execa: registry.npm.taobao.org/execa/4.0.3
@@ -2023,16 +2023,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/add-stream/download/add-stream-1.0.0.tgz'
     version: 1.0.0
-  registry.npm.taobao.org/agent-base/5.1.1:
-    dev: true
-    engines:
-      node: '>= 6.0.0'
-    name: agent-base
-    resolution:
-      integrity: sha1-6Ps/JClZ20TWO+Zl23qOc5U3oyw=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/agent-base/download/agent-base-5.1.1.tgz'
-    version: 5.1.1
   registry.npm.taobao.org/agent-base/6.0.0:
     dependencies:
       debug: registry.npm.taobao.org/debug/4.1.1
@@ -3100,12 +3090,12 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/co/download/co-4.6.0.tgz?cache=0&sync_timestamp=1601891499297&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fco%2Fdownload%2Fco-4.6.0.tgz'
     version: 4.6.0
-  registry.npm.taobao.org/codecov/3.7.2:
+  registry.npm.taobao.org/codecov/3.8.0:
     dependencies:
       argv: registry.npm.taobao.org/argv/0.0.2
       ignore-walk: registry.npm.taobao.org/ignore-walk/3.0.3
-      js-yaml: registry.npm.taobao.org/js-yaml/3.13.1
-      teeny-request: registry.npm.taobao.org/teeny-request/6.0.1
+      js-yaml: registry.npm.taobao.org/js-yaml/3.14.0
+      teeny-request: registry.npm.taobao.org/teeny-request/7.0.1
       urlgrey: registry.npm.taobao.org/urlgrey/0.4.4
     dev: true
     engines:
@@ -3113,10 +3103,10 @@ packages:
     hasBin: true
     name: codecov
     resolution:
-      integrity: sha1-mY5oyMHvS1XPzxHNRWhm014T1pM=
+      integrity: sha1-E0u2/zKXEVkKkeIEQcoazmbxUo0=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/codecov/download/codecov-3.7.2.tgz'
-    version: 3.7.2
+      tarball: 'https://registry.npm.taobao.org/codecov/download/codecov-3.8.0.tgz'
+    version: 3.8.0
   registry.npm.taobao.org/collect-v8-coverage/1.0.1:
     dev: true
     name: collect-v8-coverage
@@ -5884,19 +5874,19 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/http-signature/download/http-signature-1.2.0.tgz'
     version: 1.2.0
-  registry.npm.taobao.org/https-proxy-agent/4.0.0:
+  registry.npm.taobao.org/https-proxy-agent/5.0.0:
     dependencies:
-      agent-base: registry.npm.taobao.org/agent-base/5.1.1
+      agent-base: registry.npm.taobao.org/agent-base/6.0.0
       debug: registry.npm.taobao.org/debug/4.1.1
     dev: true
     engines:
-      node: '>= 6.0.0'
+      node: '>= 6'
     name: https-proxy-agent
     resolution:
-      integrity: sha1-cCtx+1UgoTKmbeH2dUHZ5iFU2Cs=
+      integrity: sha1-4qkFQqu2inYuCghQ9sntrf2FBrI=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/https-proxy-agent/download/https-proxy-agent-4.0.0.tgz?cache=0&sync_timestamp=1590632140896&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhttps-proxy-agent%2Fdownload%2Fhttps-proxy-agent-4.0.0.tgz'
-    version: 4.0.0
+      tarball: 'https://registry.npm.taobao.org/https-proxy-agent/download/https-proxy-agent-5.0.0.tgz?cache=0&sync_timestamp=1590632140896&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhttps-proxy-agent%2Fdownload%2Fhttps-proxy-agent-5.0.0.tgz'
+    version: 5.0.0
   registry.npm.taobao.org/human-signals/1.1.1:
     dev: true
     engines:
@@ -8670,16 +8660,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/no-case/download/no-case-2.3.2.tgz'
     version: 2.3.2
-  registry.npm.taobao.org/node-fetch/2.6.0:
+  registry.npm.taobao.org/node-fetch/2.6.1:
     dev: true
     engines:
       node: 4.x || >=6.0.0
     name: node-fetch
     resolution:
-      integrity: sha1-5jNFY4bUqlWGP2dqerDaqP3ssP0=
+      integrity: sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/node-fetch/download/node-fetch-2.6.0.tgz'
-    version: 2.6.0
+      tarball: 'https://registry.npm.taobao.org/node-fetch/download/node-fetch-2.6.1.tgz?cache=0&sync_timestamp=1601943235540&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-fetch%2Fdownload%2Fnode-fetch-2.6.1.tgz'
+    version: 2.6.1
   registry.npm.taobao.org/node-int64/0.4.0:
     dev: true
     name: node-int64
@@ -11561,20 +11551,22 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/table/download/table-5.4.6.tgz'
     version: 5.4.6
-  registry.npm.taobao.org/teeny-request/6.0.1:
+  registry.npm.taobao.org/teeny-request/7.0.1:
     dependencies:
       http-proxy-agent: registry.npm.taobao.org/http-proxy-agent/4.0.1
-      https-proxy-agent: registry.npm.taobao.org/https-proxy-agent/4.0.0
-      node-fetch: registry.npm.taobao.org/node-fetch/2.6.0
+      https-proxy-agent: registry.npm.taobao.org/https-proxy-agent/5.0.0
+      node-fetch: registry.npm.taobao.org/node-fetch/2.6.1
       stream-events: registry.npm.taobao.org/stream-events/1.0.5
-      uuid: registry.npm.taobao.org/uuid/3.4.0
+      uuid: registry.npm.taobao.org/uuid/8.3.0
     dev: true
+    engines:
+      node: '>=10'
     name: teeny-request
     resolution:
-      integrity: sha1-mx9RLO8VKUWCe6fjT2JSOkzixbA=
+      integrity: sha1-vdQf3/6l+PvA0pOSy0e+xPZrK0w=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/teeny-request/download/teeny-request-6.0.1.tgz'
-    version: 6.0.1
+      tarball: 'https://registry.npm.taobao.org/teeny-request/download/teeny-request-7.0.1.tgz'
+    version: 7.0.1
   registry.npm.taobao.org/temp-dir/1.0.0:
     dev: true
     engines:
@@ -12319,7 +12311,6 @@ packages:
     dev: true
     hasBin: true
     name: uuid
-    optional: true
     resolution:
       integrity: sha1-q3OAhcoi3JqMknJeRZsdUH311uo=
       registry: 'https://r.npm.taobao.org/'
@@ -12868,7 +12859,7 @@ specifiers:
   '@types/react': 16.9.51
   '@types/react-dom': 16.9.8
   '@types/standard-version': 7.0.0
-  codecov: 3.7.2
+  codecov: 3.8.0
   cross-env: 7.0.2
   date-fns: ^2.14.0
   eslint: 7.10.0
