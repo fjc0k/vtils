@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.49.0](https://github.com/fjc0k/vtils/compare/v3.48.0...v3.49.0) (2020-10-10)
+
+### Features
+
+- **date:** 新增 formatDistanceAgo ([2715dee](https://github.com/fjc0k/vtils/commit/2715dee7e6b2748745738610550c78aaa0f149d6))
+
 ## [3.48.0](https://github.com/fjc0k/vtils/compare/v3.47.0...v3.48.0) (2020-09-26)
 
 ### Features
