@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-declare type OneOrMany<T> = T | T[];
+export declare type OneOrMany<T> = T | T[];
 ```
 
 ## Example
