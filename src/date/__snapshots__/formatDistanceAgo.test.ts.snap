@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`formatDistanceAgo 表现正常: 分 1`] = `"4分钟前"`;
+
+exports[`formatDistanceAgo 表现正常: 天 1`] = `"10天前"`;
+
+exports[`formatDistanceAgo 表现正常: 年 1`] = `"6年前"`;
+
+exports[`formatDistanceAgo 表现正常: 时 1`] = `"1小时前"`;
+
+exports[`formatDistanceAgo 表现正常: 月 1`] = `"3个月前"`;
+
+exports[`formatDistanceAgo 表现正常: 秒 1`] = `"20秒前"`;

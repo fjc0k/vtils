@@ -290,6 +290,7 @@ export {
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
 export * from './anyToDate'
 export * from './formatDate'
+export * from './formatDistanceAgo'
 export * from './intervalToRestrictiveDuration'
 export * from './numeralDayToChineseDay'
 // @endindex
