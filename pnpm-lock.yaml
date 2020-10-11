@@ -15,7 +15,7 @@ devDependencies:
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@16.13.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
-  '@types/react': registry.npm.taobao.org/@types/react/16.9.51
+  '@types/react': registry.npm.taobao.org/@types/react/16.9.52
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/16.9.8
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
   codecov: registry.npm.taobao.org/codecov/3.8.0
@@ -1050,6 +1050,8 @@ packages:
     dev: true
     name: '@swc-node/core-darwin'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-DO0vFK4XcJeKD65Xuzus0hu5kB0=
       registry: 'https://r.npm.taobao.org/'
@@ -1059,6 +1061,8 @@ packages:
     dev: true
     name: '@swc-node/core-linux'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-5wUsgs9EjZ55/eJ1SfduRRz7rTw=
       registry: 'https://r.npm.taobao.org/'
@@ -1068,6 +1072,8 @@ packages:
     dev: true
     name: '@swc-node/core-win32'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-aUSv52s0ZyW3U9XqDe82OFezq4U=
       registry: 'https://r.npm.taobao.org/'
@@ -1084,6 +1090,10 @@ packages:
       '@swc-node/core-darwin': registry.npm.taobao.org/@swc-node/core-darwin/0.7.6
       '@swc-node/core-linux': registry.npm.taobao.org/@swc-node/core-linux/0.7.6
       '@swc-node/core-win32': registry.npm.taobao.org/@swc-node/core-win32/0.7.6
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-smCQVwH6KAyTAvrWcd/ZTtLbdbQ=
       registry: 'https://r.npm.taobao.org/'
@@ -1646,17 +1656,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.49.tgz?cache=0&sync_timestamp=1598892378237&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.49.tgz'
     version: 16.9.49
-  registry.npm.taobao.org/@types/react/16.9.51:
+  registry.npm.taobao.org/@types/react/16.9.52:
     dependencies:
       '@types/prop-types': registry.npm.taobao.org/@types/prop-types/15.7.3
       csstype: registry.npm.taobao.org/csstype/3.0.2
     dev: true
     name: '@types/react'
     resolution:
-      integrity: sha1-+KpR/6mZbxOH9jaGaW2bWXE9K2A=
+      integrity: sha1-xGxy0aHY2dZm9N0gZsDiJgDM/eE=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.51.tgz?cache=0&sync_timestamp=1601921292442&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.51.tgz'
-    version: 16.9.51
+      tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.52.tgz?cache=0&sync_timestamp=1602427194651&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.52.tgz'
+    version: 16.9.52
   registry.npm.taobao.org/@types/stack-utils/1.0.1:
     dev: true
     name: '@types/stack-utils'
@@ -5033,6 +5043,8 @@ packages:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     name: fsevents
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-+3OHA66NL5/pAMM4Nt3r7ouX8j4=
       registry: 'https://r.npm.taobao.org/'
@@ -12541,7 +12553,7 @@ specifiers:
   '@types/fs-extra': 9.0.1
   '@types/lodash-es': ^4.17.3
   '@types/prompts': 2.0.9
-  '@types/react': 16.9.51
+  '@types/react': 16.9.52
   '@types/react-dom': 16.9.8
   '@types/standard-version': 7.0.0
   codecov: 3.8.0
