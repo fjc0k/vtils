@@ -63,4 +63,4 @@ async function main(rootDir: string) {
   )
 }
 
-main(join(__dirname, '..'))
+main(join(__dirname, '..')).catch(console.log)
