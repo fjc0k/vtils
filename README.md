@@ -125,14 +125,14 @@ import {
   isNumber,
   EventBus,
   base64Encode,
-} from 'https://cdn.skypack.dev/vtils@3.49.2'
+} from 'https://cdn.skypack.dev/vtils@3.49.3'
 
 // 类型工具库
 import {
   OmitStrict,
   LiteralUnion,
   PartialDeep,
-} from 'https://cdn.skypack.dev/vtils@3.49.2/types'
+} from 'https://cdn.skypack.dev/vtils@3.49.3/types'
 ```
 
 ## 许可

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.49.3](https://github.com/fjc0k/vtils/compare/v3.49.2...v3.49.3) (2020-10-11)
+
+### Bug Fixes
+
+- 回退 type-fest、文档生成不报错 ([9fe92e1](https://github.com/fjc0k/vtils/commit/9fe92e1e49b6f277d60d65220eecd609644a3d16))
+
 ### [3.49.2](https://github.com/fjc0k/vtils/compare/v3.49.0...v3.49.2) (2020-10-11)
 
 ## [3.49.0](https://github.com/fjc0k/vtils/compare/v3.48.0...v3.49.0) (2020-10-10)
