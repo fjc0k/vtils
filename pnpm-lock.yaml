@@ -13,7 +13,7 @@ devDependencies:
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.11
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.0.4_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@16.13.1
-  '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.1
+  '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.2
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
   '@types/react': registry.npm.taobao.org/@types/react/16.9.52
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/16.9.8
@@ -1401,16 +1401,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/estree/download/@types/estree-0.0.45.tgz'
     version: 0.0.45
-  registry.npm.taobao.org/@types/fs-extra/9.0.1:
+  registry.npm.taobao.org/@types/fs-extra/9.0.2:
     dependencies:
       '@types/node': registry.npm.taobao.org/@types/node/14.0.6
     dev: true
     name: '@types/fs-extra'
     resolution:
-      integrity: sha1-kcj8TFH21dvkTCypqwkxC9AMeRg=
+      integrity: sha1-4eG1eMSOjQiuf8NuVSuUxvRiFgk=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/fs-extra/download/@types/fs-extra-9.0.1.tgz'
-    version: 9.0.1
+      tarball: 'https://registry.npm.taobao.org/@types/fs-extra/download/@types/fs-extra-9.0.2.tgz'
+    version: 9.0.2
   registry.npm.taobao.org/@types/glob/7.1.2:
     dependencies:
       '@types/minimatch': registry.npm.taobao.org/@types/minimatch/3.0.3
@@ -12550,7 +12550,7 @@ specifiers:
   '@tarojs/taro': 3.0.11
   '@testing-library/react': 11.0.4
   '@testing-library/react-hooks': 3.4.2
-  '@types/fs-extra': 9.0.1
+  '@types/fs-extra': 9.0.2
   '@types/lodash-es': ^4.17.3
   '@types/prompts': 2.0.9
   '@types/react': 16.9.52

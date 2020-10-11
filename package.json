@@ -113,7 +113,7 @@
     "@tarojs/taro": "3.0.11",
     "@testing-library/react": "11.0.4",
     "@testing-library/react-hooks": "3.4.2",
-    "@types/fs-extra": "9.0.1",
+    "@types/fs-extra": "9.0.2",
     "@types/prompts": "2.0.9",
     "@types/react": "16.9.52",
     "@types/react-dom": "16.9.8",
