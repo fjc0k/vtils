@@ -8,7 +8,7 @@ dependencies:
   tslib: registry.npm.taobao.org/tslib/2.0.0
   yup: registry.npm.taobao.org/yup/0.29.1
 devDependencies:
-  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.9
+  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.10
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.10.4
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.11
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.0.4_react-dom@16.13.1+react@16.13.1
@@ -880,7 +880,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@jest/types/download/@jest/types-26.5.2.tgz'
     version: 26.5.2
-  registry.npm.taobao.org/@microsoft/api-documenter/7.9.9:
+  registry.npm.taobao.org/@microsoft/api-documenter/7.9.10:
     dependencies:
       '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.3
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -893,10 +893,10 @@ packages:
     hasBin: true
     name: '@microsoft/api-documenter'
     resolution:
-      integrity: sha1-m5kj+AF4yBBzC9DOZ0knm37kCpk=
+      integrity: sha1-QF0opIgDtq61ooSwN1tdRo4bLyc=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.9.9.tgz'
-    version: 7.9.9
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.9.10.tgz'
+    version: 7.9.10
   registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.3:
     dependencies:
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -10052,7 +10052,7 @@ packages:
     resolution:
       integrity: sha1-sllBtUloIxzC0bt2p5y38sC/hEQ=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/resolve/download/resolve-1.17.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/resolve/download/resolve-1.17.0.tgz?cache=0&sync_timestamp=1590057674007&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fresolve%2Fdownload%2Fresolve-1.17.0.tgz'
     version: 1.17.0
   registry.npm.taobao.org/restore-cursor/3.1.0:
     dependencies:
@@ -12545,7 +12545,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/z-schema/download/z-schema-3.18.4.tgz'
     version: 3.18.4
 specifiers:
-  '@microsoft/api-documenter': 7.9.9
+  '@microsoft/api-documenter': 7.9.10
   '@microsoft/api-extractor': 7.10.4
   '@tarojs/taro': 3.0.11
   '@testing-library/react': 11.0.4
