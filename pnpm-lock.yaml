@@ -4,15 +4,15 @@ dependencies:
   lodash: registry.npm.taobao.org/lodash/4.17.15
   lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
   miniprogram-api-typings: registry.npm.taobao.org/miniprogram-api-typings/3.0.0
-  react-use: registry.npm.taobao.org/react-use/15.1.1_react-dom@16.13.1+react@16.13.1
+  react-use: registry.npm.taobao.org/react-use/15.1.1_react-dom@16.14.0+react@16.14.0
   tslib: registry.npm.taobao.org/tslib/2.0.0
   yup: registry.npm.taobao.org/yup/0.29.1
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.10
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.10.4
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.11
-  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.1.0_react-dom@16.13.1+react@16.13.1
-  '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@16.13.1
+  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.1.0_react-dom@16.14.0+react@16.14.0
+  '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@16.14.0
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.2
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
   '@types/react': registry.npm.taobao.org/@types/react/16.9.52
@@ -24,15 +24,15 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.0.3
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.6.0_d2b745002dbe9179fc4e9a127473fffc
+  haoma: registry.npm.taobao.org/haoma/2.6.0_0e6c54f4bd5052ae7daa3867c6960ce6
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.5.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.4.0
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
   prettier: registry.npm.taobao.org/prettier/2.1.2
   prompts: registry.npm.taobao.org/prompts/2.3.2
-  react: registry.npm.taobao.org/react/16.13.1
-  react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
+  react: registry.npm.taobao.org/react/16.14.0
+  react-dom: registry.npm.taobao.org/react-dom/16.14.0_react@16.14.0
   rollup: registry.npm.taobao.org/rollup/2.30.0
   rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.13_rollup@2.30.0+typescript@4.0.3
   shx: registry.npm.taobao.org/shx/0.3.2
@@ -1219,11 +1219,11 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@testing-library/jest-dom/download/@testing-library/jest-dom-5.11.1.tgz'
     version: 5.11.1
-  registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@16.13.1:
+  registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@16.14.0:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
       '@types/testing-library__react-hooks': registry.npm.taobao.org/@types/testing-library__react-hooks/3.4.0
-      react: registry.npm.taobao.org/react/16.13.1
+      react: registry.npm.taobao.org/react/16.14.0
     dev: true
     id: registry.npm.taobao.org/@testing-library/react-hooks/3.4.2
     name: '@testing-library/react-hooks'
@@ -1235,12 +1235,12 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@testing-library/react-hooks/download/@testing-library/react-hooks-3.4.2.tgz'
     version: 3.4.2
-  registry.npm.taobao.org/@testing-library/react/11.1.0_react-dom@16.13.1+react@16.13.1:
+  registry.npm.taobao.org/@testing-library/react/11.1.0_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
       '@testing-library/dom': registry.npm.taobao.org/@testing-library/dom/7.26.0
-      react: registry.npm.taobao.org/react/16.13.1
-      react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
+      react: registry.npm.taobao.org/react/16.14.0
+      react-dom: registry.npm.taobao.org/react-dom/16.14.0_react@16.14.0
     dev: true
     engines:
       node: '>=10'
@@ -5393,7 +5393,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.6.0_d2b745002dbe9179fc4e9a127473fffc:
+  registry.npm.taobao.org/haoma/2.6.0_0e6c54f4bd5052ae7daa3867c6960ce6:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.10.5
       '@babel/plugin-transform-modules-commonjs': registry.npm.taobao.org/@babel/plugin-transform-modules-commonjs/7.10.4_@babel+core@7.10.5
@@ -5428,12 +5428,12 @@ packages:
       prettier: registry.npm.taobao.org/prettier/2.1.2
       prettier-plugin-packagejson: registry.npm.taobao.org/prettier-plugin-packagejson/2.2.5_prettier@2.1.2
       prettier-plugin-sh: registry.npm.taobao.org/prettier-plugin-sh/0.4.0_prettier@2.1.2
-      react-test-renderer: registry.npm.taobao.org/react-test-renderer/16.13.1_react@16.13.1
+      react-test-renderer: registry.npm.taobao.org/react-test-renderer/16.13.1_react@16.14.0
       rimraf: registry.npm.taobao.org/rimraf/3.0.2
       snapshot-diff: registry.npm.taobao.org/snapshot-diff/0.7.0_jest@26.5.3
       ts-jest: registry.npm.taobao.org/ts-jest/26.1.3_jest@26.5.3+typescript@4.0.3
       typescript: registry.npm.taobao.org/typescript/4.0.3
-      vtils: registry.npm.taobao.org/vtils/3.24.1_react-dom@16.13.1+react@16.13.1
+      vtils: registry.npm.taobao.org/vtils/3.24.1_react-dom@16.14.0+react@16.14.0
       vue-eslint-parser: registry.npm.taobao.org/vue-eslint-parser/7.1.0_eslint@7.11.0
       yargs: registry.npm.taobao.org/yargs/15.4.1
     dev: true
@@ -8325,14 +8325,14 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/mvdan-sh/download/mvdan-sh-0.5.0.tgz'
     version: 0.5.0
-  registry.npm.taobao.org/nano-css/5.3.0_react-dom@16.13.1+react@16.13.1:
+  registry.npm.taobao.org/nano-css/5.3.0_react-dom@16.14.0+react@16.14.0:
     dependencies:
       css-tree: registry.npm.taobao.org/css-tree/1.0.0-alpha.39
       csstype: registry.npm.taobao.org/csstype/2.6.10
       fastest-stable-stringify: registry.npm.taobao.org/fastest-stable-stringify/1.0.1
       inline-style-prefixer: registry.npm.taobao.org/inline-style-prefixer/4.0.2
-      react: registry.npm.taobao.org/react/16.13.1
-      react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
+      react: registry.npm.taobao.org/react/16.14.0
+      react-dom: registry.npm.taobao.org/react-dom/16.14.0_react@16.14.0
       rtl-css-js: registry.npm.taobao.org/rtl-css-js/1.14.0
       sourcemap-codec: registry.npm.taobao.org/sourcemap-codec/1.4.8
       stacktrace-js: registry.npm.taobao.org/stacktrace-js/2.0.2
@@ -9474,23 +9474,23 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/raf/download/raf-3.4.1.tgz'
     version: 3.4.1
-  registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1:
+  registry.npm.taobao.org/react-dom/16.14.0_react@16.14.0:
     dependencies:
       loose-envify: registry.npm.taobao.org/loose-envify/1.4.0
       object-assign: registry.npm.taobao.org/object-assign/4.1.1
       prop-types: registry.npm.taobao.org/prop-types/15.7.2
-      react: registry.npm.taobao.org/react/16.13.1
+      react: registry.npm.taobao.org/react/16.14.0
       scheduler: registry.npm.taobao.org/scheduler/0.19.1
     dev: true
-    id: registry.npm.taobao.org/react-dom/16.13.1
+    id: registry.npm.taobao.org/react-dom/16.14.0
     name: react-dom
     peerDependencies:
-      react: ^16.13.1
+      react: ^16.14.0
     resolution:
-      integrity: sha1-wb03MxoEhsB47lTEdAcgmTsuDn8=
+      integrity: sha1-etg47Cmnd/s8dcOhkPZhz5Kri4k=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/react-dom/download/react-dom-16.13.1.tgz'
-    version: 16.13.1
+      tarball: 'https://registry.npm.taobao.org/react-dom/download/react-dom-16.14.0.tgz?cache=0&sync_timestamp=1602708614838&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dom%2Fdownload%2Freact-dom-16.14.0.tgz'
+    version: 16.14.0
   registry.npm.taobao.org/react-is/16.13.1:
     dev: true
     name: react-is
@@ -9499,11 +9499,11 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/react-is/download/react-is-16.13.1.tgz'
     version: 16.13.1
-  registry.npm.taobao.org/react-test-renderer/16.13.1_react@16.13.1:
+  registry.npm.taobao.org/react-test-renderer/16.13.1_react@16.14.0:
     dependencies:
       object-assign: registry.npm.taobao.org/object-assign/4.1.1
       prop-types: registry.npm.taobao.org/prop-types/15.7.2
-      react: registry.npm.taobao.org/react/16.13.1
+      react: registry.npm.taobao.org/react/16.14.0
       react-is: registry.npm.taobao.org/react-is/16.13.1
       scheduler: registry.npm.taobao.org/scheduler/0.19.1
     dev: true
@@ -9516,9 +9516,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/react-test-renderer/download/react-test-renderer-16.13.1.tgz'
     version: 16.13.1
-  registry.npm.taobao.org/react-universal-interface/0.6.2_react@16.13.1+tslib@2.0.0:
+  registry.npm.taobao.org/react-universal-interface/0.6.2_react@16.14.0+tslib@2.0.0:
     dependencies:
-      react: registry.npm.taobao.org/react/16.13.1
+      react: registry.npm.taobao.org/react/16.14.0
       tslib: registry.npm.taobao.org/tslib/2.0.0
     id: registry.npm.taobao.org/react-universal-interface/0.6.2
     name: react-universal-interface
@@ -9530,7 +9530,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/react-universal-interface/download/react-universal-interface-0.6.2.tgz'
     version: 0.6.2
-  registry.npm.taobao.org/react-use/15.1.1_react-dom@16.13.1+react@16.13.1:
+  registry.npm.taobao.org/react-use/15.1.1_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@types/js-cookie': registry.npm.taobao.org/@types/js-cookie/2.2.6
       '@xobotyi/scrollbar-width': registry.npm.taobao.org/@xobotyi/scrollbar-width/1.9.5
@@ -9538,10 +9538,10 @@ packages:
       fast-deep-equal: registry.npm.taobao.org/fast-deep-equal/3.1.1
       fast-shallow-equal: registry.npm.taobao.org/fast-shallow-equal/1.0.0
       js-cookie: registry.npm.taobao.org/js-cookie/2.2.1
-      nano-css: registry.npm.taobao.org/nano-css/5.3.0_react-dom@16.13.1+react@16.13.1
-      react: registry.npm.taobao.org/react/16.13.1
-      react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
-      react-universal-interface: registry.npm.taobao.org/react-universal-interface/0.6.2_react@16.13.1+tslib@2.0.0
+      nano-css: registry.npm.taobao.org/nano-css/5.3.0_react-dom@16.14.0+react@16.14.0
+      react: registry.npm.taobao.org/react/16.14.0
+      react-dom: registry.npm.taobao.org/react-dom/16.14.0_react@16.14.0
+      react-universal-interface: registry.npm.taobao.org/react-universal-interface/0.6.2_react@16.14.0+tslib@2.0.0
       resize-observer-polyfill: registry.npm.taobao.org/resize-observer-polyfill/1.5.1
       screenfull: registry.npm.taobao.org/screenfull/5.0.2
       set-harmonic-interval: registry.npm.taobao.org/set-harmonic-interval/1.0.1
@@ -9558,7 +9558,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/react-use/download/react-use-15.1.1.tgz'
     version: 15.1.1
-  registry.npm.taobao.org/react/16.13.1:
+  registry.npm.taobao.org/react/16.14.0:
     dependencies:
       loose-envify: registry.npm.taobao.org/loose-envify/1.4.0
       object-assign: registry.npm.taobao.org/object-assign/4.1.1
@@ -9568,10 +9568,10 @@ packages:
       node: '>=0.10.0'
     name: react
     resolution:
-      integrity: sha1-LoGIIvGpdDEiwGPWQQ2FweOv5I4=
+      integrity: sha1-lNd23dCqo32j7aj8W2sYpMmjEU0=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/react/download/react-16.13.1.tgz'
-    version: 16.13.1
+      tarball: 'https://registry.npm.taobao.org/react/download/react-16.14.0.tgz?cache=0&sync_timestamp=1602708614280&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-16.14.0.tgz'
+    version: 16.14.0
   registry.npm.taobao.org/read-pkg-up/1.0.1:
     dependencies:
       find-up: registry.npm.taobao.org/find-up/1.1.2
@@ -12134,13 +12134,13 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/vtils/download/vtils-2.59.0.tgz'
     version: 2.59.0
-  registry.npm.taobao.org/vtils/3.24.1_react-dom@16.13.1+react@16.13.1:
+  registry.npm.taobao.org/vtils/3.24.1_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@types/lodash-es': registry.npm.taobao.org/@types/lodash-es/4.17.3
       date-fns: registry.npm.taobao.org/date-fns/2.14.0
       lodash: registry.npm.taobao.org/lodash/4.17.19
       lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
-      react-use: registry.npm.taobao.org/react-use/15.1.1_react-dom@16.13.1+react@16.13.1
+      react-use: registry.npm.taobao.org/react-use/15.1.1_react-dom@16.14.0+react@16.14.0
       tslib: registry.npm.taobao.org/tslib/2.0.1
       yup: registry.npm.taobao.org/yup/0.29.1
     dev: true
@@ -12552,8 +12552,8 @@ specifiers:
   open-cli: 6.0.1
   prettier: 2.1.2
   prompts: 2.3.2
-  react: 16.13.1
-  react-dom: 16.13.1
+  react: 16.14.0
+  react-dom: 16.14.0
   react-use: ^15.1.1
   rollup: 2.30.0
   rollup-plugin-dts: 1.4.13
