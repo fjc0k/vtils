@@ -464,7 +464,7 @@ export class Wechat {
    * 选择图片。
    *
    * @param params 参数
-   * @returns 选定照片的本地 ID 列表
+   * @returns 选定照片的本地 ID 列表，它们可以作为 img 标签的 src 属性显示图片
    */
   chooseImage(params?: WechatChooseImageParams): Promise<string[]> {
     return this.invoke<
