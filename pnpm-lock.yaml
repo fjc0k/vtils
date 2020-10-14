@@ -11,7 +11,7 @@ devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.10
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.10.4
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.11
-  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.0.4_react-dom@16.13.1+react@16.13.1
+  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.1.0_react-dom@16.13.1+react@16.13.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@16.13.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.2
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
@@ -848,22 +848,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@jest/types/download/@jest/types-25.5.0.tgz'
     version: 25.5.0
-  registry.npm.taobao.org/@jest/types/26.3.0:
-    dependencies:
-      '@types/istanbul-lib-coverage': registry.npm.taobao.org/@types/istanbul-lib-coverage/2.0.3
-      '@types/istanbul-reports': registry.npm.taobao.org/@types/istanbul-reports/3.0.0
-      '@types/node': registry.npm.taobao.org/@types/node/14.0.6
-      '@types/yargs': registry.npm.taobao.org/@types/yargs/15.0.5
-      chalk: registry.npm.taobao.org/chalk/4.1.0
-    dev: true
-    engines:
-      node: '>= 10.14.2'
-    name: '@jest/types'
-    resolution:
-      integrity: sha1-l2J79L23LFU0bu+Y47P33cSUH3E=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@jest/types/download/@jest/types-26.3.0.tgz?cache=0&sync_timestamp=1597057749754&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40jest%2Ftypes%2Fdownload%2F%40jest%2Ftypes-26.3.0.tgz'
-    version: 26.3.0
   registry.npm.taobao.org/@jest/types/26.5.2:
     dependencies:
       '@types/istanbul-lib-coverage': registry.npm.taobao.org/@types/istanbul-lib-coverage/2.0.3
@@ -1193,7 +1177,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.0.11.tgz?cache=0&sync_timestamp=1600419438536&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Ftaro%2Fdownload%2F%40tarojs%2Ftaro-3.0.11.tgz'
     version: 3.0.11
-  registry.npm.taobao.org/@testing-library/dom/7.24.2:
+  registry.npm.taobao.org/@testing-library/dom/7.26.0:
     dependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
@@ -1201,16 +1185,17 @@ packages:
       aria-query: registry.npm.taobao.org/aria-query/4.2.2
       chalk: registry.npm.taobao.org/chalk/4.1.0
       dom-accessibility-api: registry.npm.taobao.org/dom-accessibility-api/0.5.1
-      pretty-format: registry.npm.taobao.org/pretty-format/26.4.2
+      lz-string: registry.npm.taobao.org/lz-string/1.4.4
+      pretty-format: registry.npm.taobao.org/pretty-format/26.5.2
     dev: true
     engines:
       node: '>=10'
     name: '@testing-library/dom'
     resolution:
-      integrity: sha1-bSt90h771TWLmMJ3f8R8JS865V4=
+      integrity: sha1-2k0FLcQmpMzJFjAzacbnVSEm9oA=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@testing-library/dom/download/@testing-library/dom-7.24.2.tgz?cache=0&sync_timestamp=1600023255183&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Fdom%2Fdownload%2F%40testing-library%2Fdom-7.24.2.tgz'
-    version: 7.24.2
+      tarball: 'https://registry.npm.taobao.org/@testing-library/dom/download/@testing-library/dom-7.26.0.tgz?cache=0&sync_timestamp=1602682732567&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Fdom%2Fdownload%2F%40testing-library%2Fdom-7.26.0.tgz'
+    version: 7.26.0
   registry.npm.taobao.org/@testing-library/jest-dom/5.11.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
@@ -1250,25 +1235,25 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@testing-library/react-hooks/download/@testing-library/react-hooks-3.4.2.tgz'
     version: 3.4.2
-  registry.npm.taobao.org/@testing-library/react/11.0.4_react-dom@16.13.1+react@16.13.1:
+  registry.npm.taobao.org/@testing-library/react/11.1.0_react-dom@16.13.1+react@16.13.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.11.2
-      '@testing-library/dom': registry.npm.taobao.org/@testing-library/dom/7.24.2
+      '@testing-library/dom': registry.npm.taobao.org/@testing-library/dom/7.26.0
       react: registry.npm.taobao.org/react/16.13.1
       react-dom: registry.npm.taobao.org/react-dom/16.13.1_react@16.13.1
     dev: true
     engines:
       node: '>=10'
-    id: registry.npm.taobao.org/@testing-library/react/11.0.4
+    id: registry.npm.taobao.org/@testing-library/react/11.1.0
     name: '@testing-library/react'
     peerDependencies:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha1-yECCv+FZPY/NR11Guu4CRFLzHe4=
+      integrity: sha1-37SzF30FqMzxVrX9FKVVDpHX6+Q=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@testing-library/react/download/@testing-library/react-11.0.4.tgz?cache=0&sync_timestamp=1600021462260&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact%2Fdownload%2F%40testing-library%2Freact-11.0.4.tgz'
-    version: 11.0.4
+      tarball: 'https://registry.npm.taobao.org/@testing-library/react/download/@testing-library/react-11.1.0.tgz?cache=0&sync_timestamp=1602680858834&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact%2Fdownload%2F%40testing-library%2Freact-11.1.0.tgz'
+    version: 11.1.0
   registry.npm.taobao.org/@tokenizer/token/0.1.1:
     dev: true
     name: '@tokenizer/token'
@@ -5043,6 +5028,8 @@ packages:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     name: fsevents
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-+3OHA66NL5/pAMM4Nt3r7ouX8j4=
       registry: 'https://r.npm.taobao.org/'
@@ -7918,6 +7905,15 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/lower-case/download/lower-case-1.1.4.tgz'
     version: 1.1.4
+  registry.npm.taobao.org/lz-string/1.4.4:
+    dev: true
+    hasBin: true
+    name: lz-string
+    resolution:
+      integrity: sha1-wNjq82BZ9wV5bh40SBHPTEmNOiY=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/lz-string/download/lz-string-1.4.4.tgz'
+    version: 1.4.4
   registry.npm.taobao.org/make-dir/3.1.0:
     dependencies:
       semver: registry.npm.taobao.org/semver/6.3.0
@@ -9325,21 +9321,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/pretty-format/download/pretty-format-25.5.0.tgz'
     version: 25.5.0
-  registry.npm.taobao.org/pretty-format/26.4.2:
-    dependencies:
-      '@jest/types': registry.npm.taobao.org/@jest/types/26.3.0
-      ansi-regex: registry.npm.taobao.org/ansi-regex/5.0.0
-      ansi-styles: registry.npm.taobao.org/ansi-styles/4.2.1
-      react-is: registry.npm.taobao.org/react-is/16.13.1
-    dev: true
-    engines:
-      node: '>= 10'
-    name: pretty-format
-    resolution:
-      integrity: sha1-0IHQMrOY6AHiASry3xIU73WoEjc=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/pretty-format/download/pretty-format-26.4.2.tgz'
-    version: 26.4.2
   registry.npm.taobao.org/pretty-format/26.5.2:
     dependencies:
       '@jest/types': registry.npm.taobao.org/@jest/types/26.5.2
@@ -12546,7 +12527,7 @@ specifiers:
   '@microsoft/api-documenter': 7.9.10
   '@microsoft/api-extractor': 7.10.4
   '@tarojs/taro': 3.0.11
-  '@testing-library/react': 11.0.4
+  '@testing-library/react': 11.1.0
   '@testing-library/react-hooks': 3.4.2
   '@types/fs-extra': 9.0.2
   '@types/lodash-es': ^4.17.3
