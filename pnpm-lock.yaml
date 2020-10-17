@@ -27,7 +27,7 @@ devDependencies:
   haoma: registry.npm.taobao.org/haoma/2.6.0_0e6c54f4bd5052ae7daa3867c6960ce6
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.5.3
-  lint-staged: registry.npm.taobao.org/lint-staged/10.4.1
+  lint-staged: registry.npm.taobao.org/lint-staged/10.4.2
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
   prettier: registry.npm.taobao.org/prettier/2.1.2
   prompts: registry.npm.taobao.org/prompts/2.3.2
@@ -7628,7 +7628,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz'
     version: 1.1.6
-  registry.npm.taobao.org/lint-staged/10.4.1:
+  registry.npm.taobao.org/lint-staged/10.4.2:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
       cli-truncate: registry.npm.taobao.org/cli-truncate/2.1.0
@@ -7649,10 +7649,10 @@ packages:
     hasBin: true
     name: lint-staged
     resolution:
-      integrity: sha1-V5BpyvZFEpbje90ZdpAosfl2xGk=
+      integrity: sha1-n+5GNcS13bhFdG8jfG1DSUzNIcE=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.4.1.tgz?cache=0&sync_timestamp=1602850860546&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.4.1.tgz'
-    version: 10.4.1
+      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.4.2.tgz'
+    version: 10.4.2
   registry.npm.taobao.org/listr2/2.6.0_enquirer@2.3.6:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
@@ -12545,7 +12545,7 @@ specifiers:
   haoma: 2.6.0
   husky: 4.3.0
   jest: 26.5.3
-  lint-staged: 10.4.1
+  lint-staged: 10.4.2
   lodash: ^4.17.15
   lodash-es: ^4.17.15
   miniprogram-api-typings: ^3.0.0
