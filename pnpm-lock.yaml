@@ -37,7 +37,7 @@ devDependencies:
   rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.13_rollup@2.32.0+typescript@4.0.3
   shx: registry.npm.taobao.org/shx/0.3.2
   standard-version: registry.npm.taobao.org/standard-version/9.0.0
-  ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.0_typescript@4.0.3
+  ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.0.3
   type-fest: registry.npm.taobao.org/type-fest/0.16.0
   typescript: registry.npm.taobao.org/typescript/4.0.3
   typescript-snapshots-plugin: registry.npm.taobao.org/typescript-snapshots-plugin/1.7.0
@@ -11642,19 +11642,19 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/ts-easing/download/ts-easing-0.2.0.tgz'
     version: 0.2.0
-  registry.npm.taobao.org/ts-essentials/7.0.0_typescript@4.0.3:
+  registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.0.3:
     dependencies:
       typescript: registry.npm.taobao.org/typescript/4.0.3
     dev: true
-    id: registry.npm.taobao.org/ts-essentials/7.0.0
+    id: registry.npm.taobao.org/ts-essentials/7.0.1
     name: ts-essentials
     peerDependencies:
       typescript: '>=3.7.0'
     resolution:
-      integrity: sha1-64B5RdZeJYuuiRT1QVQ3WPh59sU=
+      integrity: sha1-0gVQjK4M2t+3PIlQMUDPIig4ni0=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/ts-essentials/download/ts-essentials-7.0.0.tgz'
-    version: 7.0.0
+      tarball: 'https://registry.npm.taobao.org/ts-essentials/download/ts-essentials-7.0.1.tgz'
+    version: 7.0.1
   registry.npm.taobao.org/ts-jest/26.1.3_jest@26.5.3+typescript@4.0.3:
     dependencies:
       bs-logger: registry.npm.taobao.org/bs-logger/0.2.6
@@ -12559,7 +12559,7 @@ specifiers:
   rollup-plugin-dts: 1.4.13
   shx: 0.3.2
   standard-version: 9.0.0
-  ts-essentials: 7.0.0
+  ts-essentials: 7.0.1
   tslib: ^2.0.0
   type-fest: 0.16.0
   typescript: 4.0.3
