@@ -135,7 +135,7 @@
     "react-dom": "17.0.1",
     "rollup": "2.32.1",
     "rollup-plugin-dts": "1.4.13",
-    "shx": "0.3.2",
+    "shx": "0.3.3",
     "standard-version": "9.0.0",
     "ts-essentials": "7.0.1",
     "type-fest": "0.16.0",

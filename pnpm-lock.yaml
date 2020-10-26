@@ -35,7 +35,7 @@ devDependencies:
   react-dom: registry.npm.taobao.org/react-dom/17.0.1_react@17.0.1
   rollup: registry.npm.taobao.org/rollup/2.32.1
   rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.13_rollup@2.32.1+typescript@4.0.3
-  shx: registry.npm.taobao.org/shx/0.3.2
+  shx: registry.npm.taobao.org/shx/0.3.3
   standard-version: registry.npm.taobao.org/standard-version/9.0.0
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.0.3
   type-fest: registry.npm.taobao.org/type-fest/0.16.0
@@ -4163,14 +4163,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/es-to-primitive/download/es-to-primitive-1.2.1.tgz'
     version: 1.2.1
-  registry.npm.taobao.org/es6-object-assign/1.1.0:
-    dev: true
-    name: es6-object-assign
-    resolution:
-      integrity: sha1-wsNYJlYkfDnqEHyx5mUrb58kUjw=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/es6-object-assign/download/es6-object-assign-1.1.0.tgz'
-    version: 1.1.0
   registry.npm.taobao.org/escape-string-regexp/1.0.5:
     dev: true
     engines:
@@ -9877,7 +9869,7 @@ packages:
     version: 2.0.0
   registry.npm.taobao.org/rechoir/0.6.2:
     dependencies:
-      resolve: registry.npm.taobao.org/resolve/1.17.0
+      resolve: registry.npm.taobao.org/resolve/1.18.1
     dev: true
     engines:
       node: '>= 0.10'
@@ -10584,7 +10576,7 @@ packages:
     resolution:
       integrity: sha1-3naE/ut2f4cWsyYHiooAh1iQ48I=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/shelljs/download/shelljs-0.8.4.tgz'
+      tarball: 'https://registry.npm.taobao.org/shelljs/download/shelljs-0.8.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fshelljs%2Fdownload%2Fshelljs-0.8.4.tgz'
     version: 0.8.4
   registry.npm.taobao.org/shellwords/0.1.1:
     dev: true
@@ -10595,21 +10587,20 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/shellwords/download/shellwords-0.1.1.tgz'
     version: 0.1.1
-  registry.npm.taobao.org/shx/0.3.2:
+  registry.npm.taobao.org/shx/0.3.3:
     dependencies:
-      es6-object-assign: registry.npm.taobao.org/es6-object-assign/1.1.0
       minimist: registry.npm.taobao.org/minimist/1.2.5
       shelljs: registry.npm.taobao.org/shelljs/0.8.4
     dev: true
     engines:
-      node: '>=4'
+      node: '>=6'
     hasBin: true
     name: shx
     resolution:
-      integrity: sha1-QFAc4U614MvKx929SzJVY6rYwSM=
+      integrity: sha1-aBqIx8ENsVq+GFJTSe1HTw8ee58=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/shx/download/shx-0.3.2.tgz'
-    version: 0.3.2
+      tarball: 'https://registry.npm.taobao.org/shx/download/shx-0.3.3.tgz?cache=0&sync_timestamp=1603689722299&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fshx%2Fdownload%2Fshx-0.3.3.tgz'
+    version: 0.3.3
   registry.npm.taobao.org/side-channel/1.0.2:
     dependencies:
       es-abstract: registry.npm.taobao.org/es-abstract/1.17.6
@@ -12731,7 +12722,7 @@ specifiers:
   react-use: ^15.1.1
   rollup: 2.32.1
   rollup-plugin-dts: 1.4.13
-  shx: 0.3.2
+  shx: 0.3.3
   standard-version: 9.0.0
   ts-essentials: 7.0.1
   tslib: ^2.0.0
