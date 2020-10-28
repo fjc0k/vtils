@@ -121,7 +121,7 @@
     "codecov": "3.8.0",
     "cross-env": "7.0.2",
     "eslint": "7.12.1",
-    "execa": "4.0.3",
+    "execa": "4.1.0",
     "fs-extra": "9.0.1",
     "globby": "11.0.1",
     "haoma": "2.7.0",
