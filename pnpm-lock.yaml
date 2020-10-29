@@ -8,7 +8,7 @@ dependencies:
   tslib: registry.npm.taobao.org/tslib/2.0.0
   yup: registry.npm.taobao.org/yup/0.29.1
 devDependencies:
-  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.19
+  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.20
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.10.6
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.15
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.1.0_react-dom@17.0.1+react@17.0.1
@@ -1123,9 +1123,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@jest/types/download/@jest/types-26.6.1.tgz?cache=0&sync_timestamp=1603445233190&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40jest%2Ftypes%2Fdownload%2F%40jest%2Ftypes-26.6.1.tgz'
     version: 26.6.1
-  registry.npm.taobao.org/@microsoft/api-documenter/7.9.19:
+  registry.npm.taobao.org/@microsoft/api-documenter/7.9.20:
     dependencies:
-      '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.5
+      '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.6
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
       '@rushstack/node-core-library': registry.npm.taobao.org/@rushstack/node-core-library/3.34.5
       '@rushstack/ts-command-line': registry.npm.taobao.org/@rushstack/ts-command-line/4.7.4
@@ -1136,10 +1136,10 @@ packages:
     hasBin: true
     name: '@microsoft/api-documenter'
     resolution:
-      integrity: sha1-DX0PbeNeGlr8Aq+nnHn4s2urZhQ=
+      integrity: sha1-USW+VWBDjhwK+P0H2w0pLk16HEQ=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.9.19.tgz'
-    version: 7.9.19
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.9.20.tgz?cache=0&sync_timestamp=1603952196165&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-documenter%2Fdownload%2F%40microsoft%2Fapi-documenter-7.9.20.tgz'
+    version: 7.9.20
   registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.5:
     dependencies:
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -1151,6 +1151,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor-model/download/@microsoft/api-extractor-model-7.10.5.tgz?cache=0&sync_timestamp=1603849838843&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-extractor-model%2Fdownload%2F%40microsoft%2Fapi-extractor-model-7.10.5.tgz'
     version: 7.10.5
+  registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.6:
+    dependencies:
+      '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
+      '@rushstack/node-core-library': registry.npm.taobao.org/@rushstack/node-core-library/3.34.5
+    dev: true
+    name: '@microsoft/api-extractor-model'
+    resolution:
+      integrity: sha1-LSCl//79QGPf2nR1BM48gQo9eLU=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor-model/download/@microsoft/api-extractor-model-7.10.6.tgz?cache=0&sync_timestamp=1603952195859&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-extractor-model%2Fdownload%2F%40microsoft%2Fapi-extractor-model-7.10.6.tgz'
+    version: 7.10.6
   registry.npm.taobao.org/@microsoft/api-extractor/7.10.6:
     dependencies:
       '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.5
@@ -12930,7 +12941,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/z-schema/download/z-schema-3.18.4.tgz'
     version: 3.18.4
 specifiers:
-  '@microsoft/api-documenter': 7.9.19
+  '@microsoft/api-documenter': 7.9.20
   '@microsoft/api-extractor': 7.10.6
   '@tarojs/taro': 3.0.15
   '@testing-library/react': 11.1.0
