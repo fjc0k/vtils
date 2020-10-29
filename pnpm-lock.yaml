@@ -9,7 +9,7 @@ dependencies:
   yup: registry.npm.taobao.org/yup/0.29.1
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.20
-  '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.10.6
+  '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.11.0
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.15
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.1.0_react-dom@17.0.1+react@17.0.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@17.0.1
@@ -1140,17 +1140,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.9.20.tgz?cache=0&sync_timestamp=1603952196165&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-documenter%2Fdownload%2F%40microsoft%2Fapi-documenter-7.9.20.tgz'
     version: 7.9.20
-  registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.5:
-    dependencies:
-      '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
-      '@rushstack/node-core-library': registry.npm.taobao.org/@rushstack/node-core-library/3.34.5
-    dev: true
-    name: '@microsoft/api-extractor-model'
-    resolution:
-      integrity: sha1-a4pwbKXGbhti7nxb39VcRD1bOqk=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor-model/download/@microsoft/api-extractor-model-7.10.5.tgz?cache=0&sync_timestamp=1603849838843&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-extractor-model%2Fdownload%2F%40microsoft%2Fapi-extractor-model-7.10.5.tgz'
-    version: 7.10.5
   registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.6:
     dependencies:
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -1162,9 +1151,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor-model/download/@microsoft/api-extractor-model-7.10.6.tgz?cache=0&sync_timestamp=1603952195859&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-extractor-model%2Fdownload%2F%40microsoft%2Fapi-extractor-model-7.10.6.tgz'
     version: 7.10.6
-  registry.npm.taobao.org/@microsoft/api-extractor/7.10.6:
+  registry.npm.taobao.org/@microsoft/api-extractor/7.11.0:
     dependencies:
-      '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.5
+      '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.6
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
       '@rushstack/node-core-library': registry.npm.taobao.org/@rushstack/node-core-library/3.34.5
       '@rushstack/rig-package': registry.npm.taobao.org/@rushstack/rig-package/0.2.5
@@ -1174,15 +1163,15 @@ packages:
       resolve: registry.npm.taobao.org/resolve/1.17.0
       semver: registry.npm.taobao.org/semver/7.3.2
       source-map: registry.npm.taobao.org/source-map/0.6.1
-      typescript: registry.npm.taobao.org/typescript/3.9.7
+      typescript: registry.npm.taobao.org/typescript/4.0.5
     dev: true
     hasBin: true
     name: '@microsoft/api-extractor'
     resolution:
-      integrity: sha1-tH/IlVWDestiTHyVC+jV3oDoYZA=
+      integrity: sha1-XxNVwRUgNcF3CB60EnNx+nreRTE=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor/download/@microsoft/api-extractor-7.10.6.tgz'
-    version: 7.10.6
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-extractor/download/@microsoft/api-extractor-7.11.0.tgz?cache=0&sync_timestamp=1603952330908&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-extractor%2Fdownload%2F%40microsoft%2Fapi-extractor-7.11.0.tgz'
+    version: 7.11.0
   registry.npm.taobao.org/@microsoft/tsdoc/0.12.19:
     dev: true
     name: '@microsoft/tsdoc'
@@ -12275,17 +12264,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/typescript-snapshots-plugin/download/typescript-snapshots-plugin-1.7.0.tgz'
     version: 1.7.0
-  registry.npm.taobao.org/typescript/3.9.7:
-    dev: true
-    engines:
-      node: '>=4.2.0'
-    hasBin: true
-    name: typescript
-    resolution:
-      integrity: sha1-mNYApevcOPQMsndSLxLcgA6eJfo=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/typescript/download/typescript-3.9.7.tgz'
-    version: 3.9.7
   registry.npm.taobao.org/typescript/4.0.5:
     dev: true
     engines:
@@ -12942,7 +12920,7 @@ packages:
     version: 3.18.4
 specifiers:
   '@microsoft/api-documenter': 7.9.20
-  '@microsoft/api-extractor': 7.10.6
+  '@microsoft/api-extractor': 7.11.0
   '@tarojs/taro': 3.0.15
   '@testing-library/react': 11.1.0
   '@testing-library/react-hooks': 3.4.2
