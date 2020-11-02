@@ -33,8 +33,8 @@ devDependencies:
   prompts: registry.npm.taobao.org/prompts/2.4.0
   react: registry.npm.taobao.org/react/17.0.1
   react-dom: registry.npm.taobao.org/react-dom/17.0.1_react@17.0.1
-  rollup: registry.npm.taobao.org/rollup/2.33.0
-  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.13_rollup@2.33.0+typescript@4.0.5
+  rollup: registry.npm.taobao.org/rollup/2.33.1
+  rollup-plugin-dts: registry.npm.taobao.org/rollup-plugin-dts/1.4.13_rollup@2.33.1+typescript@4.0.5
   shx: registry.npm.taobao.org/shx/0.3.3
   standard-version: registry.npm.taobao.org/standard-version/9.0.0
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.0.5
@@ -2221,6 +2221,8 @@ packages:
     dev: true
     name: '@swc-node/core-darwin'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-DO0vFK4XcJeKD65Xuzus0hu5kB0=
       registry: 'https://r.npm.taobao.org/'
@@ -2230,6 +2232,8 @@ packages:
     dev: true
     name: '@swc-node/core-linux'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-5wUsgs9EjZ55/eJ1SfduRRz7rTw=
       registry: 'https://r.npm.taobao.org/'
@@ -2239,6 +2243,8 @@ packages:
     dev: true
     name: '@swc-node/core-win32'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-aUSv52s0ZyW3U9XqDe82OFezq4U=
       registry: 'https://r.npm.taobao.org/'
@@ -2255,6 +2261,10 @@ packages:
       '@swc-node/core-darwin': registry.npm.taobao.org/@swc-node/core-darwin/0.7.6
       '@swc-node/core-linux': registry.npm.taobao.org/@swc-node/core-linux/0.7.6
       '@swc-node/core-win32': registry.npm.taobao.org/@swc-node/core-win32/0.7.6
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-smCQVwH6KAyTAvrWcd/ZTtLbdbQ=
       registry: 'https://r.npm.taobao.org/'
@@ -2923,6 +2933,9 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
@@ -2966,6 +2979,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
@@ -2999,6 +3015,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-pckfzFSXzOeSL/hrw31eWJHc3vo=
       registry: 'https://r.npm.taobao.org/'
@@ -6335,8 +6354,6 @@ packages:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     name: fsevents
     optional: true
-    os:
-      - darwin
     resolution:
       integrity: sha1-+3OHA66NL5/pAMM4Nt3r7ouX8j4=
       registry: 'https://r.npm.taobao.org/'
@@ -8312,6 +8329,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -8327,6 +8347,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -11568,9 +11591,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rimraf/download/rimraf-3.0.2.tgz'
     version: 3.0.2
-  registry.npm.taobao.org/rollup-plugin-dts/1.4.13_rollup@2.33.0+typescript@4.0.5:
+  registry.npm.taobao.org/rollup-plugin-dts/1.4.13_rollup@2.33.1+typescript@4.0.5:
     dependencies:
-      rollup: registry.npm.taobao.org/rollup/2.33.0
+      rollup: registry.npm.taobao.org/rollup/2.33.1
       typescript: registry.npm.taobao.org/typescript/4.0.5
     dev: true
     id: registry.npm.taobao.org/rollup-plugin-dts/1.4.13
@@ -11585,7 +11608,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/rollup-plugin-dts/download/rollup-plugin-dts-1.4.13.tgz'
     version: 1.4.13
-  registry.npm.taobao.org/rollup/2.33.0:
+  registry.npm.taobao.org/rollup/2.33.1:
     dev: true
     engines:
       node: '>=10.0.0'
@@ -11594,10 +11617,10 @@ packages:
     optionalDependencies:
       fsevents: registry.npm.taobao.org/fsevents/2.1.3
     resolution:
-      integrity: sha1-3BBbMS4oF/mW0LahkrcDP2B+8I0=
+      integrity: sha1-gCeVFkFk7mPNR3adiHnDPsiuDEA=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/rollup/download/rollup-2.33.0.tgz'
-    version: 2.33.0
+      tarball: 'https://registry.npm.taobao.org/rollup/download/rollup-2.33.1.tgz?cache=0&sync_timestamp=1604300606628&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-2.33.1.tgz'
+    version: 2.33.1
   registry.npm.taobao.org/rsvp/4.8.5:
     dev: true
     engines:
@@ -14085,7 +14108,7 @@ specifiers:
   react: 17.0.1
   react-dom: 17.0.1
   react-use: ^15.1.1
-  rollup: 2.33.0
+  rollup: 2.33.1
   rollup-plugin-dts: 1.4.13
   shx: 0.3.3
   standard-version: 9.0.0
