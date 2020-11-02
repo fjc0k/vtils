@@ -24,7 +24,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.1.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.8.1_37afbb35b4209ab4141c7b6d5290ade8
+  haoma: registry.npm.taobao.org/haoma/2.9.0_37afbb35b4209ab4141c7b6d5290ade8
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.6.1
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.1
@@ -2926,7 +2926,7 @@ packages:
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-3.6.1.tgz?cache=0&sync_timestamp=1603790575905&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Feslint-plugin%2Fdownload%2F%40typescript-eslint%2Feslint-plugin-3.6.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-3.6.1.tgz'
     version: 3.6.1
   registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.6.1_eslint@7.12.1+typescript@4.0.5:
     dependencies:
@@ -2969,7 +2969,7 @@ packages:
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/parser/download/@typescript-eslint/parser-3.6.1.tgz?cache=0&sync_timestamp=1603790578541&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Fparser%2Fdownload%2F%40typescript-eslint%2Fparser-3.6.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/@typescript-eslint/parser/download/@typescript-eslint/parser-3.6.1.tgz'
     version: 3.6.1
   registry.npm.taobao.org/@typescript-eslint/types/3.6.1:
     dev: true
@@ -6700,7 +6700,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.8.1_37afbb35b4209ab4141c7b6d5290ade8:
+  registry.npm.taobao.org/haoma/2.9.0_37afbb35b4209ab4141c7b6d5290ade8:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.10.5
       '@babel/plugin-proposal-decorators': registry.npm.taobao.org/@babel/plugin-proposal-decorators/7.12.1_@babel+core@7.10.5
@@ -6755,7 +6755,7 @@ packages:
       yargs: registry.npm.taobao.org/yargs/15.4.1
     dev: true
     hasBin: true
-    id: registry.npm.taobao.org/haoma/2.8.1
+    id: registry.npm.taobao.org/haoma/2.9.0
     name: haoma
     peerDependencies:
       eslint: ^7
@@ -6766,10 +6766,10 @@ packages:
       typescript: ^3
     requiresBuild: true
     resolution:
-      integrity: sha1-V20ZxK8xE4ZicZlgoWS04PhBovU=
+      integrity: sha1-v4QYEXGIfxK0nlsm6exMoC5bZbY=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.8.1.tgz'
-    version: 2.8.1
+      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.9.0.tgz'
+    version: 2.9.0
   registry.npm.taobao.org/har-schema/2.0.0:
     dev: true
     engines:
@@ -11770,7 +11770,7 @@ packages:
     resolution:
       integrity: sha1-qVT5Ma66UI0we78Gnv8MAclhFvc=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/semver/download/semver-5.7.1.tgz?cache=0&sync_timestamp=1597342755429&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsemver%2Fdownload%2Fsemver-5.7.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/semver/download/semver-5.7.1.tgz'
     version: 5.7.1
   registry.npm.taobao.org/semver/6.3.0:
     dev: true
@@ -14072,7 +14072,7 @@ specifiers:
   execa: 4.1.0
   fs-extra: 9.0.1
   globby: 11.0.1
-  haoma: 2.8.1
+  haoma: 2.9.0
   husky: 4.3.0
   jest: 26.6.1
   lint-staged: 10.5.1
