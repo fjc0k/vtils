@@ -24,7 +24,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.1.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.11.0_43c4aba17ed54bcac310a13c52c1a9d4
+  haoma: registry.npm.taobao.org/haoma/2.12.2_43c4aba17ed54bcac310a13c52c1a9d4
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.6.2
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.1
@@ -2154,72 +2154,31 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@sinonjs/fake-timers/download/@sinonjs/fake-timers-6.0.1.tgz'
     version: 6.0.1
-  registry.npm.taobao.org/@swc-node/core-darwin/0.7.6:
-    dev: true
-    name: '@swc-node/core-darwin'
-    optional: true
-    os:
-      - darwin
-    resolution:
-      integrity: sha1-DO0vFK4XcJeKD65Xuzus0hu5kB0=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@swc-node/core-darwin/download/@swc-node/core-darwin-0.7.6.tgz'
-    version: 0.7.6
-  registry.npm.taobao.org/@swc-node/core-linux/0.7.6:
-    dev: true
-    name: '@swc-node/core-linux'
-    optional: true
-    os:
-      - linux
-    resolution:
-      integrity: sha1-5wUsgs9EjZ55/eJ1SfduRRz7rTw=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@swc-node/core-linux/download/@swc-node/core-linux-0.7.6.tgz'
-    version: 0.7.6
-  registry.npm.taobao.org/@swc-node/core-win32/0.7.6:
-    dev: true
-    name: '@swc-node/core-win32'
-    optional: true
-    os:
-      - win32
-    resolution:
-      integrity: sha1-aUSv52s0ZyW3U9XqDe82OFezq4U=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@swc-node/core-win32/download/@swc-node/core-win32-0.7.6.tgz'
-    version: 0.7.6
-  registry.npm.taobao.org/@swc-node/core/0.7.6:
+  registry.npm.taobao.org/@swc-node/core/1.1.0:
     dependencies:
-      '@node-rs/helper': registry.npm.taobao.org/@node-rs/helper/0.4.0
+      '@swc/core': registry.npm.taobao.org/@swc/core/1.2.37
     dev: true
     engines:
       node: '>= 8.9'
     name: '@swc-node/core'
-    optionalDependencies:
-      '@swc-node/core-darwin': registry.npm.taobao.org/@swc-node/core-darwin/0.7.6
-      '@swc-node/core-linux': registry.npm.taobao.org/@swc-node/core-linux/0.7.6
-      '@swc-node/core-win32': registry.npm.taobao.org/@swc-node/core-win32/0.7.6
-    os:
-      - darwin
-      - linux
-      - win32
     resolution:
-      integrity: sha1-smCQVwH6KAyTAvrWcd/ZTtLbdbQ=
+      integrity: sha1-TZlZfmKu/isqLcC9koKCwAtRnVI=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@swc-node/core/download/@swc-node/core-0.7.6.tgz'
-    version: 0.7.6
-  registry.npm.taobao.org/@swc-node/jest/0.3.7:
+      tarball: 'https://registry.npm.taobao.org/@swc-node/core/download/@swc-node/core-1.1.0.tgz'
+    version: 1.1.0
+  registry.npm.taobao.org/@swc-node/jest/1.0.1:
     dependencies:
-      '@swc-node/core': registry.npm.taobao.org/@swc-node/core/0.7.6
+      '@swc-node/core': registry.npm.taobao.org/@swc-node/core/1.1.0
     dev: true
     name: '@swc-node/jest'
     resolution:
-      integrity: sha1-WqFsnNN3qeSs07bi8uysr/Hc4kk=
+      integrity: sha1-nWZRUkXiWBYxGRCSFjiEsCW5JEo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@swc-node/jest/download/@swc-node/jest-0.3.7.tgz'
-    version: 0.3.7
-  registry.npm.taobao.org/@swc-node/register/0.5.0:
+      tarball: 'https://registry.npm.taobao.org/@swc-node/jest/download/@swc-node/jest-1.0.1.tgz'
+    version: 1.0.1
+  registry.npm.taobao.org/@swc-node/register/1.0.1:
     dependencies:
-      '@swc-node/core': registry.npm.taobao.org/@swc-node/core/0.7.6
+      '@swc-node/core': registry.npm.taobao.org/@swc-node/core/1.1.0
       '@swc-node/sourcemap-support': registry.npm.taobao.org/@swc-node/sourcemap-support/0.1.8
       chalk: registry.npm.taobao.org/chalk/4.1.0
       debug: registry.npm.taobao.org/debug/4.2.0
@@ -2227,10 +2186,10 @@ packages:
     dev: true
     name: '@swc-node/register'
     resolution:
-      integrity: sha1-7s3MQpsKu4MD3BMXEL11i27gW7Y=
+      integrity: sha1-P11eC6rGf2KypHeR8x0ykodagS8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@swc-node/register/download/@swc-node/register-0.5.0.tgz'
-    version: 0.5.0
+      tarball: 'https://registry.npm.taobao.org/@swc-node/register/download/@swc-node/register-1.0.1.tgz'
+    version: 1.0.1
   registry.npm.taobao.org/@swc-node/sourcemap-support/0.1.8:
     dependencies:
       source-map-support: registry.npm.taobao.org/source-map-support/0.5.19
@@ -2241,6 +2200,65 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@swc-node/sourcemap-support/download/@swc-node/sourcemap-support-0.1.8.tgz'
     version: 0.1.8
+  registry.npm.taobao.org/@swc/core-darwin/1.2.37:
+    dev: true
+    engines:
+      node: '>=8.9.0'
+    name: '@swc/core-darwin'
+    optional: true
+    resolution:
+      integrity: sha1-JS6ipwK4s0sMdAz40E9OlRZeJLk=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc/core-darwin/download/@swc/core-darwin-1.2.37.tgz'
+    version: 1.2.37
+  registry.npm.taobao.org/@swc/core-linux-musl/1.2.37:
+    dev: true
+    engines:
+      node: '>=8.9.0'
+    name: '@swc/core-linux-musl'
+    resolution:
+      integrity: sha1-qYgMzoaMDUQKvFk6RPWo5QajlFg=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc/core-linux-musl/download/@swc/core-linux-musl-1.2.37.tgz'
+    version: 1.2.37
+  registry.npm.taobao.org/@swc/core-linux/1.2.37:
+    dev: true
+    engines:
+      node: '>=8.9.0'
+    name: '@swc/core-linux'
+    optional: true
+    resolution:
+      integrity: sha1-GsgQko3WRjB4RVv4kxW+yHM8MJI=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc/core-linux/download/@swc/core-linux-1.2.37.tgz'
+    version: 1.2.37
+  registry.npm.taobao.org/@swc/core-win32/1.2.37:
+    dev: true
+    engines:
+      node: '>=8.9.0'
+    name: '@swc/core-win32'
+    optional: true
+    resolution:
+      integrity: sha1-8BlU0DoM+j8Cwn7kX4puIZojkyI=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc/core-win32/download/@swc/core-win32-1.2.37.tgz'
+    version: 1.2.37
+  registry.npm.taobao.org/@swc/core/1.2.37:
+    dependencies:
+      '@node-rs/helper': registry.npm.taobao.org/@node-rs/helper/0.4.0
+    dev: true
+    engines:
+      node: '>=8.9.0'
+    name: '@swc/core'
+    optionalDependencies:
+      '@swc/core-darwin': registry.npm.taobao.org/@swc/core-darwin/1.2.37
+      '@swc/core-linux': registry.npm.taobao.org/@swc/core-linux/1.2.37
+      '@swc/core-win32': registry.npm.taobao.org/@swc/core-win32/1.2.37
+    resolution:
+      integrity: sha1-dMd/LjmG4xukuGrGwo7MVbrplMk=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@swc/core/download/@swc/core-1.2.37.tgz'
+    version: 1.2.37
   registry.npm.taobao.org/@tarojs/api/3.0.15:
     dependencies:
       '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.15
@@ -2870,9 +2888,6 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
@@ -2916,9 +2931,6 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
@@ -2952,9 +2964,6 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-pckfzFSXzOeSL/hrw31eWJHc3vo=
       registry: 'https://r.npm.taobao.org/'
@@ -6685,7 +6694,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.11.0_43c4aba17ed54bcac310a13c52c1a9d4:
+  registry.npm.taobao.org/haoma/2.12.2_43c4aba17ed54bcac310a13c52c1a9d4:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.10.5
       '@babel/plugin-proposal-decorators': registry.npm.taobao.org/@babel/plugin-proposal-decorators/7.12.1_@babel+core@7.10.5
@@ -6695,8 +6704,9 @@ packages:
       '@babel/preset-env': registry.npm.taobao.org/@babel/preset-env/7.12.1_@babel+core@7.10.5
       '@babel/preset-typescript': registry.npm.taobao.org/@babel/preset-typescript/7.12.1_@babel+core@7.10.5
       '@jest/types': registry.npm.taobao.org/@jest/types/26.6.2
-      '@swc-node/jest': registry.npm.taobao.org/@swc-node/jest/0.3.7
-      '@swc-node/register': registry.npm.taobao.org/@swc-node/register/0.5.0
+      '@swc-node/jest': registry.npm.taobao.org/@swc-node/jest/1.0.1
+      '@swc-node/register': registry.npm.taobao.org/@swc-node/register/1.0.1
+      '@swc/core-linux-musl': registry.npm.taobao.org/@swc/core-linux-musl/1.2.37
       '@testing-library/jest-dom': registry.npm.taobao.org/@testing-library/jest-dom/5.11.1
       '@types/eslint': registry.npm.taobao.org/@types/eslint/7.2.0
       '@types/jest': registry.npm.taobao.org/@types/jest/25.2.3
@@ -6743,7 +6753,7 @@ packages:
       yargs: registry.npm.taobao.org/yargs/15.4.1
     dev: true
     hasBin: true
-    id: registry.npm.taobao.org/haoma/2.11.0
+    id: registry.npm.taobao.org/haoma/2.12.2
     name: haoma
     peerDependencies:
       eslint: ^7
@@ -6754,10 +6764,10 @@ packages:
       typescript: ^3 || ^4
     requiresBuild: true
     resolution:
-      integrity: sha1-S4ymQ1aOWkTD26RBAyx75R+k4Rc=
+      integrity: sha1-ure0GO/TPWbIbuJzxBHJFiSxjUs=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.11.0.tgz?cache=0&sync_timestamp=1604387423523&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhaoma%2Fdownload%2Fhaoma-2.11.0.tgz'
-    version: 2.11.0
+      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.12.2.tgz'
+    version: 2.12.2
   registry.npm.taobao.org/har-schema/2.0.0:
     dev: true
     engines:
@@ -14092,7 +14102,7 @@ specifiers:
   execa: 4.1.0
   fs-extra: 9.0.1
   globby: 11.0.1
-  haoma: 2.11.0
+  haoma: 2.12.2
   husky: 4.3.0
   jest: 26.6.2
   lint-staged: 10.5.1
