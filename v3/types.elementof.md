@@ -9,5 +9,5 @@ Easily extract the type of a given array's elements
 <b>Signature:</b>
 
 ```typescript
-declare type ElementOf<T extends any[]> = T extends (infer ET)[] ? ET : never;
+declare type ElementOf<T extends readonly any[]> = T extends readonly (infer ET)[] ? ET : never;
 ```
