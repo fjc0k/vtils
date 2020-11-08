@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.50.0](https://github.com/fjc0k/vtils/compare/v3.49.3...v3.50.0) (2020-11-08)
+
+### Features
+
+- **mp:** 新增 getSceneParams、useSceneParams ([0ab6f55](https://github.com/fjc0k/vtils/commit/0ab6f553ff189e0107b9ec638aa704ce74136fef))
+
 ### [3.49.3](https://github.com/fjc0k/vtils/compare/v3.49.2...v3.49.3) (2020-10-11)
 
 ### Bug Fixes
