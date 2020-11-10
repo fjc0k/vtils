@@ -8,7 +8,7 @@ dependencies:
   tslib: registry.npm.taobao.org/tslib/2.0.0
   yup: registry.npm.taobao.org/yup/0.29.1
 devDependencies:
-  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.26
+  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.9.27
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.11.2
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.16
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.1.1_react-dom@17.0.1+react@17.0.1
@@ -2000,7 +2000,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@jest/types/download/@jest/types-26.6.2.tgz?cache=0&sync_timestamp=1604322236482&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40jest%2Ftypes%2Fdownload%2F%40jest%2Ftypes-26.6.2.tgz'
     version: 26.6.2
-  registry.npm.taobao.org/@microsoft/api-documenter/7.9.26:
+  registry.npm.taobao.org/@microsoft/api-documenter/7.9.27:
     dependencies:
       '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.8
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -2013,10 +2013,10 @@ packages:
     hasBin: true
     name: '@microsoft/api-documenter'
     resolution:
-      integrity: sha1-2YhNlSfAJ6J7+hnqaaaqXUaZIAE=
+      integrity: sha1-OUqtGtzLvt6yQ3wTsAmxHMFizE8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.9.26.tgz'
-    version: 7.9.26
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.9.27.tgz?cache=0&sync_timestamp=1605024765324&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-documenter%2Fdownload%2F%40microsoft%2Fapi-documenter-7.9.27.tgz'
+    version: 7.9.27
   registry.npm.taobao.org/@microsoft/api-extractor-model/7.10.8:
     dependencies:
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -2173,6 +2173,10 @@ packages:
     engines:
       node: '>= 8.9'
     name: '@swc-node/core'
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-TZlZfmKu/isqLcC9koKCwAtRnVI=
       registry: 'https://r.npm.taobao.org/'
@@ -2218,6 +2222,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-darwin'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-JS6ipwK4s0sMdAz40E9OlRZeJLk=
       registry: 'https://r.npm.taobao.org/'
@@ -2229,6 +2235,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-linux'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-GsgQko3WRjB4RVv4kxW+yHM8MJI=
       registry: 'https://r.npm.taobao.org/'
@@ -2240,6 +2248,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-win32'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-8BlU0DoM+j8Cwn7kX4puIZojkyI=
       registry: 'https://r.npm.taobao.org/'
@@ -2256,6 +2266,10 @@ packages:
       '@swc/core-darwin': registry.npm.taobao.org/@swc/core-darwin/1.2.37
       '@swc/core-linux': registry.npm.taobao.org/@swc/core-linux/1.2.37
       '@swc/core-win32': registry.npm.taobao.org/@swc/core-win32/1.2.37
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-dMd/LjmG4xukuGrGwo7MVbrplMk=
       registry: 'https://r.npm.taobao.org/'
@@ -2890,6 +2904,9 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
@@ -2933,6 +2950,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
@@ -2966,6 +2986,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-pckfzFSXzOeSL/hrw31eWJHc3vo=
       registry: 'https://r.npm.taobao.org/'
@@ -8344,6 +8367,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -8359,6 +8385,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -14121,7 +14150,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/z-schema/download/z-schema-3.18.4.tgz'
     version: 3.18.4
 specifiers:
-  '@microsoft/api-documenter': 7.9.26
+  '@microsoft/api-documenter': 7.9.27
   '@microsoft/api-extractor': 7.11.2
   '@tarojs/taro': 3.0.16
   '@testing-library/react': 11.1.1
