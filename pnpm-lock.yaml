@@ -24,7 +24,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.1.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.13.1_1f0d0d44b4ec52cb78a224ed15ba2fd3
+  haoma: registry.npm.taobao.org/haoma/2.13.3_1f0d0d44b4ec52cb78a224ed15ba2fd3
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.1
@@ -6718,7 +6718,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.13.1_1f0d0d44b4ec52cb78a224ed15ba2fd3:
+  registry.npm.taobao.org/haoma/2.13.3_1f0d0d44b4ec52cb78a224ed15ba2fd3:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.10.5
       '@babel/plugin-proposal-decorators': registry.npm.taobao.org/@babel/plugin-proposal-decorators/7.12.1_@babel+core@7.10.5
@@ -6776,7 +6776,7 @@ packages:
       yargs: registry.npm.taobao.org/yargs/15.4.1
     dev: true
     hasBin: true
-    id: registry.npm.taobao.org/haoma/2.13.1
+    id: registry.npm.taobao.org/haoma/2.13.3
     name: haoma
     peerDependencies:
       eslint: ^7
@@ -6787,10 +6787,10 @@ packages:
       typescript: ^3 || ^4
     requiresBuild: true
     resolution:
-      integrity: sha1-RXm9wYuRjT4TrFlDoMr6877GJSQ=
+      integrity: sha1-qMp+D8XeIkZrG0UmrKcoDUhg43c=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.13.1.tgz?cache=0&sync_timestamp=1604990354692&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhaoma%2Fdownload%2Fhaoma-2.13.1.tgz'
-    version: 2.13.1
+      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.13.3.tgz'
+    version: 2.13.3
   registry.npm.taobao.org/har-schema/2.0.0:
     dev: true
     engines:
@@ -14139,7 +14139,7 @@ specifiers:
   execa: 4.1.0
   fs-extra: 9.0.1
   globby: 11.0.1
-  haoma: 2.13.1
+  haoma: 2.13.3
   husky: 4.3.0
   jest: 26.6.3
   lint-staged: 10.5.1
