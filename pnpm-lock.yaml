@@ -13,7 +13,7 @@ devDependencies:
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.16
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.1.2_react-dom@17.0.1+react@17.0.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@17.0.1
-  '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.3
+  '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.4
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
   '@types/react': registry.npm.taobao.org/@types/react/16.9.56
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/16.9.9
@@ -2183,6 +2183,10 @@ packages:
     engines:
       node: '>= 8.9'
     name: '@swc-node/core'
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-TZlZfmKu/isqLcC9koKCwAtRnVI=
       registry: 'https://r.npm.taobao.org/'
@@ -2228,6 +2232,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-darwin'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-JS6ipwK4s0sMdAz40E9OlRZeJLk=
       registry: 'https://r.npm.taobao.org/'
@@ -2239,6 +2245,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-linux'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-GsgQko3WRjB4RVv4kxW+yHM8MJI=
       registry: 'https://r.npm.taobao.org/'
@@ -2250,6 +2258,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-win32'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-8BlU0DoM+j8Cwn7kX4puIZojkyI=
       registry: 'https://r.npm.taobao.org/'
@@ -2266,6 +2276,10 @@ packages:
       '@swc/core-darwin': registry.npm.taobao.org/@swc/core-darwin/1.2.37
       '@swc/core-linux': registry.npm.taobao.org/@swc/core-linux/1.2.37
       '@swc/core-win32': registry.npm.taobao.org/@swc/core-win32/1.2.37
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-dMd/LjmG4xukuGrGwo7MVbrplMk=
       registry: 'https://r.npm.taobao.org/'
@@ -2539,16 +2553,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/estree/download/@types/estree-0.0.45.tgz'
     version: 0.0.45
-  registry.npm.taobao.org/@types/fs-extra/9.0.3:
+  registry.npm.taobao.org/@types/fs-extra/9.0.4:
     dependencies:
       '@types/node': registry.npm.taobao.org/@types/node/14.0.6
     dev: true
     name: '@types/fs-extra'
     resolution:
-      integrity: sha1-mZblzOmTUIwyMlOAtCnwShMnUj4=
+      integrity: sha1-ElUxOM8EONuaMc3IsKOqkzLrZ6o=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/fs-extra/download/@types/fs-extra-9.0.3.tgz?cache=0&sync_timestamp=1604409596519&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Ffs-extra%2Fdownload%2F%40types%2Ffs-extra-9.0.3.tgz'
-    version: 9.0.3
+      tarball: 'https://registry.npm.taobao.org/@types/fs-extra/download/@types/fs-extra-9.0.4.tgz?cache=0&sync_timestamp=1605132217782&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Ffs-extra%2Fdownload%2F%40types%2Ffs-extra-9.0.4.tgz'
+    version: 9.0.4
   registry.npm.taobao.org/@types/glob/7.1.2:
     dependencies:
       '@types/minimatch': registry.npm.taobao.org/@types/minimatch/3.0.3
@@ -2900,6 +2914,9 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
@@ -2943,6 +2960,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
@@ -2976,6 +2996,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-pckfzFSXzOeSL/hrw31eWJHc3vo=
       registry: 'https://r.npm.taobao.org/'
@@ -8366,6 +8389,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -8381,6 +8407,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -14148,7 +14177,7 @@ specifiers:
   '@tarojs/taro': 3.0.16
   '@testing-library/react': 11.1.2
   '@testing-library/react-hooks': 3.4.2
-  '@types/fs-extra': 9.0.3
+  '@types/fs-extra': 9.0.4
   '@types/lodash-es': ^4.17.3
   '@types/prompts': 2.0.9
   '@types/react': 16.9.56
