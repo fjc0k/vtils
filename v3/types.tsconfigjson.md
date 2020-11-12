@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-declare namespace TsConfigJson 
+export declare namespace TsConfigJson 
 ```
 
 ## Interfaces

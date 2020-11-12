@@ -9,27 +9,27 @@ Recursive nullable
 <b>Signature:</b>
 
 ```typescript
-declare type DeepNullable<T> = T extends Builtin
+export declare type NullableDeep<T> = T extends Builtin
   ? T | null
   : T extends Map<infer K, infer V>
-  ? Map<DeepNullable<K>, DeepNullable<V>>
+  ? Map<NullableDeep<K>, NullableDeep<V>>
   : T extends WeakMap<infer K, infer V>
-  ? WeakMap<DeepNullable<K>, DeepNullable<V>>
+  ? WeakMap<NullableDeep<K>, NullableDeep<V>>
   : T extends Set<infer U>
-  ? Set<DeepNullable<U>>
+  ? Set<NullableDeep<U>>
   : T extends WeakSet<infer U>
-  ? WeakSet<DeepNullable<U>>
+  ? WeakSet<NullableDeep<U>>
   : T extends Array<infer U>
   ? T extends IsTuple<T>
     ? {
-        [K in keyof T]: DeepNullable<T[K]> | null;
+        [K in keyof T]: NullableDeep<T[K]> | null;
       }
-    : Array<DeepNullable<U>>
+    : Array<NullableDeep<U>>
   : T extends Promise<infer U>
-  ? Promise<DeepNullable<U>>
+  ? Promise<NullableDeep<U>>
   : T extends {}
   ? {
-      [K in keyof T]: DeepNullable<T[K]>;
+      [K in keyof T]: NullableDeep<T[K]>;
     }
   : T | null;
 ```

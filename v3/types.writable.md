@@ -9,7 +9,7 @@ Make readonly object writable
 <b>Signature:</b>
 
 ```typescript
-declare type Writable<T> = {
+export declare type Writable<T> = {
   -readonly [P in keyof T]: T[P];
 };
 ```

@@ -4,8 +4,10 @@
 
 ## AnyArray type
 
+类型工具库。
+
 <b>Signature:</b>
 
 ```typescript
-declare type AnyArray<T = any> = Array<T> | ReadonlyArray<T>;
+export declare type AnyArray<T = any> = Array<T> | ReadonlyArray<T>;
 ```

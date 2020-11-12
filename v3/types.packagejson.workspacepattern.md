@@ -11,7 +11,7 @@ The patterns are handled with \[minimatch\](https://github.com/isaacs/minimatch)
 <b>Signature:</b>
 
 ```typescript
-type WorkspacePattern = string;
+export type WorkspacePattern = string;
 ```
 
 ## Example

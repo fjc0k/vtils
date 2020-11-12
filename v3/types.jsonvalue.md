@@ -9,5 +9,5 @@ Matches any valid JSON value.
 <b>Signature:</b>
 
 ```typescript
-type JsonValue = string | number | boolean | null | JsonObject | JsonArray;
+export declare type JsonValue = string | number | boolean | null | JsonObject | JsonArray;
 ```

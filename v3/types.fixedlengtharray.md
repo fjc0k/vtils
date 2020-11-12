@@ -13,7 +13,7 @@ Use-cases: - Declaring fixed-length tuples or arrays with a large number of item
 <b>Signature:</b>
 
 ```typescript
-type FixedLengthArray<Element, Length extends number, ArrayPrototype = [Element, ...Element[]]> = Pick<
+export declare type FixedLengthArray<Element, Length extends number, ArrayPrototype = [Element, ...Element[]]> = Pick<
 	ArrayPrototype,
 	Exclude<keyof ArrayPrototype, ArrayLengthMutationKeys>
 > & {

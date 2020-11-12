@@ -9,5 +9,5 @@ Mark some properties as required, leaving others unchanged
 <b>Signature:</b>
 
 ```typescript
-declare type MarkRequired<T, RK extends keyof T> = Exclude<T, RK> & Required<Pick<T, RK>>;
+export declare type RequiredBy<T, RK extends keyof T> = Exclude<T, RK> & Required<Pick<T, RK>>;
 ```

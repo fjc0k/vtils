@@ -9,7 +9,7 @@ Matches a JSON array.
 <b>Signature:</b>
 
 ```typescript
-interface JsonArray extends Array<JsonValue> 
+export declare interface JsonArray extends Array<JsonValue> 
 ```
-<b>Extends:</b> Array&lt;JsonValue&gt;
+<b>Extends:</b> Array&lt;[JsonValue](./types.jsonvalue.md)<!-- -->&gt;
 

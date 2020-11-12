@@ -9,5 +9,5 @@ Similar to the builtin Omit, but checks the filter strictly.
 <b>Signature:</b>
 
 ```typescript
-declare type StrictOmit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+export declare type OmitStrict<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 ```

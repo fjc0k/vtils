@@ -9,5 +9,5 @@ Combination of DeepPartial and DeepWritable
 <b>Signature:</b>
 
 ```typescript
-declare type Buildable<T> = DeepPartial<DeepWritable<T>>;
+export declare type Buildable<T> = PartialDeep<WritableDeep<T>>;
 ```

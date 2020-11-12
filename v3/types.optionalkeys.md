@@ -9,7 +9,7 @@ Gets keys of an object which are optional
 <b>Signature:</b>
 
 ```typescript
-declare type OptionalKeys<T> = {
+export declare type OptionalKeys<T> = {
   [K in keyof T]-?: undefined extends {
     [K2 in keyof T]: K2;
   }[K]

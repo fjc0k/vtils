@@ -11,7 +11,7 @@ There has been \[discussion\](https://github.com/microsoft/TypeScript/pull/35998
 <b>Signature:</b>
 
 ```typescript
-type AsyncReturnType<Target extends AsyncFunction> = PromiseValue<ReturnType<Target>>;
+export declare type AsyncReturnType<Target extends AsyncFunction> = PromiseValue<ReturnType<Target>>;
 ```
 
 ## Example

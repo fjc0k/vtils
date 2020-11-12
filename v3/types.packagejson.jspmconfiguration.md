@@ -14,5 +14,5 @@ export interface JSPMConfiguration
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [jspm](./types.packagejson.jspmconfiguration.jspm.md) | PackageJson | JSPM configuration. |
+|  [jspm](./types.packagejson.jspmconfiguration.jspm.md) | [PackageJson](./types.packagejson.md) | JSPM configuration. |
 

@@ -9,31 +9,31 @@ Like Partial but recursive
 <b>Signature:</b>
 
 ```typescript
-declare type DeepPartial<T> = T extends Builtin
+export declare type PartialDeep<T> = T extends Builtin
   ? T
   : T extends Map<infer K, infer V>
-  ? Map<DeepPartial<K>, DeepPartial<V>>
+  ? Map<PartialDeep<K>, PartialDeep<V>>
   : T extends ReadonlyMap<infer K, infer V>
-  ? ReadonlyMap<DeepPartial<K>, DeepPartial<V>>
+  ? ReadonlyMap<PartialDeep<K>, PartialDeep<V>>
   : T extends WeakMap<infer K, infer V>
-  ? WeakMap<DeepPartial<K>, DeepPartial<V>>
+  ? WeakMap<PartialDeep<K>, PartialDeep<V>>
   : T extends Set<infer U>
-  ? Set<DeepPartial<U>>
+  ? Set<PartialDeep<U>>
   : T extends ReadonlySet<infer U>
-  ? ReadonlySet<DeepPartial<U>>
+  ? ReadonlySet<PartialDeep<U>>
   : T extends WeakSet<infer U>
-  ? WeakSet<DeepPartial<U>>
+  ? WeakSet<PartialDeep<U>>
   : T extends Array<infer U>
   ? T extends IsTuple<T>
     ? {
-        [K in keyof T]?: DeepPartial<T[K]>;
+        [K in keyof T]?: PartialDeep<T[K]>;
       }
-    : Array<DeepPartial<U>>
+    : Array<PartialDeep<U>>
   : T extends Promise<infer U>
-  ? Promise<DeepPartial<U>>
+  ? Promise<PartialDeep<U>>
   : T extends {}
   ? {
-      [K in keyof T]?: DeepPartial<T[K]>;
+      [K in keyof T]?: PartialDeep<T[K]>;
     }
   : Partial<T>;
 ```

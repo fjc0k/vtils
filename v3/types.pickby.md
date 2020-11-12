@@ -9,7 +9,7 @@ Pick all properties of given type in object type
 <b>Signature:</b>
 
 ```typescript
-declare type PickProperties<T, P> = Pick<
+export declare type PickBy<T, P> = Pick<
   T,
   {
     [K in keyof T]: T[K] extends P ? K : never;

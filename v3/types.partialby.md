@@ -9,5 +9,5 @@ Mark some properties as optional, leaving others unchanged
 <b>Signature:</b>
 
 ```typescript
-declare type MarkOptional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+export declare type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 ```

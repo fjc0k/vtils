@@ -9,5 +9,5 @@ Gets keys of an object which are required
 <b>Signature:</b>
 
 ```typescript
-declare type RequiredKeys<T> = Exclude<keyof T, OptionalKeys<T>>;
+export declare type RequiredKeys<T> = Exclude<keyof T, OptionalKeys<T>>;
 ```

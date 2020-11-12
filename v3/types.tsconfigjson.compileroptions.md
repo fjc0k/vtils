@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-namespace CompilerOptions 
+export namespace CompilerOptions 
 ```
 
 ## Interfaces

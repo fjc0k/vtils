@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-declare type AnyObject = Record<any, any>;
+export declare type AnyObject = Record<any, any>;
 ```

@@ -9,7 +9,7 @@ Gets keys of an object which are readonly
 <b>Signature:</b>
 
 ```typescript
-declare type ReadonlyKeys<T extends object> = {
+export declare type ReadonlyKeys<T extends object> = {
   [P in keyof T]-?: IsFullyWritable<Pick<T, P>> extends true ? never : P;
 }[keyof T];
 ```

@@ -9,25 +9,25 @@ Like NonNullable but recursive
 <b>Signature:</b>
 
 ```typescript
-declare type DeepNonNullable<T> = T extends Builtin
+export declare type NonNullableDeep<T> = T extends Builtin
   ? NonNullable<T>
   : T extends Map<infer K, infer V>
-  ? Map<DeepNonNullable<K>, DeepNonNullable<V>>
+  ? Map<NonNullableDeep<K>, NonNullableDeep<V>>
   : T extends ReadonlyMap<infer K, infer V>
-  ? ReadonlyMap<DeepNonNullable<K>, DeepNonNullable<V>>
+  ? ReadonlyMap<NonNullableDeep<K>, NonNullableDeep<V>>
   : T extends WeakMap<infer K, infer V>
-  ? WeakMap<DeepNonNullable<K>, DeepNonNullable<V>>
+  ? WeakMap<NonNullableDeep<K>, NonNullableDeep<V>>
   : T extends Set<infer U>
-  ? Set<DeepNonNullable<U>>
+  ? Set<NonNullableDeep<U>>
   : T extends ReadonlySet<infer U>
-  ? ReadonlySet<DeepNonNullable<U>>
+  ? ReadonlySet<NonNullableDeep<U>>
   : T extends WeakSet<infer U>
-  ? WeakSet<DeepNonNullable<U>>
+  ? WeakSet<NonNullableDeep<U>>
   : T extends Promise<infer U>
-  ? Promise<DeepNonNullable<U>>
+  ? Promise<NonNullableDeep<U>>
   : T extends {}
   ? {
-      [K in keyof T]: DeepNonNullable<T[K]>;
+      [K in keyof T]: NonNullableDeep<T[K]>;
     }
   : NonNullable<T>;
 ```

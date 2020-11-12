@@ -9,25 +9,25 @@ Like Required but recursive
 <b>Signature:</b>
 
 ```typescript
-declare type DeepRequired<T> = T extends Builtin
+export declare type RequiredDeep<T> = T extends Builtin
   ? NonNullable<T>
   : T extends Map<infer K, infer V>
-  ? Map<DeepRequired<K>, DeepRequired<V>>
+  ? Map<RequiredDeep<K>, RequiredDeep<V>>
   : T extends ReadonlyMap<infer K, infer V>
-  ? ReadonlyMap<DeepRequired<K>, DeepRequired<V>>
+  ? ReadonlyMap<RequiredDeep<K>, RequiredDeep<V>>
   : T extends WeakMap<infer K, infer V>
-  ? WeakMap<DeepRequired<K>, DeepRequired<V>>
+  ? WeakMap<RequiredDeep<K>, RequiredDeep<V>>
   : T extends Set<infer U>
-  ? Set<DeepRequired<U>>
+  ? Set<RequiredDeep<U>>
   : T extends ReadonlySet<infer U>
-  ? ReadonlySet<DeepRequired<U>>
+  ? ReadonlySet<RequiredDeep<U>>
   : T extends WeakSet<infer U>
-  ? WeakSet<DeepRequired<U>>
+  ? WeakSet<RequiredDeep<U>>
   : T extends Promise<infer U>
-  ? Promise<DeepRequired<U>>
+  ? Promise<RequiredDeep<U>>
   : T extends {}
   ? {
-      [K in keyof T]-?: DeepRequired<T[K]>;
+      [K in keyof T]-?: RequiredDeep<T[K]>;
     }
   : NonNullable<T>;
 ```

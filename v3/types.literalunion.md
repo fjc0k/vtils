@@ -13,8 +13,8 @@ This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com
 <b>Signature:</b>
 
 ```typescript
-type LiteralUnion<
-	LiteralType extends BaseType,
+export declare type LiteralUnion<
+	LiteralType,
 	BaseType extends Primitive
 > = LiteralType | (BaseType & {_?: never});
 ```

@@ -11,5 +11,5 @@ This type can be useful to enforce some input to be JSON-compatible or as a supe
 <b>Signature:</b>
 
 ```typescript
-type JsonObject = {[Key in string]?: JsonValue};
+export declare type JsonObject = {[Key in string]?: JsonValue};
 ```

@@ -9,5 +9,5 @@ Easily extract the type of a given object's values
 <b>Signature:</b>
 
 ```typescript
-declare type ValueOf<T> = T[keyof T];
+export declare type ValueOf<T> = T[keyof T];
 ```

@@ -9,5 +9,5 @@ Merge 2 types, properties types from the latter override the ones defined on the
 <b>Signature:</b>
 
 ```typescript
-declare type Merge<M, N> = Omit<M, keyof N> & N;
+export declare type Merge<M, N> = Omit<M, keyof N> & N;
 ```

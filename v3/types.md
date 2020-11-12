@@ -24,7 +24,7 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [AnyArray](./types.anyarray.md) |  |
+|  [AnyArray](./types.anyarray.md) | 类型工具库。 |
 |  [AnyAsyncFunction](./types.anyasyncfunction.md) | 任意异步函数。 |
 |  [AnyFunction](./types.anyfunction.md) | 任意函数。 |
 |  [AnyObject](./types.anyobject.md) | 任意对象。 |

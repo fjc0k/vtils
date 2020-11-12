@@ -9,5 +9,5 @@ Useful as a return type in interfaces or abstract classes with missing implement
 <b>Signature:</b>
 
 ```typescript
-declare type AsyncOrSync<T> = PromiseLike<T> | T;
+export declare type AsyncOrSync<T> = PromiseLike<T> | T;
 ```

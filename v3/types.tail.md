@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-declare type Tail<T extends AnyArray> = T["length"] extends 0
+export declare type Tail<T extends AnyArray> = T["length"] extends 0
   ? never
   : ((...t: T) => void) extends (first: any, ...rest: infer Rest) => void
   ? Rest

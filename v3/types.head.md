@@ -9,5 +9,5 @@ Functional programming essentials
 <b>Signature:</b>
 
 ```typescript
-declare type Head<T extends AnyArray> = T["length"] extends 0 ? never : T[0];
+export declare type Head<T extends AnyArray> = T["length"] extends 0 ? never : T[0];
 ```

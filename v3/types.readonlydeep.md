@@ -9,25 +9,25 @@ Like Readonly but recursive
 <b>Signature:</b>
 
 ```typescript
-declare type DeepReadonly<T> = T extends Builtin
+export declare type ReadonlyDeep<T> = T extends Builtin
   ? T
   : T extends Map<infer K, infer V>
-  ? ReadonlyMap<DeepReadonly<K>, DeepReadonly<V>>
+  ? ReadonlyMap<ReadonlyDeep<K>, ReadonlyDeep<V>>
   : T extends ReadonlyMap<infer K, infer V>
-  ? ReadonlyMap<DeepReadonly<K>, DeepReadonly<V>>
+  ? ReadonlyMap<ReadonlyDeep<K>, ReadonlyDeep<V>>
   : T extends WeakMap<infer K, infer V>
-  ? WeakMap<DeepReadonly<K>, DeepReadonly<V>>
+  ? WeakMap<ReadonlyDeep<K>, ReadonlyDeep<V>>
   : T extends Set<infer U>
-  ? ReadonlySet<DeepReadonly<U>>
+  ? ReadonlySet<ReadonlyDeep<U>>
   : T extends ReadonlySet<infer U>
-  ? ReadonlySet<DeepReadonly<U>>
+  ? ReadonlySet<ReadonlyDeep<U>>
   : T extends WeakSet<infer U>
-  ? WeakSet<DeepReadonly<U>>
+  ? WeakSet<ReadonlyDeep<U>>
   : T extends Promise<infer U>
-  ? Promise<DeepReadonly<U>>
+  ? Promise<ReadonlyDeep<U>>
   : T extends {}
   ? {
-      readonly [K in keyof T]: DeepReadonly<T[K]>;
+      readonly [K in keyof T]: ReadonlyDeep<T[K]>;
     }
   : Readonly<T>;
 ```
