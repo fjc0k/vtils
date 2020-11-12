@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.50.2](https://github.com/fjc0k/vtils/compare/v3.50.1...v3.50.2) (2020-11-12)
+
 ### [3.50.1](https://github.com/fjc0k/vtils/compare/v3.50.0...v3.50.1) (2020-11-12)
 
 ### Bug Fixes
