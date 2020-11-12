@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.50.1](https://github.com/fjc0k/vtils/compare/v3.50.0...v3.50.1) (2020-11-12)
+
+### Bug Fixes
+
+- **types:** 使用 api-extractor 打包类型文件 ([b4c5bbe](https://github.com/fjc0k/vtils/commit/b4c5bbed628008e828c2f1dcf25865524d15ba32))
+
 ## [3.50.0](https://github.com/fjc0k/vtils/compare/v3.49.3...v3.50.0) (2020-11-08)
 
 ### Features
