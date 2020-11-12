@@ -1,26 +1,37 @@
 import fs from 'fs-extra'
 import globby from 'globby'
-import rollupPluginDts from 'rollup-plugin-dts'
+import { Extractor, ExtractorConfig } from '@microsoft/api-extractor'
 import { join } from 'path'
-import { rollup } from 'rollup'
 
 async function main(rootDir: string) {
   const typesDir = join(rootDir, './lib/types')
   const typesFile = join(typesDir, './index.d.ts')
   const indexFile = join(typesDir, './index.js')
-  const bundle = await rollup({
-    input: typesFile,
-    treeshake: true,
-    plugins: [rollupPluginDts({ respectExternal: true })],
+
+  const config = ExtractorConfig.prepare({
+    configObjectFullPath: join(rootDir, './api-extractor.json'),
+    configObject: {
+      projectFolder: rootDir,
+      mainEntryPointFilePath: typesFile,
+      bundledPackages: ['type-fest', 'ts-essentials'],
+      apiReport: { enabled: false, reportFileName: 'report.api.md' },
+      dtsRollup: { enabled: true, untrimmedFilePath: typesFile },
+      tsdocMetadata: { enabled: false },
+      docModel: { enabled: false },
+      compiler: {
+        tsconfigFilePath: join(rootDir, './tsconfig.json'),
+      },
+      newlineKind: 'lf',
+    },
+    packageJsonFullPath: join(rootDir, './package.json'),
+    packageJson: {
+      name: 'vtils',
+    } as any,
   })
-  await bundle.generate({
-    file: typesFile,
-    format: 'es',
+  Extractor.invoke(config, {
+    localBuild: true,
   })
-  await bundle.write({
-    file: typesFile,
-    format: 'es',
-  })
+
   const files = await globby(['*', '!index.js', '!index.d.ts'], {
     cwd: typesDir,
     absolute: true,
