@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.51.0](https://github.com/fjc0k/vtils/compare/v3.50.2...v3.51.0) (2020-11-17)
+
+### Features
+
+- **utils:** 新增 chooseFile 选择文件 ([128b650](https://github.com/fjc0k/vtils/commit/128b6503a5c5d7989b56a1b139b92d81cc97f0e5))
+
 ### [3.50.2](https://github.com/fjc0k/vtils/compare/v3.50.1...v3.50.2) (2020-11-12)
 
 ### [3.50.1](https://github.com/fjc0k/vtils/compare/v3.50.0...v3.50.1) (2020-11-12)
