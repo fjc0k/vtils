@@ -24,7 +24,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.1.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.16.2_1f0d0d44b4ec52cb78a224ed15ba2fd3
+  haoma: registry.npm.taobao.org/haoma/2.17.1_1f0d0d44b4ec52cb78a224ed15ba2fd3
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.1
@@ -40,7 +40,7 @@ devDependencies:
   typescript: registry.npm.taobao.org/typescript/4.0.5
   typescript-snapshots-plugin: registry.npm.taobao.org/typescript-snapshots-plugin/1.7.0
   vscode-generate-index-standalone: registry.npm.taobao.org/vscode-generate-index-standalone/1.3.0
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   registry.npm.taobao.org/@babel/code-frame/7.0.0:
     dependencies:
@@ -1759,7 +1759,7 @@ packages:
       jest-haste-map: registry.npm.taobao.org/jest-haste-map/26.6.2
       jest-message-util: registry.npm.taobao.org/jest-message-util/26.6.2
       jest-regex-util: registry.npm.taobao.org/jest-regex-util/26.0.0
-      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2_jest-resolve@26.6.2
+      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2
       jest-resolve-dependencies: registry.npm.taobao.org/jest-resolve-dependencies/26.6.3
       jest-runner: registry.npm.taobao.org/jest-runner/26.6.3
       jest-runtime: registry.npm.taobao.org/jest-runtime/26.6.3
@@ -1845,7 +1845,7 @@ packages:
       istanbul-lib-source-maps: registry.npm.taobao.org/istanbul-lib-source-maps/4.0.0
       istanbul-reports: registry.npm.taobao.org/istanbul-reports/3.0.2
       jest-haste-map: registry.npm.taobao.org/jest-haste-map/26.6.2
-      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2_jest-resolve@26.6.2
+      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2
       jest-util: registry.npm.taobao.org/jest-util/26.6.2
       jest-worker: registry.npm.taobao.org/jest-worker/26.6.2
       slash: registry.npm.taobao.org/slash/3.0.0
@@ -2181,10 +2181,6 @@ packages:
     engines:
       node: '>= 8.9'
     name: '@swc-node/core'
-    os:
-      - darwin
-      - linux
-      - win32
     resolution:
       integrity: sha1-TZlZfmKu/isqLcC9koKCwAtRnVI=
       registry: 'https://r.npm.taobao.org/'
@@ -2230,8 +2226,6 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-darwin'
     optional: true
-    os:
-      - darwin
     resolution:
       integrity: sha1-JS6ipwK4s0sMdAz40E9OlRZeJLk=
       registry: 'https://r.npm.taobao.org/'
@@ -2243,8 +2237,6 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-linux'
     optional: true
-    os:
-      - linux
     resolution:
       integrity: sha1-GsgQko3WRjB4RVv4kxW+yHM8MJI=
       registry: 'https://r.npm.taobao.org/'
@@ -2256,8 +2248,6 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-win32'
     optional: true
-    os:
-      - win32
     resolution:
       integrity: sha1-8BlU0DoM+j8Cwn7kX4puIZojkyI=
       registry: 'https://r.npm.taobao.org/'
@@ -2274,10 +2264,6 @@ packages:
       '@swc/core-darwin': registry.npm.taobao.org/@swc/core-darwin/1.2.37
       '@swc/core-linux': registry.npm.taobao.org/@swc/core-linux/1.2.37
       '@swc/core-win32': registry.npm.taobao.org/@swc/core-win32/1.2.37
-    os:
-      - darwin
-      - linux
-      - win32
     resolution:
       integrity: sha1-dMd/LjmG4xukuGrGwo7MVbrplMk=
       registry: 'https://r.npm.taobao.org/'
@@ -2912,9 +2898,6 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-XO2P0gh/u4OnaXPepKDTnZy0pkI=
       registry: 'https://r.npm.taobao.org/'
@@ -2958,9 +2941,6 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-IW6K307pxin3fJhUdqLqB/uA4dw=
       registry: 'https://r.npm.taobao.org/'
@@ -2994,9 +2974,6 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     resolution:
       integrity: sha1-pckfzFSXzOeSL/hrw31eWJHc3vo=
       registry: 'https://r.npm.taobao.org/'
@@ -6989,7 +6966,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.16.2_1f0d0d44b4ec52cb78a224ed15ba2fd3:
+  registry.npm.taobao.org/haoma/2.17.1_1f0d0d44b4ec52cb78a224ed15ba2fd3:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.10.5
       '@babel/plugin-proposal-decorators': registry.npm.taobao.org/@babel/plugin-proposal-decorators/7.12.1_@babel+core@7.10.5
@@ -7056,7 +7033,7 @@ packages:
       yargs: registry.npm.taobao.org/yargs/15.4.1
     dev: true
     hasBin: true
-    id: registry.npm.taobao.org/haoma/2.16.2
+    id: registry.npm.taobao.org/haoma/2.17.1
     name: haoma
     peerDependencies:
       eslint: ^7
@@ -7067,10 +7044,10 @@ packages:
       typescript: ^3 || ^4
     requiresBuild: true
     resolution:
-      integrity: sha1-sEGe9Y1YNcW7DLZZ1dWQ7pQvudE=
+      integrity: sha1-vmoji58LYCQ7wFLusaPaRWjgi6E=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.16.2.tgz'
-    version: 2.16.2
+      tarball: 'https://registry.npm.taobao.org/haoma/download/haoma-2.17.1.tgz'
+    version: 2.17.1
   registry.npm.taobao.org/har-schema/2.0.0:
     dev: true
     engines:
@@ -8291,7 +8268,7 @@ packages:
       jest-get-type: registry.npm.taobao.org/jest-get-type/26.3.0
       jest-jasmine2: registry.npm.taobao.org/jest-jasmine2/26.6.3
       jest-regex-util: registry.npm.taobao.org/jest-regex-util/26.0.0
-      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2_jest-resolve@26.6.2
+      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2
       jest-util: registry.npm.taobao.org/jest-util/26.6.2
       jest-validate: registry.npm.taobao.org/jest-validate/26.6.2
       micromatch: registry.npm.taobao.org/micromatch/4.0.2
@@ -8666,7 +8643,7 @@ packages:
     version: 26.6.2
   registry.npm.taobao.org/jest-pnp-resolver/1.2.2_jest-resolve@25.5.1:
     dependencies:
-      jest-resolve: registry.npm.taobao.org/jest-resolve/25.5.1_jest-resolve@25.5.1
+      jest-resolve: registry.npm.taobao.org/jest-resolve/25.5.1
     dev: true
     engines:
       node: '>=6'
@@ -8674,9 +8651,6 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
-    peerDependenciesMeta:
-      jest-resolve:
-        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -8684,7 +8658,7 @@ packages:
     version: 1.2.2
   registry.npm.taobao.org/jest-pnp-resolver/1.2.2_jest-resolve@26.6.2:
     dependencies:
-      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2_jest-resolve@26.6.2
+      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2
     dev: true
     engines:
       node: '>=6'
@@ -8692,9 +8666,6 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
-    peerDependenciesMeta:
-      jest-resolve:
-        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -8744,7 +8715,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/jest-resolve-dependencies/download/jest-resolve-dependencies-26.6.3.tgz'
     version: 26.6.3
-  registry.npm.taobao.org/jest-resolve/25.5.1_jest-resolve@25.5.1:
+  registry.npm.taobao.org/jest-resolve/25.5.1:
     dependencies:
       '@jest/types': registry.npm.taobao.org/@jest/types/25.5.0
       browser-resolve: registry.npm.taobao.org/browser-resolve/1.11.3
@@ -8758,16 +8729,13 @@ packages:
     dev: true
     engines:
       node: '>= 8.3'
-    id: registry.npm.taobao.org/jest-resolve/25.5.1
     name: jest-resolve
-    peerDependencies:
-      jest-resolve: '*'
     resolution:
       integrity: sha1-Dm+8+nwm0qX+j0VgiNwzKnkmaCk=
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/jest-resolve/download/jest-resolve-25.5.1.tgz?cache=0&sync_timestamp=1604322239281&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-resolve%2Fdownload%2Fjest-resolve-25.5.1.tgz'
     version: 25.5.1
-  registry.npm.taobao.org/jest-resolve/26.6.2_jest-resolve@26.6.2:
+  registry.npm.taobao.org/jest-resolve/26.6.2:
     dependencies:
       '@jest/types': registry.npm.taobao.org/@jest/types/26.6.2
       chalk: registry.npm.taobao.org/chalk/4.1.0
@@ -8780,10 +8748,7 @@ packages:
     dev: true
     engines:
       node: '>= 10.14.2'
-    id: registry.npm.taobao.org/jest-resolve/26.6.2
     name: jest-resolve
-    peerDependencies:
-      jest-resolve: '*'
     resolution:
       integrity: sha1-o6sVFyF/RptQTxtWYDxbtUH7tQc=
       registry: 'https://r.npm.taobao.org/'
@@ -8805,7 +8770,7 @@ packages:
       jest-haste-map: registry.npm.taobao.org/jest-haste-map/26.6.2
       jest-leak-detector: registry.npm.taobao.org/jest-leak-detector/26.6.2
       jest-message-util: registry.npm.taobao.org/jest-message-util/26.6.2
-      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2_jest-resolve@26.6.2
+      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2
       jest-runtime: registry.npm.taobao.org/jest-runtime/26.6.3
       jest-util: registry.npm.taobao.org/jest-util/26.6.2
       jest-worker: registry.npm.taobao.org/jest-worker/26.6.2
@@ -8842,7 +8807,7 @@ packages:
       jest-message-util: registry.npm.taobao.org/jest-message-util/26.6.2
       jest-mock: registry.npm.taobao.org/jest-mock/26.6.2
       jest-regex-util: registry.npm.taobao.org/jest-regex-util/26.0.0
-      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2_jest-resolve@26.6.2
+      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2
       jest-snapshot: registry.npm.taobao.org/jest-snapshot/26.6.2
       jest-util: registry.npm.taobao.org/jest-util/26.6.2
       jest-validate: registry.npm.taobao.org/jest-validate/26.6.2
@@ -8902,7 +8867,7 @@ packages:
       jest-get-type: registry.npm.taobao.org/jest-get-type/25.2.6
       jest-matcher-utils: registry.npm.taobao.org/jest-matcher-utils/25.5.0
       jest-message-util: registry.npm.taobao.org/jest-message-util/25.5.0
-      jest-resolve: registry.npm.taobao.org/jest-resolve/25.5.1_jest-resolve@25.5.1
+      jest-resolve: registry.npm.taobao.org/jest-resolve/25.5.1
       make-dir: registry.npm.taobao.org/make-dir/3.1.0
       natural-compare: registry.npm.taobao.org/natural-compare/1.4.0
       pretty-format: registry.npm.taobao.org/pretty-format/25.5.0
@@ -8930,7 +8895,7 @@ packages:
       jest-haste-map: registry.npm.taobao.org/jest-haste-map/26.6.2
       jest-matcher-utils: registry.npm.taobao.org/jest-matcher-utils/26.6.2
       jest-message-util: registry.npm.taobao.org/jest-message-util/26.6.2
-      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2_jest-resolve@26.6.2
+      jest-resolve: registry.npm.taobao.org/jest-resolve/26.6.2
       natural-compare: registry.npm.taobao.org/natural-compare/1.4.0
       pretty-format: registry.npm.taobao.org/pretty-format/26.6.2
       semver: registry.npm.taobao.org/semver/7.3.2
@@ -12597,7 +12562,7 @@ packages:
     resolution:
       integrity: sha1-3lUoUaF1nfOo8gZTVEL17E3eq0Q=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/slash/download/slash-2.0.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/slash/download/slash-2.0.0.tgz?cache=0&sync_timestamp=1605619913166&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fslash%2Fdownload%2Fslash-2.0.0.tgz'
     version: 2.0.0
   registry.npm.taobao.org/slash/3.0.0:
     dev: true
@@ -14745,7 +14710,7 @@ specifiers:
   execa: 4.1.0
   fs-extra: 9.0.1
   globby: 11.0.1
-  haoma: 2.16.2
+  haoma: 2.17.1
   husky: 4.3.0
   jest: 26.6.3
   lint-staged: 10.5.1
