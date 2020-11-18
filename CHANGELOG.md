@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.52.0](https://github.com/fjc0k/vtils/compare/v3.51.0...v3.52.0) (2020-11-18)
+
+### Features
+
+- **chooseFile:** 完善单测 ([1d2190f](https://github.com/fjc0k/vtils/commit/1d2190f19082146613fff2c5512f5f73f64d038f))
+- **utils:** 新增 copyTextToClipboard 复制文本到剪切板 ([52b437e](https://github.com/fjc0k/vtils/commit/52b437e01f1be88f10647e6f5c231456b7829513))
+- **utils:** 新增 formatBytes 格式化字节数 ([699789a](https://github.com/fjc0k/vtils/commit/699789ab5042bc7167baab5034c3f19ef1b51d88))
+
 ## [3.51.0](https://github.com/fjc0k/vtils/compare/v3.50.2...v3.51.0) (2020-11-17)
 
 ### Features
