@@ -14,5 +14,5 @@ export interface Plugin
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [name](./types.tsconfigjson.compileroptions.plugin.name.md) | string | Plugin name. |
+|  [name?](./types.tsconfigjson.compileroptions.plugin.name.md) | string | <i>(Optional)</i> Plugin name. |
 

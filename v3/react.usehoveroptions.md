@@ -14,6 +14,6 @@ export interface UseHoverOptions
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [hoverEndDelay](./react.usehoveroptions.hoverenddelay.md) | number | 悬停结束后多久关闭悬停态，单位为毫秒。 400 |
-|  [hoverStartDelay](./react.usehoveroptions.hoverstartdelay.md) | number | 悬停开始后多久开启悬停态，单位为毫秒。 50 |
+|  [hoverEndDelay?](./react.usehoveroptions.hoverenddelay.md) | number | <i>(Optional)</i> 悬停结束后多久关闭悬停态，单位为毫秒。 400 |
+|  [hoverStartDelay?](./react.usehoveroptions.hoverstartdelay.md) | number | <i>(Optional)</i> 悬停开始后多久开启悬停态，单位为毫秒。 50 |
 

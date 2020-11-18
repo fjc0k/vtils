@@ -11,3 +11,5 @@ Matches any valid JSON value.
 ```typescript
 export declare type JsonValue = string | number | boolean | null | JsonObject | JsonArray;
 ```
+<b>References:</b> [JsonObject](./types.jsonobject.md)<!-- -->, [JsonArray](./types.jsonarray.md)
+

@@ -14,10 +14,10 @@ export interface DirectoryLocations
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [bin](./types.packagejson.directorylocations.bin.md) | string | Location for executable scripts. Sugar to generate entries in the <code>bin</code> property by walking the folder. |
-|  [doc](./types.packagejson.directorylocations.doc.md) | string | Location for Markdown files. |
-|  [example](./types.packagejson.directorylocations.example.md) | string | Location for example scripts. |
-|  [lib](./types.packagejson.directorylocations.lib.md) | string | Location for the bulk of the library. |
-|  [man](./types.packagejson.directorylocations.man.md) | string | Location for man pages. Sugar to generate a <code>man</code> array by walking the folder. |
-|  [test](./types.packagejson.directorylocations.test.md) | string | Location for test files. |
+|  [bin?](./types.packagejson.directorylocations.bin.md) | string | <i>(Optional)</i> Location for executable scripts. Sugar to generate entries in the <code>bin</code> property by walking the folder. |
+|  [doc?](./types.packagejson.directorylocations.doc.md) | string | <i>(Optional)</i> Location for Markdown files. |
+|  [example?](./types.packagejson.directorylocations.example.md) | string | <i>(Optional)</i> Location for example scripts. |
+|  [lib?](./types.packagejson.directorylocations.lib.md) | string | <i>(Optional)</i> Location for the bulk of the library. |
+|  [man?](./types.packagejson.directorylocations.man.md) | string | <i>(Optional)</i> Location for man pages. Sugar to generate a <code>man</code> array by walking the folder. |
+|  [test?](./types.packagejson.directorylocations.test.md) | string | <i>(Optional)</i> Location for test files. |
 

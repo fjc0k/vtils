@@ -21,3 +21,5 @@ export type ExportCondition = LiteralUnion<
 		string
 	>;
 ```
+<b>References:</b> [LiteralUnion](./types.literalunion.md)
+

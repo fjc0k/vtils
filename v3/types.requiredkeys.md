@@ -11,3 +11,5 @@ Gets keys of an object which are required
 ```typescript
 export declare type RequiredKeys<T> = Exclude<keyof T, OptionalKeys<T>>;
 ```
+<b>References:</b> [OptionalKeys](./types.optionalkeys.md)
+

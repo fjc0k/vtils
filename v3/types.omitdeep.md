@@ -70,3 +70,5 @@ export declare type OmitDeep<T extends DeepOmitModify<Filter>, Filter> = T exten
         never
       >;
 ```
+<b>References:</b> [OmitDeep](./types.omitdeep.md)<!-- -->, [OptionalKeys](./types.optionalkeys.md)<!-- -->, [OmitBy](./types.omitby.md)<!-- -->, [RequiredKeys](./types.requiredkeys.md)
+

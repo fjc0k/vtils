@@ -9,3 +9,5 @@
 ```typescript
 export declare type CreateGlobalStateResultResult<S extends CreateGlobalStateState | undefined, R = never> = [R] extends [never] ? readonly [S, Dispatch<SetStateAction<S>>] : R;
 ```
+<b>References:</b> [CreateGlobalStateState](./react.createglobalstatestate.md)
+

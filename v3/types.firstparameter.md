@@ -11,6 +11,7 @@
 ```typescript
 export declare type FirstParameter<T extends (...args: any[]) => any> = Head<Parameters<T>>;
 ```
+<b>References:</b> [Head](./types.head.md)
 
 ## Example
 

@@ -31,3 +31,5 @@ export declare type WritableDeep<T> = T extends Builtin
     }
   : T;
 ```
+<b>References:</b> [WritableDeep](./types.writabledeep.md)
+

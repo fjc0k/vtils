@@ -14,8 +14,8 @@ export interface References
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [circular](./types.tsconfigjson.references.circular.md) | boolean | True if it is intended that this reference form a circularity. |
-|  [originalPath](./types.tsconfigjson.references.originalpath.md) | string | The path as the user originally wrote it. |
+|  [circular?](./types.tsconfigjson.references.circular.md) | boolean | <i>(Optional)</i> True if it is intended that this reference form a circularity. |
+|  [originalPath?](./types.tsconfigjson.references.originalpath.md) | string | <i>(Optional)</i> The path as the user originally wrote it. |
 |  [path](./types.tsconfigjson.references.path.md) | string | A normalized path on disk. |
-|  [prepend](./types.tsconfigjson.references.prepend.md) | boolean | True if the output of this reference should be prepended to the output of this project.<!-- -->Only valid for <code>--outFile</code> compilations. |
+|  [prepend?](./types.tsconfigjson.references.prepend.md) | boolean | <i>(Optional)</i> True if the output of this reference should be prepended to the output of this project.<!-- -->Only valid for <code>--outFile</code> compilations. |
 

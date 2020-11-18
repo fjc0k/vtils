@@ -13,3 +13,5 @@ export declare type Tail<T extends AnyArray> = T["length"] extends 0
   ? Rest
   : never;
 ```
+<b>References:</b> [AnyArray](./types.anyarray.md)
+

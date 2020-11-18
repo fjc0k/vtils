@@ -31,3 +31,5 @@ export declare type ReadonlyDeep<T> = T extends Builtin
     }
   : Readonly<T>;
 ```
+<b>References:</b> [ReadonlyDeep](./types.readonlydeep.md)
+

@@ -16,7 +16,7 @@ export interface UseLoadMoreResult<TItem>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [data](./react.useloadmoreresult.data.md) | TItem\[\] | 已加载的数据 |
+|  [data?](./react.useloadmoreresult.data.md) | TItem\[\] | <i>(Optional)</i> 已加载的数据 |
 |  [incrementalLoading](./react.useloadmoreresult.incrementalloading.md) | boolean | 是否正在加载更多数据 |
 |  [initialLoading](./react.useloadmoreresult.initialloading.md) | boolean | 是否正在加载初始数据 |
 |  [loading](./react.useloadmoreresult.loading.md) | boolean | 是否正在加载数据 |

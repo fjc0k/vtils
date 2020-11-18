@@ -12,3 +12,5 @@ export declare type CreateGlobalStateCustomResult<S extends CreateGlobalStateSta
     setState: CreateGlobalStateResultResult<S, never>[1];
 }) => R;
 ```
+<b>References:</b> [CreateGlobalStateState](./react.createglobalstatestate.md)<!-- -->, [CreateGlobalStateResultResult](./react.createglobalstateresultresult.md)
+

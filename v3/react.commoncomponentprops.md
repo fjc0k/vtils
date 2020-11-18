@@ -16,8 +16,8 @@ export interface CommonComponentProps<TRef = never>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [className](./react.commoncomponentprops.classname.md) | string |  |
-|  [key](./react.commoncomponentprops.key.md) | React.Key |  |
-|  [ref](./react.commoncomponentprops.ref.md) | React.Ref&lt;TRef&gt; |  |
-|  [style](./react.commoncomponentprops.style.md) | React.CSSProperties |  |
+|  [className?](./react.commoncomponentprops.classname.md) | string | <i>(Optional)</i> |
+|  [key?](./react.commoncomponentprops.key.md) | React.Key | <i>(Optional)</i> |
+|  [ref?](./react.commoncomponentprops.ref.md) | React.Ref&lt;TRef&gt; | <i>(Optional)</i> |
+|  [style?](./react.commoncomponentprops.style.md) | React.CSSProperties | <i>(Optional)</i> |
 

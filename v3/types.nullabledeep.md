@@ -33,3 +33,5 @@ export declare type NullableDeep<T> = T extends Builtin
     }
   : T | null;
 ```
+<b>References:</b> [NullableDeep](./types.nullabledeep.md)
+

@@ -31,3 +31,5 @@ export declare type NonNullableDeep<T> = T extends Builtin
     }
   : NonNullable<T>;
 ```
+<b>References:</b> [NonNullableDeep](./types.nonnullabledeep.md)
+

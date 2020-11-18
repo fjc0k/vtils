@@ -13,3 +13,5 @@ This type can be useful to enforce some input to be JSON-compatible or as a supe
 ```typescript
 export declare type JsonObject = {[Key in string]?: JsonValue};
 ```
+<b>References:</b> [JsonValue](./types.jsonvalue.md)
+

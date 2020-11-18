@@ -18,7 +18,7 @@ export interface TypeAcquisition
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [enable](./types.tsconfigjson.typeacquisition.enable.md) | boolean | Enable auto type acquisition. |
-|  [exclude](./types.tsconfigjson.typeacquisition.exclude.md) | string\[\] | Specifies a list of type declarations to be excluded from auto type acquisition. For example, <code>['jquery', 'lodash']</code>. |
-|  [include](./types.tsconfigjson.typeacquisition.include.md) | string\[\] | Specifies a list of type declarations to be included in auto type acquisition. For example, <code>['jquery', 'lodash']</code>. |
+|  [enable?](./types.tsconfigjson.typeacquisition.enable.md) | boolean | <i>(Optional)</i> Enable auto type acquisition. |
+|  [exclude?](./types.tsconfigjson.typeacquisition.exclude.md) | string\[\] | <i>(Optional)</i> Specifies a list of type declarations to be excluded from auto type acquisition. For example, <code>['jquery', 'lodash']</code>. |
+|  [include?](./types.tsconfigjson.typeacquisition.include.md) | string\[\] | <i>(Optional)</i> Specifies a list of type declarations to be included in auto type acquisition. For example, <code>['jquery', 'lodash']</code>. |
 

@@ -11,3 +11,5 @@
 ```typescript
 export declare type FormatDateRenderer = (placeholders: typeof FormatDatePlaceholder) => string;
 ```
+<b>References:</b> [FormatDatePlaceholder](./date.formatdateplaceholder.md)
+

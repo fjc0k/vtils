@@ -37,3 +37,5 @@ export declare type PartialDeep<T> = T extends Builtin
     }
   : Partial<T>;
 ```
+<b>References:</b> [PartialDeep](./types.partialdeep.md)
+

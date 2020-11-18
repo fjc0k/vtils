@@ -16,40 +16,40 @@ export interface PackageJsonStandard
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [author](./types.packagejson.packagejsonstandard.author.md) | [Person](./types.packagejson.person.md) |  |
-|  [bin](./types.packagejson.packagejsonstandard.bin.md) | \| string \| { \[binary: string\]: string; } | The executable files that should be installed into the <code>PATH</code>. |
-|  [bugs](./types.packagejson.packagejsonstandard.bugs.md) | [BugsLocation](./types.packagejson.bugslocation.md) | The URL to the package's issue tracker and/or the email address to which issues should be reported. |
-|  [bundledDependencies](./types.packagejson.packagejsonstandard.bundleddependencies.md) | string\[\] | Package names that are bundled when the package is published. |
-|  [bundleDependencies](./types.packagejson.packagejsonstandard.bundledependencies.md) | string\[\] | Alias of <code>bundledDependencies</code>. |
-|  [config](./types.packagejson.packagejsonstandard.config.md) | { \[configKey: string\]: unknown; } | Is used to set configuration parameters used in package scripts that persist across upgrades. |
-|  [contributors](./types.packagejson.packagejsonstandard.contributors.md) | [Person](./types.packagejson.person.md)<!-- -->\[\] | A list of people who contributed to the package. |
-|  [cpu](./types.packagejson.packagejsonstandard.cpu.md) | Array&lt;[LiteralUnion](./types.literalunion.md)<!-- -->&lt; \| 'arm' \| 'arm64' \| 'ia32' \| 'mips' \| 'mipsel' \| 'ppc' \| 'ppc64' \| 's390' \| 's390x' \| 'x32' \| 'x64' \| '!arm' \| '!arm64' \| '!ia32' \| '!mips' \| '!mipsel' \| '!ppc' \| '!ppc64' \| '!s390' \| '!s390x' \| '!x32' \| '!x64', string &gt;&gt; | CPU architectures the module runs on. |
-|  [dependencies](./types.packagejson.packagejsonstandard.dependencies.md) | [Dependency](./types.packagejson.dependency.md) | The dependencies of the package. |
-|  [description](./types.packagejson.packagejsonstandard.description.md) | string | Package description, listed in <code>npm search</code>. |
-|  [devDependencies](./types.packagejson.packagejsonstandard.devdependencies.md) | [Dependency](./types.packagejson.dependency.md) | Additional tooling dependencies that are not required for the package to work. Usually test, build, or documentation tooling. |
-|  [directories](./types.packagejson.packagejsonstandard.directories.md) | [DirectoryLocations](./types.packagejson.directorylocations.md) | Indicates the structure of the package. |
-|  [engines](./types.packagejson.packagejsonstandard.engines.md) | { \[EngineName in 'npm' \| 'node' \| string\]: string; } | Engines that this package runs on. |
-|  [engineStrict](./types.packagejson.packagejsonstandard.enginestrict.md) | boolean |  |
-|  [exports](./types.packagejson.packagejsonstandard.exports.md) | [Exports](./types.packagejson.exports.md) | Standard entry points of the package, with enhanced support for ECMAScript Modules.<!-- -->\[Read more.\](https://nodejs.org/api/esm.html\#esm\_package\_entry\_points) |
-|  [files](./types.packagejson.packagejsonstandard.files.md) | string\[\] | The files included in the package. |
-|  [funding](./types.packagejson.packagejsonstandard.funding.md) | string \| { type?: [LiteralUnion](./types.literalunion.md)<!-- -->&lt; \| 'github' \| 'opencollective' \| 'patreon' \| 'individual' \| 'foundation' \| 'corporation', string &gt;; url: string; } | Describes and notifies consumers of a package's monetary support information.<!-- -->\[Read more.\](https://github.com/npm/rfcs/blob/latest/accepted/0017-add-funding-support.md) |
-|  [homepage](./types.packagejson.packagejsonstandard.homepage.md) | [LiteralUnion](./types.literalunion.md)<!-- -->&lt;'.', string&gt; | The URL to the package's homepage. |
-|  [keywords](./types.packagejson.packagejsonstandard.keywords.md) | string\[\] | Keywords associated with package, listed in <code>npm search</code>. |
-|  [license](./types.packagejson.packagejsonstandard.license.md) | string | The license for the package. |
-|  [licenses](./types.packagejson.packagejsonstandard.licenses.md) | Array&lt;{ type?: string; url?: string; }&gt; | The licenses for the package. |
-|  [main](./types.packagejson.packagejsonstandard.main.md) | string | The module ID that is the primary entry point to the program. |
-|  [maintainers](./types.packagejson.packagejsonstandard.maintainers.md) | [Person](./types.packagejson.person.md)<!-- -->\[\] | A list of people who maintain the package. |
-|  [man](./types.packagejson.packagejsonstandard.man.md) | string \| string\[\] | Filenames to put in place for the <code>man</code> program to find. |
-|  [name](./types.packagejson.packagejsonstandard.name.md) | string | The name of the package. |
-|  [optionalDependencies](./types.packagejson.packagejsonstandard.optionaldependencies.md) | [Dependency](./types.packagejson.dependency.md) | Dependencies that are skipped if they fail to install. |
-|  [os](./types.packagejson.packagejsonstandard.os.md) | Array&lt;[LiteralUnion](./types.literalunion.md)<!-- -->&lt; \| 'aix' \| 'darwin' \| 'freebsd' \| 'linux' \| 'openbsd' \| 'sunos' \| 'win32' \| '!aix' \| '!darwin' \| '!freebsd' \| '!linux' \| '!openbsd' \| '!sunos' \| '!win32', string &gt;&gt; | Operating systems the module runs on. |
-|  [peerDependencies](./types.packagejson.packagejsonstandard.peerdependencies.md) | [Dependency](./types.packagejson.dependency.md) | Dependencies that will usually be required by the package user directly or via another dependency. |
-|  [peerDependenciesMeta](./types.packagejson.packagejsonstandard.peerdependenciesmeta.md) | { \[packageName: string\]: { optional: true; }; } | Indicate peer dependencies that are optional. |
-|  [preferGlobal](./types.packagejson.packagejsonstandard.preferglobal.md) | boolean | If set to <code>true</code>, a warning will be shown if package is installed locally. Useful if the package is primarily a command-line application that should be installed globally. |
-|  [private](./types.packagejson.packagejsonstandard.private.md) | boolean | If set to <code>true</code>, then npm will refuse to publish it. |
-|  [publishConfig](./types.packagejson.packagejsonstandard.publishconfig.md) | { \[config: string\]: unknown; } | A set of config values that will be used at publish-time. It's especially handy to set the tag, registry or access, to ensure that a given package is not tagged with 'latest', published to the global public registry or that a scoped module is private by default. |
-|  [repository](./types.packagejson.packagejsonstandard.repository.md) | \| string \| { type: string; url: string; directory?: string; } | Location for the code repository. |
-|  [scripts](./types.packagejson.packagejsonstandard.scripts.md) | [Scripts](./types.packagejson.scripts.md) | Script commands that are run at various times in the lifecycle of the package. The key is the lifecycle event, and the value is the command to run at that point. |
-|  [type](./types.packagejson.packagejsonstandard.type.md) | 'module' \| 'commonjs' | Resolution algorithm for importing ".js" files from the package's scope.<!-- -->\[Read more.\](https://nodejs.org/api/esm.html\#esm\_package\_json\_type\_field) |
-|  [version](./types.packagejson.packagejsonstandard.version.md) | string | Package version, parseable by \[<code>node-semver</code>\](https://github.com/npm/node-semver). |
+|  [author?](./types.packagejson.packagejsonstandard.author.md) | [Person](./types.packagejson.person.md) | <i>(Optional)</i> |
+|  [bin?](./types.packagejson.packagejsonstandard.bin.md) | \| string \| { \[binary: string\]: string; } | <i>(Optional)</i> The executable files that should be installed into the <code>PATH</code>. |
+|  [bugs?](./types.packagejson.packagejsonstandard.bugs.md) | [BugsLocation](./types.packagejson.bugslocation.md) | <i>(Optional)</i> The URL to the package's issue tracker and/or the email address to which issues should be reported. |
+|  [bundledDependencies?](./types.packagejson.packagejsonstandard.bundleddependencies.md) | string\[\] | <i>(Optional)</i> Package names that are bundled when the package is published. |
+|  [bundleDependencies?](./types.packagejson.packagejsonstandard.bundledependencies.md) | string\[\] | <i>(Optional)</i> Alias of <code>bundledDependencies</code>. |
+|  [config?](./types.packagejson.packagejsonstandard.config.md) | { \[configKey: string\]: unknown; } | <i>(Optional)</i> Is used to set configuration parameters used in package scripts that persist across upgrades. |
+|  [contributors?](./types.packagejson.packagejsonstandard.contributors.md) | [Person](./types.packagejson.person.md)<!-- -->\[\] | <i>(Optional)</i> A list of people who contributed to the package. |
+|  [cpu?](./types.packagejson.packagejsonstandard.cpu.md) | Array&lt;[LiteralUnion](./types.literalunion.md)<!-- -->&lt; \| 'arm' \| 'arm64' \| 'ia32' \| 'mips' \| 'mipsel' \| 'ppc' \| 'ppc64' \| 's390' \| 's390x' \| 'x32' \| 'x64' \| '!arm' \| '!arm64' \| '!ia32' \| '!mips' \| '!mipsel' \| '!ppc' \| '!ppc64' \| '!s390' \| '!s390x' \| '!x32' \| '!x64', string &gt;&gt; | <i>(Optional)</i> CPU architectures the module runs on. |
+|  [dependencies?](./types.packagejson.packagejsonstandard.dependencies.md) | [Dependency](./types.packagejson.dependency.md) | <i>(Optional)</i> The dependencies of the package. |
+|  [description?](./types.packagejson.packagejsonstandard.description.md) | string | <i>(Optional)</i> Package description, listed in <code>npm search</code>. |
+|  [devDependencies?](./types.packagejson.packagejsonstandard.devdependencies.md) | [Dependency](./types.packagejson.dependency.md) | <i>(Optional)</i> Additional tooling dependencies that are not required for the package to work. Usually test, build, or documentation tooling. |
+|  [directories?](./types.packagejson.packagejsonstandard.directories.md) | [DirectoryLocations](./types.packagejson.directorylocations.md) | <i>(Optional)</i> Indicates the structure of the package. |
+|  [engines?](./types.packagejson.packagejsonstandard.engines.md) | { \[EngineName in 'npm' \| 'node' \| string\]: string; } | <i>(Optional)</i> Engines that this package runs on. |
+|  [engineStrict?](./types.packagejson.packagejsonstandard.enginestrict.md) | boolean | <i>(Optional)</i> |
+|  [exports?](./types.packagejson.packagejsonstandard.exports.md) | [Exports](./types.packagejson.exports.md) | <i>(Optional)</i> Standard entry points of the package, with enhanced support for ECMAScript Modules.<!-- -->\[Read more.\](https://nodejs.org/api/esm.html\#esm\_package\_entry\_points) |
+|  [files?](./types.packagejson.packagejsonstandard.files.md) | string\[\] | <i>(Optional)</i> The files included in the package. |
+|  [funding?](./types.packagejson.packagejsonstandard.funding.md) | string \| { type?: [LiteralUnion](./types.literalunion.md)<!-- -->&lt; \| 'github' \| 'opencollective' \| 'patreon' \| 'individual' \| 'foundation' \| 'corporation', string &gt;; url: string; } | <i>(Optional)</i> Describes and notifies consumers of a package's monetary support information.<!-- -->\[Read more.\](https://github.com/npm/rfcs/blob/latest/accepted/0017-add-funding-support.md) |
+|  [homepage?](./types.packagejson.packagejsonstandard.homepage.md) | [LiteralUnion](./types.literalunion.md)<!-- -->&lt;'.', string&gt; | <i>(Optional)</i> The URL to the package's homepage. |
+|  [keywords?](./types.packagejson.packagejsonstandard.keywords.md) | string\[\] | <i>(Optional)</i> Keywords associated with package, listed in <code>npm search</code>. |
+|  [license?](./types.packagejson.packagejsonstandard.license.md) | string | <i>(Optional)</i> The license for the package. |
+|  [licenses?](./types.packagejson.packagejsonstandard.licenses.md) | Array&lt;{ type?: string; url?: string; }&gt; | <i>(Optional)</i> The licenses for the package. |
+|  [main?](./types.packagejson.packagejsonstandard.main.md) | string | <i>(Optional)</i> The module ID that is the primary entry point to the program. |
+|  [maintainers?](./types.packagejson.packagejsonstandard.maintainers.md) | [Person](./types.packagejson.person.md)<!-- -->\[\] | <i>(Optional)</i> A list of people who maintain the package. |
+|  [man?](./types.packagejson.packagejsonstandard.man.md) | string \| string\[\] | <i>(Optional)</i> Filenames to put in place for the <code>man</code> program to find. |
+|  [name?](./types.packagejson.packagejsonstandard.name.md) | string | <i>(Optional)</i> The name of the package. |
+|  [optionalDependencies?](./types.packagejson.packagejsonstandard.optionaldependencies.md) | [Dependency](./types.packagejson.dependency.md) | <i>(Optional)</i> Dependencies that are skipped if they fail to install. |
+|  [os?](./types.packagejson.packagejsonstandard.os.md) | Array&lt;[LiteralUnion](./types.literalunion.md)<!-- -->&lt; \| 'aix' \| 'darwin' \| 'freebsd' \| 'linux' \| 'openbsd' \| 'sunos' \| 'win32' \| '!aix' \| '!darwin' \| '!freebsd' \| '!linux' \| '!openbsd' \| '!sunos' \| '!win32', string &gt;&gt; | <i>(Optional)</i> Operating systems the module runs on. |
+|  [peerDependencies?](./types.packagejson.packagejsonstandard.peerdependencies.md) | [Dependency](./types.packagejson.dependency.md) | <i>(Optional)</i> Dependencies that will usually be required by the package user directly or via another dependency. |
+|  [peerDependenciesMeta?](./types.packagejson.packagejsonstandard.peerdependenciesmeta.md) | { \[packageName: string\]: { optional: true; }; } | <i>(Optional)</i> Indicate peer dependencies that are optional. |
+|  [preferGlobal?](./types.packagejson.packagejsonstandard.preferglobal.md) | boolean | <i>(Optional)</i> If set to <code>true</code>, a warning will be shown if package is installed locally. Useful if the package is primarily a command-line application that should be installed globally. |
+|  [private?](./types.packagejson.packagejsonstandard.private.md) | boolean | <i>(Optional)</i> If set to <code>true</code>, then npm will refuse to publish it. |
+|  [publishConfig?](./types.packagejson.packagejsonstandard.publishconfig.md) | { \[config: string\]: unknown; } | <i>(Optional)</i> A set of config values that will be used at publish-time. It's especially handy to set the tag, registry or access, to ensure that a given package is not tagged with 'latest', published to the global public registry or that a scoped module is private by default. |
+|  [repository?](./types.packagejson.packagejsonstandard.repository.md) | \| string \| { type: string; url: string; directory?: string; } | <i>(Optional)</i> Location for the code repository. |
+|  [scripts?](./types.packagejson.packagejsonstandard.scripts.md) | [Scripts](./types.packagejson.scripts.md) | <i>(Optional)</i> Script commands that are run at various times in the lifecycle of the package. The key is the lifecycle event, and the value is the command to run at that point. |
+|  [type?](./types.packagejson.packagejsonstandard.type.md) | 'module' \| 'commonjs' | <i>(Optional)</i> Resolution algorithm for importing ".js" files from the package's scope.<!-- -->\[Read more.\](https://nodejs.org/api/esm.html\#esm\_package\_json\_type\_field) |
+|  [version?](./types.packagejson.packagejsonstandard.version.md) | string | <i>(Optional)</i> Package version, parseable by \[<code>node-semver</code>\](https://github.com/npm/node-semver). |
 

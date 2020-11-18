@@ -14,6 +14,6 @@ export interface TypeScriptConfiguration
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [types](./types.packagejson.typescriptconfiguration.types.md) | string | Location of the bundled TypeScript declaration file. |
-|  [typings](./types.packagejson.typescriptconfiguration.typings.md) | string | Location of the bundled TypeScript declaration file. Alias of <code>types</code>. |
+|  [types?](./types.packagejson.typescriptconfiguration.types.md) | string | <i>(Optional)</i> Location of the bundled TypeScript declaration file. |
+|  [typings?](./types.packagejson.typescriptconfiguration.typings.md) | string | <i>(Optional)</i> Location of the bundled TypeScript declaration file. Alias of <code>types</code>. |
 

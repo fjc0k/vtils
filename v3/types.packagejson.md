@@ -16,3 +16,5 @@ PackageJson.TypeScriptConfiguration &
 PackageJson.YarnConfiguration &
 PackageJson.JSPMConfiguration;
 ```
+<b>References:</b> [PackageJson.PackageJsonStandard](./types.packagejson.packagejsonstandard.md)<!-- -->, [PackageJson.NonStandardEntryPoints](./types.packagejson.nonstandardentrypoints.md)<!-- -->, [PackageJson.TypeScriptConfiguration](./types.packagejson.typescriptconfiguration.md)<!-- -->, [PackageJson.YarnConfiguration](./types.packagejson.yarnconfiguration.md)<!-- -->, [PackageJson.JSPMConfiguration](./types.packagejson.jspmconfiguration.md)
+
