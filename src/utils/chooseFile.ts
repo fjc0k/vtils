@@ -11,7 +11,7 @@ import { LiteralUnion } from '../types'
 export async function chooseFile(
   accept: LiteralUnion<'image', string>,
   multiple = false,
-): Promise<File[]> {
+): Promise<FileList> {
   return new Promise(resolve => {
     let input = document.createElement('input')
     input.style.all = 'unset'
@@ -29,11 +29,11 @@ export async function chooseFile(
     input.multiple = multiple
     document.body.appendChild(input)
     const unbindChange = bindEvent(input)('change', () => {
-      const files = input.files || []
+      const files = input.files!
       unbindChange()
       document.body.removeChild(input)
       input = null as any
-      resolve(files as any)
+      resolve(files)
     })
     input.click()
   })
