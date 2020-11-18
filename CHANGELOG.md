@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.53.0](https://github.com/fjc0k/vtils/compare/v3.52.0...v3.53.0) (2020-11-18)
+
+### Features
+
+- **utils:** 新增 constantCase, pascalCase ([3f78d8d](https://github.com/fjc0k/vtils/commit/3f78d8d86d7a1a266618b6b5ab1b8ab0a9d7e87e))
+
 ## [3.52.0](https://github.com/fjc0k/vtils/compare/v3.51.0...v3.52.0) (2020-11-18)
 
 ### Features
