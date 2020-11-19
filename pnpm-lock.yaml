@@ -6,7 +6,7 @@ dependencies:
   miniprogram-api-typings: registry.npm.taobao.org/miniprogram-api-typings/3.0.0
   react-use: registry.npm.taobao.org/react-use/15.1.1_react-dom@17.0.1+react@17.0.1
   tslib: registry.npm.taobao.org/tslib/2.0.0
-  yup: registry.npm.taobao.org/yup/0.29.1
+  yup: registry.npm.taobao.org/yup/0.30.0
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.11.0
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.12.0
@@ -1804,6 +1804,7 @@ packages:
   registry.npm.taobao.org/@babel/runtime/7.11.2:
     dependencies:
       regenerator-runtime: registry.npm.taobao.org/regenerator-runtime/0.13.7
+    dev: true
     name: '@babel/runtime'
     resolution:
       integrity: sha1-9UnBPHVMxAuHZEufqfCaapX+BzY=
@@ -1813,7 +1814,6 @@ packages:
   registry.npm.taobao.org/@babel/runtime/7.12.5:
     dependencies:
       regenerator-runtime: registry.npm.taobao.org/regenerator-runtime/0.13.7
-    dev: true
     name: '@babel/runtime'
     resolution:
       integrity: sha1-QQ5+SHRB4bNgwpvnFdhw2bmFiC4=
@@ -2431,6 +2431,10 @@ packages:
     engines:
       node: '>= 8.9'
     name: '@swc-node/core'
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-TZlZfmKu/isqLcC9koKCwAtRnVI=
       registry: 'https://r.npm.taobao.org/'
@@ -2476,6 +2480,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-darwin'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-o7wOBDEVxsPegRbLq2/HmHizbLA=
       registry: 'https://r.npm.taobao.org/'
@@ -2487,6 +2493,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-linux'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-eeRT7LaMp0pKxB0xhOtUfIHnkss=
       registry: 'https://r.npm.taobao.org/'
@@ -2498,6 +2506,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-win32'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-GVCc5Jj2KFtUxHtWy72P4CATy4E=
       registry: 'https://r.npm.taobao.org/'
@@ -2514,6 +2524,10 @@ packages:
       '@swc/core-darwin': registry.npm.taobao.org/@swc/core-darwin/1.2.38
       '@swc/core-linux': registry.npm.taobao.org/@swc/core-linux/1.2.38
       '@swc/core-win32': registry.npm.taobao.org/@swc/core-win32/1.2.38
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-+sP2SOKzJB+4bcdNa3T3LA3SinM=
       registry: 'https://r.npm.taobao.org/'
@@ -3193,6 +3207,9 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-fgYTOKE4P1ntwgTGBYmfk9wuLI8=
       registry: 'https://r.npm.taobao.org/'
@@ -3236,6 +3253,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-GIOFjoPotEJifhrG9AiSUhEVVGc=
       registry: 'https://r.npm.taobao.org/'
@@ -3269,6 +3289,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-/QBhzDit1PrUUTbWVECFafNluFM=
       registry: 'https://r.npm.taobao.org/'
@@ -6973,6 +6996,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/flatted/download/flatted-2.0.2.tgz'
     version: 2.0.2
   registry.npm.taobao.org/fn-name/3.0.0:
+    dev: true
     engines:
       node: '>=8'
     name: fn-name
@@ -9213,6 +9237,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -9228,6 +9255,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -10172,6 +10202,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/lodash/download/lodash-4.17.15.tgz'
     version: 4.17.15
   registry.npm.taobao.org/lodash/4.17.19:
+    dev: true
     name: lodash
     resolution:
       integrity: sha1-5I3e2+MLMyF4PFtDAfvTU7weSks=
@@ -10179,7 +10210,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/lodash/download/lodash-4.17.19.tgz'
     version: 4.17.19
   registry.npm.taobao.org/lodash/4.17.20:
-    dev: true
     name: lodash
     resolution:
       integrity: sha1-tEqbYpe8tpjxxRo1RaKzs2jVnFI=
@@ -11999,12 +12029,21 @@ packages:
       tarball: 'https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz'
     version: 15.7.2
   registry.npm.taobao.org/property-expr/2.0.2:
+    dev: true
     name: property-expr
     resolution:
       integrity: sha1-//KkORkTVVOjvC/dlL24QZZbIzA=
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/property-expr/download/property-expr-2.0.2.tgz'
     version: 2.0.2
+  registry.npm.taobao.org/property-expr/2.0.4:
+    dev: false
+    name: property-expr
+    resolution:
+      integrity: sha1-N7klR45YllAxu2EuxbMmD4JB6RA=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/property-expr/download/property-expr-2.0.4.tgz'
+    version: 2.0.4
   registry.npm.taobao.org/prr/1.0.1:
     dev: true
     name: prr
@@ -14036,6 +14075,7 @@ packages:
       tarball: 'https://registry.npm.taobao.org/symbol-tree/download/symbol-tree-3.2.4.tgz'
     version: 3.2.4
   registry.npm.taobao.org/synchronous-promise/2.0.13:
+    dev: true
     name: synchronous-promise
     resolution:
       integrity: sha1-nYwWXd7mnFplQoYrQFvFAJWSZwI=
@@ -15365,12 +15405,29 @@ packages:
       property-expr: registry.npm.taobao.org/property-expr/2.0.2
       synchronous-promise: registry.npm.taobao.org/synchronous-promise/2.0.13
       toposort: registry.npm.taobao.org/toposort/2.0.2
+    dev: true
     name: yup
     resolution:
       integrity: sha1-NdJaq0cKDDlQ9mBAug/0sbbv4Nk=
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/yup/download/yup-0.29.1.tgz'
     version: 0.29.1
+  registry.npm.taobao.org/yup/0.30.0:
+    dependencies:
+      '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.12.5
+      lodash: registry.npm.taobao.org/lodash/4.17.20
+      lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
+      property-expr: registry.npm.taobao.org/property-expr/2.0.4
+      toposort: registry.npm.taobao.org/toposort/2.0.2
+    dev: false
+    engines:
+      node: '>=10'
+    name: yup
+    resolution:
+      integrity: sha1-Qn7gdqux1+AedH+3goAfffJS+3Y=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/yup/download/yup-0.30.0.tgz'
+    version: 0.30.0
   registry.npm.taobao.org/z-schema/3.18.4:
     dependencies:
       lodash.get: registry.npm.taobao.org/lodash.get/4.4.2
@@ -15426,4 +15483,4 @@ specifiers:
   typescript: 4.0.5
   typescript-snapshots-plugin: 1.7.0
   vscode-generate-index-standalone: 1.3.0
-  yup: ^0.29.1
+  yup: ^0.30.0
