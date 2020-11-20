@@ -15,7 +15,7 @@ devDependencies:
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.4.2_react@17.0.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.4
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
-  '@types/react': registry.npm.taobao.org/@types/react/16.9.56
+  '@types/react': registry.npm.taobao.org/@types/react/16.14.0
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/16.9.9
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
   codecov: registry.npm.taobao.org/codecov/3.8.1
@@ -3047,7 +3047,7 @@ packages:
     resolution:
       integrity: sha1-KrDV2i5YFflLC51LldHl8kOrLKc=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.3.tgz'
+      tarball: 'https://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fprop-types%2Fdownload%2F%40types%2Fprop-types-15.7.3.tgz'
     version: 15.7.3
   registry.npm.taobao.org/@types/react-dom/16.9.9:
     dependencies:
@@ -3069,6 +3069,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/react-test-renderer/download/@types/react-test-renderer-16.9.2.tgz'
     version: 16.9.2
+  registry.npm.taobao.org/@types/react/16.14.0:
+    dependencies:
+      '@types/prop-types': registry.npm.taobao.org/@types/prop-types/15.7.3
+      csstype: registry.npm.taobao.org/csstype/3.0.2
+    dev: true
+    name: '@types/react'
+    resolution:
+      integrity: sha1-vAIs/hYJiZsPIZY3ayZ3JOcwDw4=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.14.0.tgz?cache=0&sync_timestamp=1605878341474&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.14.0.tgz'
+    version: 16.14.0
   registry.npm.taobao.org/@types/react/16.9.49:
     dependencies:
       '@types/prop-types': registry.npm.taobao.org/@types/prop-types/15.7.3
@@ -3091,17 +3102,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.54.tgz?cache=0&sync_timestamp=1603825922179&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.54.tgz'
     version: 16.9.54
-  registry.npm.taobao.org/@types/react/16.9.56:
-    dependencies:
-      '@types/prop-types': registry.npm.taobao.org/@types/prop-types/15.7.3
-      csstype: registry.npm.taobao.org/csstype/3.0.2
-    dev: true
-    name: '@types/react'
-    resolution:
-      integrity: sha1-6iWEe1PFvsBkkzCV/DZrFGLirfA=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.56.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.56.tgz'
-    version: 16.9.56
   registry.npm.taobao.org/@types/stack-utils/1.0.1:
     dev: true
     name: '@types/stack-utils'
@@ -5504,7 +5504,7 @@ packages:
     resolution:
       integrity: sha1-7l/48gjIzWE7OJ97IiyYAcpis/c=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/csstype/download/csstype-3.0.2.tgz?cache=0&sync_timestamp=1603827754389&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcsstype%2Fdownload%2Fcsstype-3.0.2.tgz'
+      tarball: 'https://registry.npm.taobao.org/csstype/download/csstype-3.0.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcsstype%2Fdownload%2Fcsstype-3.0.2.tgz'
     version: 3.0.2
   registry.npm.taobao.org/cuid/2.1.8:
     dev: true
@@ -15452,7 +15452,7 @@ specifiers:
   '@types/fs-extra': 9.0.4
   '@types/lodash-es': ^4.17.3
   '@types/prompts': 2.0.9
-  '@types/react': 16.9.56
+  '@types/react': 16.14.0
   '@types/react-dom': 16.9.9
   '@types/standard-version': 7.0.0
   codecov: 3.8.1
