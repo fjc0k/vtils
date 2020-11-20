@@ -22,7 +22,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.1.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.19.0_1f0d0d44b4ec52cb78a224ed15ba2fd3
+  haoma: registry.npm.taobao.org/haoma/2.19.0_42609d39041f918d48551a96208a84a0
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.1
@@ -33,9 +33,9 @@ devDependencies:
   react-dom: registry.npm.taobao.org/react-dom/17.0.1_react@17.0.1
   shx: registry.npm.taobao.org/shx/0.3.3
   standard-version: registry.npm.taobao.org/standard-version/9.0.0
-  ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.0.5
+  ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.1.2
   type-fest: registry.npm.taobao.org/type-fest/0.19.0
-  typescript: registry.npm.taobao.org/typescript/4.0.5
+  typescript: registry.npm.taobao.org/typescript/4.1.2
   typescript-snapshots-plugin: registry.npm.taobao.org/typescript-snapshots-plugin/1.7.0
   vscode-generate-index-standalone: registry.npm.taobao.org/vscode-generate-index-standalone/1.3.0
 lockfileVersion: 5.2
@@ -3170,17 +3170,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/yargs/download/@types/yargs-15.0.5.tgz'
     version: 15.0.5
-  registry.npm.taobao.org/@typescript-eslint/eslint-plugin/3.10.1_3d6bf8eb9fb07d62d697050bd65c1c5e:
+  registry.npm.taobao.org/@typescript-eslint/eslint-plugin/3.10.1_01765ed5c77c0d28135767360c1ad86f:
     dependencies:
-      '@typescript-eslint/experimental-utils': registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.13.0+typescript@4.0.5
-      '@typescript-eslint/parser': registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.13.0+typescript@4.0.5
+      '@typescript-eslint/experimental-utils': registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.13.0+typescript@4.1.2
+      '@typescript-eslint/parser': registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.13.0+typescript@4.1.2
       debug: registry.npm.taobao.org/debug/4.3.1
       eslint: registry.npm.taobao.org/eslint/7.13.0
       functional-red-black-tree: registry.npm.taobao.org/functional-red-black-tree/1.0.1
       regexpp: registry.npm.taobao.org/regexpp/3.1.0
       semver: registry.npm.taobao.org/semver/7.3.2
-      tsutils: registry.npm.taobao.org/tsutils/3.17.1_typescript@4.0.5
-      typescript: registry.npm.taobao.org/typescript/4.0.5
+      tsutils: registry.npm.taobao.org/tsutils/3.17.1_typescript@4.1.2
+      typescript: registry.npm.taobao.org/typescript/4.1.2
     dev: true
     engines:
       node: ^10.12.0 || >=12.0.0
@@ -3190,16 +3190,19 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-fgYTOKE4P1ntwgTGBYmfk9wuLI8=
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-3.10.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Feslint-plugin%2Fdownload%2F%40typescript-eslint%2Feslint-plugin-3.10.1.tgz'
     version: 3.10.1
-  registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.13.0+typescript@4.0.5:
+  registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.13.0+typescript@4.1.2:
     dependencies:
       '@types/json-schema': registry.npm.taobao.org/@types/json-schema/7.0.6
       '@typescript-eslint/types': registry.npm.taobao.org/@typescript-eslint/types/3.10.1
-      '@typescript-eslint/typescript-estree': registry.npm.taobao.org/@typescript-eslint/typescript-estree/3.10.1_typescript@4.0.5
+      '@typescript-eslint/typescript-estree': registry.npm.taobao.org/@typescript-eslint/typescript-estree/3.10.1_typescript@4.1.2
       eslint: registry.npm.taobao.org/eslint/7.13.0
       eslint-scope: registry.npm.taobao.org/eslint-scope/5.1.1
       eslint-utils: registry.npm.taobao.org/eslint-utils/2.1.0
@@ -3216,15 +3219,15 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@typescript-eslint/experimental-utils/download/@typescript-eslint/experimental-utils-3.10.1.tgz?cache=0&sync_timestamp=1600416269134&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40typescript-eslint%2Fexperimental-utils%2Fdownload%2F%40typescript-eslint%2Fexperimental-utils-3.10.1.tgz'
     version: 3.10.1
-  registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.13.0+typescript@4.0.5:
+  registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.13.0+typescript@4.1.2:
     dependencies:
       '@types/eslint-visitor-keys': registry.npm.taobao.org/@types/eslint-visitor-keys/1.0.0
-      '@typescript-eslint/experimental-utils': registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.13.0+typescript@4.0.5
+      '@typescript-eslint/experimental-utils': registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.13.0+typescript@4.1.2
       '@typescript-eslint/types': registry.npm.taobao.org/@typescript-eslint/types/3.10.1
-      '@typescript-eslint/typescript-estree': registry.npm.taobao.org/@typescript-eslint/typescript-estree/3.10.1_typescript@4.0.5
+      '@typescript-eslint/typescript-estree': registry.npm.taobao.org/@typescript-eslint/typescript-estree/3.10.1_typescript@4.1.2
       eslint: registry.npm.taobao.org/eslint/7.13.0
       eslint-visitor-keys: registry.npm.taobao.org/eslint-visitor-keys/1.3.0
-      typescript: registry.npm.taobao.org/typescript/4.0.5
+      typescript: registry.npm.taobao.org/typescript/4.1.2
     dev: true
     engines:
       node: ^10.12.0 || >=12.0.0
@@ -3233,6 +3236,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-GIOFjoPotEJifhrG9AiSUhEVVGc=
       registry: 'https://r.npm.taobao.org/'
@@ -3248,7 +3254,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@typescript-eslint/types/download/@typescript-eslint/types-3.10.1.tgz'
     version: 3.10.1
-  registry.npm.taobao.org/@typescript-eslint/typescript-estree/3.10.1_typescript@4.0.5:
+  registry.npm.taobao.org/@typescript-eslint/typescript-estree/3.10.1_typescript@4.1.2:
     dependencies:
       '@typescript-eslint/types': registry.npm.taobao.org/@typescript-eslint/types/3.10.1
       '@typescript-eslint/visitor-keys': registry.npm.taobao.org/@typescript-eslint/visitor-keys/3.10.1
@@ -3257,8 +3263,8 @@ packages:
       is-glob: registry.npm.taobao.org/is-glob/4.0.1
       lodash: registry.npm.taobao.org/lodash/4.17.20
       semver: registry.npm.taobao.org/semver/7.3.2
-      tsutils: registry.npm.taobao.org/tsutils/3.17.1_typescript@4.0.5
-      typescript: registry.npm.taobao.org/typescript/4.0.5
+      tsutils: registry.npm.taobao.org/tsutils/3.17.1_typescript@4.1.2
+      typescript: registry.npm.taobao.org/typescript/4.1.2
     dev: true
     engines:
       node: ^10.12.0 || >=12.0.0
@@ -3266,6 +3272,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-/QBhzDit1PrUUTbWVECFafNluFM=
       registry: 'https://r.npm.taobao.org/'
@@ -5598,6 +5607,11 @@ packages:
     engines:
       node: '>=6.0'
     name: debug
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     resolution:
       integrity: sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
       registry: 'https://r.npm.taobao.org/'
@@ -7496,7 +7510,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.19.0_1f0d0d44b4ec52cb78a224ed15ba2fd3:
+  registry.npm.taobao.org/haoma/2.19.0_42609d39041f918d48551a96208a84a0:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.3
       '@babel/plugin-proposal-class-properties': registry.npm.taobao.org/@babel/plugin-proposal-class-properties/7.12.1_@babel+core@7.12.3
@@ -7515,8 +7529,8 @@ packages:
       '@types/jest': registry.npm.taobao.org/@types/jest/25.2.3
       '@types/node': registry.npm.taobao.org/@types/node/12.19.6
       '@types/prettier': registry.npm.taobao.org/@types/prettier/2.1.5
-      '@typescript-eslint/eslint-plugin': registry.npm.taobao.org/@typescript-eslint/eslint-plugin/3.10.1_3d6bf8eb9fb07d62d697050bd65c1c5e
-      '@typescript-eslint/parser': registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.13.0+typescript@4.0.5
+      '@typescript-eslint/eslint-plugin': registry.npm.taobao.org/@typescript-eslint/eslint-plugin/3.10.1_01765ed5c77c0d28135767360c1ad86f
+      '@typescript-eslint/parser': registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.13.0+typescript@4.1.2
       '@vue/babel-helper-vue-jsx-merge-props': registry.npm.taobao.org/@vue/babel-helper-vue-jsx-merge-props/1.2.1
       '@vue/babel-plugin-jsx': registry.npm.taobao.org/@vue/babel-plugin-jsx/1.0.0-rc.3_@babel+core@7.12.3
       '@vue/babel-preset-jsx': registry.npm.taobao.org/@vue/babel-preset-jsx/1.2.4_@babel+core@7.12.3
@@ -7559,9 +7573,9 @@ packages:
       rimraf: registry.npm.taobao.org/rimraf/3.0.2
       sass: registry.npm.taobao.org/sass/1.29.0
       snapshot-diff: registry.npm.taobao.org/snapshot-diff/0.7.0_jest@26.6.3
-      ts-jest: registry.npm.taobao.org/ts-jest/26.4.4_jest@26.6.3+typescript@4.0.5
+      ts-jest: registry.npm.taobao.org/ts-jest/26.4.4_jest@26.6.3+typescript@4.1.2
       tslib: registry.npm.taobao.org/tslib/2.0.3
-      typescript: registry.npm.taobao.org/typescript/4.0.5
+      typescript: registry.npm.taobao.org/typescript/4.1.2
       vtils: registry.npm.taobao.org/vtils/3.53.0_react-dom@17.0.1+react@17.0.1
       vue-eslint-parser: registry.npm.taobao.org/vue-eslint-parser/7.1.1_eslint@7.13.0
       workerpool: registry.npm.taobao.org/workerpool/6.0.3
@@ -14441,9 +14455,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/ts-easing/download/ts-easing-0.2.0.tgz'
     version: 0.2.0
-  registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.0.5:
+  registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.1.2:
     dependencies:
-      typescript: registry.npm.taobao.org/typescript/4.0.5
+      typescript: registry.npm.taobao.org/typescript/4.1.2
     dev: true
     id: registry.npm.taobao.org/ts-essentials/7.0.1
     name: ts-essentials
@@ -14454,7 +14468,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/ts-essentials/download/ts-essentials-7.0.1.tgz'
     version: 7.0.1
-  registry.npm.taobao.org/ts-jest/26.4.4_jest@26.6.3+typescript@4.0.5:
+  registry.npm.taobao.org/ts-jest/26.4.4_jest@26.6.3+typescript@4.1.2:
     dependencies:
       '@types/jest': registry.npm.taobao.org/@types/jest/26.0.15
       bs-logger: registry.npm.taobao.org/bs-logger/0.2.6
@@ -14467,7 +14481,7 @@ packages:
       make-error: registry.npm.taobao.org/make-error/1.3.6
       mkdirp: registry.npm.taobao.org/mkdirp/1.0.4
       semver: registry.npm.taobao.org/semver/7.3.2
-      typescript: registry.npm.taobao.org/typescript/4.0.5
+      typescript: registry.npm.taobao.org/typescript/4.1.2
       yargs-parser: registry.npm.taobao.org/yargs-parser/20.2.4
     dev: true
     engines:
@@ -14514,10 +14528,10 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/tslib/download/tslib-2.0.3.tgz'
     version: 2.0.3
-  registry.npm.taobao.org/tsutils/3.17.1_typescript@4.0.5:
+  registry.npm.taobao.org/tsutils/3.17.1_typescript@4.1.2:
     dependencies:
       tslib: registry.npm.taobao.org/tslib/1.14.1
-      typescript: registry.npm.taobao.org/typescript/4.0.5
+      typescript: registry.npm.taobao.org/typescript/4.1.2
     dev: true
     engines:
       node: '>= 6'
@@ -14669,6 +14683,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/typescript/download/typescript-4.0.5.tgz?cache=0&sync_timestamp=1603755561113&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-4.0.5.tgz'
     version: 4.0.5
+  registry.npm.taobao.org/typescript/4.1.2:
+    dev: true
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    name: typescript
+    resolution:
+      integrity: sha1-Y2nvIlFv5eEDBKrlpcSGLbVTgOk=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/typescript/download/typescript-4.1.2.tgz'
+    version: 4.1.2
   registry.npm.taobao.org/uglify-js/3.9.4:
     dependencies:
       commander: registry.npm.taobao.org/commander/2.20.3
@@ -15444,7 +15469,7 @@ specifiers:
   standard-version: 9.0.0
   ts-essentials: 7.0.1
   type-fest: 0.19.0
-  typescript: 4.0.5
+  typescript: 4.1.2
   typescript-snapshots-plugin: 1.7.0
   vscode-generate-index-standalone: 1.3.0
   yup: ^0.29.1

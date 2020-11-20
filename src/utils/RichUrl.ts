@@ -90,9 +90,9 @@ export class RichUrl {
     return new Promise(resolve => {
       if (Array.isArray(data)) {
         Promise.all(
-          data.map((value, index) => {
+          (data as any[]).map((value, index) => {
             return RichUrl.transform(value, callback).then(res => {
-              data[index] = res
+              ;(data as any[])[index] = res
             })
           }),
         ).then(() => resolve(data))

@@ -3,7 +3,7 @@ import { getCompileConfig } from 'haoma'
 export default [
   getCompileConfig({
     name: 'esm',
-    inputFiles: ['src/**/*.ts', '!**/*.test.*', '!**/_*'],
+    inputFiles: ['src/**/*.ts', '!**/*.test.*', '!**/__*'],
     module: 'esm',
     target: 'browser',
     outDir: 'lib',
