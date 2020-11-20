@@ -22,12 +22,12 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/4.1.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.19.0_42609d39041f918d48551a96208a84a0
+  haoma: registry.npm.taobao.org/haoma/2.19.0_6a42548f948b2d6523b968d545ae77b8
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.1
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
-  prettier: registry.npm.taobao.org/prettier/2.1.2
+  prettier: registry.npm.taobao.org/prettier/2.2.0
   prompts: registry.npm.taobao.org/prompts/2.4.0
   react: registry.npm.taobao.org/react/17.0.1
   react-dom: registry.npm.taobao.org/react-dom/17.0.1_react@17.0.1
@@ -2428,6 +2428,10 @@ packages:
     engines:
       node: '>= 8.9'
     name: '@swc-node/core'
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-Y5khz8l+6EseO/YlUYxpO2paE0Q=
       registry: 'https://r.npm.taobao.org/'
@@ -2473,6 +2477,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-darwin'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-o7wOBDEVxsPegRbLq2/HmHizbLA=
       registry: 'https://r.npm.taobao.org/'
@@ -2484,6 +2490,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-linux'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-eeRT7LaMp0pKxB0xhOtUfIHnkss=
       registry: 'https://r.npm.taobao.org/'
@@ -2495,6 +2503,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-win32'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-GVCc5Jj2KFtUxHtWy72P4CATy4E=
       registry: 'https://r.npm.taobao.org/'
@@ -2511,6 +2521,10 @@ packages:
       '@swc/core-darwin': registry.npm.taobao.org/@swc/core-darwin/1.2.38
       '@swc/core-linux': registry.npm.taobao.org/@swc/core-linux/1.2.38
       '@swc/core-win32': registry.npm.taobao.org/@swc/core-win32/1.2.38
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-+sP2SOKzJB+4bcdNa3T3LA3SinM=
       registry: 'https://r.npm.taobao.org/'
@@ -7104,6 +7118,8 @@ packages:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     name: fsevents
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-+3OHA66NL5/pAMM4Nt3r7ouX8j4=
       registry: 'https://r.npm.taobao.org/'
@@ -7115,6 +7131,8 @@ packages:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     name: fsevents
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-H7At7SA2qKwojVB6ZZYr2HuXYo0=
       registry: 'https://r.npm.taobao.org/'
@@ -7510,7 +7528,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.19.0_42609d39041f918d48551a96208a84a0:
+  registry.npm.taobao.org/haoma/2.19.0_6a42548f948b2d6523b968d545ae77b8:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.3
       '@babel/plugin-proposal-class-properties': registry.npm.taobao.org/@babel/plugin-proposal-class-properties/7.12.1_@babel+core@7.12.3
@@ -7566,9 +7584,9 @@ packages:
       pkg-dir: registry.npm.taobao.org/pkg-dir/4.2.0
       postcss: registry.npm.taobao.org/postcss/8.1.8
       postcss-modules: registry.npm.taobao.org/postcss-modules/3.2.2
-      prettier: registry.npm.taobao.org/prettier/2.1.2
-      prettier-plugin-packagejson: registry.npm.taobao.org/prettier-plugin-packagejson/2.2.7_prettier@2.1.2
-      prettier-plugin-sh: registry.npm.taobao.org/prettier-plugin-sh/0.4.0_prettier@2.1.2
+      prettier: registry.npm.taobao.org/prettier/2.2.0
+      prettier-plugin-packagejson: registry.npm.taobao.org/prettier-plugin-packagejson/2.2.7_prettier@2.2.0
+      prettier-plugin-sh: registry.npm.taobao.org/prettier-plugin-sh/0.4.0_prettier@2.2.0
       react-test-renderer: registry.npm.taobao.org/react-test-renderer/16.14.0_react@17.0.1
       rimraf: registry.npm.taobao.org/rimraf/3.0.2
       sass: registry.npm.taobao.org/sass/1.29.0
@@ -9233,6 +9251,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: 'https://r.npm.taobao.org/'
@@ -11886,9 +11907,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/prelude-ls/download/prelude-ls-1.2.1.tgz'
     version: 1.2.1
-  registry.npm.taobao.org/prettier-plugin-packagejson/2.2.7_prettier@2.1.2:
+  registry.npm.taobao.org/prettier-plugin-packagejson/2.2.7_prettier@2.2.0:
     dependencies:
-      prettier: registry.npm.taobao.org/prettier/2.1.2
+      prettier: registry.npm.taobao.org/prettier/2.2.0
       sort-package-json: registry.npm.taobao.org/sort-package-json/1.46.1
     dev: true
     id: registry.npm.taobao.org/prettier-plugin-packagejson/2.2.7
@@ -11900,10 +11921,10 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/prettier-plugin-packagejson/download/prettier-plugin-packagejson-2.2.7.tgz'
     version: 2.2.7
-  registry.npm.taobao.org/prettier-plugin-sh/0.4.0_prettier@2.1.2:
+  registry.npm.taobao.org/prettier-plugin-sh/0.4.0_prettier@2.2.0:
     dependencies:
       mvdan-sh: registry.npm.taobao.org/mvdan-sh/0.5.0
-      prettier: registry.npm.taobao.org/prettier/2.1.2
+      prettier: registry.npm.taobao.org/prettier/2.2.0
     dev: true
     id: registry.npm.taobao.org/prettier-plugin-sh/0.4.0
     name: prettier-plugin-sh
@@ -11914,17 +11935,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/prettier-plugin-sh/download/prettier-plugin-sh-0.4.0.tgz'
     version: 0.4.0
-  registry.npm.taobao.org/prettier/2.1.2:
+  registry.npm.taobao.org/prettier/2.2.0:
     dev: true
     engines:
       node: '>=10.13.0'
     hasBin: true
     name: prettier
     resolution:
-      integrity: sha1-MFBwDa4uTItnxMP2Zs24r0BeHOU=
+      integrity: sha1-igPHd3iDsps3+yxDSMZqeOmAQYs=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/prettier/download/prettier-2.1.2.tgz'
-    version: 2.1.2
+      tarball: 'https://registry.npm.taobao.org/prettier/download/prettier-2.2.0.tgz?cache=0&sync_timestamp=1605861743975&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprettier%2Fdownload%2Fprettier-2.2.0.tgz'
+    version: 2.2.0
   registry.npm.taobao.org/pretty-format/22.4.3:
     dependencies:
       ansi-regex: registry.npm.taobao.org/ansi-regex/3.0.0
@@ -15460,7 +15481,7 @@ specifiers:
   lodash-uni: ^1.1.0
   miniprogram-api-typings: ^3.0.0
   open-cli: 6.0.1
-  prettier: 2.1.2
+  prettier: 2.2.0
   prompts: 2.4.0
   react: 17.0.1
   react-dom: 17.0.1

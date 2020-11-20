@@ -60,9 +60,9 @@ export function createGlobalState<S extends CreateGlobalStateState, R = never>(
   }>()
   let currentGlobalState: S | undefined = initialState
   const getGlobalState: () => S | undefined = () => currentGlobalState
-  const setGlobalState: Dispatch<SetStateAction<
-    S | undefined
-  >> = nextGlobalState => {
+  const setGlobalState: Dispatch<
+    SetStateAction<S | undefined>
+  > = nextGlobalState => {
     if (typeof nextGlobalState === 'function') {
       nextGlobalState = (nextGlobalState as any)(currentGlobalState)
     }
