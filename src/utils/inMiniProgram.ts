@@ -1,5 +1,5 @@
 /// <reference types="miniprogram-api-typings" />
-import { castArray } from 'lodash-es'
+import { castArray } from 'lodash-uni'
 
 declare const wx: WechatMiniprogram.Wx | undefined
 declare const qq: WechatMiniprogram.Wx | undefined

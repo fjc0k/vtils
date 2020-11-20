@@ -1,4 +1,4 @@
-import * as lodash from 'lodash-es'
+import * as lodash from 'lodash-uni'
 import * as vtils from './index'
 
 describe('index', () => {

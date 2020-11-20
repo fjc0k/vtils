@@ -1,4 +1,4 @@
-import { isPlainObject } from 'lodash-es'
+import { isPlainObject } from 'lodash-uni'
 
 export interface ParsedRichUrl<TDesc> {
   url: string

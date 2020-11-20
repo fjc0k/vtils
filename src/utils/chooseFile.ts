@@ -8,7 +8,7 @@ import { LiteralUnion } from '../types'
  * @param multiple 是否多选
  * @returns 返回选中的文件列表
  */
-export async function chooseFile(
+export function chooseFile(
   accept: LiteralUnion<'image', string>,
   multiple = false,
 ): Promise<FileList> {

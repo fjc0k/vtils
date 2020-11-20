@@ -1,4 +1,4 @@
-import { camelCase, upperFirst } from 'lodash-es'
+import { camelCase, upperFirst } from 'lodash-uni'
 
 /**
  * 转换文本为没有分隔符的大写单词字符串。

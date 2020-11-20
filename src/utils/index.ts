@@ -6,7 +6,7 @@
 
 /* istanbul ignore file */
 
-export * from 'lodash-es'
+export * from 'lodash-uni'
 
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
 export * from './base64'

@@ -1,4 +1,4 @@
-import { omit } from 'lodash-es'
+import { omit } from 'lodash-uni'
 import { omitStrict } from './omitStrict'
 
 describe(omitStrict.name, () => {

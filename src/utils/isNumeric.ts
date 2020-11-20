@@ -1,4 +1,4 @@
-import { isNaN } from 'lodash-es'
+import { isNaN } from 'lodash-uni'
 
 /**
  * 检查 `value` 是否是数值，需要注意的是 `Infinity`、`-Infinity`、`NaN` 不被认为是数值。

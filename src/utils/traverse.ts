@@ -1,4 +1,4 @@
-import { forOwn, has, isPlainObject } from 'lodash-es'
+import { forOwn, has, isPlainObject } from 'lodash-uni'
 
 /**
  * 遍历对象和数组。
