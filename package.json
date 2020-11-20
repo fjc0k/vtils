@@ -40,10 +40,7 @@
       "require": "./_cjs/react/index.js",
       "import": "./react/index.js"
     },
-    "./types": {
-      "require": "./_cjs/types/index.d.ts",
-      "import": "./types/index.d.ts"
-    },
+    "./types": "./types/index.d.ts",
     "./utils": {
       "require": "./_cjs/utils/index.js",
       "import": "./utils/index.js"

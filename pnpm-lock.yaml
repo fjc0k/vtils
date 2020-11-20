@@ -2835,6 +2835,9 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-fgYTOKE4P1ntwgTGBYmfk9wuLI8=
       registry: 'https://r.npm.taobao.org/'
@@ -2878,6 +2881,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-GIOFjoPotEJifhrG9AiSUhEVVGc=
       registry: 'https://r.npm.taobao.org/'
@@ -2911,6 +2917,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-/QBhzDit1PrUUTbWVECFafNluFM=
       registry: 'https://r.npm.taobao.org/'
@@ -5063,6 +5072,11 @@ packages:
     engines:
       node: '>=6.0'
     name: debug
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     resolution:
       integrity: sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
       registry: 'https://r.npm.taobao.org/'
