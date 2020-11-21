@@ -121,7 +121,7 @@ type PathArrayValue<T, L extends PathArray<T, L>> = L extends ArrayHasIndex<
  * @example
  * ```typescript
  * function get<T, L extends Path<T, L>>(
- *   object: K,
+ *   object: T,
  *   path: L,
  * ): PathValue<T, L> {
  *   // ...
@@ -136,7 +136,7 @@ export type Path<T, L> = PathArray<T, L> | keyof T
  * @example
  * ```typescript
  * function get<T, L extends Path<T, L>>(
- *   object: K,
+ *   object: T,
  *   path: L,
  * ): PathValue<T, L> {
  *   // ...
