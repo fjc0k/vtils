@@ -20,11 +20,11 @@ devDependencies:
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
   codecov: registry.npm.taobao.org/codecov/3.8.1
   cross-env: registry.npm.taobao.org/cross-env/7.0.2
-  eslint: registry.npm.taobao.org/eslint/7.13.0
+  eslint: registry.npm.taobao.org/eslint/7.14.0
   execa: registry.npm.taobao.org/execa/4.1.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
-  haoma: registry.npm.taobao.org/haoma/2.19.0_aca9052532bd4cb1738b9c7a68d9fdd1
+  haoma: registry.npm.taobao.org/haoma/2.19.0_3f0ee2d77dd4aecd96038edbcb8bf278
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.1
@@ -1916,14 +1916,14 @@ packages:
     version: 1.0.4
   registry.npm.taobao.org/@eslint/eslintrc/0.2.1:
     dependencies:
-      ajv: registry.npm.taobao.org/ajv/6.12.4
+      ajv: registry.npm.taobao.org/ajv/6.12.6
       debug: registry.npm.taobao.org/debug/4.2.0
       espree: registry.npm.taobao.org/espree/7.3.0
       globals: registry.npm.taobao.org/globals/12.4.0
       ignore: registry.npm.taobao.org/ignore/4.0.6
-      import-fresh: registry.npm.taobao.org/import-fresh/3.2.1
+      import-fresh: registry.npm.taobao.org/import-fresh/3.2.2
       js-yaml: registry.npm.taobao.org/js-yaml/3.14.0
-      lodash: registry.npm.taobao.org/lodash/4.17.19
+      lodash: registry.npm.taobao.org/lodash/4.17.20
       minimatch: registry.npm.taobao.org/minimatch/3.0.4
       strip-json-comments: registry.npm.taobao.org/strip-json-comments/3.1.1
     dev: true
@@ -3187,12 +3187,12 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@types/yargs/download/@types/yargs-15.0.5.tgz'
     version: 15.0.5
-  registry.npm.taobao.org/@typescript-eslint/eslint-plugin/3.10.1_3d6bf8eb9fb07d62d697050bd65c1c5e:
+  registry.npm.taobao.org/@typescript-eslint/eslint-plugin/3.10.1_153225fe90c290359a31082efa0bad87:
     dependencies:
-      '@typescript-eslint/experimental-utils': registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.13.0+typescript@4.0.5
-      '@typescript-eslint/parser': registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.13.0+typescript@4.0.5
+      '@typescript-eslint/experimental-utils': registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.14.0+typescript@4.0.5
+      '@typescript-eslint/parser': registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.14.0+typescript@4.0.5
       debug: registry.npm.taobao.org/debug/4.2.0
-      eslint: registry.npm.taobao.org/eslint/7.13.0
+      eslint: registry.npm.taobao.org/eslint/7.14.0
       functional-red-black-tree: registry.npm.taobao.org/functional-red-black-tree/1.0.1
       regexpp: registry.npm.taobao.org/regexpp/3.1.0
       semver: registry.npm.taobao.org/semver/7.3.2
@@ -3215,12 +3215,12 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-3.10.1.tgz'
     version: 3.10.1
-  registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.13.0+typescript@4.0.5:
+  registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.14.0+typescript@4.0.5:
     dependencies:
       '@types/json-schema': registry.npm.taobao.org/@types/json-schema/7.0.6
       '@typescript-eslint/types': registry.npm.taobao.org/@typescript-eslint/types/3.10.1
       '@typescript-eslint/typescript-estree': registry.npm.taobao.org/@typescript-eslint/typescript-estree/3.10.1_typescript@4.0.5
-      eslint: registry.npm.taobao.org/eslint/7.13.0
+      eslint: registry.npm.taobao.org/eslint/7.14.0
       eslint-scope: registry.npm.taobao.org/eslint-scope/5.1.1
       eslint-utils: registry.npm.taobao.org/eslint-utils/2.1.0
     dev: true
@@ -3236,13 +3236,13 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@typescript-eslint/experimental-utils/download/@typescript-eslint/experimental-utils-3.10.1.tgz'
     version: 3.10.1
-  registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.13.0+typescript@4.0.5:
+  registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.14.0+typescript@4.0.5:
     dependencies:
       '@types/eslint-visitor-keys': registry.npm.taobao.org/@types/eslint-visitor-keys/1.0.0
-      '@typescript-eslint/experimental-utils': registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.13.0+typescript@4.0.5
+      '@typescript-eslint/experimental-utils': registry.npm.taobao.org/@typescript-eslint/experimental-utils/3.10.1_eslint@7.14.0+typescript@4.0.5
       '@typescript-eslint/types': registry.npm.taobao.org/@typescript-eslint/types/3.10.1
       '@typescript-eslint/typescript-estree': registry.npm.taobao.org/@typescript-eslint/typescript-estree/3.10.1_typescript@4.0.5
-      eslint: registry.npm.taobao.org/eslint/7.13.0
+      eslint: registry.npm.taobao.org/eslint/7.14.0
       eslint-visitor-keys: registry.npm.taobao.org/eslint-visitor-keys/1.3.0
       typescript: registry.npm.taobao.org/typescript/4.0.5
     dev: true
@@ -3514,19 +3514,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/acorn-globals/download/acorn-globals-6.0.0.tgz'
     version: 6.0.0
-  registry.npm.taobao.org/acorn-jsx/5.2.0_acorn@7.4.0:
-    dependencies:
-      acorn: registry.npm.taobao.org/acorn/7.4.0
-    dev: true
-    id: registry.npm.taobao.org/acorn-jsx/5.2.0
-    name: acorn-jsx
-    peerDependencies:
-      acorn: ^6.0.0 || ^7.0.0
-    resolution:
-      integrity: sha1-TGYGkXPW/daO2FI5/CViJhgrLr4=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/acorn-jsx/download/acorn-jsx-5.2.0.tgz'
-    version: 5.2.0
   registry.npm.taobao.org/acorn-jsx/5.3.1_acorn@7.4.1:
     dependencies:
       acorn: registry.npm.taobao.org/acorn/7.4.1
@@ -4020,13 +4007,13 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/aws4/download/aws4-1.10.0.tgz'
     version: 1.10.0
-  registry.npm.taobao.org/babel-eslint/10.1.0_eslint@7.13.0:
+  registry.npm.taobao.org/babel-eslint/10.1.0_eslint@7.14.0:
     dependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
       '@babel/parser': registry.npm.taobao.org/@babel/parser/7.12.5
       '@babel/traverse': registry.npm.taobao.org/@babel/traverse/7.12.5
       '@babel/types': registry.npm.taobao.org/@babel/types/7.12.6
-      eslint: registry.npm.taobao.org/eslint/7.13.0
+      eslint: registry.npm.taobao.org/eslint/7.14.0
       eslint-visitor-keys: registry.npm.taobao.org/eslint-visitor-keys/1.3.0
       resolve: registry.npm.taobao.org/resolve/1.19.0
     dev: true
@@ -4609,8 +4596,8 @@ packages:
     version: 3.0.0
   registry.npm.taobao.org/chalk/4.1.0:
     dependencies:
-      ansi-styles: registry.npm.taobao.org/ansi-styles/4.2.1
-      supports-color: registry.npm.taobao.org/supports-color/7.1.0
+      ansi-styles: registry.npm.taobao.org/ansi-styles/4.3.0
+      supports-color: registry.npm.taobao.org/supports-color/7.2.0
     dev: true
     engines:
       node: '>=10'
@@ -5408,7 +5395,7 @@ packages:
     resolution:
       integrity: sha1-9zqFudXUHQRVUcF34ogtSshXKKY=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/cross-spawn/download/cross-spawn-7.0.3.tgz?cache=0&sync_timestamp=1603074968225&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcross-spawn%2Fdownload%2Fcross-spawn-7.0.3.tgz'
+      tarball: 'https://registry.npm.taobao.org/cross-spawn/download/cross-spawn-7.0.3.tgz'
     version: 7.0.3
   registry.npm.taobao.org/css-in-js-utils/2.0.1:
     dependencies:
@@ -5606,15 +5593,10 @@ packages:
     engines:
       node: '>=6.0'
     name: debug
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
     resolution:
       integrity: sha1-fxUPk5IOlMWPVXTC/QGjEQ7/5/E=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/debug/download/debug-4.2.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/debug/download/debug-4.2.0.tgz?cache=0&sync_timestamp=1605799792850&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdebug%2Fdownload%2Fdebug-4.2.0.tgz'
     version: 4.2.0
   registry.npm.taobao.org/decamelize-keys/1.1.0:
     dependencies:
@@ -6198,9 +6180,9 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/escodegen/download/escodegen-1.14.1.tgz'
     version: 1.14.1
-  registry.npm.taobao.org/eslint-config-prettier/6.15.0_eslint@7.13.0:
+  registry.npm.taobao.org/eslint-config-prettier/6.15.0_eslint@7.14.0:
     dependencies:
-      eslint: registry.npm.taobao.org/eslint/7.13.0
+      eslint: registry.npm.taobao.org/eslint/7.14.0
       get-stdin: registry.npm.taobao.org/get-stdin/6.0.0
     dev: true
     hasBin: true
@@ -6229,12 +6211,12 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/eslint-formatter-friendly/download/eslint-formatter-friendly-7.0.0.tgz'
     version: 7.0.0
-  registry.npm.taobao.org/eslint-plugin-react/7.21.5_eslint@7.13.0:
+  registry.npm.taobao.org/eslint-plugin-react/7.21.5_eslint@7.14.0:
     dependencies:
       array-includes: registry.npm.taobao.org/array-includes/3.1.1
       array.prototype.flatmap: registry.npm.taobao.org/array.prototype.flatmap/1.2.3
       doctrine: registry.npm.taobao.org/doctrine/2.1.0
-      eslint: registry.npm.taobao.org/eslint/7.13.0
+      eslint: registry.npm.taobao.org/eslint/7.14.0
       has: registry.npm.taobao.org/has/1.0.3
       jsx-ast-utils: registry.npm.taobao.org/jsx-ast-utils/3.1.0
       object.entries: registry.npm.taobao.org/object.entries/1.1.2
@@ -6265,12 +6247,12 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/eslint-plugin-sort-imports-es6-autofix/download/eslint-plugin-sort-imports-es6-autofix-0.5.0.tgz'
     version: 0.5.0
-  registry.npm.taobao.org/eslint-plugin-vue/6.2.2_eslint@7.13.0:
+  registry.npm.taobao.org/eslint-plugin-vue/6.2.2_eslint@7.14.0:
     dependencies:
-      eslint: registry.npm.taobao.org/eslint/7.13.0
+      eslint: registry.npm.taobao.org/eslint/7.14.0
       natural-compare: registry.npm.taobao.org/natural-compare/1.4.0
       semver: registry.npm.taobao.org/semver/5.7.1
-      vue-eslint-parser: registry.npm.taobao.org/vue-eslint-parser/7.1.1_eslint@7.13.0
+      vue-eslint-parser: registry.npm.taobao.org/vue-eslint-parser/7.1.1_eslint@7.14.0
     dev: true
     engines:
       node: '>=8.10'
@@ -6389,11 +6371,11 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/eslint/download/eslint-6.8.0.tgz?cache=0&sync_timestamp=1604715837561&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint%2Fdownload%2Feslint-6.8.0.tgz'
     version: 6.8.0
-  registry.npm.taobao.org/eslint/7.13.0:
+  registry.npm.taobao.org/eslint/7.14.0:
     dependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
       '@eslint/eslintrc': registry.npm.taobao.org/@eslint/eslintrc/0.2.1
-      ajv: registry.npm.taobao.org/ajv/6.12.4
+      ajv: registry.npm.taobao.org/ajv/6.12.6
       chalk: registry.npm.taobao.org/chalk/4.1.0
       cross-spawn: registry.npm.taobao.org/cross-spawn/7.0.3
       debug: registry.npm.taobao.org/debug/4.2.0
@@ -6410,13 +6392,13 @@ packages:
       glob-parent: registry.npm.taobao.org/glob-parent/5.1.1
       globals: registry.npm.taobao.org/globals/12.4.0
       ignore: registry.npm.taobao.org/ignore/4.0.6
-      import-fresh: registry.npm.taobao.org/import-fresh/3.2.1
+      import-fresh: registry.npm.taobao.org/import-fresh/3.2.2
       imurmurhash: registry.npm.taobao.org/imurmurhash/0.1.4
       is-glob: registry.npm.taobao.org/is-glob/4.0.1
       js-yaml: registry.npm.taobao.org/js-yaml/3.14.0
       json-stable-stringify-without-jsonify: registry.npm.taobao.org/json-stable-stringify-without-jsonify/1.0.1
       levn: registry.npm.taobao.org/levn/0.4.1
-      lodash: registry.npm.taobao.org/lodash/4.17.19
+      lodash: registry.npm.taobao.org/lodash/4.17.20
       minimatch: registry.npm.taobao.org/minimatch/3.0.4
       natural-compare: registry.npm.taobao.org/natural-compare/1.4.0
       optionator: registry.npm.taobao.org/optionator/0.9.1
@@ -6427,17 +6409,17 @@ packages:
       strip-json-comments: registry.npm.taobao.org/strip-json-comments/3.1.1
       table: registry.npm.taobao.org/table/5.4.6
       text-table: registry.npm.taobao.org/text-table/0.2.0
-      v8-compile-cache: registry.npm.taobao.org/v8-compile-cache/2.1.1
+      v8-compile-cache: registry.npm.taobao.org/v8-compile-cache/2.2.0
     dev: true
     engines:
       node: ^10.12.0 || >=12.0.0
     hasBin: true
     name: eslint
     resolution:
-      integrity: sha1-fxgBJsDc3vMnv7VLIR14At7MCNo=
+      integrity: sha1-LSysHSgXTFEKl7N38SKlUHlY40Q=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/eslint/download/eslint-7.13.0.tgz?cache=0&sync_timestamp=1604715837561&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint%2Fdownload%2Feslint-7.13.0.tgz'
-    version: 7.13.0
+      tarball: 'https://registry.npm.taobao.org/eslint/download/eslint-7.14.0.tgz'
+    version: 7.14.0
   registry.npm.taobao.org/espree/6.2.1:
     dependencies:
       acorn: registry.npm.taobao.org/acorn/7.4.1
@@ -6454,8 +6436,8 @@ packages:
     version: 6.2.1
   registry.npm.taobao.org/espree/7.3.0:
     dependencies:
-      acorn: registry.npm.taobao.org/acorn/7.4.0
-      acorn-jsx: registry.npm.taobao.org/acorn-jsx/5.2.0_acorn@7.4.0
+      acorn: registry.npm.taobao.org/acorn/7.4.1
+      acorn-jsx: registry.npm.taobao.org/acorn-jsx/5.3.1_acorn@7.4.1
       eslint-visitor-keys: registry.npm.taobao.org/eslint-visitor-keys/1.3.0
     dev: true
     engines:
@@ -7514,7 +7496,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.6.tgz'
     version: 4.7.6
-  registry.npm.taobao.org/haoma/2.19.0_aca9052532bd4cb1738b9c7a68d9fdd1:
+  registry.npm.taobao.org/haoma/2.19.0_3f0ee2d77dd4aecd96038edbcb8bf278:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.3
       '@babel/plugin-proposal-class-properties': registry.npm.taobao.org/@babel/plugin-proposal-class-properties/7.12.1_@babel+core@7.12.3
@@ -7533,13 +7515,13 @@ packages:
       '@types/jest': registry.npm.taobao.org/@types/jest/25.2.3
       '@types/node': registry.npm.taobao.org/@types/node/12.19.5
       '@types/prettier': registry.npm.taobao.org/@types/prettier/2.1.5
-      '@typescript-eslint/eslint-plugin': registry.npm.taobao.org/@typescript-eslint/eslint-plugin/3.10.1_3d6bf8eb9fb07d62d697050bd65c1c5e
-      '@typescript-eslint/parser': registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.13.0+typescript@4.0.5
+      '@typescript-eslint/eslint-plugin': registry.npm.taobao.org/@typescript-eslint/eslint-plugin/3.10.1_153225fe90c290359a31082efa0bad87
+      '@typescript-eslint/parser': registry.npm.taobao.org/@typescript-eslint/parser/3.10.1_eslint@7.14.0+typescript@4.0.5
       '@vue/babel-helper-vue-jsx-merge-props': registry.npm.taobao.org/@vue/babel-helper-vue-jsx-merge-props/1.2.1
       '@vue/babel-plugin-jsx': registry.npm.taobao.org/@vue/babel-plugin-jsx/1.0.0-rc.3_@babel+core@7.12.3
       '@vue/babel-preset-jsx': registry.npm.taobao.org/@vue/babel-preset-jsx/1.2.4_@babel+core@7.12.3
       autoprefixer: registry.npm.taobao.org/autoprefixer/10.0.2_postcss@8.1.7
-      babel-eslint: registry.npm.taobao.org/babel-eslint/10.1.0_eslint@7.13.0
+      babel-eslint: registry.npm.taobao.org/babel-eslint/10.1.0_eslint@7.14.0
       babel-jest: registry.npm.taobao.org/babel-jest/26.6.3_@babel+core@7.12.3
       babel-plugin-import: registry.npm.taobao.org/babel-plugin-import/1.13.1
       babel-plugin-transform-rename-import: registry.npm.taobao.org/babel-plugin-transform-rename-import/2.3.0
@@ -7549,12 +7531,12 @@ packages:
       cuid: registry.npm.taobao.org/cuid/2.1.8
       deepmerge: registry.npm.taobao.org/deepmerge/4.2.2
       delete-empty: registry.npm.taobao.org/delete-empty/3.0.0
-      eslint: registry.npm.taobao.org/eslint/7.13.0
-      eslint-config-prettier: registry.npm.taobao.org/eslint-config-prettier/6.15.0_eslint@7.13.0
+      eslint: registry.npm.taobao.org/eslint/7.14.0
+      eslint-config-prettier: registry.npm.taobao.org/eslint-config-prettier/6.15.0_eslint@7.14.0
       eslint-formatter-friendly: registry.npm.taobao.org/eslint-formatter-friendly/7.0.0
-      eslint-plugin-react: registry.npm.taobao.org/eslint-plugin-react/7.21.5_eslint@7.13.0
+      eslint-plugin-react: registry.npm.taobao.org/eslint-plugin-react/7.21.5_eslint@7.14.0
       eslint-plugin-sort-imports-es6-autofix: registry.npm.taobao.org/eslint-plugin-sort-imports-es6-autofix/0.5.0
-      eslint-plugin-vue: registry.npm.taobao.org/eslint-plugin-vue/6.2.2_eslint@7.13.0
+      eslint-plugin-vue: registry.npm.taobao.org/eslint-plugin-vue/6.2.2_eslint@7.14.0
       execa: registry.npm.taobao.org/execa/4.1.0
       fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
       globby: registry.npm.taobao.org/globby/11.0.1
@@ -7581,7 +7563,7 @@ packages:
       tslib: registry.npm.taobao.org/tslib/2.0.3
       typescript: registry.npm.taobao.org/typescript/4.0.5
       vtils: registry.npm.taobao.org/vtils/3.51.0_react-dom@17.0.1+react@17.0.1
-      vue-eslint-parser: registry.npm.taobao.org/vue-eslint-parser/7.1.1_eslint@7.13.0
+      vue-eslint-parser: registry.npm.taobao.org/vue-eslint-parser/7.1.1_eslint@7.14.0
       workerpool: registry.npm.taobao.org/workerpool/6.0.3
       yargs: registry.npm.taobao.org/yargs/15.4.1
     dev: true
@@ -11549,7 +11531,7 @@ packages:
     resolution:
       integrity: sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/path-key/download/path-key-3.1.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/path-key/download/path-key-3.1.1.tgz?cache=0&sync_timestamp=1590057811006&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpath-key%2Fdownload%2Fpath-key-3.1.1.tgz'
     version: 3.1.1
   registry.npm.taobao.org/path-parse/1.0.6:
     dev: true
@@ -14095,7 +14077,7 @@ packages:
     resolution:
       integrity: sha1-EpLRlQDOP4YFOwXw6Ofko7shB54=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/table/download/table-5.4.6.tgz'
+      tarball: 'https://registry.npm.taobao.org/table/download/table-5.4.6.tgz?cache=0&sync_timestamp=1605915046007&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftable%2Fdownload%2Ftable-5.4.6.tgz'
     version: 5.4.6
   registry.npm.taobao.org/teeny-request/6.0.1:
     dependencies:
@@ -14912,14 +14894,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/uuid/download/uuid-8.3.0.tgz?cache=0&sync_timestamp=1601921246516&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-8.3.0.tgz'
     version: 8.3.0
-  registry.npm.taobao.org/v8-compile-cache/2.1.1:
-    dev: true
-    name: v8-compile-cache
-    resolution:
-      integrity: sha1-VLw83UMxe8qR413K8wWxpyN950U=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/v8-compile-cache/download/v8-compile-cache-2.1.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fv8-compile-cache%2Fdownload%2Fv8-compile-cache-2.1.1.tgz'
-    version: 2.1.1
   registry.npm.taobao.org/v8-compile-cache/2.2.0:
     dev: true
     name: v8-compile-cache
@@ -15031,10 +15005,10 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/vtils/download/vtils-3.51.0.tgz'
     version: 3.51.0
-  registry.npm.taobao.org/vue-eslint-parser/7.1.1_eslint@7.13.0:
+  registry.npm.taobao.org/vue-eslint-parser/7.1.1_eslint@7.14.0:
     dependencies:
       debug: registry.npm.taobao.org/debug/4.2.0
-      eslint: registry.npm.taobao.org/eslint/7.13.0
+      eslint: registry.npm.taobao.org/eslint/7.14.0
       eslint-scope: registry.npm.taobao.org/eslint-scope/5.1.1
       eslint-visitor-keys: registry.npm.taobao.org/eslint-visitor-keys/1.3.0
       espree: registry.npm.taobao.org/espree/6.2.1
@@ -15458,7 +15432,7 @@ specifiers:
   codecov: 3.8.1
   cross-env: 7.0.2
   date-fns: ^2.14.0
-  eslint: 7.13.0
+  eslint: 7.14.0
   execa: 4.1.0
   fs-extra: 9.0.1
   globby: 11.0.1
