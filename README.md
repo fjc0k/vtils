@@ -104,8 +104,8 @@ mini: {
 // React 工具库
 import { useSearchParam } from 'vtils/react'
 
-// Taro 3 工具库
-import { useTopBarInfo } from 'vtils/taro'
+// 小程序工具库
+import { useTopBarInfo } from 'vtils/mp'
 
 export default function () {
   const id = +useSearchParam('id')!
@@ -116,7 +116,7 @@ export default function () {
 
 ### 在 Deno 中使用
 
-[Deno](https://deno.land/) 下暂只支持基础工具库、类型工具库。
+[Deno](https://deno.land/) 下暂只支持基础工具库。
 
 ```ts
 // 基础工具库
@@ -126,13 +126,6 @@ import {
   EventBus,
   base64Encode,
 } from 'https://cdn.skypack.dev/vtils@3.53.0'
-
-// 类型工具库
-import {
-  OmitStrict,
-  LiteralUnion,
-  PartialDeep,
-} from 'https://cdn.skypack.dev/vtils@3.53.0/types'
 ```
 
 ## 许可
