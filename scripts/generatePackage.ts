@@ -1,7 +1,7 @@
 import fs from 'fs-extra'
 import rawPackageInfo from '../package.json'
 import { join } from 'path'
-import { omit } from 'lodash'
+import { omit } from 'lodash-uni'
 
 async function main(rootDir: string) {
   const packageDir = join(rootDir, './lib')

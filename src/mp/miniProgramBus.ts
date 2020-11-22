@@ -84,10 +84,9 @@ export interface MiniProgramBusListeners {
 }
 
 /** @private */
-export const pageListenerToCurrentPageListener: Partial<Record<
-  keyof MiniProgramBusListeners,
-  keyof MiniProgramBusListeners
->> = {
+export const pageListenerToCurrentPageListener: Partial<
+  Record<keyof MiniProgramBusListeners, keyof MiniProgramBusListeners>
+> = {
   pageShow: 'currentPageShow',
   pageHide: 'currentPageHide',
   pageReady: 'currentPageReady',

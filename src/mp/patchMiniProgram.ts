@@ -228,13 +228,19 @@ function patchPageOptions(
         context: this,
         tag: (this as any).__PAGE_ID__,
       },
+      // @ts-ignore
       payload,
     )
     const globalListenerData = miniProgramBus.emit(
       { name: 'pageShareTimeline', context: this },
+      // @ts-ignore
       payload,
     )
-    const originalListenerData = onShareTimeline?.call(this, payload)
+    const originalListenerData = onShareTimeline?.call(
+      this,
+      // @ts-ignore
+      payload,
+    )
     return (
       originalListenerData || last(pageListenerData) || last(globalListenerData)
     )

@@ -16,7 +16,7 @@ describe('getCurrentPageUrl', () => {
           key: '123456',
         },
       },
-    ]) as WechatMiniprogram.Page.getCurrentPages
+    ]) as WechatMiniprogram.Page.GetCurrentPages
     expect(getCurrentPageUrl()).toBe('/pages/test?id=2&key=123456')
   })
 })

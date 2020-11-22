@@ -1,4 +1,4 @@
-import { snakeCase } from 'lodash-es'
+import { snakeCase } from 'lodash-uni'
 
 /**
  * 转换文本为大写字符串，单词之间带有下划线。

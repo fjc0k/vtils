@@ -45,12 +45,14 @@ export type {
   RequiredKeys,
 } from 'ts-essentials'
 
-// @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
+// @index(['./**/*.ts', '!./**/*.test.*', '!**/__*'], f => `export * from '${f.path}'`)
 export * from './AnyAsyncFunction'
 export * from './AnyFunction'
 export * from './AnyObject'
 export * from './Defined'
 export * from './FirstParameter'
-export * from './OneOrMany'
+export * from './IsAny'
+export * from './IsNever'
+export * from './OneOrMore'
 export * from './Path'
 // @endindex

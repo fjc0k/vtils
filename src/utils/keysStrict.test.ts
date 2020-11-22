@@ -1,4 +1,4 @@
-import { keys } from 'lodash-es'
+import { keys } from 'lodash-uni'
 import { keysStrict } from './keysStrict'
 
 describe(keysStrict.name, () => {

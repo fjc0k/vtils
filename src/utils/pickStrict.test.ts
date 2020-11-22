@@ -1,4 +1,4 @@
-import { pick } from 'lodash-es'
+import { pick } from 'lodash-uni'
 import { pickStrict } from './pickStrict'
 
 describe(pickStrict.name, () => {

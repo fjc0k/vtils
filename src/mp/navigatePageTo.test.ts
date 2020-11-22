@@ -33,7 +33,7 @@ describe('navigatePageTo', () => {
         ({
           miniProgramBus: {
             once: (name, cb) => {
-              cb()
+              cb({} as any)
             },
           },
         } as typeof import('./miniProgramBus')),

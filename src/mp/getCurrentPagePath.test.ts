@@ -16,7 +16,7 @@ describe('getCurrentPagePath', () => {
           key: '123456',
         },
       },
-    ]) as WechatMiniprogram.Page.getCurrentPages
+    ]) as WechatMiniprogram.Page.GetCurrentPages
     expect(getCurrentPagePath()).toBe('/pages/test')
   })
 })

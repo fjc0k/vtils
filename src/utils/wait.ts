@@ -21,7 +21,7 @@ export interface WaitResult extends Promise<void> {
  * ```
  */
 export function wait(milliseconds: number): WaitResult {
-  let timer: number
+  let timer: any
   const result = new Promise(resolve => {
     timer = setTimeout(resolve, milliseconds)
   }) as WaitResult

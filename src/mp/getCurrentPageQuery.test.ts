@@ -16,7 +16,7 @@ describe('getCurrentPageQuery', () => {
           key: '123456',
         },
       },
-    ]) as WechatMiniprogram.Page.getCurrentPages
+    ]) as WechatMiniprogram.Page.GetCurrentPages
     expect(getCurrentPageQuery()).toEqual({
       id: '2',
       key: '123456',

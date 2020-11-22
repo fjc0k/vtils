@@ -1,4 +1,4 @@
-import { castArray } from 'lodash-es'
+import { castArray } from 'lodash-uni'
 
 /**
  * 资源类型。

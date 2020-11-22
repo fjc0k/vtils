@@ -3,7 +3,7 @@ Thumbs.db
 node_modules
 *.tsbuildinfo
 *.log*
-/lib
+/lib*
 /dist
 /coverage
 /docs

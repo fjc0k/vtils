@@ -1,6 +1,6 @@
-import { EventBus } from './EventBus'
+import { EventBus, EventBusOffListener } from './EventBus'
 import { loadResource, LoadResourceUrlType } from './loadResource'
-import { mapValues, noop } from 'lodash-es'
+import { mapValues, noop } from 'lodash-uni'
 
 declare const wx: any
 
@@ -578,7 +578,7 @@ export class Wechat {
    *
    * @param callback 出错时的回调函数
    */
-  onError(callback: WechatErrorCallback) {
+  onError(callback: WechatErrorCallback): EventBusOffListener {
     return this.bus.on('error', callback)
   }
 

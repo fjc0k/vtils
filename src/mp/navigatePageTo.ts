@@ -27,7 +27,7 @@ export function navigatePageTo(
       routeChanged = true
     }
   })
-  return new Promise((resolve, reject) => {
+  return new Promise<void>((resolve, reject) => {
     ensureInMiniProgram(mp => {
       if (isUrl(url)) {
         const { webUrlToMiniProgramUrl } = getMiniProgramConfig()
