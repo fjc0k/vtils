@@ -24,7 +24,7 @@ jobs:
           path: node_modules
           key: ${{ hashFiles('pnpm-lock.yaml') }}
       - if: ${{ steps.cache.outputs.cache-hit != 'true' }}
-        run: npx pnpm install --frozen-lockfile
+        run: npx pnpm -v && npx pnpm install --frozen-lockfile
       - run: |
           rm -rf node_modules/.cache
           npm run build
