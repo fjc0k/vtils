@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.0](https://github.com/fjc0k/vtils/compare/v3.53.0...v4.0.0-beta.0) (2020-11-22)
+
+### Features
+
+- 为 types 工具添加测试 ([26be1f6](https://github.com/fjc0k/vtils/commit/26be1f66cb2a03728165c1a6b71bf86b5e92e725))
+- 为其余 types 添加测试 ([c36971e](https://github.com/fjc0k/vtils/commit/c36971ecc9a32e6eb530a1b309089e903c6e2ffc))
+- 重构 ([c085c08](https://github.com/fjc0k/vtils/commit/c085c08f3cbb1005c8804e685321ef1e523eee4a))
+
+### Bug Fixes
+
+- **deps:** update dependency yup to ^0.30.0 ([500ad27](https://github.com/fjc0k/vtils/commit/500ad27e3200d6353b4a6bafa4693488cf093b05))
+
 ## [3.53.0](https://github.com/fjc0k/vtils/compare/v3.52.0...v3.53.0) (2020-11-18)
 
 ### Features
