@@ -9,14 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-incrementalRerender(props: Partial<React.ComponentProps<TComponent>>): void;
+incrementalRerender(props: Partial<React_2.ComponentProps<TComponent>>): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  props | Partial&lt;React.ComponentProps&lt;TComponent&gt;&gt; | 新属性 |
+|  props | Partial&lt;React\_2.ComponentProps&lt;TComponent&gt;&gt; | 新属性 |
 
 <b>Returns:</b>
 

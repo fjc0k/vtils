@@ -18,7 +18,7 @@ export declare type PathValue<T, L extends Path<T, L>> = L extends PathArray<T, 
 
 ```typescript
 function get<T, L extends Path<T, L>>(
-  object: K,
+  object: T,
   path: L,
 ): PathValue<T, L> {
   // ...

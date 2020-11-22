@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-key?: React.Key;
+key?: React_2.Key;
 ```

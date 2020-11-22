@@ -9,14 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-fullRerender(props: React.ComponentProps<TComponent>): void;
+fullRerender(props: React_2.ComponentProps<TComponent>): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  props | React.ComponentProps&lt;TComponent&gt; | 新属性 |
+|  props | React\_2.ComponentProps&lt;TComponent&gt; | 新属性 |
 
 <b>Returns:</b>
 

@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-export interface UseLoadMoreService<TItem> 
+export declare interface UseLoadMoreService<TItem> 
 ```

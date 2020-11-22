@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type UseValidatorSchema<T> = (yup: typeof _yup) => T extends string ? _yup.StringSchema<T> : T extends number ? _yup.NumberSchema<T> : T extends boolean ? _yup.BooleanSchema<T> : T extends Array<infer X> ? _yup.ArraySchema<X> : T extends AnyObject ? _yup.ObjectSchema<T> | _yup.GetObjectSchema<T> : _yup.MixedSchema<T>;
+export declare type UseValidatorSchema<T> = (yup: typeof yup) => T extends string ? yup.StringSchema<T> : T extends number ? yup.NumberSchema<T> : T extends boolean ? yup.BooleanSchema<T> : T extends Array<infer X> ? yup.ArraySchema<X> : T extends AnyObject_2 ? yup.ObjectSchema<T> | yup.GetObjectSchema<T> : yup.MixedSchema<T>;
 ```

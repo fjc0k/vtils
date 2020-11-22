@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function renderComponent<TComponent extends React.ComponentType<any>>(Component: TComponent, initialProps: React.ComponentProps<TComponent>, injectCallbacks?: PickBy<React.ComponentProps<TComponent>, Function | undefined>): RenderComponentResult<TComponent>;
+export declare function renderComponent<TComponent extends React_2.ComponentType<any>>(Component: TComponent, initialProps: React_2.ComponentProps<TComponent>, injectCallbacks?: PickBy<React_2.ComponentProps<TComponent>, Function | undefined>): RenderComponentResult<TComponent>;
 ```
 
 ## Parameters
@@ -17,8 +17,8 @@ export declare function renderComponent<TComponent extends React.ComponentType<a
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  Component | TComponent | 要渲染的组件 |
-|  initialProps | React.ComponentProps&lt;TComponent&gt; | 初始属性 |
-|  injectCallbacks | PickBy&lt;React.ComponentProps&lt;TComponent&gt;, Function \| undefined&gt; | 回调函数注入 |
+|  initialProps | React\_2.ComponentProps&lt;TComponent&gt; | 初始属性 |
+|  injectCallbacks | PickBy&lt;React\_2.ComponentProps&lt;TComponent&gt;, Function \| undefined&gt; | 回调函数注入 |
 
 <b>Returns:</b>
 

@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface UseLoadMoreResult<TItem> 
+export declare interface UseLoadMoreResult<TItem> 
 ```
 
 ## Properties

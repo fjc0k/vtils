@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-style?: React.CSSProperties;
+style?: React_2.CSSProperties;
 ```

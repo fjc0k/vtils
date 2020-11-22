@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-ref?: React.Ref<TRef>;
+ref?: React_2.Ref<TRef>;
 ```

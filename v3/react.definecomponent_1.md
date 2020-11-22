@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function defineComponent<TProps extends Record<string, any>, TRef extends any = any>(options: DefineComponentOptions<TProps, false>): React.FC<TProps>;
+export declare function defineComponent<TProps extends Record<string, any>, TRef extends any = any>(options: DefineComponentOptions<TProps, false>): React_2.FC<TProps>;
 ```
 
 ## Parameters
@@ -20,5 +20,5 @@ export declare function defineComponent<TProps extends Record<string, any>, TRef
 
 <b>Returns:</b>
 
-React.FC&lt;TProps&gt;
+React\_2.FC&lt;TProps&gt;
 

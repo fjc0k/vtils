@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface IntervalToRestrictiveDurationResult 
+export declare interface IntervalToRestrictiveDurationResult 
 ```
 
 ## Properties

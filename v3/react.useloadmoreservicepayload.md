@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface UseLoadMoreServicePayload 
+export declare interface UseLoadMoreServicePayload 
 ```
 
 ## Properties

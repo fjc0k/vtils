@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface UseHoverOptions 
+export declare interface UseHoverOptions 
 ```
 
 ## Properties

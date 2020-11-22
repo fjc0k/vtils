@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function useStateWithDeps<S>(state: S | (() => S), deps: React.DependencyList): [S, React.Dispatch<React.SetStateAction<S>>];
+export declare function useStateWithDeps<S>(state: S | (() => S), deps: React_2.DependencyList): [S, React_2.Dispatch<React_2.SetStateAction<S>>];
 ```
 
 ## Parameters
@@ -17,11 +17,11 @@ export declare function useStateWithDeps<S>(state: S | (() => S), deps: React.De
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  state | S \| (() =&gt; S) | 状态 |
-|  deps | React.DependencyList | 依赖 |
+|  deps | React\_2.DependencyList | 依赖 |
 
 <b>Returns:</b>
 
-\[S, React.Dispatch&lt;React.SetStateAction&lt;S&gt;&gt;\]
+\[S, React\_2.Dispatch&lt;React\_2.SetStateAction&lt;S&gt;&gt;\]
 
 返回结果同 useState
 

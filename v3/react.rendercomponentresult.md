@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface RenderComponentResult<TComponent extends React.ComponentType<any>> 
+export declare interface RenderComponentResult<TComponent extends React_2.ComponentType<any>> 
 ```
 
 ## Methods
