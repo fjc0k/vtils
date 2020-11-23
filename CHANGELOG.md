@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.2](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.1...v4.0.0-beta.2) (2020-11-23)
+
+### Bug Fixes
+
+- 修复 commonjs 配置 ([dc91321](https://github.com/fjc0k/vtils/commit/dc913211d095ae7ba6cb7a3e52f88ec023b16f2b))
+
 ## [4.0.0-beta.1](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.0...v4.0.0-beta.1) (2020-11-22)
 
 ## [4.0.0-beta.0](https://github.com/fjc0k/vtils/compare/v3.53.0...v4.0.0-beta.0) (2020-11-22)
