@@ -36,7 +36,6 @@ describe('base64', () => {
       '4p2lKOOCnc+J44O74py/4Li6KeKAu+KWk+KXj8Ky4pmg4pGy4oWi4oi1bW9sw4fDueOEoc61yZl0c+ODleOBveOFmuOJotC04pWi4pSJKOC5keKVueKXoeKVuSnvvokiIiI=',
       '4p2lKOOCnc-J44O74py_4Li6KeKAu-KWk-KXj8Ky4pmg4pGy4oWi4oi1bW9sw4fDueOEoc61yZl0c-ODleOBveOFmuOJotC04pWi4pSJKOC5keKVueKXoeKVuSnvvokiIiI',
     ],
-    ['a\u{10126}ĉc车头', 'YfCQhKbEiWPovablpLQ=', 'YfCQhKbEiWPovablpLQ'],
     ['f', 'Zg==', 'Zg'],
     ['fo', 'Zm8=', 'Zm8'],
     ['foo', 'Zm9v', 'Zm9v'],
