@@ -4,7 +4,7 @@ dependencies:
   lodash-uni: registry.npm.taobao.org/lodash-uni/1.1.0
   miniprogram-api-typings: registry.npm.taobao.org/miniprogram-api-typings/3.2.0
   react-use: registry.npm.taobao.org/react-use/15.3.4_react-dom@17.0.1+react@17.0.1
-  yup: registry.npm.taobao.org/yup/0.30.0
+  yup: registry.npm.taobao.org/yup/0.31.0
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.11.0
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.12.0
@@ -2139,6 +2139,10 @@ packages:
     engines:
       node: '>= 8.9'
     name: '@swc-node/core'
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-Y5khz8l+6EseO/YlUYxpO2paE0Q=
       registry: 'https://r.npm.taobao.org/'
@@ -2184,6 +2188,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-darwin'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-o63YVLd6CLrMp8ZeoBQDQi64r+s=
       registry: 'https://r.npm.taobao.org/'
@@ -2195,6 +2201,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-linux'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-Tx7O4+pSJnSIvNdYx/AYW64sF6c=
       registry: 'https://r.npm.taobao.org/'
@@ -2206,6 +2214,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-win32'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-J4pybpyc2V1XO4cPUIUg9YEvxIk=
       registry: 'https://r.npm.taobao.org/'
@@ -2222,6 +2232,10 @@ packages:
       '@swc/core-darwin': registry.npm.taobao.org/@swc/core-darwin/1.2.39
       '@swc/core-linux': registry.npm.taobao.org/@swc/core-linux/1.2.39
       '@swc/core-win32': registry.npm.taobao.org/@swc/core-win32/1.2.39
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-uNKCExHeOTkCfhKSKJz2K3QtxLw=
       registry: 'https://r.npm.taobao.org/'
@@ -2824,6 +2838,9 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-fgYTOKE4P1ntwgTGBYmfk9wuLI8=
       registry: 'https://r.npm.taobao.org/'
@@ -2867,6 +2884,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-GIOFjoPotEJifhrG9AiSUhEVVGc=
       registry: 'https://r.npm.taobao.org/'
@@ -2900,6 +2920,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-/QBhzDit1PrUUTbWVECFafNluFM=
       registry: 'https://r.npm.taobao.org/'
@@ -14755,7 +14778,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/yup/download/yup-0.29.3.tgz'
     version: 0.29.3
-  registry.npm.taobao.org/yup/0.30.0:
+  registry.npm.taobao.org/yup/0.31.0:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.12.5
       lodash: registry.npm.taobao.org/lodash/4.17.20
@@ -14767,10 +14790,10 @@ packages:
       node: '>=10'
     name: yup
     resolution:
-      integrity: sha1-Qn7gdqux1+AedH+3goAfffJS+3Y=
+      integrity: sha1-6IKrQpQKFamAq42cwZ8kiUGCU9I=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/yup/download/yup-0.30.0.tgz'
-    version: 0.30.0
+      tarball: 'https://registry.npm.taobao.org/yup/download/yup-0.31.0.tgz'
+    version: 0.31.0
   registry.npm.taobao.org/z-schema/3.18.4:
     dependencies:
       lodash.get: registry.npm.taobao.org/lodash.get/4.4.2
@@ -14824,4 +14847,4 @@ specifiers:
   typescript: 4.1.2
   typescript-snapshots-plugin: 1.7.0
   vscode-generate-index-standalone: 1.3.0
-  yup: ^0.30.0
+  yup: ^0.31.0
