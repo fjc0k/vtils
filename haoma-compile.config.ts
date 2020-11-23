@@ -13,17 +13,18 @@ export default [
   }),
   getCompileConfig({
     name: 'cjs',
-    inputFiles: ['lib/**/*.js'],
+    inputFiles: ['src/**/*.ts', '!**/*.test.*', '!**/__*'],
     module: 'cjs',
     target: 'browser',
     outDir: 'lib/_cjs',
+    emitDts: false,
     renameImport: [
       {
-        original: 'yup/es(.*)$',
+        original: /yup\/es(.*)$/,
         replacement: 'yup/lib$1',
       },
       {
-        original: 'date\\-fns/esm(.*)$',
+        original: /date-fns\/esm(.*)$/,
         replacement: 'date-fns$1',
       },
     ],
