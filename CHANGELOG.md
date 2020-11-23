@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.3](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.2...v4.0.0-beta.3) (2020-11-23)
+
+### Bug Fixes
+
+- cjs 产物 ([3633d35](https://github.com/fjc0k/vtils/commit/3633d35f7d15157fa7bd1b6da61ca765ca9b5bd7))
+
 ## [4.0.0-beta.2](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.1...v4.0.0-beta.2) (2020-11-23)
 
 ### Bug Fixes
