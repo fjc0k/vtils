@@ -25,7 +25,7 @@ devDependencies:
   haoma: registry.npm.taobao.org/haoma/2.20.1_6cdf8c03d1558b4e8aaa2eec4dea90a2
   husky: registry.npm.taobao.org/husky/4.3.0
   jest: registry.npm.taobao.org/jest/26.6.3
-  lint-staged: registry.npm.taobao.org/lint-staged/10.5.1
+  lint-staged: registry.npm.taobao.org/lint-staged/10.5.2
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
   prettier: registry.npm.taobao.org/prettier/2.2.0
   prompts: registry.npm.taobao.org/prompts/2.4.0
@@ -4424,7 +4424,7 @@ packages:
     resolution:
       integrity: sha1-uZC/uKwDCu3G0RvATRSI/+9W23U=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/commander/download/commander-6.2.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcommander%2Fdownload%2Fcommander-6.2.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/commander/download/commander-6.2.0.tgz'
     version: 6.2.0
   registry.npm.taobao.org/common-dir/3.0.0:
     dependencies:
@@ -5075,15 +5075,10 @@ packages:
     engines:
       node: '>=6.0'
     name: debug
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
     resolution:
       integrity: sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/debug/download/debug-4.3.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/debug/download/debug-4.3.1.tgz?cache=0&sync_timestamp=1605799792850&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdebug%2Fdownload%2Fdebug-4.3.1.tgz'
     version: 4.3.1
   registry.npm.taobao.org/decamelize-keys/1.1.0:
     dependencies:
@@ -9369,7 +9364,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz'
     version: 1.1.6
-  registry.npm.taobao.org/lint-staged/10.5.1:
+  registry.npm.taobao.org/lint-staged/10.5.2:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
       cli-truncate: registry.npm.taobao.org/cli-truncate/2.1.0
@@ -9390,10 +9385,10 @@ packages:
     hasBin: true
     name: lint-staged
     resolution:
-      integrity: sha1-kB6RXCNgBy3e0OfXUqDZpJ4Hnao=
+      integrity: sha1-rPqgCTrzJiruMTCy4iQ4lBUwvdE=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.5.1.tgz'
-    version: 10.5.1
+      tarball: 'https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.5.2.tgz?cache=0&sync_timestamp=1606192418601&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.5.2.tgz'
+    version: 10.5.2
   registry.npm.taobao.org/listr2/3.2.2_enquirer@2.3.6:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
@@ -9415,7 +9410,7 @@ packages:
     resolution:
       integrity: sha1-0g/rdQFeUGmStVr0ByK6GvFouPE=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/listr2/download/listr2-3.2.2.tgz'
+      tarball: 'https://registry.npm.taobao.org/listr2/download/listr2-3.2.2.tgz?cache=0&sync_timestamp=1603735204952&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flistr2%2Fdownload%2Flistr2-3.2.2.tgz'
     version: 3.2.2
   registry.npm.taobao.org/load-json-file/1.1.0:
     dependencies:
@@ -10773,7 +10768,7 @@ packages:
     resolution:
       integrity: sha1-uy+Vpe2i7BaOySdOBqdHw+KQTSs=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/p-map/download/p-map-4.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fp-map%2Fdownload%2Fp-map-4.0.0.tgz'
+      tarball: 'https://registry.npm.taobao.org/p-map/download/p-map-4.0.0.tgz'
     version: 4.0.0
   registry.npm.taobao.org/p-try/1.0.0:
     dev: true
@@ -14831,7 +14826,7 @@ specifiers:
   haoma: 2.20.1
   husky: 4.3.0
   jest: 26.6.3
-  lint-staged: 10.5.1
+  lint-staged: 10.5.2
   lodash-uni: ^1.1.0
   miniprogram-api-typings: ^3.2.0
   open-cli: 6.0.1
