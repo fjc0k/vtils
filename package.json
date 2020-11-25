@@ -133,5 +133,10 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "pnpm": {
+    "overrides": {
+      "typescript": "^4.1.2"
+    }
   }
 }
