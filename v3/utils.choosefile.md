@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function chooseFile(accept: LiteralUnion<'image', string>, multiple?: boolean): Promise<FileList>;
+export declare function chooseFile(accept: LiteralUnion<'image', string>, multiple?: boolean): Promise<ReadonlyArray<File>>;
 ```
 
 ## Parameters
@@ -21,7 +21,7 @@ export declare function chooseFile(accept: LiteralUnion<'image', string>, multip
 
 <b>Returns:</b>
 
-Promise&lt;FileList&gt;
+Promise&lt;ReadonlyArray&lt;File&gt;&gt;
 
 返回选中的文件列表
 
