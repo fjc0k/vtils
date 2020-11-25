@@ -1,5 +1,6 @@
 import { bindEvent } from './bindEvent'
 import { LiteralUnion } from '../types'
+import { toArray } from 'lodash-uni'
 
 /**
  * 选择文件。
@@ -11,7 +12,7 @@ import { LiteralUnion } from '../types'
 export function chooseFile(
   accept: LiteralUnion<'image', string>,
   multiple = false,
-): Promise<FileList> {
+): Promise<ReadonlyArray<File>> {
   return new Promise(resolve => {
     let input = document.createElement('input')
     input.style.all = 'unset'
@@ -33,7 +34,7 @@ export function chooseFile(
       unbindChange()
       document.body.removeChild(input)
       input = null as any
-      resolve(files)
+      resolve(Object.freeze(toArray(files)))
     })
     input.click()
   })
