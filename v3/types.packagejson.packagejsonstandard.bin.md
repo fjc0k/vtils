@@ -11,7 +11,5 @@ The executable files that should be installed into the `PATH`<!-- -->.
 ```typescript
 bin?:
 		| string
-		| {
-			[binary: string]: string;
-		};
+		| Record<string, string>;
 ```

@@ -9,7 +9,5 @@ Specify path mapping to be computed relative to baseUrl option.
 <b>Signature:</b>
 
 ```typescript
-paths?: {
-			[key: string]: string[];
-		};
+paths?: Record<string, string[]>;
 ```

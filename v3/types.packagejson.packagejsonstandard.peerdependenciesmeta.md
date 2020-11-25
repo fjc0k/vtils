@@ -9,9 +9,5 @@ Indicate peer dependencies that are optional.
 <b>Signature:</b>
 
 ```typescript
-peerDependenciesMeta?: {
-			[packageName: string]: {
-				optional: true;
-			};
-		};
+peerDependenciesMeta?: Record<string, {optional: true}>;
 ```

@@ -9,7 +9,5 @@ Is used to set configuration parameters used in package scripts that persist acr
 <b>Signature:</b>
 
 ```typescript
-config?: {
-			[configKey: string]: unknown;
-		};
+config?: Record<string, unknown>;
 ```

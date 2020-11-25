@@ -2,12 +2,12 @@
 
 [Home](./index.md) &gt; [types](./types.md) &gt; [PackageJson](./types.packagejson.md) &gt; [Dependency](./types.packagejson.dependency.md)
 
-## PackageJson.Dependency interface
+## PackageJson.Dependency type
 
 Dependencies of the package. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or Git URL.
 
 <b>Signature:</b>
 
 ```typescript
-export interface Dependency 
+export type Dependency = Record<string, string>;
 ```

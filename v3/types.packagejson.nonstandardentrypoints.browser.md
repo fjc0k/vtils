@@ -11,7 +11,5 @@ A hint to JavaScript bundlers or component tools when packaging modules for clie
 ```typescript
 browser?:
 		| string
-		| {
-			[moduleName: string]: string | false;
-		};
+		| Record<string, string | false>;
 ```

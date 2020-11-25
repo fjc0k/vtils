@@ -63,7 +63,5 @@ export type Scripts = {
 		restart?: string;
 
 		postrestart?: string;
-	} & {
-		[scriptName: string]: string;
-	};
+	} & Record<string, string>;
 ```
