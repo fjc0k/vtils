@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.5](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.4...v4.0.0-beta.5) (2020-11-25)
+
+### Features
+
+- **types:** 新增 CamelCase, SnakeCase, KebabCase, PascalCase, DelimiterCase ([0112b50](https://github.com/fjc0k/vtils/commit/0112b50db1021169220332888b9eb4eb26880908))
+
 ## [4.0.0-beta.4](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2020-11-25)
 
 ### Bug Fixes
