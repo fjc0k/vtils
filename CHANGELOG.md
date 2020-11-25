@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.4](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2020-11-25)
+
+### Bug Fixes
+
+- **chooseFile:** 返回结果为只读数组 ([d0fbac2](https://github.com/fjc0k/vtils/commit/d0fbac2f3fc7c42364db27c2969fa14fb35c241e))
+- **deps:** update dependency yup to ^0.31.0 ([7859da5](https://github.com/fjc0k/vtils/commit/7859da5078625a3ea21715b81debe2434200ab45))
+
 ## [4.0.0-beta.3](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.2...v4.0.0-beta.3) (2020-11-23)
 
 ### Bug Fixes
