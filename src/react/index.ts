@@ -133,17 +133,21 @@ export * from './useValidator'
 // @endindex
 
 // 与 react-use 同名的应手动指定导出的模块
-export { useToggle, UseToggleResult } from './useToggle'
-export {
-  createGlobalState,
+export { useToggle } from './useToggle'
+export type { UseToggleResult } from './useToggle'
+export { createGlobalState } from './createGlobalState'
+export type {
   CreateGlobalStateResult,
   CreateGlobalStateCustomResult,
   CreateGlobalStateResultResult,
   CreateGlobalStateState,
 } from './createGlobalState'
 export { useTitle } from './useTitle'
-export { useInterval, UseIntervalResult } from './useInterval'
+export { useInterval } from './useInterval'
+export type { UseIntervalResult } from './useInterval'
 export { useSearchParam } from './useSearchParam'
-export { useLocalStorage, UseLocalStorageResult } from './useLocalStorage'
+export { useLocalStorage } from './useLocalStorage'
+export type { UseLocalStorageResult } from './useLocalStorage'
 export { useWindowSize } from './useWindowSize'
-export { useHover, UseHoverOptions, UseHoverResult } from './useHover'
+export { useHover } from './useHover'
+export type { UseHoverOptions, UseHoverResult } from './useHover'
