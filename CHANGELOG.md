@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.6](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.5...v4.0.0-beta.6) (2020-11-26)
+
+### Bug Fixes
+
+- **react:** export types ([dcf584f](https://github.com/fjc0k/vtils/commit/dcf584fa9946c3ece6de10ad5d5c2dfce9ecab91))
+
 ## [4.0.0-beta.5](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.4...v4.0.0-beta.5) (2020-11-25)
 
 ### Features
