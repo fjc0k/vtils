@@ -14,4 +14,4 @@ export function isDataUrl(value: string) {
   return isDataUrl.regex.test(value)
 }
 
-isDataUrl.regex = /^data:([a-z]+\/[a-z0-9-+.]+(;[a-z0-9-.!#$%*+.{}|~`]+=[a-z0-9-.!#$%*+.{}()|~`]+)*)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)$/i
+isDataUrl.regex = /^data:(([a-z]+\/[a-z0-9-+.]+)(;[a-z0-9-.!#$%*+.{}|~`]+=[a-z0-9-.!#$%*+.{}()|~`]+)*)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)$/i

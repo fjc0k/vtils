@@ -16,6 +16,7 @@ export interface CreateUrlQueryStringOptions {
  * 创建 url 查询字符串。
  *
  * @param parameters 查询参数
+ * @param options 选项
  * @returns 返回 url 查询字符串
  * @example
  * ```typescript

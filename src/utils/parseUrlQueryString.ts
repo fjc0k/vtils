@@ -14,16 +14,18 @@ import { CreateUrlQueryStringOptions } from './createUrlQueryString'
  * ```
  */
 export function parseUrlQueryString<
-  T extends Record<string, any> = Record<string, any>
+  T extends Record<string, string> = Record<string, string>
 >(query: string, options?: CreateUrlQueryStringOptions): T {
+  if (!query) return {} as any
   const pairSeparator = options?.pairSeparator ?? '='
   const partSeparator = options?.partSeparator ?? '&'
   const parameters: T = {} as any
   query = query.charAt(0) === '?' ? query.substring(1) : query
   for (const pair of query.split(partSeparator)) {
     const [key, value] = pair.split(pairSeparator)
+    if (!key) continue
     const decodedKey = decodeURIComponent(key)
-    const decodedValue = value != null ? decodeURIComponent(value) : true
+    const decodedValue = value ? decodeURIComponent(value) : ''
     ;(parameters as any)[decodedKey] = decodedValue
   }
   return parameters

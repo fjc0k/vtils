@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseDataUrl 表现正常 1`] = `
+Object {
+  "base64": false,
+  "content": "some-data",
+  "mimeType": "image/svg+xml;name=foobar (1).svg;charset=UTF-8",
+  "parameters": Object {
+    "charset": "UTF-8",
+    "name": "foobar (1).svg",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 2`] = `
+Object {
+  "base64": true,
+  "content": "PGh0bWw+PC9odG1sPg==",
+  "mimeType": "application/vnd.ms-excel",
+  "parameters": Object {
+    "base64": "",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 3`] = `
+Object {
+  "base64": true,
+  "content": <h1>
+  Hello!
+</h1>,
+  "mimeType": "video/x-ms-wmv",
+  "parameters": Object {
+    "base64": "",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 4`] = `
+Object {
+  "base64": true,
+  "content": <h1>
+  Hello!
+</h1>,
+  "mimeType": "audio/mp3",
+  "parameters": Object {
+    "base64": "",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 5`] = `
+Object {
+  "base64": false,
+  "content": <h1>
+  Hello!
+</h1>,
+  "mimeType": "text/html;charset=US-ASCII",
+  "parameters": Object {
+    "charset": "US-ASCII",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 6`] = `
+Object {
+  "base64": false,
+  "content": "A brief note",
+  "mimeType": "text/plain;charset=US-ASCII",
+  "parameters": Object {
+    "charset": "US-ASCII",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 7`] = `
+Object {
+  "base64": false,
+  "content": <h1>
+  Hello, World!
+</h1>,
+  "mimeType": "text/html",
+  "parameters": Object {},
+}
+`;
+
+exports[`parseDataUrl 表现正常 8`] = `
+Object {
+  "base64": true,
+  "content": "SGVsbG8sIFdvcmxkIQ==",
+  "mimeType": "text/plain",
+  "parameters": Object {
+    "base64": "",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 9`] = `
+Object {
+  "base64": false,
+  "content": "Hello World!",
+  "mimeType": "text/plain;charset=US-ASCII",
+  "parameters": Object {
+    "charset": "US-ASCII",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 10`] = `
+Object {
+  "base64": false,
+  "content": "Hello, World!",
+  "mimeType": "text/plain;charset=US-ASCII",
+  "parameters": Object {
+    "charset": "US-ASCII",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 11`] = `
+Object {
+  "base64": true,
+  "content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCBmaWxsPSIjMDBCMUZGIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIvPjwvc3ZnPg==",
+  "mimeType": "image/svg+xml",
+  "parameters": Object {
+    "base64": "",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 12`] = `
+Object {
+  "base64": true,
+  "content": "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIBAMAAAA2IaO4AAAAFVBMVEXk5OTn5+ft7e319fX29vb5+fn///++GUmVAAAALUlEQVQIHWNICnYLZnALTgpmMGYIFWYIZTA2ZFAzTTFlSDFVMwVyQhmAwsYMAKDaBy0axX/iAAAAAElFTkSuQmCC",
+  "mimeType": "image/png;name=foo.png",
+  "parameters": Object {
+    "base64": "",
+    "name": "foo.png",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 13`] = `
+Object {
+  "base64": false,
+  "content": <svg xmlns="http://www.w3.org/2000/svg"
+     width="100"
+     height="100"
+>
+  <rect fill="#00B1FF"
+        width="100"
+        height="100"
+  >
+  </rect>
+</svg>,
+  "mimeType": "image/svg+xml;charset=utf-8;name=bar.svg",
+  "parameters": Object {
+    "charset": "utf-8",
+    "name": "bar.svg",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 14`] = `
+Object {
+  "base64": false,
+  "content": <svg xmlns="http://www.w3.org/2000/svg"
+     width="100"
+     height="100"
+>
+  <rect fill="#00B1FF"
+        width="100"
+        height="100"
+  >
+  </rect>
+</svg>,
+  "mimeType": "image/svg+xml;charset=utf-8",
+  "parameters": Object {
+    "charset": "utf-8",
+  },
+}
+`;
+
+exports[`parseDataUrl 表现正常 15`] = `
+Object {
+  "base64": true,
+  "content": "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIBAMAAAA2IaO4AAAAFVBMVEXk5OTn5+ft7e319fX29vb5+fn///++GUmVAAAALUlEQVQIHWNICnYLZnALTgpmMGYIFWYIZTA2ZFAzTTFlSDFVMwVyQhmAwsYMAKDaBy0axX/iAAAAAElFTkSuQmCC",
+  "mimeType": "image/png",
+  "parameters": Object {
+    "base64": "",
+  },
+}
+`;

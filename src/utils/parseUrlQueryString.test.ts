@@ -26,7 +26,7 @@ describe('parseUrlQueryString', () => {
     ).toEqual({
       x: '1',
       y: 'ooo',
-      base64: true,
+      base64: '',
       msg: '',
     })
   })
