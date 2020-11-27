@@ -1,5 +1,17 @@
 import { AnyObject } from '../types'
 
+export interface CreateUrlQueryStringOptions {
+  /**
+   * 键值内部的连接符。
+   */
+  pairSeparator?: string
+
+  /**
+   * 各参数间的连接符。
+   */
+  partSeparator?: string
+}
+
 /**
  * 创建 url 查询字符串。
  *
@@ -10,12 +22,19 @@ import { AnyObject } from '../types'
  * createUrlQueryString({ x: 1, y: 'z' }) // => x=1&y=z
  * ```
  */
-export function createUrlQueryString(parameters: AnyObject) {
+export function createUrlQueryString(
+  parameters: AnyObject,
+  options?: CreateUrlQueryStringOptions,
+) {
+  const pairSeparator = options?.pairSeparator ?? '='
+  const partSeparator = options?.partSeparator ?? '&'
   const parts: string[] = []
   for (const key of Object.keys(parameters)) {
     parts.push(
-      `${encodeURIComponent(key)}=${encodeURIComponent(parameters[key])}`,
+      `${encodeURIComponent(key)}${pairSeparator}${encodeURIComponent(
+        parameters[key],
+      )}`,
     )
   }
-  return parts.join('&')
+  return parts.join(partSeparator)
 }

@@ -1,5 +1,4 @@
 import { createUrlQueryString } from './createUrlQueryString'
-import { Merge } from '../types'
 import { parseUrlQueryString } from './parseUrlQueryString'
 
 describe('parseUrlQueryString', () => {
@@ -17,14 +16,18 @@ describe('parseUrlQueryString', () => {
     expect(parseUrlQueryString(`?${createUrlQueryString(parameters)}`)).toEqual(
       parameters,
     )
+  })
+
+  test('支持自定义连接符', () => {
     expect(
-      parseUrlQueryString<Merge<typeof parameters, { age: number }>>(
-        createUrlQueryString(parameters),
-        q => ({ ...q, age: +q.age }),
-      ),
+      parseUrlQueryString('x=1;y=ooo;base64;msg=', {
+        partSeparator: ';',
+      }),
     ).toEqual({
-      ...parameters,
-      age: +parameters.age,
+      x: '1',
+      y: 'ooo',
+      base64: true,
+      msg: '',
     })
   })
 })

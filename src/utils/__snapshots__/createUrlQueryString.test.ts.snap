@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`createUrlQueryString 可自定义连接符 1`] = `"0=0%20%3D%20%26%20%3F%F0%9F%98%81;2=xxx;x=1%2F%2F%24%256;%F0%9F%98%81%F0%9F%A5%B3=hello"`;
+
 exports[`createUrlQueryString 表现正常 1`] = `"0=0%20%3D%20%26%20%3F%F0%9F%98%81&2=xxx&x=1%2F%2F%24%256&%F0%9F%98%81%F0%9F%A5%B3=hello"`;
