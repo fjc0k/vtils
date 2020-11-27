@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.7](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.6...v4.0.0-beta.7) (2020-11-27)
+
+### Features
+
+- **createUrlQueryString,parseUrlQueryString:** 支持自定义连接符 ([a7d02bd](https://github.com/fjc0k/vtils/commit/a7d02bd034da0ac3711006e0c7e978d2fad6ab7c))
+- **utils:** 新增 isDataUrl ([80b3a0c](https://github.com/fjc0k/vtils/commit/80b3a0c2a938dbf540c14f3b403eeded59ed698d))
+- **utils:** 新增 parseDataUrl ([b67d872](https://github.com/fjc0k/vtils/commit/b67d87201f141449ca7397ccb9e92e13d3ea4a4a))
+
 ## [4.0.0-beta.6](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.5...v4.0.0-beta.6) (2020-11-26)
 
 ### Bug Fixes
