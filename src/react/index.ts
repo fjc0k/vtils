@@ -70,6 +70,7 @@ export {
   useMountedState,
   useMouse,
   useMouseHovered,
+  useMouseWheel,
   useMultiStateValidator,
   useNetwork,
   useNumber,
