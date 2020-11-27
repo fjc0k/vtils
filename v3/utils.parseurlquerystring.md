@@ -11,7 +11,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function parseUrlQueryString<T extends Record<string, any> = Record<string, any>>(query: string, format?: ParseUrlQueryStringFormat<T>): T;
+export declare function parseUrlQueryString<T extends Record<string, string> = Record<string, string>>(query: string, options?: CreateUrlQueryStringOptions): T;
 ```
 
 ## Parameters
@@ -19,7 +19,7 @@ export declare function parseUrlQueryString<T extends Record<string, any> = Reco
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  query | string | 查询字符串 |
-|  format | [ParseUrlQueryStringFormat](./utils.parseurlquerystringformat.md)<!-- -->&lt;T&gt; | 格式化查询参数 |
+|  options | [CreateUrlQueryStringOptions](./utils.createurlquerystringoptions.md) | 选项 |
 
 <b>Returns:</b>
 
@@ -32,14 +32,6 @@ T
 
 ```typescript
 parseUrlQueryString('x=1&y=z') // => { x: '1', y: 'z' }
-parseUrlQueryString('?x=1&y=z') // => { x: '1', y: 'z' }
-parseUrlQueryString(
-  'x=1&y=z',
-  parameters => ({
-    ...parameters,
-    x: Number(parameters.x),
-  }),
-) // => { x: 1, y: 'z' }
 
 ```
 

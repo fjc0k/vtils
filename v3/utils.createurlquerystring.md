@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function createUrlQueryString(parameters: AnyObject_2): string;
+export declare function createUrlQueryString(parameters: AnyObject_2, options?: CreateUrlQueryStringOptions): string;
 ```
 
 ## Parameters
@@ -17,6 +17,7 @@ export declare function createUrlQueryString(parameters: AnyObject_2): string;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  parameters | AnyObject\_2 | 查询参数 |
+|  options | [CreateUrlQueryStringOptions](./utils.createurlquerystringoptions.md) | 选项 |
 
 <b>Returns:</b>
 
