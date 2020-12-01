@@ -6,7 +6,7 @@ dependencies:
   react-use: registry.npm.taobao.org/react-use/15.3.4_react-dom@17.0.1+react@17.0.1
   yup: registry.npm.taobao.org/yup/0.31.0
 devDependencies:
-  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.11.1
+  '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.11.2
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.12.0
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.17
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.2.2_react-dom@17.0.1+react@17.0.1
@@ -1968,7 +1968,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@jest/types/download/@jest/types-26.6.2.tgz'
     version: 26.6.2
-  registry.npm.taobao.org/@microsoft/api-documenter/7.11.1:
+  registry.npm.taobao.org/@microsoft/api-documenter/7.11.2:
     dependencies:
       '@microsoft/api-extractor-model': registry.npm.taobao.org/@microsoft/api-extractor-model/7.12.0
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -1981,10 +1981,10 @@ packages:
     hasBin: true
     name: '@microsoft/api-documenter'
     resolution:
-      integrity: sha1-ZmDJVZ0BOotWtEGvmRTbRVxvidM=
+      integrity: sha1-lFo7VGYFoVB5ivayXuwr+uikWwQ=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.11.1.tgz?cache=0&sync_timestamp=1606752874814&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40microsoft%2Fapi-documenter%2Fdownload%2F%40microsoft%2Fapi-documenter-7.11.1.tgz'
-    version: 7.11.1
+      tarball: 'https://registry.npm.taobao.org/@microsoft/api-documenter/download/@microsoft/api-documenter-7.11.2.tgz'
+    version: 7.11.2
   registry.npm.taobao.org/@microsoft/api-extractor-model/7.12.0:
     dependencies:
       '@microsoft/tsdoc': registry.npm.taobao.org/@microsoft/tsdoc/0.12.19
@@ -14802,7 +14802,7 @@ packages:
     version: 3.18.4
 specifiers:
   '@babel/runtime': ^7.12.5
-  '@microsoft/api-documenter': 7.11.1
+  '@microsoft/api-documenter': 7.11.2
   '@microsoft/api-extractor': 7.12.0
   '@tarojs/taro': 3.0.17
   '@testing-library/react': 11.2.2
