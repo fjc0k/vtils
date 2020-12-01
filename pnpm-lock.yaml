@@ -17,7 +17,7 @@ devDependencies:
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/17.0.0
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
   codecov: registry.npm.taobao.org/codecov/3.8.1
-  cross-env: registry.npm.taobao.org/cross-env/7.0.2
+  cross-env: registry.npm.taobao.org/cross-env/7.0.3
   eslint: registry.npm.taobao.org/eslint/7.14.0
   execa: registry.npm.taobao.org/execa/4.1.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
@@ -4844,7 +4844,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/cosmiconfig/download/cosmiconfig-7.0.0.tgz'
     version: 7.0.0
-  registry.npm.taobao.org/cross-env/7.0.2:
+  registry.npm.taobao.org/cross-env/7.0.3:
     dependencies:
       cross-spawn: registry.npm.taobao.org/cross-spawn/7.0.3
     dev: true
@@ -4855,10 +4855,10 @@ packages:
     hasBin: true
     name: cross-env
     resolution:
-      integrity: sha1-vV7TEzmpOjQYrE88qco0Awgq5fk=
+      integrity: sha1-hlJkspZ33AFbqEGJGJZd0jL8VM8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/cross-env/download/cross-env-7.0.2.tgz'
-    version: 7.0.2
+      tarball: 'https://registry.npm.taobao.org/cross-env/download/cross-env-7.0.3.tgz?cache=0&sync_timestamp=1606852608632&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcross-env%2Fdownload%2Fcross-env-7.0.3.tgz'
+    version: 7.0.3
   registry.npm.taobao.org/cross-spawn/6.0.5:
     dependencies:
       nice-try: registry.npm.taobao.org/nice-try/1.0.5
@@ -14813,7 +14813,7 @@ specifiers:
   '@types/react-dom': 17.0.0
   '@types/standard-version': 7.0.0
   codecov: 3.8.1
-  cross-env: 7.0.2
+  cross-env: 7.0.3
   date-fns: ^2.16.1
   eslint: 7.14.0
   execa: 4.1.0
