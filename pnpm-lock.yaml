@@ -19,7 +19,7 @@ devDependencies:
   codecov: registry.npm.taobao.org/codecov/3.8.1
   cross-env: registry.npm.taobao.org/cross-env/7.0.3
   eslint: registry.npm.taobao.org/eslint/7.14.0
-  execa: registry.npm.taobao.org/execa/4.1.0
+  execa: registry.npm.taobao.org/execa/5.0.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
   haoma: registry.npm.taobao.org/haoma/2.20.1_b37dc76fcfae3a080d6576bac8dc2249
@@ -6048,6 +6048,26 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/execa/download/execa-4.1.0.tgz'
     version: 4.1.0
+  registry.npm.taobao.org/execa/5.0.0:
+    dependencies:
+      cross-spawn: registry.npm.taobao.org/cross-spawn/7.0.3
+      get-stream: registry.npm.taobao.org/get-stream/6.0.0
+      human-signals: registry.npm.taobao.org/human-signals/2.1.0
+      is-stream: registry.npm.taobao.org/is-stream/2.0.0
+      merge-stream: registry.npm.taobao.org/merge-stream/2.0.0
+      npm-run-path: registry.npm.taobao.org/npm-run-path/4.0.1
+      onetime: registry.npm.taobao.org/onetime/5.1.2
+      signal-exit: registry.npm.taobao.org/signal-exit/3.0.3
+      strip-final-newline: registry.npm.taobao.org/strip-final-newline/2.0.0
+    dev: true
+    engines:
+      node: '>=10'
+    name: execa
+    resolution:
+      integrity: sha1-QCmwAHmYqEH70QMuX03oajweM3Y=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/execa/download/execa-5.0.0.tgz?cache=0&sync_timestamp=1606976542288&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexeca%2Fdownload%2Fexeca-5.0.0.tgz'
+    version: 5.0.0
   registry.npm.taobao.org/exit/0.1.2:
     dev: true
     engines:
@@ -6715,6 +6735,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/get-stream/download/get-stream-5.2.0.tgz'
     version: 5.2.0
+  registry.npm.taobao.org/get-stream/6.0.0:
+    dev: true
+    engines:
+      node: '>=10'
+    name: get-stream
+    resolution:
+      integrity: sha1-PgASy2gnMZ2icG5gGhWD6GKaZxg=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/get-stream/download/get-stream-6.0.0.tgz'
+    version: 6.0.0
   registry.npm.taobao.org/get-value/2.0.6:
     dev: true
     engines:
@@ -7311,6 +7341,16 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/human-signals/download/human-signals-1.1.1.tgz'
     version: 1.1.1
+  registry.npm.taobao.org/human-signals/2.1.0:
+    dev: true
+    engines:
+      node: '>=10.17.0'
+    name: human-signals
+    resolution:
+      integrity: sha1-3JH8ukLk0G5Kuu0zs+ejwC9RTqA=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/human-signals/download/human-signals-2.1.0.tgz'
+    version: 2.1.0
   registry.npm.taobao.org/husky/4.3.0:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
@@ -10966,7 +11006,7 @@ packages:
     resolution:
       integrity: sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/path-key/download/path-key-3.1.1.tgz'
+      tarball: 'https://registry.npm.taobao.org/path-key/download/path-key-3.1.1.tgz?cache=0&sync_timestamp=1590057811006&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpath-key%2Fdownload%2Fpath-key-3.1.1.tgz'
     version: 3.1.1
   registry.npm.taobao.org/path-parse/1.0.6:
     dev: true
@@ -14816,7 +14856,7 @@ specifiers:
   cross-env: 7.0.3
   date-fns: ^2.16.1
   eslint: 7.14.0
-  execa: 4.1.0
+  execa: 5.0.0
   fs-extra: 9.0.1
   globby: 11.0.1
   haoma: 2.20.1
