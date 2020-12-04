@@ -17,6 +17,10 @@ describe('wait', () => {
     await wait(100)
     expect(cb).not.toBeCalled()
   })
+
+  test('返回值正常', async () => {
+    expect(await wait(10, '120')).toBe('120')
+  })
 })
 
 describe('wait.reject', () => {
@@ -35,5 +39,9 @@ describe('wait.reject', () => {
     w.cancel()
     await wait(100)
     expect(cb).not.toBeCalled()
+  })
+
+  test('返回值正常', async () => {
+    expect(await wait.reject(10, '120').catch(res => res)).toBe('120')
   })
 })
