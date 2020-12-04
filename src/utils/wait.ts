@@ -28,3 +28,22 @@ export function wait(milliseconds: number): WaitResult {
   result.cancel = () => clearTimeout(timer)
   return result
 }
+
+/**
+ * 等待一段时间后 reject。
+ *
+ * @public
+ * @param milliseconds 等待时间(毫秒)
+ * @example
+ * ```typescript
+ * wait.reject(1000).catch(() => {
+ *   console.log('ok')
+ * }) // => 1秒后在控制台打印字符串: ok
+ * ```
+ */
+wait.reject = function reject(milliseconds: number): WaitResult {
+  const waitRes = wait(milliseconds)
+  const res: WaitResult = waitRes.then(() => Promise.reject()) as any
+  res.cancel = waitRes.cancel
+  return res
+}
