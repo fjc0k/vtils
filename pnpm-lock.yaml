@@ -23,7 +23,7 @@ devDependencies:
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
   haoma: registry.npm.taobao.org/haoma/2.20.1_9a1eb4e5cfaca584d442b9562e02ae60
-  husky: registry.npm.taobao.org/husky/4.3.0
+  husky: registry.npm.taobao.org/husky/4.3.4
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.3
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
@@ -7384,7 +7384,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/human-signals/download/human-signals-2.1.0.tgz'
     version: 2.1.0
-  registry.npm.taobao.org/husky/4.3.0:
+  registry.npm.taobao.org/husky/4.3.4:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
       ci-info: registry.npm.taobao.org/ci-info/2.0.0
@@ -7403,10 +7403,10 @@ packages:
     name: husky
     requiresBuild: true
     resolution:
-      integrity: sha1-Cy7B1mQk6SGdNZ4mpRxY7FJ48N4=
+      integrity: sha1-Z2J1oQ7Fvi6JO9b/cRE7uCnMH1s=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/husky/download/husky-4.3.0.tgz'
-    version: 4.3.0
+      tarball: 'https://registry.npm.taobao.org/husky/download/husky-4.3.4.tgz'
+    version: 4.3.4
   registry.npm.taobao.org/hyphenate-style-name/1.0.4:
     name: hyphenate-style-name
     resolution:
@@ -14893,7 +14893,7 @@ specifiers:
   fs-extra: 9.0.1
   globby: 11.0.1
   haoma: 2.20.1
-  husky: 4.3.0
+  husky: 4.3.4
   jest: 26.6.3
   lint-staged: 10.5.3
   lodash-uni: ^1.1.0
