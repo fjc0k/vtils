@@ -94,7 +94,7 @@
     "lodash-uni": "^1.1.0",
     "miniprogram-api-typings": "^3.2.0",
     "react-use": "^15.3.4",
-    "yup": "^0.31.0"
+    "yup": "~0.31.0"
   },
   "devDependencies": {
     "@microsoft/api-documenter": "7.11.3",
