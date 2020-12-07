@@ -53,6 +53,7 @@ export * from './RichUrl'
 export * from './run'
 export * from './swap'
 export * from './traverse'
+export * from './TreeData'
 export * from './wait'
 export * from './Wechat'
 // @endindex
