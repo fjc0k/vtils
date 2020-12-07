@@ -10,7 +10,7 @@ devDependencies:
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.12.0
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.18
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.2.2_react-dom@17.0.1+react@17.0.1
-  '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.5.0_react@17.0.1
+  '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.6.0_react@17.0.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.4
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
   '@types/react': registry.npm.taobao.org/@types/react/17.0.0
@@ -2342,22 +2342,22 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@testing-library/jest-dom/download/@testing-library/jest-dom-5.11.6.tgz'
     version: 5.11.6
-  registry.npm.taobao.org/@testing-library/react-hooks/3.5.0_react@17.0.1:
+  registry.npm.taobao.org/@testing-library/react-hooks/3.6.0_react@17.0.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.12.5
       '@types/testing-library__react-hooks': registry.npm.taobao.org/@types/testing-library__react-hooks/3.4.1
       react: registry.npm.taobao.org/react/17.0.1
     dev: true
-    id: registry.npm.taobao.org/@testing-library/react-hooks/3.5.0
+    id: registry.npm.taobao.org/@testing-library/react-hooks/3.6.0
     name: '@testing-library/react-hooks'
     peerDependencies:
       react: '>=16.9.0'
       react-test-renderer: '>=16.9.0'
     resolution:
-      integrity: sha1-jXKPLVbWFZNRFjhfP/kzXjQC5Gs=
+      integrity: sha1-N+WV6xER5xs57wWXs5CFC5rzZg0=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@testing-library/react-hooks/download/@testing-library/react-hooks-3.5.0.tgz'
-    version: 3.5.0
+      tarball: 'https://registry.npm.taobao.org/@testing-library/react-hooks/download/@testing-library/react-hooks-3.6.0.tgz?cache=0&sync_timestamp=1607339751905&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact-hooks%2Fdownload%2F%40testing-library%2Freact-hooks-3.6.0.tgz'
+    version: 3.6.0
   registry.npm.taobao.org/@testing-library/react/11.2.2_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.12.5
@@ -14820,7 +14820,7 @@ specifiers:
   '@microsoft/api-extractor': 7.12.0
   '@tarojs/taro': 3.0.18
   '@testing-library/react': 11.2.2
-  '@testing-library/react-hooks': 3.5.0
+  '@testing-library/react-hooks': 3.6.0
   '@types/fs-extra': 9.0.4
   '@types/prompts': 2.0.9
   '@types/react': 17.0.0
