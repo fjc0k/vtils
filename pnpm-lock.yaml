@@ -23,7 +23,7 @@ devDependencies:
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
   globby: registry.npm.taobao.org/globby/11.0.1
   haoma: registry.npm.taobao.org/haoma/2.20.1_9a1eb4e5cfaca584d442b9562e02ae60
-  husky: registry.npm.taobao.org/husky/4.3.4
+  husky: registry.npm.taobao.org/husky/5.0.4
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.3
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
@@ -4469,14 +4469,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/compare-func/download/compare-func-2.0.0.tgz'
     version: 2.0.0
-  registry.npm.taobao.org/compare-versions/3.6.0:
-    dev: true
-    name: compare-versions
-    resolution:
-      integrity: sha1-GlaJkTaF5ah2N7jT/8p1UU7EHWI=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/compare-versions/download/compare-versions-3.6.0.tgz'
-    version: 3.6.0
   registry.npm.taobao.org/component-emitter/1.3.0:
     dev: true
     name: component-emitter
@@ -6439,18 +6431,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/find-up/download/find-up-4.1.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffind-up%2Fdownload%2Ffind-up-4.1.0.tgz'
     version: 4.1.0
-  registry.npm.taobao.org/find-versions/3.2.0:
-    dependencies:
-      semver-regex: registry.npm.taobao.org/semver-regex/2.0.0
-    dev: true
-    engines:
-      node: '>=6'
-    name: find-versions
-    resolution:
-      integrity: sha1-ECl/mAMKeGgpaBaQVF72We0dJU4=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/find-versions/download/find-versions-3.2.0.tgz'
-    version: 3.2.0
   registry.npm.taobao.org/flat-cache/2.0.1:
     dependencies:
       flatted: registry.npm.taobao.org/flatted/2.0.2
@@ -7384,29 +7364,17 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/human-signals/download/human-signals-2.1.0.tgz'
     version: 2.1.0
-  registry.npm.taobao.org/husky/4.3.4:
-    dependencies:
-      chalk: registry.npm.taobao.org/chalk/4.1.0
-      ci-info: registry.npm.taobao.org/ci-info/2.0.0
-      compare-versions: registry.npm.taobao.org/compare-versions/3.6.0
-      cosmiconfig: registry.npm.taobao.org/cosmiconfig/7.0.0
-      find-versions: registry.npm.taobao.org/find-versions/3.2.0
-      opencollective-postinstall: registry.npm.taobao.org/opencollective-postinstall/2.0.3
-      pkg-dir: registry.npm.taobao.org/pkg-dir/4.2.0
-      please-upgrade-node: registry.npm.taobao.org/please-upgrade-node/3.2.0
-      slash: registry.npm.taobao.org/slash/3.0.0
-      which-pm-runs: registry.npm.taobao.org/which-pm-runs/1.0.0
+  registry.npm.taobao.org/husky/5.0.4:
     dev: true
     engines:
-      node: '>=10'
+      node: '>= 10'
     hasBin: true
     name: husky
-    requiresBuild: true
     resolution:
-      integrity: sha1-Z2J1oQ7Fvi6JO9b/cRE7uCnMH1s=
+      integrity: sha1-JOZm1WDzQM5wv1jnZY61dOO93Mo=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/husky/download/husky-4.3.4.tgz'
-    version: 4.3.4
+      tarball: 'https://registry.npm.taobao.org/husky/download/husky-5.0.4.tgz?cache=0&sync_timestamp=1607302293605&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhusky%2Fdownload%2Fhusky-5.0.4.tgz'
+    version: 5.0.4
   registry.npm.taobao.org/hyphenate-style-name/1.0.4:
     name: hyphenate-style-name
     resolution:
@@ -10686,15 +10654,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/open/download/open-7.3.0.tgz'
     version: 7.3.0
-  registry.npm.taobao.org/opencollective-postinstall/2.0.3:
-    dev: true
-    hasBin: true
-    name: opencollective-postinstall
-    resolution:
-      integrity: sha1-eg//l49tv6TQBiOPusmO1BmMMlk=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/opencollective-postinstall/download/opencollective-postinstall-2.0.3.tgz'
-    version: 2.0.3
   registry.npm.taobao.org/optionator/0.8.3:
     dependencies:
       deep-is: registry.npm.taobao.org/deep-is/0.1.3
@@ -12492,16 +12451,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/semver-compare/download/semver-compare-1.0.0.tgz'
     version: 1.0.0
-  registry.npm.taobao.org/semver-regex/2.0.0:
-    dev: true
-    engines:
-      node: '>=6'
-    name: semver-regex
-    resolution:
-      integrity: sha1-qTwsWERTmncCMzeRB7OMe0rJ0zg=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/semver-regex/download/semver-regex-2.0.0.tgz'
-    version: 2.0.0
   registry.npm.taobao.org/semver/5.7.1:
     dev: true
     hasBin: true
@@ -14604,14 +14553,6 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/which-module/download/which-module-2.0.0.tgz'
     version: 2.0.0
-  registry.npm.taobao.org/which-pm-runs/1.0.0:
-    dev: true
-    name: which-pm-runs
-    resolution:
-      integrity: sha1-Zws6+8VS4LVd9rd4DKdGFfI60cs=
-      registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/which-pm-runs/download/which-pm-runs-1.0.0.tgz'
-    version: 1.0.0
   registry.npm.taobao.org/which/1.3.1:
     dependencies:
       isexe: registry.npm.taobao.org/isexe/2.0.0
@@ -14893,7 +14834,7 @@ specifiers:
   fs-extra: 9.0.1
   globby: 11.0.1
   haoma: 2.20.1
-  husky: 4.3.4
+  husky: 5.0.4
   jest: 26.6.3
   lint-staged: 10.5.3
   lodash-uni: ^1.1.0
