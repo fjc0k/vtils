@@ -17,6 +17,7 @@ rich://{"url":"***","desc":"***"}
 
 ```
  |
+|  [TreeData](./utils.treedata.md) | 树数据处理。支持单根节点、多根节点树数据。 |
 |  [Wechat](./utils.wechat.md) | 对微信 JSSDK 的封装。 |
 
 ## Enumerations
@@ -72,7 +73,7 @@ rich://{"url":"***","desc":"***"}
 |  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
 |  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
 |  [traverse(value, callback)](./utils.traverse.md) | 遍历对象和数组。 |
-|  [wait(milliseconds)](./utils.wait.md) | 等待一段时间。 |
+|  [wait(milliseconds, value)](./utils.wait.md) | 等待一段时间 resolve。 |
 
 ## Interfaces
 
@@ -90,6 +91,9 @@ rich://{"url":"***","desc":"***"}
 |  [ParsedRichUrl](./utils.parsedrichurl.md) |  |
 |  [ReadFileReader](./utils.readfilereader.md) | 各种内容类型的读取器。 |
 |  [SubmitActionPayload](./utils.submitactionpayload.md) |  |
+|  [TreeDataNode](./utils.treedatanode.md) |  |
+|  [TreeDataOptions](./utils.treedataoptions.md) |  |
+|  [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md) |  |
 |  [WaitResult](./utils.waitresult.md) |  |
 |  [WechatChooseImageParams](./utils.wechatchooseimageparams.md) |  |
 |  [WechatConfigParams](./utils.wechatconfigparams.md) |  |
@@ -104,6 +108,7 @@ rich://{"url":"***","desc":"***"}
 |  Namespace | Description |
 |  --- | --- |
 |  [isDataUrl](./utils.isdataurl.md) |  |
+|  [wait](./utils.wait.md) |  |
 
 ## Variables
 
@@ -127,6 +132,12 @@ rich://{"url":"***","desc":"***"}
 |  [EventBusOffListener](./utils.eventbusofflistener.md) |  |
 |  [MiniProgramApi](./utils.miniprogramapi.md) |  |
 |  [MiniProgramBrand](./utils.miniprogrambrand.md) |  |
+|  [TreeDataChildrenPropName](./utils.treedatachildrenpropname.md) |  |
+|  [TreeDataData](./utils.treedatadata.md) |  |
+|  [TreeDataMultipleRootData](./utils.treedatamultiplerootdata.md) |  |
+|  [TreeDataSearchMethod](./utils.treedatasearchmethod.md) |  |
+|  [TreeDataSingleRootData](./utils.treedatasinglerootdata.md) |  |
+|  [TreeDataTraverseFn](./utils.treedatatraversefn.md) |  |
 |  [WechatErrorCallback](./utils.wechaterrorcallback.md) |  |
 |  [WechatJsApi](./utils.wechatjsapi.md) | 微信 JSSDK 支持的 API。 |
 |  [WechatNonBaseMenuItem](./utils.wechatnonbasemenuitem.md) | 微信内网页的非基础菜单列表。 |

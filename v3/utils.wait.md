@@ -2,33 +2,17 @@
 
 [Home](./index.md) &gt; [utils](./utils.md) &gt; [wait](./utils.wait.md)
 
-## wait() function
-
-等待一段时间。
+## wait namespace
 
 <b>Signature:</b>
 
 ```typescript
-export declare function wait(milliseconds: number): WaitResult;
+export declare namespace wait 
 ```
 
-## Parameters
+## Variables
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  milliseconds | number | 等待时间(毫秒) |
-
-<b>Returns:</b>
-
-[WaitResult](./utils.waitresult.md)
-
-## Example
-
-
-```typescript
-wait(1000).then(() => {
-  console.log('ok')
-}) // => 1秒后在控制台打印字符串: ok
-
-```
+|  Variable | Description |
+|  --- | --- |
+|  [reject](./utils.wait.reject.md) |  |
 

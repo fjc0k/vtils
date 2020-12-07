@@ -8,9 +8,9 @@
 <b>Signature:</b>
 
 ```typescript
-export declare interface WaitResult extends Promise<void> 
+export declare interface WaitResult<T> extends Promise<T> 
 ```
-<b>Extends:</b> Promise&lt;void&gt;
+<b>Extends:</b> Promise&lt;T&gt;
 
 ## Properties
 
