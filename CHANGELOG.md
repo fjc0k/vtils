@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.7...v4.0.0) (2020-12-07)
+
+
+### Features
+
+* **utils:** 新增 TreeData 处理树数据 ([23df907](https://github.com/fjc0k/vtils/commit/23df9070e0bd12a6ba5c41b9f98c23a81254980c))
+* **wait:** 支持返回值 ([2d1b63e](https://github.com/fjc0k/vtils/commit/2d1b63e713920e3247262c8623568dc1644deaaa))
+* **wait:** 新增 wait.reject ([e9314c8](https://github.com/fjc0k/vtils/commit/e9314c8bd023878cb3063ca94bf494bdd18f4933))
+
 ## [4.0.0-beta.7](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.6...v4.0.0-beta.7) (2020-11-27)
 
 ### Features
