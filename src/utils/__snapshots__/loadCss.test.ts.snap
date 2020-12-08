@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loadCss 加载内容 1`] = `
+<style type="text/css">
+  body {font-size: 20px}
+</style>
+`;
+
+exports[`loadCss 加载内容 2`] = `
+<html>
+  <head>
+    <style type="text/css">
+      body {font-size: 20px}
+    </style>
+  </head>
+  <body>
+  </body>
+</html>
+`;
+
+exports[`loadCss 加载链接 1`] = `
+<link rel="stylesheet"
+      href="http://foo.bar/x.css"
+>
+`;
+
+exports[`loadCss 加载链接 2`] = `
+<html>
+  <head>
+    <link rel="stylesheet"
+          href="http://foo.bar/x.css"
+    >
+  </head>
+  <body>
+  </body>
+</html>
+`;
