@@ -54,12 +54,14 @@ rich://{"url":"***","desc":"***"}
 |  [inNodeJS()](./utils.innodejs.md) | 检查是否在 Node.js 中。 |
 |  [inTaro()](./utils.intaro.md) | 检查是否在 \[Taro 3\](https://taro.js.org/) 中。 |
 |  [inWechatWebView()](./utils.inwechatwebview.md) | 检查是否在微信内置浏览器中。 |
+|  [isBlobUrl(value)](./utils.isbloburl.md) | 检测传入值是否是 Blob URL，也称 Object URL。 |
 |  [isChineseIDCardNumber(value)](./utils.ischineseidcardnumber.md) | 检测传入的值是否是合法的中国大陆居民 <code>18</code> 位身份证号码。 |
 |  [isDataUrl(value)](./utils.isdataurl.md) | 检测传入值是否是 Data URL。 |
 |  [isNumeric(value)](./utils.isnumeric.md) | 检查 <code>value</code> 是否是数值，需要注意的是 <code>Infinity</code>、<code>-Infinity</code>、<code>NaN</code> 不被认为是数值。 |
 |  [isPossibleChineseMobilePhoneNumber(value)](./utils.ispossiblechinesemobilephonenumber.md) | 检测传入的值是否可能是中国的手机号码。 |
 |  [isPromiseLike(value)](./utils.ispromiselike.md) | 检查 <code>value</code> 是否像 <code>Promise</code>。 |
 |  [isUrl(value)](./utils.isurl.md) | 检测传入值是否是 URL。 |
+|  [loadCss(urlOrContent)](./utils.loadcss.md) | 加载 CSS 样式，支持链接和内容。 |
 |  [loadResource(url)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
@@ -85,6 +87,7 @@ rich://{"url":"***","desc":"***"}
 |  [EventBusOptions](./utils.eventbusoptions.md) |  |
 |  [FormatNumberOptions](./utils.formatnumberoptions.md) | 格式化数字选项。 |
 |  [GetEnvironmentResult](./utils.getenvironmentresult.md) |  |
+|  [LoadCssResult](./utils.loadcssresult.md) |  |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
 |  [ParseDataUrlResult](./utils.parsedataurlresult.md) |  |
 |  [ParsedFileRichUrl](./utils.parsedfilerichurl.md) |  |
@@ -107,6 +110,7 @@ rich://{"url":"***","desc":"***"}
 
 |  Namespace | Description |
 |  --- | --- |
+|  [isBlobUrl](./utils.isbloburl.md) |  |
 |  [isDataUrl](./utils.isdataurl.md) |  |
 |  [wait](./utils.wait.md) |  |
 
