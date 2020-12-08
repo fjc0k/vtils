@@ -10,7 +10,7 @@ devDependencies:
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.12.0
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.18
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.2.2_react-dom@17.0.1+react@17.0.1
-  '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.6.0_react@17.0.1
+  '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.7.0_react@17.0.1
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.4
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
   '@types/react': registry.npm.taobao.org/@types/react/17.0.0
@@ -2354,6 +2354,10 @@ packages:
     engines:
       node: '>= 8.9'
     name: '@swc-node/core'
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-Y5khz8l+6EseO/YlUYxpO2paE0Q=
       registry: 'https://r.npm.taobao.org/'
@@ -2399,6 +2403,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-darwin'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-SssTefPfYm5VUPsSsHlWgqJaoXc=
       registry: 'https://r.npm.taobao.org/'
@@ -2410,6 +2416,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-linux'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-V/DSH86CsL9jecG1enHQ3za6gOQ=
       registry: 'https://r.npm.taobao.org/'
@@ -2421,6 +2429,8 @@ packages:
       node: '>=8.9.0'
     name: '@swc/core-win32'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-vqD5uIPWzMhFBEJvIaOqbrlgiUE=
       registry: 'https://r.npm.taobao.org/'
@@ -2437,6 +2447,10 @@ packages:
       '@swc/core-darwin': registry.npm.taobao.org/@swc/core-darwin/1.2.40
       '@swc/core-linux': registry.npm.taobao.org/@swc/core-linux/1.2.40
       '@swc/core-win32': registry.npm.taobao.org/@swc/core-win32/1.2.40
+    os:
+      - darwin
+      - linux
+      - win32
     resolution:
       integrity: sha1-uTYufIgqFPPIO1U1sROBq/oMrk4=
       registry: 'https://r.npm.taobao.org/'
@@ -2541,22 +2555,22 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@testing-library/jest-dom/download/@testing-library/jest-dom-5.11.6.tgz'
     version: 5.11.6
-  registry.npm.taobao.org/@testing-library/react-hooks/3.6.0_react@17.0.1:
+  registry.npm.taobao.org/@testing-library/react-hooks/3.7.0_react@17.0.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.12.5
       '@types/testing-library__react-hooks': registry.npm.taobao.org/@types/testing-library__react-hooks/3.4.1
       react: registry.npm.taobao.org/react/17.0.1
     dev: true
-    id: registry.npm.taobao.org/@testing-library/react-hooks/3.6.0
+    id: registry.npm.taobao.org/@testing-library/react-hooks/3.7.0
     name: '@testing-library/react-hooks'
     peerDependencies:
       react: '>=16.9.0'
       react-test-renderer: '>=16.9.0'
     resolution:
-      integrity: sha1-N+WV6xER5xs57wWXs5CFC5rzZg0=
+      integrity: sha1-bXXFJV70m845tkZb9rSeLayEkZ4=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@testing-library/react-hooks/download/@testing-library/react-hooks-3.6.0.tgz?cache=0&sync_timestamp=1607339751905&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact-hooks%2Fdownload%2F%40testing-library%2Freact-hooks-3.6.0.tgz'
-    version: 3.6.0
+      tarball: 'https://registry.npm.taobao.org/@testing-library/react-hooks/download/@testing-library/react-hooks-3.7.0.tgz'
+    version: 3.7.0
   registry.npm.taobao.org/@testing-library/react/11.2.2_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.12.5
@@ -3059,6 +3073,9 @@ packages:
       '@typescript-eslint/parser': ^3.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-fgYTOKE4P1ntwgTGBYmfk9wuLI8=
       registry: 'https://r.npm.taobao.org/'
@@ -3102,6 +3119,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-GIOFjoPotEJifhrG9AiSUhEVVGc=
       registry: 'https://r.npm.taobao.org/'
@@ -3135,6 +3155,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-/QBhzDit1PrUUTbWVECFafNluFM=
       registry: 'https://r.npm.taobao.org/'
@@ -15114,7 +15137,7 @@ specifiers:
   '@microsoft/api-extractor': 7.12.0
   '@tarojs/taro': 3.0.18
   '@testing-library/react': 11.2.2
-  '@testing-library/react-hooks': 3.6.0
+  '@testing-library/react-hooks': 3.7.0
   '@types/fs-extra': 9.0.4
   '@types/prompts': 2.0.9
   '@types/react': 17.0.0
