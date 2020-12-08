@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/fjc0k/vtils/compare/v4.0.0...v4.1.0) (2020-12-08)
+
+
+### Features
+
+* **utils:** 新增 isBlobUrl 检测传入值是否是 Blob URL ([5654306](https://github.com/fjc0k/vtils/commit/56543061a20fc9cb3b6b36fc73edb97c0b55b877))
+* **utils:** 新增 loadCss 加载 CSS 样式 ([70e4727](https://github.com/fjc0k/vtils/commit/70e4727be946fd1ce00881fe0db2eeab854152e2))
+
+
+### Bug Fixes
+
+* 不打包 validator 的类型定义 ([7d4bd9a](https://github.com/fjc0k/vtils/commit/7d4bd9a6a5c0ec458c3a0b730411d759b19c9372))
+
 ## [4.0.0](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.7...v4.0.0) (2020-12-07)
 
 
