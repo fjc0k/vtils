@@ -1,3 +1,4 @@
+import { isBlobUrl } from './isBlobUrl'
 import { isDataUrl } from './isDataUrl'
 import { isUrl } from './isUrl'
 import { loadResource, LoadResourceUrlType } from './loadResource'
@@ -29,7 +30,7 @@ export interface LoadCssResult {
 export function loadCss(urlOrContent: string): Promise<LoadCssResult> {
   return (urlOrContent in cache
     ? Promise.resolve(cache[urlOrContent])
-    : isUrl(urlOrContent) || isDataUrl(urlOrContent)
+    : isUrl(urlOrContent) || isDataUrl(urlOrContent) || isBlobUrl(urlOrContent)
     ? loadResource({
         type: LoadResourceUrlType.css,
         path: urlOrContent,
