@@ -9,6 +9,7 @@ export default [
     outDir: 'lib',
     rollupDts: true,
     rollupDtsFiles: ['**/index.d.ts'],
+    rollupDtsExcludeFiles: ['**/validator/**/*'],
     rollupDtsIncludedPackages: ['type-fest', 'ts-essentials'],
   }),
   getCompileConfig({
