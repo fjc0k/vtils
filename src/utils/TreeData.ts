@@ -51,9 +51,19 @@ export interface TreeDataTraverseFnPayload<TNode extends TreeDataNode> {
   parentNode: TNode | undefined
 
   /**
+   * 到当前节点的路径节点列表。
+   */
+  path: TNode[]
+
+  /**
    * 移除当前节点。
    */
   removeNode: () => void
+
+  /**
+   * 退出遍历。
+   */
+  exit: () => void
 }
 
 export type TreeDataTraverseFn<TNode extends TreeDataNode> = (
@@ -95,20 +105,25 @@ export class TreeData<TNode extends TreeDataNode> {
     fn: TreeDataTraverseFn<TNode>,
     searchMethod: TreeDataSearchMethod,
     depth: number,
+    path: TNode[],
   ) {
     if (searchMethod === 'DFS') {
       for (const node of data) {
         const postActions: Array<() => void> = []
+        let isExit = false
         fn({
           node: node,
           parentNode: parentNode,
           depth: depth,
+          path: path,
           removeNode: () =>
             postActions.push(() => data.splice(data.indexOf(node), 1)),
+          exit: () => (isExit = true),
         })
         for (const action of postActions) {
           action()
         }
+        if (isExit) return
         if (node[childrenPropName] && Array.isArray(node[childrenPropName])) {
           TreeData.traverse(
             node[childrenPropName],
@@ -117,22 +132,27 @@ export class TreeData<TNode extends TreeDataNode> {
             fn,
             searchMethod,
             depth + 1,
+            path.concat(node),
           )
         }
       }
     } else {
       for (const node of data) {
         const postActions: Array<() => void> = []
+        let isExit = false
         fn({
           node: node,
           parentNode: parentNode,
           depth: depth,
+          path: path,
           removeNode: () =>
             postActions.push(() => data.splice(data.indexOf(node), 1)),
+          exit: () => (isExit = true),
         })
         for (const action of postActions) {
           action()
         }
+        if (isExit) return
       }
       for (const node of data) {
         if (node[childrenPropName] && Array.isArray(node[childrenPropName])) {
@@ -143,6 +163,7 @@ export class TreeData<TNode extends TreeDataNode> {
             fn,
             searchMethod,
             depth + 1,
+            path.concat(node),
           )
         }
       }
@@ -170,6 +191,7 @@ export class TreeData<TNode extends TreeDataNode> {
         fn,
         searchMethod,
         0,
+        [],
       )
     }
     return this
@@ -268,6 +290,68 @@ export class TreeData<TNode extends TreeDataNode> {
       }
     })
     return this as any
+  }
+
+  /**
+   * 查找符合条件的第一个节点。
+   *
+   * @param predicate 条件
+   */
+  findNode(predicate: (node: TNode) => boolean): TNode | undefined {
+    let node: TNode | undefined
+    this.traverse(payload => {
+      if (predicate(payload.node)) {
+        node = payload.node
+        payload.exit()
+      }
+    })
+    return node
+  }
+
+  /**
+   * 查找符合条件的所有节点。
+   *
+   * @param predicate 条件
+   */
+  findNodes(predicate: (node: TNode) => boolean): TNode[] {
+    const nodes: TNode[] = []
+    this.traverse(payload => {
+      if (predicate(payload.node)) {
+        nodes.push(payload.node)
+      }
+    })
+    return nodes
+  }
+
+  /**
+   * 查找符合条件的第一个节点的路径。
+   *
+   * @param predicate 条件
+   */
+  findNodePath(predicate: (node: TNode) => boolean): TNode[] | undefined {
+    let path: TNode[] | undefined
+    this.traverse(payload => {
+      if (predicate(payload.node)) {
+        path = payload.path
+        payload.exit()
+      }
+    })
+    return path
+  }
+
+  /**
+   * 查找符合条件的所有节点的路径。
+   *
+   * @param predicate 条件
+   */
+  findNodePaths(predicate: (node: TNode) => boolean): Array<TNode[]> {
+    const paths: Array<TNode[]> = []
+    this.traverse(payload => {
+      if (predicate(payload.node)) {
+        paths.push(payload.path)
+      }
+    })
+    return paths
   }
 
   /**

@@ -98,6 +98,42 @@ describe('TreeData', () => {
     expect(new TreeData(data).setDepth(0).export()).toMatchSnapshot()
   })
 
+  test('findNode', () => {
+    expect(
+      new TreeData(data).findNode(node => node.id === '1.1'),
+    ).toMatchSnapshot()
+    expect(
+      new TreeData(data).findNode(node => node.id === '1.1111'),
+    ).toMatchSnapshot()
+  })
+
+  test('findNodes', () => {
+    expect(
+      new TreeData(data).findNodes(node => node.id.startsWith('1.')),
+    ).toMatchSnapshot()
+    expect(
+      new TreeData(data).findNodes(node => node.id.startsWith('1.3333')),
+    ).toMatchSnapshot()
+  })
+
+  test('findNodePath', () => {
+    expect(
+      new TreeData(data).findNodePath(node => node.id === '1.1'),
+    ).toMatchSnapshot()
+    expect(
+      new TreeData(data).findNodePath(node => node.id === '1.1111'),
+    ).toMatchSnapshot()
+  })
+
+  test('findNodePaths', () => {
+    expect(
+      new TreeData(data).findNodePaths(node => node.id === '1.1'),
+    ).toMatchSnapshot()
+    expect(
+      new TreeData(data).findNodePaths(node => node.id === '1.1111'),
+    ).toMatchSnapshot()
+  })
+
   test('综合', () => {
     const names: string[] = []
     const names2: string[] = []
