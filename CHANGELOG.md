@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.1](https://github.com/fjc0k/vtils/compare/v4.2.0...v4.2.1) (2020-12-11)
+
+
+### Bug Fixes
+
+* **TreeData:** findNodePath、findNodePaths 的结果应包含当前节点 ([53edbb2](https://github.com/fjc0k/vtils/commit/53edbb2e7ada54b3d67404873966615540e8f115))
+
 ## [4.2.0](https://github.com/fjc0k/vtils/compare/v4.1.0...v4.2.0) (2020-12-11)
 
 
