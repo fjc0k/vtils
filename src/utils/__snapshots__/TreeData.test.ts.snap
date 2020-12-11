@@ -56,6 +56,10 @@ Array [
     ],
     "id": "1",
   },
+  Object {
+    "children": Array [],
+    "id": "1.1",
+  },
 ]
 `;
 
@@ -108,6 +112,10 @@ Array [
         },
       ],
       "id": "1",
+    },
+    Object {
+      "children": Array [],
+      "id": "1.1",
     },
   ],
 ]

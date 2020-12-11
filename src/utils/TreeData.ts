@@ -332,7 +332,7 @@ export class TreeData<TNode extends TreeDataNode> {
     let path: TNode[] | undefined
     this.traverse(payload => {
       if (predicate(payload.node)) {
-        path = payload.path
+        path = payload.path.concat(payload.node)
         payload.exit()
       }
     })
@@ -348,7 +348,7 @@ export class TreeData<TNode extends TreeDataNode> {
     const paths: Array<TNode[]> = []
     this.traverse(payload => {
       if (predicate(payload.node)) {
-        paths.push(payload.path)
+        paths.push(payload.path.concat(payload.node))
       }
     })
     return paths
