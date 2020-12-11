@@ -23,6 +23,10 @@ export declare class TreeData<TNode extends TreeDataNode>
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [export()](./utils.treedata.export.md) |  | 导出数据。 |
+|  [findNode(predicate)](./utils.treedata.findnode.md) |  | 查找符合条件的第一个节点。 |
+|  [findNodePath(predicate)](./utils.treedata.findnodepath.md) |  | 查找符合条件的第一个节点的路径。 |
+|  [findNodePaths(predicate)](./utils.treedata.findnodepaths.md) |  | 查找符合条件的所有节点的路径。 |
+|  [findNodes(predicate)](./utils.treedata.findnodes.md) |  | 查找符合条件的所有节点。 |
 |  [omitNodeProps(propNames)](./utils.treedata.omitnodeprops.md) |  | 移除节点上指定的属性。 |
 |  [pickNodeProps(propNames)](./utils.treedata.picknodeprops.md) |  | 选取节点上指定的属性。 |
 |  [setDepth(depth)](./utils.treedata.setdepth.md) |  | 设置数据深度。从 <code>0</code> 开始，将会移除超过指定深度的数据。 |

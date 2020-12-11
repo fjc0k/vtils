@@ -35,7 +35,7 @@ interface CliOptions {
 	dryRun: boolean;
 	includeFile: string;
 	foo: number;
-
+}
 
 const rawCliOptions: KebabCasedProps<CliOptions> = {
 	'dry-run': true,

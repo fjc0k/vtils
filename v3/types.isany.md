@@ -6,8 +6,6 @@
 
 判断 `T` 是否是 `any` 类型。
 
- https://stackoverflow.com/a/49928360
-
 <b>Signature:</b>
 
 ```typescript
@@ -22,4 +20,6 @@ type X = IsAny<any>
 // => true
 
 ```
+
+https://stackoverflow.com/a/49928360
 

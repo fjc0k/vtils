@@ -35,7 +35,7 @@ interface RawOptions {
 	'dry-run': boolean;
 	'full_family_name': string;
 	foo: number;
-
+}
 
 const dbResult: CamelCasedProps<ModelProps> = {
 	DryRun: true,

@@ -35,7 +35,7 @@ interface ModelProps {
 	isHappy: boolean;
 	fullFamilyName: string;
 	foo: number;
-
+}
 
 const dbResult: SnakeCasedProps<ModelProps> = {
 	'is_happy': true,

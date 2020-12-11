@@ -8,8 +8,6 @@ Convert a string literal to a custom string delimiter casing.
 
 This can be useful when, for example, converting a camel-cased object property to an oddly cased one.
 
- KebabCase  SnakeCase
-
 <b>Signature:</b>
 
 ```typescript
@@ -43,7 +41,7 @@ interface SomeOptions {
 	dryRun: boolean;
 	includeFile: string;
 	foo: number;
-
+}
 
 const rawCliOptions: OddlyCasedProps<SomeOptions> = {
 	'dry#run': true,
@@ -52,4 +50,9 @@ const rawCliOptions: OddlyCasedProps<SomeOptions> = {
 };
 
 ```
+
+KebabCase
+
+
+SnakeCase
 
