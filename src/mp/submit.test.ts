@@ -4,7 +4,7 @@ describe('submit', () => {
   const showToast: any = jest.fn()
 
   beforeAll(() => {
-    jest.mock('../utils/inMiniProgram', () => ({
+    jest.doMock('../utils/inMiniProgram', () => ({
       inMiniProgram: (): Partial<WechatMiniprogram.Wx> => ({
         showLoading: showLoading,
         hideLoading: hideLoading,

@@ -6,7 +6,7 @@ describe('navigatePageBack', () => {
     })
 
   beforeAll(() => {
-    jest.mock('../utils/inMiniProgram', () => ({
+    jest.doMock('../utils/inMiniProgram', () => ({
       inMiniProgram: (): Partial<WechatMiniprogram.Wx> => ({
         navigateBack: navigateBack,
       }),

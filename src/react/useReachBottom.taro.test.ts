@@ -11,7 +11,7 @@ describe('useReachBottom.taro', () => {
     })
 
   beforeAll(() => {
-    jest.mock(
+    jest.doMock(
       '@tarojs/taro',
       () =>
         ({

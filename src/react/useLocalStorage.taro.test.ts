@@ -5,7 +5,7 @@ describe('useLocalStorage', () => {
   const storage: Record<any, any> = {}
 
   beforeAll(() => {
-    jest.mock(
+    jest.doMock(
       '@tarojs/taro',
       () =>
         ({

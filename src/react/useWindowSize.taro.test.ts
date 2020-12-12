@@ -33,7 +33,7 @@ describe('useWindowSize.taro', () => {
   const offWindowResize: AnyFunction = jest.fn()
 
   beforeAll(() => {
-    jest.mock(
+    jest.doMock(
       '@tarojs/taro',
       () =>
         ({

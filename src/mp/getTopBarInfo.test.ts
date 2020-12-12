@@ -37,7 +37,7 @@ describe('getTopBarInfo', () => {
   }))
 
   beforeAll(() => {
-    jest.mock('../utils/inMiniProgram', () => ({
+    jest.doMock('../utils/inMiniProgram', () => ({
       inMiniProgram: (): Partial<WechatMiniprogram.Wx> => ({
         getMenuButtonBoundingClientRect: getMenuButtonBoundingClientRect,
         getSystemInfoSync: getSystemInfoSync,

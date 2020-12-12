@@ -20,14 +20,14 @@ describe('navigatePageTo', () => {
     })
 
   beforeAll(() => {
-    jest.mock('../utils/inMiniProgram', () => ({
+    jest.doMock('../utils/inMiniProgram', () => ({
       inMiniProgram: (): Partial<WechatMiniprogram.Wx> => ({
         navigateTo: navigateTo,
         redirectTo: redirectTo,
         switchTab: switchTab,
       }),
     }))
-    jest.mock(
+    jest.doMock(
       './miniProgramBus',
       () =>
         ({

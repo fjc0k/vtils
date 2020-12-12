@@ -7,7 +7,7 @@ describe('useTitle.taro', () => {
   const setNavigationBarTitle: AnyFunction = jest.fn()
 
   beforeAll(() => {
-    jest.mock(
+    jest.doMock(
       '@tarojs/taro',
       () =>
         ({
