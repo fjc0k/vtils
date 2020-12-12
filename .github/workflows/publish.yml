@@ -28,7 +28,7 @@ jobs:
       - run: |
           rm -rf node_modules/.cache
           npm run build
-          npm run test
+          npm run test-with-coverage
 
           if $IS_BETA; then
             npm run publish-package-next
