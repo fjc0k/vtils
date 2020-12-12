@@ -13,7 +13,7 @@ export type TreeDataChildrenPropName<TNode extends TreeDataNode> = {
   [K in keyof TNode]: TNode[K] extends TreeDataData<TNode> ? K : never
 }[keyof TNode]
 
-export type TreeDataSearchMethod = 'DFS' | 'BFS'
+export type TreeDataSearchStrategy = 'DFS' | 'BFS'
 
 export interface TreeDataOptions<TNode extends TreeDataNode> {
   /**
@@ -24,14 +24,14 @@ export interface TreeDataOptions<TNode extends TreeDataNode> {
   childrenPropName?: TreeDataChildrenPropName<TNode>
 
   /**
-   * 遍历时的搜索方式。
+   * 遍历时的搜索策略。
    *
    * - `DFS`: 深度优先搜索
    * - `BFS`: 广度优先搜索
    *
    * @default 'DFS'
    */
-  searchMethod?: TreeDataSearchMethod
+  searchStrategy?: TreeDataSearchStrategy
 }
 
 export interface TreeDataTraverseFnPayload<TNode extends TreeDataNode> {
@@ -78,7 +78,7 @@ export class TreeData<TNode extends TreeDataNode> {
 
   private childrenPropName: TreeDataChildrenPropName<TNode>
 
-  private searchMethod: TreeDataSearchMethod
+  private searchStrategy: TreeDataSearchStrategy
 
   /**
    * 构造函数。
@@ -92,7 +92,7 @@ export class TreeData<TNode extends TreeDataNode> {
   ) {
     this.data = cloneDeep(Array.isArray(data) ? data : [data])
     this.childrenPropName = options?.childrenPropName || ('children' as any)
-    this.searchMethod = options?.searchMethod || 'DFS'
+    this.searchStrategy = options?.searchStrategy || 'DFS'
   }
 
   /**
@@ -103,7 +103,7 @@ export class TreeData<TNode extends TreeDataNode> {
     childrenPropName: TreeDataChildrenPropName<TNode>,
     parentNode: TNode | undefined,
     fn: TreeDataTraverseFn<TNode>,
-    searchMethod: TreeDataSearchMethod,
+    searchStrategy: TreeDataSearchStrategy,
     depth: number,
     path: TNode[],
   ) {
@@ -129,7 +129,7 @@ export class TreeData<TNode extends TreeDataNode> {
 
       if (isExit) return
 
-      if (searchMethod === 'DFS') {
+      if (searchStrategy === 'DFS') {
         if (
           !isRemove &&
           node[childrenPropName] &&
@@ -140,7 +140,7 @@ export class TreeData<TNode extends TreeDataNode> {
             childrenPropName,
             node,
             fn,
-            searchMethod,
+            searchStrategy,
             depth + 1,
             path.concat(node),
           )
@@ -153,7 +153,7 @@ export class TreeData<TNode extends TreeDataNode> {
       data.splice(removeNodeIndexes[i], 1)
     }
 
-    if (searchMethod === 'BFS') {
+    if (searchStrategy === 'BFS') {
       for (const node of data) {
         if (node[childrenPropName] && Array.isArray(node[childrenPropName])) {
           TreeData.traverse(
@@ -161,7 +161,7 @@ export class TreeData<TNode extends TreeDataNode> {
             childrenPropName,
             node,
             fn,
-            searchMethod,
+            searchStrategy,
             depth + 1,
             path.concat(node),
           )
@@ -174,11 +174,11 @@ export class TreeData<TNode extends TreeDataNode> {
    * 遍历。
    *
    * @param fn 遍历函数
-   * @param searchMethod 遍历搜索方式，默认为选项中的遍历搜索方式
+   * @param searchStrategy 遍历搜索方式，默认为选项中的遍历搜索方式
    */
   traverse(
     fn: OneOrMore<TreeDataTraverseFn<TNode> | false>,
-    searchMethod: TreeDataSearchMethod = this.searchMethod,
+    searchStrategy: TreeDataSearchStrategy = this.searchStrategy,
   ): this {
     const fns: Array<TreeDataTraverseFn<TNode>> = castArray(fn).filter(
       fn => typeof fn === 'function',
@@ -189,7 +189,7 @@ export class TreeData<TNode extends TreeDataNode> {
         this.childrenPropName,
         undefined,
         fn,
-        searchMethod,
+        searchStrategy,
         0,
         [],
       )

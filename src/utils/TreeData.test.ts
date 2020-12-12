@@ -42,7 +42,7 @@ describe('TreeData', () => {
     test('searchMethod = DFS', () => {
       const ids: string[] = []
       new TreeData(data, {
-        searchMethod: 'DFS',
+        searchStrategy: 'DFS',
       }).traverse(payload => {
         ids.push(payload.node.id)
       })
@@ -52,7 +52,7 @@ describe('TreeData', () => {
     test('searchMethod = BFS', () => {
       const ids: string[] = []
       new TreeData(data, {
-        searchMethod: 'BFS',
+        searchStrategy: 'BFS',
       }).traverse(payload => {
         ids.push(payload.node.id)
       })
