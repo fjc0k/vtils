@@ -297,10 +297,12 @@ export class TreeData<TNode extends TreeDataNode> {
    *
    * @param predicate 条件
    */
-  findNode(predicate: (node: TNode) => boolean): TNode | undefined {
+  findNode(
+    predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
+  ): TNode | undefined {
     let node: TNode | undefined
     this.traverse(payload => {
-      if (predicate(payload.node)) {
+      if (predicate(payload)) {
         node = payload.node
         payload.exit()
       }
@@ -313,10 +315,12 @@ export class TreeData<TNode extends TreeDataNode> {
    *
    * @param predicate 条件
    */
-  findNodes(predicate: (node: TNode) => boolean): TNode[] {
+  findNodes(
+    predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
+  ): TNode[] {
     const nodes: TNode[] = []
     this.traverse(payload => {
-      if (predicate(payload.node)) {
+      if (predicate(payload)) {
         nodes.push(payload.node)
       }
     })
@@ -328,10 +332,12 @@ export class TreeData<TNode extends TreeDataNode> {
    *
    * @param predicate 条件
    */
-  findNodePath(predicate: (node: TNode) => boolean): TNode[] | undefined {
+  findNodePath(
+    predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
+  ): TNode[] | undefined {
     let path: TNode[] | undefined
     this.traverse(payload => {
-      if (predicate(payload.node)) {
+      if (predicate(payload)) {
         path = payload.path.concat(payload.node)
         payload.exit()
       }
@@ -344,10 +350,12 @@ export class TreeData<TNode extends TreeDataNode> {
    *
    * @param predicate 条件
    */
-  findNodePaths(predicate: (node: TNode) => boolean): Array<TNode[]> {
+  findNodePaths(
+    predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
+  ): Array<TNode[]> {
     const paths: Array<TNode[]> = []
     this.traverse(payload => {
-      if (predicate(payload.node)) {
+      if (predicate(payload)) {
         paths.push(payload.path.concat(payload.node))
       }
     })
