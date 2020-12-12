@@ -1,6 +1,10 @@
-# vtils ![Test](https://github.com/fjc0k/vtils/workflows/Test/badge.svg?branch=master) ![Coverage](https://codecov.io/gh/fjc0k/vtils/branch/master/graph/badge.svg)
+# vtils ![Test](https://github.com/fjc0k/vtils/workflows/Test/badge.svg?branch=master) <a href="https://fjc0k.github.io/vtils/v4-coverage/">![Coverage](https://codecov.io/gh/fjc0k/vtils/branch/master/graph/badge.svg)</a>
 
 一个面向业务的 JavaScript/TypeScript 实用程序库。
+
+> 文档：[https://fjc0k.github.io/vtils/v4/](https://fjc0k.github.io/vtils/v4/)
+>
+> 测试报告：[https://fjc0k.github.io/vtils/v4-coverage/](https://fjc0k.github.io/vtils/v4-coverage/)
 
 ```ts
 import { md5 } from 'vtils'
@@ -81,7 +85,7 @@ import { OmitStrict, LiteralUnion, PartialDeep } from 'vtils/types'
 import { getTopBarInfo, navigatePageTo, redirectPageTo } from 'vtils/mp'
 ```
 
-详细用法见文档：[https://fjc0k.github.io/vtils/v3/](https://fjc0k.github.io/vtils/v3/)。
+详细用法见文档：[https://fjc0k.github.io/vtils/v4/](https://fjc0k.github.io/vtils/v4/)。
 
 ### 在 Taro 3 中使用
 
