@@ -22,6 +22,7 @@ export declare class TreeData<TNode extends TreeDataNode>
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [clone()](./utils.treedata.clone.md) |  | 克隆实例。 |
 |  [export()](./utils.treedata.export.md) |  | 导出数据。 |
 |  [findNode(predicate)](./utils.treedata.findnode.md) |  | 查找符合条件的第一个节点。 |
 |  [findNodePath(predicate)](./utils.treedata.findnodepath.md) |  | 查找符合条件的第一个节点的路径。 |
