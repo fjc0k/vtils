@@ -107,23 +107,29 @@ export class TreeData<TNode extends TreeDataNode> {
     depth: number,
     path: TNode[],
   ) {
-    if (searchMethod === 'DFS') {
-      const postActions: Array<() => void> = []
-      for (const node of data) {
-        let isRemove = false
-        let isExit = false
-        fn({
-          node: node,
-          parentNode: parentNode,
-          depth: depth,
-          path: path,
-          removeNode: () => {
-            isRemove = true
-            postActions.push(() => data.splice(data.indexOf(node), 1))
-          },
-          exit: () => (isExit = true),
-        })
-        if (isExit) return
+    const removeNodeIndexes: number[] = []
+
+    for (let i = 0, len = data.length; i < len; i++) {
+      const node = data[i]
+
+      let isRemove = false
+      let isExit = false
+
+      fn({
+        node: node,
+        parentNode: parentNode,
+        depth: depth,
+        path: path,
+        removeNode: () => {
+          isRemove = true
+          removeNodeIndexes.push(i)
+        },
+        exit: () => (isExit = true),
+      })
+
+      if (isExit) return
+
+      if (searchMethod === 'DFS') {
         if (
           !isRemove &&
           node[childrenPropName] &&
@@ -140,36 +146,16 @@ export class TreeData<TNode extends TreeDataNode> {
           )
         }
       }
-      for (const action of postActions) {
-        action()
-      }
-    } else {
-      const removeNodes: TNode[] = []
-      const postActions: Array<() => void> = []
+    }
+
+    // 删除节点
+    for (let i = removeNodeIndexes.length - 1; i >= 0; i--) {
+      data.splice(removeNodeIndexes[i], 1)
+    }
+
+    if (searchMethod === 'BFS') {
       for (const node of data) {
-        let isExit = false
-        fn({
-          node: node,
-          parentNode: parentNode,
-          depth: depth,
-          path: path,
-          removeNode: () => {
-            removeNodes.push(node)
-            postActions.push(() => data.splice(data.indexOf(node), 1))
-          },
-          exit: () => (isExit = true),
-        })
-        for (const action of postActions) {
-          action()
-        }
-        if (isExit) return
-      }
-      for (const node of data) {
-        if (
-          removeNodes.indexOf(node) !== -1 &&
-          node[childrenPropName] &&
-          Array.isArray(node[childrenPropName])
-        ) {
+        if (node[childrenPropName] && Array.isArray(node[childrenPropName])) {
           TreeData.traverse(
             node[childrenPropName],
             childrenPropName,
@@ -180,9 +166,6 @@ export class TreeData<TNode extends TreeDataNode> {
             path.concat(node),
           )
         }
-      }
-      for (const action of postActions) {
-        action()
       }
     }
   }
