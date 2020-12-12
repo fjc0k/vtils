@@ -139,7 +139,7 @@ rich://{"url":"***","desc":"***"}
 |  [TreeDataChildrenPropName](./utils.treedatachildrenpropname.md) |  |
 |  [TreeDataData](./utils.treedatadata.md) |  |
 |  [TreeDataMultipleRootData](./utils.treedatamultiplerootdata.md) |  |
-|  [TreeDataSearchMethod](./utils.treedatasearchmethod.md) |  |
+|  [TreeDataSearchStrategy](./utils.treedatasearchstrategy.md) |  |
 |  [TreeDataSingleRootData](./utils.treedatasinglerootdata.md) |  |
 |  [TreeDataTraverseFn](./utils.treedatatraversefn.md) |  |
 |  [WechatErrorCallback](./utils.wechaterrorcallback.md) |  |

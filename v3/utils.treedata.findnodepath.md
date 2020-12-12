@@ -9,14 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-findNodePath(predicate: (node: TNode) => boolean): TNode[] | undefined;
+findNodePath(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): TNode[] | undefined;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  predicate | (node: TNode) =&gt; boolean | 条件 |
+|  predicate | (payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean | 条件 |
 
 <b>Returns:</b>
 

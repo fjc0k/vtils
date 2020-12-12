@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-traverse(fn: OneOrMore<TreeDataTraverseFn<TNode> | false>, searchMethod?: TreeDataSearchMethod): this;
+traverse(fn: OneOrMore<TreeDataTraverseFn<TNode> | false>, searchStrategy?: TreeDataSearchStrategy): this;
 ```
 
 ## Parameters
@@ -17,7 +17,7 @@ traverse(fn: OneOrMore<TreeDataTraverseFn<TNode> | false>, searchMethod?: TreeDa
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  fn | OneOrMore&lt;[TreeDataTraverseFn](./utils.treedatatraversefn.md)<!-- -->&lt;TNode&gt; \| false&gt; | 遍历函数 |
-|  searchMethod | [TreeDataSearchMethod](./utils.treedatasearchmethod.md) | 遍历搜索方式，默认为选项中的遍历搜索方式 |
+|  searchStrategy | [TreeDataSearchStrategy](./utils.treedatasearchstrategy.md) | 遍历搜索方式，默认为选项中的遍历搜索方式 |
 
 <b>Returns:</b>
 
