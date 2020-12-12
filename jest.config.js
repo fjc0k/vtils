@@ -7,5 +7,5 @@ module.exports = require('haoma').getJestConfig({
     '@babel/runtime',
     '@tarojs/runtime',
   ],
-  transformer: 'swc',
+  transformer: 'babel',
 })

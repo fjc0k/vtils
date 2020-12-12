@@ -59,7 +59,7 @@ describe('TreeData', () => {
       expect(ids).toMatchSnapshot()
     })
 
-    test('removeNode', () => {
+    test('payload.removeNode', () => {
       const ids: string[] = []
       new TreeData(data).traverse([
         payload => {
@@ -131,6 +131,27 @@ describe('TreeData', () => {
     ).toMatchSnapshot()
     expect(
       new TreeData(data).findNodePaths(node => node.id === '1.1111'),
+    ).toMatchSnapshot()
+  })
+
+  test('removeNode', () => {
+    const tree = new TreeData(data)
+    const removed = tree.removeNode(_ => _.node.id.startsWith('1.'))
+    expect(removed).toMatchSnapshot()
+    expect(tree.export()).toMatchSnapshot()
+  })
+
+  test('removeNodes', () => {
+    const tree = new TreeData(data)
+    const removed = tree.removeNodes(_ => _.node.id.startsWith('1.'))
+    expect(removed).toMatchSnapshot()
+    expect(tree.export()).toMatchSnapshot()
+  })
+
+  test('count', () => {
+    expect(new TreeData(data).count()).toMatchSnapshot()
+    expect(
+      new TreeData(data).count(_ => _.node.id.startsWith('1.')),
     ).toMatchSnapshot()
   })
 

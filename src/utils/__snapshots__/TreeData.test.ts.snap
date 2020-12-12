@@ -455,6 +455,10 @@ Array [
 ]
 `;
 
+exports[`TreeData count 1`] = `110`;
+
+exports[`TreeData count 2`] = `10`;
+
 exports[`TreeData findNode 1`] = `
 Object {
   "children": Array [],
@@ -1000,6 +1004,927 @@ Array [
     "id": "8",
   },
   Object {
+    "id": "9",
+  },
+]
+`;
+
+exports[`TreeData removeNode 1`] = `
+Object {
+  "children": Array [],
+  "id": "1.0",
+}
+`;
+
+exports[`TreeData removeNode 2`] = `
+Array [
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "0.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.9",
+      },
+    ],
+    "id": "0",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "1.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "1.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "1.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "1.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "1.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "1.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "1.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "1.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "1.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "1.9",
+      },
+    ],
+    "id": "1",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "2.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.9",
+      },
+    ],
+    "id": "2",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "3.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.9",
+      },
+    ],
+    "id": "3",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "4.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.9",
+      },
+    ],
+    "id": "4",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "5.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.9",
+      },
+    ],
+    "id": "5",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "6.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.9",
+      },
+    ],
+    "id": "6",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "7.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.9",
+      },
+    ],
+    "id": "7",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "8.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.9",
+      },
+    ],
+    "id": "8",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "9.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.9",
+      },
+    ],
+    "id": "9",
+  },
+]
+`;
+
+exports[`TreeData removeNodes 1`] = `
+Array [
+  Object {
+    "children": Array [],
+    "id": "1.0",
+  },
+  Object {
+    "children": Array [],
+    "id": "1.1",
+  },
+  Object {
+    "children": Array [],
+    "id": "1.2",
+  },
+  Object {
+    "children": Array [],
+    "id": "1.3",
+  },
+  Object {
+    "children": Array [],
+    "id": "1.4",
+  },
+  Object {
+    "children": Array [],
+    "id": "1.5",
+  },
+  Object {
+    "children": Array [],
+    "id": "1.6",
+  },
+  Object {
+    "children": Array [],
+    "id": "1.7",
+  },
+  Object {
+    "children": Array [],
+    "id": "1.8",
+  },
+  Object {
+    "children": Array [],
+    "id": "1.9",
+  },
+]
+`;
+
+exports[`TreeData removeNodes 2`] = `
+Array [
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "0.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "0.9",
+      },
+    ],
+    "id": "0",
+  },
+  Object {
+    "children": Array [],
+    "id": "1",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "2.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "2.9",
+      },
+    ],
+    "id": "2",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "3.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "3.9",
+      },
+    ],
+    "id": "3",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "4.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "4.9",
+      },
+    ],
+    "id": "4",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "5.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "5.9",
+      },
+    ],
+    "id": "5",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "6.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "6.9",
+      },
+    ],
+    "id": "6",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "7.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "7.9",
+      },
+    ],
+    "id": "7",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "8.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "8.9",
+      },
+    ],
+    "id": "8",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": "9.0",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.1",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.2",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.3",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.4",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.5",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.6",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.7",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.8",
+      },
+      Object {
+        "children": Array [],
+        "id": "9.9",
+      },
+    ],
     "id": "9",
   },
 ]
@@ -1830,7 +2755,7 @@ Array [
 ]
 `;
 
-exports[`TreeData traverse removeNode 1`] = `
+exports[`TreeData traverse payload.removeNode 1`] = `
 Array [
   "0",
   "0.0",
@@ -1947,106 +2872,6 @@ Array [
   "7",
   "8",
   "9",
-  "0.0",
-  "0.1",
-  "0.2",
-  "0.3",
-  "0.4",
-  "0.5",
-  "0.6",
-  "0.7",
-  "0.8",
-  "0.9",
-  "1.0",
-  "1.1",
-  "1.2",
-  "1.3",
-  "1.4",
-  "1.5",
-  "1.6",
-  "1.7",
-  "1.8",
-  "1.9",
-  "2.0",
-  "2.1",
-  "2.2",
-  "2.3",
-  "2.4",
-  "2.5",
-  "2.6",
-  "2.7",
-  "2.8",
-  "2.9",
-  "3.0",
-  "3.1",
-  "3.2",
-  "3.3",
-  "3.4",
-  "3.5",
-  "3.6",
-  "3.7",
-  "3.8",
-  "3.9",
-  "4.0",
-  "4.1",
-  "4.2",
-  "4.3",
-  "4.4",
-  "4.5",
-  "4.6",
-  "4.7",
-  "4.8",
-  "4.9",
-  "5.0",
-  "5.1",
-  "5.2",
-  "5.3",
-  "5.4",
-  "5.5",
-  "5.6",
-  "5.7",
-  "5.8",
-  "5.9",
-  "6.0",
-  "6.1",
-  "6.2",
-  "6.3",
-  "6.4",
-  "6.5",
-  "6.6",
-  "6.7",
-  "6.8",
-  "6.9",
-  "7.0",
-  "7.1",
-  "7.2",
-  "7.3",
-  "7.4",
-  "7.5",
-  "7.6",
-  "7.7",
-  "7.8",
-  "7.9",
-  "8.0",
-  "8.1",
-  "8.2",
-  "8.3",
-  "8.4",
-  "8.5",
-  "8.6",
-  "8.7",
-  "8.8",
-  "8.9",
-  "9.0",
-  "9.1",
-  "9.2",
-  "9.3",
-  "9.4",
-  "9.5",
-  "9.6",
-  "9.7",
-  "9.8",
-  "9.9",
 ]
 `;
 
@@ -2177,106 +3002,6 @@ Array [
   "7",
   "8",
   "9",
-  "0.0",
-  "0.1",
-  "0.2",
-  "0.3",
-  "0.4",
-  "0.5",
-  "0.6",
-  "0.7",
-  "0.8",
-  "0.9",
-  "1.0",
-  "1.1",
-  "1.2",
-  "1.3",
-  "1.4",
-  "1.5",
-  "1.6",
-  "1.7",
-  "1.8",
-  "1.9",
-  "2.0",
-  "2.1",
-  "2.2",
-  "2.3",
-  "2.4",
-  "2.5",
-  "2.6",
-  "2.7",
-  "2.8",
-  "2.9",
-  "3.0",
-  "3.1",
-  "3.2",
-  "3.3",
-  "3.4",
-  "3.5",
-  "3.6",
-  "3.7",
-  "3.8",
-  "3.9",
-  "4.0",
-  "4.1",
-  "4.2",
-  "4.3",
-  "4.4",
-  "4.5",
-  "4.6",
-  "4.7",
-  "4.8",
-  "4.9",
-  "5.0",
-  "5.1",
-  "5.2",
-  "5.3",
-  "5.4",
-  "5.5",
-  "5.6",
-  "5.7",
-  "5.8",
-  "5.9",
-  "6.0",
-  "6.1",
-  "6.2",
-  "6.3",
-  "6.4",
-  "6.5",
-  "6.6",
-  "6.7",
-  "6.8",
-  "6.9",
-  "7.0",
-  "7.1",
-  "7.2",
-  "7.3",
-  "7.4",
-  "7.5",
-  "7.6",
-  "7.7",
-  "7.8",
-  "7.9",
-  "8.0",
-  "8.1",
-  "8.2",
-  "8.3",
-  "8.4",
-  "8.5",
-  "8.6",
-  "8.7",
-  "8.8",
-  "8.9",
-  "9.0",
-  "9.1",
-  "9.2",
-  "9.3",
-  "9.4",
-  "9.5",
-  "9.6",
-  "9.7",
-  "9.8",
-  "9.9",
 ]
 `;
 
@@ -3087,105 +3812,5 @@ Array [
   "name7",
   "name8",
   "name9",
-  "name0.0",
-  "name0.1",
-  "name0.2",
-  "name0.3",
-  "name0.4",
-  "name0.5",
-  "name0.6",
-  "name0.7",
-  "name0.8",
-  "name0.9",
-  "name1.0",
-  "name1.1",
-  "name1.2",
-  "name1.3",
-  "name1.4",
-  "name1.5",
-  "name1.6",
-  "name1.7",
-  "name1.8",
-  "name1.9",
-  "name2.0",
-  "name2.1",
-  "name2.2",
-  "name2.3",
-  "name2.4",
-  "name2.5",
-  "name2.6",
-  "name2.7",
-  "name2.8",
-  "name2.9",
-  "name3.0",
-  "name3.1",
-  "name3.2",
-  "name3.3",
-  "name3.4",
-  "name3.5",
-  "name3.6",
-  "name3.7",
-  "name3.8",
-  "name3.9",
-  "name4.0",
-  "name4.1",
-  "name4.2",
-  "name4.3",
-  "name4.4",
-  "name4.5",
-  "name4.6",
-  "name4.7",
-  "name4.8",
-  "name4.9",
-  "name5.0",
-  "name5.1",
-  "name5.2",
-  "name5.3",
-  "name5.4",
-  "name5.5",
-  "name5.6",
-  "name5.7",
-  "name5.8",
-  "name5.9",
-  "name6.0",
-  "name6.1",
-  "name6.2",
-  "name6.3",
-  "name6.4",
-  "name6.5",
-  "name6.6",
-  "name6.7",
-  "name6.8",
-  "name6.9",
-  "name7.0",
-  "name7.1",
-  "name7.2",
-  "name7.3",
-  "name7.4",
-  "name7.5",
-  "name7.6",
-  "name7.7",
-  "name7.8",
-  "name7.9",
-  "name8.0",
-  "name8.1",
-  "name8.2",
-  "name8.3",
-  "name8.4",
-  "name8.5",
-  "name8.6",
-  "name8.7",
-  "name8.8",
-  "name8.9",
-  "name9.0",
-  "name9.1",
-  "name9.2",
-  "name9.3",
-  "name9.4",
-  "name9.5",
-  "name9.6",
-  "name9.7",
-  "name9.8",
-  "name9.9",
 ]
 `;

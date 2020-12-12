@@ -108,23 +108,27 @@ export class TreeData<TNode extends TreeDataNode> {
     path: TNode[],
   ) {
     if (searchMethod === 'DFS') {
+      const postActions: Array<() => void> = []
       for (const node of data) {
-        const postActions: Array<() => void> = []
+        let isRemove = false
         let isExit = false
         fn({
           node: node,
           parentNode: parentNode,
           depth: depth,
           path: path,
-          removeNode: () =>
-            postActions.push(() => data.splice(data.indexOf(node), 1)),
+          removeNode: () => {
+            isRemove = true
+            postActions.push(() => data.splice(data.indexOf(node), 1))
+          },
           exit: () => (isExit = true),
         })
-        for (const action of postActions) {
-          action()
-        }
         if (isExit) return
-        if (node[childrenPropName] && Array.isArray(node[childrenPropName])) {
+        if (
+          !isRemove &&
+          node[childrenPropName] &&
+          Array.isArray(node[childrenPropName])
+        ) {
           TreeData.traverse(
             node[childrenPropName],
             childrenPropName,
@@ -135,18 +139,24 @@ export class TreeData<TNode extends TreeDataNode> {
             path.concat(node),
           )
         }
+      }
+      for (const action of postActions) {
+        action()
       }
     } else {
+      const removeNodes: TNode[] = []
+      const postActions: Array<() => void> = []
       for (const node of data) {
-        const postActions: Array<() => void> = []
         let isExit = false
         fn({
           node: node,
           parentNode: parentNode,
           depth: depth,
           path: path,
-          removeNode: () =>
-            postActions.push(() => data.splice(data.indexOf(node), 1)),
+          removeNode: () => {
+            removeNodes.push(node)
+            postActions.push(() => data.splice(data.indexOf(node), 1))
+          },
           exit: () => (isExit = true),
         })
         for (const action of postActions) {
@@ -155,7 +165,11 @@ export class TreeData<TNode extends TreeDataNode> {
         if (isExit) return
       }
       for (const node of data) {
-        if (node[childrenPropName] && Array.isArray(node[childrenPropName])) {
+        if (
+          removeNodes.indexOf(node) !== -1 &&
+          node[childrenPropName] &&
+          Array.isArray(node[childrenPropName])
+        ) {
           TreeData.traverse(
             node[childrenPropName],
             childrenPropName,
@@ -166,6 +180,9 @@ export class TreeData<TNode extends TreeDataNode> {
             path.concat(node),
           )
         }
+      }
+      for (const action of postActions) {
+        action()
       }
     }
   }
@@ -352,6 +369,60 @@ export class TreeData<TNode extends TreeDataNode> {
       }
     })
     return paths
+  }
+
+  /**
+   * 移除符合条件的第一个节点。返回被移除的节点。
+   *
+   * @param predicate 条件
+   */
+  removeNode(
+    predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
+  ): TNode | undefined {
+    let node: TNode | undefined
+    this.traverse(payload => {
+      if (predicate(payload)) {
+        payload.removeNode()
+        node = payload.node
+        payload.exit()
+      }
+    })
+    return node
+  }
+
+  /**
+   * 移除符合条件的所有节点。返回被移除的节点组成的数组。
+   *
+   * @param predicate 条件
+   */
+  removeNodes(
+    predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
+  ): TNode[] {
+    const nodes: TNode[] = []
+    this.traverse(payload => {
+      if (predicate(payload)) {
+        payload.removeNode()
+        nodes.push(payload.node)
+      }
+    })
+    return nodes
+  }
+
+  /**
+   * 计算符合条件的节点个数。不给出条件则计算所有节点的个数。
+   *
+   * @param predicate 条件
+   */
+  count(
+    predicate?: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
+  ): number {
+    let counter = 0
+    this.traverse(payload => {
+      if (predicate ? predicate(payload) : true) {
+        counter++
+      }
+    })
+    return counter
   }
 
   /**
