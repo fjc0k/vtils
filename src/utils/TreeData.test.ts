@@ -134,6 +134,10 @@ describe('TreeData', () => {
     ).toMatchSnapshot()
   })
 
+  test('clone', () => {
+    expect(new TreeData(data).clone().export()).toMatchSnapshot()
+  })
+
   test('综合', () => {
     const names: string[] = []
     const names2: string[] = []

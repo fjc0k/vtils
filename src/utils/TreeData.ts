@@ -355,6 +355,13 @@ export class TreeData<TNode extends TreeDataNode> {
   }
 
   /**
+   * 克隆实例。
+   */
+  clone(): TreeData<TNode> {
+    return new TreeData(this.export())
+  }
+
+  /**
    * 导出数据。
    */
   export(): TreeDataData<TNode> {
