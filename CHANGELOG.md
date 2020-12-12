@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.4.0](https://github.com/fjc0k/vtils/compare/v4.3.0...v4.4.0) (2020-12-12)
+
+
+### Features
+
+* **TreeData:** 优化遍历算法 ([954af64](https://github.com/fjc0k/vtils/commit/954af647f0ab5139f1ccc6699495009755b6f1db))
+* **TreeData:** 新增 removeNode、removeNodes、count ([7c009f3](https://github.com/fjc0k/vtils/commit/7c009f340dc41b0fe072bab803ac50d18c8be612))
+
 ## [4.3.0](https://github.com/fjc0k/vtils/compare/v4.2.1...v4.3.0) (2020-12-12)
 
 
