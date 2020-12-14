@@ -10,9 +10,9 @@
 
 ```typescript
 setNodeProps<TProps extends {
-        [K in keyof TNode]?: (node: TNode) => any;
+        [K in keyof TNode]?: (payload: TreeDataTraverseFnPayload<TNode>) => any;
     } & {
-        [K: string]: (node: TNode) => any;
+        [K: string]: (payload: TreeDataTraverseFnPayload<TNode>) => any;
     }>(props: TProps): TreeData<Merge<TNode, {
         [K in keyof TProps]: ReturnType<TProps[K]>;
     }>>;

@@ -141,6 +141,7 @@ rich://{"url":"***","desc":"***"}
 |  [TreeDataMultipleRootData](./utils.treedatamultiplerootdata.md) |  |
 |  [TreeDataSearchStrategy](./utils.treedatasearchstrategy.md) |  |
 |  [TreeDataSingleRootData](./utils.treedatasinglerootdata.md) |  |
+|  [TreeDataStandardNode](./utils.treedatastandardnode.md) |  |
 |  [TreeDataTraverseFn](./utils.treedatatraversefn.md) |  |
 |  [WechatErrorCallback](./utils.wechaterrorcallback.md) |  |
 |  [WechatJsApi](./utils.wechatjsapi.md) | 微信 JSSDK 支持的 API。 |
