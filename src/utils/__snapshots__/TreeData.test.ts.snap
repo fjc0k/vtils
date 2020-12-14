@@ -629,6 +629,58 @@ Array [
 
 exports[`TreeData findNodes 2`] = `Array []`;
 
+exports[`TreeData fromList 1`] = `
+Array [
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [
+          Object {
+            "children": Array [],
+            "id": 111,
+            "name": "2. 111",
+            "pid": 11,
+          },
+        ],
+        "id": 11,
+        "name": "1. 11",
+        "pid": 1,
+      },
+      Object {
+        "children": Array [],
+        "id": 12,
+        "name": "1. 12",
+        "pid": 1,
+      },
+    ],
+    "id": 1,
+    "name": "0. 1",
+  },
+  Object {
+    "children": Array [],
+    "id": 2,
+    "name": "0. 2",
+  },
+  Object {
+    "children": Array [],
+    "id": 3,
+    "name": "0. 3",
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [],
+        "id": 42,
+        "name": "1. 42",
+        "pid": 4,
+      },
+    ],
+    "id": 4,
+    "name": "0. 4",
+  },
+]
+`;
+
 exports[`TreeData omitNodeProps 1`] = `
 Array [
   Object {

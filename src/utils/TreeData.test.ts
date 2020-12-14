@@ -79,8 +79,8 @@ describe('TreeData', () => {
     expect(
       new TreeData(data)
         .setNodeProps({
-          value: node => node.id,
-          id2: node => `${node.id}[2]`,
+          value: _ => _.node.id,
+          id2: _ => `${_.node.id}[2]`,
         })
         .export(),
     ).toMatchSnapshot()
@@ -159,13 +159,36 @@ describe('TreeData', () => {
     expect(new TreeData(data).clone().export()).toMatchSnapshot()
   })
 
+  test('fromList', () => {
+    expect(
+      TreeData.fromList(
+        [
+          { id: 1 },
+          { id: 2 },
+          { id: 3 },
+          { id: 11, pid: 1 },
+          { id: 4 },
+          { id: 12, pid: 1 },
+          { id: 111, pid: 11 },
+          { id: 42, pid: 4 },
+        ],
+        'id',
+        'pid',
+      )
+        .setNodeProps({
+          name: _ => `${_.depth}. ${_.node.id}`,
+        })
+        .export(),
+    ).toMatchSnapshot()
+  })
+
   test('综合', () => {
     const names: string[] = []
     const names2: string[] = []
     expect(
       new TreeData(data)
         .setNodeProps({
-          name: node => `name${node.id}`,
+          name: _ => `name${_.node.id}`,
           gender: () => `male`,
         })
         .omitNodeProps(['gender'])

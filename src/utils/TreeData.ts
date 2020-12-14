@@ -7,6 +7,13 @@ export type TreeDataSingleRootData<TNode extends TreeDataNode> = TNode
 
 export type TreeDataMultipleRootData<TNode extends TreeDataNode> = TNode[]
 
+export type TreeDataStandardNode<TNode extends TreeDataNode> = Merge<
+  TNode,
+  {
+    children: Array<TreeDataStandardNode<TNode>>
+  }
+>
+
 export type TreeDataData<TNode extends TreeDataNode> = TNode[]
 
 export type TreeDataChildrenPropName<TNode extends TreeDataNode> = {
@@ -236,9 +243,9 @@ export class TreeData<TNode extends TreeDataNode> {
    */
   setNodeProps<
     TProps extends {
-      [K in keyof TNode]?: (node: TNode) => any
+      [K in keyof TNode]?: (payload: TreeDataTraverseFnPayload<TNode>) => any
     } & {
-      [K: string]: (node: TNode) => any
+      [K: string]: (payload: TreeDataTraverseFnPayload<TNode>) => any
     }
   >(
     props: TProps,
@@ -252,7 +259,7 @@ export class TreeData<TNode extends TreeDataNode> {
   > {
     this.traverse(payload => {
       for (const propName of Object.keys(props)) {
-        ;(payload.node as any)[propName] = props[propName](payload.node)
+        ;(payload.node as any)[propName] = props[propName](payload)
       }
     })
     return this as any
@@ -428,5 +435,31 @@ export class TreeData<TNode extends TreeDataNode> {
    */
   export(): TreeDataData<TNode> {
     return cloneDeep(this.data)
+  }
+
+  /**
+   * 从列表生成实例。
+   *
+   * @param list 列表
+   * @param idKey ID 所在键
+   * @param parentIdKey 父 ID 所在键
+   */
+  static fromList<TItem extends Record<any, any>>(
+    list: TItem[],
+    idKey: keyof TItem,
+    parentIdKey: keyof TItem,
+  ): TreeData<TreeDataStandardNode<TItem>> {
+    const _list: Array<TreeDataStandardNode<TItem>> = cloneDeep(list) as any
+    const data = _list
+      .map(item => {
+        item.children = _list.filter(
+          item2 =>
+            (item2 as any)[parentIdKey] != null &&
+            (item as any)[idKey] === (item2 as any)[parentIdKey],
+        ) as any
+        return item
+      })
+      .filter(item => (item as any)[parentIdKey] == null)
+    return new TreeData(data)
   }
 }
