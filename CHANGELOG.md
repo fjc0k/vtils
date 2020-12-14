@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.6.0](https://github.com/fjc0k/vtils/compare/v4.5.0...v4.6.0) (2020-12-14)
+
+
+### Features
+
+* **TreeData:** 新增 exportList 方法导出一维列表数据 ([66cf34d](https://github.com/fjc0k/vtils/commit/66cf34d3b84b44da230339a68574842967f85da1))
+* **TreeData:** 新增 filter 方法筛选符合条件的节点 ([df07544](https://github.com/fjc0k/vtils/commit/df07544bb5c6f32b84bd6d6c94b092f277367c86))
+
 ## [4.5.0](https://github.com/fjc0k/vtils/compare/v4.4.2...v4.5.0) (2020-12-14)
 
 
