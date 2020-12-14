@@ -94,6 +94,23 @@ describe('TreeData', () => {
     expect(new TreeData(data).pickNodeProps(['id']).export()).toMatchSnapshot()
   })
 
+  test('filter', () => {
+    expect(
+      new TreeData(data).filter(_ => _.node.id.endsWith('.2')).export(),
+    ).toMatchSnapshot()
+    expect(
+      new TreeData(data)
+        .filter(_ => _.node.id.endsWith('.2'))
+        .filter(_ => _.node.id.startsWith('1.'))
+        .export(),
+    ).toMatchSnapshot()
+    expect(
+      new TreeData(data)
+        .filter(_ => _.node.id.endsWith('.2') || _.node.id === '1')
+        .export(),
+    ).toMatchSnapshot()
+  })
+
   test('setDepth', () => {
     expect(new TreeData(data).setDepth(0).export()).toMatchSnapshot()
   })
@@ -107,12 +124,12 @@ describe('TreeData', () => {
     ).toMatchSnapshot()
   })
 
-  test('findNodes', () => {
+  test('findNodeAll', () => {
     expect(
-      new TreeData(data).findNodes(_ => _.node.id.startsWith('1.')),
+      new TreeData(data).findNodeAll(_ => _.node.id.startsWith('1.')),
     ).toMatchSnapshot()
     expect(
-      new TreeData(data).findNodes(_ => _.node.id.startsWith('1.3333')),
+      new TreeData(data).findNodeAll(_ => _.node.id.startsWith('1.3333')),
     ).toMatchSnapshot()
   })
 
@@ -125,12 +142,12 @@ describe('TreeData', () => {
     ).toMatchSnapshot()
   })
 
-  test('findNodePaths', () => {
+  test('findNodePathAll', () => {
     expect(
-      new TreeData(data).findNodePaths(_ => _.node.id === '1.1'),
+      new TreeData(data).findNodePathAll(_ => _.node.id === '1.1'),
     ).toMatchSnapshot()
     expect(
-      new TreeData(data).findNodePaths(_ => _.node.id === '1.1111'),
+      new TreeData(data).findNodePathAll(_ => _.node.id === '1.1111'),
     ).toMatchSnapshot()
   })
 
@@ -141,9 +158,9 @@ describe('TreeData', () => {
     expect(tree.export()).toMatchSnapshot()
   })
 
-  test('removeNodes', () => {
+  test('removeNodeAll', () => {
     const tree = new TreeData(data)
-    const removed = tree.removeNodes(_ => _.node.id.startsWith('1.'))
+    const removed = tree.removeNodeAll(_ => _.node.id.startsWith('1.'))
     expect(removed).toMatchSnapshot()
     expect(tree.export()).toMatchSnapshot()
   })

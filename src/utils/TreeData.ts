@@ -71,6 +71,11 @@ export interface TreeDataTraverseFnPayload<TNode extends TreeDataNode> {
    * 退出遍历。
    */
   exit: () => void
+
+  /**
+   * 跳过子树遍历。
+   */
+  skipChildrenTraverse: () => void
 }
 
 export type TreeDataTraverseFn<TNode extends TreeDataNode> = (
@@ -115,12 +120,14 @@ export class TreeData<TNode extends TreeDataNode> {
     path: TNode[],
   ) {
     const removeNodeIndexes: number[] = []
+    const skipChildrenTraverseNodeIndexes: number[] = []
 
     for (let i = 0, len = data.length; i < len; i++) {
       const node = data[i]
 
       let isRemove = false
       let isExit = false
+      let isSkipChildrenTraverse = false
 
       fn({
         node: node,
@@ -132,25 +139,31 @@ export class TreeData<TNode extends TreeDataNode> {
           removeNodeIndexes.push(i)
         },
         exit: () => (isExit = true),
+        skipChildrenTraverse: () => {
+          isSkipChildrenTraverse = true
+          skipChildrenTraverseNodeIndexes.push(i)
+        },
       })
 
       if (isExit) return
 
-      if (searchStrategy === 'DFS') {
-        if (
-          !isRemove &&
-          node[childrenPropName] &&
-          Array.isArray(node[childrenPropName])
-        ) {
-          TreeData.traverse(
-            node[childrenPropName],
-            childrenPropName,
-            node,
-            fn,
-            searchStrategy,
-            depth + 1,
-            path.concat(node),
-          )
+      if (!isSkipChildrenTraverse) {
+        if (searchStrategy === 'DFS') {
+          if (
+            !isRemove &&
+            node[childrenPropName] &&
+            Array.isArray(node[childrenPropName])
+          ) {
+            TreeData.traverse(
+              node[childrenPropName],
+              childrenPropName,
+              node,
+              fn,
+              searchStrategy,
+              depth + 1,
+              path.concat(node),
+            )
+          }
         }
       }
     }
@@ -161,17 +174,20 @@ export class TreeData<TNode extends TreeDataNode> {
     }
 
     if (searchStrategy === 'BFS') {
-      for (const node of data) {
-        if (node[childrenPropName] && Array.isArray(node[childrenPropName])) {
-          TreeData.traverse(
-            node[childrenPropName],
-            childrenPropName,
-            node,
-            fn,
-            searchStrategy,
-            depth + 1,
-            path.concat(node),
-          )
+      for (let i = 0, len = data.length; i < len; i++) {
+        if (skipChildrenTraverseNodeIndexes.indexOf(i) === -1) {
+          const node = data[i]
+          if (node[childrenPropName] && Array.isArray(node[childrenPropName])) {
+            TreeData.traverse(
+              node[childrenPropName],
+              childrenPropName,
+              node,
+              fn,
+              searchStrategy,
+              depth + 1,
+              path.concat(node),
+            )
+          }
         }
       }
     }
@@ -300,6 +316,39 @@ export class TreeData<TNode extends TreeDataNode> {
   }
 
   /**
+   * 筛选符合条件的节点。
+   *
+   * @param predicate 条件
+   */
+  filter(
+    predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
+  ): this {
+    this.traverse([
+      payload => {
+        if (predicate(payload)) {
+          ;(payload.node as any).__SKIP__ = true
+          ;(payload.node as any).__PICK__ = true
+          for (const node of payload.path) {
+            ;(node as any).__PICK__ = true
+          }
+          payload.skipChildrenTraverse()
+        }
+      },
+      payload => {
+        if (payload.node.__SKIP__ === true) {
+          payload.skipChildrenTraverse()
+        }
+        if (payload.node.__PICK__ !== true) {
+          payload.removeNode()
+        }
+        delete payload.node.__SKIP__
+        delete payload.node.__PICK__
+      },
+    ])
+    return this
+  }
+
+  /**
    * 查找符合条件的第一个节点。
    *
    * @param predicate 条件
@@ -322,7 +371,7 @@ export class TreeData<TNode extends TreeDataNode> {
    *
    * @param predicate 条件
    */
-  findNodes(
+  findNodeAll(
     predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
   ): TNode[] {
     const nodes: TNode[] = []
@@ -357,7 +406,7 @@ export class TreeData<TNode extends TreeDataNode> {
    *
    * @param predicate 条件
    */
-  findNodePaths(
+  findNodePathAll(
     predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
   ): Array<TNode[]> {
     const paths: Array<TNode[]> = []
@@ -393,7 +442,7 @@ export class TreeData<TNode extends TreeDataNode> {
    *
    * @param predicate 条件
    */
-  removeNodes(
+  removeNodeAll(
     predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean,
   ): TNode[] {
     const nodes: TNode[] = []
