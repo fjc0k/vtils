@@ -203,6 +203,23 @@ describe('TreeData', () => {
     ).toMatchSnapshot()
   })
 
+  // test('大数据', () => {
+  //   const data = range(0, 1000).map(i => ({
+  //     id: `${i}`,
+  //     children: range(0, 1000).map(i2 => ({
+  //       id: `${i}.${i2}`,
+  //       children: [],
+  //     })),
+  //   }))
+  //   const startTime = Date.now()
+  //   new TreeData(data).traverse(_ => {
+  //     // ...
+  //   })
+  //   const endTime = Date.now()
+  //   console.log(endTime - startTime)
+  //   expect(1).toBe(1)
+  // })
+
   test('综合', () => {
     const names: string[] = []
     const names2: string[] = []

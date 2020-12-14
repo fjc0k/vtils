@@ -113,17 +113,24 @@ export class TreeData<TNode extends TreeDataNode> {
   private static traverse<TNode extends TreeDataNode>(
     data: TreeDataData<TNode>,
     childrenPropName: TreeDataChildrenPropName<TNode>,
-    parentNode: TNode | undefined,
-    fn: TreeDataTraverseFn<TNode>,
     searchStrategy: TreeDataSearchStrategy,
-    depth: number,
-    path: TNode[],
+    fn: TreeDataTraverseFn<TNode>,
   ) {
-    const removeNodeIndexes: number[] = []
-    const skipChildrenTraverseNodeIndexes: number[] = []
+    const nodes: Array<
+      [
+        node: TNode,
+        index: number,
+        parentNode: TNode | undefined,
+        siblings: TNode[],
+        depth: number,
+        path: TNode[],
+      ]
+    > = data.map((child, index) => [child, index, undefined, data, 0, []])
 
-    for (let i = 0, len = data.length; i < len; i++) {
-      const node = data[i]
+    let currentNode: typeof nodes[0] | undefined
+    const removeNodes: Array<[siblings: TNode[], indexes: number[]]> = []
+    while ((currentNode = nodes.shift())) {
+      const [node, index, parentNode, siblings, depth, path] = currentNode
 
       let isRemove = false
       let isExit = false
@@ -136,59 +143,51 @@ export class TreeData<TNode extends TreeDataNode> {
         path: path,
         removeNode: () => {
           isRemove = true
-          removeNodeIndexes.push(i)
         },
-        exit: () => (isExit = true),
+        exit: () => {
+          isExit = true
+        },
         skipChildrenTraverse: () => {
           isSkipChildrenTraverse = true
-          skipChildrenTraverseNodeIndexes.push(i)
         },
       })
 
+      if (isRemove) {
+        if (
+          !removeNodes.length ||
+          removeNodes[removeNodes.length - 1][0] !== siblings
+        ) {
+          removeNodes.push([siblings, []])
+        }
+        removeNodes[removeNodes.length - 1][1].push(index)
+      }
+
       if (isExit) return
 
-      if (!isSkipChildrenTraverse) {
-        if (searchStrategy === 'DFS') {
-          if (
-            !isRemove &&
-            node[childrenPropName] &&
-            Array.isArray(node[childrenPropName])
-          ) {
-            TreeData.traverse(
-              node[childrenPropName],
-              childrenPropName,
-              node,
-              fn,
-              searchStrategy,
-              depth + 1,
-              path.concat(node),
-            )
-          }
-        }
+      if (
+        !isRemove &&
+        !isSkipChildrenTraverse &&
+        node[childrenPropName] &&
+        Array.isArray(node[childrenPropName])
+      ) {
+        nodes[searchStrategy === 'DFS' ? 'unshift' : 'push'](
+          ...node[childrenPropName].map((child: any, index: number) => [
+            child,
+            index,
+            node,
+            node[childrenPropName],
+            depth + 1,
+            path.concat(node),
+          ]),
+        )
       }
     }
 
-    // 删除节点
-    for (let i = removeNodeIndexes.length - 1; i >= 0; i--) {
-      data.splice(removeNodeIndexes[i], 1)
-    }
-
-    if (searchStrategy === 'BFS') {
-      for (let i = 0, len = data.length; i < len; i++) {
-        if (skipChildrenTraverseNodeIndexes.indexOf(i) === -1) {
-          const node = data[i]
-          if (node[childrenPropName] && Array.isArray(node[childrenPropName])) {
-            TreeData.traverse(
-              node[childrenPropName],
-              childrenPropName,
-              node,
-              fn,
-              searchStrategy,
-              depth + 1,
-              path.concat(node),
-            )
-          }
-        }
+    let removeNode: typeof removeNodes[0] | undefined
+    while ((removeNode = removeNodes.shift())) {
+      let removeNodeIndex: number | undefined
+      while ((removeNodeIndex = removeNode[1].pop()) != null) {
+        removeNode[0].splice(removeNodeIndex, 1)
       }
     }
   }
@@ -210,11 +209,8 @@ export class TreeData<TNode extends TreeDataNode> {
       TreeData.traverse<TNode>(
         this.data,
         this.childrenPropName,
-        undefined,
-        fn,
         searchStrategy,
-        0,
-        [],
+        fn,
       )
     }
     return this
