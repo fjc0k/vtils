@@ -438,7 +438,18 @@ export class TreeData<TNode extends TreeDataNode> {
   }
 
   /**
-   * 从列表生成实例。
+   * 导出一维列表数据。
+   */
+  exportList(): TNode[] {
+    const list: TNode[] = []
+    this.traverse(payload => {
+      list.push(payload.node)
+    })
+    return cloneDeep(list)
+  }
+
+  /**
+   * 从一维列表生成实例。
    *
    * @param list 列表
    * @param idKey ID 所在键

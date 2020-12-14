@@ -159,6 +159,10 @@ describe('TreeData', () => {
     expect(new TreeData(data).clone().export()).toMatchSnapshot()
   })
 
+  test('exportList', () => {
+    expect(new TreeData(data).exportList()).toMatchSnapshot()
+  })
+
   test('fromList', () => {
     expect(
       TreeData.fromList(
