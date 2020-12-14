@@ -25,15 +25,17 @@ export declare class TreeData<TNode extends TreeDataNode>
 |  [clone()](./utils.treedata.clone.md) |  | 克隆实例。 |
 |  [count(predicate)](./utils.treedata.count.md) |  | 计算符合条件的节点个数。不给出条件则计算所有节点的个数。 |
 |  [export()](./utils.treedata.export.md) |  | 导出数据。 |
+|  [exportList()](./utils.treedata.exportlist.md) |  | 导出一维列表数据。 |
+|  [filter(predicate)](./utils.treedata.filter.md) |  | 筛选符合条件的节点。 |
 |  [findNode(predicate)](./utils.treedata.findnode.md) |  | 查找符合条件的第一个节点。 |
+|  [findNodeAll(predicate)](./utils.treedata.findnodeall.md) |  | 查找符合条件的所有节点。 |
 |  [findNodePath(predicate)](./utils.treedata.findnodepath.md) |  | 查找符合条件的第一个节点的路径。 |
-|  [findNodePaths(predicate)](./utils.treedata.findnodepaths.md) |  | 查找符合条件的所有节点的路径。 |
-|  [findNodes(predicate)](./utils.treedata.findnodes.md) |  | 查找符合条件的所有节点。 |
-|  [fromList(list, idKey, parentIdKey)](./utils.treedata.fromlist.md) | <code>static</code> | 从列表生成实例。 |
+|  [findNodePathAll(predicate)](./utils.treedata.findnodepathall.md) |  | 查找符合条件的所有节点的路径。 |
+|  [fromList(list, idKey, parentIdKey)](./utils.treedata.fromlist.md) | <code>static</code> | 从一维列表生成实例。 |
 |  [omitNodeProps(propNames)](./utils.treedata.omitnodeprops.md) |  | 移除节点上指定的属性。 |
 |  [pickNodeProps(propNames)](./utils.treedata.picknodeprops.md) |  | 选取节点上指定的属性。 |
 |  [removeNode(predicate)](./utils.treedata.removenode.md) |  | 移除符合条件的第一个节点。返回被移除的节点。 |
-|  [removeNodes(predicate)](./utils.treedata.removenodes.md) |  | 移除符合条件的所有节点。返回被移除的节点组成的数组。 |
+|  [removeNodeAll(predicate)](./utils.treedata.removenodeall.md) |  | 移除符合条件的所有节点。返回被移除的节点组成的数组。 |
 |  [setDepth(depth)](./utils.treedata.setdepth.md) |  | 设置数据深度。从 <code>0</code> 开始，将会移除超过指定深度的数据。 |
 |  [setNodeProps(props)](./utils.treedata.setnodeprops.md) |  | 设置节点属性。 |
 |  [traverse(fn, searchStrategy)](./utils.treedata.traverse.md) |  | 遍历。 |

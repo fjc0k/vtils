@@ -4,7 +4,7 @@
 
 ## TreeData.fromList() method
 
-从列表生成实例。
+从一维列表生成实例。
 
 <b>Signature:</b>
 

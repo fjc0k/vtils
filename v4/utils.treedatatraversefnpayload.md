@@ -20,4 +20,5 @@ export declare interface TreeDataTraverseFnPayload<TNode extends TreeDataNode>
 |  [parentNode](./utils.treedatatraversefnpayload.parentnode.md) | TNode \| undefined | 父节点。为 <code>undefined</code> 时表示当前节点是根节点。 |
 |  [path](./utils.treedatatraversefnpayload.path.md) | TNode\[\] | 到当前节点的路径节点列表。 |
 |  [removeNode](./utils.treedatatraversefnpayload.removenode.md) | () =&gt; void | 移除当前节点。 |
+|  [skipChildrenTraverse](./utils.treedatatraversefnpayload.skipchildrentraverse.md) | () =&gt; void | 跳过子树遍历。 |
 
