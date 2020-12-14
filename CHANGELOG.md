@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.5.0](https://github.com/fjc0k/vtils/compare/v4.4.2...v4.5.0) (2020-12-14)
+
+
+### Features
+
+* **TreeData:** 新增 fromList 方法从列表生成实例 ([5516106](https://github.com/fjc0k/vtils/commit/551610667b537a4fde8458e85f2c9ba2b8fc4f23))
+
 ### [4.4.2](https://github.com/fjc0k/vtils/compare/v4.4.1...v4.4.2) (2020-12-12)
 
 ### [4.4.1](https://github.com/fjc0k/vtils/compare/v4.4.0...v4.4.1) (2020-12-12)
