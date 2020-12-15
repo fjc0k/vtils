@@ -220,6 +220,16 @@ describe('TreeData', () => {
   //   expect(1).toBe(1)
   // })
 
+  // test('深嵌套', () => {
+  //   let i = 0
+  //   TreeData.fromList(
+  //     range(0, 10000).map(i => ({ id: i, pid: i === 0 ? undefined : i - 1 })),
+  //     'id',
+  //     'pid',
+  //   ).traverse(() => i++)
+  //   expect(i).toMatchSnapshot()
+  // })
+
   test('综合', () => {
     const names: string[] = []
     const names2: string[] = []
