@@ -125,7 +125,10 @@ export class TreeData<TNode extends TreeDataNode> {
         depth: number,
         path: TNode[],
       ]
-    > = data.map((child, index) => [child, index, undefined, data, 0, []])
+    > = []
+    for (let i = data.length - 1; i >= 0; i--) {
+      nodes.push([data[i], i, undefined, data, 0, []])
+    }
 
     let currentNode: typeof nodes[0] | undefined
     const removeNodes: Array<[siblings: TNode[], indexes: number[]]> = []
@@ -135,7 +138,7 @@ export class TreeData<TNode extends TreeDataNode> {
     const removeNode = () => (isRemove = true)
     const exit = () => (isExit = true)
     const skipChildrenTraverse = () => (isSkipChildrenTraverse = true)
-    while ((currentNode = nodes.shift())) {
+    while ((currentNode = nodes.pop())) {
       const [node, index, parentNode, siblings, depth, path] = currentNode
 
       isRemove = false
@@ -170,16 +173,29 @@ export class TreeData<TNode extends TreeDataNode> {
         node[childrenPropName] &&
         Array.isArray(node[childrenPropName])
       ) {
-        nodes[searchStrategy === 'DFS' ? 'unshift' : 'push'](
-          ...node[childrenPropName].map((child: any, index: number) => [
-            child,
-            index,
-            node,
-            node[childrenPropName],
-            depth + 1,
-            path.concat(node),
-          ]),
-        )
+        if (searchStrategy === 'DFS') {
+          for (let i = node[childrenPropName].length - 1; i >= 0; i--) {
+            nodes.push([
+              node[childrenPropName][i],
+              i,
+              node,
+              node[childrenPropName],
+              depth + 1,
+              path.concat(node),
+            ])
+          }
+        } else {
+          for (let i = 0; i < node[childrenPropName].length; i++) {
+            nodes.unshift([
+              node[childrenPropName][i],
+              i,
+              node,
+              node[childrenPropName],
+              depth + 1,
+              path.concat(node),
+            ])
+          }
+        }
       }
     }
 
