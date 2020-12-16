@@ -129,27 +129,27 @@ export class TreeData<TNode extends TreeDataNode> {
 
     let currentNode: typeof nodes[0] | undefined
     const removeNodes: Array<[siblings: TNode[], indexes: number[]]> = []
+    let isRemove = false
+    let isExit = false
+    let isSkipChildrenTraverse = false
+    const removeNode = () => (isRemove = true)
+    const exit = () => (isExit = true)
+    const skipChildrenTraverse = () => (isSkipChildrenTraverse = true)
     while ((currentNode = nodes.shift())) {
       const [node, index, parentNode, siblings, depth, path] = currentNode
 
-      let isRemove = false
-      let isExit = false
-      let isSkipChildrenTraverse = false
+      isRemove = false
+      isExit = false
+      isSkipChildrenTraverse = false
 
       fn({
         node: node,
         parentNode: parentNode,
         depth: depth,
         path: path,
-        removeNode: () => {
-          isRemove = true
-        },
-        exit: () => {
-          isExit = true
-        },
-        skipChildrenTraverse: () => {
-          isSkipChildrenTraverse = true
-        },
+        removeNode: removeNode,
+        exit: exit,
+        skipChildrenTraverse: skipChildrenTraverse,
       })
 
       if (isRemove) {
@@ -183,11 +183,11 @@ export class TreeData<TNode extends TreeDataNode> {
       }
     }
 
-    let removeNode: typeof removeNodes[0] | undefined
-    while ((removeNode = removeNodes.shift())) {
+    let _removeNode: typeof removeNodes[0] | undefined
+    while ((_removeNode = removeNodes.shift())) {
       let removeNodeIndex: number | undefined
-      while ((removeNodeIndex = removeNode[1].pop()) != null) {
-        removeNode[0].splice(removeNodeIndex, 1)
+      while ((removeNodeIndex = _removeNode[1].pop()) != null) {
+        _removeNode[0].splice(removeNodeIndex, 1)
       }
     }
   }
