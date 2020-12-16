@@ -184,7 +184,7 @@ export class TreeData<TNode extends TreeDataNode> {
     }
 
     let _removeNode: typeof removeNodes[0] | undefined
-    while ((_removeNode = removeNodes.shift())) {
+    while ((_removeNode = removeNodes.pop())) {
       let removeNodeIndex: number | undefined
       while ((removeNodeIndex = _removeNode[1].pop()) != null) {
         _removeNode[0].splice(removeNodeIndex, 1)
