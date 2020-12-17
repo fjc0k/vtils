@@ -221,12 +221,12 @@ export class TreeData<TNode extends TreeDataNode> {
     const fns: Array<TreeDataTraverseFn<TNode>> = castArray(fn).filter(
       fn => typeof fn === 'function',
     ) as any
-    for (const fn of fns) {
+    for (let i = 0; i < fns.length; i++) {
       TreeData.traverse<TNode>(
         this.data,
         this.childrenPropName,
         searchStrategy,
-        fn,
+        fns[i],
       )
     }
     return this
@@ -286,7 +286,7 @@ export class TreeData<TNode extends TreeDataNode> {
     >
   > {
     this.traverse(payload => {
-      for (const propName of Object.keys(props)) {
+      for (const propName in props) {
         ;(payload.node as any)[propName] = props[propName](payload)
       }
     })
@@ -302,8 +302,8 @@ export class TreeData<TNode extends TreeDataNode> {
     propNames: TPropName[],
   ): TreeData<Omit<TNode, TPropName>> {
     this.traverse(payload => {
-      for (const propName of propNames) {
-        delete payload.node[propName]
+      for (const i in propNames) {
+        delete payload.node[propNames[i]]
       }
     })
     return this as any
@@ -318,7 +318,7 @@ export class TreeData<TNode extends TreeDataNode> {
     propNames: TPropName[],
   ): TreeData<Pick<TNode, TPropName>> {
     this.traverse(payload => {
-      for (const propName of Object.keys(payload.node)) {
+      for (const propName in payload.node) {
         if (propNames.indexOf(propName as any) === -1) {
           delete payload.node[propName]
         }
@@ -340,7 +340,8 @@ export class TreeData<TNode extends TreeDataNode> {
         if (predicate(payload)) {
           ;(payload.node as any).__SKIP__ = true
           ;(payload.node as any).__PICK__ = true
-          for (const node of payload.path) {
+          let node: TNode | undefined
+          while ((node = payload.path.pop())) {
             ;(node as any).__PICK__ = true
           }
           payload.skipChildrenTraverse()
