@@ -1,5 +1,5 @@
 import { AnyFunction } from './AnyFunction'
-import { expectType } from './__expectType__'
+import { expectType } from '../dev'
 
 describe('AnyFunction', () => {
   test('不是 function', () => {

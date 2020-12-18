@@ -1,4 +1,4 @@
-import { expectType } from './__expectType__'
+import { expectType } from '../dev'
 import { IsNever } from './IsNever'
 
 describe('IsNever', () => {

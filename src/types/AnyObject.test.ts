@@ -1,5 +1,5 @@
 import { AnyObject } from './AnyObject'
-import { expectType } from './__expectType__'
+import { expectType } from '../dev'
 
 describe('AnyObject', () => {
   test('不是 object', () => {

@@ -71,7 +71,8 @@
     "test-types": "tsc --noEmit",
     "test-update-snapshot": "jest --updateSnapshot",
     "test-with-coverage": "jest --coverage",
-    "test-with-coverage-open": "jest --coverage && open-cli ./coverage/lcov-report/index.html"
+    "test-with-coverage-open": "jest --coverage && open-cli ./coverage/lcov-report/index.html",
+    "test-benchmark": "haoma run ./scripts/runBenchmarks.ts"
   },
   "husky": {
     "hooks": {
@@ -109,6 +110,7 @@
     "@types/react-dom": "17.0.0",
     "@types/standard-version": "7.0.0",
     "benchmark": "2.1.4",
+    "cli-table3": "^0.6.0",
     "codecov": "3.8.1",
     "cross-env": "7.0.3",
     "eslint": "7.15.0",

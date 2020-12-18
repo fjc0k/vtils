@@ -1,5 +1,5 @@
 import { Defined } from './Defined'
-import { expectType } from './__expectType__'
+import { expectType } from '../dev'
 
 describe('Defined', () => {
   test('表现正常', () => {

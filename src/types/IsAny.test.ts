@@ -1,4 +1,4 @@
-import { expectType } from './__expectType__'
+import { expectType } from '../dev'
 import { IsAny } from './IsAny'
 
 describe('IsAny', () => {

@@ -1,5 +1,5 @@
 import { range } from 'lodash-uni'
-import { Suite } from 'benchmark'
+import { runBenchmark } from '../dev'
 import { TreeData } from './TreeData'
 
 // @ts-ignore
@@ -20,17 +20,11 @@ const data2 = range(0, 10).map(i => ({
   })),
 }))
 
-new Suite()
-  .add('tree-tool#filter', () => {
+runBenchmark({
+  ['tree-tool.filter']() {
     treeTool.filter(data1, (node: any) => node.id.endsWith('.1'))
-  })
-  .add('vtils#TreeData', () => {
+  },
+  ['vtils.TreeData']() {
     new TreeData(data2).filter(_ => _.node.id.endsWith('.1'))
-  })
-  .on('cycle', function (event: any) {
-    console.log(String(event.target))
-  })
-  .on('complete', function (this: any) {
-    console.log(`Fastest is ${this.filter('fastest').map('name')}`)
-  })
-  .run()
+  },
+})
