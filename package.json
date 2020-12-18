@@ -110,7 +110,7 @@
     "@types/react-dom": "17.0.0",
     "@types/standard-version": "7.0.0",
     "benchmark": "2.1.4",
-    "cli-table3": "^0.6.0",
+    "cli-table3": "0.6.0",
     "codecov": "3.8.1",
     "cross-env": "7.0.3",
     "eslint": "7.15.0",
