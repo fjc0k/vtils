@@ -1,4 +1,4 @@
-import { castArray, cloneDeep } from 'lodash-uni'
+import { cloneDeepFast } from './cloneDeepFast'
 import { Merge, OneOrMore } from '../types'
 
 export interface TreeDataNode extends Record<any, any> {}
@@ -102,7 +102,7 @@ export class TreeData<TNode extends TreeDataNode> {
     data: TreeDataSingleRootData<TNode> | TreeDataMultipleRootData<TNode>,
     options: TreeDataOptions<TNode> = {},
   ) {
-    this.data = cloneDeep(Array.isArray(data) ? data : [data])
+    this.data = cloneDeepFast(Array.isArray(data) ? data : [data])
     this.childrenPropName = options?.childrenPropName || ('children' as any)
     this.searchStrategy = options?.searchStrategy || 'DFS'
   }
@@ -218,9 +218,10 @@ export class TreeData<TNode extends TreeDataNode> {
     fn: OneOrMore<TreeDataTraverseFn<TNode> | false>,
     searchStrategy: TreeDataSearchStrategy = this.searchStrategy,
   ): this {
-    const fns: Array<TreeDataTraverseFn<TNode>> = castArray(fn).filter(
-      fn => typeof fn === 'function',
-    ) as any
+    const fns: Array<TreeDataTraverseFn<TNode>> = (Array.isArray(fn)
+      ? fn
+      : [fn]
+    ).filter(fn => typeof fn === 'function') as any
     for (let i = 0; i < fns.length; i++) {
       TreeData.traverse<TNode>(
         this.data,
@@ -496,7 +497,7 @@ export class TreeData<TNode extends TreeDataNode> {
    * 导出数据。
    */
   export(): TreeDataData<TNode> {
-    return cloneDeep(this.data)
+    return cloneDeepFast(this.data)
   }
 
   /**
@@ -507,7 +508,7 @@ export class TreeData<TNode extends TreeDataNode> {
     this.traverse(payload => {
       list.push(payload.node)
     })
-    return cloneDeep(list)
+    return cloneDeepFast(list)
   }
 
   /**
@@ -522,7 +523,7 @@ export class TreeData<TNode extends TreeDataNode> {
     idKey: keyof TItem,
     parentIdKey: keyof TItem,
   ): TreeData<TreeDataStandardNode<TItem>> {
-    const _list: Array<TreeDataStandardNode<TItem>> = cloneDeep(list) as any
+    const _list: Array<TreeDataStandardNode<TItem>> = cloneDeepFast(list) as any
     const data = _list
       .map(item => {
         item.children = _list.filter(
