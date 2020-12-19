@@ -9,6 +9,7 @@
 |  Package | Description |
 |  --- | --- |
 |  [date](./date.md) | 日期时间工具库。基于 [date-fns](https://date-fns.org/v2.14.0/docs/Getting-Started)<!-- -->。 |
+|  [dev](./dev.md) | 开发工具库。 |
 |  [mp](./mp.md) | 小程序工具库。 |
 |  [react](./react.md) | React 工具库。基于 [react-use](https://github.com/streamich/react-use#readme)<!-- -->。 |
 |  [types](./types.md) | 类型工具库。 |

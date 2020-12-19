@@ -51,8 +51,3 @@ const rawCliOptions: OddlyCasedProps<SomeOptions> = {
 
 ```
 
-KebabCase
-
-
-SnakeCase
-

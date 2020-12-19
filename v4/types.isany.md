@@ -21,5 +21,3 @@ type X = IsAny<any>
 
 ```
 
-https://stackoverflow.com/a/49928360
-
