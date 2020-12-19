@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.7.0](https://github.com/fjc0k/vtils/compare/v4.6.0...v4.7.0) (2020-12-19)
+
+
+### Features
+
+* **TreeData:** 遍历优化 ([f432090](https://github.com/fjc0k/vtils/commit/f4320909b5d922a0a4ff03a896ca51c886d33fcd))
+* **TreeData:** 遍历算法优化 ([e7a8cf8](https://github.com/fjc0k/vtils/commit/e7a8cf8426c9e470dd74de40ee814e2092cad76f))
+* **utils:** 新增 cloneDeepFast 深克隆 ([704704b](https://github.com/fjc0k/vtils/commit/704704b63a35b99ae1f5ba6a4c4da2f4a95297b8))
+
 ## [4.6.0](https://github.com/fjc0k/vtils/compare/v4.5.0...v4.6.0) (2020-12-14)
 
 
