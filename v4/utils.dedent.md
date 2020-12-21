@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function dedent(literals: TemplateStringsArray, ...interpolations: string[]): string;
+export declare function dedent(literals: TemplateStringsArray, ...interpolations: Array<string | number>): string;
 ```
 
 ## Parameters
@@ -17,7 +17,7 @@ export declare function dedent(literals: TemplateStringsArray, ...interpolations
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  literals | TemplateStringsArray | 字面值 |
-|  interpolations | string\[\] | 插入值 |
+|  interpolations | Array&lt;string \| number&gt; | 插入值 |
 
 <b>Returns:</b>
 
