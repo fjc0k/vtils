@@ -41,4 +41,7 @@ export declare class TreeData<TNode extends TreeDataNode>
 |  [traverse(fn, searchStrategy)](./utils.treedata.traverse.md) |  | 遍历。 |
 |  [traverseBFS(fn)](./utils.treedata.traversebfs.md) |  | 广度优先遍历。 |
 |  [traverseDFS(fn)](./utils.treedata.traversedfs.md) |  | 深度优先遍历。 |
+|  [traverseNode(node, fn, searchStrategy)](./utils.treedata.traversenode.md) |  | 遍历节点。 |
+|  [traverseNodeBFS(node, fn)](./utils.treedata.traversenodebfs.md) |  | 广度优先遍历节点。 |
+|  [traverseNodeDFS(node, fn)](./utils.treedata.traversenodedfs.md) |  | 深度优先遍历节点。 |
 
