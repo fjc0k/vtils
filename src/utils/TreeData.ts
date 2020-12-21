@@ -209,6 +209,74 @@ export class TreeData<TNode extends TreeDataNode> {
   }
 
   /**
+   * 遍历节点。
+   *
+   * @param node 节点
+   * @param fn 遍历函数
+   * @param searchStrategy 遍历搜索方式，默认为选项中的遍历搜索方式
+   */
+  traverseNode(
+    node:
+      | OneOrMore<TNode>
+      | ((payload: TreeDataTraverseFnPayload<TNode>) => boolean),
+    fn: OneOrMore<TreeDataTraverseFn<TNode> | false>,
+    searchStrategy: TreeDataSearchStrategy = this.searchStrategy,
+  ) {
+    const nodes: TNode[] =
+      typeof node === 'function'
+        ? this.findNodeAll(node as any)
+        : Array.isArray(node)
+        ? node
+        : [node]
+    let _node: TNode | undefined
+    while ((_node = nodes.pop())) {
+      if (Array.isArray(_node[this.childrenPropName])) {
+        const fns: Array<TreeDataTraverseFn<TNode>> = (Array.isArray(fn)
+          ? fn
+          : [fn]
+        ).filter(fn => typeof fn === 'function') as any
+        for (let i = 0; i < fns.length; i++) {
+          TreeData.traverse<TNode>(
+            _node[this.childrenPropName],
+            this.childrenPropName,
+            searchStrategy,
+            fns[i],
+          )
+        }
+      }
+    }
+    return this
+  }
+
+  /**
+   * 深度优先遍历节点。
+   *
+   * @param fn 遍历函数
+   */
+  traverseNodeDFS(
+    node:
+      | OneOrMore<TNode>
+      | ((payload: TreeDataTraverseFnPayload<TNode>) => boolean),
+    fn: OneOrMore<TreeDataTraverseFn<TNode> | false>,
+  ): this {
+    return this.traverseNode(node, fn, 'DFS')
+  }
+
+  /**
+   * 广度优先遍历节点。
+   *
+   * @param fn 遍历函数
+   */
+  traverseNodeBFS(
+    node:
+      | OneOrMore<TNode>
+      | ((payload: TreeDataTraverseFnPayload<TNode>) => boolean),
+    fn: OneOrMore<TreeDataTraverseFn<TNode> | false>,
+  ): this {
+    return this.traverseNode(node, fn, 'BFS')
+  }
+
+  /**
    * 遍历。
    *
    * @param fn 遍历函数
@@ -218,18 +286,13 @@ export class TreeData<TNode extends TreeDataNode> {
     fn: OneOrMore<TreeDataTraverseFn<TNode> | false>,
     searchStrategy: TreeDataSearchStrategy = this.searchStrategy,
   ): this {
-    const fns: Array<TreeDataTraverseFn<TNode>> = (Array.isArray(fn)
-      ? fn
-      : [fn]
-    ).filter(fn => typeof fn === 'function') as any
-    for (let i = 0; i < fns.length; i++) {
-      TreeData.traverse<TNode>(
-        this.data,
-        this.childrenPropName,
-        searchStrategy,
-        fns[i],
-      )
-    }
+    this.traverseNode(
+      {
+        [this.childrenPropName]: this.data,
+      } as any,
+      fn,
+      searchStrategy,
+    )
     return this
   }
 

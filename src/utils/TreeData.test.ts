@@ -203,6 +203,39 @@ describe('TreeData', () => {
     ).toMatchSnapshot()
   })
 
+  test('traverseNode', () => {
+    expect(
+      new TreeData(data)
+        .traverseNode(
+          _ => _.node.id === '2',
+          _ => (_.node.id += '_checked'),
+        )
+        .export(),
+    ).toMatchSnapshot()
+  })
+
+  test('traverseNodeDFS', () => {
+    expect(
+      new TreeData(data)
+        .traverseNodeDFS(
+          _ => _.node.id === '2',
+          _ => (_.node.id += '_checked'),
+        )
+        .export(),
+    ).toMatchSnapshot()
+  })
+
+  test('traverseNodeBFS', () => {
+    expect(
+      new TreeData(data)
+        .traverseNodeBFS(
+          _ => _.node.id === '2',
+          _ => (_.node.id += '_checked'),
+        )
+        .export(),
+    ).toMatchSnapshot()
+  })
+
   // test('大数据', () => {
   //   const data = range(0, 1000).map(i => ({
   //     id: `${i}`,
