@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseXml 表现正常 1`] = `
+Object {
+  "xml": Object {
+    "Content": "你好",
+    "CreateTime": 12345678,
+    "FromUserName": "fromUser",
+    "MsgType": "text",
+    "ToUserName": "toUser",
+  },
+}
+`;

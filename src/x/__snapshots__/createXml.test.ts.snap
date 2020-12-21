@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createXml 表现正常 1`] = `
+<id>
+  1
+</id>
+<name>
+  jay
+</name>
+<close>
+  false
+</close>
+<content>
+  <!--[CDATA[大家好 > kkkdkkdkd ?]]-->
+</content>
+<desc time="2020">
+  我是xxxx
+</desc>
+`;

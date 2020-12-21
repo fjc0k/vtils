@@ -48,6 +48,10 @@
     "./validator": {
       "require": "./_cjs/validator/index.js",
       "import": "./validator/index.js"
+    },
+    "./x": {
+      "require": "./_cjs/x/index.js",
+      "import": "./x/index.js"
     }
   },
   "main": "_cjs/utils/index.js",
@@ -92,6 +96,7 @@
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "date-fns": "^2.16.1",
+    "fast-xml-parser": "^3.17.5",
     "lodash-uni": "^1.1.0",
     "miniprogram-api-typings": "^3.2.0",
     "react-use": "^15.3.4",
