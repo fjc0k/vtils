@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.9.0](https://github.com/fjc0k/vtils/compare/v4.8.0...v4.9.0) (2020-12-21)
+
+
+### Features
+
+* **createXml:** 添加 array 辅助方法 ([c1e0de1](https://github.com/fjc0k/vtils/commit/c1e0de183a3843bd17cf3d6c957e8e7778d7be62))
+
 ## [4.8.0](https://github.com/fjc0k/vtils/compare/v4.7.0...v4.8.0) (2020-12-21)
 
 
