@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.8.0](https://github.com/fjc0k/vtils/compare/v4.7.0...v4.8.0) (2020-12-21)
+
+
+### Features
+
+* **TreeData:** 新增 traverseNode 遍历节点 ([c5dd7b1](https://github.com/fjc0k/vtils/commit/c5dd7b1279093c4fcaa58ea0cbcd43899e3ecb78))
+* **x:** 新增 cuid、uuid ([e938c99](https://github.com/fjc0k/vtils/commit/e938c995c455509cccd8734248f17236fd7610ab))
+* **x:** 新增 parseXml、createXml ([1ee40c7](https://github.com/fjc0k/vtils/commit/1ee40c7e46108fee79f125b6aeaf79c878cad69d))
+
 ## [4.7.0](https://github.com/fjc0k/vtils/compare/v4.6.0...v4.7.0) (2020-12-19)
 
 
