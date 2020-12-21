@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.9.1](https://github.com/fjc0k/vtils/compare/v4.9.0...v4.9.1) (2020-12-21)
+
+
+### Bug Fixes
+
+* **indent,dedent:** 插入值支持 number 类型 ([926b7cb](https://github.com/fjc0k/vtils/commit/926b7cbe8ca5c8f0582b43b98d1123e52c77f2f5))
+
 ## [4.9.0](https://github.com/fjc0k/vtils/compare/v4.8.0...v4.9.0) (2020-12-21)
 
 
