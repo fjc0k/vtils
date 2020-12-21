@@ -14,6 +14,7 @@ export declare namespace createXml
 
 |  Variable | Description |
 |  --- | --- |
+|  [array](./x.createxml.array.md) |  |
 |  [attr](./x.createxml.attr.md) |  |
 |  [cdata](./x.createxml.cdata.md) |  |
 |  [text](./x.createxml.text.md) |  |
