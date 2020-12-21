@@ -15,7 +15,7 @@ import { indent } from './indent'
  */
 export function dedent(
   literals: TemplateStringsArray,
-  ...interpolations: string[]
+  ...interpolations: Array<string | number>
 ): string {
   const text = indent(literals, ...interpolations)
 

@@ -12,7 +12,7 @@
  */
 export function indent(
   literals: TemplateStringsArray,
-  ...interpolations: string[]
+  ...interpolations: Array<string | number>
 ): string {
   let result = ''
 
@@ -21,7 +21,7 @@ export function indent(
     let interpolation = interpolations[i]
     const match = literal.match(/(?:^|[\r\n]+)([^\S\r\n]*)$/)
     if (match && match[1]) {
-      interpolation = interpolation.replace(
+      interpolation = String(interpolation).replace(
         // fix: 后行断言部分浏览器暂不支持
         // /(?<=[\r\n]+)(?=[^\r\n])/g,
         /([\r\n]+)(?=[^\r\n])/g,
