@@ -14,6 +14,14 @@ describe('createXml', () => {
           }),
           ...createXml.text('我是xxxx'),
         },
+        list: createXml.array([
+          {
+            id: 1,
+          },
+          {
+            id: 2,
+          },
+        ]),
       }),
     ).toMatchSnapshot()
   })

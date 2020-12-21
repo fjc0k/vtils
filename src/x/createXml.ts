@@ -1,5 +1,6 @@
 import { j2xParser as J2XParser, J2xOptionsOptional } from 'fast-xml-parser'
 
+const arrayTagName = 'item' as const
 const attrTagName = '@__attr__@' as const
 const textTagName = '@__text__@' as const
 const cdataTagName = '@__cdata__@' as const
@@ -17,6 +18,10 @@ export function createXml(data: any, options?: J2xOptionsOptional): string {
     textNodeName: textTagName,
     cdataTagName: cdataTagName,
   }).parse(data)
+}
+
+createXml.array = function <T = any>(value: T[]): any {
+  return { [arrayTagName]: value }
 }
 
 createXml.attr = function <T = any>(value: T): any {

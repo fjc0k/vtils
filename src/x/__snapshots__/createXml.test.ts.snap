@@ -16,4 +16,16 @@ exports[`createXml 表现正常 1`] = `
 <desc time="2020">
   我是xxxx
 </desc>
+<list>
+  <item>
+    <id>
+      1
+    </id>
+  </item>
+  <item>
+    <id>
+      2
+    </id>
+  </item>
+</list>
 `;
