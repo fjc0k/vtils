@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.10.0](https://github.com/fjc0k/vtils/compare/v4.9.1...v4.10.0) (2020-12-22)
+
+
+### Features
+
+* **x:** 新增 RedisCookieJar 使用 Redis 作为 Cookie Jar ([2815e13](https://github.com/fjc0k/vtils/commit/2815e13af3665eaab539da4a23d039edc06dbfc1))
+
 ### [4.9.1](https://github.com/fjc0k/vtils/compare/v4.9.0...v4.9.1) (2020-12-21)
 
 
