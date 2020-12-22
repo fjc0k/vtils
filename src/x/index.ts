@@ -10,5 +10,6 @@
 export * from './createXml'
 export * from './cuid'
 export * from './parseXml'
+export * from './RedisCookieJar'
 export * from './uuid'
 // @endindex

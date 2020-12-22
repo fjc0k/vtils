@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RedisCookieJar 表现正常 1`] = `
+Array [
+  "@@@@COOKIE@@@@test",
+]
+`;
+
+exports[`RedisCookieJar 表现正常 2`] = `"{\\"baidu.com\\":{\\"/\\":{\\"sid\\":{\\"key\\":\\"sid\\",\\"value\\":\\"12345\\",\\"domain\\":\\"baidu.com\\",\\"path\\":\\"/\\",\\"hostOnly\\":true,\\"pathIsDefault\\":true,\\"creation\\":\\"2020-12-22T11:27:37.884Z\\",\\"lastAccessed\\":\\"2020-12-22T11:27:37.884Z\\"}}}}"`;
