@@ -11,7 +11,9 @@ describe('RedisCookieJar', () => {
     const { default: Redis } = await import('ioredis')
     const redis = new Redis()
     const cookieJar = new RedisCookieJar({ key: 'test', redis })
-    await cookieJar.setCookie('sid=12345', 'https://baidu.com')
+    await cookieJar.setCookie('sid=12345', 'https://baidu.com', {
+      now: new Date(2020, 10, 1, 0, 0, 0, 0),
+    })
     expect(await redis.keys('*')).toMatchSnapshot()
     expect(await redis.get((await redis.keys('*'))[0])).toMatchSnapshot()
   })
