@@ -6,6 +6,12 @@
 
 第三方工具封装库。
 
+## Classes
+
+|  Class | Description |
+|  --- | --- |
+|  [RedisCookieJar](./x.rediscookiejar.md) | 使用 Redis 作为 Cookie Jar。 |
+
 ## Functions
 
 |  Function | Description |
@@ -14,6 +20,12 @@
 |  [cuid()](./x.cuid.md) | 生成 CUID。 |
 |  [parseXml(text, options)](./x.parsexml.md) | 解析 XML 文本。 |
 |  [uuid()](./x.uuid.md) | 生成 RFC4122 V4 版本的 UUID。 |
+
+## Interfaces
+
+|  Interface | Description |
+|  --- | --- |
+|  [RedisCookieJarOptions](./x.rediscookiejaroptions.md) |  |
 
 ## Namespaces
 
