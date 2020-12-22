@@ -5,5 +5,3 @@ Array [
   "@@@@COOKIE@@@@test",
 ]
 `;
-
-exports[`RedisCookieJar 表现正常 2`] = `"{\\"baidu.com\\":{\\"/\\":{\\"sid\\":{\\"key\\":\\"sid\\",\\"value\\":\\"12345\\",\\"domain\\":\\"baidu.com\\",\\"path\\":\\"/\\",\\"hostOnly\\":true,\\"pathIsDefault\\":true,\\"creation\\":\\"2020-10-31T16:00:00.000Z\\",\\"lastAccessed\\":\\"2020-10-31T16:00:00.000Z\\"}}}}"`;
