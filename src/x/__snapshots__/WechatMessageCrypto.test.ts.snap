@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WechatCrypto 第三方平台 1`] = `
+<xml>
+  <ToUserName>
+    <!--[CDATA[gh_2a866851d1f9]]-->
+  </ToUserName>
+  <FromUserName>
+    <!--[CDATA[oZpm301xkURBEwu2mrDfEf41FgaI]]-->
+  </FromUserName>
+  <CreateTime>
+    1608776418
+  </CreateTime>
+  <MsgType>
+    <!--[CDATA[event]]-->
+  </MsgType>
+  <Event>
+    <!--[CDATA[VIEW]]-->
+  </Event>
+  <EventKey>
+    <!--[CDATA[http://dcq.qingzhou.io/wall/index.html?media_id=gh_4e7837ae5767]]-->
+  </EventKey>
+  <MenuId>
+    456330783
+  </MenuId>
+</xml>
+`;
+
+exports[`WechatCrypto 第三方平台 2`] = `
+Object {
+  "CreateTime": 1608776418,
+  "Event": "VIEW",
+  "EventKey": "http://dcq.qingzhou.io/wall/index.html?media_id=gh_4e7837ae5767",
+  "FromUserName": "oZpm301xkURBEwu2mrDfEf41FgaI",
+  "MenuId": 456330783,
+  "MsgType": "event",
+  "ToUserName": "gh_2a866851d1f9",
+}
+`;
+
+exports[`WechatCrypto 第三方平台 3`] = `
+<xml>
+  <AppId>
+    <!--[CDATA[wxd4970d77949d0829]]-->
+  </AppId>
+  <CreateTime>
+    1608776502
+  </CreateTime>
+  <InfoType>
+    <!--[CDATA[authorized]]-->
+  </InfoType>
+  <AuthorizerAppid>
+    <!--[CDATA[wx570bc396a51b8ff8]]-->
+  </AuthorizerAppid>
+  <AuthorizationCode>
+    <!--[CDATA[queryauthcode@@@VIu5qeezG3hye4wWHDLe5FvYzSW4gQm7WRcB82r_LIgeYD-2esY0ew1nMdNh1b51ZEEMoE1iSQ2AzlWPQB9F5A]]-->
+  </AuthorizationCode>
+  <AuthorizationCodeExpiredTime>
+    <!--[CDATA[1608780102]]-->
+  </AuthorizationCodeExpiredTime>
+  <PreAuthCode>
+    <!--[CDATA[preauthcode@@@xAFBuq7Pvcumi9KooVZzZtx8fXJ2TFOMjvFR4hYrPNwQZbHngscDhZZRkGZqWToC4Gt1jkI8uEbZbn-t4SuGNw]]-->
+  </PreAuthCode>
+</xml>
+`;
+
+exports[`WechatCrypto 第三方平台 4`] = `
+Object {
+  "AppId": "wxd4970d77949d0829",
+  "AuthorizationCode": "queryauthcode@@@VIu5qeezG3hye4wWHDLe5FvYzSW4gQm7WRcB82r_LIgeYD-2esY0ew1nMdNh1b51ZEEMoE1iSQ2AzlWPQB9F5A",
+  "AuthorizationCodeExpiredTime": "1608780102",
+  "AuthorizerAppid": "wx570bc396a51b8ff8",
+  "CreateTime": 1608776502,
+  "InfoType": "authorized",
+  "PreAuthCode": "preauthcode@@@xAFBuq7Pvcumi9KooVZzZtx8fXJ2TFOMjvFR4hYrPNwQZbHngscDhZZRkGZqWToC4Gt1jkI8uEbZbn-t4SuGNw",
+}
+`;
+
+exports[`WechatCrypto 第三方平台 5`] = `"020</ID></xml>wxd4970d77949d0829"`;
+
+exports[`WechatCrypto 第三方平台 6`] = `
+Object {
+  "nonceStr": "qlto9c",
+  "signature": "5d314725828b0ac96591b33ac048160ce302481c",
+  "timestamp": 1608776976,
+}
+`;
+
+exports[`WechatCrypto 第三方平台 7`] = `
+<xml>
+  <Encrypt>
+    <!--[CDATA[+nvf4v2JqvaIoY8htvZxvPygcD8VpelK9jQZKu4ZvPV20Nns2lOuq4xyrxFuCid8M9tEMjNCehDG3bx5BBhOPw==]]-->
+  </Encrypt>
+  <MsgSignature>
+    <!--[CDATA[5d314725828b0ac96591b33ac048160ce302481c]]-->
+  </MsgSignature>
+  <TimeStamp>
+    1608776976
+  </TimeStamp>
+  <Nonce>
+    <!--[CDATA[qlto9c]]-->
+  </Nonce>
+</xml>
+`;
