@@ -11,6 +11,7 @@
 |  Class | Description |
 |  --- | --- |
 |  [RedisCookieJar](./x.rediscookiejar.md) | 使用 Redis 作为 Cookie Jar。 |
+|  [WechatMessageCrypto](./x.wechatmessagecrypto.md) | 微信公众号消息加解密。 |
 
 ## Functions
 
@@ -19,6 +20,7 @@
 |  [createXml(data, options)](./x.createxml.md) | 创建 XML 文本。 |
 |  [cuid()](./x.cuid.md) | 生成 CUID。 |
 |  [parseXml(text, options)](./x.parsexml.md) | 解析 XML 文本。 |
+|  [sha1(value)](./x.sha1.md) | 获取给定值的 sha1 哈希。 |
 |  [uuid()](./x.uuid.md) | 生成 RFC4122 V4 版本的 UUID。 |
 
 ## Interfaces
@@ -26,6 +28,9 @@
 |  Interface | Description |
 |  --- | --- |
 |  [RedisCookieJarOptions](./x.rediscookiejaroptions.md) |  |
+|  [WechatMessageCryptoOptions](./x.wechatmessagecryptooptions.md) |  |
+|  [WechatMessageCryptoSignEncryptedMsgResult](./x.wechatmessagecryptosignencryptedmsgresult.md) |  |
+|  [WechatMessageCryptoSignOptions](./x.wechatmessagecryptosignoptions.md) |  |
 
 ## Namespaces
 
