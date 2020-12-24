@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.11.0](https://github.com/fjc0k/vtils/compare/v4.10.1...v4.11.0) (2020-12-24)
+
+
+### Features
+
+* **validator:** 优化提示文本 ([492c695](https://github.com/fjc0k/vtils/commit/492c6954b1e11139c8fd51bb034ba877a2c33ca3))
+* **x:** 新增 sha1 ([d69393a](https://github.com/fjc0k/vtils/commit/d69393ab1097bdef56e045a6f68c20fe93bad60f))
+* **x:** 新增 WechatMessageCrypto 微信公众号消息加解密 ([c106915](https://github.com/fjc0k/vtils/commit/c1069152a6ddf4d563df0f16e09bbedd4195481f))
+
 ### [4.10.1](https://github.com/fjc0k/vtils/compare/v4.10.0...v4.10.1) (2020-12-22)
 
 ## [4.10.0](https://github.com/fjc0k/vtils/compare/v4.9.1...v4.10.0) (2020-12-22)
