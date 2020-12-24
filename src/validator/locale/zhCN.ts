@@ -30,8 +30,8 @@ export const zhCN: yup.Locale = {
   string: {
     length: ({ label, length }) =>
       `${label || '此项'}必须仅包含${length}位字符`,
-    min: ({ label, min }) => `${label || '此项'}必须至少包含${min}位字符`,
-    max: ({ label, max }) => `${label || '此项'}必须最多包含${max}位字符`,
+    min: ({ label, min }) => `${label || '此项'}至少应包含${min}位字符`,
+    max: ({ label, max }) => `${label || '此项'}最多可包含${max}位字符`,
     matches: ({ label, regex }) =>
       `${label || '此项'}必须匹配该正则表达式: ${regex}`,
     email: ({ label }) => `${label || '此项'}必须是一个合法的邮箱`,
@@ -63,7 +63,7 @@ export const zhCN: yup.Locale = {
       `${label || '此项'}上有未定义的键: ${unknown}`,
   },
   array: {
-    min: ({ label, min }) => `${label || '此项'}必须至少包含${min}个元素`,
-    max: ({ label, max }) => `${label || '此项'}必须最多包含${max}个元素`,
+    min: ({ label, min }) => `${label || '此项'}至少应包含${min}个元素`,
+    max: ({ label, max }) => `${label || '此项'}最多可包含${max}个元素`,
   },
 }
