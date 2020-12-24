@@ -39,11 +39,14 @@ export interface WechatMessageCryptoSignEncryptedMsgResult {
  * 微信公众号消息加解密。
  */
 export class WechatMessageCrypto {
+  private options!: WechatMessageCryptoOptions
+
   private aesKey!: Buffer
 
   private iv!: Buffer
 
-  constructor(private options: WechatMessageCryptoOptions) {
+  constructor(options: WechatMessageCryptoOptions) {
+    this.options = options
     this.aesKey = Buffer.from(`${options.encodingAESKey}=`, 'base64')
     this.iv = this.aesKey.slice(0, 16)
   }
