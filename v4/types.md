@@ -28,10 +28,12 @@
 |  [AnyAsyncFunction](./types.anyasyncfunction.md) | 任意异步函数。 |
 |  [AnyFunction](./types.anyfunction.md) | 任意函数。 |
 |  [AnyObject](./types.anyobject.md) | 任意对象。 |
+|  [Asyncify](./types.asyncify.md) | Create an async version of the given function type, by boxing the return type in <code>Promise</code> while keeping the same parameter types.<!-- -->Use-case: You have two functions, one synchronous and one asynchronous that do the same thing. Instead of having to duplicate the type definition, you can use <code>Asyncify</code> to reuse the synchronous type. |
 |  [AsyncOrSync](./types.asyncorsync.md) | Useful as a return type in interfaces or abstract classes with missing implementation |
 |  [AsyncReturnType](./types.asyncreturntype.md) | Unwrap the return type of a function that returns a <code>Promise</code>.<!-- -->There has been \[discussion\](https://github.com/microsoft/TypeScript/pull/35998) about implementing this type in TypeScript. |
 |  [Buildable](./types.buildable.md) | Combination of DeepPartial and DeepWritable |
 |  [CamelCase](./types.camelcase.md) | Convert a string literal to camel-case.<!-- -->This can be useful when, for example, converting some kebab-cased command-line flags or a snake-cased database result. |
+|  [Class](./types.class.md) | Matches a \[<code>class</code> constructor\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). |
 |  [Defined](./types.defined.md) | 去除类型 T 中的 undefined。 |
 |  [DelimiterCase](./types.delimitercase.md) | Convert a string literal to a custom string delimiter casing.<!-- -->This can be useful when, for example, converting a camel-cased object property to an oddly cased one. |
 |  [ElementOf](./types.elementof.md) | Easily extract the type of a given array's elements |
