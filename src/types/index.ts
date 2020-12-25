@@ -20,6 +20,8 @@ export type {
   KebabCase,
   PascalCase,
   DelimiterCase,
+  Class,
+  Asyncify,
 } from 'type-fest'
 
 export type {
