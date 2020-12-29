@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { PickBy } from 'vtils/types'
+import { useUpdate } from 'react-use'
 
 export interface RenderComponentResult<
   TComponent extends React.ComponentType<any>
@@ -47,10 +48,11 @@ export function renderComponent<TComponent extends React.ComponentType<any>>(
     Function | undefined
   >,
 ): RenderComponentResult<TComponent> {
-  let container: HTMLDivElement | null = document.createElement('div')
-  document.body.appendChild(container)
+  let hasContainer = true
+  let render!: (props: Partial<React.ComponentProps<TComponent>>) => void
+  let destroy!: () => void
 
-  const render = (props: Partial<React.ComponentProps<TComponent>>) => {
+  const prepareProps = (props: Partial<React.ComponentProps<TComponent>>) => {
     props = { ...props }
     if (injectCallbacks) {
       for (const key of Object.keys(injectCallbacks)) {
@@ -61,7 +63,49 @@ export function renderComponent<TComponent extends React.ComponentType<any>>(
         }
       }
     }
-    ReactDOM.render(React.createElement(Component, props), container)
+    return props
+  }
+
+  if (hasRenderComponentContainer) {
+    let childIndex: number | undefined
+    render = props => {
+      props = prepareProps(props)
+      if (childIndex == null) {
+        childIndex = renderComponentContainerChildren.length
+        renderComponentContainerChildren.push(
+          React.createElement(Component, props),
+        )
+      } else {
+        renderComponentContainerChildren.splice(
+          childIndex,
+          1,
+          React.createElement(Component, props),
+        )
+      }
+      updateRenderComponentContainer!()
+    }
+    destroy = () => {
+      if (childIndex != null) {
+        renderComponentContainerChildren.splice(childIndex, 1)
+        updateRenderComponentContainer!()
+      }
+    }
+  } else {
+    let container: HTMLDivElement | null = document.createElement('div')
+    document.body.appendChild(container)
+    render = props => {
+      props = prepareProps(props)
+      ReactDOM.render(React.createElement(Component, props), container)
+    }
+    destroy = () => {
+      if (!hasContainer || !container) return
+      const unmountResult = ReactDOM.unmountComponentAtNode(container)
+      if (unmountResult) {
+        container.parentNode?.removeChild(container)
+      }
+      container = null
+      hasContainer = false
+    }
   }
 
   render(initialProps)
@@ -70,7 +114,7 @@ export function renderComponent<TComponent extends React.ComponentType<any>>(
 
   return {
     incrementalRerender(props: Partial<React.ComponentProps<TComponent>>) {
-      if (!container) return
+      if (!hasContainer) return
       incrementalProps = {
         ...incrementalProps,
         ...props,
@@ -78,23 +122,29 @@ export function renderComponent<TComponent extends React.ComponentType<any>>(
       render(incrementalProps)
     },
     partialRerender(props: Partial<React.ComponentProps<TComponent>>) {
-      if (!container) return
+      if (!hasContainer) return
       render({
         ...initialProps,
         ...props,
       })
     },
     fullRerender(props: React.ComponentProps<TComponent>) {
-      if (!container) return
+      if (!hasContainer) return
       render(props)
     },
-    destroy() {
-      if (!container) return
-      const unmountResult = ReactDOM.unmountComponentAtNode(container)
-      if (unmountResult) {
-        container.parentNode?.removeChild(container)
-      }
-      container = null
-    },
+    destroy: destroy,
   }
+}
+
+// 渲染容器
+let hasRenderComponentContainer = false
+let updateRenderComponentContainer: ReturnType<typeof useUpdate> | undefined
+const renderComponentContainerChildren: any[] = []
+
+export function RenderComponentContainer() {
+  hasRenderComponentContainer = true
+  updateRenderComponentContainer = useUpdate()
+  return React.createElement(React.Fragment, {
+    children: renderComponentContainerChildren,
+  })
 }
