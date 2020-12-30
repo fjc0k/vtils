@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { isPromiseLike } from '../utils'
 import { PickBy } from 'vtils/types'
 import { useUpdate } from 'react-use'
 
@@ -53,13 +54,19 @@ export function renderComponent<TComponent extends React.ComponentType<any>>(
   let destroy!: () => void
 
   const prepareProps = (props: Partial<React.ComponentProps<TComponent>>) => {
-    props = { ...props }
+    props = {
+      key: Date.now(),
+      ...props,
+    }
     if (injectCallbacks) {
       for (const key of Object.keys(injectCallbacks)) {
         const originalCallback = props[key]
-        ;(props as any)[key] = async () => {
-          await originalCallback?.()
-          await (injectCallbacks as any)[key]()
+        ;(props as any)[key] = () => {
+          const res = originalCallback?.()
+          if (isPromiseLike(res)) {
+            return res.then(() => (injectCallbacks as any)[key]())
+          }
+          return (injectCallbacks as any)[key]()
         }
       }
     }
