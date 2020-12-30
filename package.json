@@ -141,7 +141,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "shx": "0.3.3",
-    "standard-version": "9.0.0",
+    "standard-version": "9.1.0",
     "tree-tool": "1.1.8",
     "ts-essentials": "7.0.1",
     "type-fest": "0.20.2",
