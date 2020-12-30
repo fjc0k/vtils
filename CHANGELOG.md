@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.13.1](https://github.com/fjc0k/vtils/compare/v4.13.0...v4.13.1) (2020-12-30)
+
+
+### Bug Fixes
+
+* **renderComponent:** 生成默认 key 值 ([ceae5f1](https://github.com/fjc0k/vtils/commit/ceae5f137575aaa21900e720035f566759f29b3f))
+
 ## [4.13.0](https://github.com/fjc0k/vtils/compare/v4.12.0...v4.13.0) (2020-12-29)
 
 
