@@ -167,5 +167,5 @@ declare module 'yup/es' {
     [K in keyof T]: GetSchema<T[K]>
   }
 
-  export function mixed<T>(): MixedSchema<T>
+  export function mixed<T = any>(): MixedSchema<T>
 }
