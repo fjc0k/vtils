@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.13.2](https://github.com/fjc0k/vtils/compare/v4.13.1...v4.13.2) (2020-12-31)
+
+
+### Bug Fixes
+
+* **validator:** mixed 默认 any ([a6c5b71](https://github.com/fjc0k/vtils/commit/a6c5b711b66a3b4dc7fb2401757567ff35468664))
+
 ### [4.13.1](https://github.com/fjc0k/vtils/compare/v4.13.0...v4.13.1) (2020-12-30)
 
 
