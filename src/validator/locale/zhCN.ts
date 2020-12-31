@@ -35,7 +35,8 @@ export const zhCN: yup.Locale = {
     matches: ({ label, regex }) =>
       `${label || '此项'}必须匹配该正则表达式: ${regex}`,
     email: ({ label }) => `${label || '此项'}必须是一个合法的邮箱`,
-    url: ({ label }) => `${label || '此项'}必须是一个合法的链接`,
+    url: ({ label }) =>
+      `${label || '此项'}必须是一个以 http:// 或 https:// 开头的网络链接`,
     trim: ({ label }) => `${label || '此项'}必须是一个没有旁白的字符串`,
     lowercase: ({ label }) => `${label || '此项'}必须是一个小写的字符串`,
     uppercase: ({ label }) => `${label || '此项'}必须是一个大写的字符串`,
