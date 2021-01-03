@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.14.0](https://github.com/fjc0k/vtils/compare/v4.13.2...v4.14.0) (2021-01-03)
+
+
+### Features
+
+* **cloneDeep,TreeData:** 支持 ignore ([f9bb684](https://github.com/fjc0k/vtils/commit/f9bb684ee2a9777a8d4413ca22de96afd81716fc))
+
 ### [4.13.2](https://github.com/fjc0k/vtils/compare/v4.13.1...v4.13.2) (2020-12-31)
 
 
