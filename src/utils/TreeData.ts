@@ -17,7 +17,9 @@ export type TreeDataStandardNode<TNode extends TreeDataNode> = Merge<
 export type TreeDataData<TNode extends TreeDataNode> = TNode[]
 
 export type TreeDataChildrenPropName<TNode extends TreeDataNode> = {
-  [K in keyof TNode]: TNode[K] extends TreeDataData<TNode> ? K : never
+  [K in keyof TNode]: Exclude<TNode[K], undefined> extends TreeDataData<TNode>
+    ? K
+    : never
 }[keyof TNode]
 
 export type TreeDataSearchStrategy = 'DFS' | 'BFS'
@@ -93,11 +95,13 @@ export type TreeDataTraverseFn<TNode extends TreeDataNode> = (
 export class TreeData<TNode extends TreeDataNode> {
   private data: TreeDataData<TNode>
 
-  private childrenPropName: TreeDataChildrenPropName<TNode>
+  private childrenPropName: TreeDataChildrenPropName<TNode> = 'children' as any
 
-  private searchStrategy: TreeDataSearchStrategy
+  private searchStrategy: TreeDataSearchStrategy = 'DFS'
 
-  private cloneIgnore: ((value: unknown) => boolean | undefined) | undefined
+  private cloneIgnore:
+    | ((value: unknown) => boolean | undefined)
+    | undefined = undefined
 
   /**
    * 构造函数。
@@ -109,10 +113,8 @@ export class TreeData<TNode extends TreeDataNode> {
     data: TreeDataSingleRootData<TNode> | TreeDataMultipleRootData<TNode>,
     options: TreeDataOptions<TNode> = {},
   ) {
-    this.cloneIgnore = options?.cloneIgnore
+    this.setOptions(options)
     this.data = this.cloneDeep(Array.isArray(data) ? data : [data])
-    this.childrenPropName = options?.childrenPropName || ('children' as any)
-    this.searchStrategy = options?.searchStrategy || 'DFS'
   }
 
   private cloneDeep<T>(value: T): T {
@@ -218,6 +220,18 @@ export class TreeData<TNode extends TreeDataNode> {
         _removeNode[0].splice(removeNodeIndex, 1)
       }
     }
+  }
+
+  /**
+   * 设置选项。
+   *
+   * @param options 选项
+   */
+  setOptions(options: TreeDataOptions<TNode>): this {
+    this.cloneIgnore = options.cloneIgnore || this.cloneIgnore
+    this.childrenPropName = options.childrenPropName || this.childrenPropName
+    this.searchStrategy = options.searchStrategy || this.searchStrategy
+    return this
   }
 
   /**
