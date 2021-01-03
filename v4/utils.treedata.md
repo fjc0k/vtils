@@ -38,6 +38,7 @@ export declare class TreeData<TNode extends TreeDataNode>
 |  [removeNodeAll(predicate)](./utils.treedata.removenodeall.md) |  | 移除符合条件的所有节点。返回被移除的节点组成的数组。 |
 |  [setDepth(depth)](./utils.treedata.setdepth.md) |  | 设置数据深度。从 <code>0</code> 开始，将会移除超过指定深度的数据。 |
 |  [setNodeProps(props)](./utils.treedata.setnodeprops.md) |  | 设置节点属性。 |
+|  [setOptions(options)](./utils.treedata.setoptions.md) |  | 设置选项。 |
 |  [traverse(fn, searchStrategy)](./utils.treedata.traverse.md) |  | 遍历。 |
 |  [traverseBFS(fn)](./utils.treedata.traversebfs.md) |  | 广度优先遍历。 |
 |  [traverseDFS(fn)](./utils.treedata.traversedfs.md) |  | 深度优先遍历。 |

@@ -8,7 +8,7 @@
 
 ```typescript
 export declare type TreeDataChildrenPropName<TNode extends TreeDataNode> = {
-    [K in keyof TNode]: TNode[K] extends TreeDataData<TNode> ? K : never;
+    [K in keyof TNode]: Exclude<TNode[K], undefined> extends TreeDataData<TNode> ? K : never;
 }[keyof TNode];
 ```
 <b>References:</b> [TreeDataNode](./utils.treedatanode.md)<!-- -->, [TreeDataData](./utils.treedatadata.md)
