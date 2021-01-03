@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.14.1](https://github.com/fjc0k/vtils/compare/v4.14.0...v4.14.1) (2021-01-03)
+
+
+### Bug Fixes
+
+* **TreeData:** 优化类型 ([e454d61](https://github.com/fjc0k/vtils/commit/e454d61beb9607027a47f4e9c6d9948246fef098))
+
 ## [4.14.0](https://github.com/fjc0k/vtils/compare/v4.13.2...v4.14.0) (2021-01-03)
 
 
