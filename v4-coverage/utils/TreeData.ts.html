@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>136/136</span>
+                <span class='fraction'>138/138</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>45/45</span>
+                <span class='fraction'>46/46</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>128/128</span>
+                <span class='fraction'>130/130</span>
             </div>
         
             
@@ -659,7 +659,23 @@
 <a name='L600'></a><a href='#L600'>600</a>
 <a name='L601'></a><a href='#L601'>601</a>
 <a name='L602'></a><a href='#L602'>602</a>
-<a name='L603'></a><a href='#L603'>603</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L603'></a><a href='#L603'>603</a>
+<a name='L604'></a><a href='#L604'>604</a>
+<a name='L605'></a><a href='#L605'>605</a>
+<a name='L606'></a><a href='#L606'>606</a>
+<a name='L607'></a><a href='#L607'>607</a>
+<a name='L608'></a><a href='#L608'>608</a>
+<a name='L609'></a><a href='#L609'>609</a>
+<a name='L610'></a><a href='#L610'>610</a>
+<a name='L611'></a><a href='#L611'>611</a>
+<a name='L612'></a><a href='#L612'>612</a>
+<a name='L613'></a><a href='#L613'>613</a>
+<a name='L614'></a><a href='#L614'>614</a>
+<a name='L615'></a><a href='#L615'>615</a>
+<a name='L616'></a><a href='#L616'>616</a>
+<a name='L617'></a><a href='#L617'>617</a>
+<a name='L618'></a><a href='#L618'>618</a>
+<a name='L619'></a><a href='#L619'>619</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -763,9 +779,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">34x</span>
-<span class="cline-any cline-yes">34x</span>
-<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">54x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1221,7 +1249,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1247,7 +1275,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
@@ -1302,6 +1334,11 @@ export interface TreeDataOptions&lt;TNode extends TreeDataNode&gt; {
    * @default 'DFS'
    */
   searchStrategy?: TreeDataSearchStrategy
+&nbsp;
+  /**
+   * 克隆数据时忽略的值。
+   */
+  cloneIgnore?: (value: unknown) =&gt; boolean | undefined
 }
 &nbsp;
 export interface TreeDataTraverseFnPayload&lt;TNode extends TreeDataNode&gt; {
@@ -1355,6 +1392,8 @@ export class TreeData&lt;TNode extends TreeDataNode&gt; {
 &nbsp;
   private searchStrategy: TreeDataSearchStrategy
 &nbsp;
+  private cloneIgnore: ((value: unknown) =&gt; boolean | undefined) | undefined
+&nbsp;
   /**
    * 构造函数。
    *
@@ -1365,9 +1404,14 @@ export class TreeData&lt;TNode extends TreeDataNode&gt; {
     data: TreeDataSingleRootData&lt;TNode&gt; | TreeDataMultipleRootData&lt;TNode&gt;,
     options: TreeDataOptions&lt;TNode&gt; = {},
   ) {
-    this.data = cloneDeepFast(Array.isArray(data) ? data : <span class="branch-1 cbranch-no" title="branch not covered" >[data])</span>
+    this.cloneIgnore = options?.cloneIgnore
+    this.data = this.cloneDeep(Array.isArray(data) ? data : <span class="branch-1 cbranch-no" title="branch not covered" >[data])</span>
     this.childrenPropName = options?.childrenPropName || ('children' as any)
     this.searchStrategy = options?.searchStrategy || 'DFS'
+  }
+&nbsp;
+  private cloneDeep&lt;T&gt;(value: T): T {
+    return cloneDeepFast(value, this.cloneIgnore)
   }
 &nbsp;
   /**
@@ -1823,7 +1867,7 @@ export class TreeData&lt;TNode extends TreeDataNode&gt; {
    * 导出数据。
    */
   export(): TreeDataData&lt;TNode&gt; {
-    return cloneDeepFast(this.data)
+    return this.cloneDeep(this.data)
   }
 &nbsp;
   /**
@@ -1834,7 +1878,7 @@ export class TreeData&lt;TNode extends TreeDataNode&gt; {
     this.traverse(payload =&gt; {
       list.push(payload.node)
     })
-    return cloneDeepFast(list)
+    return this.cloneDeep(list)
   }
 &nbsp;
   /**
@@ -1848,8 +1892,12 @@ export class TreeData&lt;TNode extends TreeDataNode&gt; {
     list: TItem[],
     idKey: keyof TItem,
     parentIdKey: keyof TItem,
+    cloneIgnore?: TreeDataOptions&lt;TItem&gt;['cloneIgnore'],
   ): TreeData&lt;TreeDataStandardNode&lt;TItem&gt;&gt; {
-    const _list: Array&lt;TreeDataStandardNode&lt;TItem&gt;&gt; = cloneDeepFast(list) as any
+    const _list: Array&lt;TreeDataStandardNode&lt;TItem&gt;&gt; = cloneDeepFast(
+      list,
+      cloneIgnore,
+    ) as any
     const data = _list
       .map(item =&gt; {
         item.children = _list.filter(
@@ -1870,7 +1918,7 @@ export class TreeData&lt;TNode extends TreeDataNode&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Dec 31 2020 02:12:16 GMT+0000 (Coordinated Universal Time)
+                at Sun Jan 03 2021 16:21:34 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
