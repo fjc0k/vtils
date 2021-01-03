@@ -39,6 +39,11 @@ export interface TreeDataOptions<TNode extends TreeDataNode> {
    * @default 'DFS'
    */
   searchStrategy?: TreeDataSearchStrategy
+
+  /**
+   * 克隆数据时忽略的值。
+   */
+  cloneIgnore?: (value: unknown) => boolean | undefined
 }
 
 export interface TreeDataTraverseFnPayload<TNode extends TreeDataNode> {
@@ -92,6 +97,8 @@ export class TreeData<TNode extends TreeDataNode> {
 
   private searchStrategy: TreeDataSearchStrategy
 
+  private cloneIgnore: ((value: unknown) => boolean | undefined) | undefined
+
   /**
    * 构造函数。
    *
@@ -102,9 +109,14 @@ export class TreeData<TNode extends TreeDataNode> {
     data: TreeDataSingleRootData<TNode> | TreeDataMultipleRootData<TNode>,
     options: TreeDataOptions<TNode> = {},
   ) {
-    this.data = cloneDeepFast(Array.isArray(data) ? data : [data])
+    this.cloneIgnore = options?.cloneIgnore
+    this.data = this.cloneDeep(Array.isArray(data) ? data : [data])
     this.childrenPropName = options?.childrenPropName || ('children' as any)
     this.searchStrategy = options?.searchStrategy || 'DFS'
+  }
+
+  private cloneDeep<T>(value: T): T {
+    return cloneDeepFast(value, this.cloneIgnore)
   }
 
   /**
@@ -560,7 +572,7 @@ export class TreeData<TNode extends TreeDataNode> {
    * 导出数据。
    */
   export(): TreeDataData<TNode> {
-    return cloneDeepFast(this.data)
+    return this.cloneDeep(this.data)
   }
 
   /**
@@ -571,7 +583,7 @@ export class TreeData<TNode extends TreeDataNode> {
     this.traverse(payload => {
       list.push(payload.node)
     })
-    return cloneDeepFast(list)
+    return this.cloneDeep(list)
   }
 
   /**
@@ -585,8 +597,12 @@ export class TreeData<TNode extends TreeDataNode> {
     list: TItem[],
     idKey: keyof TItem,
     parentIdKey: keyof TItem,
+    cloneIgnore?: TreeDataOptions<TItem>['cloneIgnore'],
   ): TreeData<TreeDataStandardNode<TItem>> {
-    const _list: Array<TreeDataStandardNode<TItem>> = cloneDeepFast(list) as any
+    const _list: Array<TreeDataStandardNode<TItem>> = cloneDeepFast(
+      list,
+      cloneIgnore,
+    ) as any
     const data = _list
       .map(item => {
         item.children = _list.filter(

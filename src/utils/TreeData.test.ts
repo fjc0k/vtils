@@ -236,6 +236,23 @@ describe('TreeData', () => {
     ).toMatchSnapshot()
   })
 
+  test('cloneIgnore', () => {
+    const x = { x: 1 }
+    expect(
+      new TreeData(
+        [
+          {
+            x,
+          },
+        ],
+        {
+          cloneIgnore: value =>
+            typeof value === 'object' && (value as any).x === 1,
+        },
+      ).export()[0].x,
+    ).toBe(x)
+  })
+
   // test('大数据', () => {
   //   const data = range(0, 1000).map(i => ({
   //     id: `${i}`,
