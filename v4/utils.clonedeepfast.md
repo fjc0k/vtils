@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function cloneDeepFast<T>(value: T): T;
+export declare function cloneDeepFast<T>(value: T, ignore?: (value: unknown) => boolean | undefined): T;
 ```
 
 ## Parameters
@@ -17,6 +17,7 @@ export declare function cloneDeepFast<T>(value: T): T;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T | 要克隆的值 |
+|  ignore | (value: unknown) =&gt; boolean \| undefined | 忽略的值 |
 
 <b>Returns:</b>
 

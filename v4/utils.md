@@ -36,7 +36,7 @@ rich://{"url":"***","desc":"***"}
 |  [base64UrlEncode(value)](./utils.base64urlencode.md) | 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。 |
 |  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
 |  [chooseFile(accept, multiple)](./utils.choosefile.md) | 选择文件。 |
-|  [cloneDeepFast(value)](./utils.clonedeepfast.md) | 深克隆快速版。 |
+|  [cloneDeepFast(value, ignore)](./utils.clonedeepfast.md) | 深克隆快速版。 |
 |  [constantCase(text)](./utils.constantcase.md) | 转换文本为大写字符串，单词之间带有下划线。 |
 |  [copyTextToClipboard(text)](./utils.copytexttoclipboard.md) | 复制文本到剪切板。 |
 |  [createSubmit(options)](./utils.createsubmit.md) | 创建提交类行为。 |

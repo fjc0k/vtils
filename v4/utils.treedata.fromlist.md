@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-static fromList<TItem extends Record<any, any>>(list: TItem[], idKey: keyof TItem, parentIdKey: keyof TItem): TreeData<TreeDataStandardNode<TItem>>;
+static fromList<TItem extends Record<any, any>>(list: TItem[], idKey: keyof TItem, parentIdKey: keyof TItem, cloneIgnore?: TreeDataOptions<TItem>['cloneIgnore']): TreeData<TreeDataStandardNode<TItem>>;
 ```
 
 ## Parameters
@@ -19,6 +19,7 @@ static fromList<TItem extends Record<any, any>>(list: TItem[], idKey: keyof TIte
 |  list | TItem\[\] | 列表 |
 |  idKey | keyof TItem | ID 所在键 |
 |  parentIdKey | keyof TItem | 父 ID 所在键 |
+|  cloneIgnore | [TreeDataOptions](./utils.treedataoptions.md)<!-- -->&lt;TItem&gt;\['cloneIgnore'\] |  |
 
 <b>Returns:</b>
 
