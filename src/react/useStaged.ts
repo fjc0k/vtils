@@ -5,15 +5,33 @@ import { useStateWithDeps } from './useStateWithDeps'
 /**
  * 暂存状态。
  */
-export function useStaged<T extends any, F extends (value: T) => void>(
+export function useStaged<T>(
   value: T,
-  setValue: F,
-): [T, F, () => void] {
+  setValue: (value: T) => void,
+): [
+  T,
+  {
+    set: (value: T) => void
+    commit: () => void
+    reset: () => void
+  },
+] {
   const [stagedState, setStagedState] = useStateWithDeps(value, [value])
+  const valueRef = useLatest(value)
   const setValueRef = useLatest(setValue)
   const stagedStateRef = useLatest(stagedState)
   const commitStagedState = useCallback(() => {
     setValueRef.current(stagedStateRef.current)
   }, [])
-  return [stagedState, setStagedState, commitStagedState] as any
+  const resetStagedState = useCallback(() => {
+    setStagedState(valueRef.current)
+  }, [])
+  return [
+    stagedState,
+    {
+      set: setStagedState,
+      commit: commitStagedState,
+      reset: resetStagedState,
+    },
+  ]
 }
