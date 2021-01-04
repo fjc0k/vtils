@@ -9,7 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function useStaged<T extends any, F extends (value: T) => void>(value: T, setValue: F): [T, F, () => void];
+export declare function useStaged<T>(value: T, setValue: (value: T) => void): [
+    T,
+    {
+        set: (value: T) => void;
+        commit: () => void;
+        reset: () => void;
+    }
+];
 ```
 
 ## Parameters
@@ -17,9 +24,9 @@ export declare function useStaged<T extends any, F extends (value: T) => void>(v
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T |  |
-|  setValue | F |  |
+|  setValue | (value: T) =&gt; void |  |
 
 <b>Returns:</b>
 
-\[T, F, () =&gt; void\]
+\[ T, { set: (value: T) =&gt; void; commit: () =&gt; void; reset: () =&gt; void; } \]
 
