@@ -54,10 +54,7 @@ export function renderComponent<TComponent extends React.ComponentType<any>>(
   let destroy!: () => void
 
   const prepareProps = (props: Partial<React.ComponentProps<TComponent>>) => {
-    props = {
-      key: Date.now(),
-      ...props,
-    }
+    props = { ...props }
     if (injectCallbacks) {
       for (const key of Object.keys(injectCallbacks)) {
         const originalCallback = props[key]
@@ -115,9 +112,12 @@ export function renderComponent<TComponent extends React.ComponentType<any>>(
     }
   }
 
-  render(initialProps)
+  let incrementalProps: React.ComponentProps<TComponent> = {
+    key: Date.now(),
+    ...initialProps,
+  }
 
-  let incrementalProps: React.ComponentProps<TComponent> = { ...initialProps }
+  render(incrementalProps)
 
   return {
     incrementalRerender(props: Partial<React.ComponentProps<TComponent>>) {
