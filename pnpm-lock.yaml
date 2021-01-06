@@ -33,7 +33,7 @@ devDependencies:
   eslint: registry.npm.taobao.org/eslint/7.17.0
   execa: registry.npm.taobao.org/execa/5.0.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.0.1
-  globby: registry.npm.taobao.org/globby/11.0.1
+  globby: registry.npm.taobao.org/globby/11.0.2
   haoma: registry.npm.taobao.org/haoma/2.23.2_aad36e32185aeb4bae328fdc2df98aa5
   husky: registry.npm.taobao.org/husky/5.0.6
   ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.0_ioredis@4.19.4
@@ -2472,7 +2472,7 @@ packages:
     resolution:
       integrity: sha1-ARuSAqcKY2bkNspcBlhEUoqwSXY=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@nodelib/fs.walk/download/@nodelib/fs.walk-1.2.4.tgz'
+      tarball: 'https://registry.npm.taobao.org/@nodelib/fs.walk/download/@nodelib/fs.walk-1.2.4.tgz?cache=0&sync_timestamp=1609938482818&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40nodelib%2Ffs.walk%2Fdownload%2F%40nodelib%2Ffs.walk-1.2.4.tgz'
     version: 1.2.4
   registry.npm.taobao.org/@rushstack/node-core-library/3.35.2:
     dependencies:
@@ -7725,6 +7725,23 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/globby/download/globby-11.0.1.tgz'
     version: 11.0.1
+  registry.npm.taobao.org/globby/11.0.2:
+    dependencies:
+      array-union: registry.npm.taobao.org/array-union/2.1.0
+      dir-glob: registry.npm.taobao.org/dir-glob/3.0.1
+      fast-glob: registry.npm.taobao.org/fast-glob/3.2.4
+      ignore: registry.npm.taobao.org/ignore/5.1.8
+      merge2: registry.npm.taobao.org/merge2/1.4.1
+      slash: registry.npm.taobao.org/slash/3.0.0
+    dev: true
+    engines:
+      node: '>=10'
+    name: globby
+    resolution:
+      integrity: sha1-GvU4t2ajtUDr+1ijKy4tWJcyHYM=
+      registry: 'https://r.npm.taobao.org/'
+      tarball: 'https://registry.npm.taobao.org/globby/download/globby-11.0.2.tgz?cache=0&sync_timestamp=1609938497743&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fglobby%2Fdownload%2Fglobby-11.0.2.tgz'
+    version: 11.0.2
   registry.npm.taobao.org/graceful-fs/4.2.4:
     dev: true
     name: graceful-fs
@@ -15890,7 +15907,7 @@ specifiers:
   execa: 5.0.0
   fast-xml-parser: ^3.17.5
   fs-extra: 9.0.1
-  globby: 11.0.1
+  globby: 11.0.2
   haoma: 2.23.2
   husky: 5.0.6
   ioredis: ^4.19.4
