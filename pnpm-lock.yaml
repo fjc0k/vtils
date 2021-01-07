@@ -17,7 +17,7 @@ devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.12.2
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.12.1
   '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.22
-  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.2.2_react-dom@17.0.1+react@17.0.1
+  '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.2.3_react-dom@17.0.1+react@17.0.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.7.0_react@17.0.1
   '@types/benchmark': registry.npm.taobao.org/@types/benchmark/2.1.0
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.6
@@ -2709,7 +2709,7 @@ packages:
     version: 3.0.22
   registry.npm.taobao.org/@testing-library/dom/7.28.1:
     dependencies:
-      '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
+      '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.12.11
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.12.5
       '@types/aria-query': registry.npm.taobao.org/@types/aria-query/4.2.0
       aria-query: registry.npm.taobao.org/aria-query/4.2.2
@@ -2763,7 +2763,7 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@testing-library/react-hooks/download/@testing-library/react-hooks-3.7.0.tgz'
     version: 3.7.0
-  registry.npm.taobao.org/@testing-library/react/11.2.2_react-dom@17.0.1+react@17.0.1:
+  registry.npm.taobao.org/@testing-library/react/11.2.3_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.12.5
       '@testing-library/dom': registry.npm.taobao.org/@testing-library/dom/7.28.1
@@ -2772,16 +2772,16 @@ packages:
     dev: true
     engines:
       node: '>=10'
-    id: registry.npm.taobao.org/@testing-library/react/11.2.2
+    id: registry.npm.taobao.org/@testing-library/react/11.2.3
     name: '@testing-library/react'
     peerDependencies:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha1-CZxsGVFA/waSERQ8sxwPgze9t7c=
+      integrity: sha1-mXHt4chGWiMdeYLuyjw5/DYtVEM=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@testing-library/react/download/@testing-library/react-11.2.2.tgz'
-    version: 11.2.2
+      tarball: 'https://registry.npm.taobao.org/@testing-library/react/download/@testing-library/react-11.2.3.tgz'
+    version: 11.2.3
   registry.npm.taobao.org/@tokenizer/token/0.1.1:
     dev: true
     name: '@tokenizer/token'
@@ -15886,7 +15886,7 @@ specifiers:
   '@microsoft/api-documenter': 7.12.2
   '@microsoft/api-extractor': 7.12.1
   '@tarojs/taro': 3.0.22
-  '@testing-library/react': 11.2.2
+  '@testing-library/react': 11.2.3
   '@testing-library/react-hooks': 3.7.0
   '@types/benchmark': 2.1.0
   '@types/fs-extra': 9.0.6
