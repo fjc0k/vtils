@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.17.0](https://github.com/fjc0k/vtils/compare/v4.16.1...v4.17.0) (2021-01-08)
+
+
+### Features
+
+* **utils:** 新增 ii 立即调用函数并返回其返回值 ([362ccd3](https://github.com/fjc0k/vtils/commit/362ccd3895d0388e8caf6338b3ce898dce2d4665))
+* **utils:** 新增 pMap ([449332d](https://github.com/fjc0k/vtils/commit/449332dfb1392cdf0995677e6dc7719c2444bdca))
+
 ### [4.16.1](https://github.com/fjc0k/vtils/compare/v4.16.0...v4.16.1) (2021-01-04)
 
 
