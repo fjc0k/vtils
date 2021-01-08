@@ -16,7 +16,7 @@ dependencies:
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.12.2
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.12.1
-  '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.22
+  '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.23
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.2.3_react-dom@17.0.1+react@17.0.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.7.0_react@17.0.1
   '@types/benchmark': registry.npm.taobao.org/@types/benchmark/2.1.0
@@ -2646,44 +2646,44 @@ packages:
       registry: 'https://r.npm.taobao.org/'
       tarball: 'https://registry.npm.taobao.org/@swc/core/download/@swc/core-1.2.40.tgz'
     version: 1.2.40
-  registry.npm.taobao.org/@tarojs/api/3.0.22:
+  registry.npm.taobao.org/@tarojs/api/3.0.23:
     dependencies:
-      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.22
+      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.23
     dev: true
     name: '@tarojs/api'
     resolution:
-      integrity: sha1-lku+5sDUoiWeICNxRbOljnPabog=
+      integrity: sha1-YZzXKt9BuwAQ4cG7Xypc9iPDcHA=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/api/download/@tarojs/api-3.0.22.tgz'
-    version: 3.0.22
-  registry.npm.taobao.org/@tarojs/router/3.0.22:
+      tarball: 'https://registry.npm.taobao.org/@tarojs/api/download/@tarojs/api-3.0.23.tgz?cache=0&sync_timestamp=1610096488833&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Fapi%2Fdownload%2F%40tarojs%2Fapi-3.0.23.tgz'
+    version: 3.0.23
+  registry.npm.taobao.org/@tarojs/router/3.0.23:
     dependencies:
-      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.22
+      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.23
       history: registry.npm.taobao.org/history/4.10.1
       universal-router: registry.npm.taobao.org/universal-router/8.3.0
       url-parse: registry.npm.taobao.org/url-parse/1.4.7
     dev: true
     name: '@tarojs/router'
     resolution:
-      integrity: sha1-jyz/KRuZSN5pus+AchHlXt2PRIs=
+      integrity: sha1-6DXPQaoEltxnFTpQ47GnQ23mDas=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/router/download/@tarojs/router-3.0.22.tgz'
-    version: 3.0.22
-  registry.npm.taobao.org/@tarojs/runtime/3.0.22:
+      tarball: 'https://registry.npm.taobao.org/@tarojs/router/download/@tarojs/router-3.0.23.tgz?cache=0&sync_timestamp=1610096490805&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Frouter%2Fdownload%2F%40tarojs%2Frouter-3.0.23.tgz'
+    version: 3.0.23
+  registry.npm.taobao.org/@tarojs/runtime/3.0.23:
     dependencies:
       lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
     dev: true
     name: '@tarojs/runtime'
     resolution:
-      integrity: sha1-mrsL8IxuRbKqhqkQV6SUBav4BwE=
+      integrity: sha1-kbFF9OSdwTPkImGlmoBOyqXBMp8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/runtime/download/@tarojs/runtime-3.0.22.tgz'
-    version: 3.0.22
-  registry.npm.taobao.org/@tarojs/taro-h5/3.0.22:
+      tarball: 'https://registry.npm.taobao.org/@tarojs/runtime/download/@tarojs/runtime-3.0.23.tgz'
+    version: 3.0.23
+  registry.npm.taobao.org/@tarojs/taro-h5/3.0.23:
     dependencies:
-      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.22
-      '@tarojs/router': registry.npm.taobao.org/@tarojs/router/3.0.22
-      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.22
+      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.23
+      '@tarojs/router': registry.npm.taobao.org/@tarojs/router/3.0.23
+      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.23
       base64-js: registry.npm.taobao.org/base64-js/1.5.1
       jsonp-retry: registry.npm.taobao.org/jsonp-retry/1.0.3
       mobile-detect: registry.npm.taobao.org/mobile-detect/1.4.4
@@ -2692,21 +2692,21 @@ packages:
     dev: true
     name: '@tarojs/taro-h5'
     resolution:
-      integrity: sha1-w0bAer6/R9HMrdeBRT6SZFNkQ6A=
+      integrity: sha1-42h8Qci4Z29z4ZUbwseWSMjsYA8=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/taro-h5/download/@tarojs/taro-h5-3.0.22.tgz'
-    version: 3.0.22
-  registry.npm.taobao.org/@tarojs/taro/3.0.22:
+      tarball: 'https://registry.npm.taobao.org/@tarojs/taro-h5/download/@tarojs/taro-h5-3.0.23.tgz?cache=0&sync_timestamp=1610096488269&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Ftaro-h5%2Fdownload%2F%40tarojs%2Ftaro-h5-3.0.23.tgz'
+    version: 3.0.23
+  registry.npm.taobao.org/@tarojs/taro/3.0.23:
     dependencies:
-      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.22
-      '@tarojs/taro-h5': registry.npm.taobao.org/@tarojs/taro-h5/3.0.22
+      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.23
+      '@tarojs/taro-h5': registry.npm.taobao.org/@tarojs/taro-h5/3.0.23
     dev: true
     name: '@tarojs/taro'
     resolution:
-      integrity: sha1-5ZJrYIec8HD0JBRTnZ54V0eDwgY=
+      integrity: sha1-8eko5ii3WQ70iWc6H848/fWY5rA=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.0.22.tgz'
-    version: 3.0.22
+      tarball: 'https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.0.23.tgz?cache=0&sync_timestamp=1610096422622&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Ftaro%2Fdownload%2F%40tarojs%2Ftaro-3.0.23.tgz'
+    version: 3.0.23
   registry.npm.taobao.org/@testing-library/dom/7.28.1:
     dependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.12.11
@@ -15885,7 +15885,7 @@ specifiers:
   '@babel/runtime': ^7.12.5
   '@microsoft/api-documenter': 7.12.2
   '@microsoft/api-extractor': 7.12.1
-  '@tarojs/taro': 3.0.22
+  '@tarojs/taro': 3.0.23
   '@testing-library/react': 11.2.3
   '@testing-library/react-hooks': 3.7.0
   '@types/benchmark': 2.1.0
