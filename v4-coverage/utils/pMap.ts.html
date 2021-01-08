@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for mp/getCurrentPageQuery.ts</title>
+    <title>Code coverage report for utils/pMap.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">mp</a> getCurrentPageQuery.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> pMap.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -77,10 +77,7 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -94,37 +91,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/// &lt;reference types="miniprogram-api-typings" /&gt;
-import { AnyObject } from '../types'
-import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { last, mapValues } from '../utils'
-&nbsp;
-/**
- * 获取当前页面的查询参数，已经对每个值执行了 decodeURIComponent。
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * `Promise.all(data.map(callback))` 的简写。
  *
- * @param pageInstance 页面实例，默认当前页面
- * @returns 返回当前页面的查询参数
+ * @param list 列表数据
+ * @param callback 回调
+ * @example
+ * ```typescript
+ * const res = await pMap(
+ *   [1, 2],
+ *   i =&gt; Promise.resolve(i),
+ * )
+ * // =&gt; [1, 2]
+ * ```
  */
-export function getCurrentPageQuery&lt;
-  T extends Record&lt;string, string | undefined&gt;
-&gt;(pageInstance?: WechatMiniprogram.Page.Instance&lt;AnyObject, AnyObject&gt;): T {
-  return ensureInMiniProgram(() =&gt; {
-    pageInstance = pageInstance || last(getCurrentPages())!
-    const query = mapValues(
-      pageInstance.options || <span class="branch-1 cbranch-no" title="branch not covered" >{},</span>
-      value =&gt; value &amp;&amp; decodeURIComponent(value),
-    )
-    return (query as any) as T
-  })
+export function pMap&lt;T, R&gt;(
+  list: T[],
+  callback: (item: T, index: number, list: T[]) =&gt; R | PromiseLike&lt;R&gt;,
+): Promise&lt;R[]&gt; {
+  return Promise.all(list.map(callback))
 }
 &nbsp;</pre></td></tr></table></pre>
 
