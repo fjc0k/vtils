@@ -46,6 +46,7 @@ rich://{"url":"***","desc":"***"}
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
 |  [getEnvironment()](./utils.getenvironment.md) | 获取运行环境信息。 |
 |  [getWechatPublicAccountQrcodeUrl(accountId)](./utils.getwechatpublicaccountqrcodeurl.md) | 获取微信公众号的二维码链接。 |
+|  [ii(fn)](./utils.ii.md) | 立即调用函数并返回其返回值。<!-- -->注：<code>ii = immediately invoke</code> |
 |  [inAndroid()](./utils.inandroid.md) | 检查是否在 Android 设备中。 |
 |  [inBrowser()](./utils.inbrowser.md) | 检查是否在浏览器环境中。 |
 |  [inDeno()](./utils.indeno.md) | 检查是否在 Deno 中。 |
@@ -72,6 +73,7 @@ rich://{"url":"***","desc":"***"}
 |  [pascalCase(text)](./utils.pascalcase.md) | 转换文本为没有分隔符的大写单词字符串。 |
 |  [placeKitten(size)](./utils.placekitten.md) | 给定大小获取占位猫咪图片。 |
 |  [placeKitten(width, height)](./utils.placekitten_1.md) | 给定宽高获取占位猫咪图片。 |
+|  [pMap(list, callback)](./utils.pmap.md) | <code>Promise.all(data.map(callback))</code> 的简写。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
 |  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
 |  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
