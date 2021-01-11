@@ -8,6 +8,7 @@ dependencies:
   ioredis: registry.npm.taobao.org/ioredis/4.19.4
   lodash-uni: registry.npm.taobao.org/lodash-uni/1.1.0
   miniprogram-api-typings: registry.npm.taobao.org/miniprogram-api-typings/3.2.0
+  nanoid: registry.npm.taobao.org/nanoid/3.1.20
   react-use: registry.npm.taobao.org/react-use/15.3.4_react-dom@17.0.1+react@17.0.1
   tough-cookie: registry.npm.taobao.org/tough-cookie/4.0.0
   tough-cookie-redisstore: registry.npm.taobao.org/tough-cookie-redisstore/0.0.4
@@ -11083,7 +11084,6 @@ packages:
       tarball: 'https://registry.npm.taobao.org/nano-css/download/nano-css-5.3.0.tgz'
     version: 5.3.0
   registry.npm.taobao.org/nanoid/3.1.20:
-    dev: true
     engines:
       node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1
     hasBin: true
@@ -11091,7 +11091,7 @@ packages:
     resolution:
       integrity: sha1-utwmPGsdzxS3HvqoX2q0wdbPx4g=
       registry: 'https://r.npm.taobao.org/'
-      tarball: 'https://registry.npm.taobao.org/nanoid/download/nanoid-3.1.20.tgz?cache=0&sync_timestamp=1608185820210&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnanoid%2Fdownload%2Fnanoid-3.1.20.tgz'
+      tarball: 'https://registry.npm.taobao.org/nanoid/download/nanoid-3.1.20.tgz'
     version: 3.1.20
   registry.npm.taobao.org/nanomatch/1.2.13:
     dependencies:
@@ -15916,6 +15916,7 @@ specifiers:
   lint-staged: 10.5.3
   lodash-uni: ^1.1.0
   miniprogram-api-typings: ^3.2.0
+  nanoid: ^3.1.20
   open-cli: 6.0.1
   prettier: 2.2.1
   prompts: 2.4.0

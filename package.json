@@ -103,6 +103,7 @@
     "ioredis": "^4.19.4",
     "lodash-uni": "^1.1.0",
     "miniprogram-api-typings": "^3.2.0",
+    "nanoid": "^3.1.20",
     "react-use": "^15.3.4",
     "tough-cookie": "^4.0.0",
     "tough-cookie-redisstore": "^0.0.4",
