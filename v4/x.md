@@ -19,6 +19,7 @@
 |  --- | --- |
 |  [createXml(data, options)](./x.createxml.md) | 创建 XML 文本。 |
 |  [cuid()](./x.cuid.md) | 生成 CUID。 |
+|  [nanoid(size)](./x.nanoid.md) | 生成一个 \[nanoid\](https://github.com/ai/nanoid/)。 |
 |  [parseXml(text, options)](./x.parsexml.md) | 解析 XML 文本。 |
 |  [sha1(value)](./x.sha1.md) | 获取给定值的 sha1 哈希。 |
 |  [uuid()](./x.uuid.md) | 生成 RFC4122 V4 版本的 UUID。 |
