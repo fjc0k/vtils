@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.18.0](https://github.com/fjc0k/vtils/compare/v4.17.0...v4.18.0) (2021-01-11)
+
+
+### Features
+
+* **x:** 新增 nanoid ([c601213](https://github.com/fjc0k/vtils/commit/c6012131268ce5d477a69ed42ee6d438c1d53b21))
+
 ## [4.17.0](https://github.com/fjc0k/vtils/compare/v4.16.1...v4.17.0) (2021-01-08)
 
 
