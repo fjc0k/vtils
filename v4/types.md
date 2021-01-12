@@ -36,6 +36,8 @@
 |  [Class](./types.class.md) | Matches a \[<code>class</code> constructor\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). |
 |  [Defined](./types.defined.md) | 去除类型 T 中的 undefined。 |
 |  [DelimiterCase](./types.delimitercase.md) | Convert a string literal to a custom string delimiter casing.<!-- -->This can be useful when, for example, converting a camel-cased object property to an oddly cased one. |
+|  [DotPath](./types.dotpath.md) |  |
+|  [DotPathValue](./types.dotpathvalue.md) |  |
 |  [ElementOf](./types.elementof.md) | Easily extract the type of a given array's elements |
 |  [FirstParameter](./types.firstparameter.md) | 返回函数 T 第一个参数的类型。 |
 |  [FixedLengthArray](./types.fixedlengtharray.md) | Create a type that represents an array of the given type and length. The array's length and the <code>Array</code> prototype methods that manipulate its length are excluded in the resulting type.<!-- -->Please participate in \[this issue\](https://github.com/microsoft/TypeScript/issues/26223) if you want to have a similiar type built into TypeScript.<!-- -->Use-cases: - Declaring fixed-length tuples or arrays with a large number of items. - Creating a range union (for example, <code>0 &#124; 1 &#124; 2 &#124; 3 &#124; 4</code> from the keys of such a type) without having to resort to recursive types. - Creating an array of coordinates with a static length, for example, length of 3 for a 3D vector. |
