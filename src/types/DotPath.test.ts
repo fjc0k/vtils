@@ -1,7 +1,7 @@
+import { DotPath, DotPathValue } from './DotPath'
 import { expectType } from '../dev'
-import { Path, PathValue } from './Path'
 
-describe('Path', () => {
+describe('DotPath', () => {
   test('表现正常', () => {
     const obj = {
       x: {
@@ -12,14 +12,17 @@ describe('Path', () => {
       },
     }
     // eslint-disable-next-line
-    function get<T, L extends Path<T, L>>(object: T, path: L): PathValue<T, L> {
+    function get<T, P extends DotPath<T>>(
+      _object: T,
+      _path: P,
+    ): DotPathValue<T, P> {
       return 1 as any
     }
 
-    const xyz1 = get(obj, ['x', 'y', 'z', '1'])
+    const xyz1 = get(obj, 'x.y.z.1')
     expectType<typeof xyz1, '1'>()
 
-    const xyz哈哈 = get(obj, ['x', 'y', '哈哈'])
+    const xyz哈哈 = get(obj, 'x.y.哈哈')
     expectType<typeof xyz哈哈, number>()
   })
 })
