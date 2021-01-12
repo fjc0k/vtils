@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.19.0](https://github.com/fjc0k/vtils/compare/v4.18.0...v4.19.0) (2021-01-12)
+
+
+### Features
+
+* **types:** 新增 DotPath ([2417103](https://github.com/fjc0k/vtils/commit/24171035335b3214981f4a5bc571e36e6d37ae72))
+
 ## [4.18.0](https://github.com/fjc0k/vtils/compare/v4.17.0...v4.18.0) (2021-01-11)
 
 
