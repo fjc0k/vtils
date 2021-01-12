@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for mp/usePullDownRefresh.ts</title>
+    <title>Code coverage report for types/DotPath.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">mp</a> usePullDownRefresh.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">types</a> DotPath.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
@@ -77,49 +77,46 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { isPromiseLike } from '../utils'
-import { miniProgramBus } from './miniProgramBus'
-import { useEffect } from 'react'
-import { useLatest } from '../react'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// ref: https://github.com/ahejlsberg/tsconf2020-demos/blob/master/template/main.ts#L108
+type SubKeys&lt;T, K extends string&gt; = K extends keyof T
+  ? `${K}.${DotPath&lt;T[K]&gt;}`
+  : never
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >usePullDownRefresh(</span>callback: () =&gt; any): void {
-  const latestCallback = <span class="cstat-no" title="statement not covered" >useLatest(callback)</span>
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    return miniProgramBus.on('currentPagePullDownRefresh', <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      ensureInMiniProgram(<span class="fstat-no" title="function not covered" >mp</span> =&gt; {</span>
-        const res = <span class="cstat-no" title="statement not covered" >latestCallback.current()</span>
-<span class="cstat-no" title="statement not covered" >        if (isPromiseLike(res)) {</span>
-<span class="cstat-no" title="statement not covered" >          res.then(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >mp.stopPullDownRefresh())</span></span>
-        } else {
-<span class="cstat-no" title="statement not covered" >          mp.stopPullDownRefresh()</span>
-        }
-      })
-    })
-  }, [])
-}
+export type DotPath&lt;T&gt; = object extends T
+  ? string
+  : T extends readonly any[]
+  ? Extract&lt;keyof T, `${number}`&gt; | SubKeys&lt;T, Extract&lt;keyof T, `${number}`&gt;&gt;
+  : T extends object
+  ? Extract&lt;keyof T, string&gt; | SubKeys&lt;T, Extract&lt;keyof T, string&gt;&gt;
+  : never
+&nbsp;
+export type DotPathValue&lt;T, Path extends string&gt; = Path extends keyof T
+  ? T[Path]
+  : Path extends `${infer K}.${infer R}`
+  ? K extends keyof T
+    ? DotPathValue&lt;T[K], R&gt;
+    : unknown
+  : unknown
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
