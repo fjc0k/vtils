@@ -49,6 +49,7 @@
 |  [KebabCase](./types.kebabcase.md) | Convert a string literal to kebab-case.<!-- -->This can be useful when, for example, converting a camel-cased object property to a kebab-cased CSS class name or a command-line flag. |
 |  [LiteralUnion](./types.literalunion.md) | Allows creating a union type by combining primitive types and literal types without sacrificing auto-completion in IDEs for the literal type part of the union.<!-- -->Currently, when a union type of a primitive type is combined with literal types, TypeScript loses all information about the combined literals. Thus, when such type is used in an IDE with autocompletion, no suggestions are made for the declared literals.<!-- -->This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com/Microsoft/TypeScript/issues/29729). It will be removed as soon as it's not needed anymore. |
 |  [Merge](./types.merge.md) | Merge 2 types, properties types from the latter override the ones defined on the former type |
+|  [NonEmptyArray](./types.nonemptyarray.md) | 非空数组类型。 |
 |  [NonNullableDeep](./types.nonnullabledeep.md) | Like NonNullable but recursive |
 |  [NullableDeep](./types.nullabledeep.md) | Recursive nullable |
 |  [OmitBy](./types.omitby.md) | Omit all properties of given type in object type |
