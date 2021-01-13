@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.21.0](https://github.com/fjc0k/vtils/compare/v4.20.0...v4.21.0) (2021-01-13)
+
+
+### Features
+
+* **createGlobalState:** 添加 watchStateImmediate ([5452019](https://github.com/fjc0k/vtils/commit/54520199f3dfe88351aa7702033b8ff88443024f))
+
 ## [4.20.0](https://github.com/fjc0k/vtils/compare/v4.19.0...v4.20.0) (2021-01-13)
 
 
