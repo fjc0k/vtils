@@ -61,6 +61,7 @@ export * from './DotPath'
 export * from './FirstParameter'
 export * from './IsAny'
 export * from './IsNever'
+export * from './NonEmptyArray'
 export * from './OneOrMore'
 export * from './Path'
 // @endindex
