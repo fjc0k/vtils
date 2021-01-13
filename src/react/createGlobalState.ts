@@ -24,6 +24,7 @@ export interface CreateGlobalStateResult<
   getState(): S
   setState(nextState: SetStateAction<S>): void
   watchState(callback: (nextState: S, prevState: S) => any): () => void
+  watchStateImmediate(callback: (nextState: S, prevState: S) => any): () => void
 }
 
 export function createGlobalState<S extends CreateGlobalStateState, R = never>(
@@ -80,6 +81,15 @@ export function createGlobalState<S extends CreateGlobalStateState, R = never>(
   ) => () => void = callback => {
     return bus.on('setGlobalState', callback)
   }
+  const watchGlobalStateImmediate: (
+    callback: (
+      nextGlobalState: S | undefined,
+      prevGlobalState: S | undefined,
+    ) => any,
+  ) => () => void = callback => {
+    callback(initialState, undefined)
+    return bus.on('setGlobalState', callback)
+  }
   const useCustomResult = typeof customResult === 'function'
   const useGlobalState: CreateGlobalStateResult<S | undefined, R> = (() => {
     const [state, setState] = useState(currentGlobalState)
@@ -94,5 +104,6 @@ export function createGlobalState<S extends CreateGlobalStateState, R = never>(
   useGlobalState.getState = getGlobalState
   useGlobalState.setState = setGlobalState
   useGlobalState.watchState = watchGlobalState
+  useGlobalState.watchStateImmediate = watchGlobalStateImmediate
   return useGlobalState
 }

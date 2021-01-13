@@ -33,6 +33,18 @@ describe('createGlobalState', () => {
         expect(cb).toBeCalled().toBeCalledTimes(2).toBeCalledWith('Jay2', 'Jay')
       })
 
+      test('watchStateImmediate 正常', () => {
+        const cb = jest.fn()
+        const off = useGlobalName.watchStateImmediate(cb)
+        expect(cb).toBeCalled().toBeCalledTimes(1).toBeCalledWith('', undefined)
+        useGlobalName.setState('Jay')
+        expect(cb).toBeCalled().toBeCalledTimes(2).toBeCalledWith('Jay', '')
+        useGlobalName.setState('Jay2')
+        expect(cb).toBeCalled().toBeCalledTimes(3).toBeCalledWith('Jay2', 'Jay')
+        off()
+        expect(cb).toBeCalled().toBeCalledTimes(3).toBeCalledWith('Jay2', 'Jay')
+      })
+
       test('跨组件状态共享正常', () => {
         const { result: result1 } = renderHook(() => useGlobalName())
         const { result: result2 } = renderHook(() => useGlobalName())
