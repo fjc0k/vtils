@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.20.0](https://github.com/fjc0k/vtils/compare/v4.19.0...v4.20.0) (2021-01-13)
+
+
+### Features
+
+* **types:** 新增 NonEmptyArray 非空数组类型 ([cecf602](https://github.com/fjc0k/vtils/commit/cecf6020e906a5499dcb17e7221f0924cc6a30fa))
+
 ## [4.19.0](https://github.com/fjc0k/vtils/compare/v4.18.0...v4.19.0) (2021-01-12)
 
 
