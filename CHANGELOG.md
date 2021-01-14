@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.22.0](https://github.com/fjc0k/vtils/compare/v4.21.0...v4.22.0) (2021-01-14)
+
+
+### Features
+
+* **utils:** 新增 ListWrapper 列表打包器 ([54644fb](https://github.com/fjc0k/vtils/commit/54644fbe85e342d5ab557ba6d2215bd166718a0d))
+
 ## [4.21.0](https://github.com/fjc0k/vtils/compare/v4.20.0...v4.21.0) (2021-01-13)
 
 
