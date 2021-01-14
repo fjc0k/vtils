@@ -9,21 +9,15 @@
 <b>Signature:</b>
 
 ```typescript
-export declare class ListWrapper<TItem> 
+export declare class ListWrapper 
 ```
-
-## Constructors
-
-|  Constructor | Modifiers | Description |
-|  --- | --- | --- |
-|  [(constructor)(list)](./utils.listwrapper._constructor_.md) |  | Constructs a new instance of the <code>ListWrapper</code> class |
 
 ## Methods
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [unwrap()](./utils.listwrapper.unwrap.md) |  | 解包结构化列表数据。 |
+|  [unwrap(wrappedList)](./utils.listwrapper.unwrap.md) | <code>static</code> | 解包结构化列表数据。 |
 |  [unwrapIfNeeded(value, depth)](./utils.listwrapper.unwrapifneeded.md) | <code>static</code> | 如果是打包后的列表数据，则解包后返回，否则直接返回。如果是对象，则递归尝试解包。 |
-|  [wrap()](./utils.listwrapper.wrap.md) |  | 打包结构化列表数据。 |
-|  [wrapAsRawType()](./utils.listwrapper.wrapasrawtype.md) |  | 返回结果同 <code>wrap()</code>，不过类型是原列表的类型。 |
+|  [wrap(rawList)](./utils.listwrapper.wrap.md) | <code>static</code> | 打包结构化列表数据。 |
+|  [wrapAsRawType(rawList)](./utils.listwrapper.wrapasrawtype.md) | <code>static</code> | 返回结果同 <code>wrap()</code>，不过类型是原列表的类型。 |
 

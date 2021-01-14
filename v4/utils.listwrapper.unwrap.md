@@ -9,8 +9,15 @@
 <b>Signature:</b>
 
 ```typescript
-unwrap(): RawList<TItem>;
+static unwrap<TItem>(wrappedList: WrappedList<TItem>): RawList<TItem>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  wrappedList | [WrappedList](./utils.wrappedlist.md)<!-- -->&lt;TItem&gt; |  |
+
 <b>Returns:</b>
 
 [RawList](./utils.rawlist.md)<!-- -->&lt;TItem&gt;
