@@ -11,6 +11,7 @@
 |  Class | Description |
 |  --- | --- |
 |  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TListeners 事件名称及其对应的回调描述 |
+|  [ListWrapper](./utils.listwrapper.md) | 列表打包器。 |
 |  [RichUrl](./utils.richurl.md) | 富链接，同普通链接相比，富链接可包含一些描述信息。<!-- -->结构描述：
 ```text
 rich://{"url":"***","desc":"***"}
@@ -108,6 +109,7 @@ rich://{"url":"***","desc":"***"}
 |  [WechatRequestPaymentParams](./utils.wechatrequestpaymentparams.md) |  |
 |  [WechatUpdateShareDataParams](./utils.wechatupdatesharedataparams.md) |  |
 |  [WechatUploadImageParams](./utils.wechatuploadimageparams.md) |  |
+|  [WrappedList](./utils.wrappedlist.md) |  |
 
 ## Namespaces
 
@@ -139,6 +141,7 @@ rich://{"url":"***","desc":"***"}
 |  [EventBusOffListener](./utils.eventbusofflistener.md) |  |
 |  [MiniProgramApi](./utils.miniprogramapi.md) |  |
 |  [MiniProgramBrand](./utils.miniprogrambrand.md) |  |
+|  [RawList](./utils.rawlist.md) |  |
 |  [TreeDataChildrenPropName](./utils.treedatachildrenpropname.md) |  |
 |  [TreeDataData](./utils.treedatadata.md) |  |
 |  [TreeDataMultipleRootData](./utils.treedatamultiplerootdata.md) |  |
