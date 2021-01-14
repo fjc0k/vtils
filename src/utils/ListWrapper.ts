@@ -12,32 +12,7 @@ export interface WrappedList<TItem = any> {
 /**
  * 列表打包器。
  */
-export class ListWrapper<TItem> {
-  constructor(private list: RawList<TItem> | WrappedList<TItem>) {}
-
-  /**
-   * 如果是打包后的列表数据，则解包后返回，否则直接返回。如果是对象，则递归尝试解包。
-   *
-   * @param value 数据
-   * @param depth 递归层级，默认：2
-   * @returns 返回结果数据
-   */
-  static unwrapIfNeeded(value: any, depth = 2): any {
-    if (isPlainObject(value)) {
-      if (
-        (value as WrappedList)._k &&
-        (value as WrappedList)._v &&
-        (value as WrappedList)._s
-      ) {
-        return new ListWrapper(value as any).unwrap()
-      }
-      if (depth > 0) {
-        return mapValues(value, v => ListWrapper.unwrapIfNeeded(v, depth - 1))
-      }
-    }
-    return value
-  }
-
+export class ListWrapper {
   private static rot13(str: string) {
     return str.replace(/[a-z]/gi, char => {
       return String.fromCharCode(
@@ -64,8 +39,7 @@ export class ListWrapper<TItem> {
    *
    * @returns 返回打包后的结构化列表数据
    */
-  wrap(): WrappedList<TItem> {
-    const rawList: RawList<TItem> = this.list as any
+  static wrap<TItem>(rawList: RawList<TItem>): WrappedList<TItem> {
     const keys: Array<keyof TItem> = rawList.length
       ? (Object.keys(rawList[0]) as any)
       : []
@@ -88,8 +62,8 @@ export class ListWrapper<TItem> {
   /**
    * 返回结果同 `wrap()`，不过类型是原列表的类型。
    */
-  wrapAsRawType(): RawList<TItem> {
-    return this.wrap() as any
+  static wrapAsRawType<TItem>(rawList: RawList<TItem>): RawList<TItem> {
+    return ListWrapper.wrap(rawList) as any
   }
 
   /**
@@ -97,8 +71,7 @@ export class ListWrapper<TItem> {
    *
    * @returns 返回解包后的结构化列表数据
    */
-  unwrap(): RawList<TItem> {
-    const wrappedList: WrappedList<TItem> = this.list as any
+  static unwrap<TItem>(wrappedList: WrappedList<TItem>): RawList<TItem> {
     const rawList: TItem[] = []
     const valueIndexes = ListWrapper.decodeValueIndexes(wrappedList._s)
     for (const values of wrappedList._v) {
@@ -109,5 +82,28 @@ export class ListWrapper<TItem> {
       rawList.push(item)
     }
     return rawList
+  }
+
+  /**
+   * 如果是打包后的列表数据，则解包后返回，否则直接返回。如果是对象，则递归尝试解包。
+   *
+   * @param value 数据
+   * @param depth 递归层级，默认：2
+   * @returns 返回结果数据
+   */
+  static unwrapIfNeeded(value: any, depth = 2): any {
+    if (isPlainObject(value)) {
+      if (
+        (value as WrappedList)._k &&
+        (value as WrappedList)._v &&
+        (value as WrappedList)._s
+      ) {
+        return ListWrapper.unwrap(value)
+      }
+      if (depth > 0) {
+        return mapValues(value, v => ListWrapper.unwrapIfNeeded(v, depth - 1))
+      }
+    }
+    return value
   }
 }

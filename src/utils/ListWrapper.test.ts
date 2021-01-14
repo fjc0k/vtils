@@ -12,8 +12,8 @@ describe('ListWrapper', () => {
     { id: 3, name: 'Jay3' },
     { id: 4, name: 'Jay4' },
   ]
-  const wrappedList: WrappedList<Item> = new ListWrapper(rawList).wrap()
-  const unwrappedList: RawList<Item> = new ListWrapper(wrappedList).unwrap()
+  const wrappedList: WrappedList<Item> = ListWrapper.wrap(rawList)
+  const unwrappedList: RawList<Item> = ListWrapper.unwrap(wrappedList)
 
   test('基础表现正常', () => {
     expect(unwrappedList).toEqual(rawList)
@@ -43,6 +43,6 @@ describe('ListWrapper', () => {
   })
 
   test('bug: 空数据正常', () => {
-    expect(new ListWrapper(new ListWrapper([]).wrap()).unwrap()).toEqual([])
+    expect(ListWrapper.unwrap(ListWrapper.wrap([]))).toEqual([])
   })
 })
