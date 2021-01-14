@@ -23,7 +23,9 @@ export class ListWrapper {
 
   private static encodeValueIndexes(indexes: number[]) {
     return ListWrapper.rot13(
-      base64UrlEncode(`${new Date().getTime()}.${indexes.join('.')}`),
+      base64UrlEncode(
+        `${Math.random().toString(36).slice(2)}.${indexes.join('.')}`,
+      ),
     )
   }
 
@@ -41,14 +43,14 @@ export class ListWrapper {
    */
   static wrap<TItem>(rawList: RawList<TItem>): WrappedList<TItem> {
     const keys: Array<keyof TItem> = rawList.length
-      ? (Object.keys(rawList[0]) as any)
+      ? shuffle(Object.keys(rawList[0]) as any)
       : []
     const valueIndexes: number[] = shuffle(range(0, keys.length))
     const values = []
-    for (const structuredItem of rawList) {
+    for (const rawItem of rawList) {
       const item = []
       for (let i = 0, len = valueIndexes.length; i < len; i++) {
-        item[valueIndexes[i]] = structuredItem[keys[i]]
+        item[valueIndexes[i]] = rawItem[keys[i]]
       }
       values.push(item)
     }
