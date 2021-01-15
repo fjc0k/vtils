@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.24.0](https://github.com/fjc0k/vtils/compare/v4.23.0...v4.24.0) (2021-01-15)
+
+
+### Features
+
+* **utils:** 新增 rot13 ([6450d00](https://github.com/fjc0k/vtils/commit/6450d00389273102e0bfff09b46fed6a344474e0))
+
 ## [4.23.0](https://github.com/fjc0k/vtils/compare/v4.22.1...v4.23.0) (2021-01-14)
 
 
