@@ -1,5 +1,6 @@
 import { base64UrlDecode, base64UrlEncode } from './base64'
 import { isPlainObject, mapValues, range, shuffle } from 'lodash-uni'
+import { rot13 } from './rot13'
 
 export type RawList<TItem = any> = TItem[]
 
@@ -13,16 +14,8 @@ export interface WrappedList<TItem = any> {
  * 列表打包器。
  */
 export class ListWrapper {
-  private static rot13(str: string) {
-    return str.replace(/[a-z]/gi, char => {
-      return String.fromCharCode(
-        char.charCodeAt(0) + (char.toLowerCase() < 'n' ? 13 : -13),
-      )
-    })
-  }
-
   private static encodeValueIndexes(indexes: number[]) {
-    return ListWrapper.rot13(
+    return rot13(
       base64UrlEncode(
         `${Math.random().toString(36).slice(2)}.${indexes.join('.')}`,
       ),
@@ -30,10 +23,7 @@ export class ListWrapper {
   }
 
   private static decodeValueIndexes(value: string) {
-    return base64UrlDecode(ListWrapper.rot13(value))
-      .split('.')
-      .slice(1)
-      .map(Number)
+    return base64UrlDecode(rot13(value)).split('.').slice(1).map(Number)
   }
 
   /**
