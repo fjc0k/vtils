@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.25.0](https://github.com/fjc0k/vtils/compare/v4.24.0...v4.25.0) (2021-01-18)
+
+
+### Features
+
+* **utils:** 新增 isType ([dd15ce9](https://github.com/fjc0k/vtils/commit/dd15ce9a6b4e8c37817a4d9db53e9259ed2138c2))
+
 ## [4.24.0](https://github.com/fjc0k/vtils/compare/v4.23.0...v4.24.0) (2021-01-15)
 
 
