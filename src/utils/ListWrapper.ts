@@ -1,5 +1,6 @@
 import { base64UrlDecode, base64UrlEncode } from './base64'
 import { isPlainObject, mapValues, range, shuffle } from 'lodash-uni'
+import { isType } from './isType'
 import { rot13 } from './rot13'
 
 export type RawList<TItem = any> = TItem[]
@@ -84,12 +85,8 @@ export class ListWrapper {
    * @returns 返回结果数据
    */
   static unwrapIfNeeded(value: any, depth = 2): any {
-    if (isPlainObject(value)) {
-      if (
-        (value as WrappedList)._k &&
-        (value as WrappedList)._v &&
-        (value as WrappedList)._s
-      ) {
+    if (isPlainObject(value) && isType<WrappedList>(value)) {
+      if (value._k && value._v && value._s) {
         return ListWrapper.unwrap(value)
       }
       if (depth > 0) {
