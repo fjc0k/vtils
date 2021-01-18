@@ -63,6 +63,7 @@ rich://{"url":"***","desc":"***"}
 |  [isNumeric(value)](./utils.isnumeric.md) | 检查 <code>value</code> 是否是数值，需要注意的是 <code>Infinity</code>、<code>-Infinity</code>、<code>NaN</code> 不被认为是数值。 |
 |  [isPossibleChineseMobilePhoneNumber(value)](./utils.ispossiblechinesemobilephonenumber.md) | 检测传入的值是否可能是中国的手机号码。 |
 |  [isPromiseLike(value)](./utils.ispromiselike.md) | 检查 <code>value</code> 是否像 <code>Promise</code>。 |
+|  [isType(value)](./utils.istype.md) | 对 <code>value is T</code> 的封装。 |
 |  [isUrl(value)](./utils.isurl.md) | 检测传入值是否是 URL。 |
 |  [loadCss(urlOrContent)](./utils.loadcss.md) | 加载 CSS 样式，支持链接和内容。 |
 |  [loadResource(url)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
