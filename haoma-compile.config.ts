@@ -1,38 +1,31 @@
-import { types as babelTypes, PluginObj } from '@babel/core'
-import { getCompileConfig } from 'haoma'
+import { defineBabelPlugin, getCompileConfig } from 'haoma'
 
-function removeIsTypePlugin({
-  types: t,
-}: {
-  types: typeof babelTypes
-}): PluginObj {
-  return {
-    visitor: {
-      ImportDeclaration: {
-        exit(path) {
-          if (
-            path.node.specifiers.length === 1 &&
-            t.isImportSpecifier(path.node.specifiers[0]) &&
-            t.isIdentifier(path.node.specifiers[0].imported) &&
-            path.node.specifiers[0].imported.name === 'isType'
-          ) {
-            path.remove()
-          }
-        },
-      },
-      CallExpression: {
-        exit(path) {
-          if (
-            t.isIdentifier(path.node.callee) &&
-            path.node.callee.name === 'isType'
-          ) {
-            path.remove()
-          }
-        },
+const removeIsTypePlugin = defineBabelPlugin(t => ({
+  visitor: {
+    ImportDeclaration: {
+      exit(path) {
+        if (
+          path.node.specifiers.length === 1 &&
+          t.isImportSpecifier(path.node.specifiers[0]) &&
+          t.isIdentifier(path.node.specifiers[0].imported) &&
+          path.node.specifiers[0].imported.name === 'isType'
+        ) {
+          path.remove()
+        }
       },
     },
-  }
-}
+    CallExpression: {
+      exit(path) {
+        if (
+          t.isIdentifier(path.node.callee) &&
+          path.node.callee.name === 'isType'
+        ) {
+          path.remove()
+        }
+      },
+    },
+  },
+}))
 
 export default [
   getCompileConfig({
