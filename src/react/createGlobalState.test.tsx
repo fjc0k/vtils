@@ -328,4 +328,32 @@ describe('createGlobalState', () => {
       })
     })
   })
+
+  describe('对象', () => {
+    let useGlobalObj: CreateGlobalStateResult<{ x: number; y: string }>
+
+    beforeEach(() => {
+      useGlobalObj = createGlobalState({ x: 1, y: '2' })
+    })
+
+    test('setState', () => {
+      expect(useGlobalObj.getState()).toEqual({ x: 1, y: '2' })
+      useGlobalObj.setState({ x: 2, y: '3' })
+      expect(useGlobalObj.getState()).toEqual({ x: 2, y: '3' })
+    })
+
+    test('setStatePartial', () => {
+      expect(useGlobalObj.getState()).toEqual({ x: 1, y: '2' })
+      useGlobalObj.setStatePartial({})
+      expect(useGlobalObj.getState()).toEqual({ x: 1, y: '2' })
+      useGlobalObj.setStatePartial({ y: '6' })
+      expect(useGlobalObj.getState()).toEqual({ x: 1, y: '6' })
+      useGlobalObj.setStatePartial({ x: 33 })
+      expect(useGlobalObj.getState()).toEqual({ x: 33, y: '6' })
+      useGlobalObj.setStatePartial({ x: 2, y: '3' })
+      expect(useGlobalObj.getState()).toEqual({ x: 2, y: '3' })
+      useGlobalObj.setStatePartial(_ => ({ x: _.x + 10 }))
+      expect(useGlobalObj.getState()).toEqual({ x: 12, y: '3' })
+    })
+  })
 })

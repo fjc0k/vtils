@@ -23,6 +23,7 @@ export interface CreateGlobalStateResult<
   (): CreateGlobalStateResultResult<S, R>
   getState(): S
   setState(nextState: SetStateAction<S>): void
+  setStatePartial(nextState: Partial<S> | ((prevState: S) => Partial<S>)): void
   watchState(callback: (nextState: S, prevState: S) => any): () => void
   watchStateImmediate(callback: (nextState: S, prevState: S) => any): () => void
 }
@@ -73,6 +74,20 @@ export function createGlobalState<S extends CreateGlobalStateState, R = never>(
       bus.emit('setGlobalState', nextGlobalState as any, prevGlobalState)
     }
   }
+  const setGlobalStatePartial: Dispatch<
+    SetStateAction<Partial<S> | undefined>
+  > = nextGlobalState => {
+    if (typeof nextGlobalState === 'function') {
+      nextGlobalState = (nextGlobalState as any)(currentGlobalState)
+    }
+    nextGlobalState = {
+      ...(currentGlobalState as any),
+      ...nextGlobalState,
+    }
+    const prevGlobalState = currentGlobalState
+    currentGlobalState = nextGlobalState as any
+    bus.emit('setGlobalState', nextGlobalState as any, prevGlobalState)
+  }
   const watchGlobalState: (
     callback: (
       nextGlobalState: S | undefined,
@@ -103,6 +118,7 @@ export function createGlobalState<S extends CreateGlobalStateState, R = never>(
   }) as any
   useGlobalState.getState = getGlobalState
   useGlobalState.setState = setGlobalState
+  useGlobalState.setStatePartial = setGlobalStatePartial
   useGlobalState.watchState = watchGlobalState
   useGlobalState.watchStateImmediate = watchGlobalStateImmediate
   return useGlobalState
