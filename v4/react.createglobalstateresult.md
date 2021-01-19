@@ -16,6 +16,7 @@ export declare interface CreateGlobalStateResult<S extends CreateGlobalStateStat
 |  --- | --- |
 |  [getState()](./react.createglobalstateresult.getstate.md) |  |
 |  [setState(nextState)](./react.createglobalstateresult.setstate.md) |  |
+|  [setStatePartial(nextState)](./react.createglobalstateresult.setstatepartial.md) |  |
 |  [watchState(callback)](./react.createglobalstateresult.watchstate.md) |  |
 |  [watchStateImmediate(callback)](./react.createglobalstateresult.watchstateimmediate.md) |  |
 

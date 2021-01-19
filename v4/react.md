@@ -10,8 +10,9 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 
 |  Function | Description |
 |  --- | --- |
-|  [createGlobalState(customResult)](./react.createglobalstate.md) |  |
-|  [createGlobalState(initialState, customResult)](./react.createglobalstate_1.md) |  |
+|  [createGlobalState(initialState)](./react.createglobalstate.md) |  |
+|  [createGlobalState(customResult)](./react.createglobalstate_1.md) |  |
+|  [createGlobalState(initialState, customResult)](./react.createglobalstate_2.md) |  |
 |  [defineComponent(options)](./react.definecomponent.md) | 定义组件。 |
 |  [defineComponent(options)](./react.definecomponent_1.md) | 定义组件。 |
 |  [isVisibleValue(value)](./react.isvisiblevalue.md) | 是否是渲染后可见的值。 渲染后不可见的值包括：<code>undefined</code>、<code>null</code>、<code>true</code>、<code>false</code>、空字符串。 |

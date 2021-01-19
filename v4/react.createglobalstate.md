@@ -7,16 +7,16 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function createGlobalState<S extends CreateGlobalStateState, R = never>(customResult?: CreateGlobalStateCustomResult<S, R>): CreateGlobalStateResult<S | undefined, R>;
+export declare function createGlobalState<S extends CreateGlobalStateState, R = never>(initialState: S): CreateGlobalStateResult<S, R>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  customResult | [CreateGlobalStateCustomResult](./react.createglobalstatecustomresult.md)<!-- -->&lt;S, R&gt; |  |
+|  initialState | S |  |
 
 <b>Returns:</b>
 
-[CreateGlobalStateResult](./react.createglobalstateresult.md)<!-- -->&lt;S \| undefined, R&gt;
+[CreateGlobalStateResult](./react.createglobalstateresult.md)<!-- -->&lt;S, R&gt;
 
