@@ -1,5 +1,5 @@
-import { formatNumber, Options, Suite } from 'benchmark'
 import Table from 'cli-table3'
+import { formatNumber, Options, Suite } from 'benchmark'
 
 export function runBenchmark(
   suites: Record<string, () => any>,
@@ -21,11 +21,9 @@ export function runBenchmark(
   }
   suite.on('cycle', function (event: any) {
     table.push([event.target.name, formatNumber(Math.round(event.target.hz))])
-    // console.log(arguments, event.target.stats, String(event.target))
   })
   suite.on('complete', function (this: any) {
     const actualFastestName = this.filter('fastest').map('name')[0]
-    // console.log(`Fastest is ${actualFastestName}`)
     if (expectFastestName != null && expectFastestName !== actualFastestName) {
       throw new Error(
         `Expect fastest is ${expectFastestName}, actual fastest is ${actualFastestName}.`,
