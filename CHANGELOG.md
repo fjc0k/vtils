@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.26.0](https://github.com/fjc0k/vtils/compare/v4.25.0...v4.26.0) (2021-01-19)
+
+
+### Features
+
+* **createGlobalState:** 新增 setStatePartial ([9c76e5a](https://github.com/fjc0k/vtils/commit/9c76e5aa8e7ba3d0da251137bfbd4a42b1169a98))
+
+
+### Bug Fixes
+
+* **createGlobalState:** 类型重载 ([72e772b](https://github.com/fjc0k/vtils/commit/72e772b25c9afad783c527b2cf1b3d0e89bc637c))
+
 ## [4.25.0](https://github.com/fjc0k/vtils/compare/v4.24.0...v4.25.0) (2021-01-18)
 
 
