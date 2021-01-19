@@ -29,6 +29,10 @@ export interface CreateGlobalStateResult<
 }
 
 export function createGlobalState<S extends CreateGlobalStateState, R = never>(
+  initialState: S,
+): CreateGlobalStateResult<S, R>
+
+export function createGlobalState<S extends CreateGlobalStateState, R = never>(
   customResult?: CreateGlobalStateCustomResult<S, R>,
 ): CreateGlobalStateResult<S | undefined, R>
 
