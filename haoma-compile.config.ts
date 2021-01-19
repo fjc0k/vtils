@@ -1,4 +1,38 @@
+import { types as babelTypes, PluginObj } from '@babel/core'
 import { getCompileConfig } from 'haoma'
+
+function removeIsTypePlugin({
+  types: t,
+}: {
+  types: typeof babelTypes
+}): PluginObj {
+  return {
+    visitor: {
+      ImportDeclaration: {
+        exit(path) {
+          if (
+            path.node.specifiers.length === 1 &&
+            t.isImportSpecifier(path.node.specifiers[0]) &&
+            t.isIdentifier(path.node.specifiers[0].imported) &&
+            path.node.specifiers[0].imported.name === 'isType'
+          ) {
+            path.remove()
+          }
+        },
+      },
+      CallExpression: {
+        exit(path) {
+          if (
+            t.isIdentifier(path.node.callee) &&
+            path.node.callee.name === 'isType'
+          ) {
+            path.remove()
+          }
+        },
+      },
+    },
+  }
+}
 
 export default [
   getCompileConfig({
@@ -11,6 +45,7 @@ export default [
     rollupDtsFiles: ['**/index.d.ts'],
     rollupDtsExcludeFiles: ['**/validator/**/*'],
     rollupDtsIncludedPackages: ['type-fest', 'ts-essentials'],
+    plugins: [removeIsTypePlugin],
   }),
   getCompileConfig({
     name: 'cjs',
@@ -29,5 +64,6 @@ export default [
         replacement: 'date-fns$1',
       },
     ],
+    plugins: [removeIsTypePlugin],
   }),
 ]
