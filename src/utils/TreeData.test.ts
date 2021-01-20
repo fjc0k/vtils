@@ -94,6 +94,16 @@ describe('TreeData', () => {
     expect(new TreeData(data).pickNodeProps(['id']).export()).toMatchSnapshot()
   })
 
+  test('index', () => {
+    expect(
+      new TreeData(data)
+        .setNodeProps({
+          index: _ => _.index,
+        })
+        .export(),
+    ).toMatchSnapshot()
+  })
+
   test('filter', () => {
     expect(
       new TreeData(data).filter(_ => _.node.id.endsWith('.2')).export(),

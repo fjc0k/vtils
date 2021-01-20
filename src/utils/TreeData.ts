@@ -55,6 +55,11 @@ export interface TreeDataTraverseFnPayload<TNode extends TreeDataNode> {
   node: TNode
 
   /**
+   * 当前节点索引。
+   */
+  index: number
+
+  /**
    * 当前深度。从 `0` 开始。
    */
   depth: number
@@ -161,6 +166,7 @@ export class TreeData<TNode extends TreeDataNode> {
 
       fn({
         node: node,
+        index: index,
         parentNode: parentNode,
         depth: depth,
         path: path,
