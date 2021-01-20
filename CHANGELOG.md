@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.27.0](https://github.com/fjc0k/vtils/compare/v4.26.0...v4.27.0) (2021-01-20)
+
+
+### Features
+
+* **TreeData:** index ([74cebdc](https://github.com/fjc0k/vtils/commit/74cebdce55a6ff4ca3d6c97a7a5b5692e76b0d2a))
+
 ## [4.26.0](https://github.com/fjc0k/vtils/compare/v4.25.0...v4.26.0) (2021-01-19)
 
 
