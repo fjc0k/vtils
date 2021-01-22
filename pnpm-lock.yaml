@@ -17,7 +17,7 @@ dependencies:
 devDependencies:
   '@microsoft/api-documenter': registry.npm.taobao.org/@microsoft/api-documenter/7.12.6
   '@microsoft/api-extractor': registry.npm.taobao.org/@microsoft/api-extractor/7.13.0
-  '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.24
+  '@tarojs/taro': registry.npm.taobao.org/@tarojs/taro/3.0.25
   '@testing-library/react': registry.npm.taobao.org/@testing-library/react/11.2.3_react-dom@17.0.1+react@17.0.1
   '@testing-library/react-hooks': registry.npm.taobao.org/@testing-library/react-hooks/3.7.0_react@17.0.1
   '@types/benchmark': registry.npm.taobao.org/@types/benchmark/2.1.0
@@ -2750,44 +2750,44 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/@swc/core/download/@swc/core-1.2.45.tgz
     version: 1.2.45
-  registry.npm.taobao.org/@tarojs/api/3.0.24:
+  registry.npm.taobao.org/@tarojs/api/3.0.25:
     dependencies:
-      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.24
+      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.25
     dev: true
     name: '@tarojs/api'
     resolution:
-      integrity: sha1-zKsy2YNfpVpIMmUeaCtG8hvd/mI=
+      integrity: sha1-uE3vJmiBRLJX56kDbvzx/wAtQq8=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@tarojs/api/download/@tarojs/api-3.0.24.tgz?cache=0&sync_timestamp=1610721444649&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Fapi%2Fdownload%2F%40tarojs%2Fapi-3.0.24.tgz
-    version: 3.0.24
-  registry.npm.taobao.org/@tarojs/router/3.0.24:
+      tarball: https://registry.npm.taobao.org/@tarojs/api/download/@tarojs/api-3.0.25.tgz
+    version: 3.0.25
+  registry.npm.taobao.org/@tarojs/router/3.0.25:
     dependencies:
-      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.24
+      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.25
       history: registry.npm.taobao.org/history/4.10.1
       universal-router: registry.npm.taobao.org/universal-router/8.3.0
       url-parse: registry.npm.taobao.org/url-parse/1.4.7
     dev: true
     name: '@tarojs/router'
     resolution:
-      integrity: sha1-wiwSRJWd+r88t+9KPKXvX3gVUw8=
+      integrity: sha1-RpQUuFSklIlRhjjcI0Mt4+tX3HY=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@tarojs/router/download/@tarojs/router-3.0.24.tgz?cache=0&sync_timestamp=1610721445444&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Frouter%2Fdownload%2F%40tarojs%2Frouter-3.0.24.tgz
-    version: 3.0.24
-  registry.npm.taobao.org/@tarojs/runtime/3.0.24:
+      tarball: https://registry.npm.taobao.org/@tarojs/router/download/@tarojs/router-3.0.25.tgz
+    version: 3.0.25
+  registry.npm.taobao.org/@tarojs/runtime/3.0.25:
     dependencies:
       lodash-es: registry.npm.taobao.org/lodash-es/4.17.15
     dev: true
     name: '@tarojs/runtime'
     resolution:
-      integrity: sha1-0d9vJs2xlo2VkNvcTBryKRvQgn4=
+      integrity: sha1-2JuME+AQK7ImOCCTeGm4r//HyCo=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@tarojs/runtime/download/@tarojs/runtime-3.0.24.tgz?cache=0&sync_timestamp=1610721444490&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Fruntime%2Fdownload%2F%40tarojs%2Fruntime-3.0.24.tgz
-    version: 3.0.24
-  registry.npm.taobao.org/@tarojs/taro-h5/3.0.24:
+      tarball: https://registry.npm.taobao.org/@tarojs/runtime/download/@tarojs/runtime-3.0.25.tgz
+    version: 3.0.25
+  registry.npm.taobao.org/@tarojs/taro-h5/3.0.25:
     dependencies:
-      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.24
-      '@tarojs/router': registry.npm.taobao.org/@tarojs/router/3.0.24
-      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.24
+      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.25
+      '@tarojs/router': registry.npm.taobao.org/@tarojs/router/3.0.25
+      '@tarojs/runtime': registry.npm.taobao.org/@tarojs/runtime/3.0.25
       base64-js: registry.npm.taobao.org/base64-js/1.5.1
       jsonp-retry: registry.npm.taobao.org/jsonp-retry/1.0.3
       mobile-detect: registry.npm.taobao.org/mobile-detect/1.4.4
@@ -2796,21 +2796,21 @@ packages:
     dev: true
     name: '@tarojs/taro-h5'
     resolution:
-      integrity: sha1-6lJRmkdLqVD1GWYYEEAvv+fAwww=
+      integrity: sha1-ylLD1Q/gcJAHvTvqPRjqnyJ7ijs=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@tarojs/taro-h5/download/@tarojs/taro-h5-3.0.24.tgz?cache=0&sync_timestamp=1610721446046&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Ftaro-h5%2Fdownload%2F%40tarojs%2Ftaro-h5-3.0.24.tgz
-    version: 3.0.24
-  registry.npm.taobao.org/@tarojs/taro/3.0.24:
+      tarball: https://registry.npm.taobao.org/@tarojs/taro-h5/download/@tarojs/taro-h5-3.0.25.tgz
+    version: 3.0.25
+  registry.npm.taobao.org/@tarojs/taro/3.0.25:
     dependencies:
-      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.24
-      '@tarojs/taro-h5': registry.npm.taobao.org/@tarojs/taro-h5/3.0.24
+      '@tarojs/api': registry.npm.taobao.org/@tarojs/api/3.0.25
+      '@tarojs/taro-h5': registry.npm.taobao.org/@tarojs/taro-h5/3.0.25
     dev: true
     name: '@tarojs/taro'
     resolution:
-      integrity: sha1-WOSoVjh2td0LGLlEFZI0wdFlbys=
+      integrity: sha1-GYSyjffPTc+qkAvRJp30nEvRc7Y=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.0.24.tgz
-    version: 3.0.24
+      tarball: https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.0.25.tgz?cache=0&sync_timestamp=1611308897983&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Ftaro%2Fdownload%2F%40tarojs%2Ftaro-3.0.25.tgz
+    version: 3.0.25
   registry.npm.taobao.org/@testing-library/dom/7.28.1:
     dependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.12.11
@@ -16278,7 +16278,7 @@ specifiers:
   '@babel/runtime': ^7.12.5
   '@microsoft/api-documenter': 7.12.6
   '@microsoft/api-extractor': 7.13.0
-  '@tarojs/taro': 3.0.24
+  '@tarojs/taro': 3.0.25
   '@testing-library/react': 11.2.3
   '@testing-library/react-hooks': 3.7.0
   '@types/benchmark': 2.1.0
