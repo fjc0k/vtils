@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.28.0](https://github.com/fjc0k/vtils/compare/v4.27.0...v4.28.0) (2021-01-25)
+
+
+### Features
+
+* **types:** 新增 IsEmptyArray ([7d3bdbd](https://github.com/fjc0k/vtils/commit/7d3bdbdfd03cd6f8b8202e51d45ac550bca6ea61))
+* **types:** 新增 IsEmptyObject ([c056fd9](https://github.com/fjc0k/vtils/commit/c056fd9dbf343aea9efed81335b08ca5b15ad4ca))
+
 ## [4.27.0](https://github.com/fjc0k/vtils/compare/v4.26.0...v4.27.0) (2021-01-20)
 
 
