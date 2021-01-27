@@ -36,7 +36,7 @@ devDependencies:
   fs-extra: registry.npm.taobao.org/fs-extra/9.1.0
   globby: registry.npm.taobao.org/globby/11.0.2
   haoma: registry.npm.taobao.org/haoma/2.24.0_d406d2ab60be86bfb6dc28b2ab15882a
-  husky: registry.npm.taobao.org/husky/5.0.6
+  husky: registry.npm.taobao.org/husky/5.0.7
   ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.0_ioredis@4.19.4
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.3
@@ -8418,17 +8418,17 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/human-signals/download/human-signals-2.1.0.tgz
     version: 2.1.0
-  registry.npm.taobao.org/husky/5.0.6:
+  registry.npm.taobao.org/husky/5.0.7:
     dev: true
     engines:
       node: '>= 10'
     hasBin: true
     name: husky
     resolution:
-      integrity: sha1-J9vv6GA8bAkS/Ymjpn7f7Z+si7k=
+      integrity: sha1-AHJ8kyeyIXPXoTKkbShLmkhP5R0=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/husky/download/husky-5.0.6.tgz?cache=0&sync_timestamp=1607911651139&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhusky%2Fdownload%2Fhusky-5.0.6.tgz
-    version: 5.0.6
+      tarball: https://registry.npm.taobao.org/husky/download/husky-5.0.7.tgz?cache=0&sync_timestamp=1611721120710&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhusky%2Fdownload%2Fhusky-5.0.7.tgz
+    version: 5.0.7
   registry.npm.taobao.org/hyphenate-style-name/1.0.4:
     name: hyphenate-style-name
     resolution:
@@ -16302,7 +16302,7 @@ specifiers:
   fs-extra: 9.1.0
   globby: 11.0.2
   haoma: 2.24.0
-  husky: 5.0.6
+  husky: 5.0.7
   ioredis: ^4.19.4
   ioredis-mock: 5.2.0
   jest: 26.6.3
