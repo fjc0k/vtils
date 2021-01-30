@@ -37,7 +37,7 @@ devDependencies:
   globby: registry.npm.taobao.org/globby/11.0.2
   haoma: registry.npm.taobao.org/haoma/2.24.0_d406d2ab60be86bfb6dc28b2ab15882a
   husky: registry.npm.taobao.org/husky/5.0.8
-  ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.0_ioredis@4.19.4
+  ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.1_ioredis@4.19.4
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.3
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
@@ -8727,7 +8727,7 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/interpret/download/interpret-1.4.0.tgz
     version: 1.4.0
-  registry.npm.taobao.org/ioredis-mock/5.2.0_ioredis@4.19.4:
+  registry.npm.taobao.org/ioredis-mock/5.2.1_ioredis@4.19.4:
     dependencies:
       array-from: registry.npm.taobao.org/array-from/2.1.1
       es6-map: registry.npm.taobao.org/es6-map/0.1.5
@@ -8741,15 +8741,15 @@ packages:
     dev: true
     engines:
       node: '>=10'
-    id: registry.npm.taobao.org/ioredis-mock/5.2.0
+    id: registry.npm.taobao.org/ioredis-mock/5.2.1
     name: ioredis-mock
     peerDependencies:
       ioredis: 4.x
     resolution:
-      integrity: sha1-8sJoF6uJhVd01eV/nsCbAjmK5IU=
+      integrity: sha1-tclS71WPnbKeLusrJHNWiZ94Aw4=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/ioredis-mock/download/ioredis-mock-5.2.0.tgz
-    version: 5.2.0
+      tarball: https://registry.npm.taobao.org/ioredis-mock/download/ioredis-mock-5.2.1.tgz
+    version: 5.2.1
   registry.npm.taobao.org/ioredis/4.19.4:
     dependencies:
       cluster-key-slot: registry.npm.taobao.org/cluster-key-slot/1.1.0
@@ -16304,7 +16304,7 @@ specifiers:
   haoma: 2.24.0
   husky: 5.0.8
   ioredis: ^4.19.4
-  ioredis-mock: 5.2.0
+  ioredis-mock: 5.2.1
   jest: 26.6.3
   lint-staged: 10.5.3
   lodash-uni: ^1.1.0
