@@ -1,4 +1,12 @@
-import { DependencyList, useCallback, useEffect, useRef, useState } from 'react'
+import {
+  DependencyList,
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import { useLatest } from 'react-use'
 
 /**
@@ -66,6 +74,8 @@ export interface UseLoadMoreResult<TItem> {
   loadMore: () => Promise<void>
   /** 从首页重新加载数据 */
   reload: () => Promise<void>
+  /** 设置数据 */
+  setData: Dispatch<SetStateAction<TItem[]>>
 }
 
 /**
@@ -165,5 +175,6 @@ export function useLoadMore<TItem>(
     noMore,
     loadMore,
     reload,
+    setData,
   }
 }

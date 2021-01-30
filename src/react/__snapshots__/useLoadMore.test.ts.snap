@@ -15,6 +15,7 @@ Object {
   "noMore": false,
   "pageNumber": 1,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 0,
 }
 `;
@@ -38,6 +39,7 @@ Object {
   "noMore": true,
   "pageNumber": 2,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 2,
 }
 `;
@@ -61,6 +63,7 @@ Object {
   "noMore": true,
   "pageNumber": 2,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 2,
 }
 `;
@@ -75,6 +78,7 @@ Object {
   "noMore": true,
   "pageNumber": 1,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 2,
 }
 `;
@@ -94,6 +98,7 @@ Object {
   "noMore": false,
   "pageNumber": 1,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 2,
 }
 `;
@@ -117,6 +122,7 @@ Object {
   "noMore": false,
   "pageNumber": 3,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 0,
 }
 `;
@@ -144,6 +150,7 @@ Object {
   "noMore": false,
   "pageNumber": 3,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 0,
 }
 `;
@@ -163,6 +170,7 @@ Object {
   "noMore": false,
   "pageNumber": 2,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 0,
 }
 `;
@@ -186,6 +194,7 @@ Object {
   "noMore": false,
   "pageNumber": 2,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 0,
 }
 `;
@@ -200,6 +209,7 @@ Object {
   "noMore": false,
   "pageNumber": 1,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 0,
 }
 `;
@@ -219,6 +229,7 @@ Object {
   "noMore": false,
   "pageNumber": 1,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 0,
 }
 `;
@@ -233,6 +244,7 @@ Object {
   "noMore": false,
   "pageNumber": 1,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 0,
 }
 `;
@@ -252,6 +264,7 @@ Object {
   "noMore": false,
   "pageNumber": 1,
   "reload": [Function anonymous],
+  "setData": [Function bound dispatchAction],
   "total": 0,
 }
 `;
