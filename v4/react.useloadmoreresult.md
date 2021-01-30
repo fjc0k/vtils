@@ -24,5 +24,6 @@ export declare interface UseLoadMoreResult<TItem>
 |  [noMore](./react.useloadmoreresult.nomore.md) | boolean | 数据是否已加载完 |
 |  [pageNumber](./react.useloadmoreresult.pagenumber.md) | number | 当前页码 |
 |  [reload](./react.useloadmoreresult.reload.md) | () =&gt; Promise&lt;void&gt; | 从首页重新加载数据 |
+|  [setData](./react.useloadmoreresult.setdata.md) | Dispatch&lt;SetStateAction&lt;TItem\[\]&gt;&gt; | 设置数据 |
 |  [total](./react.useloadmoreresult.total.md) | number | 总数据量 |
 
