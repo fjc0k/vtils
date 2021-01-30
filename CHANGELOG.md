@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.29.0](https://github.com/fjc0k/vtils/compare/v4.28.0...v4.29.0) (2021-01-30)
+
+
+### Features
+
+* **useLoadMore:** 导出 setData ([4c7546e](https://github.com/fjc0k/vtils/commit/4c7546efa6b616230b5c0d9dc6a4c1346e3985d3))
+
 ## [4.28.0](https://github.com/fjc0k/vtils/compare/v4.27.0...v4.28.0) (2021-01-25)
 
 
