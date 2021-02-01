@@ -71,9 +71,7 @@ export class DataPacker {
   /**
    * 返回结果同 `pack()`，不过类型是原数据的类型。
    */
-  static packAsRawType<TRawObjectData extends RawData>(
-    rawData: RawData<TRawObjectData>,
-  ): TRawObjectData {
+  static packAsRawType<T>(rawData: T): T {
     return DataPacker.pack(rawData) as any
   }
 
