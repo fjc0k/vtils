@@ -73,7 +73,7 @@ export class DataPacker {
    */
   static packAsRawType<TRawObjectData extends RawData>(
     rawData: RawData<TRawObjectData>,
-  ): RawData<TRawObjectData> {
+  ): TRawObjectData {
     return DataPacker.pack(rawData) as any
   }
 
