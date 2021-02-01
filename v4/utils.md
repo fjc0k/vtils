@@ -10,8 +10,8 @@
 
 |  Class | Description |
 |  --- | --- |
+|  [DataPacker](./utils.datapacker.md) | 数据打包器。 |
 |  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TListeners 事件名称及其对应的回调描述 |
-|  [ListWrapper](./utils.listwrapper.md) | 列表打包器。 |
 |  [RichUrl](./utils.richurl.md) | 富链接，同普通链接相比，富链接可包含一些描述信息。<!-- -->结构描述：
 ```text
 rich://{"url":"***","desc":"***"}
@@ -111,7 +111,6 @@ rich://{"url":"***","desc":"***"}
 |  [WechatRequestPaymentParams](./utils.wechatrequestpaymentparams.md) |  |
 |  [WechatUpdateShareDataParams](./utils.wechatupdatesharedataparams.md) |  |
 |  [WechatUploadImageParams](./utils.wechatuploadimageparams.md) |  |
-|  [WrappedList](./utils.wrappedlist.md) |  |
 
 ## Namespaces
 
@@ -135,15 +134,20 @@ rich://{"url":"***","desc":"***"}
 |  --- | --- |
 |  [BindEventFunction](./utils.bindeventfunction.md) | 绑定事件函数。 |
 |  [CreateSubmitResult](./utils.createsubmitresult.md) |  |
+|  [ElementOfRawData](./utils.elementofrawdata.md) |  |
 |  [EventBusBeforeEmit](./utils.eventbusbeforeemit.md) |  |
 |  [EventBusBeforeOn](./utils.eventbusbeforeon.md) |  |
 |  [EventBusListener](./utils.eventbuslistener.md) |  |
 |  [EventBusListeners](./utils.eventbuslisteners.md) |  |
 |  [EventBusListenerTag](./utils.eventbuslistenertag.md) |  |
 |  [EventBusOffListener](./utils.eventbusofflistener.md) |  |
+|  [KeyOfRawData](./utils.keyofrawdata.md) |  |
 |  [MiniProgramApi](./utils.miniprogramapi.md) |  |
 |  [MiniProgramBrand](./utils.miniprogrambrand.md) |  |
-|  [RawList](./utils.rawlist.md) |  |
+|  [PackedData](./utils.packeddata.md) |  |
+|  [RawData](./utils.rawdata.md) |  |
+|  [RawListData](./utils.rawlistdata.md) |  |
+|  [RawObjectData](./utils.rawobjectdata.md) |  |
 |  [TreeDataChildrenPropName](./utils.treedatachildrenpropname.md) |  |
 |  [TreeDataData](./utils.treedatadata.md) |  |
 |  [TreeDataMultipleRootData](./utils.treedatamultiplerootdata.md) |  |
@@ -151,6 +155,7 @@ rich://{"url":"***","desc":"***"}
 |  [TreeDataSingleRootData](./utils.treedatasinglerootdata.md) |  |
 |  [TreeDataStandardNode](./utils.treedatastandardnode.md) |  |
 |  [TreeDataTraverseFn](./utils.treedatatraversefn.md) |  |
+|  [ValueOfRawData](./utils.valueofrawdata.md) |  |
 |  [WechatErrorCallback](./utils.wechaterrorcallback.md) |  |
 |  [WechatJsApi](./utils.wechatjsapi.md) | 微信 JSSDK 支持的 API。 |
 |  [WechatNonBaseMenuItem](./utils.wechatnonbasemenuitem.md) | 微信内网页的非基础菜单列表。 |
