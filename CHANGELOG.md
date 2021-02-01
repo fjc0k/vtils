@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.30.1](https://github.com/fjc0k/vtils/compare/v4.30.0...v4.30.1) (2021-02-01)
+
+
+### Bug Fixes
+
+* DataPacker ([c7e39c0](https://github.com/fjc0k/vtils/commit/c7e39c01c6b5d2e11724a5fc4b332cf8c1f14174))
+
 ## [4.30.0](https://github.com/fjc0k/vtils/compare/v4.29.0...v4.30.0) (2021-02-01)
 
 
