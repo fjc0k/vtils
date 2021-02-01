@@ -9,16 +9,16 @@
 <b>Signature:</b>
 
 ```typescript
-static packAsRawType<TRawObjectData extends RawData>(rawData: RawData<TRawObjectData>): TRawObjectData;
+static packAsRawType<T>(rawData: T): T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  rawData | [RawData](./utils.rawdata.md)<!-- -->&lt;TRawObjectData&gt; |  |
+|  rawData | T |  |
 
 <b>Returns:</b>
 
-TRawObjectData
+T
 
