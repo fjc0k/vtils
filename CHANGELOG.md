@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.30.0](https://github.com/fjc0k/vtils/compare/v4.29.0...v4.30.0) (2021-02-01)
+
+
+### Features
+
+* 使用 DataPacker 替换 ListWrapper ([220c5be](https://github.com/fjc0k/vtils/commit/220c5bec9359db2a06d6ccc0a8e9eaa7518abd35))
+
 ## [4.29.0](https://github.com/fjc0k/vtils/compare/v4.28.0...v4.29.0) (2021-01-30)
 
 
