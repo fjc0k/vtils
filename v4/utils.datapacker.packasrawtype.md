@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-static packAsRawType<TRawObjectData extends RawData>(rawData: RawData<TRawObjectData>): RawData<TRawObjectData>;
+static packAsRawType<TRawObjectData extends RawData>(rawData: RawData<TRawObjectData>): TRawObjectData;
 ```
 
 ## Parameters
@@ -20,5 +20,5 @@ static packAsRawType<TRawObjectData extends RawData>(rawData: RawData<TRawObject
 
 <b>Returns:</b>
 
-[RawData](./utils.rawdata.md)<!-- -->&lt;TRawObjectData&gt;
+TRawObjectData
 
