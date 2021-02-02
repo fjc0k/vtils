@@ -23,7 +23,7 @@ devDependencies:
   '@types/benchmark': registry.npm.taobao.org/@types/benchmark/2.1.0
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.6
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
-  '@types/react': registry.npm.taobao.org/@types/react/17.0.0
+  '@types/react': registry.npm.taobao.org/@types/react/17.0.1
   '@types/react-dom': registry.npm.taobao.org/@types/react-dom/17.0.0
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
   '@types/uuid': registry.npm.taobao.org/@types/uuid/8.3.0
@@ -3284,7 +3284,7 @@ packages:
     resolution:
       integrity: sha1-KrDV2i5YFflLC51LldHl8kOrLKc=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.3.tgz
+      tarball: https://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.3.tgz?cache=0&sync_timestamp=1612308612333&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fprop-types%2Fdownload%2F%40types%2Fprop-types-15.7.3.tgz
     version: 15.7.3
   registry.npm.taobao.org/@types/react-dom/17.0.0:
     dependencies:
@@ -3317,6 +3317,17 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/@types/react/download/@types/react-17.0.0.tgz
     version: 17.0.0
+  registry.npm.taobao.org/@types/react/17.0.1:
+    dependencies:
+      '@types/prop-types': registry.npm.taobao.org/@types/prop-types/15.7.3
+      csstype: registry.npm.taobao.org/csstype/3.0.6
+    dev: true
+    name: '@types/react'
+    resolution:
+      integrity: sha1-6x8UB96o2jvHQYecEZKqcDq5l1s=
+      registry: https://r.npm.taobao.org/
+      tarball: https://registry.npm.taobao.org/@types/react/download/@types/react-17.0.1.tgz
+    version: 17.0.1
   registry.npm.taobao.org/@types/stack-utils/1.0.1:
     dev: true
     name: '@types/stack-utils'
@@ -5781,7 +5792,7 @@ packages:
     resolution:
       integrity: sha1-hl0LWDPX2NQPTluKbXauo95HJe8=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/csstype/download/csstype-3.0.6.tgz
+      tarball: https://registry.npm.taobao.org/csstype/download/csstype-3.0.6.tgz?cache=0&sync_timestamp=1612308612644&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcsstype%2Fdownload%2Fcsstype-3.0.6.tgz
     version: 3.0.6
   registry.npm.taobao.org/cuid/2.1.8:
     name: cuid
@@ -16285,7 +16296,7 @@ specifiers:
   '@types/fs-extra': 9.0.6
   '@types/ioredis': ^4.17.9
   '@types/prompts': 2.0.9
-  '@types/react': 17.0.0
+  '@types/react': 17.0.1
   '@types/react-dom': 17.0.0
   '@types/standard-version': 7.0.0
   '@types/tough-cookie': ^4.0.0
