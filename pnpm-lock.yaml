@@ -39,7 +39,7 @@ devDependencies:
   husky: registry.npm.taobao.org/husky/5.0.8
   ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.1_ioredis@4.19.4
   jest: registry.npm.taobao.org/jest/26.6.3
-  lint-staged: registry.npm.taobao.org/lint-staged/10.5.3
+  lint-staged: registry.npm.taobao.org/lint-staged/10.5.4
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
   prettier: registry.npm.taobao.org/prettier/2.2.1
   prompts: registry.npm.taobao.org/prompts/2.4.0
@@ -5667,7 +5667,7 @@ packages:
   registry.npm.taobao.org/cosmiconfig/7.0.0:
     dependencies:
       '@types/parse-json': registry.npm.taobao.org/@types/parse-json/4.0.0
-      import-fresh: registry.npm.taobao.org/import-fresh/3.2.2
+      import-fresh: registry.npm.taobao.org/import-fresh/3.3.0
       parse-json: registry.npm.taobao.org/parse-json/5.1.0
       path-type: registry.npm.taobao.org/path-type/4.0.0
       yaml: registry.npm.taobao.org/yaml/1.10.0
@@ -5678,7 +5678,7 @@ packages:
     resolution:
       integrity: sha1-75tE13OVnK5j3ezRIt4jhTtg+NM=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/cosmiconfig/download/cosmiconfig-7.0.0.tgz
+      tarball: https://registry.npm.taobao.org/cosmiconfig/download/cosmiconfig-7.0.0.tgz?cache=0&sync_timestamp=1612551355210&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcosmiconfig%2Fdownload%2Fcosmiconfig-7.0.0.tgz
     version: 7.0.0
   registry.npm.taobao.org/cross-env/7.0.3:
     dependencies:
@@ -5945,11 +5945,6 @@ packages:
     engines:
       node: '>=6.0'
     name: debug
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
     resolution:
       integrity: sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
       registry: https://r.npm.taobao.org/
@@ -7022,7 +7017,7 @@ packages:
     resolution:
       integrity: sha1-TlSRrRVy8vF6d9OIxshXE1sihHo=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/execa/download/execa-4.1.0.tgz?cache=0&sync_timestamp=1606976542288&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexeca%2Fdownload%2Fexeca-4.1.0.tgz
+      tarball: https://registry.npm.taobao.org/execa/download/execa-4.1.0.tgz?cache=0&sync_timestamp=1612551334241&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexeca%2Fdownload%2Fexeca-4.1.0.tgz
     version: 4.1.0
   registry.npm.taobao.org/execa/5.0.0:
     dependencies:
@@ -8591,19 +8586,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/image-size/download/image-size-0.5.5.tgz
     version: 0.5.5
-  registry.npm.taobao.org/import-fresh/3.2.2:
-    dependencies:
-      parent-module: registry.npm.taobao.org/parent-module/1.0.1
-      resolve-from: registry.npm.taobao.org/resolve-from/4.0.0
-    dev: true
-    engines:
-      node: '>=6'
-    name: import-fresh
-    resolution:
-      integrity: sha1-/BKcFgxdaCNVB/QzGmuq0Ya9vD4=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/import-fresh/download/import-fresh-3.2.2.tgz
-    version: 3.2.2
   registry.npm.taobao.org/import-fresh/3.3.0:
     dependencies:
       parent-module: registry.npm.taobao.org/parent-module/1.0.1
@@ -10617,7 +10599,7 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz
     version: 1.1.6
-  registry.npm.taobao.org/lint-staged/10.5.3:
+  registry.npm.taobao.org/lint-staged/10.5.4:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
       cli-truncate: registry.npm.taobao.org/cli-truncate/2.1.0
@@ -10638,10 +10620,10 @@ packages:
     hasBin: true
     name: lint-staged
     resolution:
-      integrity: sha1-xoKDiz6t1Mhk0QItoF2qCRL7HaU=
+      integrity: sha1-zRU7XwmH0jcfwdKEekCaL+cFtmU=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.5.3.tgz
-    version: 10.5.3
+      tarball: https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.5.4.tgz
+    version: 10.5.4
   registry.npm.taobao.org/listr2/3.2.2_enquirer@2.3.6:
     dependencies:
       chalk: registry.npm.taobao.org/chalk/4.1.0
@@ -12171,7 +12153,7 @@ packages:
     version: 4.0.0
   registry.npm.taobao.org/parse-json/5.1.0:
     dependencies:
-      '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.10.4
+      '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.12.11
       error-ex: registry.npm.taobao.org/error-ex/1.3.2
       json-parse-even-better-errors: registry.npm.taobao.org/json-parse-even-better-errors/2.3.1
       lines-and-columns: registry.npm.taobao.org/lines-and-columns/1.1.6
@@ -16367,7 +16349,7 @@ specifiers:
   ioredis: ^4.19.4
   ioredis-mock: 5.2.1
   jest: 26.6.3
-  lint-staged: 10.5.3
+  lint-staged: 10.5.4
   lodash-uni: ^1.1.0
   miniprogram-api-typings: ^3.2.0
   nanoid: ^3.1.20
