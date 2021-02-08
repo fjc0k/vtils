@@ -36,7 +36,7 @@ devDependencies:
   fs-extra: registry.npm.taobao.org/fs-extra/9.1.0
   globby: registry.npm.taobao.org/globby/11.0.2
   haoma: registry.npm.taobao.org/haoma/2.25.0_d7759842f77d7f946bd0c3f6c1c11868
-  husky: registry.npm.taobao.org/husky/5.0.8
+  husky: registry.npm.taobao.org/husky/5.0.9
   ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.1_ioredis@4.19.4
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.4
@@ -445,14 +445,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/@babel/helper-optimise-call-expression/download/@babel/helper-optimise-call-expression-7.12.13.tgz
     version: 7.12.13
-  registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4:
-    dev: true
-    name: '@babel/helper-plugin-utils'
-    resolution:
-      integrity: sha1-L3WoMSadT2d95JmG3/WZJ1M883U=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@babel/helper-plugin-utils/download/@babel/helper-plugin-utils-7.10.4.tgz
-    version: 7.10.4
   registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13:
     dev: true
     name: '@babel/helper-plugin-utils'
@@ -900,7 +892,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-async-generators/7.8.4_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-async-generators/7.8.4
     name: '@babel/plugin-syntax-async-generators'
@@ -928,7 +920,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-bigint/7.8.3_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-bigint/7.8.3
     name: '@babel/plugin-syntax-bigint'
@@ -953,20 +945,20 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/@babel/plugin-syntax-class-properties/download/@babel/plugin-syntax-class-properties-7.12.13.tgz
     version: 7.12.13
-  registry.npm.taobao.org/@babel/plugin-syntax-class-properties/7.12.1_@babel+core@7.12.7:
+  registry.npm.taobao.org/@babel/plugin-syntax-class-properties/7.12.13_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
-    id: registry.npm.taobao.org/@babel/plugin-syntax-class-properties/7.12.1
+    id: registry.npm.taobao.org/@babel/plugin-syntax-class-properties/7.12.13
     name: '@babel/plugin-syntax-class-properties'
     peerDependencies:
       '@babel/core': ^7.0.0-0
     resolution:
-      integrity: sha1-vLKXxTZueb663vUJVJzZOwTxmXg=
+      integrity: sha1-tcmHJ0xKOoK4lxR5aTGmtTVErhA=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@babel/plugin-syntax-class-properties/download/@babel/plugin-syntax-class-properties-7.12.1.tgz
-    version: 7.12.1
+      tarball: https://registry.npm.taobao.org/@babel/plugin-syntax-class-properties/download/@babel/plugin-syntax-class-properties-7.12.13.tgz
+    version: 7.12.13
   registry.npm.taobao.org/@babel/plugin-syntax-decorators/7.12.13_@babel+core@7.12.13:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.13
@@ -1026,7 +1018,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-import-meta/7.10.4_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-import-meta/7.10.4
     name: '@babel/plugin-syntax-import-meta'
@@ -1054,7 +1046,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-json-strings/7.8.3_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-json-strings/7.8.3
     name: '@babel/plugin-syntax-json-strings'
@@ -1096,7 +1088,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-logical-assignment-operators/7.10.4_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-logical-assignment-operators/7.10.4
     name: '@babel/plugin-syntax-logical-assignment-operators'
@@ -1124,7 +1116,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-nullish-coalescing-operator/7.8.3_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-nullish-coalescing-operator/7.8.3
     name: '@babel/plugin-syntax-nullish-coalescing-operator'
@@ -1152,7 +1144,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-numeric-separator/7.10.4_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-numeric-separator/7.10.4
     name: '@babel/plugin-syntax-numeric-separator'
@@ -1180,7 +1172,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-object-rest-spread/7.8.3
     name: '@babel/plugin-syntax-object-rest-spread'
@@ -1208,7 +1200,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-optional-catch-binding/7.8.3_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-optional-catch-binding/7.8.3
     name: '@babel/plugin-syntax-optional-catch-binding'
@@ -1236,7 +1228,7 @@ packages:
   registry.npm.taobao.org/@babel/plugin-syntax-optional-chaining/7.8.3_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
     id: registry.npm.taobao.org/@babel/plugin-syntax-optional-chaining/7.8.3
     name: '@babel/plugin-syntax-optional-chaining'
@@ -1261,20 +1253,20 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/download/@babel/plugin-syntax-top-level-await-7.12.13.tgz
     version: 7.12.13
-  registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/7.12.1_@babel+core@7.12.7:
+  registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/7.12.13_@babel+core@7.12.7:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.10.4
+      '@babel/helper-plugin-utils': registry.npm.taobao.org/@babel/helper-plugin-utils/7.12.13
     dev: true
-    id: registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/7.12.1
+    id: registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/7.12.13
     name: '@babel/plugin-syntax-top-level-await'
     peerDependencies:
       '@babel/core': ^7.0.0-0
     resolution:
-      integrity: sha1-3WwLNXrBuxQtmFN0UKMZYl0T0qA=
+      integrity: sha1-xfD6biSfW3OXJ/kjVAz3qAYTAXg=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/download/@babel/plugin-syntax-top-level-await-7.12.1.tgz
-    version: 7.12.1
+      tarball: https://registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/download/@babel/plugin-syntax-top-level-await-7.12.13.tgz
+    version: 7.12.13
   registry.npm.taobao.org/@babel/plugin-syntax-typescript/7.12.13_@babel+core@7.12.13:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.13
@@ -2700,6 +2692,8 @@ packages:
       node: '>=10'
     name: '@swc/core-android-arm64'
     optional: true
+    os:
+      - android
     resolution:
       integrity: sha1-VUEGyEnqookE9/mOTOwEE9cmQqE=
       registry: https://r.npm.taobao.org/
@@ -2711,6 +2705,8 @@ packages:
       node: '>=10'
     name: '@swc/core-darwin-arm64'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-suPlKXspUJF5ij0iRof6qHf9JRw=
       registry: https://r.npm.taobao.org/
@@ -2722,6 +2718,8 @@ packages:
       node: '>=10'
     name: '@swc/core-darwin-x64'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-Do856Zrafd5uz7p0F4BXQ9O6mHw=
       registry: https://r.npm.taobao.org/
@@ -2733,6 +2731,8 @@ packages:
       node: '>=10'
     name: '@swc/core-linux-arm-gnueabihf'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-hd/mjzUKt6w/Nrs0RRPbmuNxWFg=
       registry: https://r.npm.taobao.org/
@@ -2744,6 +2744,8 @@ packages:
       node: '>=10'
     name: '@swc/core-linux-arm64-gnu'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-gu46T+ql4/606AZTf8F4S7Aelzw=
       registry: https://r.npm.taobao.org/
@@ -2755,6 +2757,8 @@ packages:
       node: '>=10'
     name: '@swc/core-linux-x64-gnu'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-emzr2F8avQJYNDiZ/tcc+zLgv0g=
       registry: https://r.npm.taobao.org/
@@ -2766,6 +2770,8 @@ packages:
       node: '>=10'
     name: '@swc/core-linux-x64-musl'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-WO0T1PHVg4VtH6O/PcMoH7kMYUo=
       registry: https://r.npm.taobao.org/
@@ -2777,6 +2783,8 @@ packages:
       node: '>=10'
     name: '@swc/core-win32-ia32-msvc'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-i4/eu5G6skoSMVg9EaYpf5Qncdo=
       registry: https://r.npm.taobao.org/
@@ -2788,6 +2796,8 @@ packages:
       node: '>=10'
     name: '@swc/core-win32-x64-msvc'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-wUS+BBAuTgV1oOcYmydximYO4MU=
       registry: https://r.npm.taobao.org/
@@ -3455,6 +3465,7 @@ packages:
       regexpp: registry.npm.taobao.org/regexpp/3.1.0
       semver: registry.npm.taobao.org/semver/7.3.4
       tsutils: registry.npm.taobao.org/tsutils/3.20.0_typescript@4.1.3
+      typescript: registry.npm.taobao.org/typescript/4.1.3
     dev: true
     engines:
       node: ^10.12.0 || >=12.0.0
@@ -3464,6 +3475,9 @@ packages:
       '@typescript-eslint/parser': ^4.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-R6FYA8+riVgLlpM9NIwnIfPS9v4=
       registry: https://r.npm.taobao.org/
@@ -3498,6 +3512,7 @@ packages:
       '@typescript-eslint/typescript-estree': registry.npm.taobao.org/@typescript-eslint/typescript-estree/4.14.2_typescript@4.1.3
       debug: registry.npm.taobao.org/debug/4.3.1
       eslint: registry.npm.taobao.org/eslint/7.19.0
+      typescript: registry.npm.taobao.org/typescript/4.1.3
     dev: true
     engines:
       node: ^10.12.0 || >=12.0.0
@@ -3506,6 +3521,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-MeIW5LqrZ4pW5Tn525hi4lQsmNA=
       registry: https://r.npm.taobao.org/
@@ -3544,6 +3562,7 @@ packages:
       lodash: registry.npm.taobao.org/lodash/4.17.20
       semver: registry.npm.taobao.org/semver/7.3.4
       tsutils: registry.npm.taobao.org/tsutils/3.20.0_typescript@4.1.3
+      typescript: registry.npm.taobao.org/typescript/4.1.3
     dev: true
     engines:
       node: ^10.12.0 || >=12.0.0
@@ -3551,6 +3570,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-nF69jK5NewFPiQrNgejhfzCcnfk=
       registry: https://r.npm.taobao.org/
@@ -4264,7 +4286,7 @@ packages:
       babel-plugin-istanbul: registry.npm.taobao.org/babel-plugin-istanbul/6.0.0
       babel-preset-jest: registry.npm.taobao.org/babel-preset-jest/26.6.2_@babel+core@7.12.7
       chalk: registry.npm.taobao.org/chalk/4.1.0
-      graceful-fs: registry.npm.taobao.org/graceful-fs/4.2.4
+      graceful-fs: registry.npm.taobao.org/graceful-fs/4.2.5
       slash: registry.npm.taobao.org/slash/3.0.0
     dev: true
     engines:
@@ -4276,7 +4298,7 @@ packages:
     resolution:
       integrity: sha1-2H0lywA3V3oMifguV1XF0pPAEFY=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/babel-jest/download/babel-jest-26.6.3.tgz
+      tarball: https://registry.npm.taobao.org/babel-jest/download/babel-jest-26.6.3.tgz?cache=0&sync_timestamp=1611036836972&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbabel-jest%2Fdownload%2Fbabel-jest-26.6.3.tgz
     version: 26.6.3
   registry.npm.taobao.org/babel-plugin-dynamic-import-node/2.3.3:
     dependencies:
@@ -4338,31 +4360,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/babel-plugin-transform-rename-import/download/babel-plugin-transform-rename-import-2.3.0.tgz
     version: 2.3.0
-  registry.npm.taobao.org/babel-preset-current-node-syntax/1.0.0_@babel+core@7.12.7:
-    dependencies:
-      '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
-      '@babel/plugin-syntax-async-generators': registry.npm.taobao.org/@babel/plugin-syntax-async-generators/7.8.4_@babel+core@7.12.7
-      '@babel/plugin-syntax-bigint': registry.npm.taobao.org/@babel/plugin-syntax-bigint/7.8.3_@babel+core@7.12.7
-      '@babel/plugin-syntax-class-properties': registry.npm.taobao.org/@babel/plugin-syntax-class-properties/7.12.1_@babel+core@7.12.7
-      '@babel/plugin-syntax-import-meta': registry.npm.taobao.org/@babel/plugin-syntax-import-meta/7.10.4_@babel+core@7.12.7
-      '@babel/plugin-syntax-json-strings': registry.npm.taobao.org/@babel/plugin-syntax-json-strings/7.8.3_@babel+core@7.12.7
-      '@babel/plugin-syntax-logical-assignment-operators': registry.npm.taobao.org/@babel/plugin-syntax-logical-assignment-operators/7.10.4_@babel+core@7.12.7
-      '@babel/plugin-syntax-nullish-coalescing-operator': registry.npm.taobao.org/@babel/plugin-syntax-nullish-coalescing-operator/7.8.3_@babel+core@7.12.7
-      '@babel/plugin-syntax-numeric-separator': registry.npm.taobao.org/@babel/plugin-syntax-numeric-separator/7.10.4_@babel+core@7.12.7
-      '@babel/plugin-syntax-object-rest-spread': registry.npm.taobao.org/@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.12.7
-      '@babel/plugin-syntax-optional-catch-binding': registry.npm.taobao.org/@babel/plugin-syntax-optional-catch-binding/7.8.3_@babel+core@7.12.7
-      '@babel/plugin-syntax-optional-chaining': registry.npm.taobao.org/@babel/plugin-syntax-optional-chaining/7.8.3_@babel+core@7.12.7
-      '@babel/plugin-syntax-top-level-await': registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/7.12.1_@babel+core@7.12.7
-    dev: true
-    id: registry.npm.taobao.org/babel-preset-current-node-syntax/1.0.0
-    name: babel-preset-current-node-syntax
-    peerDependencies:
-      '@babel/core': ^7.0.0
-    resolution:
-      integrity: sha1-z1/u8pVRJTRxz6gvyOD1Bj3wenc=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/babel-preset-current-node-syntax/download/babel-preset-current-node-syntax-1.0.0.tgz
-    version: 1.0.0
   registry.npm.taobao.org/babel-preset-current-node-syntax/1.0.1_@babel+core@7.12.13:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.13
@@ -4378,6 +4375,31 @@ packages:
       '@babel/plugin-syntax-optional-catch-binding': registry.npm.taobao.org/@babel/plugin-syntax-optional-catch-binding/7.8.3_@babel+core@7.12.13
       '@babel/plugin-syntax-optional-chaining': registry.npm.taobao.org/@babel/plugin-syntax-optional-chaining/7.8.3_@babel+core@7.12.13
       '@babel/plugin-syntax-top-level-await': registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/7.12.13_@babel+core@7.12.13
+    dev: true
+    id: registry.npm.taobao.org/babel-preset-current-node-syntax/1.0.1
+    name: babel-preset-current-node-syntax
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    resolution:
+      integrity: sha1-tDmSObibKgEfndvj5PQB/EDP9zs=
+      registry: https://r.npm.taobao.org/
+      tarball: https://registry.npm.taobao.org/babel-preset-current-node-syntax/download/babel-preset-current-node-syntax-1.0.1.tgz
+    version: 1.0.1
+  registry.npm.taobao.org/babel-preset-current-node-syntax/1.0.1_@babel+core@7.12.7:
+    dependencies:
+      '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
+      '@babel/plugin-syntax-async-generators': registry.npm.taobao.org/@babel/plugin-syntax-async-generators/7.8.4_@babel+core@7.12.7
+      '@babel/plugin-syntax-bigint': registry.npm.taobao.org/@babel/plugin-syntax-bigint/7.8.3_@babel+core@7.12.7
+      '@babel/plugin-syntax-class-properties': registry.npm.taobao.org/@babel/plugin-syntax-class-properties/7.12.13_@babel+core@7.12.7
+      '@babel/plugin-syntax-import-meta': registry.npm.taobao.org/@babel/plugin-syntax-import-meta/7.10.4_@babel+core@7.12.7
+      '@babel/plugin-syntax-json-strings': registry.npm.taobao.org/@babel/plugin-syntax-json-strings/7.8.3_@babel+core@7.12.7
+      '@babel/plugin-syntax-logical-assignment-operators': registry.npm.taobao.org/@babel/plugin-syntax-logical-assignment-operators/7.10.4_@babel+core@7.12.7
+      '@babel/plugin-syntax-nullish-coalescing-operator': registry.npm.taobao.org/@babel/plugin-syntax-nullish-coalescing-operator/7.8.3_@babel+core@7.12.7
+      '@babel/plugin-syntax-numeric-separator': registry.npm.taobao.org/@babel/plugin-syntax-numeric-separator/7.10.4_@babel+core@7.12.7
+      '@babel/plugin-syntax-object-rest-spread': registry.npm.taobao.org/@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.12.7
+      '@babel/plugin-syntax-optional-catch-binding': registry.npm.taobao.org/@babel/plugin-syntax-optional-catch-binding/7.8.3_@babel+core@7.12.7
+      '@babel/plugin-syntax-optional-chaining': registry.npm.taobao.org/@babel/plugin-syntax-optional-chaining/7.8.3_@babel+core@7.12.7
+      '@babel/plugin-syntax-top-level-await': registry.npm.taobao.org/@babel/plugin-syntax-top-level-await/7.12.13_@babel+core@7.12.7
     dev: true
     id: registry.npm.taobao.org/babel-preset-current-node-syntax/1.0.1
     name: babel-preset-current-node-syntax
@@ -4409,7 +4431,7 @@ packages:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.7
       babel-plugin-jest-hoist: registry.npm.taobao.org/babel-plugin-jest-hoist/26.6.2
-      babel-preset-current-node-syntax: registry.npm.taobao.org/babel-preset-current-node-syntax/1.0.0_@babel+core@7.12.7
+      babel-preset-current-node-syntax: registry.npm.taobao.org/babel-preset-current-node-syntax/1.0.1_@babel+core@7.12.7
     dev: true
     engines:
       node: '>= 10.14.2'
@@ -7587,6 +7609,8 @@ packages:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     name: fsevents
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=
       registry: https://r.npm.taobao.org/
@@ -8352,17 +8376,17 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/human-signals/download/human-signals-2.1.0.tgz
     version: 2.1.0
-  registry.npm.taobao.org/husky/5.0.8:
+  registry.npm.taobao.org/husky/5.0.9:
     dev: true
     engines:
       node: '>= 10'
     hasBin: true
     name: husky
     resolution:
-      integrity: sha1-L9TLSXK/s/25mf60hYeu6JJTOdo=
+      integrity: sha1-bThwZkPWbtOVvNTulS0C4/Fes6M=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/husky/download/husky-5.0.8.tgz
-    version: 5.0.8
+      tarball: https://registry.npm.taobao.org/husky/download/husky-5.0.9.tgz
+    version: 5.0.9
   registry.npm.taobao.org/hyphenate-style-name/1.0.4:
     name: hyphenate-style-name
     resolution:
@@ -9675,6 +9699,9 @@ packages:
     name: jest-pnp-resolver
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
       registry: https://r.npm.taobao.org/
@@ -16014,7 +16041,7 @@ specifiers:
   fs-extra: 9.1.0
   globby: 11.0.2
   haoma: 2.25.0
-  husky: 5.0.8
+  husky: 5.0.9
   ioredis: ^4.19.4
   ioredis-mock: 5.2.1
   jest: 26.6.3
