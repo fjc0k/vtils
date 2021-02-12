@@ -24,7 +24,7 @@ devDependencies:
   '@types/fs-extra': registry.npm.taobao.org/@types/fs-extra/9.0.7
   '@types/prompts': registry.npm.taobao.org/@types/prompts/2.0.9
   '@types/react': registry.npm.taobao.org/@types/react/17.0.2
-  '@types/react-dom': registry.npm.taobao.org/@types/react-dom/17.0.0
+  '@types/react-dom': registry.npm.taobao.org/@types/react-dom/17.0.1
   '@types/standard-version': registry.npm.taobao.org/@types/standard-version/7.0.0
   '@types/uuid': registry.npm.taobao.org/@types/uuid/8.3.0
   benchmark: registry.npm.taobao.org/benchmark/2.1.4
@@ -3303,16 +3303,16 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.3.tgz
     version: 15.7.3
-  registry.npm.taobao.org/@types/react-dom/17.0.0:
+  registry.npm.taobao.org/@types/react-dom/17.0.1:
     dependencies:
-      '@types/react': registry.npm.taobao.org/@types/react/17.0.0
+      '@types/react': registry.npm.taobao.org/@types/react/17.0.2
     dev: true
     name: '@types/react-dom'
     resolution:
-      integrity: sha1-s7aR65VsSzQBd37me5AMsoQV2Vo=
+      integrity: sha1-2S130CC/sIPgfMjgrJ+TNZmk1Wo=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-17.0.0.tgz
-    version: 17.0.0
+      tarball: https://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-17.0.1.tgz
+    version: 17.0.1
   registry.npm.taobao.org/@types/react-test-renderer/17.0.0:
     dependencies:
       '@types/react': registry.npm.taobao.org/@types/react/17.0.0
@@ -16036,7 +16036,7 @@ specifiers:
   '@types/ioredis': ^4.17.9
   '@types/prompts': 2.0.9
   '@types/react': 17.0.2
-  '@types/react-dom': 17.0.0
+  '@types/react-dom': 17.0.1
   '@types/standard-version': 7.0.0
   '@types/tough-cookie': ^4.0.0
   '@types/uuid': 8.3.0
