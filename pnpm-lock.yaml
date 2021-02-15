@@ -49,7 +49,7 @@ devDependencies:
   standard-version: registry.npm.taobao.org/standard-version/9.1.0
   tree-tool: registry.npm.taobao.org/tree-tool/1.1.8
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.1.5
-  type-fest: registry.npm.taobao.org/type-fest/0.21.0
+  type-fest: registry.npm.taobao.org/type-fest/0.21.1
   typescript: registry.npm.taobao.org/typescript/4.1.5
   typescript-snapshots-plugin: registry.npm.taobao.org/typescript-snapshots-plugin/1.7.0
   vscode-generate-index-standalone: registry.npm.taobao.org/vscode-generate-index-standalone/1.3.0
@@ -15144,16 +15144,16 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/type-fest/download/type-fest-0.18.1.tgz?cache=0&sync_timestamp=1606468893172&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftype-fest%2Fdownload%2Ftype-fest-0.18.1.tgz
     version: 0.18.1
-  registry.npm.taobao.org/type-fest/0.21.0:
+  registry.npm.taobao.org/type-fest/0.21.1:
     dev: true
     engines:
       node: '>=10'
     name: type-fest
     resolution:
-      integrity: sha1-qUQT5hRdHCYa5oDx1dAQdGx1Fkw=
+      integrity: sha1-+xf+1ejvXHyLHgczpETRagJajeE=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/type-fest/download/type-fest-0.21.0.tgz
-    version: 0.21.0
+      tarball: https://registry.npm.taobao.org/type-fest/download/type-fest-0.21.1.tgz?cache=0&sync_timestamp=1613406696684&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftype-fest%2Fdownload%2Ftype-fest-0.21.1.tgz
+    version: 0.21.1
   registry.npm.taobao.org/type-fest/0.6.0:
     dev: true
     engines:
@@ -16060,7 +16060,7 @@ specifiers:
   tough-cookie-redisstore: ^0.0.4
   tree-tool: 1.1.8
   ts-essentials: 7.0.1
-  type-fest: 0.21.0
+  type-fest: 0.21.1
   typescript: 4.1.5
   typescript-snapshots-plugin: 1.7.0
   uuid: ^8.3.2
