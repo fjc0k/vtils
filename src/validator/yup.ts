@@ -12,15 +12,17 @@ import locale from 'yup/es/locale'
 // @ts-ignore
 import printValue from 'yup/es/util/printValue'
 
-// 实现 getLocale 方法
-Object.defineProperty(yup, 'getLocale', {
-  value: () => locale,
-})
+try {
+  // 实现 getLocale 方法
+  Object.defineProperty(yup, 'getLocale', {
+    value: () => locale,
+  })
 
-// 实现 printValue 方法
-Object.defineProperty(yup, 'printValue', {
-  value: printValue,
-})
+  // 实现 printValue 方法
+  Object.defineProperty(yup, 'printValue', {
+    value: printValue,
+  })
+} catch {}
 
 // 实现 chineseMobilePhoneNumber 验证器
 yup.addMethod(
