@@ -16,14 +16,32 @@ async function main() {
     target: string
   } = yargs.parse(process.argv) as any
 
-  const files = await globby(argv.modules.split(','), {
+  const modules = argv.modules.split(',')
+  const globModules = modules.filter(mod => !mod.startsWith('@'))
+  const specificModules = modules
+    .filter(mod => mod.startsWith('@'))
+    .map(mod => mod.slice(1))
+
+  const files = await globby(globModules, {
     cwd: path.join(__dirname, '..'),
     absolute: true,
     onlyFiles: true,
   })
 
   const indexFile = 'index.ts'
-  const indexContent = files.map(file => `export * from '${file}'`).join('\n')
+  const indexContent = `
+    ${files.map(file => `export * from '${file}'`).join('\n')}
+
+    ${specificModules
+      .map(mod => {
+        const [type, mo] = mod.split('.')
+        return `export { ${mo} } from '${path.join(
+          __dirname,
+          `../src/${type}/index.ts`,
+        )}'`
+      })
+      .join('\n')}
+  `
 
   const bundle = await rollup({
     input: indexFile,
