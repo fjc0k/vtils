@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.31.0](https://github.com/fjc0k/vtils/compare/v4.30.2...v4.31.0) (2021-02-19)
+
+
+### Features
+
+* **utils:** 新增 sampleBy, sampleIndex ([7df6ac8](https://github.com/fjc0k/vtils/commit/7df6ac8a75b97f5f78798895a00c6b9e2bfa0ab3))
+
+
+### Bug Fixes
+
+* **yup:** try catch ([5bfd276](https://github.com/fjc0k/vtils/commit/5bfd276d1151d09c9101710a27936a18be2ca33e))
+
 ### [4.30.2](https://github.com/fjc0k/vtils/compare/v4.30.1...v4.30.2) (2021-02-01)
 
 
