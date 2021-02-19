@@ -79,6 +79,10 @@ rich://{"url":"***","desc":"***"}
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
 |  [rot13(str)](./utils.rot13.md) | 回转 13 位替换式密码。 |
 |  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
+|  [sampleBy(collection, iteratee)](./utils.sampleby.md) | 从集合中随机获得一个元素的迭代值。 |
+|  [sampleBy(collection, iteratee)](./utils.sampleby_1.md) |  |
+|  [sampleIndex(collection)](./utils.sampleindex.md) | 从集合中随机获得一个元素的索引（数组）或键（对象）。 |
+|  [sampleIndex(collection)](./utils.sampleindex_1.md) |  |
 |  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
 |  [traverse(value, callback)](./utils.traverse.md) | 遍历对象和数组。 |
 |  [wait(milliseconds, value)](./utils.wait.md) | 等待一段时间 resolve。 |
