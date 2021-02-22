@@ -10,7 +10,7 @@ devDependencies:
   concurrently: registry.npm.taobao.org/concurrently/5.3.0
   execa: registry.npm.taobao.org/execa/5.0.0
   haoma: 2.28.0_react-dom@17.0.1+react@17.0.1
-  vite: registry.npm.taobao.org/vite/2.0.1
+  vite: 2.0.2
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.0.0:
@@ -2812,6 +2812,12 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==
+  /esbuild/0.8.48:
+    dev: true
+    hasBin: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-lrH8lA8wWQ6Lpe1z6C7ZZaFSmRsUlcQAqe16nf7ITySQ7MV4+vI7qAqQlT/u+c3+9AL3VXmT4MXTxV2e63pO4A==
   /escalade/3.1.1:
     dev: true
     engines:
@@ -5611,6 +5617,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
+  /rollup/2.39.0:
+    dev: true
+    engines:
+      node: '>=10.0.0'
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    resolution:
+      integrity: sha512-+WR3bttcq7zE+BntH09UxaW3bQo3vItuYeLsyk4dL2tuwbeSKJuvwiawyhEnvRdRgrII0Uzk00FpctHO/zB1kw==
   /rsvp/4.8.5:
     dev: true
     engines:
@@ -6451,6 +6466,20 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-Yw5wW34fSv5spzTXNkokD6S6/Oq92d8q/t14TqsS3fAiA1RYnxSFSIZ+CY3n6PGGRCq5HhJTSepQvFUS2QUDxA==
+  /vite/2.0.2:
+    dependencies:
+      esbuild: 0.8.48
+      postcss: 8.2.6
+      resolve: 1.20.0
+      rollup: 2.39.0
+    dev: true
+    engines:
+      node: '>=12.0.0'
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    resolution:
+      integrity: sha512-X+PTIPRt6/5Odf/h0kBkwkck+YC0I6oKH5+ttA9ytoLyC9yeksktVq1KNzImqB+/1CNBiBE2vr7orcgSxAi67w==
   /vtils/4.30.2_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': 7.12.18
@@ -7295,14 +7324,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/color-name/download/color-name-1.1.3.tgz
     version: 1.1.3
-  registry.npm.taobao.org/colorette/1.2.1:
-    dev: true
-    name: colorette
-    resolution:
-      integrity: sha1-TQuSEyXBT6+SYzCGpTbbbolWSxs=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/colorette/download/colorette-1.2.1.tgz
-    version: 1.2.1
   registry.npm.taobao.org/compute-scroll-into-view/1.0.16:
     dev: false
     name: compute-scroll-into-view
@@ -7482,16 +7503,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/error-ex/download/error-ex-1.3.2.tgz
     version: 1.3.2
-  registry.npm.taobao.org/esbuild/0.8.48:
-    dev: true
-    hasBin: true
-    name: esbuild
-    requiresBuild: true
-    resolution:
-      integrity: sha1-pX5N3oTsVtocbsrv7pfp2mxbALU=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/esbuild/download/esbuild-0.8.48.tgz
-    version: 0.8.48
   registry.npm.taobao.org/escape-string-regexp/1.0.5:
     engines:
       node: '>=0.8.0'
@@ -7541,19 +7552,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/find-up/download/find-up-3.0.0.tgz
     version: 3.0.0
-  registry.npm.taobao.org/fsevents/2.3.2:
-    dev: true
-    engines:
-      node: ^8.16.0 || ^10.6.0 || >=11.0.0
-    name: fsevents
-    optional: true
-    os:
-      - darwin
-    resolution:
-      integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/fsevents/download/fsevents-2.3.2.tgz
-    version: 2.3.2
   registry.npm.taobao.org/function-bind/1.1.1:
     name: function-bind
     resolution:
@@ -7869,17 +7867,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/ms/download/ms-2.1.2.tgz
     version: 2.1.2
-  registry.npm.taobao.org/nanoid/3.1.20:
-    dev: true
-    engines:
-      node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1
-    hasBin: true
-    name: nanoid
-    resolution:
-      integrity: sha1-utwmPGsdzxS3HvqoX2q0wdbPx4g=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/nanoid/download/nanoid-3.1.20.tgz
-    version: 3.1.20
   registry.npm.taobao.org/normalize-package-data/2.5.0:
     dependencies:
       hosted-git-info: registry.npm.taobao.org/hosted-git-info/2.8.8
@@ -8048,20 +8035,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/pify/download/pify-3.0.0.tgz
     version: 3.0.0
-  registry.npm.taobao.org/postcss/8.2.6:
-    dependencies:
-      colorette: registry.npm.taobao.org/colorette/1.2.1
-      nanoid: registry.npm.taobao.org/nanoid/3.1.20
-      source-map: registry.npm.taobao.org/source-map/0.6.1
-    dev: true
-    engines:
-      node: ^10 || ^12 || >=14
-    name: postcss
-    resolution:
-      integrity: sha1-XWmpdFQ7Rfh+RkvEw+OSqX1r6f4=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/postcss/download/postcss-8.2.6.tgz
-    version: 8.2.6
   registry.npm.taobao.org/rc-align/4.0.9_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': registry.npm.taobao.org/@babel/runtime/7.12.18
@@ -8851,19 +8824,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/resolve/download/resolve-1.20.0.tgz
     version: 1.20.0
-  registry.npm.taobao.org/rollup/2.39.0:
-    dev: true
-    engines:
-      node: '>=10.0.0'
-    hasBin: true
-    name: rollup
-    optionalDependencies:
-      fsevents: registry.npm.taobao.org/fsevents/2.3.2
-    resolution:
-      integrity: sha1-vk+YyeQheTqP7ILIVPtWfDXiKrY=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/rollup/download/rollup-2.39.0.tgz
-    version: 2.39.0
   registry.npm.taobao.org/rxjs/6.6.3:
     dependencies:
       tslib: registry.npm.taobao.org/tslib/1.14.1
@@ -8968,16 +8928,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/source-map/download/source-map-0.5.7.tgz
     version: 0.5.7
-  registry.npm.taobao.org/source-map/0.6.1:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    name: source-map
-    resolution:
-      integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/source-map/download/source-map-0.6.1.tgz
-    version: 0.6.1
   registry.npm.taobao.org/spawn-command/0.0.2-1:
     dev: true
     name: spawn-command
@@ -9136,24 +9086,6 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/validate-npm-package-license/download/validate-npm-package-license-3.0.4.tgz
     version: 3.0.4
-  registry.npm.taobao.org/vite/2.0.1:
-    dependencies:
-      esbuild: registry.npm.taobao.org/esbuild/0.8.48
-      postcss: registry.npm.taobao.org/postcss/8.2.6
-      resolve: registry.npm.taobao.org/resolve/1.20.0
-      rollup: registry.npm.taobao.org/rollup/2.39.0
-    dev: true
-    engines:
-      node: '>=12.0.0'
-    hasBin: true
-    name: vite
-    optionalDependencies:
-      fsevents: registry.npm.taobao.org/fsevents/2.3.2
-    resolution:
-      integrity: sha1-NI/FwN5RCqkL0B7Ph98hDOdBs44=
-      registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/vite/download/vite-2.0.1.tgz
-    version: 2.0.1
   registry.npm.taobao.org/warning/4.0.3:
     dependencies:
       loose-envify: registry.npm.taobao.org/loose-envify/1.4.0
@@ -9258,4 +9190,4 @@ specifiers:
   haoma: 2.28.0
   react: 17.0.1
   react-dom: 17.0.1
-  vite: 2.0.1
+  vite: 2.0.2
