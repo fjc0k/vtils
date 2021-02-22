@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.32.0](https://github.com/fjc0k/vtils/compare/v4.31.0...v4.32.0) (2021-02-22)
+
+
+### Features
+
+* **dev:** 新增 getBabelPluginImportList ([603843e](https://github.com/fjc0k/vtils/commit/603843e03904575c1017fb16a8f11825e332df47))
+
 ## [4.31.0](https://github.com/fjc0k/vtils/compare/v4.30.2...v4.31.0) (2021-02-19)
 
 
