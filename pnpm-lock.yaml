@@ -41,7 +41,7 @@ devDependencies:
   globby: registry.npm.taobao.org/globby/11.0.2
   haoma: registry.npm.taobao.org/haoma/2.26.1_33a5762b41e62a0785d9ee54aafc2efd
   husky: registry.npm.taobao.org/husky/5.1.0
-  ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.3_ioredis@4.22.0
+  ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.4_ioredis@4.22.0
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.4
   open-cli: registry.npm.taobao.org/open-cli/6.0.1
@@ -8063,7 +8063,7 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/interpret/download/interpret-1.4.0.tgz
     version: 1.4.0
-  registry.npm.taobao.org/ioredis-mock/5.2.3_ioredis@4.22.0:
+  registry.npm.taobao.org/ioredis-mock/5.2.4_ioredis@4.22.0:
     dependencies:
       array-from: registry.npm.taobao.org/array-from/2.1.1
       es6-map: registry.npm.taobao.org/es6-map/0.1.5
@@ -8077,15 +8077,15 @@ packages:
     dev: true
     engines:
       node: '>=10'
-    id: registry.npm.taobao.org/ioredis-mock/5.2.3
+    id: registry.npm.taobao.org/ioredis-mock/5.2.4
     name: ioredis-mock
     peerDependencies:
       ioredis: 4.x
     resolution:
-      integrity: sha1-hPJpx+/TEvB0q9RXnB7cD+Qq7ug=
+      integrity: sha1-J0pdPniqksAdV57RbdIemiF25So=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/ioredis-mock/download/ioredis-mock-5.2.3.tgz
-    version: 5.2.3
+      tarball: https://registry.npm.taobao.org/ioredis-mock/download/ioredis-mock-5.2.4.tgz
+    version: 5.2.4
   registry.npm.taobao.org/ioredis/4.22.0:
     dependencies:
       cluster-key-slot: registry.npm.taobao.org/cluster-key-slot/1.1.0
@@ -10023,7 +10023,7 @@ packages:
     resolution:
       integrity: sha1-tEqbYpe8tpjxxRo1RaKzs2jVnFI=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/lodash/download/lodash-4.17.20.tgz?cache=0&sync_timestamp=1610554643195&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.20.tgz
+      tarball: https://registry.npm.taobao.org/lodash/download/lodash-4.17.20.tgz
     version: 4.17.20
   registry.npm.taobao.org/log-symbols/4.0.0:
     dependencies:
@@ -15349,7 +15349,7 @@ specifiers:
   haoma: 2.26.1
   husky: 5.1.0
   ioredis: ^4.19.4
-  ioredis-mock: 5.2.3
+  ioredis-mock: 5.2.4
   jest: 26.6.3
   lint-staged: 10.5.4
   lodash-uni: ^1.1.0
