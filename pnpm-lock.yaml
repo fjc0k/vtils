@@ -40,7 +40,7 @@ devDependencies:
   fs-extra: registry.npm.taobao.org/fs-extra/9.1.0
   globby: registry.npm.taobao.org/globby/11.0.2
   haoma: registry.npm.taobao.org/haoma/2.26.1_33a5762b41e62a0785d9ee54aafc2efd
-  husky: registry.npm.taobao.org/husky/5.0.9
+  husky: registry.npm.taobao.org/husky/5.1.0
   ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.3_ioredis@4.22.0
   jest: registry.npm.taobao.org/jest/26.6.3
   lint-staged: registry.npm.taobao.org/lint-staged/10.5.4
@@ -2291,6 +2291,8 @@ packages:
       node: '>=10'
     name: '@swc/core-android-arm64'
     optional: true
+    os:
+      - android
     resolution:
       integrity: sha1-VUEGyEnqookE9/mOTOwEE9cmQqE=
       registry: https://r.npm.taobao.org/
@@ -2302,6 +2304,8 @@ packages:
       node: '>=10'
     name: '@swc/core-darwin-arm64'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-suPlKXspUJF5ij0iRof6qHf9JRw=
       registry: https://r.npm.taobao.org/
@@ -2313,6 +2317,8 @@ packages:
       node: '>=10'
     name: '@swc/core-darwin-x64'
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha1-Do856Zrafd5uz7p0F4BXQ9O6mHw=
       registry: https://r.npm.taobao.org/
@@ -2324,6 +2330,8 @@ packages:
       node: '>=10'
     name: '@swc/core-linux-arm-gnueabihf'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-hd/mjzUKt6w/Nrs0RRPbmuNxWFg=
       registry: https://r.npm.taobao.org/
@@ -2335,6 +2343,8 @@ packages:
       node: '>=10'
     name: '@swc/core-linux-arm64-gnu'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-gu46T+ql4/606AZTf8F4S7Aelzw=
       registry: https://r.npm.taobao.org/
@@ -2346,6 +2356,8 @@ packages:
       node: '>=10'
     name: '@swc/core-linux-x64-gnu'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-emzr2F8avQJYNDiZ/tcc+zLgv0g=
       registry: https://r.npm.taobao.org/
@@ -2357,6 +2369,8 @@ packages:
       node: '>=10'
     name: '@swc/core-linux-x64-musl'
     optional: true
+    os:
+      - linux
     resolution:
       integrity: sha1-WO0T1PHVg4VtH6O/PcMoH7kMYUo=
       registry: https://r.npm.taobao.org/
@@ -2368,6 +2382,8 @@ packages:
       node: '>=10'
     name: '@swc/core-win32-ia32-msvc'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-i4/eu5G6skoSMVg9EaYpf5Qncdo=
       registry: https://r.npm.taobao.org/
@@ -2379,6 +2395,8 @@ packages:
       node: '>=10'
     name: '@swc/core-win32-x64-msvc'
     optional: true
+    os:
+      - win32
     resolution:
       integrity: sha1-wUS+BBAuTgV1oOcYmydximYO4MU=
       registry: https://r.npm.taobao.org/
@@ -3021,6 +3039,9 @@ packages:
       '@typescript-eslint/parser': ^4.0.0
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-g19kqgpAPl6eZMEM6vjQXD8BUYA=
       registry: https://r.npm.taobao.org/
@@ -3064,6 +3085,9 @@ packages:
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-TJGgYCcz22NQfh2/Exh9bHGhU8Q=
       registry: https://r.npm.taobao.org/
@@ -3109,6 +3133,9 @@ packages:
     name: '@typescript-eslint/typescript-estree'
     peerDependencies:
       typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     resolution:
       integrity: sha1-+pqf+ItKBNkB3b5bJIvAoAzWEL4=
       registry: https://r.npm.taobao.org/
@@ -7760,17 +7787,17 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/human-signals/download/human-signals-2.1.0.tgz
     version: 2.1.0
-  registry.npm.taobao.org/husky/5.0.9:
+  registry.npm.taobao.org/husky/5.1.0:
     dev: true
     engines:
       node: '>= 10'
     hasBin: true
     name: husky
     resolution:
-      integrity: sha1-bThwZkPWbtOVvNTulS0C4/Fes6M=
+      integrity: sha1-aLEUhSOsyDivBlXq1xv0Zxrbn5M=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/husky/download/husky-5.0.9.tgz
-    version: 5.0.9
+      tarball: https://registry.npm.taobao.org/husky/download/husky-5.1.0.tgz
+    version: 5.1.0
   registry.npm.taobao.org/hyphenate-style-name/1.0.4:
     name: hyphenate-style-name
     resolution:
@@ -15320,7 +15347,7 @@ specifiers:
   fs-extra: 9.1.0
   globby: 11.0.2
   haoma: 2.26.1
-  husky: 5.0.9
+  husky: 5.1.0
   ioredis: ^4.19.4
   ioredis-mock: 5.2.3
   jest: 26.6.3
