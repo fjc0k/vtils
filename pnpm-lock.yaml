@@ -39,7 +39,7 @@ devDependencies:
   execa: registry.npm.taobao.org/execa/5.0.0
   fs-extra: registry.npm.taobao.org/fs-extra/9.1.0
   globby: registry.npm.taobao.org/globby/11.0.2
-  haoma: registry.npm.taobao.org/haoma/2.27.0_33a5762b41e62a0785d9ee54aafc2efd
+  haoma: registry.npm.taobao.org/haoma/2.28.0_33a5762b41e62a0785d9ee54aafc2efd
   husky: registry.npm.taobao.org/husky/5.1.0
   ioredis-mock: registry.npm.taobao.org/ioredis-mock/5.2.4_ioredis@4.22.0
   jest: registry.npm.taobao.org/jest/26.6.3
@@ -2094,6 +2094,9 @@ packages:
       '@babel/core': ^7.0.0
       '@types/babel__core': ^7.1.9
       rollup: ^1.20.0||^2.0.0
+    peerDependenciesMeta:
+      '@types/babel__core':
+        optional: true
     resolution:
       integrity: sha1-nLHFFG3daklorZbyCcUMYvkvmHk=
       registry: https://r.npm.taobao.org/
@@ -5333,6 +5336,11 @@ packages:
     engines:
       node: '>=6.0'
     name: debug
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     resolution:
       integrity: sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
       registry: https://r.npm.taobao.org/
@@ -7353,7 +7361,7 @@ packages:
       registry: https://r.npm.taobao.org/
       tarball: https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.7.tgz
     version: 4.7.7
-  registry.npm.taobao.org/haoma/2.27.0_33a5762b41e62a0785d9ee54aafc2efd:
+  registry.npm.taobao.org/haoma/2.28.0_33a5762b41e62a0785d9ee54aafc2efd:
     dependencies:
       '@babel/core': registry.npm.taobao.org/@babel/core/7.12.17
       '@babel/eslint-parser': registry.npm.taobao.org/@babel/eslint-parser/7.12.17_c31887dab900bbf2ca8c3a08b8119075
@@ -7428,7 +7436,7 @@ packages:
       yargs: registry.npm.taobao.org/yargs/16.2.0
     dev: true
     hasBin: true
-    id: registry.npm.taobao.org/haoma/2.27.0
+    id: registry.npm.taobao.org/haoma/2.28.0
     name: haoma
     peerDependencies:
       eslint: ^7
@@ -7439,10 +7447,10 @@ packages:
       typescript: ^3 || ^4
     requiresBuild: true
     resolution:
-      integrity: sha1-CTVxK3eiv5WUBujUtfeq8uExUp4=
+      integrity: sha1-8R/loXPvSOfb0ld+1ASbIuvqcdA=
       registry: https://r.npm.taobao.org/
-      tarball: https://registry.npm.taobao.org/haoma/download/haoma-2.27.0.tgz
-    version: 2.27.0
+      tarball: https://registry.npm.taobao.org/haoma/download/haoma-2.28.0.tgz
+    version: 2.28.0
   registry.npm.taobao.org/har-schema/2.0.0:
     dev: true
     engines:
@@ -15284,7 +15292,7 @@ specifiers:
   fast-xml-parser: ^3.18.0
   fs-extra: 9.1.0
   globby: 11.0.2
-  haoma: 2.27.0
+  haoma: 2.28.0
   husky: 5.1.0
   ioredis: ^4.22.0
   ioredis-mock: 5.2.4
