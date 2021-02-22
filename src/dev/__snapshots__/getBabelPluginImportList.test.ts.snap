@@ -1,29 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`getBabelPluginImportList 转换正常 1`] = `
-"\\"use strict\\";
-
-var _interopRequireDefault = require(\\"@babel/runtime/helpers/interopRequireDefault\\");
-
-var _de2 = _interopRequireDefault(require(\\"date-fns/esm/locale/de\\"));
-
-var _getDay2 = _interopRequireDefault(require(\\"date-fns/esm/getDay\\"));
-
-var _zhCN2 = _interopRequireDefault(require(\\"date-fns/esm/locale/zhCN\\"));
-
-var _getDate2 = _interopRequireDefault(require(\\"date-fns/esm/getDate\\"));
-
-var _anyToDate2 = _interopRequireDefault(require(\\"vtils/date/anyToDate\\"));
-
-var _getTopBarInfo2 = _interopRequireDefault(require(\\"vtils/mp/getTopBarInfo\\"));
-
-var _utils = _interopRequireDefault(require(\\"../utils\\"));
-
-var _uniq2 = _interopRequireDefault(require(\\"lodash-es/uniq\\"));
-
-var _sampleIndex2 = _interopRequireDefault(require(\\"vtils/utils/sampleIndex\\"));
-
-var _sample2 = _interopRequireDefault(require(\\"lodash-es/sample\\"));
-
-console.log(_sample2.default, _sampleIndex2.default, _utils.default, _utils.default, _anyToDate2.default, _getDate2.default, _zhCN2.default, _getDay2.default, _de2.default, _uniq2.default, _getTopBarInfo2.default);"
+"import _de from \\"date-fns/esm/locale/de\\";
+import _getDay from \\"date-fns/esm/getDay\\";
+import _zhCN from \\"date-fns/esm/locale/zhCN\\";
+import _getDate from \\"date-fns/esm/getDate\\";
+import _anyToDate from \\"vtils/date/anyToDate\\";
+import _getTopBarInfo from \\"vtils/mp/getTopBarInfo\\";
+import _delay from \\"lodash-es/delay\\";
+import _sampleBy from \\"../utils/sampleBy\\";
+import _wait from \\"../utils/wait\\";
+import _uniq from \\"lodash-es/uniq\\";
+import _sampleIndex from \\"vtils/utils/sampleIndex\\";
+import _sample from \\"lodash-es/sample\\";
+console.log(_sample, _sampleIndex, _wait, _sampleBy, _anyToDate, _getDate, _zhCN, _getDay, _de, _uniq, _getTopBarInfo, _delay);"
 `;

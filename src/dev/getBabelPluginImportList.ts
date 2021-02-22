@@ -2,16 +2,19 @@ import * as dateFns from 'date-fns'
 import * as dateFnsLocale from 'date-fns/locale'
 import * as lodash from 'lodash-uni'
 import * as path from 'path'
+import { babelPluginImport } from './babelPluginImport'
 
 export function getBabelPluginImportList() {
-  // @ts-ignore
-  const resolve = require.resolve
-  const vtilsPath = path.dirname(resolve('vtils/package.json'))
-
+  const vtilsPath = path.dirname(
+    process.env.JEST_WORKER_ID
+      ? __filename
+      : // @ts-ignore
+        require.resolve('vtils/package.json'),
+  )
   return [
     // utils
     [
-      resolve('babel-plugin-import'),
+      babelPluginImport,
       {
         libraryName: 'vtils',
         camel2DashComponentName: false,
@@ -25,7 +28,7 @@ export function getBabelPluginImportList() {
       'vtils.utils.0',
     ],
     [
-      resolve('babel-plugin-import'),
+      babelPluginImport,
       {
         libraryName: 'vtils/utils',
         camel2DashComponentName: false,
@@ -39,7 +42,7 @@ export function getBabelPluginImportList() {
       'vtils.utils.1',
     ],
     [
-      resolve('babel-plugin-import'),
+      babelPluginImport,
       {
         libraryName: 'lodash-uni',
         camel2DashComponentName: false,
@@ -48,14 +51,13 @@ export function getBabelPluginImportList() {
       'vtils.utils.2',
     ],
     [
-      resolve('babel-plugin-import'),
+      babelPluginImport,
       {
         libraryName: '../utils',
         camel2DashComponentName: false,
-        customName: (name: string, file: { opts: { filename: string } }) => {
-          if (!file.opts.filename.startsWith(vtilsPath)) {
-            return '../utils'
-          }
+        only: (file: babel.BabelFile) =>
+          file.opts.filename!.startsWith(vtilsPath),
+        customName: (name: string) => {
           if (name in lodash) {
             return `lodash-es/${name}`
           }
@@ -67,7 +69,7 @@ export function getBabelPluginImportList() {
 
     // mp
     [
-      resolve('babel-plugin-import'),
+      babelPluginImport,
       {
         libraryName: 'vtils/mp',
         camel2DashComponentName: false,
@@ -78,7 +80,7 @@ export function getBabelPluginImportList() {
 
     // react
     [
-      resolve('babel-plugin-import'),
+      babelPluginImport,
       {
         libraryName: 'vtils/react',
         camel2DashComponentName: false,
@@ -89,7 +91,7 @@ export function getBabelPluginImportList() {
 
     // date
     [
-      resolve('babel-plugin-import'),
+      babelPluginImport,
       {
         libraryName: 'vtils/date',
         camel2DashComponentName: false,
@@ -106,7 +108,7 @@ export function getBabelPluginImportList() {
       'vtils.date.0',
     ],
     [
-      resolve('babel-plugin-import'),
+      babelPluginImport,
       {
         libraryName: 'date-fns/esm',
         camel2DashComponentName: false,
@@ -115,7 +117,7 @@ export function getBabelPluginImportList() {
       'vtils.date.1',
     ],
     [
-      resolve('babel-plugin-import'),
+      babelPluginImport,
       {
         libraryName: 'date-fns/esm/locale',
         camel2DashComponentName: false,
