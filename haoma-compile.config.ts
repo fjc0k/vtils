@@ -32,7 +32,7 @@ export default [
     name: 'esm',
     inputFiles: ['src/**/*.ts', '!**/*.{test,perf}.*', '!**/__*'],
     module: 'esm',
-    target: 'browser',
+    target: file => (/src\/(dev|x)\//.test(file) ? 'node' : 'browser'),
     outDir: 'lib',
     rollupDts: true,
     rollupDtsFiles: ['**/index.d.ts'],
@@ -44,7 +44,7 @@ export default [
     name: 'cjs',
     inputFiles: ['src/**/*.ts', '!**/*.{test,perf}.*', '!**/__*'],
     module: 'cjs',
-    target: 'browser',
+    target: file => (/src\/(dev|x)\//.test(file) ? 'node' : 'browser'),
     outDir: 'lib/_cjs',
     emitDts: false,
     renameImport: [
