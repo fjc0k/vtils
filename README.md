@@ -129,7 +129,7 @@ import {
   isNumber,
   EventBus,
   base64Encode,
-} from 'https://cdn.skypack.dev/vtils@4.32.9'
+} from 'https://cdn.skypack.dev/vtils@4.32.10'
 ```
 
 ## 许可
