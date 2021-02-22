@@ -98,24 +98,24 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "^7.12.5",
+    "@babel/runtime": "^7.12.18",
     "@types/benchmark": "^2.1.0",
-    "@types/ioredis": "^4.17.9",
+    "@types/ioredis": "^4.19.4",
     "@types/tough-cookie": "^4.0.0",
     "benchmark": "^2.1.4",
     "cli-table3": "^0.6.0",
     "cuid": "^2.1.8",
-    "date-fns": "^2.16.1",
-    "fast-xml-parser": "^3.17.5",
-    "ioredis": "^4.19.4",
+    "date-fns": "^2.17.0",
+    "fast-xml-parser": "^3.18.0",
+    "ioredis": "^4.22.0",
     "lodash-uni": "^1.1.0",
-    "miniprogram-api-typings": "^3.2.0",
+    "miniprogram-api-typings": "^3.2.3",
     "nanoid": "^3.1.20",
-    "react-use": "^15.3.4",
+    "react-use": "^15.3.8",
     "tough-cookie": "^4.0.0",
     "tough-cookie-redisstore": "^0.0.4",
     "uuid": "^8.3.2",
-    "yup": "~0.31.0"
+    "yup": "~0.31.1"
   },
   "devDependencies": {
     "@microsoft/api-documenter": "7.12.7",

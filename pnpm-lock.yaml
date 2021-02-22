@@ -15254,7 +15254,7 @@ packages:
       tarball: https://registry.npm.taobao.org/z-schema/download/z-schema-3.18.4.tgz
     version: 3.18.4
 specifiers:
-  '@babel/runtime': ^7.12.5
+  '@babel/runtime': ^7.12.18
   '@microsoft/api-documenter': 7.12.7
   '@microsoft/api-extractor': 7.13.1
   '@rollup/plugin-babel': 5.3.0
@@ -15266,7 +15266,7 @@ specifiers:
   '@testing-library/react-hooks': 3.7.0
   '@types/benchmark': ^2.1.0
   '@types/fs-extra': 9.0.7
-  '@types/ioredis': ^4.17.9
+  '@types/ioredis': ^4.19.4
   '@types/prompts': 2.0.9
   '@types/react': 17.0.2
   '@types/react-dom': 17.0.1
@@ -15278,27 +15278,27 @@ specifiers:
   codecov: 3.8.1
   cross-env: 7.0.3
   cuid: ^2.1.8
-  date-fns: ^2.16.1
+  date-fns: ^2.17.0
   eslint: 7.20.0
   execa: 5.0.0
-  fast-xml-parser: ^3.17.5
+  fast-xml-parser: ^3.18.0
   fs-extra: 9.1.0
   globby: 11.0.2
   haoma: 2.27.0
   husky: 5.1.0
-  ioredis: ^4.19.4
+  ioredis: ^4.22.0
   ioredis-mock: 5.2.4
   jest: 26.6.3
   lint-staged: 10.5.4
   lodash-uni: ^1.1.0
-  miniprogram-api-typings: ^3.2.0
+  miniprogram-api-typings: ^3.2.3
   nanoid: ^3.1.20
   open-cli: 6.0.1
   prettier: 2.2.1
   prompts: 2.4.0
   react: 17.0.1
   react-dom: 17.0.1
-  react-use: ^15.3.4
+  react-use: ^15.3.8
   rollup: 2.39.0
   rollup-plugin-dts: 2.0.1
   shx: 0.3.3
@@ -15313,4 +15313,4 @@ specifiers:
   uuid: ^8.3.2
   vscode-generate-index-standalone: 1.3.0
   yargs: 16.2.0
-  yup: ~0.31.0
+  yup: ~0.31.1
