@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { isPromiseLike } from '../utils'
-import { PickBy } from 'vtils/types'
+import { PickBy } from '../types'
 import { useUpdate } from 'react-use'
 
 export interface RenderComponentResult<
