@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.32.2](https://github.com/fjc0k/vtils/compare/v4.32.1...v4.32.2) (2021-02-22)
+
+
+### Bug Fixes
+
+* node build ([3624c95](https://github.com/fjc0k/vtils/commit/3624c957419694169e59adde969b7eec8b6e3df7))
+
 ### [4.32.1](https://github.com/fjc0k/vtils/compare/v4.32.0...v4.32.1) (2021-02-22)
 
 
