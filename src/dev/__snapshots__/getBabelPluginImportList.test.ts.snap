@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getBabelPluginImportList 转换正常 1`] = `
+"\\"use strict\\";
+
+var _interopRequireDefault = require(\\"@babel/runtime/helpers/interopRequireDefault\\");
+
+var _de2 = _interopRequireDefault(require(\\"date-fns/esm/locale/de\\"));
+
+var _getDay2 = _interopRequireDefault(require(\\"date-fns/esm/getDay\\"));
+
+var _zhCN2 = _interopRequireDefault(require(\\"date-fns/esm/locale/zhCN\\"));
+
+var _getDate2 = _interopRequireDefault(require(\\"date-fns/esm/getDate\\"));
+
+var _anyToDate2 = _interopRequireDefault(require(\\"vtils/date/anyToDate\\"));
+
+var _getTopBarInfo2 = _interopRequireDefault(require(\\"vtils/mp/getTopBarInfo\\"));
+
+var _utils = _interopRequireDefault(require(\\"../utils\\"));
+
+var _uniq2 = _interopRequireDefault(require(\\"lodash-es/uniq\\"));
+
+var _sampleIndex2 = _interopRequireDefault(require(\\"vtils/utils/sampleIndex\\"));
+
+var _sample2 = _interopRequireDefault(require(\\"lodash-es/sample\\"));
+
+console.log(_sample2.default, _sampleIndex2.default, _utils.default, _utils.default, _anyToDate2.default, _getDate2.default, _zhCN2.default, _getDay2.default, _de2.default, _uniq2.default, _getTopBarInfo2.default);"
+`;

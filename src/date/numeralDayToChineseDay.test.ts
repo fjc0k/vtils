@@ -1,6 +1,6 @@
 import { numeralDayToChineseDay } from './numeralDayToChineseDay'
 
-describe(numeralDayToChineseDay.name, () => {
+describe('numeralDayToChineseDay', () => {
   test('转换正常', () => {
     expect(numeralDayToChineseDay(0)).toBe('日')
     expect(numeralDayToChineseDay(1)).toBe('一')
