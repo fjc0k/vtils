@@ -10,8 +10,6 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [babelPluginImport({ types })](./dev.babelpluginimport.md) |  |
 |  [expectType()](./dev.expecttype.md) |  |
-|  [getBabelPluginImportList()](./dev.getbabelpluginimportlist.md) |  |
 |  [runBenchmark(suites, options)](./dev.runbenchmark.md) |  |
 
