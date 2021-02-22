@@ -26,7 +26,7 @@ jobs:
       # - if: ${{ steps.cache.outputs.cache-hit != 'true' }}
       #   run: npx pnpm -v && npx pnpm install --frozen-lockfile
       - run: |
-          npx pnpm -v && npx pnpm install --frozen-lockfile
+          npx pnpm -v && npx pnpm install --registry https://registry.npmjs.org
           rm -rf node_modules/.cache
           npm run build
           npm run test-with-coverage
