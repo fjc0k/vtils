@@ -124,7 +124,7 @@
     "@rollup/plugin-commonjs": "17.1.0",
     "@rollup/plugin-node-resolve": "11.2.0",
     "@rollup/plugin-virtual": "2.0.3",
-    "@tarojs/taro": "3.0.28",
+    "@tarojs/taro": "3.1.1",
     "@testing-library/react": "11.2.5",
     "@testing-library/react-hooks": "3.7.0",
     "@types/fs-extra": "9.0.7",
