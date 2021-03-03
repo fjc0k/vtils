@@ -152,11 +152,11 @@ declare module 'yup/es' {
   }
 
   export type GetSchema<T> = T extends string
-    ? StringSchema<T>
+    ? StringSchema<string>
     : T extends number
-    ? NumberSchema<T>
+    ? NumberSchema<number>
     : T extends boolean
-    ? BooleanSchema<T>
+    ? BooleanSchema<boolean>
     : T extends Array<infer X>
     ? ArraySchema<X>
     : T extends {}

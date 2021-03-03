@@ -1,4 +1,5 @@
 import { enUS } from './locale/enUS'
+import { expectType } from '../dev'
 import { run } from '../utils'
 import { yup } from './yup'
 import { zhCN } from './locale/zhCN'
@@ -160,5 +161,19 @@ describe('yup', () => {
         xxx: 'sss',
       }),
     ).toMatchSnapshot()
+  })
+
+  test('布尔、enum类型正常', () => {
+    type X = yup.GetObjectSchema<{
+      disabled: boolean
+      gender: 'male' | 'female'
+    }>
+    expectType<
+      X,
+      {
+        disabled: yup.BooleanSchema<boolean>
+        gender: yup.StringSchema<string>
+      }
+    >()
   })
 })
