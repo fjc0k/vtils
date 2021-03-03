@@ -10,22 +10,22 @@ export const zhCN: yup.Locale = {
     notOneOf: ({ label, values }) =>
       `${label || '此项'}必须不是下列值之一: ${values}`,
     defined: ({ label }) => `${label || '此项'}必须已定义`,
-    notType: ({ label, type, value, originalValue }) => {
-      const isCast = originalValue != null && originalValue !== value
-      const msg = [
-        `${label || '此项'} 必须是一个 \`${type}\` 类型的值，`,
-        `但传入的值经转换后是: \`${yup.printValue(value, true)}\``,
-        !isCast
-          ? '。'
-          : ` (传入的原始值是 \`${yup.printValue(originalValue, true)}\`)。`,
-        value !== null
-          ? ''
-          : '\n若用 `null` 表示空值，务必将模式标记为 `.nullable()`。',
-      ]
-        .filter(Boolean)
-        .join('')
-      return msg
-    },
+    notType: ({ label, type }) =>
+      `${label || '此项'}必须是一个${
+        type === 'number'
+          ? '数字'
+          : type === 'string'
+          ? '字符串'
+          : type === 'boolean'
+          ? '布尔值'
+          : type === 'object'
+          ? '对象'
+          : type === 'array'
+          ? '数组'
+          : type === 'date'
+          ? '日期'
+          : ` ${type} 类型的值`
+      }`,
   },
   string: {
     length: ({ label, length }) =>
