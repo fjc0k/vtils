@@ -8,5 +8,5 @@
 <b>Signature:</b>
 
 ```typescript
-currentPageListeners: ("appLaunch" | "appShow" | "appHide" | "appError" | "appThemeChange" | "appUnhandledRejectionThrow" | "pageNotFound" | "pageLoad" | "pageShow" | "pageHide" | "pageReady" | "pageUnload" | "pagePullDownRefresh" | "pageReachBottom" | "pageShareAppMessage" | "pageShareTimeline" | "pageAddToFavorites" | "pageResize" | "pageTabItemTap" | "currentPageShow" | "currentPageHide" | "currentPageReady" | "currentPageUnload" | "currentPagePullDownRefresh" | "currentPageReachBottom" | "currentPageShareAppMessage" | "currentPageShareTimeline" | "currentPageAddToFavorites" | "currentPageResize" | "currentPageTabItemTap" | "routeChange")[]
+currentPageListeners: (keyof MiniProgramBusListeners)[]
 ```

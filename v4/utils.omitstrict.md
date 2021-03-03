@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-omitStrict: <T extends Record<any, any>, K extends keyof T>(object: T, ...paths: OneOrMore<K>[]) => Pick<T, Exclude<keyof T, K>>
+omitStrict: <T extends Record<any, any>, K extends keyof T>(object: T, ...paths: OneOrMore<K>[]) => OmitStrict<T, K>
 ```
