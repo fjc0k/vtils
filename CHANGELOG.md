@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.32.12](https://github.com/fjc0k/vtils/compare/v4.32.11...v4.32.12) (2021-03-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency antd to v4.13.0 ([#60](https://github.com/fjc0k/vtils/issues/60)) ([6ed10cb](https://github.com/fjc0k/vtils/commit/6ed10cbd7d61e7f7c0ffcba44c237c6b651fa180))
+* **yup:** 中文优化 ([8fa4967](https://github.com/fjc0k/vtils/commit/8fa4967a5b0562f0b53c482d65e312a3dfa1e818))
+* **yup:** 类型优化 ([9d145bf](https://github.com/fjc0k/vtils/commit/9d145bf830d08c52500615232c5a4b3e99938c00))
+
 ### [4.32.11](https://github.com/fjc0k/vtils/compare/v4.32.10...v4.32.11) (2021-02-22)
 
 

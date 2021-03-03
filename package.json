@@ -1,6 +1,6 @@
 {
   "name": "vtils",
-  "version": "4.32.11",
+  "version": "4.32.12",
   "description": "一个面向业务的 JavaScript/TypeScript 实用程序库。",
   "keywords": [
     "util",
