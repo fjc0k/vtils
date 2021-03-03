@@ -22,6 +22,7 @@ export type {
   DelimiterCase,
   Class,
   Asyncify,
+  UnionToIntersection,
 } from 'type-fest'
 
 export type {
