@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.33.0](https://github.com/fjc0k/vtils/compare/v4.32.12...v4.33.0) (2021-03-03)
+
+
+### Features
+
+* **types:** 导出 UnionToIntersection ([8a17fd6](https://github.com/fjc0k/vtils/commit/8a17fd69092836e31be878441dea980ef1dc4235))
+
 ### [4.32.12](https://github.com/fjc0k/vtils/compare/v4.32.11...v4.32.12) (2021-03-03)
 
 
