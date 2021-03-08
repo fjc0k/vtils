@@ -150,7 +150,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "rollup": "2.40.0",
-    "rollup-plugin-dts": "2.0.1",
+    "rollup-plugin-dts": "3.0.1",
     "shx": "0.3.3",
     "standard-version": "9.1.1",
     "tree-tool": "1.1.8",
