@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.34.0](https://github.com/fjc0k/vtils/compare/v4.33.0...v4.34.0) (2021-03-18)
+
+
+### Features
+
+* **createSubmit:** 支持 throw 异常回调 ([2b5e9fb](https://github.com/fjc0k/vtils/commit/2b5e9fba93872c176ba4eb9c60a24935d0d35fb0))
+
+
+### Bug Fixes
+
+* **deps:** update dependency antd to v4.13.1 ([053b0f7](https://github.com/fjc0k/vtils/commit/053b0f71cc7e7fdfec718250d86a61b6d77ab4d6))
+* **deps:** update dependency emotion to v11 ([bad0318](https://github.com/fjc0k/vtils/commit/bad03188bfdeb98b833412b7583c6c48d75c9d74))
+
 ## [4.33.0](https://github.com/fjc0k/vtils/compare/v4.32.12...v4.33.0) (2021-03-03)
 
 
