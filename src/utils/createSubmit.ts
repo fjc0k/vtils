@@ -30,6 +30,11 @@ export interface CreateSubmitOptions {
    * 完成回调。
    */
   complete(): AsyncOrSync<any>
+
+  /**
+   * 异常回调。
+   */
+  throw?(error: unknown): AsyncOrSync<any>
 }
 
 export interface SubmitActionPayload {
@@ -83,8 +88,15 @@ export function createSubmit(options: CreateSubmitOptions): CreateSubmitResult {
     },
   }
   return action => {
-    return action(payload).then(res => {
-      return run(() => options.complete()).then(() => res)
-    })
+    return action(payload)
+      .then(res => {
+        return run(() => options.complete()).then(() => res)
+      })
+      .catch((error: unknown) => {
+        if (options.throw) {
+          options.throw(error)
+        }
+        return Promise.reject(error)
+      })
   }
 }

@@ -25,4 +25,21 @@ describe('createSubmit', () => {
     expect(success).toBeCalled().toBeCalledTimes(1).toBeCalledWith('成功', 20)
     expect(complete).toBeCalled().toBeCalledTimes(1)
   })
+
+  test('异常回调', async () => {
+    let error = ''
+    const submit = createSubmit({
+      start: jest.fn(),
+      fail: jest.fn(),
+      success: jest.fn(),
+      complete: jest.fn(),
+      throw: (err: string) => (error = err),
+    })
+    try {
+      await submit(async () => {
+        throw 'hello'
+      })
+    } catch {}
+    expect(error).toBe('hello')
+  })
 })
