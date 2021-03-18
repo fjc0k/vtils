@@ -10,7 +10,7 @@ devDependencies:
   concurrently: 6.0.0
   execa: registry.npm.taobao.org/execa/5.0.0
   haoma: 2.30.0_react-dom@17.0.1+react@17.0.1
-  vite: 2.0.5
+  vite: 2.1.2
 lockfileVersion: 5.2
 packages:
   /@ant-design/colors/6.0.0:
@@ -2952,12 +2952,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-uT3WXEQGAqzrI0SLy1Jz39BzIBiLWd5La9zFZ+FUSCPGqJbE+ZJHUTE8yHP1GVfyHKrrAFCZqLieaHkSprIRDQ==
-  /esbuild/0.8.57:
-    dev: true
-    hasBin: true
-    requiresBuild: true
-    resolution:
-      integrity: sha512-j02SFrUwFTRUqiY0Kjplwjm1psuzO1d6AjaXKuOR9hrY0HuPsT6sV42B6myW34h1q4CRy+Y3g4RU/cGJeI/nNA==
   /esbuild/0.9.3:
     dev: true
     hasBin: true
@@ -7178,9 +7172,9 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-Yw5wW34fSv5spzTXNkokD6S6/Oq92d8q/t14TqsS3fAiA1RYnxSFSIZ+CY3n6PGGRCq5HhJTSepQvFUS2QUDxA==
-  /vite/2.0.5:
+  /vite/2.1.2:
     dependencies:
-      esbuild: 0.8.57
+      esbuild: 0.9.3
       postcss: 8.2.6
       resolve: 1.20.0
       rollup: 2.39.0
@@ -7191,7 +7185,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     resolution:
-      integrity: sha512-QTgEDbq1WsTtr6j+++ewjhBFEk6c8v0xz4fb/OWJQKNYU8ZZtphOshwOqAlnarSstPBtWCBR0tsugXx6ajfoUg==
+      integrity: sha512-K96k5Nb1kywggFwZNGf/NQVZIrjMSvjebYWFIEQRu8AQWtzxatMF8/reExFXebmrfWAT3PTUk6l4zJBkpMtyVg==
   /vtils/4.30.2_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': 7.12.18
@@ -8162,4 +8156,4 @@ specifiers:
   haoma: 2.30.0
   react: 17.0.1
   react-dom: 17.0.1
-  vite: 2.0.5
+  vite: 2.1.2
