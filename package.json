@@ -135,7 +135,7 @@
     "@types/uuid": "8.3.0",
     "codecov": "3.8.1",
     "cross-env": "7.0.3",
-    "eslint": "7.22.0",
+    "eslint": "7.23.0",
     "execa": "5.0.0",
     "fs-extra": "9.1.0",
     "globby": "11.0.2",
