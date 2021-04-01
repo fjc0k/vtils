@@ -10,7 +10,7 @@ devDependencies:
   concurrently: 6.0.0
   execa: registry.npm.taobao.org/execa/5.0.0
   haoma: 2.31.0_react-dom@17.0.1+react@17.0.1
-  vite: 2.1.2
+  vite: 2.1.5
 lockfileVersion: 5.2
 packages:
   /@ant-design/colors/6.0.0:
@@ -7219,7 +7219,7 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-Yw5wW34fSv5spzTXNkokD6S6/Oq92d8q/t14TqsS3fAiA1RYnxSFSIZ+CY3n6PGGRCq5HhJTSepQvFUS2QUDxA==
-  /vite/2.1.2:
+  /vite/2.1.5:
     dependencies:
       esbuild: 0.9.3
       postcss: 8.2.6
@@ -7232,7 +7232,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     resolution:
-      integrity: sha512-K96k5Nb1kywggFwZNGf/NQVZIrjMSvjebYWFIEQRu8AQWtzxatMF8/reExFXebmrfWAT3PTUk6l4zJBkpMtyVg==
+      integrity: sha512-tYU5iaYeUgQYvK/CNNz3tiJ8vYqPWfCE9IQ7K0iuzYovWw7lzty7KRYGWwV3CQPh0NKxWjOczAqiJsCL0Xb+Og==
   /vtils/4.30.2_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': 7.12.18
@@ -7689,4 +7689,4 @@ specifiers:
   haoma: 2.31.0
   react: 17.0.1
   react-dom: 17.0.1
-  vite: 2.1.2
+  vite: 2.1.5
