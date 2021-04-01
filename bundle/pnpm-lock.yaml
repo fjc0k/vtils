@@ -9,7 +9,7 @@ devDependencies:
   '@vitejs/plugin-react-refresh': 1.3.2
   concurrently: 6.0.0
   execa: registry.npm.taobao.org/execa/5.0.0
-  haoma: 2.30.0_react-dom@17.0.1+react@17.0.1
+  haoma: 2.31.0_react-dom@17.0.1+react@17.0.1
   vite: 2.1.2
 lockfileVersion: 5.2
 packages:
@@ -3657,7 +3657,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==
-  /haoma/2.30.0_react-dom@17.0.1+react@17.0.1:
+  /haoma/2.31.0_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/core': 7.12.17
       '@babel/eslint-parser': 7.12.17_@babel+core@7.12.17
@@ -3739,7 +3739,7 @@ packages:
       typescript: ^3 || ^4
     requiresBuild: true
     resolution:
-      integrity: sha512-21x24ip9rSNXroGq9uq8pPfG0MOrpw9AZ8LzoJJYT8E3kMVemPZpORxKuDb9WBfFdqku2oUboKJQilqsy2aBYw==
+      integrity: sha512-DNSY5Rq5KV//PG/eWiFZjVS501qhQYcOL2dab6Sx1BFce1N/TbfFYYohzbisdRDqxEKj+c4BuXILbCET2jThdQ==
   /harmony-reflect/1.6.1:
     dev: true
     resolution:
@@ -7686,7 +7686,7 @@ specifiers:
   concurrently: 6.0.0
   emotion: 11.0.0
   execa: 5.0.0
-  haoma: 2.30.0
+  haoma: 2.31.0
   react: 17.0.1
   react-dom: 17.0.1
   vite: 2.1.2
