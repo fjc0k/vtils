@@ -58,7 +58,7 @@ specifiers:
   tree-tool: 1.1.8
   ts-essentials: 7.0.1
   type-fest: 1.0.1
-  typescript: 4.2.3
+  typescript: ^4.1.2
   typescript-snapshots-plugin: 1.7.0
   uuid: ^8.3.2
   vscode-generate-index-standalone: 1.3.0
@@ -124,12 +124,20 @@ devDependencies:
   tree-tool: registry.npm.taobao.org/tree-tool/1.1.8
   ts-essentials: registry.npm.taobao.org/ts-essentials/7.0.1_typescript@4.2.3
   type-fest: registry.npm.taobao.org/type-fest/1.0.1
-  typescript: registry.npm.taobao.org/typescript/4.2.3
+  typescript: registry.nlark.com/typescript/4.2.3
   typescript-snapshots-plugin: registry.npm.taobao.org/typescript-snapshots-plugin/1.7.0
   vscode-generate-index-standalone: registry.npm.taobao.org/vscode-generate-index-standalone/1.3.0
   yargs: registry.npm.taobao.org/yargs/16.2.0
 
 packages:
+
+  registry.nlark.com/typescript/4.2.3:
+    resolution: {integrity: sha1-OQYtgBmRLUNyYpjwlJPVmASMHOM=, registry: https://r.npm.taobao.org/, tarball: https://registry.nlark.com/typescript/download/typescript-4.2.3.tgz}
+    name: typescript
+    version: 4.2.3
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
 
   registry.npm.taobao.org/@babel/code-frame/7.0.0:
     resolution: {integrity: sha1-BuKrGb21NThVWaq7W6WXKUgoAPg=, registry: https://r.npm.taobao.org/, tarball: https://registry.npm.taobao.org/@babel/code-frame/download/@babel/code-frame-7.0.0.tgz}
@@ -3046,7 +3054,7 @@ packages:
       regexpp: registry.npm.taobao.org/regexpp/3.1.0
       semver: registry.npm.taobao.org/semver/7.3.5
       tsutils: registry.npm.taobao.org/tsutils/3.21.0_typescript@4.2.3
-      typescript: registry.npm.taobao.org/typescript/4.2.3
+      typescript: registry.nlark.com/typescript/4.2.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3090,7 +3098,7 @@ packages:
       '@typescript-eslint/typescript-estree': registry.npm.taobao.org/@typescript-eslint/typescript-estree/4.20.0_typescript@4.2.3
       debug: registry.npm.taobao.org/debug/4.3.1
       eslint: registry.npm.taobao.org/eslint/7.23.0
-      typescript: registry.npm.taobao.org/typescript/4.2.3
+      typescript: registry.nlark.com/typescript/4.2.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3131,7 +3139,7 @@ packages:
       is-glob: registry.npm.taobao.org/is-glob/4.0.1
       semver: registry.npm.taobao.org/semver/7.3.5
       tsutils: registry.npm.taobao.org/tsutils/3.21.0_typescript@4.2.3
-      typescript: registry.npm.taobao.org/typescript/4.2.3
+      typescript: registry.nlark.com/typescript/4.2.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6621,7 +6629,7 @@ packages:
       snapshot-diff: registry.npm.taobao.org/snapshot-diff/0.8.1_jest@26.6.3
       ts-jest: registry.npm.taobao.org/ts-jest/26.5.4_jest@26.6.3+typescript@4.2.3
       tslib: registry.npm.taobao.org/tslib/2.1.0
-      typescript: registry.npm.taobao.org/typescript/4.2.3
+      typescript: registry.nlark.com/typescript/4.2.3
       vtils: registry.npm.taobao.org/vtils/4.34.0_react-dom@17.0.1+react@17.0.1
       vue-eslint-parser: registry.npm.taobao.org/vue-eslint-parser/7.6.0_eslint@7.23.0
       workerpool: registry.npm.taobao.org/workerpool/6.1.2
@@ -10841,7 +10849,7 @@ packages:
     dependencies:
       magic-string: registry.npm.taobao.org/magic-string/0.25.7
       rollup: registry.npm.taobao.org/rollup/2.44.0
-      typescript: registry.npm.taobao.org/typescript/4.2.3
+      typescript: registry.nlark.com/typescript/4.2.3
     optionalDependencies:
       '@babel/code-frame': registry.npm.taobao.org/@babel/code-frame/7.12.13
     dev: true
@@ -12171,7 +12179,7 @@ packages:
     peerDependencies:
       typescript: '>=3.7.0'
     dependencies:
-      typescript: registry.npm.taobao.org/typescript/4.2.3
+      typescript: registry.nlark.com/typescript/4.2.3
     dev: true
 
   registry.npm.taobao.org/ts-jest/26.5.4_jest@26.6.3+typescript@4.2.3:
@@ -12195,7 +12203,7 @@ packages:
       make-error: registry.npm.taobao.org/make-error/1.3.6
       mkdirp: registry.npm.taobao.org/mkdirp/1.0.4
       semver: registry.npm.taobao.org/semver/7.3.5
-      typescript: registry.npm.taobao.org/typescript/4.2.3
+      typescript: registry.nlark.com/typescript/4.2.3
       yargs-parser: registry.npm.taobao.org/yargs-parser/20.2.7
     dev: true
 
@@ -12220,7 +12228,7 @@ packages:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: registry.npm.taobao.org/tslib/1.14.1
-      typescript: registry.npm.taobao.org/typescript/4.2.3
+      typescript: registry.nlark.com/typescript/4.2.3
     dev: true
 
   registry.npm.taobao.org/tunnel-agent/0.6.0:
