@@ -61,7 +61,7 @@ specifiers:
   typescript: ^4.1.2
   typescript-snapshots-plugin: 1.7.0
   uuid: ^8.3.2
-  vscode-generate-index-standalone: 1.3.0
+  vscode-generate-index-standalone: 1.4.0
   yargs: 16.2.0
   yup: ~0.31.1
 
@@ -126,7 +126,7 @@ devDependencies:
   type-fest: 1.0.1
   typescript: 4.2.4
   typescript-snapshots-plugin: 1.7.0
-  vscode-generate-index-standalone: 1.3.0
+  vscode-generate-index-standalone: 1.4.0
   yargs: 16.2.0
 
 packages:
@@ -9526,8 +9526,8 @@ packages:
       extsprintf: 1.3.0
     dev: true
 
-  /vscode-generate-index-standalone/1.3.0:
-    resolution: {integrity: sha512-yKPyCkIVkfS1yvrEA1TCLUGHz9LxfwBNkvrwoe7Ffd0b4AJ9PitEB7CYv9ReJDhC+dD0Vyg3b3b8sc4r83OE8g==}
+  /vscode-generate-index-standalone/1.4.0:
+    resolution: {integrity: sha512-q7dP53qSgaA+rapVS78d3fDPHd+7hwqnSdyDGdLu454GlieY6PDZtuKU1WmnsGmoOwh3A+d5Xdbx2c0agE2l2A==}
     hasBin: true
     dependencies:
       change-case: 3.1.0
