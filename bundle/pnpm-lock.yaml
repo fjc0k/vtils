@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@types/react': 17.0.2
   '@types/react-dom': 17.0.3
-  '@vitejs/plugin-react-refresh': 1.3.2
+  '@vitejs/plugin-react-refresh': 1.3.3
   antd: 4.15.2
   concurrently: 6.0.2
   emotion: 11.0.0
@@ -22,7 +22,7 @@ dependencies:
 devDependencies:
   '@types/react': registry.npm.taobao.org/@types/react/17.0.2
   '@types/react-dom': 17.0.3
-  '@vitejs/plugin-react-refresh': 1.3.2
+  '@vitejs/plugin-react-refresh': 1.3.3
   concurrently: 6.0.2
   execa: registry.npm.taobao.org/execa/5.0.0
   haoma: 2.31.0_react-dom@17.0.2+react@17.0.2
@@ -98,7 +98,7 @@ packages:
       debug: 4.3.1
       gensync: 1.0.0-beta.2
       json5: 2.2.0
-      lodash: 4.17.20
+      lodash: 4.17.21
       semver: 5.7.1
       source-map: 0.5.7
     transitivePeerDependencies:
@@ -225,7 +225,7 @@ packages:
       '@babel/template': 7.12.13
       '@babel/traverse': 7.12.17
       '@babel/types': 7.12.17
-      lodash: 4.17.20
+      lodash: 4.17.21
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1155,7 +1155,7 @@ packages:
       '@babel/types': 7.12.17
       debug: 4.3.1
       globals: 11.12.0
-      lodash: 4.17.20
+      lodash: 4.17.21
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1164,7 +1164,7 @@ packages:
     resolution: {integrity: sha512-tNMDjcv/4DIcHxErTgwB9q2ZcYyN0sUfgGKUK/mm1FJK7Wz+KstoEekxrl/tBiNDgLK1HGi+sppj1An/1DR4fQ==}
     dependencies:
       '@babel/helper-validator-identifier': 7.12.11
-      lodash: 4.17.20
+      lodash: 4.17.21
       to-fast-properties: 2.0.0
     dev: true
 
@@ -1775,8 +1775,8 @@ packages:
       eslint-visitor-keys: 2.0.0
     dev: true
 
-  /@vitejs/plugin-react-refresh/1.3.2:
-    resolution: {integrity: sha512-ujHk6wqY9MZh8PkjeQeeDHfds4teTD4mkG34++gVoQJgATO/Hpq7rcEYbFZ5Dyup3zlpe2jyu0gFuqznLnBUyQ==}
+  /@vitejs/plugin-react-refresh/1.3.3:
+    resolution: {integrity: sha512-J3KFwSQKrEK7fgOwTx0PMTlsolZORUch6BswjsM50q+Y7zSvX1ROIRn+tK2VE8SCvbYRHtzEKFlYW3vsWyTosQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@babel/core': 7.12.17
