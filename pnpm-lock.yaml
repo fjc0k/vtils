@@ -18,7 +18,7 @@ specifiers:
   '@types/fs-extra': 9.0.11
   '@types/ioredis': ^4.19.4
   '@types/prompts': 2.0.10
-  '@types/react': 17.0.3
+  '@types/react': 17.0.4
   '@types/react-dom': 17.0.3
   '@types/standard-version': 7.0.0
   '@types/tough-cookie': ^4.0.0
@@ -97,7 +97,7 @@ devDependencies:
   '@testing-library/react-hooks': 5.1.2_react-dom@17.0.2+react@17.0.2
   '@types/fs-extra': 9.0.11
   '@types/prompts': 2.0.10
-  '@types/react': 17.0.3
+  '@types/react': 17.0.4
   '@types/react-dom': 17.0.3
   '@types/standard-version': 7.0.0
   '@types/uuid': 8.3.0
@@ -2206,6 +2206,14 @@ packages:
 
   /@types/react/17.0.3:
     resolution: {integrity: sha512-wYOUxIgs2HZZ0ACNiIayItyluADNbONl7kt8lkLjVK8IitMH5QMyAh75Fwhmo37r1m7L2JaFj03sIfxBVDvRAg==}
+    dependencies:
+      '@types/prop-types': 15.7.3
+      '@types/scheduler': 0.16.1
+      csstype: 3.0.8
+    dev: true
+
+  /@types/react/17.0.4:
+    resolution: {integrity: sha512-onz2BqScSFMoTRdJUZUDD/7xrusM8hBA2Fktk2qgaTYPCgPvWnDEgkrOs8hhPUf2jfcIXkJ5yK6VfYormJS3Jw==}
     dependencies:
       '@types/prop-types': 15.7.3
       '@types/scheduler': 0.16.1
