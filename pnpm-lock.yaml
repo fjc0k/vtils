@@ -11,7 +11,7 @@ specifiers:
   '@rollup/plugin-commonjs': 18.0.0
   '@rollup/plugin-node-resolve': 11.2.1
   '@rollup/plugin-virtual': 2.0.3
-  '@tarojs/taro': 3.2.5
+  '@tarojs/taro': 3.2.6
   '@testing-library/react': 11.2.6
   '@testing-library/react-hooks': 5.1.2
   '@types/benchmark': ^2.1.0
@@ -92,7 +92,7 @@ devDependencies:
   '@rollup/plugin-commonjs': 18.0.0_rollup@2.45.2
   '@rollup/plugin-node-resolve': 11.2.1_rollup@2.45.2
   '@rollup/plugin-virtual': 2.0.3_rollup@2.45.2
-  '@tarojs/taro': 3.2.5
+  '@tarojs/taro': 3.2.6
   '@testing-library/react': 11.2.6_react-dom@17.0.2+react@17.0.2
   '@testing-library/react-hooks': 5.1.2_react-dom@17.0.2+react@17.0.2
   '@types/fs-extra': 9.0.11
@@ -1901,39 +1901,39 @@ packages:
       '@swc/core-win32-x64-msvc': 1.2.54
     dev: true
 
-  /@tarojs/api/3.2.5:
-    resolution: {integrity: sha512-IebxqsrExaS6fU3TgG09zKJrNxQ9rwEkp8lQwBToYOOR0BKQL+Zhpwe5CsFGuf4zo7uZlnCh3MXDtptyJL2QaA==}
+  /@tarojs/api/3.2.6:
+    resolution: {integrity: sha512-MnfyN8lk86MNNej8HjKSw78tkIsRxTxS6k3f1G4jhkemHllPTSoXVr+uMIdpNmGCKJcryAhsqAE2IqIO04M7GQ==}
     dependencies:
-      '@tarojs/runtime': 3.2.5
+      '@tarojs/runtime': 3.2.6
     dev: true
 
-  /@tarojs/router/3.2.5:
-    resolution: {integrity: sha512-/U1MkRpUVKgooGPYF7i6zT8m2cxSkIp+RbJJtHTumcz6TqCQI3NCNha191527JeI1rW9jM3OCxuIEevx2k0KaA==}
+  /@tarojs/router/3.2.6:
+    resolution: {integrity: sha512-OnRd50nr1H4x5xycb/boTUvzzXND11hfQ2BZ3pKsBhLzWTaIRhoHyCmso/EkFm19VSctfTMIOcYep4MrNp6TtQ==}
     dependencies:
-      '@tarojs/runtime': 3.2.5
+      '@tarojs/runtime': 3.2.6
       history: 4.10.1
       query-string: 6.14.1
       universal-router: 8.3.0
       url-parse: 1.5.1
     dev: true
 
-  /@tarojs/runtime/3.2.5:
-    resolution: {integrity: sha512-Kx8KwOcof8Q11p4c34Y6NWE/s57rRRUMBv9+IyNl2Wlgw12lXWzN8d/IC7xpx2DCIyonxoao2GFfWzXdsLu87g==}
+  /@tarojs/runtime/3.2.6:
+    resolution: {integrity: sha512-LYLLCoq4/DkXgzcyK2aOIAMKpQatIg37omS1oxfBdTt2dPqMLMqMiOx2OF+dY0IlDDxPRZSDAf2751jIqo30nQ==}
     dependencies:
-      '@tarojs/shared': 3.2.5
+      '@tarojs/shared': 3.2.6
       lodash-es: 4.17.15
     dev: true
 
-  /@tarojs/shared/3.2.5:
-    resolution: {integrity: sha512-izuKzoa2KZMhlEJUJHZxScl6RTEv3wnCE+bonMtYXQ9C3QDUD6FPqhP3aIvkt0l8isxZisTsT/gOI9PIQbUu1w==}
+  /@tarojs/shared/3.2.6:
+    resolution: {integrity: sha512-iXh0FOf+Hm8yY0lSgKQIREg9Z5vkvzN9Nck3+VK7WjqK4zD7ezwDlVO5eCLtCTDlFEWKZ2/BFSu3t1JRZlZhEA==}
     dev: true
 
-  /@tarojs/taro-h5/3.2.5:
-    resolution: {integrity: sha512-bNUA2ONvjuu9WpH0rfkjSoSEO9Jc0SJjhMvTzsBPfR4SHA/f7r2mBMjQ0x1le7pU65ptBMvh28Wy7tdE4fGeyw==}
+  /@tarojs/taro-h5/3.2.6:
+    resolution: {integrity: sha512-9xPVIBjTtmpiHVS05+KTXDeZCLXlZaofMOXxGjmNqX3k2w6IcojtQ6zbI3F847NGEp92HLQSErTUTr9h3eaWNQ==}
     dependencies:
-      '@tarojs/api': 3.2.5
-      '@tarojs/router': 3.2.5
-      '@tarojs/runtime': 3.2.5
+      '@tarojs/api': 3.2.6
+      '@tarojs/router': 3.2.6
+      '@tarojs/runtime': 3.2.6
       base64-js: 1.5.1
       jsonp-retry: 1.0.3
       mobile-detect: 1.4.5
@@ -1941,12 +1941,12 @@ packages:
       whatwg-fetch: 3.6.2
     dev: true
 
-  /@tarojs/taro/3.2.5:
-    resolution: {integrity: sha512-9BOuh5MLXf8jaml5arGeF8mLBb3JGYVYlpZW3h7ZNG8DflLrB7DhO5r+xSkIJxsn6NBtZf8zlAlldzZYsHS2gQ==}
+  /@tarojs/taro/3.2.6:
+    resolution: {integrity: sha512-vBzxuBxLw6GlTTkTtLdM2x/3QRrzPHB12qqpdgvSM43CjFM5PBTGtGNjeLNCVP3ESrXuRBpW/HY27O0iGlENfQ==}
     dependencies:
-      '@tarojs/api': 3.2.5
-      '@tarojs/runtime': 3.2.5
-      '@tarojs/taro-h5': 3.2.5
+      '@tarojs/api': 3.2.6
+      '@tarojs/runtime': 3.2.6
+      '@tarojs/taro-h5': 3.2.6
     dev: true
 
   /@testing-library/dom/7.30.3:
