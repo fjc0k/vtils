@@ -6,7 +6,7 @@ overrides:
 specifiers:
   '@babel/runtime': ^7.12.18
   '@microsoft/api-documenter': 7.13.5
-  '@microsoft/api-extractor': 7.14.0
+  '@microsoft/api-extractor': 7.15.0
   '@rollup/plugin-babel': 5.3.0
   '@rollup/plugin-commonjs': 18.0.0
   '@rollup/plugin-node-resolve': 11.2.1
@@ -87,7 +87,7 @@ dependencies:
 
 devDependencies:
   '@microsoft/api-documenter': 7.13.5
-  '@microsoft/api-extractor': 7.14.0
+  '@microsoft/api-extractor': 7.15.0
   '@rollup/plugin-babel': 5.3.0_rollup@2.46.0
   '@rollup/plugin-commonjs': 18.0.0_rollup@2.46.0
   '@rollup/plugin-node-resolve': 11.2.1_rollup@2.46.0
@@ -1575,8 +1575,8 @@ packages:
       typescript: 4.2.4
     dev: true
 
-  /@microsoft/api-extractor/7.14.0:
-    resolution: {integrity: sha512-R9B0ic8EIcHhwSFQWYTyQX7QDi7kXONeKdIjJI8R+WzVJMA3r0Je9XxSQxxZ9MZIBUxv3fB7pXC2CPIsSkI/BA==}
+  /@microsoft/api-extractor/7.15.0:
+    resolution: {integrity: sha512-VN6YUwV+xzdmBV9yTb0dVd3XbdKsCQy4KYzsoIdUCs0oVt61X1gVNF7Nk+0NOroI6j+UghtD6w5meh2nuA9KMg==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.13.0
