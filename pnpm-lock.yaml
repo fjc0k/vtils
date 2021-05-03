@@ -5,7 +5,7 @@ overrides:
 
 specifiers:
   '@babel/runtime': ^7.12.18
-  '@microsoft/api-documenter': 7.13.5
+  '@microsoft/api-documenter': 7.13.6
   '@microsoft/api-extractor': 7.15.0
   '@rollup/plugin-babel': 5.3.0
   '@rollup/plugin-commonjs': 18.0.0
@@ -86,7 +86,7 @@ dependencies:
   yup: 0.31.1
 
 devDependencies:
-  '@microsoft/api-documenter': 7.13.5
+  '@microsoft/api-documenter': 7.13.6
   '@microsoft/api-extractor': 7.15.0
   '@rollup/plugin-babel': 5.3.0_rollup@2.46.0
   '@rollup/plugin-commonjs': 18.0.0_rollup@2.46.0
@@ -1530,13 +1530,13 @@ packages:
       chalk: 4.1.1
     dev: true
 
-  /@microsoft/api-documenter/7.13.5:
-    resolution: {integrity: sha512-wLyGu+EzdzeeDU7Xpsy8hdhtkzf9N/CL3tE51M8PQWiTAvNJOImMpNokK1kpDwbCW3h1BNAZZB/e3VGcyeqd1Q==}
+  /@microsoft/api-documenter/7.13.6:
+    resolution: {integrity: sha512-5l8OaFVPRlcwoT0d/lXYAc5+hRS8ItG+ejmHZP5ny7jTlHj1bMGJUDrP8r0u1L5n2K13siwQRnNGpiuhSWOJfw==}
     hasBin: true
     dependencies:
-      '@microsoft/api-extractor-model': 7.13.0
+      '@microsoft/api-extractor-model': 7.13.1
       '@microsoft/tsdoc': 0.13.2
-      '@rushstack/node-core-library': 3.36.2
+      '@rushstack/node-core-library': 3.37.0
       '@rushstack/ts-command-line': 4.7.10
       colors: 1.2.5
       js-yaml: 3.13.1
@@ -1556,6 +1556,14 @@ packages:
       '@microsoft/tsdoc': 0.13.2
       '@microsoft/tsdoc-config': 0.15.2
       '@rushstack/node-core-library': 3.36.2
+    dev: true
+
+  /@microsoft/api-extractor-model/7.13.1:
+    resolution: {integrity: sha512-PKAjDmAJ6X07tvqCHSN1PRaKq8bZQXF9QI6WGEMnCHNFWwXUoITOAcvFW0Ol3TzwHO5rLbuy/CqWebfhv8eOtw==}
+    dependencies:
+      '@microsoft/tsdoc': 0.13.2
+      '@microsoft/tsdoc-config': 0.15.2
+      '@rushstack/node-core-library': 3.37.0
     dev: true
 
   /@microsoft/api-extractor/7.13.2:
@@ -1725,6 +1733,20 @@ packages:
 
   /@rushstack/node-core-library/3.36.2:
     resolution: {integrity: sha512-5J8xSY/PuCKR+yfxS497l0PP43kBUeD86S4eS3RzrmMle04J4522MWal8mk1T1EIDpYpgi8qScannU9oVxoStA==}
+    dependencies:
+      '@types/node': 10.17.13
+      colors: 1.2.5
+      fs-extra: 7.0.1
+      import-lazy: 4.0.0
+      jju: 1.4.0
+      resolve: 1.17.0
+      semver: 7.3.5
+      timsort: 0.3.0
+      z-schema: 3.18.4
+    dev: true
+
+  /@rushstack/node-core-library/3.37.0:
+    resolution: {integrity: sha512-b0OGvl20zfepytLBnKsOtemtiadNZAVolXxaSYssV9VjXaLPF97oLvtLfwc58BX05ufIsrKZgXatnRo8YeffNg==}
     dependencies:
       '@types/node': 10.17.13
       colors: 1.2.5
