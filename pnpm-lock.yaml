@@ -25,7 +25,7 @@ specifiers:
   '@types/uuid': 8.3.0
   benchmark: ^2.1.4
   cli-table3: ^0.6.0
-  codecov: 3.8.1
+  codecov: 3.8.2
   cross-env: 7.0.3
   cuid: ^2.1.8
   date-fns: ^2.17.0
@@ -101,7 +101,7 @@ devDependencies:
   '@types/react-dom': 17.0.3
   '@types/standard-version': 7.0.0
   '@types/uuid': 8.3.0
-  codecov: 3.8.1
+  codecov: 3.8.2
   cross-env: 7.0.3
   eslint: 7.25.0
   execa: 5.0.0
@@ -2547,11 +2547,6 @@ packages:
     resolution: {integrity: sha1-anmQQ3ynNtXhKI25K9MmbV9csqo=}
     dev: true
 
-  /agent-base/5.1.1:
-    resolution: {integrity: sha512-TMeqbNl2fMW0nMjTEPOwe3J/PRFP4vqeoNuQMG0HlMrtm5QxKqdvAkZ1pRBQ/ulIyDD5Yq0nJ7YbdD8ey0TO3g==}
-    engines: {node: '>= 6.0.0'}
-    dev: true
-
   /agent-base/6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
@@ -3290,15 +3285,15 @@ packages:
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
     dev: true
 
-  /codecov/3.8.1:
-    resolution: {integrity: sha512-Qm7ltx1pzLPsliZY81jyaQ80dcNR4/JpcX0IHCIWrHBXgseySqbdbYfkdiXd7o/xmzQpGRVCKGYeTrHUpn6Dcw==}
+  /codecov/3.8.2:
+    resolution: {integrity: sha512-6w/kt/xvmPsWMfDFPE/T054txA9RTgcJEw36PNa6MYX+YV29jCHCRFXwbQ3QZBTOgnex1J2WP8bo2AT8TWWz9g==}
     engines: {node: '>=4.0'}
     hasBin: true
     dependencies:
       argv: 0.0.2
       ignore-walk: 3.0.3
-      js-yaml: 3.14.0
-      teeny-request: 6.0.1
+      js-yaml: 3.14.1
+      teeny-request: 7.0.1
       urlgrey: 0.4.4
     transitivePeerDependencies:
       - supports-color
@@ -5248,11 +5243,11 @@ packages:
       sshpk: 1.16.1
     dev: true
 
-  /https-proxy-agent/4.0.0:
-    resolution: {integrity: sha512-zoDhWrkR3of1l9QAL8/scJZyLu8j/gBkcwcaQOZh7Gyh/+uJQzGVETdgT30akuwkpL8HTRfssqI3BZuV18teDg==}
-    engines: {node: '>= 6.0.0'}
+  /https-proxy-agent/5.0.0:
+    resolution: {integrity: sha512-EkYm5BcKUGiduxzSt3Eppko+PiNWNEpa4ySk9vTC6wDsQJW9rHSa+UhGNJoRYp7bz6Ht1eaRIa6QaJqO5rCFbA==}
+    engines: {node: '>= 6'}
     dependencies:
-      agent-base: 5.1.1
+      agent-base: 6.0.2
       debug: 4.3.1
     transitivePeerDependencies:
       - supports-color
@@ -6335,14 +6330,6 @@ packages:
 
   /js-yaml/3.13.1:
     resolution: {integrity: sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==}
-    hasBin: true
-    dependencies:
-      argparse: 1.0.10
-      esprima: 4.0.1
-    dev: true
-
-  /js-yaml/3.14.0:
-    resolution: {integrity: sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==}
     hasBin: true
     dependencies:
       argparse: 1.0.10
@@ -9100,14 +9087,15 @@ packages:
       string-width: 4.2.2
     dev: true
 
-  /teeny-request/6.0.1:
-    resolution: {integrity: sha512-TAK0c9a00ELOqLrZ49cFxvPVogMUFaWY8dUsQc/0CuQPGF+BOxOQzXfE413BAk2kLomwNplvdtMpeaeGWmoc2g==}
+  /teeny-request/7.0.1:
+    resolution: {integrity: sha512-sasJmQ37klOlplL4Ia/786M5YlOcoLGQyq2TE4WHSRupbAuDaQW0PfVxV4MtdBtRJ4ngzS+1qim8zP6Zp35qCw==}
+    engines: {node: '>=10'}
     dependencies:
       http-proxy-agent: 4.0.1
-      https-proxy-agent: 4.0.0
+      https-proxy-agent: 5.0.0
       node-fetch: 2.6.1
       stream-events: 1.0.5
-      uuid: 3.4.0
+      uuid: 8.3.2
     transitivePeerDependencies:
       - supports-color
     dev: true
