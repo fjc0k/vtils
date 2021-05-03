@@ -17,7 +17,7 @@ specifiers:
   '@types/benchmark': ^2.1.0
   '@types/fs-extra': 9.0.11
   '@types/ioredis': ^4.19.4
-  '@types/prompts': 2.0.10
+  '@types/prompts': 2.0.11
   '@types/react': 17.0.4
   '@types/react-dom': 17.0.3
   '@types/standard-version': 7.0.0
@@ -96,7 +96,7 @@ devDependencies:
   '@testing-library/react': 11.2.6_react-dom@17.0.2+react@17.0.2
   '@testing-library/react-hooks': 5.1.2_react-dom@17.0.2+react@17.0.2
   '@types/fs-extra': 9.0.11
-  '@types/prompts': 2.0.10
+  '@types/prompts': 2.0.11
   '@types/react': 17.0.4
   '@types/react-dom': 17.0.3
   '@types/standard-version': 7.0.0
@@ -2182,8 +2182,8 @@ packages:
     resolution: {integrity: sha512-PijRCG/K3s3w1We6ynUKdxEc5AcuuH3NBmMDP8uvKVp6X43UY7NQlTzczakXP3DJR0F4dfNQIGjU2cUeRYs2AA==}
     dev: true
 
-  /@types/prompts/2.0.10:
-    resolution: {integrity: sha512-W3PEl3l4vmxdgfY6LUG7ysh+mLJOTOFYmSpiLe6MCo1OdEm8b5s6ZJfuTQgEpYNwcMiiaRzJespPS5Py2tqLlQ==}
+  /@types/prompts/2.0.11:
+    resolution: {integrity: sha512-dcF5L3rU9VfpLEJIV++FEyhGhuIpJllNEwllVuJ5g8eoVqjf048tW9+spivIwjzgPbtaGAl7mIZW3cmhDAq2UQ==}
     dependencies:
       '@types/node': 14.14.41
     dev: true

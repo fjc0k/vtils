@@ -128,7 +128,7 @@
     "@testing-library/react": "11.2.6",
     "@testing-library/react-hooks": "5.1.2",
     "@types/fs-extra": "9.0.11",
-    "@types/prompts": "2.0.10",
+    "@types/prompts": "2.0.11",
     "@types/react": "17.0.4",
     "@types/react-dom": "17.0.3",
     "@types/standard-version": "7.0.0",
