@@ -32,7 +32,7 @@ specifiers:
   eslint: 7.25.0
   execa: 5.0.0
   fast-xml-parser: ^3.18.0
-  fs-extra: 9.1.0
+  fs-extra: 10.0.0
   globby: 11.0.3
   haoma: 2.31.0
   husky: 6.0.0
@@ -105,7 +105,7 @@ devDependencies:
   cross-env: 7.0.3
   eslint: 7.25.0
   execa: 5.0.0
-  fs-extra: 9.1.0
+  fs-extra: 10.0.0
   globby: 11.0.3
   haoma: 2.31.0_926a31c4452167042639c187464f2533
   husky: 6.0.0
@@ -4731,6 +4731,15 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       null-check: 1.0.0
+    dev: true
+
+  /fs-extra/10.0.0:
+    resolution: {integrity: sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      graceful-fs: 4.2.6
+      jsonfile: 6.1.0
+      universalify: 2.0.0
     dev: true
 
   /fs-extra/7.0.1:
