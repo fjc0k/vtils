@@ -8,7 +8,7 @@ specifiers:
   '@microsoft/api-documenter': 7.13.6
   '@microsoft/api-extractor': 7.15.1
   '@rollup/plugin-babel': 5.3.0
-  '@rollup/plugin-commonjs': 18.0.0
+  '@rollup/plugin-commonjs': 18.1.0
   '@rollup/plugin-node-resolve': 11.2.1
   '@rollup/plugin-virtual': 2.0.3
   '@tarojs/taro': 3.2.7
@@ -89,7 +89,7 @@ devDependencies:
   '@microsoft/api-documenter': 7.13.6
   '@microsoft/api-extractor': 7.15.1
   '@rollup/plugin-babel': 5.3.0_rollup@2.46.0
-  '@rollup/plugin-commonjs': 18.0.0_rollup@2.46.0
+  '@rollup/plugin-commonjs': 18.1.0_rollup@2.46.0
   '@rollup/plugin-node-resolve': 11.2.1_rollup@2.46.0
   '@rollup/plugin-virtual': 2.0.3_rollup@2.46.0
   '@tarojs/taro': 3.2.7
@@ -1658,8 +1658,8 @@ packages:
       rollup: 2.46.0
     dev: true
 
-  /@rollup/plugin-commonjs/18.0.0_rollup@2.46.0:
-    resolution: {integrity: sha512-fj92shhg8luw7XbA0HowAqz90oo7qtLGwqTKbyZ8pmOyH8ui5e+u0wPEgeHLH3djcVma6gUCUrjY6w5R2o1u6g==}
+  /@rollup/plugin-commonjs/18.1.0_rollup@2.46.0:
+    resolution: {integrity: sha512-h3e6T9rUxVMAQswpDIobfUHn/doMzM9sgkMrsMWCFLmB84PSoC8mV8tOloAJjSRwdqhXBqstlX2BwBpHJvbhxg==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       rollup: ^2.30.0
