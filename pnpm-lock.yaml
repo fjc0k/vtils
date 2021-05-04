@@ -62,7 +62,7 @@ specifiers:
   typescript-snapshots-plugin: 1.7.0
   uuid: ^8.3.2
   vscode-generate-index-standalone: 1.4.0
-  yargs: 17.0.0
+  yargs: 17.0.1
   yup: ~0.31.1
 
 dependencies:
@@ -127,7 +127,7 @@ devDependencies:
   typescript: 4.2.4
   typescript-snapshots-plugin: 1.7.0
   vscode-generate-index-standalone: 1.4.0
-  yargs: 17.0.0
+  yargs: 17.0.1
 
 packages:
 
@@ -9894,8 +9894,8 @@ packages:
       yargs-parser: 20.2.7
     dev: true
 
-  /yargs/17.0.0:
-    resolution: {integrity: sha512-gbtedDPfBgG40iLbaRXhqYJycUYqFVZQLIxl1cG5Ez/xZL/47TetSYzPSIixkWa36GKHr9D/o/oSG1vHXF4zTw==}
+  /yargs/17.0.1:
+    resolution: {integrity: sha512-xBBulfCc8Y6gLFcrPvtqKz9hz8SO0l1Ni8GgDekvBX2ro0HRQImDGnikfc33cgzcYUSncapnNcZDjVFIH3f6KQ==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 7.0.4
