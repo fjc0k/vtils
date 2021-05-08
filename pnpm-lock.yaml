@@ -57,7 +57,7 @@ specifiers:
   tough-cookie-redisstore: ^0.0.4
   tree-tool: 1.1.8
   ts-essentials: 7.0.1
-  type-fest: 1.1.0
+  type-fest: 1.1.1
   typescript: ^4.1.2
   typescript-snapshots-plugin: 1.7.0
   uuid: ^8.3.2
@@ -123,7 +123,7 @@ devDependencies:
   standard-version: 9.3.0
   tree-tool: 1.1.8
   ts-essentials: 7.0.1_typescript@4.2.4
-  type-fest: 1.1.0
+  type-fest: 1.1.1
   typescript: 4.2.4
   typescript-snapshots-plugin: 1.7.0
   vscode-generate-index-standalone: 1.4.0
@@ -9423,8 +9423,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /type-fest/1.1.0:
-    resolution: {integrity: sha512-FOsvVPp1WTW495bqemynRS6f6Izea0hKSuDGCxkisBi6KIFaIc8r+ZCs20VT8bySbjh3J9kmnu2eHG4NoZArMw==}
+  /type-fest/1.1.1:
+    resolution: {integrity: sha512-RPDKc5KrIyKTP7Fk75LruUagqG6b+OTgXlCR2Z0aQDJFeIvL4/mhahSEtHmmVzXu4gmA0srkF/8FCH3WOWxTWA==}
     engines: {node: '>=10'}
     dev: true
 
