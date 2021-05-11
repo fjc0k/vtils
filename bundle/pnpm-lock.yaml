@@ -11,7 +11,7 @@ specifiers:
   haoma: 2.31.0
   react: 17.0.2
   react-dom: 17.0.2
-  vite: 2.2.4
+  vite: 2.3.0
 
 dependencies:
   antd: 4.15.5_react-dom@17.0.2+react@17.0.2
@@ -26,7 +26,7 @@ devDependencies:
   concurrently: 6.1.0
   execa: registry.npm.taobao.org/execa/5.0.0
   haoma: 2.31.0_react-dom@17.0.2+react@17.0.2
-  vite: 2.2.4
+  vite: 2.3.0
 
 packages:
 
@@ -2947,6 +2947,12 @@ packages:
     dependencies:
       esbuild: 0.9.3
       jsonc-parser: 3.0.0
+    dev: true
+
+  /esbuild/0.11.20:
+    resolution: {integrity: sha512-QOZrVpN/Yz74xfat0H6euSgn3RnwLevY1mJTEXneukz1ln9qB+ieaerRMzSeETpz/UJWsBMzRVR/andBht5WKw==}
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   /esbuild/0.9.3:
@@ -6899,12 +6905,12 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite/2.2.4:
-    resolution: {integrity: sha512-vnIwSNci+phFMp6krhy+FbYzKL0R67Sdt9mVZ96S27AewrApSJjTqncJcalk8sf60BgcbW4+1C6DFIWkxquO9g==}
+  /vite/2.3.0:
+    resolution: {integrity: sha512-gsCy0t3X9nGGYDoNiE2NJgYq6BPxrtKeo6FkpMXdMvtUluYxnRhl7xfpHaYDmQLCnMbYTWhvWS1L/Hpw/V9L5w==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
-      esbuild: 0.9.3
+      esbuild: 0.11.20
       postcss: 8.2.6
       resolve: 1.20.0
       rollup: 2.39.0
