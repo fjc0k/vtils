@@ -11,7 +11,7 @@ specifiers:
   haoma: 2.31.0
   react: 17.0.2
   react-dom: 17.0.2
-  vite: 2.3.1
+  vite: 2.3.2
 
 dependencies:
   antd: 4.15.5_react-dom@17.0.2+react@17.0.2
@@ -26,7 +26,7 @@ devDependencies:
   concurrently: 6.1.0
   execa: registry.npm.taobao.org/execa/5.0.0
   haoma: 2.31.0_react-dom@17.0.2+react@17.0.2
-  vite: 2.3.1
+  vite: 2.3.2
 
 packages:
 
@@ -6924,8 +6924,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite/2.3.1:
-    resolution: {integrity: sha512-yvcLclv/G0syHL+bBtahdaymH0x6La8kbTlnAssRH+XFvDNb8VPRruHhILCCmZgtx6Zu/UKNFTQnQ4Gk/omyUA==}
+  /vite/2.3.2:
+    resolution: {integrity: sha512-QhLdOompDrfkyryCNTts9HE+eJhvhN9ibKNJ5Q8DpQai+6nOsuIlaveZNg67e1O/2QaWqXeBo82eHnAs1De2bQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
