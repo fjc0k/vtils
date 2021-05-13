@@ -5,7 +5,7 @@ overrides:
 
 specifiers:
   '@babel/runtime': ^7.12.18
-  '@microsoft/api-documenter': 7.13.7
+  '@microsoft/api-documenter': 7.13.8
   '@microsoft/api-extractor': 7.15.1
   '@rollup/plugin-babel': 5.3.0
   '@rollup/plugin-commonjs': 19.0.0
@@ -86,7 +86,7 @@ dependencies:
   yup: 0.31.1
 
 devDependencies:
-  '@microsoft/api-documenter': 7.13.7
+  '@microsoft/api-documenter': 7.13.8
   '@microsoft/api-extractor': 7.15.1
   '@rollup/plugin-babel': 5.3.0_rollup@2.47.0
   '@rollup/plugin-commonjs': 19.0.0_rollup@2.47.0
@@ -1530,8 +1530,8 @@ packages:
       chalk: 4.1.1
     dev: true
 
-  /@microsoft/api-documenter/7.13.7:
-    resolution: {integrity: sha512-i4bYTridiA4uPEazS9hmh9XTASrIid00lHYL8cKrh/BtpYqhwSTz2oPZ6RxNlBK512ElXn76pT2YE2jNN/TwKQ==}
+  /@microsoft/api-documenter/7.13.8:
+    resolution: {integrity: sha512-2E8Xrl0ZjsF42wA7EgKvxk/kFq/7tCF7aQpUspmT8Ntki90BRtfUCaZJBOMgHUln+1WndUeRt05fcJ6lhaowNA==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.13.1
