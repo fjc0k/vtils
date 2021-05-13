@@ -37,7 +37,7 @@ specifiers:
   haoma: 2.31.0
   husky: 6.0.0
   ioredis: ^4.22.0
-  ioredis-mock: 5.5.5
+  ioredis-mock: 5.5.6
   jest: 26.6.3
   lint-staged: 11.0.0
   lodash-uni: ^1.1.0
@@ -109,7 +109,7 @@ devDependencies:
   globby: 11.0.3
   haoma: 2.31.0_fef0c240980671dc57c0675f49787c8b
   husky: 6.0.0
-  ioredis-mock: 5.5.5_ioredis@4.26.0
+  ioredis-mock: 5.5.6_ioredis@4.26.0
   jest: 26.6.3
   lint-staged: 11.0.0
   open-cli: 6.0.1
@@ -5432,8 +5432,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /ioredis-mock/5.5.5_ioredis@4.26.0:
-    resolution: {integrity: sha512-7SxCAwNtDLC8IFDptqIhOC7ajp3fciVtCrXOEOkpyjPboAGRQkJbnpNPy1NYORoWi+0/iOtUPUQckSKtSQj4DA==}
+  /ioredis-mock/5.5.6_ioredis@4.26.0:
+    resolution: {integrity: sha512-MP9e7jigywcDMuY5nUBzeHlXFPjzGK+73jHfuFI2/pnzU/68X/cN3LwvwZ908HYQLk+wDiCAIS6ttgO/Vh5VBQ==}
     engines: {node: '>=10'}
     peerDependencies:
       ioredis: 4.x
@@ -5443,7 +5443,6 @@ packages:
       fengari-interop: 0.1.2_fengari@0.1.4
       ioredis: 4.26.0
       lodash: 4.17.21
-      minimatch: 3.0.4
       standard-as-callback: 2.1.0
     dev: true
 
