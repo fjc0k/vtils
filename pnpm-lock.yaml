@@ -12,7 +12,7 @@ specifiers:
   '@rollup/plugin-node-resolve': 13.0.0
   '@rollup/plugin-virtual': 2.0.3
   '@tarojs/taro': 3.2.8
-  '@testing-library/react': 11.2.6
+  '@testing-library/react': 11.2.7
   '@testing-library/react-hooks': 5.1.2
   '@types/benchmark': ^2.1.0
   '@types/fs-extra': 9.0.11
@@ -93,7 +93,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 13.0.0_rollup@2.47.0
   '@rollup/plugin-virtual': 2.0.3_rollup@2.47.0
   '@tarojs/taro': 3.2.8
-  '@testing-library/react': 11.2.6_react-dom@17.0.2+react@17.0.2
+  '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@testing-library/react-hooks': 5.1.2_react-dom@17.0.2+react@17.0.2
   '@types/fs-extra': 9.0.11
   '@types/prompts': 2.0.11
@@ -1999,8 +1999,8 @@ packages:
       react-error-boundary: 3.1.1_react@17.0.2
     dev: true
 
-  /@testing-library/react/11.2.6_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-TXMCg0jT8xmuU8BkKMtp8l7Z50Ykew5WNX8UoIKTaLFwKkP2+1YDhOLA2Ga3wY4x29jyntk7EWfum0kjlYiSjQ==}
+  /@testing-library/react/11.2.7_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-tzRNp7pzd5QmbtXNG/mhdcl7Awfu/Iz1RaVHY75zTdOkmHCuzMhRL83gWHSgOAcjS3CCbyfwUHMZgRJb4kAfpA==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '*'
