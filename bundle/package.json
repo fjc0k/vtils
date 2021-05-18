@@ -5,7 +5,7 @@
     "start": "concurrently vite 'haoma run server.ts'"
   },
   "dependencies": {
-    "antd": "4.15.5",
+    "antd": "4.15.6",
     "emotion": "11.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
