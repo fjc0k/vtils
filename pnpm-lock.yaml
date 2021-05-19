@@ -6,7 +6,7 @@ overrides:
 specifiers:
   '@babel/runtime': ^7.12.18
   '@microsoft/api-documenter': 7.13.9
-  '@microsoft/api-extractor': 7.15.1
+  '@microsoft/api-extractor': 7.15.2
   '@rollup/plugin-babel': 5.3.0
   '@rollup/plugin-commonjs': 19.0.0
   '@rollup/plugin-node-resolve': 13.0.0
@@ -87,7 +87,7 @@ dependencies:
 
 devDependencies:
   '@microsoft/api-documenter': 7.13.9
-  '@microsoft/api-extractor': 7.15.1
+  '@microsoft/api-extractor': 7.15.2
   '@rollup/plugin-babel': 5.3.0_rollup@2.48.0
   '@rollup/plugin-commonjs': 19.0.0_rollup@2.48.0
   '@rollup/plugin-node-resolve': 13.0.0_rollup@2.48.0
@@ -1550,14 +1550,6 @@ packages:
       '@rushstack/node-core-library': 3.36.0
     dev: true
 
-  /@microsoft/api-extractor-model/7.13.1:
-    resolution: {integrity: sha512-PKAjDmAJ6X07tvqCHSN1PRaKq8bZQXF9QI6WGEMnCHNFWwXUoITOAcvFW0Ol3TzwHO5rLbuy/CqWebfhv8eOtw==}
-    dependencies:
-      '@microsoft/tsdoc': 0.13.2
-      '@microsoft/tsdoc-config': 0.15.2
-      '@rushstack/node-core-library': 3.37.0
-    dev: true
-
   /@microsoft/api-extractor-model/7.13.2:
     resolution: {integrity: sha512-gA9Q8q5TPM2YYk7rLinAv9KqcodrmRC13BVmNzLswjtFxpz13lRh0BmrqD01/sddGpGMIuWFYlfUM4VSWxnggA==}
     dependencies:
@@ -1583,14 +1575,14 @@ packages:
       typescript: 4.2.4
     dev: true
 
-  /@microsoft/api-extractor/7.15.1:
-    resolution: {integrity: sha512-PYbGAvxbM5B6HbafXY7tJ4ObYpeUZrZFt9vlN68tpYG/7aeldMLAZSjTyB30VFXaGlArjeEooKZIcs2ZnVAbNg==}
+  /@microsoft/api-extractor/7.15.2:
+    resolution: {integrity: sha512-/Y/n+QOc1vM6Vg3OAUByT/wXdZciE7jV3ay33+vxl3aKva5cNsuOauL14T7XQWUiLko3ilPwrcnFcEjzXpLsuA==}
     hasBin: true
     dependencies:
-      '@microsoft/api-extractor-model': 7.13.1
+      '@microsoft/api-extractor-model': 7.13.2
       '@microsoft/tsdoc': 0.13.2
       '@microsoft/tsdoc-config': 0.15.2
-      '@rushstack/node-core-library': 3.37.0
+      '@rushstack/node-core-library': 3.38.0
       '@rushstack/rig-package': 0.2.12
       '@rushstack/ts-command-line': 4.7.10
       colors: 1.2.5
@@ -1719,20 +1711,6 @@ packages:
 
   /@rushstack/node-core-library/3.36.0:
     resolution: {integrity: sha512-bID2vzXpg8zweXdXgQkKToEdZwVrVCN9vE9viTRk58gqzYaTlz4fMId6V3ZfpXN6H0d319uGi2KDlm+lUEeqCg==}
-    dependencies:
-      '@types/node': 10.17.13
-      colors: 1.2.5
-      fs-extra: 7.0.1
-      import-lazy: 4.0.0
-      jju: 1.4.0
-      resolve: 1.17.0
-      semver: 7.3.5
-      timsort: 0.3.0
-      z-schema: 3.18.4
-    dev: true
-
-  /@rushstack/node-core-library/3.37.0:
-    resolution: {integrity: sha512-b0OGvl20zfepytLBnKsOtemtiadNZAVolXxaSYssV9VjXaLPF97oLvtLfwc58BX05ufIsrKZgXatnRo8YeffNg==}
     dependencies:
       '@types/node': 10.17.13
       colors: 1.2.5
