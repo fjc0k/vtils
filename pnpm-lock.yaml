@@ -13,7 +13,7 @@ specifiers:
   '@rollup/plugin-virtual': 2.0.3
   '@tarojs/taro': 3.2.9
   '@testing-library/react': 11.2.7
-  '@testing-library/react-hooks': 6.0.0
+  '@testing-library/react-hooks': 7.0.0
   '@types/benchmark': ^2.1.0
   '@types/fs-extra': 9.0.11
   '@types/ioredis': ^4.19.4
@@ -94,7 +94,7 @@ devDependencies:
   '@rollup/plugin-virtual': 2.0.3_rollup@2.49.0
   '@tarojs/taro': 3.2.9
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
-  '@testing-library/react-hooks': 6.0.0_react-dom@17.0.2+react@17.0.2
+  '@testing-library/react-hooks': 7.0.0_react-dom@17.0.2+react@17.0.2
   '@types/fs-extra': 9.0.11
   '@types/prompts': 2.0.12
   '@types/react': 17.0.6
@@ -1977,8 +1977,8 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react-hooks/6.0.0_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-Y8ayCUFPiNttX9zmwP2bDv4uYzgsgOMHxAsOrD7th7Xuj1j1rHkxf+VzRqdr7zJlSeYPzl67754qAnZ9O1ahYg==}
+  /@testing-library/react-hooks/7.0.0_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-WFBGH8DWdIGGBHt6PBtQPe2v4Kbj9vQ1sQ9qLBTmwn1PNggngint4MTE/IiWCYhPbyTW3oc/7X62DObMn/AjQQ==}
     engines: {node: '>=12'}
     peerDependencies:
       react: '>=16.9.0'
@@ -1994,7 +1994,6 @@ packages:
       '@types/react': 17.0.6
       '@types/react-dom': 17.0.5
       '@types/react-test-renderer': 17.0.1
-      filter-console: 0.1.1
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-error-boundary: 3.1.1_react@17.0.2
@@ -4621,11 +4620,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       to-regex-range: 5.0.1
-    dev: true
-
-  /filter-console/0.1.1:
-    resolution: {integrity: sha512-zrXoV1Uaz52DqPs+qEwNJWJFAWZpYJ47UNmpN9q4j+/EYsz85uV0DC9k8tRND5kYmoVzL0W+Y75q4Rg8sRJCdg==}
-    engines: {node: '>=8'}
     dev: true
 
   /filter-obj/1.1.0:
