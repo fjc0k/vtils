@@ -37,7 +37,7 @@ specifiers:
   haoma: 2.31.0
   husky: 6.0.0
   ioredis: ^4.22.0
-  ioredis-mock: 5.5.6
+  ioredis-mock: 5.5.7
   jest: 26.6.3
   lint-staged: 11.0.0
   lodash-uni: ^1.1.0
@@ -109,7 +109,7 @@ devDependencies:
   globby: 11.0.3
   haoma: 2.31.0_707ff91251fc127fb07f0e698878dbc9
   husky: 6.0.0
-  ioredis-mock: 5.5.6_ioredis@4.26.0
+  ioredis-mock: 5.5.7_ioredis@4.26.0
   jest: 26.6.3
   lint-staged: 11.0.0
   open-cli: 6.0.1
@@ -5436,8 +5436,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /ioredis-mock/5.5.6_ioredis@4.26.0:
-    resolution: {integrity: sha512-MP9e7jigywcDMuY5nUBzeHlXFPjzGK+73jHfuFI2/pnzU/68X/cN3LwvwZ908HYQLk+wDiCAIS6ttgO/Vh5VBQ==}
+  /ioredis-mock/5.5.7_ioredis@4.26.0:
+    resolution: {integrity: sha512-sFUdqw4d3AIdQkEK7pvs8aiEEGiE2JTypTwTfU2aGmrhytdRODTYmReCCQhR6ABQlL8FyWno8wjdGbxxLYhJCw==}
     engines: {node: '>=10'}
     peerDependencies:
       ioredis: 4.x
