@@ -4,7 +4,7 @@ specifiers:
   '@types/react': 17.0.8
   '@types/react-dom': 17.0.5
   '@vitejs/plugin-react-refresh': 1.3.3
-  antd: 4.16.1
+  antd: 4.16.2
   concurrently: 6.2.0
   emotion: 11.0.0
   execa: 5.0.0
@@ -14,7 +14,7 @@ specifiers:
   vite: 2.3.6
 
 dependencies:
-  antd: 4.16.1_react-dom@17.0.2+react@17.0.2
+  antd: 4.16.2_react-dom@17.0.2+react@17.0.2
   emotion: 11.0.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -1984,8 +1984,8 @@ packages:
       color-convert: 2.0.1
     dev: true
 
-  /antd/4.16.1_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-v7KfUYvEAiqfTECKC4/VkpRPB/4RRxZLR3b2kKCYEtcj4nEHvsOKfO5CDbWVtSUmCehxOXNR2lV+UNy06KHBnA==}
+  /antd/4.16.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-8aRrhzVz0Z32PptW9syq0eQqjc9wfJn3nxgVqqxGNH5BkFr1LRiqM0wJ6FNiYc6XVbpnqP20z5gufYFHC7BHqw==}
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
