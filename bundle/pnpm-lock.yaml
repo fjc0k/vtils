@@ -11,7 +11,7 @@ specifiers:
   haoma: 2.31.0
   react: 17.0.2
   react-dom: 17.0.2
-  vite: 2.3.7
+  vite: 2.3.8
 
 dependencies:
   antd: 4.16.3_react-dom@17.0.2+react@17.0.2
@@ -26,7 +26,7 @@ devDependencies:
   concurrently: 6.2.0
   execa: registry.npm.taobao.org/execa/5.0.0
   haoma: 2.31.0_react-dom@17.0.2+react@17.0.2
-  vite: 2.3.7
+  vite: 2.3.8
 
 packages:
 
@@ -2961,8 +2961,8 @@ packages:
       jsonc-parser: 3.0.0
     dev: true
 
-  /esbuild/0.12.5:
-    resolution: {integrity: sha512-vcuP53pA5XiwUU4FnlXM+2PnVjTfHGthM7uP1gtp+9yfheGvFFbq/KyuESThmtoHPUrfZH5JpxGVJIFDVD1Egw==}
+  /esbuild/0.12.9:
+    resolution: {integrity: sha512-MWRhAbMOJ9RJygCrt778rz/qNYgA4ZVj6aXnNPxFjs7PmIpb0fuB9Gmg5uWrr6n++XKwwm/RmSz6RR5JL2Ocsw==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -5199,8 +5199,8 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /postcss/8.3.0:
-    resolution: {integrity: sha512-+ogXpdAjWGa+fdYY5BQ96V/6tAo+TdSSIMP5huJBIygdWwKtVoB5JWZ7yUd4xZ8r+8Kvvx4nyg/PQ071H4UtcQ==}
+  /postcss/8.3.5:
+    resolution: {integrity: sha512-NxTuJocUhYGsMiMFHDUkmjSKT3EdH4/WbGF6GCi1NDGk+vbcUTun4fpbOqaPtD8IIsztA2ilZm2DhYCuyN58gA==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       colorette: 1.2.2
@@ -6918,13 +6918,13 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite/2.3.7:
-    resolution: {integrity: sha512-Y0xRz11MPYu/EAvzN94+FsOZHbSvO6FUvHv127CyG7mV6oDoay2bw+g5y9wW3Blf8OY3chaz3nc/DcRe1IQ3Nw==}
+  /vite/2.3.8:
+    resolution: {integrity: sha512-QiEx+iqNnJntSgSF2fWRQvRey9pORIrtNJzNyBJXwc+BdzWs83FQolX84cTBo393cfhObrtWa6180dAa4NLDiQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
-      esbuild: 0.12.5
-      postcss: 8.3.0
+      esbuild: 0.12.9
+      postcss: 8.3.5
       resolve: 1.20.0
       rollup: 2.39.0
     optionalDependencies:
