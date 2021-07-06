@@ -130,7 +130,7 @@
     "@rollup/plugin-virtual": "2.0.3",
     "@tarojs/taro": "3.2.10",
     "@testing-library/react": "11.2.7",
-    "@testing-library/react-hooks": "7.0.0",
+    "@testing-library/react-hooks": "7.0.1",
     "@types/fs-extra": "9.0.11",
     "@types/node": "16.0.0",
     "@types/prompts": "2.0.12",
