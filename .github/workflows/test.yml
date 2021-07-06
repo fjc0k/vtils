@@ -23,9 +23,9 @@ jobs:
         id: cache
         with:
           path: node_modules
-          key: ${{ hashFiles('pnpm-lock.yaml') }}
+          key: ${{ hashFiles('yarn.lock') }}
       - if: ${{ steps.cache.outputs.cache-hit != 'true' }}
-        run: npx pnpm -v && npx pnpm install --frozen-lockfile
+        run: yarn --frozen-lockfile
       - run: |
           rm -rf node_modules/.cache
           npm run build

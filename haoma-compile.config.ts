@@ -47,16 +47,10 @@ export default [
     target: file => (/src\/(dev|x)\//.test(file) ? 'node' : 'browser'),
     outDir: 'lib/_cjs',
     emitDts: false,
-    renameImport: [
-      {
-        original: /yup\/es(.*)$/,
-        replacement: 'yup/lib$1',
-      },
-      {
-        original: /date-fns\/esm(.*)$/,
-        replacement: 'date-fns$1',
-      },
-    ],
+    alias: {
+      'yup/es': 'yup/lib',
+      'date-fns/esm': 'date-fns',
+    },
     plugins: [removeIsTypePlugin],
   }),
 ]

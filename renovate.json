@@ -6,5 +6,5 @@
     ":automergeBranch",
     ":automergeRequireAllStatusChecks"
   ],
-  "ignoreDeps": ["yup"]
+  "ignoreDeps": ["yup", "husky"]
 }

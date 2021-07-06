@@ -12,7 +12,9 @@ type XToY = (value: string) => string
 // 使用 global['Buffer'] 而不是 Buffer 以防止 webpack 等工具自动加 polyfill
 const canUseBufferFrom =
   typeof global !== 'undefined' &&
+  // @ts-expect-error https://github.com/microsoft/TypeScript/issues/39504
   typeof global['Buffer'] !== 'undefined' &&
+  // @ts-expect-error https://github.com/microsoft/TypeScript/issues/39504
   typeof global['Buffer']['from'] === 'function'
 
 const base64Chars =
@@ -96,7 +98,8 @@ const asciiToBinary: XToY =
   (value => value.replace(/\S{1,4}/g, asciiToBinaryReplacer))
 
 // binaryToUtf8
-const binaryToUtf8RegExp = /[\xC0-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF7][\x80-\xBF]{3}/g
+const binaryToUtf8RegExp =
+  /[\xC0-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF7][\x80-\xBF]{3}/g
 function binaryToUtf8Replacer(str: string) {
   switch (str.length) {
     case 4:
@@ -144,6 +147,7 @@ const asciiToUtf8: XToY = value =>
  */
 export function base64Encode(value: string): string {
   if (canUseBufferFrom) {
+    // @ts-expect-error https://github.com/microsoft/TypeScript/issues/39504
     return global['Buffer']['from'](value, 'utf8').toString('base64')
   }
 
@@ -165,6 +169,7 @@ export function base64Encode(value: string): string {
  */
 export function base64Decode(value: string): string {
   if (canUseBufferFrom) {
+    // @ts-expect-error https://github.com/microsoft/TypeScript/issues/39504
     return global['Buffer']['from'](value, 'base64').toString('utf8')
   }
 

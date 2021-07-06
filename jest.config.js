@@ -1,11 +1,6 @@
 /** @type import('haoma').JestConfig */
 module.exports = require('haoma').getJestConfig({
-  transformPackages: [
-    'lodash-es',
-    'date-fns',
-    'yup',
-    '@babel/runtime',
-    '@tarojs/runtime',
-  ],
+  testEnvironment: 'jsdom',
+  transformPackages: ['lodash-es', 'date-fns', 'yup', '@tarojs/runtime'],
   transformer: 'babel',
 })
