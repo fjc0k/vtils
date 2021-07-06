@@ -1260,15 +1260,15 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@microsoft/api-documenter@7.13.12":
-  version "7.13.12"
-  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.12.tgz#f0b8b0051fccaaca730a5040e0181f8db1fed4e5"
-  integrity sha512-5Awe7ciU6ISfnx9sJxGwtRPypvBOIWE9rK5N/aKFFaHDt+YI7hahntT4d5B1kQMe/x0hceS6FdfB9/9+Adg0Ww==
+"@microsoft/api-documenter@7.13.28":
+  version "7.13.28"
+  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.28.tgz#a2f6b68d826a33f0e90d78e7b66850fb02dbff49"
+  integrity sha512-IDV1SzSRfQKa+wL3NmMsOaSgZ7AhbWyqOJE2qyDx4BqkAQ0SjtI+ktQvhP2Ap1zFZ0mkekUrkZ5r+Fs4Pl+RKQ==
   dependencies:
-    "@microsoft/api-extractor-model" "7.13.2"
+    "@microsoft/api-extractor-model" "7.13.3"
     "@microsoft/tsdoc" "0.13.2"
-    "@rushstack/node-core-library" "3.38.0"
-    "@rushstack/ts-command-line" "4.7.10"
+    "@rushstack/node-core-library" "3.39.0"
+    "@rushstack/ts-command-line" "4.8.0"
     colors "~1.2.1"
     js-yaml "~3.13.1"
     resolve "~1.17.0"
