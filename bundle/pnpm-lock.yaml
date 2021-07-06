@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@types/react': 17.0.8
+  '@types/react': 17.0.13
   '@types/react-dom': 17.0.8
   '@vitejs/plugin-react-refresh': 1.3.4
   antd: 4.16.6
@@ -20,7 +20,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
 
 devDependencies:
-  '@types/react': 17.0.8
+  '@types/react': 17.0.13
   '@types/react-dom': 17.0.8
   '@vitejs/plugin-react-refresh': 1.3.4
   concurrently: 6.2.0
@@ -1862,6 +1862,14 @@ packages:
     resolution: {integrity: sha512-0ohAiJAx1DAUEcY9UopnfwCE9sSMDGnY/oXjWMax6g3RpzmTt2GMyMVAXcbn0mo8XAff0SbQJl2/SBU+hjSZ1A==}
     dependencies:
       '@types/react': 17.0.8
+    dev: true
+
+  /@types/react/17.0.13:
+    resolution: {integrity: sha512-D/G3PiuqTfE3IMNjLn/DCp6umjVCSvtZTPdtAFy5+Ved6CsdRvivfKeCzw79W4AatShtU4nGqgvOv5Gro534vQ==}
+    dependencies:
+      '@types/prop-types': 15.7.3
+      '@types/scheduler': 0.16.1
+      csstype: 3.0.6
     dev: true
 
   /@types/react/17.0.8:
