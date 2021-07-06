@@ -5069,10 +5069,10 @@ interpret@^1.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
   integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
-ioredis-mock@5.5.7:
-  version "5.5.7"
-  resolved "https://registry.yarnpkg.com/ioredis-mock/-/ioredis-mock-5.5.7.tgz#61eca8974015bc52c6c214ba4971a93fcf23b249"
-  integrity sha512-sFUdqw4d3AIdQkEK7pvs8aiEEGiE2JTypTwTfU2aGmrhytdRODTYmReCCQhR6ABQlL8FyWno8wjdGbxxLYhJCw==
+ioredis-mock@5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/ioredis-mock/-/ioredis-mock-5.6.0.tgz#f60f9fbc3a53b50f567be9369e2b211ed52c0653"
+  integrity sha512-Ow+tyKdijg/gA2gSEv7lq8dLp6bO7FnwDXbJ9as37NF23XNRGMLzBc7ITaqMydfrbTodWnLcE2lKEaBs7SBpyA==
   dependencies:
     fengari "^0.1.4"
     fengari-interop "^0.1.2"
