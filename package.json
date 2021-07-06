@@ -136,7 +136,7 @@
     "@types/prompts": "2.0.13",
     "@types/react": "17.0.8",
     "@types/react-dom": "17.0.8",
-    "@types/standard-version": "7.0.0",
+    "@types/standard-version": "7.0.1",
     "@types/uuid": "8.3.0",
     "codecov": "3.8.2",
     "cross-env": "7.0.3",

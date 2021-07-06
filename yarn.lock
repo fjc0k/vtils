@@ -1864,10 +1864,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
 
-"@types/standard-version@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@types/standard-version/-/standard-version-7.0.0.tgz#7611bdf648e0833100a54828a84353e5922862fc"
-  integrity sha512-0UYi01LCFytj+15S0dEGzSAAITVW9gJg8EGEU5brWhT2C1BMWuMt19YGVSTYBF9EoP0Ni+PFvQPpjmOU33tSMg==
+"@types/standard-version@7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@types/standard-version/-/standard-version-7.0.1.tgz#e504f6ac5b7767f5b024db0337d743595f1ca67d"
+  integrity sha512-yi8dRWPAGp0LRqHzbZi6N/9TonVicbcDd9L0YpHWIZXoxiBjs6rxX1oEGIea3Bxff2RORCHwidSiwaeWHT/Jxw==
   dependencies:
     "@types/conventional-changelog-config-spec" "*"
     "@types/node" "*"
