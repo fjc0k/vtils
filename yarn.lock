@@ -4704,7 +4704,7 @@ handlebars@^4.7.6:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-haoma@^3.3.3:
+haoma@3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/haoma/-/haoma-3.3.3.tgz#4bb0ea1cfbb68ceae4149d440cd1de293cad9606"
   integrity sha512-jnKRqJJkdc+j6pchyB2XqgXlgDZVhqYzOxwi01dSXg7H2qTAybYlUuEzEKAOvtT34otm9IWD+v3HWSGM5GBwYg==
