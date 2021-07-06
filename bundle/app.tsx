@@ -2,7 +2,7 @@ import 'antd/dist/antd.css'
 import * as libs from './libs'
 import React, { useCallback, useState } from 'react'
 import { Button, Input, message, TreeSelect } from 'antd'
-import { css } from 'emotion'
+import { css } from '@emotion/css'
 
 const modules = Object.keys(libs).map(lib => ({
   title: lib,
