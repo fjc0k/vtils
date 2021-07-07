@@ -40,4 +40,5 @@ guestFencingTeam.push('Sam');
 //=> error TS2339: Property 'push' does not exist on type 'FencingTeam'
 
 ```
+ Utilities
 

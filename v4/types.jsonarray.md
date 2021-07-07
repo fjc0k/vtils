@@ -6,6 +6,8 @@
 
 Matches a JSON array.
 
+ Basic
+
 <b>Signature:</b>
 
 ```typescript

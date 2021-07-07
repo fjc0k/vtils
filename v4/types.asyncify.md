@@ -38,4 +38,5 @@ const getFooAsync: AsyncifiedFooGetter = (someArg) => {
 }
 
 ```
+ Utilities
 

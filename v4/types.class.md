@@ -6,6 +6,8 @@
 
 Matches a \[`class` constructor\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
 
+ Basic
+
 <b>Signature:</b>
 
 ```typescript

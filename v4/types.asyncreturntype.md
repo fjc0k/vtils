@@ -29,4 +29,5 @@ async function doSomething(value: Value) {}
 asyncFunction().then(value => doSomething(value));
 
 ```
+ Utilities
 

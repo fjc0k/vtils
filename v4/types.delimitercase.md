@@ -33,7 +33,7 @@ const someVariable: DelimiterCase<'fooBar', '#'> = 'foo#bar';
 
 // Advanced
 
-type OddlyCasedProps<T> = {
+type OddlyCasedProperties<T> = {
 	[K in keyof T as DelimiterCase<K, '#'>]: T[K]
 };
 
@@ -43,11 +43,12 @@ interface SomeOptions {
 	foo: number;
 }
 
-const rawCliOptions: OddlyCasedProps<SomeOptions> = {
+const rawCliOptions: OddlyCasedProperties<SomeOptions> = {
 	'dry#run': true,
 	'include#file': 'bar.js',
 	foo: 123
 };
 
 ```
+ Template Literals
 

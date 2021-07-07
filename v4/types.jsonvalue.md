@@ -6,6 +6,8 @@
 
 Matches any valid JSON value.
 
+ Basic
+
 <b>Signature:</b>
 
 ```typescript

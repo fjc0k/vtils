@@ -9,5 +9,5 @@ A set of config values that will be used at publish-time. It's especially handy 
 <b>Signature:</b>
 
 ```typescript
-publishConfig?: Record<string, unknown>;
+publishConfig?: PublishConfig;
 ```

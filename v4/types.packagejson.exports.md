@@ -11,6 +11,7 @@ Entry points of a module, optionally with conditions and subpath exports.
 ```typescript
 export type Exports =
 	| string
+	| string[]
 	| {[key in ExportCondition]: Exports}
 	| {[key: string]: Exports};
 ```

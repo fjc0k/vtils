@@ -6,6 +6,8 @@
 
 Type for \[npm's `package.json` file\](https://docs.npmjs.com/creating-a-package-json-file). Also includes types for fields used by other popular projects, like TypeScript and Yarn.
 
+ Miscellaneous
+
 <b>Signature:</b>
 
 ```typescript

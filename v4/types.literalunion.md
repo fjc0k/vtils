@@ -41,4 +41,5 @@ const pet: Pet2 = '';
 // You **will** get auto-completion for `dog` and `cat` literals.
 
 ```
+ Utilities
 

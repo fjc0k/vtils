@@ -27,7 +27,7 @@ const someVariable: KebabCase<'fooBar'> = 'foo-bar';
 
 // Advanced
 
-type KebabCasedProps<T> = {
+type KebabCasedProperties<T> = {
 	[K in keyof T as KebabCase<K>]: T[K]
 };
 
@@ -37,11 +37,12 @@ interface CliOptions {
 	foo: number;
 }
 
-const rawCliOptions: KebabCasedProps<CliOptions> = {
+const rawCliOptions: KebabCasedProperties<CliOptions> = {
 	'dry-run': true,
 	'include-file': 'bar.js',
 	foo: 123
 };
 
 ```
+ Template Literals
 
