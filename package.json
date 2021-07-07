@@ -64,7 +64,7 @@
   "scripts": {
     "build": "haoma compile && npm run generate-package && npm run generate-docs",
     "generate-docs": "haoma run ./scripts/generateDocs.ts",
-    "generate-index": "vgis './src/**/index.ts'",
+    "generate-index": "vgis \"./src/**/index.ts\"",
     "generate-package": "haoma run ./scripts/generatePackage.ts",
     "generate-utility": "haoma rune ./scripts/generateUtility.ts",
     "publish-package": "cd ./lib && npm publish",
