@@ -86,7 +86,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "post-merge": "yarn"
+      "post-merge": "yarn && yarn --cwd bundle"
     }
   },
   "lint-staged": {
