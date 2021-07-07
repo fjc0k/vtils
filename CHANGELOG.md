@@ -2,50 +2,63 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [4.34.0](https://github.com/fjc0k/vtils/compare/v4.33.0...v4.34.0) (2021-03-18)
-
-
-### Features
-
-* **createSubmit:** 支持 throw 异常回调 ([2b5e9fb](https://github.com/fjc0k/vtils/commit/2b5e9fba93872c176ba4eb9c60a24935d0d35fb0))
-
+### [4.34.1-beta.0](https://github.com/fjc0k/vtils/compare/v4.34.0...v4.34.1-beta.0) (2021-07-07)
 
 ### Bug Fixes
 
-* **deps:** update dependency antd to v4.13.1 ([053b0f7](https://github.com/fjc0k/vtils/commit/053b0f71cc7e7fdfec718250d86a61b6d77ab4d6))
-* **deps:** update dependency emotion to v11 ([bad0318](https://github.com/fjc0k/vtils/commit/bad03188bfdeb98b833412b7583c6c48d75c9d74))
+- **deps:** update dependency antd to v4.14.1 ([0d1d416](https://github.com/fjc0k/vtils/commit/0d1d416eca52a44b7c8dd113389c447ff34e807d))
+- **deps:** update dependency antd to v4.15.0 ([7cbbca8](https://github.com/fjc0k/vtils/commit/7cbbca8fcead7b1e5bed7950bef7154e41711fd4))
+- **deps:** update dependency antd to v4.15.2 ([f8021cb](https://github.com/fjc0k/vtils/commit/f8021cb0366783a7e0c8307791803d7ec7826d63))
+- **deps:** update dependency antd to v4.15.3 ([dbab174](https://github.com/fjc0k/vtils/commit/dbab17459b2adb333def493b158ae16601ed6e05))
+- **deps:** update dependency antd to v4.15.4 ([10548f6](https://github.com/fjc0k/vtils/commit/10548f63719a0f0ab1a9d2a0889de5a6f28755c0))
+- **deps:** update dependency antd to v4.15.5 ([677cfc5](https://github.com/fjc0k/vtils/commit/677cfc531879f452ea1023f52d065d18b7c74857))
+- **deps:** update dependency antd to v4.15.6 ([cbe9040](https://github.com/fjc0k/vtils/commit/cbe904060d64f5280499d42b1eb68955922a9756))
+- **deps:** update dependency antd to v4.16.0 ([9e50535](https://github.com/fjc0k/vtils/commit/9e50535eb1271b04474ffa363ca116ac5b47332d))
+- **deps:** update dependency antd to v4.16.1 ([901a3ca](https://github.com/fjc0k/vtils/commit/901a3ca1197d73c71d02ed56440a11597ac512f8))
+- **deps:** update dependency antd to v4.16.2 ([3b96bc2](https://github.com/fjc0k/vtils/commit/3b96bc2a7b3927216645822e5750181756112a85))
+- **deps:** update dependency antd to v4.16.3 ([d20f221](https://github.com/fjc0k/vtils/commit/d20f2218e9a09bfc0b794c53f18f69a12d2448af))
+- **deps:** update dependency antd to v4.16.5 ([0a08be1](https://github.com/fjc0k/vtils/commit/0a08be18a352d982cdc961fcb87ead27a482acef))
+- **deps:** update dependency antd to v4.16.6 ([fd4e2af](https://github.com/fjc0k/vtils/commit/fd4e2af261d35cdf468e97126ba60dd0d89ac208))
+- 更新依赖；使用 yarn 作为包管理工具 ([f8748e7](https://github.com/fjc0k/vtils/commit/f8748e7276db078cdb6ee85c9c91a5c86b7f1e81))
+
+## [4.34.0](https://github.com/fjc0k/vtils/compare/v4.33.0...v4.34.0) (2021-03-18)
+
+### Features
+
+- **createSubmit:** 支持 throw 异常回调 ([2b5e9fb](https://github.com/fjc0k/vtils/commit/2b5e9fba93872c176ba4eb9c60a24935d0d35fb0))
+
+### Bug Fixes
+
+- **deps:** update dependency antd to v4.13.1 ([053b0f7](https://github.com/fjc0k/vtils/commit/053b0f71cc7e7fdfec718250d86a61b6d77ab4d6))
+- **deps:** update dependency emotion to v11 ([bad0318](https://github.com/fjc0k/vtils/commit/bad03188bfdeb98b833412b7583c6c48d75c9d74))
 
 ## [4.33.0](https://github.com/fjc0k/vtils/compare/v4.32.12...v4.33.0) (2021-03-03)
 
-
 ### Features
 
-* **types:** 导出 UnionToIntersection ([8a17fd6](https://github.com/fjc0k/vtils/commit/8a17fd69092836e31be878441dea980ef1dc4235))
+- **types:** 导出 UnionToIntersection ([8a17fd6](https://github.com/fjc0k/vtils/commit/8a17fd69092836e31be878441dea980ef1dc4235))
 
 ### [4.32.12](https://github.com/fjc0k/vtils/compare/v4.32.11...v4.32.12) (2021-03-03)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency antd to v4.13.0 ([#60](https://github.com/fjc0k/vtils/issues/60)) ([6ed10cb](https://github.com/fjc0k/vtils/commit/6ed10cbd7d61e7f7c0ffcba44c237c6b651fa180))
-* **yup:** 中文优化 ([8fa4967](https://github.com/fjc0k/vtils/commit/8fa4967a5b0562f0b53c482d65e312a3dfa1e818))
-* **yup:** 类型优化 ([9d145bf](https://github.com/fjc0k/vtils/commit/9d145bf830d08c52500615232c5a4b3e99938c00))
+- **deps:** update dependency antd to v4.13.0 ([#60](https://github.com/fjc0k/vtils/issues/60)) ([6ed10cb](https://github.com/fjc0k/vtils/commit/6ed10cbd7d61e7f7c0ffcba44c237c6b651fa180))
+- **yup:** 中文优化 ([8fa4967](https://github.com/fjc0k/vtils/commit/8fa4967a5b0562f0b53c482d65e312a3dfa1e818))
+- **yup:** 类型优化 ([9d145bf](https://github.com/fjc0k/vtils/commit/9d145bf830d08c52500615232c5a4b3e99938c00))
 
 ### [4.32.11](https://github.com/fjc0k/vtils/compare/v4.32.10...v4.32.11) (2021-02-22)
 
-
 ### Bug Fixes
 
-* **dev:** 移除 babel plugin import ([dd07a49](https://github.com/fjc0k/vtils/commit/dd07a490cf0163bf7cab82634cb1dc2634b017d0))
+- **dev:** 移除 babel plugin import ([dd07a49](https://github.com/fjc0k/vtils/commit/dd07a490cf0163bf7cab82634cb1dc2634b017d0))
 
 ### [4.32.10](https://github.com/fjc0k/vtils/compare/v4.32.9...v4.32.10) (2021-02-22)
 
 ### [4.32.9](https://github.com/fjc0k/vtils/compare/v4.32.8...v4.32.9) (2021-02-22)
 
-
 ### Bug Fixes
 
-* tweaks ([a799ce7](https://github.com/fjc0k/vtils/commit/a799ce7e60a287ab1a5a024c904add1547c0b71d))
+- tweaks ([a799ce7](https://github.com/fjc0k/vtils/commit/a799ce7e60a287ab1a5a024c904add1547c0b71d))
 
 ### [4.32.8](https://github.com/fjc0k/vtils/compare/v4.32.7...v4.32.8) (2021-02-22)
 
@@ -59,294 +72,254 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [4.32.3](https://github.com/fjc0k/vtils/compare/v4.32.2...v4.32.3) (2021-02-22)
 
-
 ### Bug Fixes
 
-* tweaks ([1e56869](https://github.com/fjc0k/vtils/commit/1e56869998e1929ff746fc8d84237dbb98fde225))
+- tweaks ([1e56869](https://github.com/fjc0k/vtils/commit/1e56869998e1929ff746fc8d84237dbb98fde225))
 
 ### [4.32.2](https://github.com/fjc0k/vtils/compare/v4.32.1...v4.32.2) (2021-02-22)
 
-
 ### Bug Fixes
 
-* node build ([3624c95](https://github.com/fjc0k/vtils/commit/3624c957419694169e59adde969b7eec8b6e3df7))
+- node build ([3624c95](https://github.com/fjc0k/vtils/commit/3624c957419694169e59adde969b7eec8b6e3df7))
 
 ### [4.32.1](https://github.com/fjc0k/vtils/compare/v4.32.0...v4.32.1) (2021-02-22)
 
-
 ### Bug Fixes
 
-* **dev:** getBabelPluginImportList ([d9b3848](https://github.com/fjc0k/vtils/commit/d9b3848d217107262e32797b152ef00006b8c86f))
+- **dev:** getBabelPluginImportList ([d9b3848](https://github.com/fjc0k/vtils/commit/d9b3848d217107262e32797b152ef00006b8c86f))
 
 ## [4.32.0](https://github.com/fjc0k/vtils/compare/v4.31.0...v4.32.0) (2021-02-22)
 
-
 ### Features
 
-* **dev:** 新增 getBabelPluginImportList ([603843e](https://github.com/fjc0k/vtils/commit/603843e03904575c1017fb16a8f11825e332df47))
+- **dev:** 新增 getBabelPluginImportList ([603843e](https://github.com/fjc0k/vtils/commit/603843e03904575c1017fb16a8f11825e332df47))
 
 ## [4.31.0](https://github.com/fjc0k/vtils/compare/v4.30.2...v4.31.0) (2021-02-19)
 
-
 ### Features
 
-* **utils:** 新增 sampleBy, sampleIndex ([7df6ac8](https://github.com/fjc0k/vtils/commit/7df6ac8a75b97f5f78798895a00c6b9e2bfa0ab3))
-
+- **utils:** 新增 sampleBy, sampleIndex ([7df6ac8](https://github.com/fjc0k/vtils/commit/7df6ac8a75b97f5f78798895a00c6b9e2bfa0ab3))
 
 ### Bug Fixes
 
-* **yup:** try catch ([5bfd276](https://github.com/fjc0k/vtils/commit/5bfd276d1151d09c9101710a27936a18be2ca33e))
+- **yup:** try catch ([5bfd276](https://github.com/fjc0k/vtils/commit/5bfd276d1151d09c9101710a27936a18be2ca33e))
 
 ### [4.30.2](https://github.com/fjc0k/vtils/compare/v4.30.1...v4.30.2) (2021-02-01)
 
-
 ### Bug Fixes
 
-* **DataPacker:** packAsRawType ([97fa9fd](https://github.com/fjc0k/vtils/commit/97fa9fd0d3ac388fe0e626a455413bf7ae65829a))
+- **DataPacker:** packAsRawType ([97fa9fd](https://github.com/fjc0k/vtils/commit/97fa9fd0d3ac388fe0e626a455413bf7ae65829a))
 
 ### [4.30.1](https://github.com/fjc0k/vtils/compare/v4.30.0...v4.30.1) (2021-02-01)
 
-
 ### Bug Fixes
 
-* DataPacker ([c7e39c0](https://github.com/fjc0k/vtils/commit/c7e39c01c6b5d2e11724a5fc4b332cf8c1f14174))
+- DataPacker ([c7e39c0](https://github.com/fjc0k/vtils/commit/c7e39c01c6b5d2e11724a5fc4b332cf8c1f14174))
 
 ## [4.30.0](https://github.com/fjc0k/vtils/compare/v4.29.0...v4.30.0) (2021-02-01)
 
-
 ### Features
 
-* 使用 DataPacker 替换 ListWrapper ([220c5be](https://github.com/fjc0k/vtils/commit/220c5bec9359db2a06d6ccc0a8e9eaa7518abd35))
+- 使用 DataPacker 替换 ListWrapper ([220c5be](https://github.com/fjc0k/vtils/commit/220c5bec9359db2a06d6ccc0a8e9eaa7518abd35))
 
 ## [4.29.0](https://github.com/fjc0k/vtils/compare/v4.28.0...v4.29.0) (2021-01-30)
 
-
 ### Features
 
-* **useLoadMore:** 导出 setData ([4c7546e](https://github.com/fjc0k/vtils/commit/4c7546efa6b616230b5c0d9dc6a4c1346e3985d3))
+- **useLoadMore:** 导出 setData ([4c7546e](https://github.com/fjc0k/vtils/commit/4c7546efa6b616230b5c0d9dc6a4c1346e3985d3))
 
 ## [4.28.0](https://github.com/fjc0k/vtils/compare/v4.27.0...v4.28.0) (2021-01-25)
 
-
 ### Features
 
-* **types:** 新增 IsEmptyArray ([7d3bdbd](https://github.com/fjc0k/vtils/commit/7d3bdbdfd03cd6f8b8202e51d45ac550bca6ea61))
-* **types:** 新增 IsEmptyObject ([c056fd9](https://github.com/fjc0k/vtils/commit/c056fd9dbf343aea9efed81335b08ca5b15ad4ca))
+- **types:** 新增 IsEmptyArray ([7d3bdbd](https://github.com/fjc0k/vtils/commit/7d3bdbdfd03cd6f8b8202e51d45ac550bca6ea61))
+- **types:** 新增 IsEmptyObject ([c056fd9](https://github.com/fjc0k/vtils/commit/c056fd9dbf343aea9efed81335b08ca5b15ad4ca))
 
 ## [4.27.0](https://github.com/fjc0k/vtils/compare/v4.26.0...v4.27.0) (2021-01-20)
 
-
 ### Features
 
-* **TreeData:** index ([74cebdc](https://github.com/fjc0k/vtils/commit/74cebdce55a6ff4ca3d6c97a7a5b5692e76b0d2a))
+- **TreeData:** index ([74cebdc](https://github.com/fjc0k/vtils/commit/74cebdce55a6ff4ca3d6c97a7a5b5692e76b0d2a))
 
 ## [4.26.0](https://github.com/fjc0k/vtils/compare/v4.25.0...v4.26.0) (2021-01-19)
 
-
 ### Features
 
-* **createGlobalState:** 新增 setStatePartial ([9c76e5a](https://github.com/fjc0k/vtils/commit/9c76e5aa8e7ba3d0da251137bfbd4a42b1169a98))
-
+- **createGlobalState:** 新增 setStatePartial ([9c76e5a](https://github.com/fjc0k/vtils/commit/9c76e5aa8e7ba3d0da251137bfbd4a42b1169a98))
 
 ### Bug Fixes
 
-* **createGlobalState:** 类型重载 ([72e772b](https://github.com/fjc0k/vtils/commit/72e772b25c9afad783c527b2cf1b3d0e89bc637c))
+- **createGlobalState:** 类型重载 ([72e772b](https://github.com/fjc0k/vtils/commit/72e772b25c9afad783c527b2cf1b3d0e89bc637c))
 
 ## [4.25.0](https://github.com/fjc0k/vtils/compare/v4.24.0...v4.25.0) (2021-01-18)
 
-
 ### Features
 
-* **utils:** 新增 isType ([dd15ce9](https://github.com/fjc0k/vtils/commit/dd15ce9a6b4e8c37817a4d9db53e9259ed2138c2))
+- **utils:** 新增 isType ([dd15ce9](https://github.com/fjc0k/vtils/commit/dd15ce9a6b4e8c37817a4d9db53e9259ed2138c2))
 
 ## [4.24.0](https://github.com/fjc0k/vtils/compare/v4.23.0...v4.24.0) (2021-01-15)
 
-
 ### Features
 
-* **utils:** 新增 rot13 ([6450d00](https://github.com/fjc0k/vtils/commit/6450d00389273102e0bfff09b46fed6a344474e0))
+- **utils:** 新增 rot13 ([6450d00](https://github.com/fjc0k/vtils/commit/6450d00389273102e0bfff09b46fed6a344474e0))
 
 ## [4.23.0](https://github.com/fjc0k/vtils/compare/v4.22.1...v4.23.0) (2021-01-14)
 
-
 ### Features
 
-* **ListWrapper:** 优化 ([3a25e97](https://github.com/fjc0k/vtils/commit/3a25e97c4d6926df73b4b6498f708c5d5ca3c324))
+- **ListWrapper:** 优化 ([3a25e97](https://github.com/fjc0k/vtils/commit/3a25e97c4d6926df73b4b6498f708c5d5ca3c324))
 
 ### [4.22.1](https://github.com/fjc0k/vtils/compare/v4.22.0...v4.22.1) (2021-01-14)
 
 ## [4.22.0](https://github.com/fjc0k/vtils/compare/v4.21.0...v4.22.0) (2021-01-14)
 
-
 ### Features
 
-* **utils:** 新增 ListWrapper 列表打包器 ([54644fb](https://github.com/fjc0k/vtils/commit/54644fbe85e342d5ab557ba6d2215bd166718a0d))
+- **utils:** 新增 ListWrapper 列表打包器 ([54644fb](https://github.com/fjc0k/vtils/commit/54644fbe85e342d5ab557ba6d2215bd166718a0d))
 
 ## [4.21.0](https://github.com/fjc0k/vtils/compare/v4.20.0...v4.21.0) (2021-01-13)
 
-
 ### Features
 
-* **createGlobalState:** 添加 watchStateImmediate ([5452019](https://github.com/fjc0k/vtils/commit/54520199f3dfe88351aa7702033b8ff88443024f))
+- **createGlobalState:** 添加 watchStateImmediate ([5452019](https://github.com/fjc0k/vtils/commit/54520199f3dfe88351aa7702033b8ff88443024f))
 
 ## [4.20.0](https://github.com/fjc0k/vtils/compare/v4.19.0...v4.20.0) (2021-01-13)
 
-
 ### Features
 
-* **types:** 新增 NonEmptyArray 非空数组类型 ([cecf602](https://github.com/fjc0k/vtils/commit/cecf6020e906a5499dcb17e7221f0924cc6a30fa))
+- **types:** 新增 NonEmptyArray 非空数组类型 ([cecf602](https://github.com/fjc0k/vtils/commit/cecf6020e906a5499dcb17e7221f0924cc6a30fa))
 
 ## [4.19.0](https://github.com/fjc0k/vtils/compare/v4.18.0...v4.19.0) (2021-01-12)
 
-
 ### Features
 
-* **types:** 新增 DotPath ([2417103](https://github.com/fjc0k/vtils/commit/24171035335b3214981f4a5bc571e36e6d37ae72))
+- **types:** 新增 DotPath ([2417103](https://github.com/fjc0k/vtils/commit/24171035335b3214981f4a5bc571e36e6d37ae72))
 
 ## [4.18.0](https://github.com/fjc0k/vtils/compare/v4.17.0...v4.18.0) (2021-01-11)
 
-
 ### Features
 
-* **x:** 新增 nanoid ([c601213](https://github.com/fjc0k/vtils/commit/c6012131268ce5d477a69ed42ee6d438c1d53b21))
+- **x:** 新增 nanoid ([c601213](https://github.com/fjc0k/vtils/commit/c6012131268ce5d477a69ed42ee6d438c1d53b21))
 
 ## [4.17.0](https://github.com/fjc0k/vtils/compare/v4.16.1...v4.17.0) (2021-01-08)
 
-
 ### Features
 
-* **utils:** 新增 ii 立即调用函数并返回其返回值 ([362ccd3](https://github.com/fjc0k/vtils/commit/362ccd3895d0388e8caf6338b3ce898dce2d4665))
-* **utils:** 新增 pMap ([449332d](https://github.com/fjc0k/vtils/commit/449332dfb1392cdf0995677e6dc7719c2444bdca))
+- **utils:** 新增 ii 立即调用函数并返回其返回值 ([362ccd3](https://github.com/fjc0k/vtils/commit/362ccd3895d0388e8caf6338b3ce898dce2d4665))
+- **utils:** 新增 pMap ([449332d](https://github.com/fjc0k/vtils/commit/449332dfb1392cdf0995677e6dc7719c2444bdca))
 
 ### [4.16.1](https://github.com/fjc0k/vtils/compare/v4.16.0...v4.16.1) (2021-01-04)
 
-
 ### Bug Fixes
 
-* **renderComponent:** 修正 key 赋值时机 ([516456e](https://github.com/fjc0k/vtils/commit/516456e8f625d8e174510d687ae0046d5b684aee))
+- **renderComponent:** 修正 key 赋值时机 ([516456e](https://github.com/fjc0k/vtils/commit/516456e8f625d8e174510d687ae0046d5b684aee))
 
 ## [4.16.0](https://github.com/fjc0k/vtils/compare/v4.15.0...v4.16.0) (2021-01-04)
 
-
 ### Features
 
-* **useStaged:** 支持 reset 重置暂存状态 ([8edd7e1](https://github.com/fjc0k/vtils/commit/8edd7e10b1388bdc4f6aae5a0bfded466aec16be))
+- **useStaged:** 支持 reset 重置暂存状态 ([8edd7e1](https://github.com/fjc0k/vtils/commit/8edd7e10b1388bdc4f6aae5a0bfded466aec16be))
 
 ## [4.15.0](https://github.com/fjc0k/vtils/compare/v4.14.1...v4.15.0) (2021-01-04)
 
-
 ### Features
 
-* **react:** 新增 useStaged 暂存状态 ([7fd1181](https://github.com/fjc0k/vtils/commit/7fd1181cf8fd6bf28984fe5b1ba54ed0734f3298))
+- **react:** 新增 useStaged 暂存状态 ([7fd1181](https://github.com/fjc0k/vtils/commit/7fd1181cf8fd6bf28984fe5b1ba54ed0734f3298))
 
 ### [4.14.1](https://github.com/fjc0k/vtils/compare/v4.14.0...v4.14.1) (2021-01-03)
 
-
 ### Bug Fixes
 
-* **TreeData:** 优化类型 ([e454d61](https://github.com/fjc0k/vtils/commit/e454d61beb9607027a47f4e9c6d9948246fef098))
+- **TreeData:** 优化类型 ([e454d61](https://github.com/fjc0k/vtils/commit/e454d61beb9607027a47f4e9c6d9948246fef098))
 
 ## [4.14.0](https://github.com/fjc0k/vtils/compare/v4.13.2...v4.14.0) (2021-01-03)
 
-
 ### Features
 
-* **cloneDeep,TreeData:** 支持 ignore ([f9bb684](https://github.com/fjc0k/vtils/commit/f9bb684ee2a9777a8d4413ca22de96afd81716fc))
+- **cloneDeep,TreeData:** 支持 ignore ([f9bb684](https://github.com/fjc0k/vtils/commit/f9bb684ee2a9777a8d4413ca22de96afd81716fc))
 
 ### [4.13.2](https://github.com/fjc0k/vtils/compare/v4.13.1...v4.13.2) (2020-12-31)
 
-
 ### Bug Fixes
 
-* **validator:** mixed 默认 any ([a6c5b71](https://github.com/fjc0k/vtils/commit/a6c5b711b66a3b4dc7fb2401757567ff35468664))
+- **validator:** mixed 默认 any ([a6c5b71](https://github.com/fjc0k/vtils/commit/a6c5b711b66a3b4dc7fb2401757567ff35468664))
 
 ### [4.13.1](https://github.com/fjc0k/vtils/compare/v4.13.0...v4.13.1) (2020-12-30)
 
-
 ### Bug Fixes
 
-* **renderComponent:** 生成默认 key 值 ([ceae5f1](https://github.com/fjc0k/vtils/commit/ceae5f137575aaa21900e720035f566759f29b3f))
+- **renderComponent:** 生成默认 key 值 ([ceae5f1](https://github.com/fjc0k/vtils/commit/ceae5f137575aaa21900e720035f566759f29b3f))
 
 ## [4.13.0](https://github.com/fjc0k/vtils/compare/v4.12.0...v4.13.0) (2020-12-29)
 
-
 ### Features
 
-* **renderComponent:** 支持设置渲染容器 ([4150947](https://github.com/fjc0k/vtils/commit/4150947808848d6500c47455b8e2feace5bf3cc6))
+- **renderComponent:** 支持设置渲染容器 ([4150947](https://github.com/fjc0k/vtils/commit/4150947808848d6500c47455b8e2feace5bf3cc6))
 
 ## [4.12.0](https://github.com/fjc0k/vtils/compare/v4.11.1...v4.12.0) (2020-12-25)
 
-
 ### Features
 
-* **types:** export Class, Asyncify ([739aa6e](https://github.com/fjc0k/vtils/commit/739aa6e932c4f0afb02ed85c1f8e80f1704a2e47))
+- **types:** export Class, Asyncify ([739aa6e](https://github.com/fjc0k/vtils/commit/739aa6e932c4f0afb02ed85c1f8e80f1704a2e47))
 
 ### [4.11.1](https://github.com/fjc0k/vtils/compare/v4.11.0...v4.11.1) (2020-12-24)
 
 ## [4.11.0](https://github.com/fjc0k/vtils/compare/v4.10.1...v4.11.0) (2020-12-24)
 
-
 ### Features
 
-* **validator:** 优化提示文本 ([492c695](https://github.com/fjc0k/vtils/commit/492c6954b1e11139c8fd51bb034ba877a2c33ca3))
-* **x:** 新增 sha1 ([d69393a](https://github.com/fjc0k/vtils/commit/d69393ab1097bdef56e045a6f68c20fe93bad60f))
-* **x:** 新增 WechatMessageCrypto 微信公众号消息加解密 ([c106915](https://github.com/fjc0k/vtils/commit/c1069152a6ddf4d563df0f16e09bbedd4195481f))
+- **validator:** 优化提示文本 ([492c695](https://github.com/fjc0k/vtils/commit/492c6954b1e11139c8fd51bb034ba877a2c33ca3))
+- **x:** 新增 sha1 ([d69393a](https://github.com/fjc0k/vtils/commit/d69393ab1097bdef56e045a6f68c20fe93bad60f))
+- **x:** 新增 WechatMessageCrypto 微信公众号消息加解密 ([c106915](https://github.com/fjc0k/vtils/commit/c1069152a6ddf4d563df0f16e09bbedd4195481f))
 
 ### [4.10.1](https://github.com/fjc0k/vtils/compare/v4.10.0...v4.10.1) (2020-12-22)
 
 ## [4.10.0](https://github.com/fjc0k/vtils/compare/v4.9.1...v4.10.0) (2020-12-22)
 
-
 ### Features
 
-* **x:** 新增 RedisCookieJar 使用 Redis 作为 Cookie Jar ([2815e13](https://github.com/fjc0k/vtils/commit/2815e13af3665eaab539da4a23d039edc06dbfc1))
+- **x:** 新增 RedisCookieJar 使用 Redis 作为 Cookie Jar ([2815e13](https://github.com/fjc0k/vtils/commit/2815e13af3665eaab539da4a23d039edc06dbfc1))
 
 ### [4.9.1](https://github.com/fjc0k/vtils/compare/v4.9.0...v4.9.1) (2020-12-21)
 
-
 ### Bug Fixes
 
-* **indent,dedent:** 插入值支持 number 类型 ([926b7cb](https://github.com/fjc0k/vtils/commit/926b7cbe8ca5c8f0582b43b98d1123e52c77f2f5))
+- **indent,dedent:** 插入值支持 number 类型 ([926b7cb](https://github.com/fjc0k/vtils/commit/926b7cbe8ca5c8f0582b43b98d1123e52c77f2f5))
 
 ## [4.9.0](https://github.com/fjc0k/vtils/compare/v4.8.0...v4.9.0) (2020-12-21)
 
-
 ### Features
 
-* **createXml:** 添加 array 辅助方法 ([c1e0de1](https://github.com/fjc0k/vtils/commit/c1e0de183a3843bd17cf3d6c957e8e7778d7be62))
+- **createXml:** 添加 array 辅助方法 ([c1e0de1](https://github.com/fjc0k/vtils/commit/c1e0de183a3843bd17cf3d6c957e8e7778d7be62))
 
 ## [4.8.0](https://github.com/fjc0k/vtils/compare/v4.7.0...v4.8.0) (2020-12-21)
 
-
 ### Features
 
-* **TreeData:** 新增 traverseNode 遍历节点 ([c5dd7b1](https://github.com/fjc0k/vtils/commit/c5dd7b1279093c4fcaa58ea0cbcd43899e3ecb78))
-* **x:** 新增 cuid、uuid ([e938c99](https://github.com/fjc0k/vtils/commit/e938c995c455509cccd8734248f17236fd7610ab))
-* **x:** 新增 parseXml、createXml ([1ee40c7](https://github.com/fjc0k/vtils/commit/1ee40c7e46108fee79f125b6aeaf79c878cad69d))
+- **TreeData:** 新增 traverseNode 遍历节点 ([c5dd7b1](https://github.com/fjc0k/vtils/commit/c5dd7b1279093c4fcaa58ea0cbcd43899e3ecb78))
+- **x:** 新增 cuid、uuid ([e938c99](https://github.com/fjc0k/vtils/commit/e938c995c455509cccd8734248f17236fd7610ab))
+- **x:** 新增 parseXml、createXml ([1ee40c7](https://github.com/fjc0k/vtils/commit/1ee40c7e46108fee79f125b6aeaf79c878cad69d))
 
 ## [4.7.0](https://github.com/fjc0k/vtils/compare/v4.6.0...v4.7.0) (2020-12-19)
 
-
 ### Features
 
-* **TreeData:** 遍历优化 ([f432090](https://github.com/fjc0k/vtils/commit/f4320909b5d922a0a4ff03a896ca51c886d33fcd))
-* **TreeData:** 遍历算法优化 ([e7a8cf8](https://github.com/fjc0k/vtils/commit/e7a8cf8426c9e470dd74de40ee814e2092cad76f))
-* **utils:** 新增 cloneDeepFast 深克隆 ([704704b](https://github.com/fjc0k/vtils/commit/704704b63a35b99ae1f5ba6a4c4da2f4a95297b8))
+- **TreeData:** 遍历优化 ([f432090](https://github.com/fjc0k/vtils/commit/f4320909b5d922a0a4ff03a896ca51c886d33fcd))
+- **TreeData:** 遍历算法优化 ([e7a8cf8](https://github.com/fjc0k/vtils/commit/e7a8cf8426c9e470dd74de40ee814e2092cad76f))
+- **utils:** 新增 cloneDeepFast 深克隆 ([704704b](https://github.com/fjc0k/vtils/commit/704704b63a35b99ae1f5ba6a4c4da2f4a95297b8))
 
 ## [4.6.0](https://github.com/fjc0k/vtils/compare/v4.5.0...v4.6.0) (2020-12-14)
 
-
 ### Features
 
-* **TreeData:** 新增 exportList 方法导出一维列表数据 ([66cf34d](https://github.com/fjc0k/vtils/commit/66cf34d3b84b44da230339a68574842967f85da1))
-* **TreeData:** 新增 filter 方法筛选符合条件的节点 ([df07544](https://github.com/fjc0k/vtils/commit/df07544bb5c6f32b84bd6d6c94b092f277367c86))
+- **TreeData:** 新增 exportList 方法导出一维列表数据 ([66cf34d](https://github.com/fjc0k/vtils/commit/66cf34d3b84b44da230339a68574842967f85da1))
+- **TreeData:** 新增 filter 方法筛选符合条件的节点 ([df07544](https://github.com/fjc0k/vtils/commit/df07544bb5c6f32b84bd6d6c94b092f277367c86))
 
 ## [4.5.0](https://github.com/fjc0k/vtils/compare/v4.4.2...v4.5.0) (2020-12-14)
 
-
 ### Features
 
-* **TreeData:** 新增 fromList 方法从列表生成实例 ([5516106](https://github.com/fjc0k/vtils/commit/551610667b537a4fde8458e85f2c9ba2b8fc4f23))
+- **TreeData:** 新增 fromList 方法从列表生成实例 ([5516106](https://github.com/fjc0k/vtils/commit/551610667b537a4fde8458e85f2c9ba2b8fc4f23))
 
 ### [4.4.2](https://github.com/fjc0k/vtils/compare/v4.4.1...v4.4.2) (2020-12-12)
 
@@ -354,54 +327,47 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [4.4.0](https://github.com/fjc0k/vtils/compare/v4.3.0...v4.4.0) (2020-12-12)
 
-
 ### Features
 
-* **TreeData:** 优化遍历算法 ([954af64](https://github.com/fjc0k/vtils/commit/954af647f0ab5139f1ccc6699495009755b6f1db))
-* **TreeData:** 新增 removeNode、removeNodes、count ([7c009f3](https://github.com/fjc0k/vtils/commit/7c009f340dc41b0fe072bab803ac50d18c8be612))
+- **TreeData:** 优化遍历算法 ([954af64](https://github.com/fjc0k/vtils/commit/954af647f0ab5139f1ccc6699495009755b6f1db))
+- **TreeData:** 新增 removeNode、removeNodes、count ([7c009f3](https://github.com/fjc0k/vtils/commit/7c009f340dc41b0fe072bab803ac50d18c8be612))
 
 ## [4.3.0](https://github.com/fjc0k/vtils/compare/v4.2.1...v4.3.0) (2020-12-12)
 
-
 ### Features
 
-* **TreeData:** 新增 clone 方法克隆实例 ([e08ad66](https://github.com/fjc0k/vtils/commit/e08ad6687d95d76486e23744d09bfecefafadaa7))
+- **TreeData:** 新增 clone 方法克隆实例 ([e08ad66](https://github.com/fjc0k/vtils/commit/e08ad6687d95d76486e23744d09bfecefafadaa7))
 
 ### [4.2.1](https://github.com/fjc0k/vtils/compare/v4.2.0...v4.2.1) (2020-12-11)
 
-
 ### Bug Fixes
 
-* **TreeData:** findNodePath、findNodePaths 的结果应包含当前节点 ([53edbb2](https://github.com/fjc0k/vtils/commit/53edbb2e7ada54b3d67404873966615540e8f115))
+- **TreeData:** findNodePath、findNodePaths 的结果应包含当前节点 ([53edbb2](https://github.com/fjc0k/vtils/commit/53edbb2e7ada54b3d67404873966615540e8f115))
 
 ## [4.2.0](https://github.com/fjc0k/vtils/compare/v4.1.0...v4.2.0) (2020-12-11)
 
-
 ### Features
 
-* **TreeData:** 新增 findNode、findNodes、findNodePath、findNodePaths 方法 ([7217a3a](https://github.com/fjc0k/vtils/commit/7217a3ac713ed579bed04bd442dc6aafab1e7778))
+- **TreeData:** 新增 findNode、findNodes、findNodePath、findNodePaths 方法 ([7217a3a](https://github.com/fjc0k/vtils/commit/7217a3ac713ed579bed04bd442dc6aafab1e7778))
 
 ## [4.1.0](https://github.com/fjc0k/vtils/compare/v4.0.0...v4.1.0) (2020-12-08)
 
-
 ### Features
 
-* **utils:** 新增 isBlobUrl 检测传入值是否是 Blob URL ([5654306](https://github.com/fjc0k/vtils/commit/56543061a20fc9cb3b6b36fc73edb97c0b55b877))
-* **utils:** 新增 loadCss 加载 CSS 样式 ([70e4727](https://github.com/fjc0k/vtils/commit/70e4727be946fd1ce00881fe0db2eeab854152e2))
-
+- **utils:** 新增 isBlobUrl 检测传入值是否是 Blob URL ([5654306](https://github.com/fjc0k/vtils/commit/56543061a20fc9cb3b6b36fc73edb97c0b55b877))
+- **utils:** 新增 loadCss 加载 CSS 样式 ([70e4727](https://github.com/fjc0k/vtils/commit/70e4727be946fd1ce00881fe0db2eeab854152e2))
 
 ### Bug Fixes
 
-* 不打包 validator 的类型定义 ([7d4bd9a](https://github.com/fjc0k/vtils/commit/7d4bd9a6a5c0ec458c3a0b730411d759b19c9372))
+- 不打包 validator 的类型定义 ([7d4bd9a](https://github.com/fjc0k/vtils/commit/7d4bd9a6a5c0ec458c3a0b730411d759b19c9372))
 
 ## [4.0.0](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.7...v4.0.0) (2020-12-07)
 
-
 ### Features
 
-* **utils:** 新增 TreeData 处理树数据 ([23df907](https://github.com/fjc0k/vtils/commit/23df9070e0bd12a6ba5c41b9f98c23a81254980c))
-* **wait:** 支持返回值 ([2d1b63e](https://github.com/fjc0k/vtils/commit/2d1b63e713920e3247262c8623568dc1644deaaa))
-* **wait:** 新增 wait.reject ([e9314c8](https://github.com/fjc0k/vtils/commit/e9314c8bd023878cb3063ca94bf494bdd18f4933))
+- **utils:** 新增 TreeData 处理树数据 ([23df907](https://github.com/fjc0k/vtils/commit/23df9070e0bd12a6ba5c41b9f98c23a81254980c))
+- **wait:** 支持返回值 ([2d1b63e](https://github.com/fjc0k/vtils/commit/2d1b63e713920e3247262c8623568dc1644deaaa))
+- **wait:** 新增 wait.reject ([e9314c8](https://github.com/fjc0k/vtils/commit/e9314c8bd023878cb3063ca94bf494bdd18f4933))
 
 ## [4.0.0-beta.7](https://github.com/fjc0k/vtils/compare/v4.0.0-beta.6...v4.0.0-beta.7) (2020-11-27)
 
