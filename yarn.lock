@@ -1295,10 +1295,10 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@microsoft/api-documenter@7.13.28":
-  version "7.13.28"
-  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.28.tgz#a2f6b68d826a33f0e90d78e7b66850fb02dbff49"
-  integrity sha512-IDV1SzSRfQKa+wL3NmMsOaSgZ7AhbWyqOJE2qyDx4BqkAQ0SjtI+ktQvhP2Ap1zFZ0mkekUrkZ5r+Fs4Pl+RKQ==
+"@microsoft/api-documenter@7.13.30":
+  version "7.13.30"
+  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.30.tgz#f4832b8747ad9f61b3a0d87eb61b6b1aca2aeb60"
+  integrity sha512-n91XihJptwcHp1g5FUIcrjDXhg/g2q6+Rj+nuPBkvsCAKQP/OwCLNVO3tYNpz+qa+lWrHPWL3Urc8G3th5cn7w==
   dependencies:
     "@microsoft/api-extractor-model" "7.13.3"
     "@microsoft/tsdoc" "0.13.2"
@@ -1317,7 +1317,25 @@
     "@microsoft/tsdoc-config" "~0.15.2"
     "@rushstack/node-core-library" "3.39.0"
 
-"@microsoft/api-extractor@7.17.1", "@microsoft/api-extractor@^7.13.0":
+"@microsoft/api-extractor@7.18.1":
+  version "7.18.1"
+  resolved "https://registry.yarnpkg.com/@microsoft/api-extractor/-/api-extractor-7.18.1.tgz#61b39f972b646261dd49f2de9f5d448aa6497e7a"
+  integrity sha512-qljUF2Q0zAx1vJrjKkJVGN7OVbsXki+Pji99jywyl6L/FK3YZ7PpstUJYE6uBcLPy6rhNPWPAsHNTMpG/kHIsg==
+  dependencies:
+    "@microsoft/api-extractor-model" "7.13.3"
+    "@microsoft/tsdoc" "0.13.2"
+    "@microsoft/tsdoc-config" "~0.15.2"
+    "@rushstack/node-core-library" "3.39.0"
+    "@rushstack/rig-package" "0.2.12"
+    "@rushstack/ts-command-line" "4.8.0"
+    colors "~1.2.1"
+    lodash "~4.17.15"
+    resolve "~1.17.0"
+    semver "~7.3.0"
+    source-map "~0.6.1"
+    typescript "~4.3.2"
+
+"@microsoft/api-extractor@^7.13.0":
   version "7.17.1"
   resolved "https://registry.yarnpkg.com/@microsoft/api-extractor/-/api-extractor-7.17.1.tgz#df6b7aa7cadcb35e2483048ebe5dbaf7af932446"
   integrity sha512-NqdN627QoDdDtvfqEoX+Z6WbF2yid5URUZVYefC9KuisgwrsfvbSj5QwzOZlMYcufoafTq9jfeVyFAXr4PqGig==
@@ -1465,59 +1483,59 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@tarojs/api@3.2.14":
-  version "3.2.14"
-  resolved "https://registry.yarnpkg.com/@tarojs/api/-/api-3.2.14.tgz#e01bb5dc3810f8d4f9f491470757ba891dd7fa5f"
-  integrity sha512-ty/9LnehdKngV+zayRPKuKayQrov74meV5lApU5YRM0eS/YrqCN7S13poeXm8zBZTjk3aYflPUd4s6f2z8d/mw==
+"@tarojs/api@3.2.15":
+  version "3.2.15"
+  resolved "https://registry.yarnpkg.com/@tarojs/api/-/api-3.2.15.tgz#237fc039a4f32aa466d85ed235d94b3dfa4e4b36"
+  integrity sha512-StyZlGZecwgfIMYS+S0dVW4ZkJ28smUtOszT/QSK9Jt3OI535K6XPU1DODdc0oxIEQNHgM7CZ+dRPhUfwqCdwg==
   dependencies:
-    "@tarojs/runtime" "3.2.14"
+    "@tarojs/runtime" "3.2.15"
 
-"@tarojs/router@3.2.14":
-  version "3.2.14"
-  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-3.2.14.tgz#5e6f62518eeb5f45ab5921206fc58ef64deae690"
-  integrity sha512-zGhOe8CNktSQngNYpKaQA3XETJpmckSYUgBfeml1VU94U2z+J0Aa/aoszx6p2Fs2R8dUZCx4vExTaWhKX86xfg==
+"@tarojs/router@3.2.15":
+  version "3.2.15"
+  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-3.2.15.tgz#72afd4a50344f1c141c838bdabb223126f39b80f"
+  integrity sha512-TQSZE3V5jeXGxb5501sAQE9500H4QOX/LtuK6Js2ElkGTPSZR+IAS/oBYzQPf+pIpvqYbuC6sO2NAp8l2zpLUQ==
   dependencies:
-    "@tarojs/runtime" "3.2.14"
+    "@tarojs/runtime" "3.2.15"
     history "^4.10.1"
     query-string "^6.13.8"
     universal-router "^8.3.0"
     url-parse "^1.4.7"
 
-"@tarojs/runtime@3.2.14":
-  version "3.2.14"
-  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.2.14.tgz#85038a4820f1196d8f567555be2c32ff351adde9"
-  integrity sha512-1MrXsjte/xJ3nC+qlhnu4vuXwhNHKeGVHFasOjEL0dM3f1jHVIcDRF+rtDeNv8J0A5rda47aOZFEkdBUx2svkg==
+"@tarojs/runtime@3.2.15":
+  version "3.2.15"
+  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.2.15.tgz#0b42a71252426feb96fb8fd64cdbedcf33932e24"
+  integrity sha512-NGrE33vfiCSz8ldrsg25kF3rV5WrQdLam+N+XdSbZdPgZrxOaP/r2trhAzu0MBJ56peE9I3q9bQ+xPxEVfNQjA==
   dependencies:
-    "@tarojs/shared" "3.2.14"
+    "@tarojs/shared" "3.2.15"
     lodash-es "4.17.15"
 
-"@tarojs/shared@3.2.14":
-  version "3.2.14"
-  resolved "https://registry.yarnpkg.com/@tarojs/shared/-/shared-3.2.14.tgz#0a5195a3f5859dab43f773ec63dd80e25e555004"
-  integrity sha512-cOcCBberEaUKrQF8zYFjId0ULp/8Rs9X6ulSkCLbDS86o3IcAUFun3MEGw9XAlimaZsdzvVavIVPlSAvcafZMw==
+"@tarojs/shared@3.2.15":
+  version "3.2.15"
+  resolved "https://registry.yarnpkg.com/@tarojs/shared/-/shared-3.2.15.tgz#04fd70d30525c27a36e2ccfd698f2b3d64742d83"
+  integrity sha512-aTiylg6G1QJ8OoHbf9GYsSo3H9zCnDMroRLNIpvepm4bbazG/jnGxh6zxcCIrh781nbGugwRzb4D9MMSOwamEA==
 
-"@tarojs/taro-h5@3.2.14":
-  version "3.2.14"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-3.2.14.tgz#774dee0013fff85556b7dc40d5281419a3f12c9b"
-  integrity sha512-K75QDPqv0Skwfe7FDXfZn+sFBX41hTU2pLJu88cWGty3pLv46EL6xxeMnzx8eOpFC2ZHf5noNK7lu8TCkoQwaQ==
+"@tarojs/taro-h5@3.2.15":
+  version "3.2.15"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-3.2.15.tgz#b5343d5139394a6a609aa4acd7f79798fad29bae"
+  integrity sha512-BUCODqFNVjz/zG7PRw8tIu9REjAAQSt2BtbnkFwZ+s/L6ZwHRkPNl5YWcMhmLgRkzXjdQ5lzEUzV9rokROYymw==
   dependencies:
-    "@tarojs/api" "3.2.14"
-    "@tarojs/router" "3.2.14"
-    "@tarojs/runtime" "3.2.14"
+    "@tarojs/api" "3.2.15"
+    "@tarojs/router" "3.2.15"
+    "@tarojs/runtime" "3.2.15"
     base64-js "^1.3.0"
     jsonp-retry "^1.0.3"
     mobile-detect "^1.4.2"
     raf "^3.4.1"
     whatwg-fetch "^3.4.0"
 
-"@tarojs/taro@3.2.14":
-  version "3.2.14"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-3.2.14.tgz#1d3e0ba31559ae3cea6942e7de4aa0a15aedaac4"
-  integrity sha512-aMT1eeSTXjNgJ+e5SZckwZDlMKCsVGeI1LQ5c7orN2KOoekc6Zrby9tQhEpfSgzOEm5p8zReyUucQeT8NFPNFg==
+"@tarojs/taro@3.2.15":
+  version "3.2.15"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-3.2.15.tgz#c6072c46edd0e247fc956fa33194e838a056402a"
+  integrity sha512-V4sH/L8/UVta3AqACouoygHc+blobjTSuM0lLPAzBub+oyaa8QOC5HGjtLkGXQXHnyRSdafX3zNrTp++QN5Ehw==
   dependencies:
-    "@tarojs/api" "3.2.14"
-    "@tarojs/runtime" "3.2.14"
-    "@tarojs/taro-h5" "3.2.14"
+    "@tarojs/api" "3.2.15"
+    "@tarojs/runtime" "3.2.15"
+    "@tarojs/taro-h5" "3.2.15"
 
 "@testing-library/dom@^8.0.0":
   version "8.1.0"
@@ -1799,7 +1817,14 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.3.1.tgz#54dd88bdc7f49958329666af3779561e47d5dab3"
   integrity sha512-NVkb4p4YjI8E3O6+1m8I+8JlMpFZwfSbPGdaw0wXuyPRTEz0SLKwBUWNSO7Maoi8tQMPC8JLZNWkrcKPI7/sLA==
 
-"@types/prompts@2.0.13", "@types/prompts@^2.0.13":
+"@types/prompts@2.0.14":
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/@types/prompts/-/prompts-2.0.14.tgz#10cb8899844bb0771cabe57c1becaaaca9a3b521"
+  integrity sha512-HZBd99fKxRWpYCErtm2/yxUZv6/PBI9J7N4TNFffl5JbrYMHBwF25DjQGTW3b3jmXq+9P6/8fCIb2ee57BFfYA==
+  dependencies:
+    "@types/node" "*"
+
+"@types/prompts@^2.0.13":
   version "2.0.13"
   resolved "https://registry.yarnpkg.com/@types/prompts/-/prompts-2.0.13.tgz#007b0cb1731174ce7ea328e3cd4d84de9bb2e8ba"
   integrity sha512-jwMOIGy49VruR/gYehhJYgpVzB+EVpEE7t7j9m1oTo4HMpOe7KmsyqdBuoxAzA5B4caUgx0cKrWr7wUEqMXJ7Q==
@@ -1811,7 +1836,14 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
-"@types/react-dom@17.0.8", "@types/react-dom@>=16.9.0":
+"@types/react-dom@17.0.9":
+  version "17.0.9"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"
+  integrity sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-dom@>=16.9.0":
   version "17.0.8"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.8.tgz#3180de6d79bf53762001ad854e3ce49f36dd71fc"
   integrity sha512-0ohAiJAx1DAUEcY9UopnfwCE9sSMDGnY/oXjWMax6g3RpzmTt2GMyMVAXcbn0mo8XAff0SbQJl2/SBU+hjSZ1A==
@@ -1825,10 +1857,19 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@17.0.13", "@types/react@>=16.9.0":
+"@types/react@*", "@types/react@>=16.9.0":
   version "17.0.13"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.13.tgz#6b7c9a8f2868586ad87d941c02337c6888fb874f"
   integrity sha512-D/G3PiuqTfE3IMNjLn/DCp6umjVCSvtZTPdtAFy5+Ved6CsdRvivfKeCzw79W4AatShtU4nGqgvOv5Gro534vQ==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@17.0.14":
+  version "17.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.14.tgz#f0629761ca02945c4e8fea99b8177f4c5c61fb0f"
+  integrity sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -9202,10 +9243,10 @@ type-detect@4.0.8:
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
   integrity sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
 
-type-fest@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-1.2.1.tgz#232990aa513f3f5223abf54363975dfe3a121a2e"
-  integrity sha512-SbmIRuXhJs8KTneu77Ecylt9zuqL683tuiLYpTRil4H++eIhqCmx6ko6KAFem9dty8sOdnEiX7j4K1nRE628fQ==
+type-fest@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-1.2.2.tgz#1930bc36b2064f7ab4aa307a6d1b65965199c698"
+  integrity sha512-pfkPYCcuV0TJoo/jlsUeWNV8rk7uMU6ocnYNvca1Vu+pyKi8Rl8Zo2scPt9O72gCsXIm+dMxOOWuA3VFDSdzWA==
 
 type-fest@^0.13.1:
   version "0.13.1"
