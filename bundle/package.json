@@ -2,7 +2,8 @@
   "name": "vite-react-typescript-starter",
   "version": "0.0.0",
   "scripts": {
-    "start": "concurrently \"vite --host\" \"haoma run server.ts\""
+    "start": "concurrently \"vite --host\" \"haoma run server.ts\"",
+    "build": "vite build"
   },
   "dependencies": {
     "@emotion/css": "11.1.3",
