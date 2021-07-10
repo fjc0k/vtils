@@ -10,7 +10,9 @@ describe('yup', () => {
       yup
         .string()
         // @ts-expect-error
-        .validate(1),
+        .validate(1, {
+          strict: true,
+        }),
     ).rejects.toThrowError(/此项必须是一个字符串/)
   })
 
