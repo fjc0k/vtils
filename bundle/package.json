@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "concurrently \"vite --host\" \"npm:start\"",
     "build": "vite build",
-    "start": "haoma run server.ts"
+    "start": "cd .. && npx haoma run bundle/server.ts"
   },
   "dependencies": {
     "@emotion/css": "11.1.3",
