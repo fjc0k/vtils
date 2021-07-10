@@ -3,9 +3,9 @@ Thumbs.db
 node_modules
 *.tsbuildinfo
 *.log*
-/lib*
-/dist
-/coverage
-/docs
+lib*
+dist
+coverage
+docs
 CHANGELOG.md
 .*
