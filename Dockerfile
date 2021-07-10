@@ -7,8 +7,10 @@ COPY . .
 RUN yarn \
   && cd bundle \
   && yarn \
+  && yarn build \
+  && rm -rf node_modules \
   && yarn cache clean
 
-EXPOSE 3000
+EXPOSE 9099
 
 CMD cd bundle && yarn start

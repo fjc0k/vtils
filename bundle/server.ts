@@ -17,7 +17,7 @@ http
           .map(mo => `@${mo}`)
           .join(',')
         await exec(
-          'tpx',
+          'npx',
           [
             'haoma',
             'run',
@@ -32,14 +32,16 @@ http
             stdio: 'inherit',
           },
         )
-        const js = fs.readFileSync(
-          path.join(__dirname, '../dist/web-gen/web-gen.js'),
-          'utf-8',
-        )
-        const dts = fs.readFileSync(
-          path.join(__dirname, '../dist/web-gen/web-gen.d.ts'),
-          'utf-8',
-        )
+        const [js, dts] = await Promise.all([
+          fs.promises.readFile(
+            path.join(__dirname, '../dist/web-gen/web-gen.js'),
+            'utf-8',
+          ),
+          fs.promises.readFile(
+            path.join(__dirname, '../dist/web-gen/web-gen.d.ts'),
+            'utf-8',
+          ),
+        ])
         res.end(
           JSON.stringify({
             js,
@@ -47,8 +49,25 @@ http
           }),
         )
         return
+      } else if (url.pathname === '/') {
+        res.setHeader('content-type', 'text/html')
+        res.end(
+          await fs.promises.readFile(path.join(__dirname, './dist/index.html')),
+        )
+        return
+      } else if (url.pathname.includes('/assets/')) {
+        res.setHeader(
+          'content-type',
+          url.pathname.endsWith('.js') ? 'application/javascript' : 'text/css',
+        )
+        res.end(
+          await fs.promises.readFile(
+            path.join(__dirname, `./dist${url.pathname}`),
+          ),
+        )
+        return
       }
     }
-    res.end({ ok: true })
+    res.end(JSON.stringify({ ok: true }))
   })
   .listen(9099, '0.0.0.0')

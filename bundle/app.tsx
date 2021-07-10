@@ -38,7 +38,10 @@ export function App() {
       js: string
       dts: string
     } = await fetch(
-      `http://localhost:9099/?modules=${selectedModules.join(',')}`,
+      `${
+        // @ts-ignore
+        import.meta.env.DEV ? 'http://localhost:9099' : location.origin
+      }/?modules=${selectedModules.join(',')}`,
     ).then(res => res.json())
     setJs(js)
     setDts(dts)
