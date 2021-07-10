@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.34.1-beta.3](https://github.com/fjc0k/vtils/compare/v4.34.1-beta.2...v4.34.1-beta.3) (2021-07-10)
+
+### Features
+
+- **copyTextToClipboard:** 可设置复制容器类名 ([5231b8d](https://github.com/fjc0k/vtils/commit/5231b8dee1df42c9664d29c1a70d454af0ccf7c9))
+
 ### [4.34.1-beta.2](https://github.com/fjc0k/vtils/compare/v4.34.1-beta.1...v4.34.1-beta.2) (2021-07-10)
 
 ### Bug Fixes
