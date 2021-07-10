@@ -1,10 +1,21 @@
+export interface CopyTextToClipboardOptions {
+  /**
+   * 复制容器的类名。
+   */
+  containerClass?: string
+}
+
 /**
  * 复制文本到剪切板。
  *
  * @param text 要复制的文本
+ * @param options 选项
  * @returns 返回是否复制成功
  */
-export function copyTextToClipboard(text: string): boolean {
+export function copyTextToClipboard(
+  text: string,
+  options?: CopyTextToClipboardOptions,
+): boolean {
   // https://github.com/sindresorhus/copy-text-to-clipboard/blob/master/index.js
   const element = document.createElement('textarea')
 
@@ -18,6 +29,10 @@ export function copyTextToClipboard(text: string): boolean {
   element.style.position = 'absolute'
   element.style.left = '-9999px'
   element.style.fontSize = '12pt' // Prevent zooming on iOS
+
+  if (options?.containerClass) {
+    element.className = options.containerClass
+  }
 
   const selection = document.getSelection()!
   let originalRange: Range | undefined
