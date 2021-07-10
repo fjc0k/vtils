@@ -10,11 +10,6 @@
 export {
   // 手动导出以解决 cjs 下 Cannot redefine property 的问题
   // @index(['../../node_modules/react-use/esm/{use,create}*.js', '!**/{useToggle,createGlobalState,useTitle,useInterval,useSearchParam,useLocalStorage,useWindowSize,useHover,createRouter,useKeyboardJs,useMeasureDirty,useSpring,useWait}.js'], (f, _) => `${f.name},`)
-  createBreakpoint,
-  createMemo,
-  createReducer,
-  createReducerContext,
-  createStateContext,
   useAsync,
   useAsyncFn,
   useAsyncRetry,
@@ -72,7 +67,7 @@ export {
   useMouseHovered,
   useMouseWheel,
   useMultiStateValidator,
-  useNetwork,
+  useNetworkState,
   useNumber,
   useObservable,
   useOrientation,

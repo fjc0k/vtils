@@ -196,7 +196,7 @@ describe('TreeData', () => {
         [
           { id: 1 },
           { id: 2 },
-          { id: 3 },
+          { id: 3, pid: -1 },
           { id: 11, pid: 1 },
           { id: 4 },
           { id: 12, pid: 1 },

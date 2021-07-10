@@ -104,9 +104,8 @@ export class TreeData<TNode extends TreeDataNode> {
 
   private searchStrategy: TreeDataSearchStrategy = 'DFS'
 
-  private cloneIgnore:
-    | ((value: unknown) => boolean | undefined)
-    | undefined = undefined
+  private cloneIgnore: ((value: unknown) => boolean | undefined) | undefined =
+    undefined
 
   /**
    * 构造函数。
@@ -263,9 +262,8 @@ export class TreeData<TNode extends TreeDataNode> {
     let _node: TNode | undefined
     while ((_node = nodes.pop())) {
       if (Array.isArray(_node[this.childrenPropName])) {
-        const fns: Array<TreeDataTraverseFn<TNode>> = (Array.isArray(fn)
-          ? fn
-          : [fn]
+        const fns: Array<TreeDataTraverseFn<TNode>> = (
+          Array.isArray(fn) ? fn : [fn]
         ).filter(fn => typeof fn === 'function') as any
         for (let i = 0; i < fns.length; i++) {
           TreeData.traverse<TNode>(
@@ -370,7 +368,7 @@ export class TreeData<TNode extends TreeDataNode> {
       [K in keyof TNode]?: (payload: TreeDataTraverseFnPayload<TNode>) => any
     } & {
       [K: string]: (payload: TreeDataTraverseFnPayload<TNode>) => any
-    }
+    },
   >(
     props: TProps,
   ): TreeData<
@@ -623,16 +621,25 @@ export class TreeData<TNode extends TreeDataNode> {
       list,
       cloneIgnore,
     ) as any
+    const IS_CHILD_KEY = '__tree_data_is_child__'
     const data = _list
       .map(item => {
-        item.children = _list.filter(
-          item2 =>
+        item.children = _list.filter(item2 => {
+          if (item2[IS_CHILD_KEY] === true) return false
+          const isChild =
             (item2 as any)[parentIdKey] != null &&
-            (item as any)[idKey] === (item2 as any)[parentIdKey],
-        ) as any
+            (item as any)[idKey] === (item2 as any)[parentIdKey]
+          if (isChild) {
+            Object.defineProperty(item2, IS_CHILD_KEY, {
+              value: true,
+              enumerable: false,
+            })
+          }
+          return isChild
+        }) as any
         return item
       })
-      .filter(item => (item as any)[parentIdKey] == null)
+      .filter(item => !item[IS_CHILD_KEY])
     return new TreeData(data)
   }
 }
