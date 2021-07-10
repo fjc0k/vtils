@@ -23,6 +23,7 @@ console.log(md5('龙'))
   - [在 NodeJS 中使用](#在-nodejs-中使用)
   - [在 Taro 3 中使用](#在-taro-3-中使用)
   - [在 Deno 中使用](#在-deno-中使用)
+  - [自定义打包](#自定义打包)
 - [许可](#许可)
 
 <!-- /TOC -->
@@ -130,6 +131,14 @@ import {
   EventBus,
   base64Encode,
 } from 'https://cdn.skypack.dev/vtils@4.34.0'
+```
+
+### 自定义打包
+
+你可在本地或 [https://labs.play-with-docker.com/](https://labs.play-with-docker.com/) 上运行下面的命令，然后打开 `http://localhost:9099`，接着选择你需要的工具，最后点击开始打包，等待请求执行完成后即可获取仅包含选中工具的 js 代码以及对应的类型定义。
+
+```bash
+docker run --rm -p 9099:9099 jayfong/vtils
 ```
 
 ## 许可
