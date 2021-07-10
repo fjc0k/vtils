@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function copyTextToClipboard(text: string): boolean;
+export declare function copyTextToClipboard(text: string, options?: CopyTextToClipboardOptions): boolean;
 ```
 
 ## Parameters
@@ -17,6 +17,7 @@ export declare function copyTextToClipboard(text: string): boolean;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  text | string | 要复制的文本 |
+|  options | [CopyTextToClipboardOptions](./utils.copytexttoclipboardoptions.md) | 选项 |
 
 <b>Returns:</b>
 
