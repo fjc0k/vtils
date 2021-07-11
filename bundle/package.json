@@ -19,7 +19,6 @@
     "concurrently": "6.2.0",
     "execa": "5.1.1",
     "exit-hook": "2.2.1",
-    "haoma": "3.4.1",
     "vite": "2.4.1"
   }
 }

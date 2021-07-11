@@ -4754,10 +4754,10 @@ handlebars@^4.7.6:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-haoma@3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/haoma/-/haoma-3.4.1.tgz#dad0bcb3dd2602564eddfd223c53acaae9d19265"
-  integrity sha512-9eGdYV/0N4lt5x94K9GvmR4cjIY+jtE/Ojru5WEU1mpgqjoBQ7i1/7+ns9gjJwhT+5o1asVE3Zg1Zoog3A70Eg==
+haoma@3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/haoma/-/haoma-3.4.2.tgz#8b41c2c19ec11b23e305b2f0df6ee23010f553ad"
+  integrity sha512-V3b9K223v2WM04k7VV2kd8Ml5iEIQnhp6IIBt7X2Wu29ejv+xSAO+FJGw9sH0Jgw8vD1dvQKeudAFxHhM6x94Q==
   dependencies:
     "@babel/core" "^7.12.13"
     "@babel/eslint-parser" "^7.12.13"
