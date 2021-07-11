@@ -1,11 +1,10 @@
 import exec from 'execa'
 import fs from 'fs'
 import http from 'http'
-import onExit from 'exit-hook'
 import path from 'path'
 import { URL } from 'url'
 
-const server = http
+http
   .createServer(async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Content-Type', 'application/json')
@@ -72,5 +71,3 @@ const server = http
     res.end(JSON.stringify({ ok: true }))
   })
   .listen(9099, '0.0.0.0')
-
-onExit(() => server.close())
