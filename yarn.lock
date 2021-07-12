@@ -956,7 +956,7 @@
     core-js-pure "^3.15.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.12.18", "@babel/runtime@^7.12.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.18", "@babel/runtime@^7.12.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.14.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.6.tgz#535203bc0892efc7dec60bdc27b2ecf6e409062d"
   integrity sha512-/PCB2uJ7oM44tz8YhC4Z/6PeOKXp4K588f+5M3clr1M4zbqztlo0XEfJ2LEzj/FgwfgGcIdl8n7YYjTCI0BYwg==
@@ -1483,59 +1483,62 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@tarojs/api@3.2.16":
-  version "3.2.16"
-  resolved "https://registry.yarnpkg.com/@tarojs/api/-/api-3.2.16.tgz#477718e3fe7246b0bf60898130de390f4f60b889"
-  integrity sha512-9dfiKO/WisnpHjT2Ybs/mfddKPmi2jjcRXdl3cfje0hWccJP6ka7nII/hZCy11Ww6O6hXIvEsv2DyR08xDp0Wg==
+"@tarojs/api@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@tarojs/api/-/api-3.3.0.tgz#874cf66d8dd664d097062cc84ceffdb231458971"
+  integrity sha512-Y7TX9IRaWExEarUOC7RrnlPsVPDKqHt2a0g8ylLLwS4uLwW3pblDI55V7jGCQqnbxq7h8mrcc2MsT/KQu+TV4g==
   dependencies:
-    "@tarojs/runtime" "3.2.16"
+    "@babel/runtime" "^7.11.2"
+    "@tarojs/runtime" "3.3.0"
 
-"@tarojs/router@3.2.16":
-  version "3.2.16"
-  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-3.2.16.tgz#a4dee0df21af72b8db07ca18bd5f0945a1d8843e"
-  integrity sha512-z5v/9SQwOLB4cUSVL+D7AHAfiRc9q2QR1FcRNG3u2iGPN6n6NhSRhFKLc5w2aUdpxYJh5HYC9pgUuqWVpkb32Q==
+"@tarojs/router@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-3.3.0.tgz#c7a6446e1b298e78ac029952fca7d21598d340b2"
+  integrity sha512-nB//BhAS2PwFbdTEyVCNjIPmv4yv2DkjwO3rb9b/s/nJjQvlDF9UFyWZVfdU3ag3/SjRcZ9WwGcvSS5/y/2s+Q==
   dependencies:
-    "@tarojs/runtime" "3.2.16"
+    "@tarojs/runtime" "3.3.0"
     history "^4.10.1"
     query-string "^6.13.8"
     universal-router "^8.3.0"
     url-parse "^1.4.7"
 
-"@tarojs/runtime@3.2.16":
-  version "3.2.16"
-  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.2.16.tgz#36a824408d3566b8014c721c98f48ca9ea372021"
-  integrity sha512-+QYl90XQEqLpF3gMBtMpjJe8xp6yQqQAzGHtrCr/l6dfSjK+WZ/dLIi86pO/bwfx8eaVdcIOhZWAqo62MZezHg==
+"@tarojs/runtime@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.3.0.tgz#78bc5216c7e525f876e16186f76763eb9d537850"
+  integrity sha512-rw0S8XttSukSODA7RTjQoEcdXN29VPirBhMpDI7LtoItZSbTIRdACpiytvhbQRjlhENTtq7PlN7D6iCTKJmANA==
   dependencies:
-    "@tarojs/shared" "3.2.16"
+    "@tarojs/shared" "3.3.0"
+    inversify "5.1.1"
     lodash-es "4.17.15"
+    reflect-metadata "^0.1.13"
 
-"@tarojs/shared@3.2.16":
-  version "3.2.16"
-  resolved "https://registry.yarnpkg.com/@tarojs/shared/-/shared-3.2.16.tgz#37e16e869f8e59c1ba050b60d78da801a601fd0f"
-  integrity sha512-CROA53/4zGdgf+X2qrxP4Txb7QPdmuVa83x/ZN0wdmdbXRagLfqkqKLrip+WSFe4mF7LL8XJihN9gfvL8IFCGg==
+"@tarojs/shared@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@tarojs/shared/-/shared-3.3.0.tgz#eda93a9fda27823f92068d49fe31cd0de9201706"
+  integrity sha512-c9z/LxivV+3GzrTXfhY9mXkNr4NJrrzF47C5jr34JwfbjgIt5WViSaEsaihEZ7pwaVtiyfPAtd0P4dP3nY2X2Q==
 
-"@tarojs/taro-h5@3.2.16":
-  version "3.2.16"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-3.2.16.tgz#9a6e735cac5a1949b7d617d9ccf980f5f06454c1"
-  integrity sha512-QzQo8Cu3WHFzQNUZQZdN0okzChL0FC0Zj9I6uNsrxH2+ID9CMaQWr4dmU4J59Jx+inzkhYBxwH6AXFkfLam6Eg==
+"@tarojs/taro-h5@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-3.3.0.tgz#1447391c296f2d41f469ebd3a3d5d0bc5b555ca6"
+  integrity sha512-sfrzTCTB59Jj6Na04Sax9ro3xcBoz/2H5aRbwhFhzPwTPV+I1XbLcUq2ass7r2WkqD3FvmRIjUf1K01s25ro/A==
   dependencies:
-    "@tarojs/api" "3.2.16"
-    "@tarojs/router" "3.2.16"
-    "@tarojs/runtime" "3.2.16"
+    "@tarojs/api" "3.3.0"
+    "@tarojs/router" "3.3.0"
+    "@tarojs/runtime" "3.3.0"
     base64-js "^1.3.0"
     jsonp-retry "^1.0.3"
     mobile-detect "^1.4.2"
     raf "^3.4.1"
     whatwg-fetch "^3.4.0"
 
-"@tarojs/taro@3.2.16":
-  version "3.2.16"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-3.2.16.tgz#5be5ef8e4bc0fb601fbad433902aa8bab525eed2"
-  integrity sha512-OLYNr8RfiEmW3/yx5eDkMK+7K9CBrPbG4UxaajAvrq+90+od6vX4UWtyqkaot1sNDfU9XCG8+raifulsk6L8wA==
+"@tarojs/taro@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-3.3.0.tgz#ff593ee5ed454f3eba03a4b61a8173d59e7d14e4"
+  integrity sha512-dTl6sC4z9Lkz9EtIHVWfISd32y7eimiDdSj1Fxk95VrwhjKwCLkVWtiKHYSdwPBUDqyid15CHuqdE4VDLDVzVg==
   dependencies:
-    "@tarojs/api" "3.2.16"
-    "@tarojs/runtime" "3.2.16"
-    "@tarojs/taro-h5" "3.2.16"
+    "@tarojs/api" "3.3.0"
+    "@tarojs/runtime" "3.3.0"
+    "@tarojs/taro-h5" "3.3.0"
 
 "@testing-library/dom@^8.0.0":
   version "8.1.0"
@@ -5145,6 +5148,11 @@ interpret@^1.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
   integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
+inversify@5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/inversify/-/inversify-5.1.1.tgz#6fbd668c591337404e005a1946bfe0d802c08730"
+  integrity sha512-j8grHGDzv1v+8T1sAQ+3boTCntFPfvxLCkNcxB1J8qA0lUN+fAlSyYd+RXKvaPRL4AGyPxViutBEJHNXOyUdFQ==
+
 ioredis-mock@5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/ioredis-mock/-/ioredis-mock-5.6.0.tgz#f60f9fbc3a53b50f567be9369e2b211ed52c0653"
@@ -7958,6 +7966,11 @@ redis-parser@^3.0.0:
   integrity sha1-tm2CjNyv5rS4pCin3vTGvKwxyLQ=
   dependencies:
     redis-errors "^1.0.0"
+
+reflect-metadata@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
 regenerate-unicode-properties@^8.2.0:
   version "8.2.0"
