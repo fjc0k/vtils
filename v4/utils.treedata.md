@@ -31,7 +31,7 @@ export declare class TreeData<TNode extends TreeDataNode>
 |  [findNodeAll(predicate)](./utils.treedata.findnodeall.md) |  | 查找符合条件的所有节点。 |
 |  [findNodePath(predicate)](./utils.treedata.findnodepath.md) |  | 查找符合条件的第一个节点的路径。 |
 |  [findNodePathAll(predicate)](./utils.treedata.findnodepathall.md) |  | 查找符合条件的所有节点的路径。 |
-|  [fromList(list, idKey, parentIdKey, cloneIgnore)](./utils.treedata.fromlist.md) | <code>static</code> | 从一维列表生成实例。 |
+|  [fromList(list, idKey, parentIdKey)](./utils.treedata.fromlist.md) | <code>static</code> | 从一维列表生成实例。 |
 |  [omitNodeProps(propNames)](./utils.treedata.omitnodeprops.md) |  | 移除节点上指定的属性。 |
 |  [pickNodeProps(propNames)](./utils.treedata.picknodeprops.md) |  | 选取节点上指定的属性。 |
 |  [removeNode(predicate)](./utils.treedata.removenode.md) |  | 移除符合条件的第一个节点。返回被移除的节点。 |
