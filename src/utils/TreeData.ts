@@ -615,31 +615,22 @@ export class TreeData<TNode extends TreeDataNode> {
     list: TItem[],
     idKey: keyof TItem,
     parentIdKey: keyof TItem,
-    cloneIgnore?: TreeDataOptions<TItem>['cloneIgnore'],
   ): TreeData<TreeDataStandardNode<TItem>> {
-    const _list: Array<TreeDataStandardNode<TItem>> = cloneDeepFast(
-      list,
-      cloneIgnore,
-    ) as any
-    const IS_CHILD_KEY = '__tree_data_is_child__'
-    const data = _list
-      .map(item => {
-        item.children = _list.filter(item2 => {
-          if (item2[IS_CHILD_KEY] === true) return false
-          const isChild =
-            (item2 as any)[parentIdKey] != null &&
-            (item as any)[idKey] === (item2 as any)[parentIdKey]
-          if (isChild) {
-            Object.defineProperty(item2, IS_CHILD_KEY, {
-              value: true,
-              enumerable: false,
-            })
-          }
-          return isChild
-        }) as any
-        return item
-      })
-      .filter(item => !item[IS_CHILD_KEY])
-    return new TreeData(data)
+    const itemMap: Record<any, TItem> = {}
+    for (let i = 0; i < list.length; i++) {
+      const item = list[i] as any
+      item.children = []
+      itemMap[item[idKey]] = item
+    }
+    const tree: TItem[] = []
+    for (let i = 0; i < list.length; i++) {
+      const item = list[i] as any
+      if (itemMap[item[parentIdKey]] !== undefined) {
+        itemMap[item[parentIdKey]].children.push(item)
+      } else {
+        tree.push(item)
+      }
+    }
+    return new TreeData(tree as any)
   }
 }
