@@ -25,21 +25,21 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>149/149</span>
+                <span class='fraction'>150/150</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.03% </span>
+                <span class="strong">93.65% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>63/67</span>
+                <span class='fraction'>59/63</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>47/47</span>
+                <span class='fraction'>44/44</span>
             </div>
         
             
@@ -693,16 +693,7 @@
 <a name='L634'></a><a href='#L634'>634</a>
 <a name='L635'></a><a href='#L635'>635</a>
 <a name='L636'></a><a href='#L636'>636</a>
-<a name='L637'></a><a href='#L637'>637</a>
-<a name='L638'></a><a href='#L638'>638</a>
-<a name='L639'></a><a href='#L639'>639</a>
-<a name='L640'></a><a href='#L640'>640</a>
-<a name='L641'></a><a href='#L641'>641</a>
-<a name='L642'></a><a href='#L642'>642</a>
-<a name='L643'></a><a href='#L643'>643</a>
-<a name='L644'></a><a href='#L644'>644</a>
-<a name='L645'></a><a href='#L645'>645</a>
-<a name='L646'></a><a href='#L646'>646</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L637'></a><a href='#L637'>637</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1320,30 +1311,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">64x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">43x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">43x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">43x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1964,32 +1946,23 @@ export class TreeData&lt;TNode extends TreeDataNode&gt; {
     list: TItem[],
     idKey: keyof TItem,
     parentIdKey: keyof TItem,
-    cloneIgnore?: TreeDataOptions&lt;TItem&gt;['cloneIgnore'],
   ): TreeData&lt;TreeDataStandardNode&lt;TItem&gt;&gt; {
-    const _list: Array&lt;TreeDataStandardNode&lt;TItem&gt;&gt; = cloneDeepFast(
-      list,
-      cloneIgnore,
-    ) as any
-    const IS_CHILD_KEY = '__tree_data_is_child__'
-    const data = _list
-      .map(item =&gt; {
-        item.children = _list.filter(item2 =&gt; {
-          if (item2[IS_CHILD_KEY] === true) return false
-          const isChild =
-            (item2 as any)[parentIdKey] != null &amp;&amp;
-            (item as any)[idKey] === (item2 as any)[parentIdKey]
-          if (isChild) {
-            Object.defineProperty(item2, IS_CHILD_KEY, {
-              value: true,
-              enumerable: false,
-            })
-          }
-          return isChild
-        }) as any
-        return item
-      })
-      .filter(item =&gt; !item[IS_CHILD_KEY])
-    return new TreeData(data)
+    const itemMap: Record&lt;any, TItem&gt; = {}
+    for (let i = 0; i &lt; list.length; i++) {
+      const item = list[i] as any
+      item.children = []
+      itemMap[item[idKey]] = item
+    }
+    const tree: TItem[] = []
+    for (let i = 0; i &lt; list.length; i++) {
+      const item = list[i] as any
+      if (itemMap[item[parentIdKey]] !== undefined) {
+        itemMap[item[parentIdKey]].children.push(item)
+      } else {
+        tree.push(item)
+      }
+    }
+    return new TreeData(tree as any)
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -1999,7 +1972,7 @@ export class TreeData&lt;TNode extends TreeDataNode&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Jul 11 2021 02:30:55 GMT+0000 (Coordinated Universal Time)
+                at Tue Jul 13 2021 08:53:04 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
