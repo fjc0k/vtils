@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.34.1](https://github.com/fjc0k/vtils/compare/v4.34.1-beta.6...v4.34.1) (2021-07-13)
+
+### Bug Fixes
+
+- **deps:** update dependency antd to v4.16.7 ([4b9e184](https://github.com/fjc0k/vtils/commit/4b9e1842ad8d880bee8dfb58810f7e9a8ecb0a76))
+- **TreeData:** fromList 算法优化 ([d911d74](https://github.com/fjc0k/vtils/commit/d911d747a02fdd46a556da5dd4f1949424346c3e))
+
 ### [4.34.1-beta.6](https://github.com/fjc0k/vtils/compare/v4.34.1-beta.5...v4.34.1-beta.6) (2021-07-11)
 
 ### [4.34.1-beta.5](https://github.com/fjc0k/vtils/compare/v4.34.1-beta.4...v4.34.1-beta.5) (2021-07-10)
