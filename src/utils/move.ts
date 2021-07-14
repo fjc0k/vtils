@@ -11,6 +11,7 @@
  * ```
  */
 export function move<T>(arr: T[], from: number, to: number): T[] {
+  if (arr.length === 0 || from >= arr.length || from === to) return arr
   const item = arr.splice(from, 1)[0]
   arr.splice(to, 0, item)
   return arr
