@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.34.2](https://github.com/fjc0k/vtils/compare/v4.34.1...v4.34.2) (2021-07-14)
+
+### Bug Fixes
+
+- **move:** 对空数组移动应返回空数组 ([f93f090](https://github.com/fjc0k/vtils/commit/f93f0902b44566a0eafe3f08915e3f63472f6dbe))
+
 ### [4.34.1](https://github.com/fjc0k/vtils/compare/v4.34.1-beta.6...v4.34.1) (2021-07-13)
 
 ### Bug Fixes
