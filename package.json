@@ -164,7 +164,7 @@
     "type-fest": "1.2.2",
     "typescript": "4.3.5",
     "typescript-snapshots-plugin": "1.7.0",
-    "vscode-generate-index-standalone": "1.4.1",
+    "vscode-generate-index-standalone": "1.4.0",
     "yargs": "17.0.1"
   },
   "publishConfig": {
