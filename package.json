@@ -138,7 +138,7 @@
     "@types/react-dom": "17.0.9",
     "@types/standard-version": "7.0.1",
     "@types/uuid": "8.3.1",
-    "codecov": "3.8.2",
+    "codecov": "3.8.3",
     "cross-env": "7.0.3",
     "eslint": "7.31.0",
     "execa": "5.1.1",
