@@ -9355,10 +9355,10 @@ value-equal@^1.0.1:
   resolved "https://registry.yarnpkg.com/value-equal/-/value-equal-1.0.1.tgz#1e0b794c734c5c0cade179c437d356d931a34d6c"
   integrity sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==
 
-vscode-generate-index-standalone@1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/vscode-generate-index-standalone/-/vscode-generate-index-standalone-1.4.2.tgz#3c87eb31a084d0a2a3dbb0aad2ac344f1c24d9d1"
-  integrity sha512-mf0P0zmf4aHyo8hAxVUdDTZly/rzCaFw/SXhrAt1XzkwofLDlI6NX7EYqEXuRqIFxIQIaaNr/aBNhlhqZVZQfw==
+vscode-generate-index-standalone@1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/vscode-generate-index-standalone/-/vscode-generate-index-standalone-1.5.1.tgz#c804ad48ee108c4d1249bb27bad9e4fc1abd75fb"
+  integrity sha512-XYn55C3Gj0ZnkqxW0GjIaryh4vZOwzmL0MDNZSFZpznpFUMsoWBlZO10ievMeW+m1cNviHQ1YXE3m6IHHw5B0Q==
   optionalDependencies:
     fsevents "~2.3.2"
 
