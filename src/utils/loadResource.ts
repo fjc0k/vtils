@@ -44,6 +44,7 @@ function loadSpecificResource(
       case LoadResourceUrlType.js:
         el = document.createElement('script')
         el.src = url.path
+        el.async = true
         break
       case LoadResourceUrlType.css:
         el = document.createElement('link')
