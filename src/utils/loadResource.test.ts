@@ -126,17 +126,56 @@ describe('loadResource', () => {
     expect(document.documentElement.outerHTML).not.toInclude(src)
   })
 
-  test('支持 hook', async () => {
+  test('支持全局 hook', async () => {
+    const src = 'http://foo.bar/this-is-an-image.js'
+    await loadResource(
+      {
+        type: LoadResourceUrlType.js,
+        path: src,
+      },
+      {
+        hook: el => {
+          el.dataset.hooked = '1111'
+        },
+      },
+    )
+    expect(
+      document.documentElement.querySelector(`[data-hooked="1111"]`)!.tagName,
+    ).toBe('SCRIPT')
+  })
+
+  test('支持局部 hook', async () => {
     const src = 'http://foo.bar/this-is-an-image.js'
     await loadResource({
       type: LoadResourceUrlType.js,
       path: src,
       hook: el => {
-        el.dataset.hooked = '1'
+        el.dataset.hooked = '2222'
       },
     })
     expect(
-      document.documentElement.querySelector(`[data-hooked="1"]`)!.tagName,
+      document.documentElement.querySelector(`[data-hooked="2222"]`)!.tagName,
     ).toBe('SCRIPT')
+  })
+
+  test('可加载 js 代码文本', async () => {
+    const code = 'window.__x__ = 1'
+    const [el] = await loadResource({
+      type: LoadResourceUrlType.jsText,
+      path: code,
+    })
+    expect(el.tagName).toBe('SCRIPT')
+    expect(el.textContent).toBe(code)
+    expect((window as any).__x__).toBe(1)
+  })
+
+  test('可加载 css 样式文本', async () => {
+    const code = 'body { font-size: 20px; }'
+    const [el] = await loadResource({
+      type: LoadResourceUrlType.cssText,
+      path: code,
+    })
+    expect(el.tagName).toBe('STYLE')
+    expect(el.textContent).toBe(code)
   })
 })

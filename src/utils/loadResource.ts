@@ -1,4 +1,8 @@
-import { castArray } from 'lodash-uni'
+export type LoadResourceElement =
+  | HTMLScriptElement
+  | HTMLLinkElement
+  | HTMLStyleElement
+  | HTMLImageElement
 
 /**
  * 资源类型。
@@ -9,12 +13,20 @@ export enum LoadResourceUrlType {
   /** 样式资源 */
   css = 'css',
 
+  /** 样式文本 */
+  cssText = 'cssText',
+
   /** 代码资源 */
   js = 'js',
+
+  /** 代码文本 */
+  jsText = 'jsText',
 
   /** 图片资源 */
   img = 'img',
 }
+
+export type LoadResourceHook = (el: LoadResourceElement) => any
 
 /**
  * 资源地址。
@@ -32,28 +44,58 @@ export interface LoadResourceUrl {
   alternatePath?: string
 
   /** 钩子 */
-  hook?: (el: HTMLScriptElement | HTMLLinkElement | HTMLImageElement) => any
+  hook?: LoadResourceHook
+}
+
+export interface LoadResourceOptions {
+  /** 钩子 */
+  hook?: LoadResourceHook
 }
 
 function loadSpecificResource(
   url: LoadResourceUrl,
-): Promise<HTMLScriptElement | HTMLLinkElement | HTMLImageElement> {
+): Promise<LoadResourceElement> {
   return new Promise((resolve, reject) => {
-    let el!: HTMLScriptElement | HTMLLinkElement | HTMLImageElement
+    let el!: LoadResourceElement
     switch (url.type) {
       case LoadResourceUrlType.js:
-        el = document.createElement('script')
-        el.src = url.path
-        el.async = true
+        {
+          const _el = document.createElement('script')
+          _el.src = url.path
+          _el.async = true
+          el = _el
+        }
+        break
+      case LoadResourceUrlType.jsText:
+        {
+          const _el = document.createElement('script')
+          _el.setAttribute('type', 'text/javascript')
+          _el.textContent = url.path
+          el = _el
+        }
         break
       case LoadResourceUrlType.css:
-        el = document.createElement('link')
-        el.rel = 'stylesheet'
-        el.href = url.path
+        {
+          const _el = document.createElement('link')
+          _el.rel = 'stylesheet'
+          _el.href = url.path
+          el = _el
+        }
+        break
+      case LoadResourceUrlType.cssText:
+        {
+          const _el = document.createElement('style')
+          _el.setAttribute('type', 'text/css')
+          _el.textContent = url.path
+          el = _el
+        }
         break
       case LoadResourceUrlType.img:
-        el = document.createElement('img')
-        el.src = url.path
+        {
+          const _el = document.createElement('img')
+          _el.src = url.path
+          el = _el
+        }
         break
       /* istanbul ignore next */
       default:
@@ -84,6 +126,7 @@ function loadSpecificResource(
  *
  * @public
  * @param url 要加载的资源地址
+ * @param options 选项
  * @returns 返回各资源的 HTML 元素组成的数组
  * @example
  * ```typescript
@@ -103,8 +146,9 @@ function loadSpecificResource(
  */
 export function loadResource(
   url: string | LoadResourceUrl | Array<string | LoadResourceUrl>,
-): Promise<Array<HTMLScriptElement | HTMLLinkElement | HTMLImageElement>> {
-  const urls = castArray(url).map<LoadResourceUrl>(item => {
+  options?: LoadResourceOptions,
+): Promise<Array<LoadResourceElement>> {
+  const urls = (Array.isArray(url) ? url : [url]).map<LoadResourceUrl>(item => {
     return !(typeof item === 'string')
       ? item
       : {
@@ -116,5 +160,15 @@ export function loadResource(
           path: item,
         }
   })
-  return Promise.all(urls.map(url => loadSpecificResource(url)))
+  return Promise.all(
+    urls.map(url =>
+      loadSpecificResource({
+        ...url,
+        hook: el => {
+          options?.hook?.(el)
+          url.hook?.(el)
+        },
+      }),
+    ),
+  )
 }
