@@ -1,6 +1,6 @@
 import { loadResource, LoadResourceUrlType } from './loadResource'
 
-describe(loadResource.name, () => {
+describe('loadResource', () => {
   const createElement = document.createElement.bind(document)
   beforeAll(() => {
     jest.spyOn(document, 'createElement').mockImplementation((tag: string) => {
@@ -120,9 +120,23 @@ describe(loadResource.name, () => {
     expect(document.documentElement.outerHTML).toInclude(src)
   })
 
-  test('样式资源不插入 DOM', async () => {
+  test('图片资源不插入 DOM', async () => {
     const src = 'http://foo.bar/this-is-an-image.jpg'
     await loadResource(src)
     expect(document.documentElement.outerHTML).not.toInclude(src)
+  })
+
+  test('支持 hook', async () => {
+    const src = 'http://foo.bar/this-is-an-image.js'
+    await loadResource({
+      type: LoadResourceUrlType.js,
+      path: src,
+      hook: el => {
+        el.dataset.hooked = '1'
+      },
+    })
+    expect(
+      document.documentElement.querySelector(`[data-hooked="1"]`)!.tagName,
+    ).toBe('SCRIPT')
   })
 })

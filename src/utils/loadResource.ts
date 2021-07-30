@@ -30,6 +30,9 @@ export interface LoadResourceUrl {
 
   /** 备用资源路径 */
   alternatePath?: string
+
+  /** 钩子 */
+  hook?: (el: HTMLScriptElement | HTMLLinkElement | HTMLImageElement) => any
 }
 
 function loadSpecificResource(
@@ -54,6 +57,9 @@ function loadSpecificResource(
       /* istanbul ignore next */
       default:
         break
+    }
+    if (url.hook) {
+      url.hook(el)
     }
     el.onload = () => resolve(el)
     el.onerror = () => {
