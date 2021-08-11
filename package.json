@@ -122,7 +122,7 @@
     "yup": "~0.31.1"
   },
   "devDependencies": {
-    "@microsoft/api-documenter": "7.13.34",
+    "@microsoft/api-documenter": "7.13.35",
     "@microsoft/api-extractor": "7.18.4",
     "@rollup/plugin-babel": "5.3.0",
     "@rollup/plugin-commonjs": "20.0.0",
