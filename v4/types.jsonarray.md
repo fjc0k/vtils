@@ -2,7 +2,7 @@
 
 [Home](./index.md) &gt; [types](./types.md) &gt; [JsonArray](./types.jsonarray.md)
 
-## JsonArray interface
+## JsonArray type
 
 Matches a JSON array.
 
@@ -11,7 +11,7 @@ Matches a JSON array.
 <b>Signature:</b>
 
 ```typescript
-export declare interface JsonArray extends Array<JsonValue> 
+export declare type JsonArray = JsonValue[];
 ```
-<b>Extends:</b> Array&lt;[JsonValue](./types.jsonvalue.md)<!-- -->&gt;
+<b>References:</b> [JsonValue](./types.jsonvalue.md)
 

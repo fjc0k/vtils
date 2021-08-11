@@ -8,10 +8,10 @@
 
 ```typescript
 export declare type Tail<T extends AnyArray> = T["length"] extends 0
-  ? never
-  : ((...t: T) => void) extends (first: any, ...rest: infer Rest) => void
-  ? Rest
-  : never;
+? never
+: ((...t: T) => void) extends (first: any, ...rest: infer Rest) => void
+? Rest
+: never;
 ```
 <b>References:</b> [AnyArray](./types.anyarray.md)
 

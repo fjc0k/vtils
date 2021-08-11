@@ -8,25 +8,27 @@
 
 ```typescript
 export type Target =
-			| 'ES3'
-			| 'ES5'
-			| 'ES6'
-			| 'ES2015'
-			| 'ES2016'
-			| 'ES2017'
-			| 'ES2018'
-			| 'ES2019'
-			| 'ES2020'
-			| 'ESNext'
-			// Lowercase alternatives
-			| 'es3'
-			| 'es5'
-			| 'es6'
-			| 'es2015'
-			| 'es2016'
-			| 'es2017'
-			| 'es2018'
-			| 'es2019'
-			| 'es2020'
-			| 'esnext';
+        			| 'ES3'
+        			| 'ES5'
+        			| 'ES6'
+        			| 'ES2015'
+        			| 'ES2016'
+        			| 'ES2017'
+        			| 'ES2018'
+        			| 'ES2019'
+        			| 'ES2020'
+        			| 'ES2021'
+        			| 'ESNext'
+        			// Lowercase alternatives
+        			| 'es3'
+        			| 'es5'
+        			| 'es6'
+        			| 'es2015'
+        			| 'es2016'
+        			| 'es2017'
+        			| 'es2018'
+        			| 'es2019'
+        			| 'es2020'
+        			| 'es2021'
+        			| 'esnext';
 ```

@@ -8,21 +8,23 @@
 
 ```typescript
 export type Module =
-			| 'CommonJS'
-			| 'AMD'
-			| 'System'
-			| 'UMD'
-			| 'ES6'
-			| 'ES2015'
-			| 'ESNext'
-			| 'None'
-			// Lowercase alternatives
-			| 'commonjs'
-			| 'amd'
-			| 'system'
-			| 'umd'
-			| 'es6'
-			| 'es2015'
-			| 'esnext'
-			| 'none';
+        			| 'CommonJS'
+        			| 'AMD'
+        			| 'System'
+        			| 'UMD'
+        			| 'ES6'
+        			| 'ES2015'
+        			| 'ES2020'
+        			| 'ESNext'
+        			| 'None'
+        			// Lowercase alternatives
+        			| 'commonjs'
+        			| 'amd'
+        			| 'system'
+        			| 'umd'
+        			| 'es6'
+        			| 'es2015'
+        			| 'es2020'
+        			| 'esnext'
+        			| 'none';
 ```

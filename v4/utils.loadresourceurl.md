@@ -17,6 +17,7 @@ export declare interface LoadResourceUrl
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [alternatePath?](./utils.loadresourceurl.alternatepath.md) | string | <i>(Optional)</i> 备用资源路径 |
+|  [hook?](./utils.loadresourceurl.hook.md) | [LoadResourceHook](./utils.loadresourcehook.md) | <i>(Optional)</i> 钩子 |
 |  [path](./utils.loadresourceurl.path.md) | string | 资源路径 |
 |  [type](./utils.loadresourceurl.type.md) | [LoadResourceUrlType](./utils.loadresourceurltype.md) | 资源类型 |
 

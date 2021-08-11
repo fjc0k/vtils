@@ -10,10 +10,10 @@ A person who has been involved in creating or maintaining the package.
 
 ```typescript
 export type Person =
-		| string
-		| {
-			name: string;
-			url?: string;
-			email?: string;
-		};
+    		| string
+    		| {
+        			name: string;
+        			url?: string;
+        			email?: string;
+        		};
 ```

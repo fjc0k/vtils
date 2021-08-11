@@ -16,18 +16,13 @@ export declare type AsyncReturnType<Target extends AsyncFunction> = PromiseValue
 
 ## Example
 
+\`\`\`<!-- -->ts import {<!-- -->AsyncReturnType<!-- -->} from 'type-fest'; import {<!-- -->asyncFunction<!-- -->} from 'api';
 
-```ts
-import {AsyncReturnType} from 'type-fest';
-import {asyncFunction} from 'api';
+// This type resolves to the unwrapped return type of `asyncFunction`<!-- -->. type Value = AsyncReturnType<!-- -->&lt;<!-- -->typeof asyncFunction<!-- -->&gt;<!-- -->;
 
-// This type resolves to the unwrapped return type of `asyncFunction`.
-type Value = AsyncReturnType<typeof asyncFunction>;
+async function doSomething(value: Value) {<!-- -->}
 
-async function doSomething(value: Value) {}
+asyncFunction().then(value =<!-- -->&gt; doSomething(value)); \`\`\`
 
-asyncFunction().then(value => doSomething(value));
-
-```
  Utilities
 

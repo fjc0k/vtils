@@ -10,16 +10,16 @@ Conditions which provide a way to resolve a package entry point based on the env
 
 ```typescript
 export type ExportCondition = LiteralUnion<
-		| 'import'
-		| 'require'
-		| 'node'
-		| 'deno'
-		| 'browser'
-		| 'electron'
-		| 'react-native'
-		| 'default',
-		string
-	>;
+    		| 'import'
+    		| 'require'
+    		| 'node'
+    		| 'deno'
+    		| 'browser'
+    		| 'electron'
+    		| 'react-native'
+    		| 'default',
+    		string
+    	>;
 ```
 <b>References:</b> [LiteralUnion](./types.literalunion.md)
 

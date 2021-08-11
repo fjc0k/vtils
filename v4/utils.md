@@ -45,6 +45,7 @@ rich://{"url":"***","desc":"***"}
 |  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
 |  [formatBytes(value)](./utils.formatbytes.md) | 格式化字节数，以 1024 作为千字节数。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
+|  [getCurrentScript()](./utils.getcurrentscript.md) | 返回当前正在运行的脚本所属的 <code>&lt;script&gt;</code> 元素。有两点限制：<!-- -->- 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 <code>null</code>。 |
 |  [getEnvironment()](./utils.getenvironment.md) | 获取运行环境信息。 |
 |  [getWechatPublicAccountQrcodeUrl(accountId)](./utils.getwechatpublicaccountqrcodeurl.md) | 获取微信公众号的二维码链接。 |
 |  [ii(fn)](./utils.ii.md) | 立即调用函数并返回其返回值。<!-- -->注：<code>ii = immediately invoke</code> |
@@ -65,8 +66,9 @@ rich://{"url":"***","desc":"***"}
 |  [isPromiseLike(value)](./utils.ispromiselike.md) | 检查 <code>value</code> 是否像 <code>Promise</code>。 |
 |  [isType(value)](./utils.istype.md) | 对 <code>value is T</code> 的封装。 |
 |  [isUrl(value)](./utils.isurl.md) | 检测传入值是否是 URL。 |
+|  [jsonp(url, keyOfCallbackName)](./utils.jsonp.md) | 发起 jsonp 请求。 |
 |  [loadCss(urlOrContent)](./utils.loadcss.md) | 加载 CSS 样式，支持链接和内容。 |
-|  [loadResource(url)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
+|  [loadResource(url, options)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
 |  [onceMeanwhile(fn)](./utils.oncemeanwhile.md) | 同一时间对函数的调用只会触发一次运行。 |
@@ -99,6 +101,7 @@ rich://{"url":"***","desc":"***"}
 |  [FormatNumberOptions](./utils.formatnumberoptions.md) | 格式化数字选项。 |
 |  [GetEnvironmentResult](./utils.getenvironmentresult.md) |  |
 |  [LoadCssResult](./utils.loadcssresult.md) |  |
+|  [LoadResourceOptions](./utils.loadresourceoptions.md) |  |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
 |  [ParseDataUrlResult](./utils.parsedataurlresult.md) |  |
 |  [ParsedFileRichUrl](./utils.parsedfilerichurl.md) |  |
@@ -147,6 +150,8 @@ rich://{"url":"***","desc":"***"}
 |  [EventBusListenerTag](./utils.eventbuslistenertag.md) |  |
 |  [EventBusOffListener](./utils.eventbusofflistener.md) |  |
 |  [KeyOfRawData](./utils.keyofrawdata.md) |  |
+|  [LoadResourceElement](./utils.loadresourceelement.md) |  |
+|  [LoadResourceHook](./utils.loadresourcehook.md) |  |
 |  [MiniProgramApi](./utils.miniprogramapi.md) |  |
 |  [MiniProgramBrand](./utils.miniprogrambrand.md) |  |
 |  [PackedData](./utils.packeddata.md) |  |

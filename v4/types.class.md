@@ -4,12 +4,12 @@
 
 ## Class type
 
-Matches a \[`class` constructor\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
+Matches a \[`class`<!-- -->\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
 
  Basic
 
 <b>Signature:</b>
 
 ```typescript
-export declare type Class<T = unknown, Arguments extends any[] = any[]> = new(...arguments_: Arguments) => T;
+export declare type Class<T, Arguments extends unknown[] = any[]> = Constructor<T, Arguments> & {prototype: T};
 ```

@@ -8,9 +8,9 @@
 
 ```typescript
 export type NewLine =
-			| 'CRLF'
-			| 'LF'
-			// Lowercase alternatives
-			| 'crlf'
-			| 'lf';
+        			| 'CRLF'
+        			| 'LF'
+        			// Lowercase alternatives
+        			| 'crlf'
+        			| 'lf';
 ```

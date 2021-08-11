@@ -12,16 +12,16 @@ Describes and notifies consumers of a package's monetary support information.
 
 ```typescript
 funding?: string | {
-			type?: LiteralUnion<
-			| 'github'
-			| 'opencollective'
-			| 'patreon'
-			| 'individual'
-			| 'foundation'
-			| 'corporation',
-			string
-			>;
+            			type?: LiteralUnion<
+            			| 'github'
+            			| 'opencollective'
+            			| 'patreon'
+            			| 'individual'
+            			| 'foundation'
+            			| 'corporation',
+            			string
+            			>;
 
-			url: string;
-		};
+            			url: string;
+            		};
 ```

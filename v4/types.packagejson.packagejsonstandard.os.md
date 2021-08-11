@@ -10,20 +10,20 @@ Operating systems the module runs on.
 
 ```typescript
 os?: Array<LiteralUnion<
-		| 'aix'
-		| 'darwin'
-		| 'freebsd'
-		| 'linux'
-		| 'openbsd'
-		| 'sunos'
-		| 'win32'
-		| '!aix'
-		| '!darwin'
-		| '!freebsd'
-		| '!linux'
-		| '!openbsd'
-		| '!sunos'
-		| '!win32',
-		string
-		>>;
+        		| 'aix'
+        		| 'darwin'
+        		| 'freebsd'
+        		| 'linux'
+        		| 'openbsd'
+        		| 'sunos'
+        		| 'win32'
+        		| '!aix'
+        		| '!darwin'
+        		| '!freebsd'
+        		| '!linux'
+        		| '!openbsd'
+        		| '!sunos'
+        		| '!win32',
+        		string
+        		>>;
 ```

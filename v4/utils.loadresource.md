@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function loadResource(url: string | LoadResourceUrl | Array<string | LoadResourceUrl>): Promise<Array<HTMLScriptElement | HTMLLinkElement | HTMLImageElement>>;
+export declare function loadResource(url: string | LoadResourceUrl | Array<string | LoadResourceUrl>, options?: LoadResourceOptions): Promise<Array<LoadResourceElement>>;
 ```
 
 ## Parameters
@@ -17,10 +17,11 @@ export declare function loadResource(url: string | LoadResourceUrl | Array<strin
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  url | string \| [LoadResourceUrl](./utils.loadresourceurl.md) \| Array&lt;string \| [LoadResourceUrl](./utils.loadresourceurl.md)<!-- -->&gt; | 要加载的资源地址 |
+|  options | [LoadResourceOptions](./utils.loadresourceoptions.md) | 选项 |
 
 <b>Returns:</b>
 
-Promise&lt;Array&lt;HTMLScriptElement \| HTMLLinkElement \| HTMLImageElement&gt;&gt;
+Promise&lt;Array&lt;[LoadResourceElement](./utils.loadresourceelement.md)<!-- -->&gt;&gt;
 
 返回各资源的 HTML 元素组成的数组
 

@@ -10,8 +10,8 @@
 
 ```typescript
 export declare function run<T extends () => any, R extends ReturnType<T>>(fn: T): Promise<[
-    unknown,
-    R extends PromiseLike<any> ? R extends PromiseLike<infer X> ? X : unknown : R
+unknown,
+R extends PromiseLike<any> ? R extends PromiseLike<infer X> ? X : unknown : R
 ]>;
 ```
 

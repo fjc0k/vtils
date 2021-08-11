@@ -8,60 +8,60 @@
 
 ```typescript
 export type Scripts = {
-		prepublish?: string;
+        		prepublish?: string;
 
-		prepare?: string;
+        		prepare?: string;
 
-		prepublishOnly?: string;
+        		prepublishOnly?: string;
 
-		prepack?: string;
+        		prepack?: string;
 
-		postpack?: string;
+        		postpack?: string;
 
-		publish?: string;
+        		publish?: string;
 
-		postpublish?: string;
+        		postpublish?: string;
 
-		preinstall?: string;
+        		preinstall?: string;
 
-		install?: string;
+        		install?: string;
 
-		postinstall?: string;
+        		postinstall?: string;
 
-		preuninstall?: string;
+        		preuninstall?: string;
 
-		uninstall?: string;
+        		uninstall?: string;
 
-		postuninstall?: string;
+        		postuninstall?: string;
 
-		preversion?: string;
+        		preversion?: string;
 
-		version?: string;
+        		version?: string;
 
-		postversion?: string;
+        		postversion?: string;
 
-		pretest?: string;
+        		pretest?: string;
 
-		test?: string;
+        		test?: string;
 
-		posttest?: string;
+        		posttest?: string;
 
-		prestop?: string;
+        		prestop?: string;
 
-		stop?: string;
+        		stop?: string;
 
-		poststop?: string;
+        		poststop?: string;
 
-		prestart?: string;
+        		prestart?: string;
 
-		start?: string;
+        		start?: string;
 
-		poststart?: string;
+        		poststart?: string;
 
-		prerestart?: string;
+        		prerestart?: string;
 
-		restart?: string;
+        		restart?: string;
 
-		postrestart?: string;
-	} & Record<string, string>;
+        		postrestart?: string;
+        	} & Record<string, string>;
 ```

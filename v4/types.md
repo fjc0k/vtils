@@ -10,7 +10,6 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [JsonArray](./types.jsonarray.md) | Matches a JSON array. Basic |
 |  [TsConfigJson](./types.tsconfigjson.md) | Type for \[TypeScript's <code>tsconfig.json</code> file\](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) (TypeScript 3.7). Miscellaneous |
 
 ## Namespaces
@@ -33,7 +32,7 @@
 |  [AsyncReturnType](./types.asyncreturntype.md) | Unwrap the return type of a function that returns a <code>Promise</code>.<!-- -->There has been \[discussion\](https://github.com/microsoft/TypeScript/pull/35998) about implementing this type in TypeScript. |
 |  [Buildable](./types.buildable.md) | Combination of DeepPartial and DeepWritable |
 |  [CamelCase](./types.camelcase.md) | Convert a string literal to camel-case.<!-- -->This can be useful when, for example, converting some kebab-cased command-line flags or a snake-cased database result. |
-|  [Class](./types.class.md) | Matches a \[<code>class</code> constructor\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). Basic |
+|  [Class](./types.class.md) | Matches a \[<code>class</code>\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). Basic |
 |  [Defined](./types.defined.md) | 去除类型 T 中的 undefined。 |
 |  [DelimiterCase](./types.delimitercase.md) | Convert a string literal to a custom string delimiter casing.<!-- -->This can be useful when, for example, converting a camel-cased object property to an oddly cased one. |
 |  [DotPath](./types.dotpath.md) |  |
@@ -46,8 +45,9 @@
 |  [IsEmptyArray](./types.isemptyarray.md) | 判断 <code>T</code> 是否是空数组。 |
 |  [IsEmptyObject](./types.isemptyobject.md) | 判断 <code>T</code> 是否是空对象。 |
 |  [IsNever](./types.isnever.md) | 判断 <code>T</code> 是否是 <code>never</code> 类型。 |
+|  [JsonArray](./types.jsonarray.md) | Matches a JSON array. Basic |
 |  [JsonObject](./types.jsonobject.md) | Matches a JSON object.<!-- -->This type can be useful to enforce some input to be JSON-compatible or as a super-type to be extended from. Don't use this as a direct return type as the user would have to double-cast it: <code>jsonObject as unknown as CustomResponse</code>. Instead, you could extend your CustomResponse type from it to ensure your type only uses JSON-compatible types: <code>interface CustomResponse extends JsonObject { … }</code>. Basic |
-|  [JsonValue](./types.jsonvalue.md) | Matches any valid JSON value. Basic |
+|  [JsonValue](./types.jsonvalue.md) | Matches any valid JSON value. |
 |  [KebabCase](./types.kebabcase.md) | Convert a string literal to kebab-case.<!-- -->This can be useful when, for example, converting a camel-cased object property to a kebab-cased CSS class name or a command-line flag. |
 |  [LiteralUnion](./types.literalunion.md) | Allows creating a union type by combining primitive types and literal types without sacrificing auto-completion in IDEs for the literal type part of the union.<!-- -->Currently, when a union type of a primitive type is combined with literal types, TypeScript loses all information about the combined literals. Thus, when such type is used in an IDE with autocompletion, no suggestions are made for the declared literals.<!-- -->This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com/Microsoft/TypeScript/issues/29729). It will be removed as soon as it's not needed anymore. |
 |  [Merge](./types.merge.md) | Merge 2 types, properties types from the latter override the ones defined on the former type |

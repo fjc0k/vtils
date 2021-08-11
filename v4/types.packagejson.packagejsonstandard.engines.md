@@ -10,6 +10,6 @@ Engines that this package runs on.
 
 ```typescript
 engines?: {
-			[EngineName in 'npm' | 'node' | string]: string;
-		};
+            			[EngineName in 'npm' | 'node' | string]: string;
+            		};
 ```

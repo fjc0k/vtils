@@ -20,9 +20,13 @@ export namespace CompilerOptions
 
 |  Type Alias | Description |
 |  --- | --- |
+|  [FallbackPolling](./types.tsconfigjson.compileroptions.fallbackpolling.md) |  |
+|  [ImportsNotUsedAsValues](./types.tsconfigjson.compileroptions.importsnotusedasvalues.md) |  |
 |  [JSX](./types.tsconfigjson.compileroptions.jsx.md) |  |
 |  [Lib](./types.tsconfigjson.compileroptions.lib.md) |  |
 |  [Module](./types.tsconfigjson.compileroptions.module.md) |  |
 |  [NewLine](./types.tsconfigjson.compileroptions.newline.md) |  |
 |  [Target](./types.tsconfigjson.compileroptions.target.md) |  |
+|  [WatchDirectory](./types.tsconfigjson.compileroptions.watchdirectory.md) |  |
+|  [WatchFile](./types.tsconfigjson.compileroptions.watchfile.md) |  |
 

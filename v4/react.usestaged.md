@@ -10,12 +10,12 @@
 
 ```typescript
 export declare function useStaged<T>(value: T, setValue: (value: T) => void): [
-    T,
+T,
     {
-        set: (value: T) => void;
-        commit: () => void;
-        reset: () => void;
-    }
+    set: (value: T) => void;
+    commit: () => void;
+    reset: () => void;
+}
 ];
 ```
 

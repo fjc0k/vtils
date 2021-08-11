@@ -8,7 +8,9 @@
 
 ```typescript
 export type JSX =
-			| 'preserve'
-			| 'react'
-			| 'react-native';
+        			| 'preserve'
+        			| 'react'
+        			| 'react-jsx'
+        			| 'react-jsxdev'
+        			| 'react-native';
 ```

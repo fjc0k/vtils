@@ -10,9 +10,9 @@ Pick all properties of given type in object type
 
 ```typescript
 export declare type PickBy<T, P> = Pick<
-  T,
-  {
+T,
+    {
     [K in keyof T]: T[K] extends P ? K : never;
-  }[keyof T]
+}[keyof T]
 >;
 ```

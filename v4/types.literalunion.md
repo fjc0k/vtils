@@ -15,31 +15,25 @@ This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com
 ```typescript
 export declare type LiteralUnion<
 	LiteralType,
-	BaseType extends Primitive
+	BaseType extends Primitive,
 > = LiteralType | (BaseType & {_?: never});
 ```
 
 ## Example
 
-
-```
-import {LiteralUnion} from 'type-fest';
+\`\`\` import {<!-- -->LiteralUnion<!-- -->} from 'type-fest';
 
 // Before
 
-type Pet = 'dog' | 'cat' | string;
+type Pet = 'dog' \| 'cat' \| string;
 
-const pet: Pet = '';
-// Start typing in your TypeScript-enabled IDE.
-// You **will not** get auto-completion for `dog` and `cat` literals.
+const pet: Pet = ''; // Start typing in your TypeScript-enabled IDE. // You \*\*will not\*\* get auto-completion for `dog` and `cat` literals.
 
 // After
 
-type Pet2 = LiteralUnion<'dog' | 'cat', string>;
+type Pet2 = LiteralUnion<!-- -->&lt;<!-- -->'dog' \| 'cat', string<!-- -->&gt;<!-- -->;
 
-const pet: Pet2 = '';
-// You **will** get auto-completion for `dog` and `cat` literals.
+const pet: Pet2 = ''; // You \*\*will\*\* get auto-completion for `dog` and `cat` literals. \`\`\`
 
-```
  Utilities
 

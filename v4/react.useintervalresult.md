@@ -8,10 +8,10 @@
 
 ```typescript
 export declare type UseIntervalResult<TResult> = [
-    TResult | undefined,
+TResult | undefined,
     {
-        start: (delay?: number, duration?: number) => void;
-        stop: () => void;
-    }
+    start: (delay?: number, duration?: number) => void;
+    stop: () => void;
+}
 ];
 ```

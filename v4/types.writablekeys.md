@@ -10,6 +10,6 @@ Gets keys of an object which are writable
 
 ```typescript
 export declare type WritableKeys<T extends {}> = {
-  [P in keyof T]-?: IsFullyWritable<Pick<T, P>> extends true ? P : never;
+    [P in keyof T]-?: IsFullyWritable<Pick<T, P>> extends true ? P : never;
 }[keyof T];
 ```

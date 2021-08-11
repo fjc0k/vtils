@@ -10,28 +10,28 @@ Recursive nullable
 
 ```typescript
 export declare type NullableDeep<T> = T extends Builtin
-  ? T | null
-  : T extends Map<infer K, infer V>
-  ? Map<NullableDeep<K>, NullableDeep<V>>
-  : T extends WeakMap<infer K, infer V>
-  ? WeakMap<NullableDeep<K>, NullableDeep<V>>
-  : T extends Set<infer U>
-  ? Set<NullableDeep<U>>
-  : T extends WeakSet<infer U>
-  ? WeakSet<NullableDeep<U>>
-  : T extends Array<infer U>
-  ? T extends IsTuple<T>
-    ? {
-        [K in keyof T]: NullableDeep<T[K]> | null;
-      }
-    : Array<NullableDeep<U>>
-  : T extends Promise<infer U>
-  ? Promise<NullableDeep<U>>
-  : T extends {}
-  ? {
-      [K in keyof T]: NullableDeep<T[K]>;
-    }
-  : T | null;
+? T | null
+: T extends Map<infer K, infer V>
+? Map<NullableDeep<K>, NullableDeep<V>>
+: T extends WeakMap<infer K, infer V>
+? WeakMap<NullableDeep<K>, NullableDeep<V>>
+: T extends Set<infer U>
+? Set<NullableDeep<U>>
+: T extends WeakSet<infer U>
+? WeakSet<NullableDeep<U>>
+: T extends Array<infer U>
+? T extends IsTuple<T>
+? {
+    [K in keyof T]: NullableDeep<T[K]> | null;
+}
+: Array<NullableDeep<U>>
+: T extends Promise<infer U>
+? Promise<NullableDeep<U>>
+: T extends {}
+? {
+    [K in keyof T]: NullableDeep<T[K]>;
+}
+: T | null;
 ```
 <b>References:</b> [NullableDeep](./types.nullabledeep.md)
 

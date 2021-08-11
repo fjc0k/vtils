@@ -28,47 +28,30 @@ export declare type UnionToIntersection<Union> = (
 		: never;
 ```
 
-## Example 1
+## Example
 
 
-```
-import {UnionToIntersection} from 'type-fest';
+```import {UnionToIntersection} from 'type-fest';
 
 type Union = {the(): void} | {great(arg: string): void} | {escape: boolean};
 
-type Intersection = UnionToIntersection<Union>;
-//=> {the(): void; great(arg: string): void; escape: boolean};
+type Intersection = UnionToIntersection<Union>; //=> {the(): void; great(arg: string): void; escape: boolean}; ```
 
-```
 A more applicable example which could make its way into your library code follows.
 
-## Example 2
+@example
 
 
 ```
-import {UnionToIntersection} from 'type-fest';
+import {<!-- -->UnionToIntersection<!-- -->} from 'type-fest';
 
-class CommandOne {
-	commands: {
-		a1: () => undefined,
-		b1: () => undefined,
-	}
-}
+class CommandOne { commands: { a1: () =<!-- -->&gt; undefined, b1: () =<!-- -->&gt; undefined, } }
 
-class CommandTwo {
-	commands: {
-		a2: (argA: string) => undefined,
-		b2: (argB: string) => undefined,
-	}
-}
+class CommandTwo { commands: { a2: (argA: string) =<!-- -->&gt; undefined, b2: (argB: string) =<!-- -->&gt; undefined, } }
 
-const union = [new CommandOne(), new CommandTwo()].map(instance => instance.commands);
-type Union = typeof union;
-//=> {a1(): void; b1(): void} | {a2(argA: string): void; b2(argB: string): void}
+const union = \[new CommandOne(), new CommandTwo()\].map(instance =<!-- -->&gt; instance.commands); type Union = typeof union; //=<!-- -->&gt; {<!-- -->a1(): void; b1(): void<!-- -->} \| {<!-- -->a2(argA: string): void; b2(argB: string): void<!-- -->}
 
-type Intersection = UnionToIntersection<Union>;
-//=> {a1(): void; b1(): void; a2(argA: string): void; b2(argB: string): void}
+type Intersection = UnionToIntersection<Union>; //=<!-- -->&gt; {<!-- -->a1(): void; b1(): void; a2(argA: string): void; b2(argB: string): void<!-- -->} \`\`\`
 
-```
  Utilities
 

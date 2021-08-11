@@ -17,6 +17,8 @@ export declare enum LoadResourceUrlType
 |  Member | Value | Description |
 |  --- | --- | --- |
 |  css | <code>&quot;css&quot;</code> | 样式资源 |
+|  cssText | <code>&quot;cssText&quot;</code> | 样式文本 |
 |  img | <code>&quot;img&quot;</code> | 图片资源 |
 |  js | <code>&quot;js&quot;</code> | 代码资源 |
+|  jsText | <code>&quot;jsText&quot;</code> | 代码文本 |
 

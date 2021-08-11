@@ -23,32 +23,19 @@ export declare type DelimiterCase<Value, Delimiter extends string> = Value exten
 
 ## Example
 
-
-```
-import {DelimiterCase} from 'type-fest';
+\`\`\` import {<!-- -->DelimiterCase<!-- -->} from 'type-fest';
 
 // Simple
 
-const someVariable: DelimiterCase<'fooBar', '#'> = 'foo#bar';
+const someVariable: DelimiterCase<!-- -->&lt;<!-- -->'fooBar', '\#'<!-- -->&gt; = 'foo\#bar';
 
 // Advanced
 
-type OddlyCasedProperties<T> = {
-	[K in keyof T as DelimiterCase<K, '#'>]: T[K]
-};
+type OddlyCasedProperties<T> = { \[K in keyof T as DelimiterCase<!-- -->&lt;<!-- -->K, '\#'<!-- -->&gt;<!-- -->\]: T\[K\] }<!-- -->;
 
-interface SomeOptions {
-	dryRun: boolean;
-	includeFile: string;
-	foo: number;
-}
+interface SomeOptions { dryRun: boolean; includeFile: string; foo: number; }
 
-const rawCliOptions: OddlyCasedProperties<SomeOptions> = {
-	'dry#run': true,
-	'include#file': 'bar.js',
-	foo: 123
-};
+const rawCliOptions: OddlyCasedProperties<SomeOptions> = { 'dry\#run': true, 'include\#file': 'bar.js', foo: 123 }<!-- -->; \`\`\`
 
-```
  Template Literals
 

@@ -10,7 +10,7 @@ The licenses for the package.
 
 ```typescript
 licenses?: Array<{
-			type?: string;
-			url?: string;
-		}>;
+            			type?: string;
+            			url?: string;
+            		}>;
 ```

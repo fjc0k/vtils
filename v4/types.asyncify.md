@@ -16,27 +16,15 @@ export declare type Asyncify<Fn extends (...args: any[]) => any> = SetReturnType
 
 ## Example
 
+\`\`\` import {<!-- -->Asyncify<!-- -->} from 'type-fest';
 
-```
-import {Asyncify} from 'type-fest';
+// Synchronous function. function getFooSync(someArg: SomeType): Foo { // … }
 
-// Synchronous function.
-function getFooSync(someArg: SomeType): Foo {
-	// …
-}
+type AsyncifiedFooGetter = Asyncify<!-- -->&lt;<!-- -->typeof getFooSync<!-- -->&gt;<!-- -->; //=<!-- -->&gt; type AsyncifiedFooGetter = (someArg: SomeType) =<!-- -->&gt; Promise<Foo>;
 
-type AsyncifiedFooGetter = Asyncify<typeof getFooSync>;
-//=> type AsyncifiedFooGetter = (someArg: SomeType) => Promise<Foo>;
+// Same as `getFooSync` but asynchronous. const getFooAsync: AsyncifiedFooGetter = (someArg) =<!-- -->&gt; { // TypeScript now knows that `someArg` is `SomeType` automatically. // It also knows that this function must return `Promise<Foo>`<!-- -->. // If you have `@typescript-eslint/promise-function-async` linter rule enabled, it will even report that "Functions that return promises must be async.".
 
-// Same as `getFooSync` but asynchronous.
-const getFooAsync: AsyncifiedFooGetter = (someArg) => {
-	// TypeScript now knows that `someArg` is `SomeType` automatically.
-	// It also knows that this function must return `Promise<Foo>`.
-	// If you have `@typescript-eslint/promise-function-async` linter rule enabled, it will even report that "Functions that return promises must be async.".
+// … } \`\`\`
 
-	// …
-}
-
-```
  Utilities
 

@@ -8,8 +8,8 @@
 
 ```typescript
 export declare type UseControllableValueResult<TProps, TValuePropName extends keyof TProps, TCallbackPropName extends keyof TProps, TDefaultValue extends TProps[TValuePropName]> = [
-    TDefaultValue extends undefined ? TProps[TValuePropName] : Defined<TProps[TValuePropName]>,
-    Defined<TProps[TCallbackPropName]>,
-    () => void
+TDefaultValue extends undefined ? TProps[TValuePropName] : Defined<TProps[TValuePropName]>,
+Defined<TProps[TCallbackPropName]>,
+() => void
 ];
 ```

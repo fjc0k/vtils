@@ -10,26 +10,26 @@ Like Required but recursive
 
 ```typescript
 export declare type RequiredDeep<T> = T extends Builtin
-  ? NonNullable<T>
-  : T extends Map<infer K, infer V>
-  ? Map<RequiredDeep<K>, RequiredDeep<V>>
-  : T extends ReadonlyMap<infer K, infer V>
-  ? ReadonlyMap<RequiredDeep<K>, RequiredDeep<V>>
-  : T extends WeakMap<infer K, infer V>
-  ? WeakMap<RequiredDeep<K>, RequiredDeep<V>>
-  : T extends Set<infer U>
-  ? Set<RequiredDeep<U>>
-  : T extends ReadonlySet<infer U>
-  ? ReadonlySet<RequiredDeep<U>>
-  : T extends WeakSet<infer U>
-  ? WeakSet<RequiredDeep<U>>
-  : T extends Promise<infer U>
-  ? Promise<RequiredDeep<U>>
-  : T extends {}
-  ? {
-      [K in keyof T]-?: RequiredDeep<T[K]>;
-    }
-  : NonNullable<T>;
+? NonNullable<T>
+: T extends Map<infer K, infer V>
+? Map<RequiredDeep<K>, RequiredDeep<V>>
+: T extends ReadonlyMap<infer K, infer V>
+? ReadonlyMap<RequiredDeep<K>, RequiredDeep<V>>
+: T extends WeakMap<infer K, infer V>
+? WeakMap<RequiredDeep<K>, RequiredDeep<V>>
+: T extends Set<infer U>
+? Set<RequiredDeep<U>>
+: T extends ReadonlySet<infer U>
+? ReadonlySet<RequiredDeep<U>>
+: T extends WeakSet<infer U>
+? WeakSet<RequiredDeep<U>>
+: T extends Promise<infer U>
+? Promise<RequiredDeep<U>>
+: T extends {}
+? {
+    [K in keyof T]-?: RequiredDeep<T[K]>;
+}
+: NonNullable<T>;
 ```
 <b>References:</b> [RequiredDeep](./types.requireddeep.md)
 

@@ -9,12 +9,12 @@
 
 ```typescript
 export declare type UseToggleResult = [
-    boolean,
+boolean,
     {
-        (): void;
-        set(value: boolean): void;
-        true(): void;
-        false(): void;
-    }
+    (): void;
+    set(value: boolean): void;
+    true(): void;
+    false(): void;
+}
 ];
 ```

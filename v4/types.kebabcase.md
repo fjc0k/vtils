@@ -17,32 +17,19 @@ export declare type KebabCase<Value> = DelimiterCase<Value, '-'>;
 
 ## Example
 
-
-```
-import {KebabCase} from 'type-fest';
+\`\`\` import {<!-- -->KebabCase<!-- -->} from 'type-fest';
 
 // Simple
 
-const someVariable: KebabCase<'fooBar'> = 'foo-bar';
+const someVariable: KebabCase<!-- -->&lt;<!-- -->'fooBar'<!-- -->&gt; = 'foo-bar';
 
 // Advanced
 
-type KebabCasedProperties<T> = {
-	[K in keyof T as KebabCase<K>]: T[K]
-};
+type KebabCasedProperties<T> = { \[K in keyof T as KebabCase<K>\]: T\[K\] }<!-- -->;
 
-interface CliOptions {
-	dryRun: boolean;
-	includeFile: string;
-	foo: number;
-}
+interface CliOptions { dryRun: boolean; includeFile: string; foo: number; }
 
-const rawCliOptions: KebabCasedProperties<CliOptions> = {
-	'dry-run': true,
-	'include-file': 'bar.js',
-	foo: 123
-};
+const rawCliOptions: KebabCasedProperties<CliOptions> = { 'dry-run': true, 'include-file': 'bar.js', foo: 123 }<!-- -->; \`\`\`
 
-```
  Template Literals
 

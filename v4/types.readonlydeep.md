@@ -10,26 +10,26 @@ Like Readonly but recursive
 
 ```typescript
 export declare type ReadonlyDeep<T> = T extends Builtin
-  ? T
-  : T extends Map<infer K, infer V>
-  ? ReadonlyMap<ReadonlyDeep<K>, ReadonlyDeep<V>>
-  : T extends ReadonlyMap<infer K, infer V>
-  ? ReadonlyMap<ReadonlyDeep<K>, ReadonlyDeep<V>>
-  : T extends WeakMap<infer K, infer V>
-  ? WeakMap<ReadonlyDeep<K>, ReadonlyDeep<V>>
-  : T extends Set<infer U>
-  ? ReadonlySet<ReadonlyDeep<U>>
-  : T extends ReadonlySet<infer U>
-  ? ReadonlySet<ReadonlyDeep<U>>
-  : T extends WeakSet<infer U>
-  ? WeakSet<ReadonlyDeep<U>>
-  : T extends Promise<infer U>
-  ? Promise<ReadonlyDeep<U>>
-  : T extends {}
-  ? {
-      readonly [K in keyof T]: ReadonlyDeep<T[K]>;
-    }
-  : Readonly<T>;
+? T
+: T extends Map<infer K, infer V>
+? ReadonlyMap<ReadonlyDeep<K>, ReadonlyDeep<V>>
+: T extends ReadonlyMap<infer K, infer V>
+? ReadonlyMap<ReadonlyDeep<K>, ReadonlyDeep<V>>
+: T extends WeakMap<infer K, infer V>
+? WeakMap<ReadonlyDeep<K>, ReadonlyDeep<V>>
+: T extends Set<infer U>
+? ReadonlySet<ReadonlyDeep<U>>
+: T extends ReadonlySet<infer U>
+? ReadonlySet<ReadonlyDeep<U>>
+: T extends WeakSet<infer U>
+? WeakSet<ReadonlyDeep<U>>
+: T extends Promise<infer U>
+? Promise<ReadonlyDeep<U>>
+: T extends {}
+? {
+    readonly [K in keyof T]: ReadonlyDeep<T[K]>;
+}
+: Readonly<T>;
 ```
 <b>References:</b> [ReadonlyDeep](./types.readonlydeep.md)
 

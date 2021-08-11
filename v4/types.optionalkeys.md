@@ -10,9 +10,9 @@ Gets keys of an object which are optional
 
 ```typescript
 export declare type OptionalKeys<T> = {
-  [K in keyof T]-?: undefined extends {
-    [K2 in keyof T]: K2;
-  }[K]
+    [K in keyof T]-?: undefined extends {
+        [K2 in keyof T]: K2;
+    }[K]
     ? K
     : never;
 }[keyof T];

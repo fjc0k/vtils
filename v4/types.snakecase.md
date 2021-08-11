@@ -17,32 +17,19 @@ export declare type SnakeCase<Value> = DelimiterCase<Value, '_'>;
 
 ## Example
 
-
-```
-import {SnakeCase} from 'type-fest';
+\`\`\` import {<!-- -->SnakeCase<!-- -->} from 'type-fest';
 
 // Simple
 
-const someVariable: SnakeCase<'fooBar'> = 'foo_bar';
+const someVariable: SnakeCase<!-- -->&lt;<!-- -->'fooBar'<!-- -->&gt; = 'foo\_bar';
 
 // Advanced
 
-type SnakeCasedProperties<T> = {
-	[K in keyof T as SnakeCase<K>]: T[K]
-};
+type SnakeCasedProperties<T> = { \[K in keyof T as SnakeCase<K>\]: T\[K\] }<!-- -->;
 
-interface ModelProps {
-	isHappy: boolean;
-	fullFamilyName: string;
-	foo: number;
-}
+interface ModelProps { isHappy: boolean; fullFamilyName: string; foo: number; }
 
-const dbResult: SnakeCasedProperties<ModelProps> = {
-	'is_happy': true,
-	'full_family_name': 'Carla Smith',
-	foo: 123
-};
+const dbResult: SnakeCasedProperties<ModelProps> = { 'is\_happy': true, 'full\_family\_name': 'Carla Smith', foo: 123 }<!-- -->; \`\`\`
 
-```
  Template Literals
 

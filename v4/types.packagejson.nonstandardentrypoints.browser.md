@@ -10,6 +10,6 @@ A hint to JavaScript bundlers or component tools when packaging modules for clie
 
 ```typescript
 browser?:
-		| string
-		| Record<string, string | false>;
+        		| string
+        		| Record<string, string | false>;
 ```

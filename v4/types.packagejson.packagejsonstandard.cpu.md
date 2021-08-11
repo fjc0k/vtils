@@ -10,28 +10,28 @@ CPU architectures the module runs on.
 
 ```typescript
 cpu?: Array<LiteralUnion<
-		| 'arm'
-		| 'arm64'
-		| 'ia32'
-		| 'mips'
-		| 'mipsel'
-		| 'ppc'
-		| 'ppc64'
-		| 's390'
-		| 's390x'
-		| 'x32'
-		| 'x64'
-		| '!arm'
-		| '!arm64'
-		| '!ia32'
-		| '!mips'
-		| '!mipsel'
-		| '!ppc'
-		| '!ppc64'
-		| '!s390'
-		| '!s390x'
-		| '!x32'
-		| '!x64',
-		string
-		>>;
+        		| 'arm'
+        		| 'arm64'
+        		| 'ia32'
+        		| 'mips'
+        		| 'mipsel'
+        		| 'ppc'
+        		| 'ppc64'
+        		| 's390'
+        		| 's390x'
+        		| 'x32'
+        		| 'x64'
+        		| '!arm'
+        		| '!arm64'
+        		| '!ia32'
+        		| '!mips'
+        		| '!mipsel'
+        		| '!ppc'
+        		| '!ppc64'
+        		| '!s390'
+        		| '!s390x'
+        		| '!x32'
+        		| '!x64',
+        		string
+        		>>;
 ```

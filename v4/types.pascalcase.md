@@ -17,32 +17,19 @@ export declare type PascalCase<Value> = CamelCase<Value> extends string
 
 ## Example
 
-
-```
-import {PascalCase} from 'type-fest';
+\`\`\` import {<!-- -->PascalCase<!-- -->} from 'type-fest';
 
 // Simple
 
-const someVariable: PascalCase<'foo-bar'> = 'FooBar';
+const someVariable: PascalCase<!-- -->&lt;<!-- -->'foo-bar'<!-- -->&gt; = 'FooBar';
 
 // Advanced
 
-type PascalCaseProps<T> = {
-	[K in keyof T as PascalCase<K>]: T[K]
-};
+type PascalCaseProps<T> = { \[K in keyof T as PascalCase<K>\]: T\[K\] }<!-- -->;
 
-interface RawOptions {
-	'dry-run': boolean;
-	'full_family_name': string;
-	foo: number;
-}
+interface RawOptions { 'dry-run': boolean; 'full\_family\_name': string; foo: number; }
 
-const dbResult: CamelCasedProperties<ModelProps> = {
-	DryRun: true,
-	FullFamilyName: 'bar.js',
-	Foo: 123
-};
+const dbResult: CamelCasedProperties<ModelProps> = { DryRun: true, FullFamilyName: 'bar.js', Foo: 123 }<!-- -->; \`\`\`
 
-```
  Template Literals
 

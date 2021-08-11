@@ -12,7 +12,7 @@
 
 ```typescript
 export declare type DeriveComponentProps<TComponent extends React_2.ComponentType | keyof JSX.IntrinsicElements | React_2.JSXElementConstructor<any>, TExclude extends keyof React_2.ComponentProps<TComponent>, TRef extends any = never, TOverride extends Partial<Record<keyof React_2.ComponentProps<TComponent>, any>> = never> = Merge<Merge<Omit<React_2.ComponentProps<TComponent>, TExclude>, [
-    TOverride
+TOverride
 ] extends [never] ? {} : TOverride>, {
     ref?: React_2.Ref<TRef>;
 }>;

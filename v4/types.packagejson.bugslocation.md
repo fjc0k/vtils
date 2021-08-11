@@ -8,10 +8,10 @@
 
 ```typescript
 export type BugsLocation =
-		| string
-		| {
-			url?: string;
+    		| string
+    		| {
+        			url?: string;
 
-			email?: string;
-		};
+        			email?: string;
+        		};
 ```

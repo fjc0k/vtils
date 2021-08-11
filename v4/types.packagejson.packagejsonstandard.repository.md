@@ -10,11 +10,11 @@ Location for the code repository.
 
 ```typescript
 repository?:
-		| string
-		| {
-			type: string;
-			url: string;
+        		| string
+        		| {
+            			type: string;
+            			url: string;
 
-			directory?: string;
-		};
+            			directory?: string;
+            		};
 ```

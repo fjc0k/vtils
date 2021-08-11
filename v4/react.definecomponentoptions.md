@@ -11,16 +11,16 @@
 ```typescript
 export declare type DefineComponentOptions<
 /**
- * 组件属性。
- */
+* 组件属性。
+*/
 TProps extends Record<string, any>, 
 /**
- * 是否转发 ref。
- */
+* 是否转发 ref。
+*/
 TForwardRef extends boolean, 
 /**
- * 要转发的 ref。
- */
+* 要转发的 ref。
+*/
 TRef extends any = never> = {
     defaultProps?: {
         [K in OptionalKeys<TProps>]?: TProps[K];

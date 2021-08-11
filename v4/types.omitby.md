@@ -10,9 +10,9 @@ Omit all properties of given type in object type
 
 ```typescript
 export declare type OmitBy<T, P> = Pick<
-  T,
-  {
+T,
+    {
     [K in keyof T]: T[K] extends P ? never : K;
-  }[keyof T]
+}[keyof T]
 >;
 ```

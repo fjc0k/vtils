@@ -17,28 +17,23 @@ export declare type FixedLengthArray<Element, Length extends number, ArrayProtot
 	ArrayPrototype,
 	Exclude<keyof ArrayPrototype, ArrayLengthMutationKeys>
 > & {
-	[index: number]: Element;
-	[Symbol.iterator]: () => IterableIterator<Element>;
-	readonly length: Length;
+    	[index: number]: Element;
+    	[Symbol.iterator]: () => IterableIterator<Element>;
+    	readonly length: Length;
 };
 ```
 
 ## Example
 
+\`\`\` import {<!-- -->FixedLengthArray<!-- -->} from 'type-fest';
 
-```
-import {FixedLengthArray} from 'type-fest';
+type FencingTeam = FixedLengthArray<!-- -->&lt;<!-- -->string, 3<!-- -->&gt;<!-- -->;
 
-type FencingTeam = FixedLengthArray<string, 3>;
+const guestFencingTeam: FencingTeam = \['Josh', 'Michael', 'Robert'\];
 
-const guestFencingTeam: FencingTeam = ['Josh', 'Michael', 'Robert'];
+const homeFencingTeam: FencingTeam = \['George', 'John'\]; //=<!-- -->&gt; error TS2322: Type string\[\] is not assignable to type 'FencingTeam'
 
-const homeFencingTeam: FencingTeam = ['George', 'John'];
-//=> error TS2322: Type string[] is not assignable to type 'FencingTeam'
+guestFencingTeam.push('Sam'); //=<!-- -->&gt; error TS2339: Property 'push' does not exist on type 'FencingTeam' \`\`\`
 
-guestFencingTeam.push('Sam');
-//=> error TS2339: Property 'push' does not exist on type 'FencingTeam'
-
-```
  Utilities
 

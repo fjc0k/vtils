@@ -10,6 +10,6 @@ The executable files that should be installed into the `PATH`<!-- -->.
 
 ```typescript
 bin?:
-		| string
-		| Record<string, string>;
+        		| string
+        		| Record<string, string>;
 ```

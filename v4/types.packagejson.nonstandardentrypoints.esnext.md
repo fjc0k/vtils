@@ -10,10 +10,10 @@ A module ID with untranspiled code that is the primary entry point to the progra
 
 ```typescript
 esnext?:
-		| string
-		| {
-			[moduleName: string]: string | undefined;
-			main?: string;
-			browser?: string;
-		};
+        		| string
+        		| {
+            			[moduleName: string]: string | undefined;
+            			main?: string;
+            			browser?: string;
+            		};
 ```

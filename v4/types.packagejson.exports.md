@@ -10,10 +10,10 @@ Entry points of a module, optionally with conditions and subpath exports.
 
 ```typescript
 export type Exports =
-	| string
-	| string[]
-	| {[key in ExportCondition]: Exports}
-	| {[key: string]: Exports};
+    	| string
+    	| string[]
+    	| {[key in ExportCondition]: Exports}
+    	| {[key: string]: Exports};
 ```
 <b>References:</b> [ExportCondition](./types.packagejson.exportcondition.md)<!-- -->, [Exports](./types.packagejson.exports.md)
 

@@ -10,32 +10,32 @@ Like Partial but recursive
 
 ```typescript
 export declare type PartialDeep<T> = T extends Builtin
-  ? T
-  : T extends Map<infer K, infer V>
-  ? Map<PartialDeep<K>, PartialDeep<V>>
-  : T extends ReadonlyMap<infer K, infer V>
-  ? ReadonlyMap<PartialDeep<K>, PartialDeep<V>>
-  : T extends WeakMap<infer K, infer V>
-  ? WeakMap<PartialDeep<K>, PartialDeep<V>>
-  : T extends Set<infer U>
-  ? Set<PartialDeep<U>>
-  : T extends ReadonlySet<infer U>
-  ? ReadonlySet<PartialDeep<U>>
-  : T extends WeakSet<infer U>
-  ? WeakSet<PartialDeep<U>>
-  : T extends Array<infer U>
-  ? T extends IsTuple<T>
-    ? {
-        [K in keyof T]?: PartialDeep<T[K]>;
-      }
-    : Array<PartialDeep<U>>
-  : T extends Promise<infer U>
-  ? Promise<PartialDeep<U>>
-  : T extends {}
-  ? {
-      [K in keyof T]?: PartialDeep<T[K]>;
-    }
-  : Partial<T>;
+? T
+: T extends Map<infer K, infer V>
+? Map<PartialDeep<K>, PartialDeep<V>>
+: T extends ReadonlyMap<infer K, infer V>
+? ReadonlyMap<PartialDeep<K>, PartialDeep<V>>
+: T extends WeakMap<infer K, infer V>
+? WeakMap<PartialDeep<K>, PartialDeep<V>>
+: T extends Set<infer U>
+? Set<PartialDeep<U>>
+: T extends ReadonlySet<infer U>
+? ReadonlySet<PartialDeep<U>>
+: T extends WeakSet<infer U>
+? WeakSet<PartialDeep<U>>
+: T extends Array<infer U>
+? T extends IsTuple<T>
+? {
+    [K in keyof T]?: PartialDeep<T[K]>;
+}
+: Array<PartialDeep<U>>
+: T extends Promise<infer U>
+? Promise<PartialDeep<U>>
+: T extends {}
+? {
+    [K in keyof T]?: PartialDeep<T[K]>;
+}
+: Partial<T>;
 ```
 <b>References:</b> [PartialDeep](./types.partialdeep.md)
 
