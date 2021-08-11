@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.34.3-beta.0](https://github.com/fjc0k/vtils/compare/v4.34.2...v4.34.3-beta.0) (2021-08-11)
+
+### Features
+
+- **loadResource:** 支持 hook ([2473759](https://github.com/fjc0k/vtils/commit/24737596f4c2a1933c3b1d14e9a09d244a151c54))
+- **loadResource:** 支持 hook、jsText、cssText ([b39a549](https://github.com/fjc0k/vtils/commit/b39a5494aac128926cb838ce95394418d98f71a7))
+- **utils:** 新增 getCurrentScript 返回当前正在运行的脚本所属的 `<script>` 元素 ([d2a93d8](https://github.com/fjc0k/vtils/commit/d2a93d831afacfb353740766d1e1b1c748098703))
+- **utils:** 新增 jsonp 发起 jsonp 请求 ([1c2ae89](https://github.com/fjc0k/vtils/commit/1c2ae897b105765861192eefa6d7022bb10a1761))
+
+### Bug Fixes
+
+- **deps:** update dependency antd to v4.16.10 ([a03a0c4](https://github.com/fjc0k/vtils/commit/a03a0c48c022baa471c2397e1642817b23b90865))
+- **deps:** update dependency antd to v4.16.11 ([2012ed1](https://github.com/fjc0k/vtils/commit/2012ed1649348c7d14c686a404e45f89a233a4d7))
+- **deps:** update dependency antd to v4.16.8 ([c553a02](https://github.com/fjc0k/vtils/commit/c553a026999066346ca2f00f56d2f3851e04140b))
+- **deps:** update dependency antd to v4.16.9 ([32541a9](https://github.com/fjc0k/vtils/commit/32541a93c10294c990d5fcf46848a617bb8317b2))
+- **loadResource:** 加载 js 默认走 async ([4e944ac](https://github.com/fjc0k/vtils/commit/4e944acbf7a8ab64354b6d644ef96e1a34ab364f))
+- yup 内部维护 ([a49dbdd](https://github.com/fjc0k/vtils/commit/a49dbddc01fe8401ac347f83ca0124c85c346794))
+
 ### [4.34.2](https://github.com/fjc0k/vtils/compare/v4.34.1...v4.34.2) (2021-07-14)
 
 ### Bug Fixes
