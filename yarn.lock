@@ -1472,62 +1472,62 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@tarojs/api@3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@tarojs/api/-/api-3.3.2.tgz#b184ba9c5fff9d6f1843fa970231dc6b884492c6"
-  integrity sha512-8PvXZnKrnx7FhK4VQeJSYkM/mrUAz7ClfiGGA1KvFhlxrzgu6D3ZNboyLX6OOYPI7g2PJDjzVxp1vuT02Lf0ig==
+"@tarojs/api@3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@tarojs/api/-/api-3.3.3.tgz#8e1f96418f1b7252ebb0ce7afd66016ac1b50d56"
+  integrity sha512-IpKLTjZA7FyPzLZuk7z+4XnMrQEpCcHoUnN7mD6P3Tjgd5JozDZUtRpA5KnFJVB95QMPljf1x91x2wMx1jppfQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@tarojs/runtime" "3.3.2"
+    "@tarojs/runtime" "3.3.3"
 
-"@tarojs/router@3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-3.3.2.tgz#3b65ef4b74143e5a2f3d4358cdd910ca4b8ccfb1"
-  integrity sha512-9RNyonG6hojlsTHH4omMNjKm4xpSl+mGtVYzfVZfJuDSt+Zz9DRNGKUxEJf/vATCNHROSY/z3khpij6xvBtMoQ==
+"@tarojs/router@3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-3.3.3.tgz#f22c8bbc8f913b6cd7b01ed42fe55b99806ac7c2"
+  integrity sha512-nqHJ5C3GISYr6Nk2P+IbwvqIryc0jiFc/WIfZSeBKCzk5S3W+7t1y6zZSiOY4XbHYmI5A4kldACXi0eeuzsizA==
   dependencies:
-    "@tarojs/runtime" "3.3.2"
+    "@tarojs/runtime" "3.3.3"
     history "^5.0.0"
     query-string "^6.13.8"
     universal-router "^8.3.0"
     url-parse "^1.4.7"
 
-"@tarojs/runtime@3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.3.2.tgz#6631fa8ef0b77e9ec16826367544dacba0e01ec3"
-  integrity sha512-3slxRfyywjs39ZIcYRq+YwjrRLLTTXxIrWyO7GYymW2Pc2jnC2tHBhuIDwT2/vHOfgIEPbjxES6Rs/TTZrI0NQ==
+"@tarojs/runtime@3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.3.3.tgz#f5ec81f2ba8a4de6fb5254a38439113d08d0b285"
+  integrity sha512-16mE53E82frpzMxVg2bXT8HFu1nvZPNRPVZ5wQ2sg0b401PExfuBwI6/7W21N1VE4F9iwMLnM/31TXYlWqD4ow==
   dependencies:
-    "@tarojs/shared" "3.3.2"
+    "@tarojs/shared" "3.3.3"
     inversify "5.1.1"
     lodash-es "4.17.15"
     reflect-metadata "^0.1.13"
 
-"@tarojs/shared@3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@tarojs/shared/-/shared-3.3.2.tgz#23d0460ecc081b047ea397a269eb11c7555688d0"
-  integrity sha512-TLBY6wE4Zt9O7tZ9NsjjM28oPCcTEFo5oQwtzSyzUNt2P4DhqbPX674hkeLGDMZiKobiEQNFa+f9Bz3ru+k9qg==
+"@tarojs/shared@3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@tarojs/shared/-/shared-3.3.3.tgz#63448dd7d161e3bd42833b4666701450d451b1b3"
+  integrity sha512-NfOG8VLFRu4fxGSHGizRw8UR29w2x06nggnFcqurn/kAZ7laeoCn0rhQ0/yrD7NlMNMPca+P9N3AgfLl4VT9tg==
 
-"@tarojs/taro-h5@3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-3.3.2.tgz#4f7c6e611155e54f0ad1e24f30c83cad59fd214d"
-  integrity sha512-iXfP7FCroVXIwHAuN8Dl5DbgLPlg7CQ6TBPhgQx8q/UnjovLz9cghr22IIN0xH7r4SeQ4aNSBb6MCwKg6M1SXw==
+"@tarojs/taro-h5@3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-3.3.3.tgz#09305b0128771f6d59e8b1f21b644ecd42c1f2c0"
+  integrity sha512-GHYopoPW91yVEF63G0PhBl8nYsFQ/IT7OU1ADiiwqHfTFmAJnlwF/9uHIbhCQJTIorsggYGfMHKBjh5AEbFpwQ==
   dependencies:
-    "@tarojs/api" "3.3.2"
-    "@tarojs/router" "3.3.2"
-    "@tarojs/runtime" "3.3.2"
+    "@tarojs/api" "3.3.3"
+    "@tarojs/router" "3.3.3"
+    "@tarojs/runtime" "3.3.3"
     base64-js "^1.3.0"
     jsonp-retry "^1.0.3"
     mobile-detect "^1.4.2"
     raf "^3.4.1"
     whatwg-fetch "^3.4.0"
 
-"@tarojs/taro@3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-3.3.2.tgz#7451345221cc034f09e0e1029e3082aae50e2732"
-  integrity sha512-IisKUYSfMOVy4S5aZwXpPNVfUusX0MkN7vrxtQn2Kk759p0wJIXG7Ymq4rauJbdcW144WLP3B3LChA9IhR6yqA==
+"@tarojs/taro@3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-3.3.3.tgz#b94f29090f35ce22b9bba149551e4d5fcf0fe525"
+  integrity sha512-1+JDEhjN9aFmfx+stGDCTwU1/tmYiDI1wNoCRX2QyOBUVXC4bzcj7qjU3xbn2mChNjVYzbCLSod7T0jOCs+eFw==
   dependencies:
-    "@tarojs/api" "3.3.2"
-    "@tarojs/runtime" "3.3.2"
-    "@tarojs/taro-h5" "3.3.2"
+    "@tarojs/api" "3.3.3"
+    "@tarojs/runtime" "3.3.3"
+    "@tarojs/taro-h5" "3.3.3"
 
 "@testing-library/dom@^8.0.0":
   version "8.1.0"

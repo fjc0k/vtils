@@ -130,7 +130,7 @@
     "@rollup/plugin-commonjs": "20.0.0",
     "@rollup/plugin-node-resolve": "13.0.4",
     "@rollup/plugin-virtual": "2.0.3",
-    "@tarojs/taro": "3.3.2",
+    "@tarojs/taro": "3.3.3",
     "@testing-library/react": "12.0.0",
     "@testing-library/react-hooks": "7.0.1",
     "@types/fs-extra": "9.0.12",
