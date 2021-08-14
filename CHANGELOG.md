@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.34.3](https://github.com/fjc0k/vtils/compare/v4.34.3-beta.0...v4.34.3) (2021-08-14)
+
 ### [4.34.3-beta.0](https://github.com/fjc0k/vtils/compare/v4.34.2...v4.34.3-beta.0) (2021-08-11)
 
 ### Features
