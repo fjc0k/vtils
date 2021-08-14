@@ -1,5 +1,6 @@
 import commonjs from '@rollup/plugin-commonjs'
 import dts from 'rollup-plugin-dts'
+import fs from 'fs-extra'
 import globby from 'globby'
 import path from 'path'
 import yargs from 'yargs'
@@ -7,8 +8,6 @@ import { babel } from '@rollup/plugin-babel'
 import { getBabelConfig } from 'haoma'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import { rollup } from 'rollup'
-// @ts-ignore
-import virtual from '@rollup/plugin-virtual'
 
 async function main() {
   const argv: {
@@ -28,7 +27,7 @@ async function main() {
     onlyFiles: true,
   })
 
-  const indexFile = 'index.ts'
+  const indexFile = path.join(__dirname, '../dist/__entry__/index.ts')
   const indexContent = `
     ${files.map(file => `export * from '${file}'`).join('\n')}
 
@@ -37,11 +36,12 @@ async function main() {
         const [type, mo] = mod.split('.')
         return `export { ${mo} } from '${path.join(
           __dirname,
-          `../src/${type}/index.ts`,
+          `../src/${type}/index`,
         )}'`
       })
       .join('\n')}
   `
+  await fs.outputFile(indexFile, indexContent)
 
   const bundle = await rollup({
     input: indexFile,
@@ -59,9 +59,6 @@ async function main() {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.es6', '.es', '.mjs'],
         babelHelpers: 'runtime',
       }),
-      virtual({
-        [indexFile]: indexContent,
-      }),
     ],
   })
   await bundle.write({
@@ -72,12 +69,7 @@ async function main() {
 
   const bundleDts = await rollup({
     input: indexFile,
-    plugins: [
-      dts(),
-      virtual({
-        [indexFile]: indexContent,
-      }),
-    ],
+    plugins: [dts()],
   })
   await bundleDts.write({
     file: `dist/${argv.target}/${argv.target}.d.ts`,
