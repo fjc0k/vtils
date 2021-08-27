@@ -32,6 +32,7 @@ export function getCurrentScript(): HTMLScriptElement | null {
     let ieStackRegExp = /.*at [^(]*\((.*):(.+):(.+)\)$/gi,
       ffStackRegExp = /@([^@]*):(\d+):(\d+)\s*$/gi,
       stackDetails =
+        // @ts-ignore
         ieStackRegExp.exec(err.stack) || ffStackRegExp.exec(err.stack),
       scriptLocation = (stackDetails && stackDetails[1]) || false,
       line = (stackDetails && stackDetails[2]) || false,
