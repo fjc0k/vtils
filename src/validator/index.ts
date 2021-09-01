@@ -6,7 +6,8 @@
 
 /* istanbul ignore file */
 
-// @index(['./**/*.ts', '!**/*.test.*', '!./yupTypes', '!**/*.d.ts'], f => `export * from '${f.path}'`)
+// @index(['./**/*.ts', '!**/*.test.*', '!./yupTypes'], f => `export * from '${f.path.replace(/\.d$/, '')}'`)
 export * from './locale/enUS'
 export * from './locale/zhCN'
+export * from './yup'
 // @endindex
