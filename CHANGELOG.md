@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.35.0](https://github.com/fjc0k/vtils/compare/v4.34.3...v4.35.0) (2021-09-02)
+
+### Features
+
+- **utils:** 新增 moveUp, moveDown, moveToTop, moveToBottom ([27eaf97](https://github.com/fjc0k/vtils/commit/27eaf9771e97726d55ddf28678027c5fce73e41f))
+
 ### [4.34.3](https://github.com/fjc0k/vtils/compare/v4.34.3-beta.0...v4.34.3) (2021-08-14)
 
 ### [4.34.3-beta.0](https://github.com/fjc0k/vtils/compare/v4.34.2...v4.34.3-beta.0) (2021-08-11)
