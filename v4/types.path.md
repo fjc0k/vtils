@@ -4,24 +4,15 @@
 
 ## Path type
 
+> Warning: This API is now obsolete.
+> 
+> 使用 `DotPath` 代替
+> 
+
 获取对象的路径。最多支持 7 级路径。
 
 <b>Signature:</b>
 
 ```typescript
-export declare type Path<T, L> = PathArray<T, L> | keyof T;
+export declare type Path<T = any, L = any> = string | string[];
 ```
-
-## Example
-
-
-```typescript
-function get<T, L extends Path<T, L>>(
-  object: T,
-  path: L,
-): PathValue<T, L> {
-  // ...
-}
-
-```
-

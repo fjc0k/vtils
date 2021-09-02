@@ -4,25 +4,15 @@
 
 ## PathValue type
 
+> Warning: This API is now obsolete.
+> 
+> 使用 `DotPathValue` 代替
+> 
+
 获取对象的路径值。最多支持 7 级路径。
 
 <b>Signature:</b>
 
 ```typescript
-export declare type PathValue<T, L extends Path<T, L>> = L extends PathArray<T, L> ? PathArrayValue<T, L> : L extends keyof T ? T[L] : any;
+export declare type PathValue<T = any, L = any> = any;
 ```
-<b>References:</b> [Path](./types.path.md)
-
-## Example
-
-
-```typescript
-function get<T, L extends Path<T, L>>(
-  object: T,
-  path: L,
-): PathValue<T, L> {
-  // ...
-}
-
-```
-

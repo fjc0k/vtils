@@ -71,6 +71,10 @@ rich://{"url":"***","desc":"***"}
 |  [loadResource(url, options)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
+|  [moveDown(arr, from, step)](./utils.movedown.md) | 原地下移数组中的某个元素。 |
+|  [moveToBottom(arr, from)](./utils.movetobottom.md) | 原地置底数组中的某个元素。 |
+|  [moveToTop(arr, from)](./utils.movetotop.md) | 原地置顶数组中的某个元素。 |
+|  [moveUp(arr, from, step)](./utils.moveup.md) | 原地上移数组中的某个元素。 |
 |  [onceMeanwhile(fn)](./utils.oncemeanwhile.md) | 同一时间对函数的调用只会触发一次运行。 |
 |  [parseDataUrl(dataUrl)](./utils.parsedataurl.md) | 解析 Data URL。 |
 |  [parseUrlQueryString(query, options)](./utils.parseurlquerystring.md) | 解析 url 查询字符串。<!-- -->兼容以 <code>?</code> 开头的查询字符串，因此你可以直接传入 <code>location.search</code> 的值。 |
