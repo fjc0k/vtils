@@ -21,7 +21,9 @@
     "email": "fjc0kb@gmail.com",
     "url": "https://github.com/fjc0k"
   },
-  "sideEffects": false,
+  "sideEffects": [
+    "./validator/yup.js"
+  ],
   "exports": {
     ".": {
       "require": "./_cjs/utils/index.js",
