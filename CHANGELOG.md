@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.35.1](https://github.com/fjc0k/vtils/compare/v4.35.0...v4.35.1) (2021-09-09)
+
+### Bug Fixes
+
+- 声明 yup.js 有副作用，防止 webpack 将增强代码删除 ([97ab1d3](https://github.com/fjc0k/vtils/commit/97ab1d3167b8b4a1b65a5be0572f939ed6d23842))
+
 ## [4.35.0](https://github.com/fjc0k/vtils/compare/v4.34.3...v4.35.0) (2021-09-02)
 
 ### Features
