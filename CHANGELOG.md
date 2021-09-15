@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.36.0](https://github.com/fjc0k/vtils/compare/v4.35.1...v4.36.0) (2021-09-15)
+
+### Features
+
+- **utils:** 新增 roundTo 保留 n 位小数下的 x 舍 y 入 ([aeb6886](https://github.com/fjc0k/vtils/commit/aeb6886a95f100380b50d21db963beb690e63376))
+
 ### [4.35.1](https://github.com/fjc0k/vtils/compare/v4.35.0...v4.35.1) (2021-09-09)
 
 ### Bug Fixes
