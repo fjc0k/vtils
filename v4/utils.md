@@ -84,6 +84,7 @@ rich://{"url":"***","desc":"***"}
 |  [pMap(list, callback)](./utils.pmap.md) | <code>Promise.all(data.map(callback))</code> 的简写。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
 |  [rot13(str)](./utils.rot13.md) | 回转 13 位替换式密码。 |
+|  [roundTo(number, precision, threshold)](./utils.roundto.md) | 保留 n 位小数下的 x 舍 y 入。 |
 |  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
 |  [sampleBy(collection, iteratee)](./utils.sampleby.md) | 从集合中随机获得一个元素的迭代值。 |
 |  [sampleBy(collection, iteratee)](./utils.sampleby_1.md) |  |
