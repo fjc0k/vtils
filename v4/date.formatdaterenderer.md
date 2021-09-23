@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type FormatDateRenderer = (placeholders: typeof FormatDatePlaceholder) => string;
+export declare type FormatDateRenderer = ((placeholders: typeof FormatDatePlaceholder) => string) | string;
 ```
 <b>References:</b> [FormatDatePlaceholder](./date.formatdateplaceholder.md)
 
