@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.37.0](https://github.com/fjc0k/vtils/compare/v4.36.0...v4.37.0) (2021-09-23)
+
+### Features
+
+- **formatDate:** 渲染器支持字符串 ([431b16e](https://github.com/fjc0k/vtils/commit/431b16e31d5b6d4af483619c2436b7ff527d5049))
+
 ## [4.36.0](https://github.com/fjc0k/vtils/compare/v4.35.1...v4.36.0) (2021-09-15)
 
 ### Features
