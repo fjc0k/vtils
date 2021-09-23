@@ -74,9 +74,9 @@ export enum FormatDatePlaceholder {
  * @param placeholders 占位符
  * @returns 返回渲染字符串
  */
-export type FormatDateRenderer = (
-  placeholders: typeof FormatDatePlaceholder,
-) => string
+export type FormatDateRenderer =
+  | ((placeholders: typeof FormatDatePlaceholder) => string)
+  | string
 
 /**
  * 格式化日期。
@@ -98,5 +98,10 @@ export function formatDate(date: Date | number, renderer: FormatDateRenderer) {
     date *= 1000
   }
 
-  return lightFormat(date, renderer(FormatDatePlaceholder))
+  return lightFormat(
+    date,
+    typeof renderer === 'string'
+      ? renderer.replace(/m/g, 'M').replace(/h/g, 'H').replace(/i/g, 'm')
+      : renderer(FormatDatePlaceholder),
+  )
 }
