@@ -3400,6 +3400,11 @@ date-fns@^2.17.0:
   resolved "https://registry.nlark.com/date-fns/download/date-fns-2.23.0.tgz#4e886c941659af0cf7b30fafdd1eaa37e88788a9"
   integrity sha1-TohslBZZrwz3sw+v3R6qN+iHiKk=
 
+date-fns@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.nlark.com/date-fns/download/date-fns-2.24.0.tgz#7d86dc0d93c87b76b63d213b4413337cfd1c105d"
+  integrity sha1-fYbcDZPIe3a2PSE7RBMzfP0cEF0=
+
 dateformat@^3.0.0:
   version "3.0.3"
   resolved "https://registry.npm.taobao.org/dateformat/download/dateformat-3.0.3.tgz?cache=0&sync_timestamp=1612037942443&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdateformat%2Fdownload%2Fdateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
