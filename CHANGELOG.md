@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.39.0](https://github.com/fjc0k/vtils/compare/v4.38.0...v4.39.0) (2021-09-24)
+
+### Features
+
+- **utils:** 新增 loopUntil 循环调用某个函数直至达到某个条件后返回调用结果 ([aaa25c0](https://github.com/fjc0k/vtils/commit/aaa25c05a8de2f0a911aec0aa26fb5539b946511))
+
 ## [4.38.0](https://github.com/fjc0k/vtils/compare/v4.37.0...v4.38.0) (2021-09-24)
 
 ### Features
