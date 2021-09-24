@@ -43,6 +43,7 @@ rich://{"url":"***","desc":"***"}
 |  [createSubmit(options)](./utils.createsubmit.md) | 创建提交类行为。 |
 |  [createUrlQueryString(parameters, options)](./utils.createurlquerystring.md) | 创建 url 查询字符串。 |
 |  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
+|  [defaultIndexTo(index, defaultIndex)](./utils.defaultindexto.md) | 设置默认索引。当前索引为 <code>-1</code> 或 <code>NaN</code> 时会使用默认索引。 |
 |  [formatBytes(value)](./utils.formatbytes.md) | 格式化字节数，以 1024 作为千字节数。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
 |  [getCurrentScript()](./utils.getcurrentscript.md) | 返回当前正在运行的脚本所属的 <code>&lt;script&gt;</code> 元素。有两点限制：<!-- -->- 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 <code>null</code>。 |
