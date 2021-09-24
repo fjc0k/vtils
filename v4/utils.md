@@ -12,6 +12,7 @@
 |  --- | --- |
 |  [DataPacker](./utils.datapacker.md) | 数据打包器。 |
 |  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TListeners 事件名称及其对应的回调描述 |
+|  [LoopUntilRetryLimitExceededError](./utils.loopuntilretrylimitexceedederror.md) |  |
 |  [RichUrl](./utils.richurl.md) | 富链接，同普通链接相比，富链接可包含一些描述信息。<!-- -->结构描述：
 ```text
 rich://{"url":"***","desc":"***"}
@@ -70,6 +71,7 @@ rich://{"url":"***","desc":"***"}
 |  [jsonp(url, keyOfCallbackName)](./utils.jsonp.md) | 发起 jsonp 请求。 |
 |  [loadCss(urlOrContent)](./utils.loadcss.md) | 加载 CSS 样式，支持链接和内容。 |
 |  [loadResource(url, options)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
+|  [loopUntil(fn, condition, options)](./utils.loopuntil.md) | 循环调用某个函数直至达到某个条件后返回调用结果。 |
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
 |  [moveDown(arr, from, step)](./utils.movedown.md) | 原地下移数组中的某个元素。 |
@@ -109,6 +111,7 @@ rich://{"url":"***","desc":"***"}
 |  [LoadCssResult](./utils.loadcssresult.md) |  |
 |  [LoadResourceOptions](./utils.loadresourceoptions.md) |  |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
+|  [LoopUntilOptions](./utils.loopuntiloptions.md) |  |
 |  [ParseDataUrlResult](./utils.parsedataurlresult.md) |  |
 |  [ParsedFileRichUrl](./utils.parsedfilerichurl.md) |  |
 |  [ParsedRichUrl](./utils.parsedrichurl.md) |  |
