@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.38.0](https://github.com/fjc0k/vtils/compare/v4.37.0...v4.38.0) (2021-09-24)
+
+### Features
+
+- **utils:** 新增 defaultIndexTo 设置索引的默认值 ([7b2f359](https://github.com/fjc0k/vtils/commit/7b2f359e26988552a19fb2ad70bc7d496cee3a73))
+
 ## [4.37.0](https://github.com/fjc0k/vtils/compare/v4.36.0...v4.37.0) (2021-09-23)
 
 ### Features
