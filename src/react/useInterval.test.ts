@@ -60,11 +60,11 @@ describe('useInterval', () => {
         () => {
           i = i + 1
         },
-        10,
-        28,
+        5,
+        16,
       ),
     )
-    await wait(50)
+    await wait(30)
     expect(i).toBe(3)
   })
 
