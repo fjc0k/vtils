@@ -139,9 +139,8 @@ declare module 'yup/es' {
     when(builder: (value: T, schema: this) => this): this
 
     test(
-      name: SchemaTestOptions<this, T>['name'],
-      message: SchemaTestOptions<this, T>['message'],
-      test: SchemaTestOptions<this, T>['test'],
+      test: SchemaTestOptions<this, T>['test'] | RegExp,
+      message?: SchemaTestOptions<this, T>['message'],
     ): this
 
     test<TParams = {}>(options: SchemaTestOptions<this, T, TParams>): this

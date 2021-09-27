@@ -1,5 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`yup test 第一个参数可传函数或正则 1`] = `
+Object {
+  "data": Object {
+    "name": "de",
+    "pass": "dss",
+  },
+  "error": [ValidationError: 姓名应该包含f],
+}
+`;
+
+exports[`yup test 第一个参数可传函数或正则 2`] = `
+Object {
+  "data": Object {
+    "name": "defl",
+    "pass": "dss",
+  },
+  "error": [ValidationError: 密码长度应大于10],
+}
+`;
+
+exports[`yup test 第一个参数可传函数或正则 3`] = `
+Object {
+  "data": Object {
+    "name": "defl",
+    "pass": "dssdllsal;;",
+  },
+}
+`;
+
 exports[`yup validateInOrder 正常: 姓名必填 1`] = `[ValidationError: 姓名必填]`;
 
 exports[`yup validateInOrder 正常: 密码有误 1`] = `[ValidationError: 密码必须大于或等于100]`;

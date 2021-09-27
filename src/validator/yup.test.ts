@@ -178,4 +178,33 @@ describe('yup', () => {
       }
     >()
   })
+
+  test('test 第一个参数可传函数或正则', () => {
+    const rule = yup.object({
+      name: yup.string().label('姓名').required().test(/f/, '姓名应该包含f'),
+      pass: yup
+        .string()
+        .label('密码')
+        .required()
+        .test(value => value.length > 10, '密码长度应大于10'),
+    })
+    expect(
+      rule.validatePlusSync({
+        name: 'de',
+        pass: 'dss',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      rule.validatePlusSync({
+        name: 'defl',
+        pass: 'dss',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      rule.validatePlusSync({
+        name: 'defl',
+        pass: 'dssdllsal;;',
+      }),
+    ).toMatchSnapshot()
+  })
 })

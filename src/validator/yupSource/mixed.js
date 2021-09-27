@@ -435,16 +435,24 @@ const proto = (SchemaType.prototype = {
   test(...args) {
     let opts
 
-    if (args.length === 1) {
-      if (typeof args[0] === 'function') {
-        opts = { test: args[0] }
+    if (typeof args[0] === 'function') {
+      opts = { test: args[0], message: args[1] }
+    } else if (args[0] instanceof RegExp) {
+      opts = { test: value => args[0].test(value), message: args[1] }
+    }
+
+    if (!opts) {
+      if (args.length === 1) {
+        if (typeof args[0] === 'function') {
+          opts = { test: args[0] }
+        } else {
+          opts = args[0]
+        }
+      } else if (args.length === 2) {
+        opts = { name: args[0], test: args[1] }
       } else {
-        opts = args[0]
+        opts = { name: args[0], message: args[1], test: args[2] }
       }
-    } else if (args.length === 2) {
-      opts = { name: args[0], test: args[1] }
-    } else {
-      opts = { name: args[0], message: args[1], test: args[2] }
     }
 
     if (opts.message === undefined) opts.message = locale.default
