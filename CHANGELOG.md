@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.40.0](https://github.com/fjc0k/vtils/compare/v4.39.0...v4.40.0) (2021-09-27)
+
+### Features
+
+- **yup:** test 第一个参数可传函数或正则并更新类型定义 ([d68da3c](https://github.com/fjc0k/vtils/commit/d68da3c52e4d499045d8e505c5ba9ed0a16eebac))
+
 ## [4.39.0](https://github.com/fjc0k/vtils/compare/v4.38.0...v4.39.0) (2021-09-24)
 
 ### Features
