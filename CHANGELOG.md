@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.41.1](https://github.com/fjc0k/vtils/compare/v4.41.0...v4.41.1) (2021-09-28)
+
+### Bug Fixes
+
+- **devOrProd:** 类型优化 ([449f957](https://github.com/fjc0k/vtils/commit/449f957e7103f7aca14668a4abf672bfd6dfcd9e))
+
 ## [4.41.0](https://github.com/fjc0k/vtils/compare/v4.40.1...v4.41.0) (2021-09-28)
 
 ### Features
