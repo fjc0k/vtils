@@ -11,17 +11,17 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function devOrProd<T>(devValue: T | (() => T), prodValue: T | (() => T)): T;
+export declare function devOrProd<R, T extends R, F extends () => R>(devValue: T | F, prodValue: T | F): R;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  devValue | T \| (() =&gt; T) | 开发环境返回的值或调用的函数 |
-|  prodValue | T \| (() =&gt; T) | 生产环境返回的值或调用的函数 |
+|  devValue | T \| F | 开发环境返回的值或调用的函数 |
+|  prodValue | T \| F | 生产环境返回的值或调用的函数 |
 
 <b>Returns:</b>
 
-T
+R
 
