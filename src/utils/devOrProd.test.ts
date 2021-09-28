@@ -42,4 +42,13 @@ describe('devOrProd', () => {
       ),
     ).toBe(4)
   })
+
+  test('正确推导类型', () => {
+    const obj: {
+      x: 'ppp' | 'ff' | '00'
+    } = {
+      x: devOrProd('00', () => 'ff'),
+    }
+    expect(obj).toBe(obj)
+  })
 })
