@@ -45,6 +45,7 @@ rich://{"url":"***","desc":"***"}
 |  [createUrlQueryString(parameters, options)](./utils.createurlquerystring.md) | 创建 url 查询字符串。 |
 |  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
 |  [defaultIndexTo(index, defaultIndex)](./utils.defaultindexto.md) | 设置默认索引。当前索引为 <code>-1</code> 或 <code>NaN</code> 时会使用默认索引。 |
+|  [devOrProd(devValue, prodValue)](./utils.devorprod.md) | 开发环境和生产环境返回不同的值或调用不同的函数。<code>process.env.NODE_ENV</code> 为空值、<code>production</code>、<code>prod</code> 时被认为是生产环境，否则是开发环境。 |
 |  [formatBytes(value)](./utils.formatbytes.md) | 格式化字节数，以 1024 作为千字节数。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
 |  [getCurrentScript()](./utils.getcurrentscript.md) | 返回当前正在运行的脚本所属的 <code>&lt;script&gt;</code> 元素。有两点限制：<!-- -->- 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 <code>null</code>。 |
