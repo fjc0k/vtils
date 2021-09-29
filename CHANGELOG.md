@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.42.0](https://github.com/fjc0k/vtils/compare/v4.41.1...v4.42.0) (2021-09-29)
+
+### Features
+
+- **utils:** 新增 chunkEqual ([eb6f101](https://github.com/fjc0k/vtils/commit/eb6f1011d8aa0350c1cf5e37c733802c398fe25e))
+
+### Bug Fixes
+
+- **ii:** 优化类型推导 ([98d388d](https://github.com/fjc0k/vtils/commit/98d388d4aaabeda26a7949a18717d23c44e7537d))
+
 ### [4.41.1](https://github.com/fjc0k/vtils/compare/v4.41.0...v4.41.1) (2021-09-28)
 
 ### Bug Fixes
