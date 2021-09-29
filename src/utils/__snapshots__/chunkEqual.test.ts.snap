@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`chunkEqual 表现正常 1`] = `Array []`;
+
+exports[`chunkEqual 表现正常 2`] = `
+Array [
+  Array [
+    1,
+    2,
+  ],
+]
+`;
+
+exports[`chunkEqual 表现正常 3`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+  ],
+]
+`;
+
+exports[`chunkEqual 表现正常 4`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    100,
+    100,
+  ],
+]
+`;
+
+exports[`chunkEqual 表现正常 5`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+    5,
+  ],
+]
+`;
+
+exports[`chunkEqual 表现正常 6`] = `
+Array [
+  Array [
+    1,
+  ],
+  Array [
+    2,
+  ],
+  Array [
+    3,
+  ],
+  Array [
+    4,
+  ],
+  Array [
+    5,
+  ],
+]
+`;
+
+exports[`chunkEqual 表现正常 7`] = `
+Array [
+  Array [
+    1,
+    2,
+  ],
+  Array [
+    3,
+    4,
+  ],
+  Array [
+    5,
+    5,
+  ],
+]
+`;
+
+exports[`chunkEqual 表现正常 8`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+    4,
+    5,
+  ],
+]
+`;
+
+exports[`chunkEqual 表现正常 9`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+    4,
+  ],
+  Array [
+    5,
+    5,
+    6,
+    7,
+  ],
+]
+`;
