@@ -11,7 +11,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function ii<F extends AnyFunction_2>(fn: F): ReturnType<F>;
+export declare function ii<R, F extends () => R = () => R>(fn: F): R;
 ```
 
 ## Parameters
@@ -22,7 +22,7 @@ export declare function ii<F extends AnyFunction_2>(fn: F): ReturnType<F>;
 
 <b>Returns:</b>
 
-ReturnType&lt;F&gt;
+R
 
 返回被调用函数的返回值
 

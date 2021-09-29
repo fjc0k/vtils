@@ -38,6 +38,7 @@ rich://{"url":"***","desc":"***"}
 |  [base64UrlEncode(value)](./utils.base64urlencode.md) | 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。 |
 |  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
 |  [chooseFile(accept, multiple)](./utils.choosefile.md) | 选择文件。 |
+|  [chunkEqual(array, size, filler)](./utils.chunkequal.md) | 类似 <code>chunk</code>，但当每组条目数量不一致时会在最后一组添加填充值以达到每组条目数量一致。 |
 |  [cloneDeepFast(value, ignore)](./utils.clonedeepfast.md) | 深克隆快速版。 |
 |  [constantCase(text)](./utils.constantcase.md) | 转换文本为大写字符串，单词之间带有下划线。 |
 |  [copyTextToClipboard(text, options)](./utils.copytexttoclipboard.md) | 复制文本到剪切板。 |
