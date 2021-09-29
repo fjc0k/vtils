@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.42.1](https://github.com/fjc0k/vtils/compare/v4.42.0...v4.42.1) (2021-09-29)
+
+### Bug Fixes
+
+- **chunkEqual:** 修复临界值错误 ([1a08efe](https://github.com/fjc0k/vtils/commit/1a08efefb1bf35abdae480cb78422e42db11f92c))
+
 ## [4.42.0](https://github.com/fjc0k/vtils/compare/v4.41.1...v4.42.0) (2021-09-29)
 
 ### Features
