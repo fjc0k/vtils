@@ -1,5 +1,3 @@
-import { AnyFunction } from '../types'
-
 /**
  * 立即调用函数并返回其返回值。
  *
@@ -12,6 +10,6 @@ import { AnyFunction } from '../types'
  * ii(() => 1) // => 1
  * ```
  */
-export function ii<F extends AnyFunction>(fn: F): ReturnType<F> {
+export function ii<R, F extends () => R = () => R>(fn: F): R {
   return fn()
 }
