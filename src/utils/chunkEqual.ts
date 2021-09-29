@@ -12,10 +12,12 @@ export function chunkEqual<T>(
   size: number,
   filler: (index: number) => T,
 ): T[][] {
-  if (1 < size && size < array.length) {
+  const len = array.length
+  const remain = len % size
+  if (remain !== 0 && size < array.length) {
     array = array.slice()
-    for (let i = 0, l = array.length, n = size - (l % size); i < n; i++) {
-      array.push(filler(l + i))
+    for (let i = 0, n = size - remain; i < n; i++) {
+      array.push(filler(len + i))
     }
   }
   return chunk(array, size)
