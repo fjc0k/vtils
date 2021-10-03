@@ -1,5 +1,5 @@
-declare module 'yup/es' {
-  export interface Lazy extends MixedSchema {}
+import { MixedSchema } from './mixed'
 
-  export function lazy<X extends MixedSchema>(fn: (value: any) => X): Lazy
-}
+export interface Lazy extends MixedSchema {}
+
+export declare function lazy<X extends MixedSchema>(fn: (value: any) => X): Lazy

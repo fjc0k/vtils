@@ -1,5 +1,4 @@
+import { Locale } from './Locale'
 import { PartialDeep } from '../../types'
 
-declare module 'yup/es' {
-  export function setLocale(locale: PartialDeep<Locale>): void
-}
+export declare function setLocale(locale: PartialDeep<Locale>): void

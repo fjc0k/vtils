@@ -1,24 +1,21 @@
-declare module 'yup/es' {
-  export class ValidationError {
-    value: any
+import { LocaleValue, LocaleValueFnParams } from './Locale'
 
-    path: string
+export declare class ValidationError {
+  value: any
 
-    type: string
+  path: string
 
-    errors: string[]
+  type: string
 
-    inner: any[]
+  errors: string[]
 
-    message: string
+  inner: any[]
 
-    stack?: any
+  message: string
 
-    static isError<T>(err: T): boolean
+  stack?: any
 
-    static formatError(
-      message: LocaleValue,
-      params: LocaleValueFnParams,
-    ): string
-  }
+  static isError<T>(err: T): boolean
+
+  static formatError(message: LocaleValue, params: LocaleValueFnParams): string
 }

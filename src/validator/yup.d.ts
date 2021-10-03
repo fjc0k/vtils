@@ -1,4 +1,3 @@
-import './yupTypes'
-import * as yup from 'yup/es'
+import * as yup from './yupTypes'
 
 export { yup }

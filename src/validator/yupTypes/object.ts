@@ -1,27 +1,22 @@
-declare module 'yup/es' {
-  export interface ObjectSchema<T extends {} = {}> extends MixedSchema<T> {
-    shape(
-      fields: GetObjectSchema<T>,
-      noSortEdges?: Array<[string, string]>,
-    ): this
+import { GetObjectSchema, MixedSchema, SchemaValidateOptions } from './mixed'
+import { ObjectLocale } from './Locale'
 
-    from(fromKey: keyof T, toKey: string, alias?: boolean): this
+export interface ObjectSchema<T extends {} = {}> extends MixedSchema<T> {
+  shape(fields: GetObjectSchema<T>, noSortEdges?: Array<[string, string]>): this
 
-    noUnknown(
-      onlyKnownKeys?: boolean,
-      message?: ObjectLocale['noUnknown'],
-    ): this
+  from(fromKey: keyof T, toKey: string, alias?: boolean): this
 
-    camelCase(): this
+  noUnknown(onlyKnownKeys?: boolean, message?: ObjectLocale['noUnknown']): this
 
-    constantCase(): this
+  camelCase(): this
 
-    validateInOrder(value: T, options?: SchemaValidateOptions): Promise<T>
+  constantCase(): this
 
-    validateInOrderSync(value: T, options?: SchemaValidateOptions): T
-  }
+  validateInOrder(value: T, options?: SchemaValidateOptions): Promise<T>
 
-  export function object<T extends {} = {}>(
-    fields?: GetObjectSchema<T>,
-  ): ObjectSchema<T>
+  validateInOrderSync(value: T, options?: SchemaValidateOptions): T
 }
+
+export declare function object<T extends {} = {}>(
+  fields?: GetObjectSchema<T>,
+): ObjectSchema<T>

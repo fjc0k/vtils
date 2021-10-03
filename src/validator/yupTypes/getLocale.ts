@@ -1,3 +1,3 @@
-declare module 'yup/es' {
-  export function getLocale(): Locale
-}
+import { Locale } from './Locale'
+
+export declare function getLocale(): Locale

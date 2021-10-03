@@ -1,24 +1,26 @@
-declare module 'yup/es' {
-  export interface NumberSchema<T extends number = number>
-    extends MixedSchema<T> {
-    min(limit: number | Ref, message?: NumberLocale['min']): this
+import { MixedSchema } from './mixed'
+import { NumberLocale } from './Locale'
+import { Ref } from './ref'
 
-    max(limit: number | Ref, message?: NumberLocale['max']): this
+export interface NumberSchema<T extends number = number>
+  extends MixedSchema<T> {
+  min(limit: number | Ref, message?: NumberLocale['min']): this
 
-    lessThan(max: number | Ref, message?: NumberLocale['lessThan']): this
+  max(limit: number | Ref, message?: NumberLocale['max']): this
 
-    moreThan(min: number | Ref, message?: NumberLocale['moreThan']): this
+  lessThan(max: number | Ref, message?: NumberLocale['lessThan']): this
 
-    positive(message?: NumberLocale['positive']): this
+  moreThan(min: number | Ref, message?: NumberLocale['moreThan']): this
 
-    negative(message?: NumberLocale['negative']): this
+  positive(message?: NumberLocale['positive']): this
 
-    integer(message?: NumberLocale['integer']): this
+  negative(message?: NumberLocale['negative']): this
 
-    truncate(): this
+  integer(message?: NumberLocale['integer']): this
 
-    round(type?: 'floor' | 'ceil' | 'trunc' | 'round'): this
-  }
+  truncate(): this
 
-  export function number<T extends number = number>(): NumberSchema<T>
+  round(type?: 'floor' | 'ceil' | 'trunc' | 'round'): this
 }
+
+export declare function number<T extends number = number>(): NumberSchema<T>

@@ -1,17 +1,19 @@
-declare module 'yup/es' {
-  export interface ArraySchema<T extends any = any> extends MixedSchema<T[]> {
-    of(type: GetSchema<T>): this
+import { ArrayLocale, MixedLocale } from './Locale'
+import { GetSchema, MixedSchema } from './mixed'
+import { Ref } from './ref'
 
-    required(message?: MixedLocale['required']): this
+export interface ArraySchema<T extends any = any> extends MixedSchema<T[]> {
+  of(type: GetSchema<T>): this
 
-    min(limit: number | Ref, message?: ArrayLocale['min']): this
+  required(message?: MixedLocale['required']): this
 
-    max(limit: number | Ref, message?: ArrayLocale['max']): this
+  min(limit: number | Ref, message?: ArrayLocale['min']): this
 
-    ensure(): this
+  max(limit: number | Ref, message?: ArrayLocale['max']): this
 
-    compact(rejector: (value: T) => boolean): this
-  }
+  ensure(): this
 
-  export function array<T extends any = any>(): ArraySchema<T>
+  compact(rejector: (value: T) => boolean): this
 }
+
+export declare function array<T extends any = any>(): ArraySchema<T>

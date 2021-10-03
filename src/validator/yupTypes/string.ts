@@ -1,42 +1,44 @@
-declare module 'yup/es' {
-  export interface StringSchema<T extends string = string>
-    extends MixedSchema<T> {
-    required(message?: MixedLocale['required']): this
+import { MixedLocale, StringLocale } from './Locale'
+import { MixedSchema } from './mixed'
+import { Ref } from './ref'
 
-    length(limit: number | Ref, message?: StringLocale['length']): this
+export interface StringSchema<T extends string = string>
+  extends MixedSchema<T> {
+  required(message?: MixedLocale['required']): this
 
-    min(limit: number | Ref, message?: StringLocale['min']): this
+  length(limit: number | Ref, message?: StringLocale['length']): this
 
-    max(limit: number | Ref, message?: StringLocale['max']): this
+  min(limit: number | Ref, message?: StringLocale['min']): this
 
-    matches(regex: RegExp, message?: StringLocale['matches']): this
+  max(limit: number | Ref, message?: StringLocale['max']): this
 
-    matches(
-      regex: RegExp,
-      options?: {
-        excludeEmptyString?: boolean
-        message?: StringLocale['matches']
-      },
-    ): this
+  matches(regex: RegExp, message?: StringLocale['matches']): this
 
-    email(message?: StringLocale['email']): this
+  matches(
+    regex: RegExp,
+    options?: {
+      excludeEmptyString?: boolean
+      message?: StringLocale['matches']
+    },
+  ): this
 
-    url(message?: StringLocale['url']): this
+  email(message?: StringLocale['email']): this
 
-    ensure(): this
+  url(message?: StringLocale['url']): this
 
-    trim(message?: StringLocale['trim']): this
+  ensure(): this
 
-    lowercase(message?: StringLocale['lowercase']): this
+  trim(message?: StringLocale['trim']): this
 
-    uppercase(message?: StringLocale['uppercase']): this
+  lowercase(message?: StringLocale['lowercase']): this
 
-    chineseMobilePhoneNumber(
-      message?: StringLocale['chineseMobilePhoneNumber'],
-    ): this
+  uppercase(message?: StringLocale['uppercase']): this
 
-    chineseIDCardNumber(message?: StringLocale['chineseIDCardNumber']): this
-  }
+  chineseMobilePhoneNumber(
+    message?: StringLocale['chineseMobilePhoneNumber'],
+  ): this
 
-  export function string<T extends string = string>(): StringSchema<T>
+  chineseIDCardNumber(message?: StringLocale['chineseIDCardNumber']): this
 }
+
+export declare function string<T extends string = string>(): StringSchema<T>
