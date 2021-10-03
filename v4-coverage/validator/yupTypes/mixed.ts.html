@@ -222,12 +222,7 @@
 <a name='L163'></a><a href='#L163'>163</a>
 <a name='L164'></a><a href='#L164'>164</a>
 <a name='L165'></a><a href='#L165'>165</a>
-<a name='L166'></a><a href='#L166'>166</a>
-<a name='L167'></a><a href='#L167'>167</a>
-<a name='L168'></a><a href='#L168'>168</a>
-<a name='L169'></a><a href='#L169'>169</a>
-<a name='L170'></a><a href='#L170'>170</a>
-<a name='L171'></a><a href='#L171'>171</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L166'></a><a href='#L166'>166</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -392,181 +387,171 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">declare module 'yup/es' {
-  export interface SchemaDescription {
-    type: string
-    label: string
-    meta: {}
-    tests: Array&lt;{
-      name: string
-      params: {}
-    }&gt;
-  }
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ArraySchema } from './array'
+import { BooleanSchema } from './boolean'
+import { LocaleValue, MixedLocale } from './Locale'
+import { NumberSchema } from './number'
+import { ObjectSchema } from './object'
+import { StringSchema } from './string'
+import { ValidationError } from './ValidationError'
 &nbsp;
-  export interface SchemaValidateOptions {
-    strict?: boolean
-    abortEarly?: boolean
-    stripUnknown?: boolean
-    recursive?: boolean
-    context?: {}
-  }
-&nbsp;
-  export interface SchemaTestOptions&lt;TSchema, TValue, TParams = {}&gt; {
+export interface SchemaDescription {
+  type: string
+  label: string
+  meta: {}
+  tests: Array&lt;{
     name: string
-    message: LocaleValue&lt;TParams&gt;
-    test: (
-      this: {
-        path: string
-        schema: TSchema
-        options: SchemaValidateOptions
-        parent: any
-        createError: (options: {
-          path: string
-          message: LocaleValue
-          params?: TParams
-        }) =&gt; ValidationError
-      },
-      value: TValue,
-    ) =&gt; boolean | Promise&lt;boolean&gt;
-    params?: TParams
-    exclusive?: boolean
-  }
-&nbsp;
-  export interface MixedSchema&lt;T = any&gt; {
-    __isYupSchema__: true
-&nbsp;
-    type:
-      | 'mixed'
-      | 'string'
-      | 'number'
-      | 'boolean'
-      | 'object'
-      | 'date'
-      | 'array'
-&nbsp;
-    clone(): this
-&nbsp;
-    label(label: string): this
-&nbsp;
-    meta(meta: {}): this
-&nbsp;
-    describe(): SchemaDescription
-&nbsp;
-    /** @类型不友好 */
-    concat(schema: MixedSchema&lt;any&gt;): this
-&nbsp;
-    validate(value: T, options?: SchemaValidateOptions): Promise&lt;T&gt;
-&nbsp;
-    validateSync(value: T, options?: SchemaValidateOptions): T
-&nbsp;
-    /**
-     * 验证增强，包括：对象顺序验证、返回结果包含错误信息。
-     */
-    validatePlus(
-      value: T,
-      options?: SchemaValidateOptions,
-    ): Promise&lt;{
-      error?: ValidationError
-      data: T
-    }&gt;
-&nbsp;
-    /**
-     * 验证增强，包括：对象顺序验证、返回结果包含错误信息。
-     */
-    validatePlusSync(
-      value: T,
-      options?: SchemaValidateOptions,
-    ): {
-      error?: ValidationError
-      data: T
-    }
-&nbsp;
-    /** @类型不友好 */
-    validateAt(
-      path: string,
-      value: any,
-      options?: SchemaValidateOptions,
-    ): Promise&lt;any&gt;
-&nbsp;
-    /** @类型不友好 */
-    validateSyncAt(
-      path: string,
-      value: any,
-      options?: SchemaValidateOptions,
-    ): any
-&nbsp;
-    isValid(value: T, options?: SchemaValidateOptions): Promise&lt;boolean&gt;
-&nbsp;
-    isValidSync(value: T, options?: SchemaValidateOptions): boolean
-&nbsp;
-    cast(value: T, options?: SchemaValidateOptions): any
-&nbsp;
-    isType(value: T): boolean
-&nbsp;
-    strict(isStrict?: boolean): this
-&nbsp;
-    strip(stripField?: boolean): this
-&nbsp;
-    withMutation&lt;X&gt;(fn: (schema: this) =&gt; X): X
-&nbsp;
-    default(value: T | (() =&gt; T)): this
-&nbsp;
-    default(): T | undefined
-&nbsp;
-    nullable(isNullable?: boolean): this
-&nbsp;
-    required(message?: MixedLocale['required']): this
-&nbsp;
-    notRequired(): this
-&nbsp;
-    defined(): this
-&nbsp;
-    typeError(message: LocaleValue): this
-&nbsp;
-    oneOf(arrayOfValues: T[], message?: MixedLocale['oneOf']): this
-&nbsp;
-    equals(arrayOfValues: T[], message?: MixedLocale['oneOf']): this
-&nbsp;
-    notOneOf(arrayOfValues: T[], message?: MixedLocale['notOneOf']): this
-&nbsp;
-    /** @仅保留了类型友好的用法 */
-    when(builder: (value: T, schema: this) =&gt; this): this
-&nbsp;
-    test(
-      test: SchemaTestOptions&lt;this, T&gt;['test'] | RegExp,
-      message?: SchemaTestOptions&lt;this, T&gt;['message'],
-    ): this
-&nbsp;
-    test&lt;TParams = {}&gt;(options: SchemaTestOptions&lt;this, T, TParams&gt;): this
-&nbsp;
-    transform(
-      transformer: (this: this, currentValue: T, originalValue: T) =&gt; T,
-    ): this
-  }
-&nbsp;
-  export type GetSchema&lt;T&gt; = T extends string
-    ? StringSchema&lt;string&gt;
-    : T extends number
-    ? NumberSchema&lt;number&gt;
-    : T extends boolean
-    ? BooleanSchema&lt;boolean&gt;
-    : T extends Array&lt;infer X&gt;
-    ? ArraySchema&lt;X&gt;
-    : T extends {}
-    ? ObjectSchema&lt;T&gt;
-    : MixedSchema&lt;T&gt;
-&nbsp;
-  export type GetObjectSchema&lt;T extends {}&gt; = {
-    [K in keyof T]: GetSchema&lt;T[K]&gt;
-  }
-&nbsp;
-  export function mixed&lt;T = any&gt;(): MixedSchema&lt;T&gt;
+    params: {}
+  }&gt;
 }
+&nbsp;
+export interface SchemaValidateOptions {
+  strict?: boolean
+  abortEarly?: boolean
+  stripUnknown?: boolean
+  recursive?: boolean
+  context?: {}
+}
+&nbsp;
+export interface SchemaTestOptions&lt;TSchema, TValue, TParams = {}&gt; {
+  name: string
+  message: LocaleValue&lt;TParams&gt;
+  test: (
+    this: {
+      path: string
+      schema: TSchema
+      options: SchemaValidateOptions
+      parent: any
+      createError: (options: {
+        path: string
+        message: LocaleValue
+        params?: TParams
+      }) =&gt; ValidationError
+    },
+    value: TValue,
+  ) =&gt; boolean | Promise&lt;boolean&gt;
+  params?: TParams
+  exclusive?: boolean
+}
+&nbsp;
+export interface MixedSchema&lt;T = any&gt; {
+  __isYupSchema__: true
+&nbsp;
+  type: 'mixed' | 'string' | 'number' | 'boolean' | 'object' | 'date' | 'array'
+&nbsp;
+  clone(): this
+&nbsp;
+  label(label: string): this
+&nbsp;
+  meta(meta: {}): this
+&nbsp;
+  describe(): SchemaDescription
+&nbsp;
+  /** @类型不友好 */
+  concat(schema: MixedSchema&lt;any&gt;): this
+&nbsp;
+  validate(value: T, options?: SchemaValidateOptions): Promise&lt;T&gt;
+&nbsp;
+  validateSync(value: T, options?: SchemaValidateOptions): T
+&nbsp;
+  /**
+   * 验证增强，包括：对象顺序验证、返回结果包含错误信息。
+   */
+  validatePlus(
+    value: T,
+    options?: SchemaValidateOptions,
+  ): Promise&lt;{
+    error?: ValidationError
+    data: T
+  }&gt;
+&nbsp;
+  /**
+   * 验证增强，包括：对象顺序验证、返回结果包含错误信息。
+   */
+  validatePlusSync(
+    value: T,
+    options?: SchemaValidateOptions,
+  ): {
+    error?: ValidationError
+    data: T
+  }
+&nbsp;
+  /** @类型不友好 */
+  validateAt(
+    path: string,
+    value: any,
+    options?: SchemaValidateOptions,
+  ): Promise&lt;any&gt;
+&nbsp;
+  /** @类型不友好 */
+  validateSyncAt(path: string, value: any, options?: SchemaValidateOptions): any
+&nbsp;
+  isValid(value: T, options?: SchemaValidateOptions): Promise&lt;boolean&gt;
+&nbsp;
+  isValidSync(value: T, options?: SchemaValidateOptions): boolean
+&nbsp;
+  cast(value: T, options?: SchemaValidateOptions): any
+&nbsp;
+  isType(value: T): boolean
+&nbsp;
+  strict(isStrict?: boolean): this
+&nbsp;
+  strip(stripField?: boolean): this
+&nbsp;
+  withMutation&lt;X&gt;(fn: (schema: this) =&gt; X): X
+&nbsp;
+  default(value: T | (() =&gt; T)): this
+&nbsp;
+  default(): T | undefined
+&nbsp;
+  nullable(isNullable?: boolean): this
+&nbsp;
+  required(message?: MixedLocale['required']): this
+&nbsp;
+  notRequired(): this
+&nbsp;
+  defined(): this
+&nbsp;
+  typeError(message: LocaleValue): this
+&nbsp;
+  oneOf(arrayOfValues: T[], message?: MixedLocale['oneOf']): this
+&nbsp;
+  equals(arrayOfValues: T[], message?: MixedLocale['oneOf']): this
+&nbsp;
+  notOneOf(arrayOfValues: T[], message?: MixedLocale['notOneOf']): this
+&nbsp;
+  /** @仅保留了类型友好的用法 */
+  when(builder: (value: T, schema: this) =&gt; this): this
+&nbsp;
+  test(
+    test: SchemaTestOptions&lt;this, T&gt;['test'] | RegExp,
+    message?: SchemaTestOptions&lt;this, T&gt;['message'],
+  ): this
+&nbsp;
+  test&lt;TParams = {}&gt;(options: SchemaTestOptions&lt;this, T, TParams&gt;): this
+&nbsp;
+  transform(
+    transformer: (this: this, currentValue: T, originalValue: T) =&gt; T,
+  ): this
+}
+&nbsp;
+export type GetSchema&lt;T&gt; = T extends string
+  ? StringSchema&lt;string&gt;
+  : T extends number
+  ? NumberSchema&lt;number&gt;
+  : T extends boolean
+  ? BooleanSchema&lt;boolean&gt;
+  : T extends Array&lt;infer X&gt;
+  ? ArraySchema&lt;X&gt;
+  : T extends {}
+  ? ObjectSchema&lt;T&gt;
+  : MixedSchema&lt;T&gt;
+&nbsp;
+export type GetObjectSchema&lt;T extends {}&gt; = {
+  [K in keyof T]: GetSchema&lt;T[K]&gt;
+}
+&nbsp;
+export declare function mixed&lt;T = any&gt;(): MixedSchema&lt;T&gt;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -574,7 +559,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Oct 03 2021 03:05:53 GMT+0000 (Coordinated Universal Time)
+                at Sun Oct 03 2021 03:48:16 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

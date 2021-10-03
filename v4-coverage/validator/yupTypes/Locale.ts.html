@@ -130,11 +130,7 @@
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -207,86 +203,78 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">declare module 'yup/es' {
-  export type LocaleValueFnParams&lt;TExtra extends {} = {}&gt; = {
-    path: string
-    type: string
-    label?: string
-    value: any
-    originalValue: any
-  } &amp; TExtra
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export type LocaleValueFnParams&lt;TExtra extends {} = {}&gt; = {
+  path: string
+  type: string
+  label?: string
+  value: any
+  originalValue: any
+} &amp; TExtra
 &nbsp;
-  export type LocaleValueFn&lt;TExtra extends {} = {}&gt; = (
-    params: LocaleValueFnParams&lt;TExtra&gt;,
-  ) =&gt; string
+export type LocaleValueFn&lt;TExtra extends {} = {}&gt; = (
+  params: LocaleValueFnParams&lt;TExtra&gt;,
+) =&gt; string
 &nbsp;
-  export type LocaleValue&lt;TExtra extends {} = {}&gt; =
-    | string
-    | LocaleValueFn&lt;TExtra&gt;
+export type LocaleValue&lt;TExtra extends {} = {}&gt; = string | LocaleValueFn&lt;TExtra&gt;
 &nbsp;
-  export interface MixedLocale {
-    default: LocaleValue
-    required: LocaleValue
-    oneOf: LocaleValue&lt;{ values: string }&gt;
-    notOneOf: LocaleValue&lt;{ values: string }&gt;
-    notType: LocaleValue
-    defined: LocaleValue
-  }
+export interface MixedLocale {
+  default: LocaleValue
+  required: LocaleValue
+  oneOf: LocaleValue&lt;{ values: string }&gt;
+  notOneOf: LocaleValue&lt;{ values: string }&gt;
+  notType: LocaleValue
+  defined: LocaleValue
+}
 &nbsp;
-  export interface StringLocale {
-    length: LocaleValue&lt;{ length: number }&gt;
-    min: LocaleValue&lt;{ min: number }&gt;
-    max: LocaleValue&lt;{ max: number }&gt;
-    matches: LocaleValue&lt;{ regex: RegExp }&gt;
-    email: LocaleValue&lt;{ regex: RegExp }&gt;
-    url: LocaleValue&lt;{ regex: RegExp }&gt;
-    trim: LocaleValue
-    lowercase: LocaleValue
-    uppercase: LocaleValue
-    chineseMobilePhoneNumber: LocaleValue
-    chineseIDCardNumber: LocaleValue
-  }
+export interface StringLocale {
+  length: LocaleValue&lt;{ length: number }&gt;
+  min: LocaleValue&lt;{ min: number }&gt;
+  max: LocaleValue&lt;{ max: number }&gt;
+  matches: LocaleValue&lt;{ regex: RegExp }&gt;
+  email: LocaleValue&lt;{ regex: RegExp }&gt;
+  url: LocaleValue&lt;{ regex: RegExp }&gt;
+  trim: LocaleValue
+  lowercase: LocaleValue
+  uppercase: LocaleValue
+  chineseMobilePhoneNumber: LocaleValue
+  chineseIDCardNumber: LocaleValue
+}
 &nbsp;
-  export interface NumberLocale {
-    min: LocaleValue&lt;{ min: number }&gt;
-    max: LocaleValue&lt;{ max: number }&gt;
-    lessThan: LocaleValue&lt;{ less: number }&gt;
-    moreThan: LocaleValue&lt;{ more: number }&gt;
-    positive: LocaleValue&lt;{ more: number }&gt;
-    negative: LocaleValue&lt;{ less: number }&gt;
-    integer: LocaleValue
-  }
+export interface NumberLocale {
+  min: LocaleValue&lt;{ min: number }&gt;
+  max: LocaleValue&lt;{ max: number }&gt;
+  lessThan: LocaleValue&lt;{ less: number }&gt;
+  moreThan: LocaleValue&lt;{ more: number }&gt;
+  positive: LocaleValue&lt;{ more: number }&gt;
+  negative: LocaleValue&lt;{ less: number }&gt;
+  integer: LocaleValue
+}
 &nbsp;
-  export interface DateLocale {
-    min: LocaleValue&lt;{ min: Date | string }&gt;
-    max: LocaleValue&lt;{ max: Date | string }&gt;
-  }
+export interface DateLocale {
+  min: LocaleValue&lt;{ min: Date | string }&gt;
+  max: LocaleValue&lt;{ max: Date | string }&gt;
+}
 &nbsp;
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  export interface BooleanLocale {}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface BooleanLocale {}
 &nbsp;
-  export interface ObjectLocale {
-    noUnknown: LocaleValue&lt;{ unknown: string }&gt;
-  }
+export interface ObjectLocale {
+  noUnknown: LocaleValue&lt;{ unknown: string }&gt;
+}
 &nbsp;
-  export interface ArrayLocale {
-    min: LocaleValue&lt;{ min: number }&gt;
-    max: LocaleValue&lt;{ max: number }&gt;
-  }
+export interface ArrayLocale {
+  min: LocaleValue&lt;{ min: number }&gt;
+  max: LocaleValue&lt;{ max: number }&gt;
+}
 &nbsp;
-  export interface Locale {
-    mixed: MixedLocale
-    string: StringLocale
-    number: NumberLocale
-    date: DateLocale
-    boolean: BooleanLocale
-    object: ObjectLocale
-    array: ArrayLocale
-  }
+export interface Locale {
+  mixed: MixedLocale
+  string: StringLocale
+  number: NumberLocale
+  date: DateLocale
+  boolean: BooleanLocale
+  object: ObjectLocale
+  array: ArrayLocale
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -295,7 +283,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Oct 03 2021 03:05:53 GMT+0000 (Coordinated Universal Time)
+                at Sun Oct 03 2021 03:48:16 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
