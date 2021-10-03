@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.42.3](https://github.com/fjc0k/vtils/compare/v4.42.2...v4.42.3) (2021-10-03)
+
+### Bug Fixes
+
+- yup 的类型定义不再挂在 yup/es 下 ([6aa8c6e](https://github.com/fjc0k/vtils/commit/6aa8c6eecd27be0c58521137164c34a5f690aef9))
+
 ### [4.42.2](https://github.com/fjc0k/vtils/compare/v4.42.1...v4.42.2) (2021-10-03)
 
 ### Bug Fixes
