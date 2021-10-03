@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.42.2](https://github.com/fjc0k/vtils/compare/v4.42.1...v4.42.2) (2021-10-03)
+
+### Bug Fixes
+
+- 增加 types 导出 ([e9ee4e7](https://github.com/fjc0k/vtils/commit/e9ee4e753ee320e5d3b9cf238778425517dd23e6))
+
 ### [4.42.1](https://github.com/fjc0k/vtils/compare/v4.42.0...v4.42.1) (2021-09-29)
 
 ### Bug Fixes
