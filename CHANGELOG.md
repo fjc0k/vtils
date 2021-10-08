@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.43.0](https://github.com/fjc0k/vtils/compare/v4.42.3...v4.43.0) (2021-10-08)
+
+### Features
+
+- **utils:** 新增 htmlToDocumentFragment，htmlToElement ([313cf9d](https://github.com/fjc0k/vtils/commit/313cf9d51263300adba4effd9ab007a275804477))
+
+### Bug Fixes
+
+- **DataPacker:** 兼容 v2 的 StructuredListTransformer 产生的数据 ([d6cc8cb](https://github.com/fjc0k/vtils/commit/d6cc8cbb2f16d07dd3dbce4f6d90b6ff14005b3c))
+
 ### [4.42.3](https://github.com/fjc0k/vtils/compare/v4.42.2...v4.42.3) (2021-10-03)
 
 ### Bug Fixes
