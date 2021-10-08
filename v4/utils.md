@@ -52,6 +52,8 @@ rich://{"url":"***","desc":"***"}
 |  [getCurrentScript()](./utils.getcurrentscript.md) | 返回当前正在运行的脚本所属的 <code>&lt;script&gt;</code> 元素。有两点限制：<!-- -->- 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 <code>null</code>。 |
 |  [getEnvironment()](./utils.getenvironment.md) | 获取运行环境信息。 |
 |  [getWechatPublicAccountQrcodeUrl(accountId)](./utils.getwechatpublicaccountqrcodeurl.md) | 获取微信公众号的二维码链接。 |
+|  [htmlToDocumentFragment(html)](./utils.htmltodocumentfragment.md) | 将 HTML 字符串转为 DocumentFragment。 |
+|  [htmlToElement(html)](./utils.htmltoelement.md) | 将 HTML 字符串转为 Element。 |
 |  [ii(fn)](./utils.ii.md) | 立即调用函数并返回其返回值。<!-- -->注：<code>ii = immediately invoke</code> |
 |  [inAndroid()](./utils.inandroid.md) | 检查是否在 Android 设备中。 |
 |  [inBrowser()](./utils.inbrowser.md) | 检查是否在浏览器环境中。 |
