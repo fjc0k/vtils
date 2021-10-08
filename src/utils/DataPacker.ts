@@ -4,21 +4,17 @@ import { isType } from './isType'
 import { rot13 } from './rot13'
 
 export type RawObjectData = Record<any, any>
-export type RawListData<
-  TRawObjectData extends RawObjectData = RawObjectData
-> = TRawObjectData[]
+export type RawListData<TRawObjectData extends RawObjectData = RawObjectData> =
+  TRawObjectData[]
 export type RawData<TRawObjectData extends RawObjectData = RawObjectData> =
   | TRawObjectData
   | RawListData<TRawObjectData>
-export type ElementOfRawData<
-  TRawData extends RawData
-> = TRawData extends RawData<infer X> ? X : never
-export type KeyOfRawData<
-  TRawData extends RawData
-> = keyof ElementOfRawData<TRawData>
-export type ValueOfRawData<
-  TRawData extends RawData
-> = ElementOfRawData<TRawData>[KeyOfRawData<TRawData>]
+export type ElementOfRawData<TRawData extends RawData> =
+  TRawData extends RawData<infer X> ? X : never
+export type KeyOfRawData<TRawData extends RawData> =
+  keyof ElementOfRawData<TRawData>
+export type ValueOfRawData<TRawData extends RawData> =
+  ElementOfRawData<TRawData>[KeyOfRawData<TRawData>]
 export type PackedData<TRawData extends RawData> = {
   readonly _k: Array<KeyOfRawData<TRawData>>
   readonly _v: Array<Array<ValueOfRawData<TRawData>>>
@@ -105,12 +101,22 @@ export class DataPacker {
    * @returns 返回结果数据
    */
   static unpackIfNeeded(value: any, depth = 2): any {
-    if (isPlainObject(value) && isType<PackedData<RawObjectData>>(value)) {
-      if (value._k && value._v && value._s) {
-        return DataPacker.unpack(value)
+    if (isPlainObject(value)) {
+      // 兼容 v2 的 StructuredListTransformer 产生的数据
+      // https://github.com/fjc0k/vtils/blob/v2/packages/vtils/src/StructuredListTransformer.ts
+      if (value.__IS_PACKED_STRUCTURED_LIST__) {
+        value._k = value.keys
+        value._v = value.values
+        value._s = value.signature
+        delete value.__IS_PACKED_STRUCTURED_LIST__
       }
-      if (depth > 0) {
-        return mapValues(value, v => DataPacker.unpackIfNeeded(v, depth - 1))
+      if (isType<PackedData<RawObjectData>>(value)) {
+        if (value._k && value._v && value._s) {
+          return DataPacker.unpack(value)
+        }
+        if (depth > 0) {
+          return mapValues(value, v => DataPacker.unpackIfNeeded(v, depth - 1))
+        }
       }
     }
     return value

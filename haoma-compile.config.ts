@@ -20,7 +20,7 @@ const removeIsTypePlugin = defineBabelPlugin(t => ({
           t.isIdentifier(path.node.callee) &&
           path.node.callee.name === 'isType'
         ) {
-          path.remove()
+          path.replaceWith(t.booleanLiteral(true))
         }
       },
     },

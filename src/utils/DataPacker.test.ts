@@ -58,4 +58,26 @@ describe('DataPacker', () => {
       },
     })
   })
+
+  test('兼容 v2 的 StructuredListTransformer 产生的数据', () => {
+    const data = {
+      __IS_PACKED_STRUCTURED_LIST__: true,
+      keys: ['id', 'name'],
+      values: [
+        ['1111', 1],
+        ['2222', 2],
+      ],
+      signature: 'ZGLmZmL2ZQZmAQx3Av4kYwN',
+    }
+    expect(DataPacker.unpackIfNeeded(data as any)).toEqual([
+      {
+        id: 1,
+        name: '1111',
+      },
+      {
+        id: 2,
+        name: '2222',
+      },
+    ])
+  })
 })
