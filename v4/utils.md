@@ -97,6 +97,13 @@ rich://{"url":"***","desc":"***"}
 |  [sampleBy(collection, iteratee)](./utils.sampleby_1.md) |  |
 |  [sampleIndex(collection)](./utils.sampleindex.md) | 从集合中随机获得一个元素的索引（数组）或键（对象）。 |
 |  [sampleIndex(collection)](./utils.sampleindex_1.md) |  |
+|  [selectElement(selectors, baseElement)](./utils.selectelement.md) |  |
+|  [selectElement(selectors, baseElement)](./utils.selectelement_1.md) |  |
+|  [selectElementAll(selectors, baseElements)](./utils.selectelementall.md) |  |
+|  [selectElementAll(selectors, baseElements)](./utils.selectelementall_1.md) |  |
+|  [selectElementExists(selectors, baseElement)](./utils.selectelementexists.md) |  |
+|  [selectElementLast(selectors, baseElement)](./utils.selectelementlast.md) |  |
+|  [selectElementLast(selectors, baseElement)](./utils.selectelementlast_1.md) |  |
 |  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
 |  [traverse(value, callback)](./utils.traverse.md) | 遍历对象和数组。 |
 |  [wait(milliseconds, value)](./utils.wait.md) | 等待一段时间 resolve。 |
