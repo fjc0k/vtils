@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`htmlToDom htmlToDocumentFragment 正常 1`] = `
+<DocumentFragment>
+  test
+</DocumentFragment>
+`;
+
+exports[`htmlToDom htmlToDocumentFragment 正常 2`] = `
+<DocumentFragment>
+  test 
+  <a>
+    hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`htmlToDom htmlToDocumentFragment 正常 3`] = `
+<DocumentFragment>
+  <a>
+    hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`htmlToDom htmlToDocumentFragment 正常 4`] = `"hello"`;
+
+exports[`htmlToDom htmlToElement 正常 1`] = `undefined`;
+
+exports[`htmlToDom htmlToElement 正常 2`] = `
+<a>
+  hello
+</a>
+`;
+
+exports[`htmlToDom htmlToElement 正常 3`] = `
+<a>
+  hello
+</a>
+`;
