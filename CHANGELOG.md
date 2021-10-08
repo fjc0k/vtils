@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.44.0](https://github.com/fjc0k/vtils/compare/v4.43.0...v4.44.0) (2021-10-08)
+
+### Features
+
+- **utils:** 新增 selectElement，selectElementLast，selectElementExists，selectElementAll ([8707b46](https://github.com/fjc0k/vtils/commit/8707b46998032cb54c47e6367be816bddc13278c))
+
 ## [4.43.0](https://github.com/fjc0k/vtils/compare/v4.42.3...v4.43.0) (2021-10-08)
 
 ### Features
