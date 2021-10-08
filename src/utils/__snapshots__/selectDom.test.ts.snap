@@ -1,0 +1,251 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selectDom selectElement - baseElement 正常 1`] = `
+<input
+  class="input"
+  data-main="true"
+/>
+`;
+
+exports[`selectDom selectElement - baseElement 正常 2`] = `
+<input
+  class="input"
+  data-main="true"
+/>
+`;
+
+exports[`selectDom selectElement - baseElement 正常 3`] = `
+<input
+  class="input2"
+  data-main="true"
+/>
+`;
+
+exports[`selectDom selectElement - baseElement 正常 4`] = `
+<input
+  class="input"
+  data-main="true"
+/>
+`;
+
+exports[`selectDom selectElement - baseElement 正常 5`] = `
+<input
+  class="input2"
+  data-main="true"
+/>
+`;
+
+exports[`selectDom selectElement - baseElement 正常 6`] = `
+<button
+  class="button"
+  data-main="true"
+>
+  按钮
+</button>
+`;
+
+exports[`selectDom selectElement - selectors 正常 1`] = `
+<input
+  class="input"
+/>
+`;
+
+exports[`selectDom selectElement - selectors 正常 2`] = `
+<input
+  class="input2"
+/>
+`;
+
+exports[`selectDom selectElement 正常 1`] = `
+<input
+  class="input"
+/>
+`;
+
+exports[`selectDom selectElement 正常 2`] = `
+<input
+  class="input"
+/>
+`;
+
+exports[`selectDom selectElement 正常 3`] = `
+<input
+  class="input2"
+/>
+`;
+
+exports[`selectDom selectElement 正常 4`] = `
+<input
+  class="input"
+/>
+`;
+
+exports[`selectDom selectElement 正常 5`] = `
+<input
+  class="input2"
+/>
+`;
+
+exports[`selectDom selectElementAll - selectors 正常 1`] = `
+Array [
+  <input
+    class="input"
+  />,
+  <input
+    class="input2"
+  />,
+  <button
+    class="button"
+  >
+    按钮
+  </button>,
+  <input
+    class="input"
+    data-main="true"
+  />,
+  <input
+    class="input2"
+    data-main="true"
+  />,
+  <button
+    class="button"
+    data-main="true"
+  >
+    按钮
+  </button>,
+]
+`;
+
+exports[`selectDom selectElementAll - selectors 正常 2`] = `
+Array [
+  <input
+    class="input2"
+  />,
+  <input
+    class="input"
+    data-main="true"
+  />,
+  <input
+    class="input2"
+    data-main="true"
+  />,
+]
+`;
+
+exports[`selectDom selectElementAll 正常 1`] = `
+Array [
+  <input
+    class="input"
+  />,
+  <input
+    class="input2"
+  />,
+  <input
+    class="input"
+    data-main="true"
+  />,
+  <input
+    class="input2"
+    data-main="true"
+  />,
+]
+`;
+
+exports[`selectDom selectElementAll 正常 2`] = `
+Array [
+  <input
+    class="input"
+  />,
+  <input
+    class="input"
+    data-main="true"
+  />,
+]
+`;
+
+exports[`selectDom selectElementAll 正常 3`] = `
+Array [
+  <input
+    class="input2"
+  />,
+  <input
+    class="input2"
+    data-main="true"
+  />,
+]
+`;
+
+exports[`selectDom selectElementAll 正常 4`] = `
+Array [
+  <input
+    class="input"
+  />,
+  <input
+    class="input"
+    data-main="true"
+  />,
+]
+`;
+
+exports[`selectDom selectElementAll 正常 5`] = `
+Array [
+  <input
+    class="input2"
+  />,
+  <input
+    class="input2"
+    data-main="true"
+  />,
+]
+`;
+
+exports[`selectDom selectElementAll 正常 6`] = `
+Array [
+  <button
+    class="button"
+  >
+    按钮
+  </button>,
+  <button
+    class="button"
+    data-main="true"
+  >
+    按钮
+  </button>,
+]
+`;
+
+exports[`selectDom selectElementLast 正常 1`] = `
+<input
+  class="input2"
+  data-main="true"
+/>
+`;
+
+exports[`selectDom selectElementLast 正常 2`] = `
+<input
+  class="input"
+  data-main="true"
+/>
+`;
+
+exports[`selectDom selectElementLast 正常 3`] = `
+<input
+  class="input2"
+  data-main="true"
+/>
+`;
+
+exports[`selectDom selectElementLast 正常 4`] = `
+<input
+  class="input"
+  data-main="true"
+/>
+`;
+
+exports[`selectDom selectElementLast 正常 5`] = `
+<input
+  class="input2"
+  data-main="true"
+/>
+`;

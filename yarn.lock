@@ -9116,6 +9116,11 @@ type-fest@^0.8.1:
   resolved "https://registry.nlark.com/type-fest/download/type-fest-0.8.1.tgz?cache=0&sync_timestamp=1629724529996&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftype-fest%2Fdownload%2Ftype-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha1-CeJJ696FHTseSNJ8EFREZn8XuD0=
 
+typed-query-selector@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.npmmirror.com/typed-query-selector/download/typed-query-selector-2.6.0.tgz#3f3d7ef65004dfb7d9ea9e554706d5e0c9da6983"
+  integrity sha1-Pz1+9lAE37fZ6p5VRwbV4MnaaYM=
+
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"
   resolved "https://registry.npm.taobao.org/typedarray-to-buffer/download/typedarray-to-buffer-3.1.5.tgz#a97ee7a9ff42691b9f783ff1bc5112fe3fca9080"
