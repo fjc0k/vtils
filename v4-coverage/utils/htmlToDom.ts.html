@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for utils/jsonp.ts</title>
+    <title>Code coverage report for utils/htmlToDom.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> jsonp.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> htmlToDom.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
@@ -84,11 +84,7 @@
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -96,53 +92,51 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { loadResource, LoadResourceUrlType } from './loadResource'
-&nbsp;
-let i = 0
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// https://github.com/fregante/doma/blob/master/index.ts
 &nbsp;
 /**
- * 发起 jsonp 请求。
+ * 将 HTML 字符串转为 DocumentFragment。
  *
- * @param url 请求地址
- * @param keyOfCallbackName 回调函数名的键
+ * @param html HTML 字符串
  */
-export function jsonp&lt;T&gt;(
-  url: string,
-  keyOfCallbackName = 'callback',
-): Promise&lt;T&gt; {
-  return new Promise&lt;T&gt;((resolve, reject) =&gt; {
-    const callbackName = `__vtils_jsonp_callbacks__${i++}`
-    ;(window as any)[callbackName] = (result: T) =&gt; {
-      resolve(result)
-      delete (window as any)[callbackName]
-    }
-    const _url = new URL(url)
-    _url.searchParams.set(keyOfCallbackName, callbackName)
-    url = _url.toString()
-    loadResource({
-      path: url,
-      type: LoadResourceUrlType.js,
-    }).catch(reject)
-  })
+export function htmlToDocumentFragment(html: string): DocumentFragment {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (html == null) {
+<span class="cstat-no" title="statement not covered" >    return new DocumentFragment()</span>
+  }
+&nbsp;
+  const template = document.createElement('template')
+  template.innerHTML = html
+  return template.content
+}
+&nbsp;
+/**
+ * 将 HTML 字符串转为 Element。
+ *
+ * @param html HTML 字符串
+ */
+export function htmlToElement&lt;T extends Element = Element&gt;(
+  html: string,
+): T | undefined {
+  return (htmlToDocumentFragment(html).firstElementChild as T) ?? undefined
 }
 &nbsp;</pre></td></tr></table></pre>
 
