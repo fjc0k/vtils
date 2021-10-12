@@ -15,6 +15,7 @@ export interface NumberSchema<T extends number = number> extends MixedSchema<T>
 
 |  Method | Description |
 |  --- | --- |
+|  [id(message)](./validator.yup.numberschema.id.md) |  |
 |  [integer(message)](./validator.yup.numberschema.integer.md) |  |
 |  [lessThan(max, message)](./validator.yup.numberschema.lessthan.md) |  |
 |  [max(limit, message)](./validator.yup.numberschema.max.md) |  |

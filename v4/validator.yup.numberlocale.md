@@ -14,6 +14,7 @@ export interface NumberLocale
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [id](./validator.yup.numberlocale.id.md) | LocaleValue |  |
 |  [integer](./validator.yup.numberlocale.integer.md) | LocaleValue |  |
 |  [lessThan](./validator.yup.numberlocale.lessthan.md) | LocaleValue&lt;{ less: number; }&gt; |  |
 |  [max](./validator.yup.numberlocale.max.md) | LocaleValue&lt;{ max: number; }&gt; |  |
