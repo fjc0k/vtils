@@ -99,6 +99,10 @@ inherits(NumberSchema, MixedSchema, {
     })
   },
 
+  id(msg = locale.id) {
+    return this.positive(msg).integer(msg)
+  },
+
   truncate() {
     return this.transform(value => (!isAbsent(value) ? value | 0 : value))
   },

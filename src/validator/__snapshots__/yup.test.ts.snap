@@ -1,5 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`yup number 支持 id() 1`] = `
+Object {
+  "data": 1,
+}
+`;
+
+exports[`yup number 支持 id() 2`] = `
+Object {
+  "data": -1,
+  "error": [ValidationError: 此项必须是一个正整数],
+}
+`;
+
+exports[`yup number 支持 id() 3`] = `
+Object {
+  "data": 0,
+  "error": [ValidationError: 此项必须是一个正整数],
+}
+`;
+
+exports[`yup number 支持 id() 4`] = `
+Object {
+  "data": 0.5,
+  "error": [ValidationError: 此项必须是一个正整数],
+}
+`;
+
+exports[`yup number 支持 id() 5`] = `
+Object {
+  "data": 1.5,
+  "error": [ValidationError: 此项必须是一个正整数],
+}
+`;
+
+exports[`yup number 支持 id() 6`] = `
+Object {
+  "data": 100,
+}
+`;
+
 exports[`yup test 第一个参数可传函数或正则 1`] = `
 Object {
   "data": Object {

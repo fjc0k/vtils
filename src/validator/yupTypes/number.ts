@@ -18,6 +18,8 @@ export interface NumberSchema<T extends number = number>
 
   integer(message?: NumberLocale['integer']): this
 
+  id(message?: NumberLocale['id']): this
+
   truncate(): this
 
   round(type?: 'floor' | 'ceil' | 'trunc' | 'round'): this

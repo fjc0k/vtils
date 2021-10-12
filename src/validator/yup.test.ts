@@ -207,4 +207,14 @@ describe('yup', () => {
       }),
     ).toMatchSnapshot()
   })
+
+  test('number 支持 id()', () => {
+    const rule = yup.number().id()
+    expect(rule.validatePlusSync(1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(0)).toMatchSnapshot()
+    expect(rule.validatePlusSync(0.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(1.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(100)).toMatchSnapshot()
+  })
 })

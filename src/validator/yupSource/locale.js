@@ -45,6 +45,7 @@ export let number = {
   positive: '${path} must be a positive number',
   negative: '${path} must be a negative number',
   integer: '${path} must be an integer',
+  id: '${path} must be a positive integer',
 }
 
 export let date = {

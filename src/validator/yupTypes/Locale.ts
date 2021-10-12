@@ -43,6 +43,7 @@ export interface NumberLocale {
   positive: LocaleValue<{ more: number }>
   negative: LocaleValue<{ less: number }>
   integer: LocaleValue
+  id: LocaleValue
 }
 
 export interface DateLocale {

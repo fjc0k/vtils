@@ -51,6 +51,7 @@ export const enUS: yup.Locale = {
     positive: '${path} must be a positive number',
     negative: '${path} must be a negative number',
     integer: '${path} must be an integer',
+    id: '${path} must be a positive integer',
   },
   date: {
     min: '${path} field must be later than ${min}',

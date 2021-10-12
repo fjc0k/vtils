@@ -53,6 +53,7 @@ export const zhCN: yup.Locale = {
     positive: ({ label }) => `${label || '此项'}必须是一个正数`,
     negative: ({ label }) => `${label || '此项'}必须是一个负数`,
     integer: ({ label }) => `${label || '此项'}必须是一个整数`,
+    id: ({ label }) => `${label || '此项'}必须是一个正整数`,
   },
   date: {
     min: ({ label, min }) => `${label || '此项'}必须晚于${min}`,
