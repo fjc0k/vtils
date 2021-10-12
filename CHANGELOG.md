@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.45.0](https://github.com/fjc0k/vtils/compare/v4.44.0...v4.45.0) (2021-10-12)
+
+### Features
+
+- **yup:** number 新增 id() ([fa19939](https://github.com/fjc0k/vtils/commit/fa199393a029393375afad84aa77abc61748bb63))
+
 ## [4.44.0](https://github.com/fjc0k/vtils/compare/v4.43.0...v4.44.0) (2021-10-08)
 
 ### Features
