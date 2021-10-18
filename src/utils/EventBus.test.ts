@@ -1,4 +1,5 @@
 import { EventBus } from './EventBus'
+import { wait } from './wait'
 
 type Events = {
   enter: () => number
@@ -76,6 +77,18 @@ describe('EventBus', () => {
     bus.emit('success')
     bus.emit('success')
     bus.emit('success')
+    bus.emit('success')
+    expect(successCallback).toBeCalled().toBeCalledTimes(1)
+    expect(successCallback2).toBeCalled().toBeCalledTimes(1)
+  })
+
+  test('可只订阅一次: bug', async () => {
+    const bus = new EventBus<Events>()
+    const successCallback = jest.fn()
+    const successCallback2 = jest.fn()
+    bus.once('success', successCallback)
+    bus.once('success', successCallback2)
+    await wait(10)
     bus.emit('success')
     expect(successCallback).toBeCalled().toBeCalledTimes(1)
     expect(successCallback2).toBeCalled().toBeCalledTimes(1)

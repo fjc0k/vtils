@@ -163,7 +163,7 @@ export class EventBus<TListeners extends EventBusListeners> {
         : {
             name: eventName,
           }
-    let callbacks = this.callbacks[name] || []
+    let callbacks = (this.callbacks[name] || []).slice()
     if (tag != null) {
       callbacks = callbacks.filter(
         callback =>
