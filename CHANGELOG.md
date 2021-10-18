@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.46.0](https://github.com/fjc0k/vtils/compare/v4.45.0...v4.46.0) (2021-10-18)
+
+### Features
+
+- **EventBus:** 新增 clear, destroy ([38558f6](https://github.com/fjc0k/vtils/commit/38558f62b0982e37e5a8e1cb3e2628239b604f80))
+
 ## [4.45.0](https://github.com/fjc0k/vtils/compare/v4.44.0...v4.45.0) (2021-10-12)
 
 ### Features
