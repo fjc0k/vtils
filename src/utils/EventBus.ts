@@ -1,7 +1,7 @@
 export type EventBusListenerTag = string | number
 
 export type EventBusListener<
-  TCallback extends (...args: any[]) => any = (...args: any[]) => any
+  TCallback extends (...args: any[]) => any = (...args: any[]) => any,
 > = TCallback & {
   __EVENT_BUS_TAG__?: EventBusListenerTag
 }
@@ -11,7 +11,7 @@ export type EventBusOffListener = () => any
 export type EventBusListeners = Record<string, EventBusListener>
 
 export interface EventBusListenerDescriptor<
-  TListenerName extends keyof EventBusListeners
+  TListenerName extends keyof EventBusListeners,
 > {
   name: TListenerName
   context?: any
@@ -175,5 +175,20 @@ export class EventBus<TListeners extends EventBusListeners> {
     return callbacks.map(callback => {
       return callback.call(context, ...args)
     })
+  }
+
+  /**
+   * 清空事件订阅。
+   */
+  clear() {
+    this.callbacks = Object.create(null)
+  }
+
+  /**
+   * 销毁。
+   */
+  destroy() {
+    // @ts-ignore
+    this.callbacks = null
   }
 }

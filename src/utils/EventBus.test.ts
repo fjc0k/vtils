@@ -168,4 +168,19 @@ describe('EventBus', () => {
     expect(errorCallback).toBeCalled().toBeCalledTimes(2)
     expect(errorCallback2).toBeCalled().toBeCalledTimes(2)
   })
+
+  test('支持 clear', () => {
+    const bus = new EventBus<{
+      test: () => any
+    }>()
+    const fn = jest.fn()
+    bus.on('test', fn)
+    bus.emit('test')
+    expect(fn).toBeCalled().toBeCalledTimes(1)
+    bus.emit('test')
+    expect(fn).toBeCalled().toBeCalledTimes(2)
+    bus.clear()
+    bus.emit('test')
+    expect(fn).toBeCalled().toBeCalledTimes(2)
+  })
 })
