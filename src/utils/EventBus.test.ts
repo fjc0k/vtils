@@ -70,12 +70,15 @@ describe('EventBus', () => {
   test('可只订阅一次', () => {
     const bus = new EventBus<Events>()
     const successCallback = jest.fn()
+    const successCallback2 = jest.fn()
     bus.once('success', successCallback)
+    bus.once('success', successCallback2)
     bus.emit('success')
     bus.emit('success')
     bus.emit('success')
     bus.emit('success')
     expect(successCallback).toBeCalled().toBeCalledTimes(1)
+    expect(successCallback2).toBeCalled().toBeCalledTimes(1)
   })
 
   test('可获取订阅回调结果', () => {
