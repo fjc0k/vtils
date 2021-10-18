@@ -37,6 +37,8 @@ bus.emit('success', { message: '提交成功' })
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [clear()](./utils.eventbus.clear.md) |  | 清空事件订阅。 |
+|  [destroy()](./utils.eventbus.destroy.md) |  | 销毁。 |
 |  [emit(eventName, args)](./utils.eventbus.emit.md) |  | 发布事件。 |
 |  [off(eventName, callbackOrTag)](./utils.eventbus.off.md) |  | 取消订阅事件，若没有指定回调，则取消所有回调。 |
 |  [on(eventName, callback)](./utils.eventbus.on.md) |  | 订阅事件。 |
