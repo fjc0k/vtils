@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.46.1](https://github.com/fjc0k/vtils/compare/v4.46.0...v4.46.1) (2021-10-18)
+
+### Bug Fixes
+
+- **EventBus:** 解决 off 问题 ([277149e](https://github.com/fjc0k/vtils/commit/277149e57a1d6196bd41cad54ec70d4f64870271))
+
 ## [4.46.0](https://github.com/fjc0k/vtils/compare/v4.45.0...v4.46.0) (2021-10-18)
 
 ### Features
