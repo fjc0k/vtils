@@ -6,7 +6,7 @@
  * @param devValue 开发环境返回的值或调用的函数
  * @param prodValue 生产环境返回的值或调用的函数
  */
-export function devOrProd<R, T extends R, F extends () => R>(
+export function devOrProd<R, T extends R = R, F extends () => R = () => R>(
   devValue: T | F,
   prodValue: T | F,
 ): R {

@@ -46,8 +46,10 @@ describe('devOrProd', () => {
   test('正确推导类型', () => {
     const obj: {
       x: 'ppp' | 'ff' | '00'
+      y: string
     } = {
       x: devOrProd('00', () => 'ff'),
+      y: devOrProd<string>('1', '3').replace('11', '333'),
     }
     expect(obj).toBe(obj)
   })
