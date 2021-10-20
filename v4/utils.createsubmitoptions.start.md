@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-start(message: string): AsyncOrSync<any>;
+start(message?: string): AsyncOrSync<any>;
 ```
 
 ## Parameters

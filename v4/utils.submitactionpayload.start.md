@@ -9,7 +9,7 @@
 <b>Signature:</b>
 
 ```typescript
-start(message: string): Promise<any>;
+start(message?: string): Promise<any>;
 ```
 
 ## Parameters

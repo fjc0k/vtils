@@ -11,7 +11,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function devOrProd<R, T extends R, F extends () => R>(devValue: T | F, prodValue: T | F): R;
+export declare function devOrProd<R, T extends R = R, F extends () => R = () => R>(devValue: T | F, prodValue: T | F): R;
 ```
 
 ## Parameters
