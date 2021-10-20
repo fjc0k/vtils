@@ -8,7 +8,7 @@ export interface CreateSubmitOptions {
    *
    * @param message 提示信息
    */
-  start(message: string): AsyncOrSync<any>
+  start(message?: string): AsyncOrSync<any>
 
   /**
    * 失败回调。
@@ -43,7 +43,7 @@ export interface SubmitActionPayload {
    *
    * @param message 提示信息
    */
-  start(message: string): Promise<any>
+  start(message?: string): Promise<any>
 
   /**
    * 失败提示。

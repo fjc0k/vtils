@@ -8,7 +8,7 @@ export const submit: CreateSubmitResult = createSubmit({
   start(message) {
     ensureInMiniProgram(mp => {
       mp.showLoading({
-        title: message,
+        title: message || '',
         mask: true,
       })
     })
