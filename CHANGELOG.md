@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.46.2](https://github.com/fjc0k/vtils/compare/v4.46.1...v4.46.2) (2021-10-20)
+
+### Bug Fixes
+
+- **createSubmit:** start 的 message 可选 ([e3c8c55](https://github.com/fjc0k/vtils/commit/e3c8c55e7365529f13d3e15cb9b816fa3084826c))
+- **devOrProd:** 类型设置默认值 ([4f6784d](https://github.com/fjc0k/vtils/commit/4f6784d7b7e687a5d581aee9c791490419b42c8a))
+
 ### [4.46.1](https://github.com/fjc0k/vtils/compare/v4.46.0...v4.46.1) (2021-10-18)
 
 ### Bug Fixes
