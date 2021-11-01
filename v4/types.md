@@ -23,10 +23,10 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [AnyArray](./types.anyarray.md) | 类型工具库。 |
+|  [AnyArray\_2](./types.anyarray_2.md) | 类型工具库。 |
 |  [AnyAsyncFunction](./types.anyasyncfunction.md) | 任意异步函数。 |
-|  [AnyFunction](./types.anyfunction.md) | 任意函数。 |
-|  [AnyObject](./types.anyobject.md) | 任意对象。 |
+|  [AnyFunction\_2](./types.anyfunction_2.md) | 任意函数。 |
+|  [AnyObject\_2](./types.anyobject_2.md) | 任意对象。 |
 |  [Asyncify](./types.asyncify.md) | Create an async version of the given function type, by boxing the return type in <code>Promise</code> while keeping the same parameter types.<!-- -->Use-case: You have two functions, one synchronous and one asynchronous that do the same thing. Instead of having to duplicate the type definition, you can use <code>Asyncify</code> to reuse the synchronous type. |
 |  [AsyncOrSync](./types.asyncorsync.md) | Useful as a return type in interfaces or abstract classes with missing implementation |
 |  [AsyncReturnType](./types.asyncreturntype.md) | Unwrap the return type of a function that returns a <code>Promise</code>.<!-- -->There has been \[discussion\](https://github.com/microsoft/TypeScript/pull/35998) about implementing this type in TypeScript. |
