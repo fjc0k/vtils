@@ -1,4 +1,3 @@
-/// <reference types="miniprogram-api-typings" />
 import { AnyObject, Defined } from '../types'
 import { EventBus, EventBusBeforeOn, EventBusListener } from '../utils'
 import { patchMiniProgram } from './patchMiniProgram'

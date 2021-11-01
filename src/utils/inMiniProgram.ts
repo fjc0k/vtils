@@ -1,4 +1,3 @@
-/// <reference types="miniprogram-api-typings" />
 import { castArray } from 'lodash-uni'
 
 declare const wx: WechatMiniprogram.Wx | undefined
@@ -26,18 +25,16 @@ export type MiniProgramApi = WechatMiniprogram.Wx & {
   readonly $brand: MiniProgramBrand
 }
 
-const factories: Record<
-  MiniProgramBrand,
-  () => false | WechatMiniprogram.Wx
-> = {
-  微信: () => typeof wx !== 'undefined' && wx,
-  QQ: () => typeof qq !== 'undefined' && qq,
-  支付宝: () => typeof my !== 'undefined' && my,
-  京东: () => typeof jd !== 'undefined' && jd,
-  百度: () => typeof swan !== 'undefined' && swan,
-  字节跳动: () => typeof tt !== 'undefined' && tt,
-  钉钉: () => typeof dd !== 'undefined' && dd,
-}
+const factories: Record<MiniProgramBrand, () => false | WechatMiniprogram.Wx> =
+  {
+    微信: () => typeof wx !== 'undefined' && wx,
+    QQ: () => typeof qq !== 'undefined' && qq,
+    支付宝: () => typeof my !== 'undefined' && my,
+    京东: () => typeof jd !== 'undefined' && jd,
+    百度: () => typeof swan !== 'undefined' && swan,
+    字节跳动: () => typeof tt !== 'undefined' && tt,
+    钉钉: () => typeof dd !== 'undefined' && dd,
+  }
 
 /**
  * 检查是否在指定品牌的小程序中，若在，返回承载其 API 的全局对象，若不在，返回 false。
@@ -53,7 +50,7 @@ export function inMiniProgram(
       const mp = factories[currentBrand]()
       if (mp && typeof mp.getSystemInfoSync === 'function') {
         // @ts-ignore
-        ;((mp as any) as MiniProgramApi).$brand = currentBrand
+        ;(mp as any as MiniProgramApi).$brand = currentBrand
         return mp as any
       }
     }

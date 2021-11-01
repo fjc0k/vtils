@@ -1,5 +1,3 @@
-/// <reference types="miniprogram-api-typings" />
-
 Object.defineProperty(window.navigator, 'platform', {
   writable: true,
 })

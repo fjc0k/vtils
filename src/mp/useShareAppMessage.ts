@@ -1,4 +1,3 @@
-/// <reference types="miniprogram-api-typings" />
 import { Defined } from '../types'
 import { miniProgramBus } from './miniProgramBus'
 import { useEffect } from 'react'

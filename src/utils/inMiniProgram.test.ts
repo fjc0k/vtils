@@ -1,4 +1,3 @@
-/// <reference types="miniprogram-api-typings" />
 import { inMiniProgram } from './inMiniProgram'
 
 const fakeMiniProgramFactory: Partial<WechatMiniprogram.Wx> = {

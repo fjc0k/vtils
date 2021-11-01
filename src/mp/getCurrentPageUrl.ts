@@ -1,4 +1,3 @@
-/// <reference types="miniprogram-api-typings" />
 import { AnyObject } from '../types'
 import { createUrlQueryString } from '../utils'
 import { ensureInMiniProgram } from './ensureInMiniProgram'

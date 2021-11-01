@@ -1,4 +1,3 @@
-/// <reference types="miniprogram-api-typings" />
 import { AnyObject } from '../types'
 import { ensureInMiniProgram } from './ensureInMiniProgram'
 import { last } from '../utils'

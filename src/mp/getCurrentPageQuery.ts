@@ -1,4 +1,3 @@
-/// <reference types="miniprogram-api-typings" />
 import { AnyObject } from '../types'
 import { ensureInMiniProgram } from './ensureInMiniProgram'
 import { last, mapValues } from '../utils'
@@ -10,7 +9,7 @@ import { last, mapValues } from '../utils'
  * @returns 返回当前页面的查询参数
  */
 export function getCurrentPageQuery<
-  T extends Record<string, string | undefined>
+  T extends Record<string, string | undefined>,
 >(pageInstance?: WechatMiniprogram.Page.Instance<AnyObject, AnyObject>): T {
   return ensureInMiniProgram(() => {
     pageInstance = pageInstance || last(getCurrentPages())!
@@ -18,6 +17,6 @@ export function getCurrentPageQuery<
       pageInstance.options || {},
       value => value && decodeURIComponent(value),
     )
-    return (query as any) as T
+    return query as any as T
   })
 }

@@ -1919,6 +1919,11 @@
   resolved "https://registry.nlark.com/@types/uuid/download/@types/uuid-8.3.1.tgz#1a32969cf8f0364b3d8c8af9cc3555b7805df14f"
   integrity sha1-GjKWnPjwNks9jIr5zDVVt4Bd8U8=
 
+"@types/wechat-miniprogram@3.4.0":
+  version "3.4.0"
+  resolved "https://registry.npmmirror.com/@types/wechat-miniprogram/download/@types/wechat-miniprogram-3.4.0.tgz#d743d5b3c17bd531c2c178ea1fe9d92a0b23bcd0"
+  integrity sha1-10PVs8F71THCwXjqH+nZKgsjvNA=
+
 "@types/yargs-parser@*":
   version "20.2.1"
   resolved "https://registry.nlark.com/@types/yargs-parser/download/@types/yargs-parser-20.2.1.tgz#3b9ce2489919d9e4fea439b76916abc34b2df129"
@@ -3395,11 +3400,6 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-date-fns@^2.17.0:
-  version "2.23.0"
-  resolved "https://registry.nlark.com/date-fns/download/date-fns-2.23.0.tgz#4e886c941659af0cf7b30fafdd1eaa37e88788a9"
-  integrity sha1-TohslBZZrwz3sw+v3R6qN+iHiKk=
-
 date-fns@^2.24.0:
   version "2.24.0"
   resolved "https://registry.nlark.com/date-fns/download/date-fns-2.24.0.tgz#7d86dc0d93c87b76b63d213b4413337cfd1c105d"
@@ -4678,10 +4678,10 @@ handlebars@^4.7.6:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-haoma@3.4.3:
-  version "3.4.3"
-  resolved "https://registry.nlark.com/haoma/download/haoma-3.4.3.tgz#935042a49fcac8b8b088996d111c7343845aaadb"
-  integrity sha1-k1BCpJ/KyLiwiJltERxzQ4Raqts=
+haoma@3.4.4:
+  version "3.4.4"
+  resolved "https://registry.npmmirror.com/haoma/download/haoma-3.4.4.tgz#12ef6d32091b11672340289c6aefa535c095d7f8"
+  integrity sha1-Eu9tMgkbEWcjQCicau+lNcCV1/g=
   dependencies:
     "@babel/core" "^7.12.13"
     "@babel/eslint-parser" "^7.12.13"
@@ -4739,6 +4739,7 @@ haoma@3.4.3:
     jest-transform-stub "^2.0.0"
     json5 "^2.2.0"
     less "^4.1.1"
+    lodash-uni "^1.1.0"
     ora "^5.3.0"
     pkg-dir "^5.0.0"
     postcss "^8.2.4"
@@ -4750,9 +4751,10 @@ haoma@3.4.3:
     rimraf "^3.0.2"
     sass "^1.32.6"
     snapshot-diff "^0.8.1"
+    ts-essentials "^9.0.0"
     ts-jest "^27.0.3"
     tslib "^2.1.0"
-    vtils "^4.30.2"
+    type-fest "^2.5.2"
     vue-eslint-parser "^7.4.1"
     vue-jest "^4.0.1"
     vue-template-es2015-compiler "^1.9.1"
@@ -6760,11 +6762,6 @@ minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.3, minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.npm.taobao.org/minimist/download/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI=
-
-miniprogram-api-typings@^3.2.3:
-  version "3.4.3"
-  resolved "https://registry.nlark.com/miniprogram-api-typings/download/miniprogram-api-typings-3.4.3.tgz?cache=0&sync_timestamp=1629801968074&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fminiprogram-api-typings%2Fdownload%2Fminiprogram-api-typings-3.4.3.tgz#c88cc624973322d990353d94ae765db90938d132"
-  integrity sha1-yIzGJJczItmQNT2UrnZduQk40TI=
 
 mixin-deep@^1.2.0:
   version "1.3.2"
@@ -9031,6 +9028,11 @@ ts-essentials@7.0.3:
   resolved "https://registry.nlark.com/ts-essentials/download/ts-essentials-7.0.3.tgz#686fd155a02133eedcc5362dc8b5056cde3e5a38"
   integrity sha1-aG/RVaAhM+7cxTYtyLUFbN4+Wjg=
 
+ts-essentials@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.npmmirror.com/ts-essentials/download/ts-essentials-9.0.0.tgz#6196b7f390926429256c70951c8edd260e8e5097"
+  integrity sha1-YZa385CSZCklbHCVHI7dJg6OUJc=
+
 ts-jest@^27.0.3:
   version "27.0.5"
   resolved "https://registry.nlark.com/ts-jest/download/ts-jest-27.0.5.tgz#0b0604e2271167ec43c12a69770f0bb65ad1b750"
@@ -9115,6 +9117,11 @@ type-fest@^0.8.1:
   version "0.8.1"
   resolved "https://registry.nlark.com/type-fest/download/type-fest-0.8.1.tgz?cache=0&sync_timestamp=1629724529996&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftype-fest%2Fdownload%2Ftype-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha1-CeJJ696FHTseSNJ8EFREZn8XuD0=
+
+type-fest@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.npmmirror.com/type-fest/download/type-fest-2.5.2.tgz#d6a5247b8019716b300d9023fa7b1b02016dd864"
+  integrity sha1-1qUke4AZcWswDZAj+nsbAgFt2GQ=
 
 typed-query-selector@^2.6.0:
   version "2.6.0"
@@ -9296,32 +9303,6 @@ vscode-generate-index-standalone@1.5.3:
   integrity sha1-PJRF4vPI+mmobI2niNowDQpjJFM=
   optionalDependencies:
     fsevents "~2.3.2"
-
-vtils@^4.30.2:
-  version "4.34.3"
-  resolved "https://registry.nlark.com/vtils/download/vtils-4.34.3.tgz#ea4010105359063b6f4b8b72785525c97131e8b2"
-  integrity sha1-6kAQEFNZBjtvS4tyeFUlyXEx6LI=
-  dependencies:
-    "@babel/runtime" "^7.12.18"
-    "@types/benchmark" "^2.1.0"
-    "@types/ioredis" "^4.19.4"
-    "@types/tough-cookie" "^4.0.0"
-    benchmark "^2.1.4"
-    cli-table3 "^0.6.0"
-    cuid "^2.1.8"
-    date-fns "^2.17.0"
-    fast-xml-parser "^3.18.0"
-    ioredis "^4.22.0"
-    lodash-uni "^1.1.0"
-    miniprogram-api-typings "^3.2.3"
-    nanoid "^3.1.20"
-    property-expr "^2.0.4"
-    react-use "^17.2.1"
-    toposort "^2.0.2"
-    tough-cookie "^4.0.0"
-    tough-cookie-redisstore "^0.0.4"
-    uuid "^8.3.2"
-    yup "~0.31.1"
 
 vue-eslint-parser@^7.10.0, vue-eslint-parser@^7.4.1:
   version "7.10.0"
