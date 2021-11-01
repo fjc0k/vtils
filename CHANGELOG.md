@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.46.3](https://github.com/fjc0k/vtils/compare/v4.46.2...v4.46.3) (2021-11-01)
+
+### Bug Fixes
+
+- 小程序类型不在内部引入 ([a057a01](https://github.com/fjc0k/vtils/commit/a057a01314b9ec49738deddb19a75f236aa49440))
+
 ### [4.46.2](https://github.com/fjc0k/vtils/compare/v4.46.1...v4.46.2) (2021-10-20)
 
 ### Bug Fixes
