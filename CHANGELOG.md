@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.47.0](https://github.com/fjc0k/vtils/compare/v4.46.3...v4.47.0) (2021-11-02)
+
+### Features
+
+- **utils:** 新增 signal ([d4df232](https://github.com/fjc0k/vtils/commit/d4df2324b43b533189759c8adf2162a8c8758218))
+
 ### [4.46.3](https://github.com/fjc0k/vtils/compare/v4.46.2...v4.46.3) (2021-11-01)
 
 ### Bug Fixes
