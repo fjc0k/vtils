@@ -104,6 +104,7 @@ rich://{"url":"***","desc":"***"}
 |  [selectElementExists(selectors, baseElement)](./utils.selectelementexists.md) |  |
 |  [selectElementLast(selectors, baseElement)](./utils.selectelementlast.md) |  |
 |  [selectElementLast(selectors, baseElement)](./utils.selectelementlast_1.md) |  |
+|  [signal()](./utils.signal.md) | 信号。 |
 |  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
 |  [traverse(value, callback)](./utils.traverse.md) | 遍历对象和数组。 |
 |  [wait(milliseconds, value)](./utils.wait.md) | 等待一段时间 resolve。 |
