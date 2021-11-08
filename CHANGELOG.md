@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.48.1](https://github.com/fjc0k/vtils/compare/v4.48.0...v4.48.1) (2021-11-08)
+
+### Bug Fixes
+
+- **date:** 导出的语言包后面加上 Locale ([d1bb828](https://github.com/fjc0k/vtils/commit/d1bb82807dd073927ec2f4f0539ee45fd00b6730))
+
 ## [4.48.0](https://github.com/fjc0k/vtils/compare/v4.47.0...v4.48.0) (2021-11-08)
 
 ### Features
