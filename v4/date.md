@@ -20,6 +20,8 @@
 |  [formatDate(date, renderer)](./date.formatdate.md) | 格式化日期。 |
 |  [formatDistanceAgo(date)](./date.formatdistanceago.md) | 将时间转化为 <code>xxx前</code> 表示。 |
 |  [intervalToRestrictiveDuration(start, end, target)](./date.intervaltorestrictiveduration.md) |  |
+|  [ms(value, unit, returnSeconds)](./date.ms.md) | 获取毫秒值。 |
+|  [ms(value, returnSeconds)](./date.ms_1.md) | 获取毫秒值。 |
 |  [numeralDayToChineseDay(day)](./date.numeraldaytochineseday.md) | 数字星期转中文星期。<code>0</code> 和 <code>7</code> 都视为星期日。 |
 
 ## Interfaces
