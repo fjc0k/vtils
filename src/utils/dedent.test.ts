@@ -59,4 +59,14 @@ describe('dedent', () => {
     const y = 'a\nb\n\nc\n\nd\ne'
     expect(x).toBe(y)
   })
+
+  test('通过函数调用正常', () => {
+    expect(
+      dedent(`
+        a
+        b
+      `),
+    ).toBe('a\nb')
+    expect(dedent('')).toBe('')
+  })
 })
