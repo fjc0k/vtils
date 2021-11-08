@@ -343,5 +343,6 @@ export * from './anyToDate'
 export * from './formatDate'
 export * from './formatDistanceAgo'
 export * from './intervalToRestrictiveDuration'
+export * from './ms'
 export * from './numeralDayToChineseDay'
 // @endindex
