@@ -4,20 +4,19 @@
 
 ## dedent() function
 
-首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。
+移除每一行的公共前导空白。
 
 <b>Signature:</b>
 
 ```typescript
-export declare function dedent(literals: TemplateStringsArray, ...interpolations: Array<string | number>): string;
+export declare function dedent(text: string): string;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  literals | TemplateStringsArray | 字面值 |
-|  interpolations | Array&lt;string \| number&gt; | 插入值 |
+|  text | string | 文本 |
 
 <b>Returns:</b>
 
@@ -29,7 +28,7 @@ string
 
 
 ```typescript
-dedent` a\n b` // => 'a\nb'
+dedent(' a\n b') // => 'a\nb'
 
 ```
 

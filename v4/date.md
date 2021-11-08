@@ -34,5 +34,9 @@
 |  --- | --- |
 |  [FormatDateRenderer](./date.formatdaterenderer.md) | 日期格式化渲染器。 |
 |  [IntervalToRestrictiveDurationTarget](./date.intervaltorestrictivedurationtarget.md) |  |
+|  [MsNumberValue](./date.msnumbervalue.md) |  |
+|  [MsStringValue](./date.msstringvalue.md) |  |
+|  [MsUnit](./date.msunit.md) |  |
+|  [MsValue](./date.msvalue.md) |  |
 |  [NumeralDay](./date.numeralday.md) | 数字星期。 |
 

@@ -44,7 +44,8 @@ rich://{"url":"***","desc":"***"}
 |  [copyTextToClipboard(text, options)](./utils.copytexttoclipboard.md) | 复制文本到剪切板。 |
 |  [createSubmit(options)](./utils.createsubmit.md) | 创建提交类行为。 |
 |  [createUrlQueryString(parameters, options)](./utils.createurlquerystring.md) | 创建 url 查询字符串。 |
-|  [dedent(literals, interpolations)](./utils.dedent.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
+|  [dedent(text)](./utils.dedent.md) | 移除每一行的公共前导空白。 |
+|  [dedent(literals, interpolations)](./utils.dedent_1.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
 |  [defaultIndexTo(index, defaultIndex)](./utils.defaultindexto.md) | 设置默认索引。当前索引为 <code>-1</code> 或 <code>NaN</code> 时会使用默认索引。 |
 |  [devOrProd(devValue, prodValue)](./utils.devorprod.md) | 开发环境和生产环境返回不同的值或调用不同的函数。<code>process.env.NODE_ENV</code> 为空值、<code>production</code>、<code>prod</code> 时被认为是生产环境，否则是开发环境。 |
 |  [formatBytes(value)](./utils.formatbytes.md) | 格式化字节数，以 1024 作为千字节数。 |
