@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.48.0](https://github.com/fjc0k/vtils/compare/v4.47.0...v4.48.0) (2021-11-08)
+
+### Features
+
+- **date:** 新增 ms 获取毫秒值 ([ad6a6eb](https://github.com/fjc0k/vtils/commit/ad6a6eb8ea4c4912bae19ad37797cf7609d308aa))
+- **dedent:** 支持通过函数调用处理纯文本 ([8f0e27d](https://github.com/fjc0k/vtils/commit/8f0e27daaead92a9afa45c4812a0d2cb0bd387c3))
+
 ## [4.47.0](https://github.com/fjc0k/vtils/compare/v4.46.3...v4.47.0) (2021-11-02)
 
 ### Features
