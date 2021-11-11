@@ -20,6 +20,14 @@ export interface NumberSchema<T extends number = number>
 
   id(message?: NumberLocale['id']): this
 
+  positiveInteger(message?: NumberLocale['positiveInteger']): this
+
+  negativeInteger(message?: NumberLocale['negativeInteger']): this
+
+  nonpositiveInteger(message?: NumberLocale['nonpositiveInteger']): this
+
+  nonnegativeInteger(message?: NumberLocale['nonnegativeInteger']): this
+
   truncate(): this
 
   round(type?: 'floor' | 'ceil' | 'trunc' | 'round'): this

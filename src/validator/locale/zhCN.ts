@@ -54,6 +54,10 @@ export const zhCN: yup.Locale = {
     negative: ({ label }) => `${label || '此项'}必须是一个负数`,
     integer: ({ label }) => `${label || '此项'}必须是一个整数`,
     id: ({ label }) => `${label || '此项'}必须是一个正整数`,
+    positiveInteger: ({ label }) => `${label || '此项'}必须是一个正整数`,
+    negativeInteger: ({ label }) => `${label || '此项'}必须是一个负整数`,
+    nonpositiveInteger: ({ label }) => `${label || '此项'}必须是一个非正整数`,
+    nonnegativeInteger: ({ label }) => `${label || '此项'}必须是一个非负整数`,
   },
   date: {
     min: ({ label, min }) => `${label || '此项'}必须晚于${min}`,

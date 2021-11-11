@@ -217,4 +217,47 @@ describe('yup', () => {
     expect(rule.validatePlusSync(1.5)).toMatchSnapshot()
     expect(rule.validatePlusSync(100)).toMatchSnapshot()
   })
+
+  test('number 支持 positiveInteger()', () => {
+    const rule = yup.number().positiveInteger()
+    expect(rule.validatePlusSync(1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(0)).toMatchSnapshot()
+    expect(rule.validatePlusSync(0.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(1.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(100)).toMatchSnapshot()
+  })
+
+  test('number 支持 negativeInteger()', () => {
+    const rule = yup.number().negativeInteger()
+    expect(rule.validatePlusSync(1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-0)).toMatchSnapshot()
+    expect(rule.validatePlusSync(0.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(1.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(100)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-100.3)).toMatchSnapshot()
+  })
+
+  test('number 支持 nonpositiveInteger()', () => {
+    const rule = yup.number().nonpositiveInteger()
+    expect(rule.validatePlusSync(1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-0)).toMatchSnapshot()
+    expect(rule.validatePlusSync(0.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(1.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(100)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-100.3)).toMatchSnapshot()
+  })
+
+  test('number 支持 nonnegativeInteger()', () => {
+    const rule = yup.number().nonnegativeInteger()
+    expect(rule.validatePlusSync(1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-0)).toMatchSnapshot()
+    expect(rule.validatePlusSync(0.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(1.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(100)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-100.3)).toMatchSnapshot()
+  })
 })

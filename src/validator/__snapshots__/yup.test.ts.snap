@@ -40,6 +40,187 @@ Object {
 }
 `;
 
+exports[`yup number 支持 negativeInteger() 1`] = `
+Object {
+  "data": 1,
+  "error": [ValidationError: 此项必须是一个负整数],
+}
+`;
+
+exports[`yup number 支持 negativeInteger() 2`] = `
+Object {
+  "data": -1,
+}
+`;
+
+exports[`yup number 支持 negativeInteger() 3`] = `
+Object {
+  "data": -0,
+  "error": [ValidationError: 此项必须是一个负整数],
+}
+`;
+
+exports[`yup number 支持 negativeInteger() 4`] = `
+Object {
+  "data": 0.5,
+  "error": [ValidationError: 此项必须是一个负整数],
+}
+`;
+
+exports[`yup number 支持 negativeInteger() 5`] = `
+Object {
+  "data": 1.5,
+  "error": [ValidationError: 此项必须是一个负整数],
+}
+`;
+
+exports[`yup number 支持 negativeInteger() 6`] = `
+Object {
+  "data": 100,
+  "error": [ValidationError: 此项必须是一个负整数],
+}
+`;
+
+exports[`yup number 支持 negativeInteger() 7`] = `
+Object {
+  "data": -100.3,
+  "error": [ValidationError: 此项必须是一个负整数],
+}
+`;
+
+exports[`yup number 支持 nonnegativeInteger() 1`] = `
+Object {
+  "data": 1,
+}
+`;
+
+exports[`yup number 支持 nonnegativeInteger() 2`] = `
+Object {
+  "data": -1,
+  "error": [ValidationError: 此项必须是一个非负整数],
+}
+`;
+
+exports[`yup number 支持 nonnegativeInteger() 3`] = `
+Object {
+  "data": -0,
+}
+`;
+
+exports[`yup number 支持 nonnegativeInteger() 4`] = `
+Object {
+  "data": 0.5,
+  "error": [ValidationError: 此项必须是一个非负整数],
+}
+`;
+
+exports[`yup number 支持 nonnegativeInteger() 5`] = `
+Object {
+  "data": 1.5,
+  "error": [ValidationError: 此项必须是一个非负整数],
+}
+`;
+
+exports[`yup number 支持 nonnegativeInteger() 6`] = `
+Object {
+  "data": 100,
+}
+`;
+
+exports[`yup number 支持 nonnegativeInteger() 7`] = `
+Object {
+  "data": -100.3,
+  "error": [ValidationError: 此项必须是一个非负整数],
+}
+`;
+
+exports[`yup number 支持 nonpositiveInteger() 1`] = `
+Object {
+  "data": 1,
+  "error": [ValidationError: 此项必须是一个非正整数],
+}
+`;
+
+exports[`yup number 支持 nonpositiveInteger() 2`] = `
+Object {
+  "data": -1,
+}
+`;
+
+exports[`yup number 支持 nonpositiveInteger() 3`] = `
+Object {
+  "data": -0,
+}
+`;
+
+exports[`yup number 支持 nonpositiveInteger() 4`] = `
+Object {
+  "data": 0.5,
+  "error": [ValidationError: 此项必须是一个非正整数],
+}
+`;
+
+exports[`yup number 支持 nonpositiveInteger() 5`] = `
+Object {
+  "data": 1.5,
+  "error": [ValidationError: 此项必须是一个非正整数],
+}
+`;
+
+exports[`yup number 支持 nonpositiveInteger() 6`] = `
+Object {
+  "data": 100,
+  "error": [ValidationError: 此项必须是一个非正整数],
+}
+`;
+
+exports[`yup number 支持 nonpositiveInteger() 7`] = `
+Object {
+  "data": -100.3,
+  "error": [ValidationError: 此项必须是一个非正整数],
+}
+`;
+
+exports[`yup number 支持 positiveInteger() 1`] = `
+Object {
+  "data": 1,
+}
+`;
+
+exports[`yup number 支持 positiveInteger() 2`] = `
+Object {
+  "data": -1,
+  "error": [ValidationError: 此项必须是一个正整数],
+}
+`;
+
+exports[`yup number 支持 positiveInteger() 3`] = `
+Object {
+  "data": 0,
+  "error": [ValidationError: 此项必须是一个正整数],
+}
+`;
+
+exports[`yup number 支持 positiveInteger() 4`] = `
+Object {
+  "data": 0.5,
+  "error": [ValidationError: 此项必须是一个正整数],
+}
+`;
+
+exports[`yup number 支持 positiveInteger() 5`] = `
+Object {
+  "data": 1.5,
+  "error": [ValidationError: 此项必须是一个正整数],
+}
+`;
+
+exports[`yup number 支持 positiveInteger() 6`] = `
+Object {
+  "data": 100,
+}
+`;
+
 exports[`yup test 第一个参数可传函数或正则 1`] = `
 Object {
   "data": Object {
