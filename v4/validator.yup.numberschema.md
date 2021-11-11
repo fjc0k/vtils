@@ -22,7 +22,11 @@ export interface NumberSchema<T extends number = number> extends MixedSchema<T>
 |  [min(limit, message)](./validator.yup.numberschema.min.md) |  |
 |  [moreThan(min, message)](./validator.yup.numberschema.morethan.md) |  |
 |  [negative(message)](./validator.yup.numberschema.negative.md) |  |
+|  [negativeInteger(message)](./validator.yup.numberschema.negativeinteger.md) |  |
+|  [nonnegativeInteger(message)](./validator.yup.numberschema.nonnegativeinteger.md) |  |
+|  [nonpositiveInteger(message)](./validator.yup.numberschema.nonpositiveinteger.md) |  |
 |  [positive(message)](./validator.yup.numberschema.positive.md) |  |
+|  [positiveInteger(message)](./validator.yup.numberschema.positiveinteger.md) |  |
 |  [round(type)](./validator.yup.numberschema.round.md) |  |
 |  [truncate()](./validator.yup.numberschema.truncate.md) |  |
 
