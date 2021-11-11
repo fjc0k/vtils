@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.49.0](https://github.com/fjc0k/vtils/compare/v4.48.1...v4.49.0) (2021-11-11)
+
+### Features
+
+- **validator:** number 新增 positiveInteger, negativeInteger, nonpositiveInteger, nonnegativeInteger ([56c0abf](https://github.com/fjc0k/vtils/commit/56c0abfd1628d3e2fb474c6a71c6f9c7ecfbc616))
+
 ### [4.48.1](https://github.com/fjc0k/vtils/compare/v4.48.0...v4.48.1) (2021-11-08)
 
 ### Bug Fixes
