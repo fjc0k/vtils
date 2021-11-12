@@ -24,9 +24,13 @@ export interface NumberSchema<T extends number = number>
 
   negativeInteger(message?: NumberLocale['negativeInteger']): this
 
-  nonpositiveInteger(message?: NumberLocale['nonpositiveInteger']): this
+  nonPositive(message?: NumberLocale['nonPositive']): this
 
-  nonnegativeInteger(message?: NumberLocale['nonnegativeInteger']): this
+  nonNegative(message?: NumberLocale['nonNegative']): this
+
+  nonPositiveInteger(message?: NumberLocale['nonPositiveInteger']): this
+
+  nonNegativeInteger(message?: NumberLocale['nonNegativeInteger']): this
 
   truncate(): this
 

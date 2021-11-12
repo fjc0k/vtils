@@ -48,8 +48,10 @@ export let number = {
   id: '${path} must be a positive integer',
   positiveInteger: '${path} must be a positive integer',
   negativeInteger: '${path} must be a negative integer',
-  nonpositiveInteger: '${path} must be a nonpositive integer',
-  nonnegativeInteger: '${path} must be a nonnegative integer',
+  nonPositive: '${path} must be a non-positive number',
+  nonNegative: '${path} must be a non-negative number',
+  nonPositiveInteger: '${path} must be a non-positive integer',
+  nonNegativeInteger: '${path} must be a non-negative integer',
 }
 
 export let date = {

@@ -239,8 +239,8 @@ describe('yup', () => {
     expect(rule.validatePlusSync(-100.3)).toMatchSnapshot()
   })
 
-  test('number 支持 nonpositiveInteger()', () => {
-    const rule = yup.number().nonpositiveInteger()
+  test('number 支持 nonPositive()', () => {
+    const rule = yup.number().nonPositive()
     expect(rule.validatePlusSync(1)).toMatchSnapshot()
     expect(rule.validatePlusSync(-1)).toMatchSnapshot()
     expect(rule.validatePlusSync(-0)).toMatchSnapshot()
@@ -250,8 +250,30 @@ describe('yup', () => {
     expect(rule.validatePlusSync(-100.3)).toMatchSnapshot()
   })
 
-  test('number 支持 nonnegativeInteger()', () => {
-    const rule = yup.number().nonnegativeInteger()
+  test('number 支持 nonNegative()', () => {
+    const rule = yup.number().nonNegative()
+    expect(rule.validatePlusSync(1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-0)).toMatchSnapshot()
+    expect(rule.validatePlusSync(0.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(1.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(100)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-100.3)).toMatchSnapshot()
+  })
+
+  test('number 支持 nonPositiveInteger()', () => {
+    const rule = yup.number().nonPositiveInteger()
+    expect(rule.validatePlusSync(1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-1)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-0)).toMatchSnapshot()
+    expect(rule.validatePlusSync(0.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(1.5)).toMatchSnapshot()
+    expect(rule.validatePlusSync(100)).toMatchSnapshot()
+    expect(rule.validatePlusSync(-100.3)).toMatchSnapshot()
+  })
+
+  test('number 支持 nonNegativeInteger()', () => {
+    const rule = yup.number().nonNegativeInteger()
     expect(rule.validatePlusSync(1)).toMatchSnapshot()
     expect(rule.validatePlusSync(-1)).toMatchSnapshot()
     expect(rule.validatePlusSync(-0)).toMatchSnapshot()

@@ -111,18 +111,36 @@ inherits(NumberSchema, MixedSchema, {
     return this.negative(msg).integer(msg)
   },
 
-  nonpositiveInteger(msg = locale.nonpositiveInteger) {
+  nonPositive(msg = locale.nonPositive) {
     return this.test({
-      name: 'nonpositiveInteger',
+      name: 'nonPositive',
+      message: msg,
+      exclusive: true,
+      test: val => isAbsent(val) || val <= 0,
+    })
+  },
+
+  nonNegative(msg = locale.nonNegative) {
+    return this.test({
+      name: 'nonNegative',
+      message: msg,
+      exclusive: true,
+      test: val => isAbsent(val) || val >= 0,
+    })
+  },
+
+  nonPositiveInteger(msg = locale.nonPositiveInteger) {
+    return this.test({
+      name: 'nonPositiveInteger',
       message: msg,
       exclusive: true,
       test: val => isAbsent(val) || (Number.isInteger(val) && val <= 0),
     })
   },
 
-  nonnegativeInteger(msg = locale.nonnegativeInteger) {
+  nonNegativeInteger(msg = locale.nonNegativeInteger) {
     return this.test({
-      name: 'nonnegativeInteger',
+      name: 'nonNegativeInteger',
       message: msg,
       exclusive: true,
       test: val => isAbsent(val) || (Number.isInteger(val) && val >= 0),
