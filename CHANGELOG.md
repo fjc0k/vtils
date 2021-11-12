@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.50.0](https://github.com/fjc0k/vtils/compare/v4.49.0...v4.50.0) (2021-11-12)
+
+### Features
+
+- **validator:** number 新增 nonPositive, nonNegative 规则 ([a0d1f9c](https://github.com/fjc0k/vtils/commit/a0d1f9cd6cf07db06a94592c09f59f1f0a65ab79))
+
 ## [4.49.0](https://github.com/fjc0k/vtils/compare/v4.48.1...v4.49.0) (2021-11-11)
 
 ### Features
