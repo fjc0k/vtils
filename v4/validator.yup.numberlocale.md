@@ -22,8 +22,10 @@ export interface NumberLocale
 |  [moreThan](./validator.yup.numberlocale.morethan.md) | LocaleValue&lt;{ more: number; }&gt; |  |
 |  [negative](./validator.yup.numberlocale.negative.md) | LocaleValue&lt;{ less: number; }&gt; |  |
 |  [negativeInteger](./validator.yup.numberlocale.negativeinteger.md) | LocaleValue |  |
-|  [nonnegativeInteger](./validator.yup.numberlocale.nonnegativeinteger.md) | LocaleValue |  |
-|  [nonpositiveInteger](./validator.yup.numberlocale.nonpositiveinteger.md) | LocaleValue |  |
+|  [nonNegative](./validator.yup.numberlocale.nonnegative.md) | LocaleValue |  |
+|  [nonNegativeInteger](./validator.yup.numberlocale.nonnegativeinteger.md) | LocaleValue |  |
+|  [nonPositive](./validator.yup.numberlocale.nonpositive.md) | LocaleValue |  |
+|  [nonPositiveInteger](./validator.yup.numberlocale.nonpositiveinteger.md) | LocaleValue |  |
 |  [positive](./validator.yup.numberlocale.positive.md) | LocaleValue&lt;{ more: number; }&gt; |  |
 |  [positiveInteger](./validator.yup.numberlocale.positiveinteger.md) | LocaleValue |  |
 
