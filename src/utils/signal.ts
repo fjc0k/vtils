@@ -14,15 +14,15 @@ export function signal<T>(): SignalResult<T> {
   let error!: any
   let isException = false
 
-  let $resolve: any
-  let $reject: any
+  const $resolve: any[] = []
+  const $reject: any[] = []
 
   const setValue: SignalResult<T>['set'] = _value => {
     value = _value
-    if ($resolve) {
-      $resolve(value)
-      $resolve = null
-      $reject = null
+    if ($resolve.length) {
+      $resolve.forEach(resolve => resolve(value))
+      $resolve.length = 0
+      $reject.length = 0
     }
     isOk = true
     isException = false
@@ -30,10 +30,10 @@ export function signal<T>(): SignalResult<T> {
 
   const throwError: SignalResult<T>['throw'] = _error => {
     error = _error
-    if ($reject) {
-      $reject(error)
-      $resolve = null
-      $reject = null
+    if ($reject.length) {
+      $reject.forEach(reject => reject(error))
+      $resolve.length = 0
+      $reject.length = 0
     }
     isOk = false
     isException = true
@@ -53,8 +53,8 @@ export function signal<T>(): SignalResult<T> {
       if (isException) {
         return reject(error)
       }
-      $resolve = resolve
-      $reject = reject
+      $resolve.push(resolve)
+      $reject.push(reject)
     })
   }
 
