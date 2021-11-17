@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`makeEnum $buildList 正确 1`] = `
+Array [
+  Object {
+    "label": "x",
+    "value": 1,
+  },
+  Object {
+    "label": "y",
+    "value": 2,
+  },
+]
+`;
+
+exports[`makeEnum $buildList 正确 2`] = `
+Array [
+  Object {
+    "label": "是",
+    "value": true,
+  },
+  Object {
+    "label": "否",
+    "value": false,
+  },
+]
+`;
+
+exports[`makeEnum $list 正确 1`] = `
+Array [
+  Object {
+    "label": "x",
+    "value": 1,
+  },
+  Object {
+    "label": "y",
+    "value": 2,
+  },
+  Object {
+    "label": "z",
+    "value": 3,
+  },
+]
+`;
+
+exports[`makeEnum $list 正确 2`] = `
+Array [
+  Object {
+    "label": "x",
+    "value": "1",
+  },
+  Object {
+    "label": "y",
+    "value": "2",
+  },
+  Object {
+    "label": "z",
+    "value": "3",
+  },
+]
+`;
+
+exports[`makeEnum $list 正确 3`] = `
+Array [
+  Object {
+    "label": "x",
+    "value": true,
+  },
+  Object {
+    "label": "y",
+    "value": false,
+  },
+]
+`;
