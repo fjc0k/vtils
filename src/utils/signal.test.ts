@@ -2,36 +2,22 @@ import { signal } from './signal'
 import { wait } from './wait'
 
 describe('signal', () => {
-  test('resolve', async () => {
-    let x = 0
-    const s = signal<number>()
-    s.then(_x => (x = _x))
-    expect(x).toBe(0)
-    s.resolve(2)
+  test('表现正常', async () => {
+    let _userData = ''
+    const userData = signal<string>()
+    userData.get().then(v => (_userData = v))
     await wait(0)
-    expect(x).toBe(2)
-
-    // 只会触发一次 Promise
-    s.resolve(22)
+    expect(_userData).toBe('')
+    userData.set('test')
     await wait(0)
-    expect(x).toBe(2)
-  })
-
-  test('reject', async () => {
-    const x = 0
-    let err = ''
-    const s = signal<number>()
-    s.catch(_err => (err = _err))
-    expect(x).toBe(0)
-    expect(err).toBe('')
-    s.reject('err')
+    expect(_userData).toBe('test')
+    userData.set('test2')
     await wait(0)
-    expect(x).toBe(0)
-    expect(err).toBe('err')
-
-    // 只会触发一次 Promise
-    s.reject('err2')
+    expect(_userData).toBe('test')
+    userData.get().then(v => (_userData = v))
     await wait(0)
-    expect(err).toBe('err')
+    expect(_userData).toBe('test2')
+    userData.throw('err')
+    await expect(userData.get()).rejects.toContain('err')
   })
 })

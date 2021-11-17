@@ -1,46 +1,66 @@
+export interface SignalResult<T> {
+  set(value: T): void
+  throw(error: any): void
+  get(): Promise<T>
+}
+
 /**
  * 信号。
  */
-export function signal<T>(): Promise<T> & {
-  resolve: (value: T) => void
-  reject: (err: any) => void
-} {
-  let _resolve: any
-  let _reject: any
+export function signal<T>(): SignalResult<T> {
+  let value!: T
+  let isOk = false
 
-  let resolved = false
-  let resolvedValue: any
-  const resolve = (value: any) => {
-    if (!resolved) {
-      resolved = true
-      resolvedValue = value
-      _resolve?.(value)
+  let error!: any
+  let isException = false
+
+  let $resolve: any
+  let $reject: any
+
+  const setValue: SignalResult<T>['set'] = _value => {
+    value = _value
+    if ($resolve) {
+      $resolve(value)
+      $resolve = null
+      $reject = null
     }
+    isOk = true
+    isException = false
   }
 
-  let rejected = false
-  let rejectedValue: any
-  const reject = (value: any) => {
-    if (!rejected) {
-      rejected = true
-      rejectedValue = value
-      _reject?.(value)
+  const throwError: SignalResult<T>['throw'] = _error => {
+    error = _error
+    if ($reject) {
+      $reject(error)
+      $resolve = null
+      $reject = null
     }
+    isOk = false
+    isException = true
   }
 
-  const s: any = new Promise(($resolve, $reject) => {
-    if (resolved) {
-      $resolve(resolvedValue)
-    } else if (rejected) {
-      $reject(rejectedValue)
-    } else {
-      _resolve = $resolve
-      _reject = $reject
+  const getValue: SignalResult<T>['get'] = () => {
+    if (isOk) {
+      return Promise.resolve<T>(value)
     }
-  })
+    if (isException) {
+      return Promise.reject(error)
+    }
+    return new Promise<T>((resolve, reject) => {
+      if (isOk) {
+        return resolve(value)
+      }
+      if (isException) {
+        return reject(error)
+      }
+      $resolve = resolve
+      $reject = reject
+    })
+  }
 
-  s.resolve = resolve
-  s.reject = reject
-
-  return s
+  return {
+    set: setValue,
+    get: getValue,
+    throw: throwError,
+  }
 }
