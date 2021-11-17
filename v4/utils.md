@@ -77,6 +77,7 @@ rich://{"url":"***","desc":"***"}
 |  [loadCss(urlOrContent)](./utils.loadcss.md) | 加载 CSS 样式，支持链接和内容。 |
 |  [loadResource(url, options)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
 |  [loopUntil(fn, condition, options)](./utils.loopuntil.md) | 循环调用某个函数直至达到某个条件后返回调用结果。 |
+|  [makeEnum(map)](./utils.makeenum.md) | 构造枚举数据。 |
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
 |  [moveDown(arr, from, step)](./utils.movedown.md) | 原地下移数组中的某个元素。 |
@@ -129,6 +130,7 @@ rich://{"url":"***","desc":"***"}
 |  [ParsedFileRichUrl](./utils.parsedfilerichurl.md) |  |
 |  [ParsedRichUrl](./utils.parsedrichurl.md) |  |
 |  [ReadFileReader](./utils.readfilereader.md) | 各种内容类型的读取器。 |
+|  [SignalResult](./utils.signalresult.md) |  |
 |  [SubmitActionPayload](./utils.submitactionpayload.md) |  |
 |  [TreeDataNode](./utils.treedatanode.md) |  |
 |  [TreeDataOptions](./utils.treedataoptions.md) |  |
@@ -165,6 +167,10 @@ rich://{"url":"***","desc":"***"}
 |  [BindEventFunction](./utils.bindeventfunction.md) | 绑定事件函数。 |
 |  [CreateSubmitResult](./utils.createsubmitresult.md) |  |
 |  [ElementOfRawData](./utils.elementofrawdata.md) |  |
+|  [EnumKey](./utils.enumkey.md) |  |
+|  [EnumMap](./utils.enummap.md) |  |
+|  [EnumResult](./utils.enumresult.md) |  |
+|  [EnumValue](./utils.enumvalue.md) |  |
 |  [EventBusBeforeEmit](./utils.eventbusbeforeemit.md) |  |
 |  [EventBusBeforeOn](./utils.eventbusbeforeon.md) |  |
 |  [EventBusListener](./utils.eventbuslistener.md) |  |

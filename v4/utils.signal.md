@@ -9,12 +9,9 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function signal<T>(): Promise<T> & {
-    resolve: (value: T) => void;
-    reject: (err: any) => void;
-};
+export declare function signal<T>(): SignalResult<T>;
 ```
 <b>Returns:</b>
 
-Promise&lt;T&gt; &amp; { resolve: (value: T) =&gt; void; reject: (err: any) =&gt; void; }
+[SignalResult](./utils.signalresult.md)<!-- -->&lt;T&gt;
 
