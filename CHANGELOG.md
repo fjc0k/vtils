@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.51.0](https://github.com/fjc0k/vtils/compare/v4.50.0...v4.51.0) (2021-11-17)
+
+### Features
+
+- signal 重构 ([3acbd2f](https://github.com/fjc0k/vtils/commit/3acbd2f3d6c657e286120fd96a991438df3006f0))
+- **utils:** 新增 makeEnum ([5a6f1a7](https://github.com/fjc0k/vtils/commit/5a6f1a7952d2ecc3898b1bcf09ccd600f7ae14ee))
+
 ## [4.50.0](https://github.com/fjc0k/vtils/compare/v4.49.0...v4.50.0) (2021-11-12)
 
 ### Features
