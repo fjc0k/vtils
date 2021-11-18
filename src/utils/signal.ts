@@ -12,7 +12,7 @@ export function signal<T>(): SignalResult<T> {
   let isOk = false
 
   let error!: any
-  let isException = false
+  let isFail = false
 
   const $resolve: any[] = []
   const $reject: any[] = []
@@ -25,7 +25,7 @@ export function signal<T>(): SignalResult<T> {
       $reject.length = 0
     }
     isOk = true
-    isException = false
+    isFail = false
   }
 
   const throwError: SignalResult<T>['throw'] = _error => {
@@ -36,21 +36,21 @@ export function signal<T>(): SignalResult<T> {
       $reject.length = 0
     }
     isOk = false
-    isException = true
+    isFail = true
   }
 
   const getValue: SignalResult<T>['get'] = () => {
     if (isOk) {
       return Promise.resolve<T>(value)
     }
-    if (isException) {
+    if (isFail) {
       return Promise.reject(error)
     }
     return new Promise<T>((resolve, reject) => {
       if (isOk) {
         return resolve(value)
       }
-      if (isException) {
+      if (isFail) {
         return reject(error)
       }
       $resolve.push(resolve)
