@@ -11,6 +11,7 @@ export * from 'lodash-uni'
 // @index(['./**/*.ts', '!./**/*.{test,perf}.*'], f => `export * from '${f.path}'`)
 export * from './base64'
 export * from './bindEvent'
+export * from './cartesianProduct'
 export * from './chooseFile'
 export * from './chunkEqual'
 export * from './cloneDeepFast'
