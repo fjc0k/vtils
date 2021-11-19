@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.52.0](https://github.com/fjc0k/vtils/compare/v4.51.1...v4.52.0) (2021-11-19)
+
+### Features
+
+- **utils:** 新增 cartesianProduct 计算多个数组的笛卡尔积 ([0ac3d87](https://github.com/fjc0k/vtils/commit/0ac3d873b0e5965a93fd868c86c8aafed6b667fd))
+
 ### [4.51.1](https://github.com/fjc0k/vtils/compare/v4.51.0...v4.51.1) (2021-11-17)
 
 ### Bug Fixes
