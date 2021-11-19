@@ -1,7 +1,6 @@
 const supportNewFunction = (() => {
   try {
-    new Function('1')
-    return true
+    return new Function('return 1')() === 1
   } catch (err) {
     return false
   }

@@ -105,7 +105,7 @@ describe('cartesianProduct - universal', () => {
     // @ts-expect-error
     global.Function = class Function2 extends _Function {
       constructor(...args: any[]) {
-        if (args[0] === '1') {
+        if (args[0] === 'return 1') {
           throw new Error()
         }
         super(...args)
