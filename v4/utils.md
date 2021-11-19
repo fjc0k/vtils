@@ -37,6 +37,14 @@ rich://{"url":"***","desc":"***"}
 |  [base64UrlDecode(value)](./utils.base64urldecode.md) | 将给定的 base64url 字符串解码为 UTF8 字符串。 |
 |  [base64UrlEncode(value)](./utils.base64urlencode.md) | 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。 |
 |  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
+|  [cartesianProduct(arr)](./utils.cartesianproduct.md) | 计算多个数组的笛卡尔积。 |
+|  [cartesianProduct(arr)](./utils.cartesianproduct_1.md) |  |
+|  [cartesianProduct(arr)](./utils.cartesianproduct_2.md) |  |
+|  [cartesianProduct(arr)](./utils.cartesianproduct_3.md) |  |
+|  [cartesianProduct(arr)](./utils.cartesianproduct_4.md) |  |
+|  [cartesianProduct(arr)](./utils.cartesianproduct_5.md) |  |
+|  [cartesianProduct(arr)](./utils.cartesianproduct_6.md) |  |
+|  [cartesianProduct(arr)](./utils.cartesianproduct_7.md) |  |
 |  [chooseFile(accept, multiple)](./utils.choosefile.md) | 选择文件。 |
 |  [chunkEqual(array, size, filler)](./utils.chunkequal.md) | 类似 <code>chunk</code>，但当每组条目数量不一致时会在最后一组添加填充值以达到每组条目数量一致。 |
 |  [cloneDeepFast(value, ignore)](./utils.clonedeepfast.md) | 深克隆快速版。 |
