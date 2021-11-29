@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-max(limit: number | Ref, message?: StringLocale['max']): this;
+max(limit: number | Ref<number>, message?: StringLocale['max']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| Ref |  |
+|  limit | number \| Ref&lt;number&gt; |  |
 |  message | StringLocale\['max'\] |  |
 
 <b>Returns:</b>

@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-length(limit: number | Ref, message?: StringLocale['length']): this;
+length(limit: number | Ref<number>, message?: StringLocale['length']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| Ref |  |
+|  limit | number \| Ref&lt;number&gt; |  |
 |  message | StringLocale\['length'\] |  |
 
 <b>Returns:</b>

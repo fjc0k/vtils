@@ -7,12 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export interface Ref 
+export interface Ref<T> 
 ```
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [\_\_isYupRef](./validator.yup.ref.__isyupref.md) | true |  |
-

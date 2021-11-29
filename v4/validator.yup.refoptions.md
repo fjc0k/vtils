@@ -7,12 +7,12 @@
 <b>Signature:</b>
 
 ```typescript
-export interface RefOptions 
+export interface RefOptions<T> 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [contextPrefix?](./validator.yup.refoptions.contextprefix.md) | string | <i>(Optional)</i> |
+|  [map?](./validator.yup.refoptions.map.md) | (value: any) =&gt; T | <i>(Optional)</i> |
 

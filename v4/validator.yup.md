@@ -26,6 +26,7 @@
 |  [printValue(value, quoteStrings)](./validator.yup.printvalue.md) |  |
 |  [reach(schema, path, value, context)](./validator.yup.reach.md) |  |
 |  [ref(path, options)](./validator.yup.ref.md) |  |
+|  [ref(path, map)](./validator.yup.ref_1.md) |  |
 |  [setLocale(locale)](./validator.yup.setlocale.md) |  |
 |  [string()](./validator.yup.string.md) |  |
 

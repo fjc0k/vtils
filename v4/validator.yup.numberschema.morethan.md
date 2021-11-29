@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-moreThan(min: number | Ref, message?: NumberLocale['moreThan']): this;
+moreThan(min: number | Ref<number>, message?: NumberLocale['moreThan']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  min | number \| Ref |  |
+|  min | number \| Ref&lt;number&gt; |  |
 |  message | NumberLocale\['moreThan'\] |  |
 
 <b>Returns:</b>

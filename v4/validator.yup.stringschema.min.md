@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-min(limit: number | Ref, message?: StringLocale['min']): this;
+min(limit: number | Ref<number>, message?: StringLocale['min']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| Ref |  |
+|  limit | number \| Ref&lt;number&gt; |  |
 |  message | StringLocale\['min'\] |  |
 
 <b>Returns:</b>

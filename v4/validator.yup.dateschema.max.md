@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-max(limit: Date | Ref, message?: DateLocale['max']): this;
+max(limit: Date | Ref<Date>, message?: DateLocale['max']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | Date \| Ref |  |
+|  limit | Date \| Ref&lt;Date&gt; |  |
 |  message | DateLocale\['max'\] |  |
 
 <b>Returns:</b>
