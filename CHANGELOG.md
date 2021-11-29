@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.53.0](https://github.com/fjc0k/vtils/compare/v4.52.0...v4.53.0) (2021-11-29)
+
+### Features
+
+- **validator:** 为 ref 添加 map 支持 ([4bc0a78](https://github.com/fjc0k/vtils/commit/4bc0a788092295fa43de02fec433a76b924776fd))
+
 ## [4.52.0](https://github.com/fjc0k/vtils/compare/v4.51.1...v4.52.0) (2021-11-19)
 
 ### Features
