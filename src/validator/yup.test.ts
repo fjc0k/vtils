@@ -282,4 +282,16 @@ describe('yup', () => {
     expect(rule.validatePlusSync(100)).toMatchSnapshot()
     expect(rule.validatePlusSync(-100.3)).toMatchSnapshot()
   })
+
+  test('ref 支持 map', () => {
+    const rule = yup.number().min(yup.ref('.', value => value + 1))
+    expect(rule.validatePlusSync(2)).toMatchSnapshot()
+
+    const rule2 = yup.number().min(
+      yup.ref('.', {
+        map: value => value + 1,
+      }),
+    )
+    expect(rule2.validatePlusSync(2)).toMatchSnapshot()
+  })
 })

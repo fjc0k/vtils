@@ -1,10 +1,16 @@
-export interface Ref {
-  readonly __isYupRef: true
+// eslint-disable-next-line @typescript-eslint/no-empty-interface,@typescript-eslint/no-unused-vars
+export interface Ref<T> {}
+
+export interface RefOptions<T> {
+  map?: (value: any) => T
 }
 
-export interface RefOptions {
-  contextPrefix?: string
-}
+export declare function ref<X, T extends X>(
+  path: string,
+  options?: RefOptions<T>,
+): Ref<X>
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export declare function ref<T>(path: string, options?: RefOptions): Ref
+export declare function ref<X, T extends X>(
+  path: string,
+  map?: NonNullable<RefOptions<T>['map']>,
+): Ref<X>

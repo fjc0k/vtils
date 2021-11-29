@@ -311,6 +311,20 @@ Object {
 }
 `;
 
+exports[`yup ref 支持 map 1`] = `
+Object {
+  "data": 2,
+  "error": [ValidationError: 此项必须大于或等于3],
+}
+`;
+
+exports[`yup ref 支持 map 2`] = `
+Object {
+  "data": 2,
+  "error": [ValidationError: 此项必须大于或等于3],
+}
+`;
+
 exports[`yup test 第一个参数可传函数或正则 1`] = `
 Object {
   "data": Object {

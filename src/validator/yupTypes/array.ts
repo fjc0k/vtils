@@ -7,9 +7,9 @@ export interface ArraySchema<T extends any = any> extends MixedSchema<T[]> {
 
   required(message?: MixedLocale['required']): this
 
-  min(limit: number | Ref, message?: ArrayLocale['min']): this
+  min(limit: number | Ref<number>, message?: ArrayLocale['min']): this
 
-  max(limit: number | Ref, message?: ArrayLocale['max']): this
+  max(limit: number | Ref<number>, message?: ArrayLocale['max']): this
 
   ensure(): this
 

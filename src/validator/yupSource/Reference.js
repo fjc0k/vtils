@@ -7,6 +7,12 @@ const prefixes = {
 
 export default class Reference {
   constructor(key, options = {}) {
+    if (typeof options === 'function') {
+      options = {
+        map: options,
+      }
+    }
+
     if (typeof key !== 'string')
       throw new TypeError('ref must be a string, got: ' + key)
 
