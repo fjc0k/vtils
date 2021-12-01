@@ -20,9 +20,18 @@ export type {
   KebabCase,
   PascalCase,
   DelimiterCase,
+  ScreamingSnakeCase as ConstantCase,
   Class,
   Asyncify,
   UnionToIntersection,
+  Integer,
+  NegativeInteger,
+  NonNegativeInteger,
+  Negative,
+  NonNegative,
+  Finite,
+  PositiveInfinity,
+  NegativeInfinity,
 } from 'type-fest'
 
 export type {

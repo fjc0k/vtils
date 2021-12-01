@@ -1,4 +1,5 @@
 import { camelCase, upperFirst } from 'lodash-uni'
+import { PascalCase } from '../types'
 
 /**
  * 转换文本为没有分隔符的大写单词字符串。
@@ -11,6 +12,6 @@ import { camelCase, upperFirst } from 'lodash-uni'
  * // => TestString
  * ```
  */
-export function pascalCase(text: string): string {
-  return upperFirst(camelCase(text))
+export function pascalCase<T extends string>(text: T): PascalCase<T> {
+  return upperFirst(camelCase(text)) as any
 }

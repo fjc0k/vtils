@@ -9083,10 +9083,10 @@ type-detect@4.0.8:
   resolved "https://registry.nlark.com/type-detect/download/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
   integrity sha1-dkb7XxiHHPu3dJ5pvTmmOI63RQw=
 
-type-fest@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.nlark.com/type-fest/download/type-fest-2.0.0.tgz?cache=0&sync_timestamp=1629724529996&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftype-fest%2Fdownload%2Ftype-fest-2.0.0.tgz#e9daf5615e89f6d430f34117f88f4ee2cd5a2725"
-  integrity sha1-6dr1YV6J9tQw80EX+I9O4s1aJyU=
+type-fest@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.npmmirror.com/type-fest/download/type-fest-2.7.0.tgz#6d58aa78d48f0968110a4ab1f75f563ae6cde572"
+  integrity sha512-gmfzrsfDuoQUpqteXPE1X8D2GdtEAhP+X9pdXj3xBbg86OO8ZtSTtJ9BVopDyWtdNuwbOXAYdluX4o/O65qebA==
 
 type-fest@^0.13.1:
   version "0.13.1"

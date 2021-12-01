@@ -1,3 +1,4 @@
+import { ConstantCase } from '../types'
 import { snakeCase } from 'lodash-uni'
 
 /**
@@ -11,6 +12,6 @@ import { snakeCase } from 'lodash-uni'
  * // => TEST_STRING
  * ```
  */
-export function constantCase(text: string): string {
-  return snakeCase(text).toUpperCase()
+export function constantCase<T extends string>(text: T): ConstantCase<T> {
+  return snakeCase(text).toUpperCase() as any
 }
