@@ -1,31 +1,5 @@
 import * as yup from './yupSource'
-import {
-  isChineseIDCardNumber,
-  isPossibleChineseMobilePhoneNumber,
-} from '../utils'
 import { zhCN } from './locale/zhCN'
-
-// 实现 chineseMobilePhoneNumber 验证器
-yup.addMethod(
-  yup.string,
-  'chineseMobilePhoneNumber',
-  function (message = yup.getLocale().string.chineseMobilePhoneNumber) {
-    return this.test(
-      'chineseMobilePhoneNumber',
-      message,
-      isPossibleChineseMobilePhoneNumber,
-    )
-  },
-)
-
-// 实现 chineseIDCardNumber 验证器
-yup.addMethod(
-  yup.string,
-  'chineseIDCardNumber',
-  function (message = yup.getLocale().string.chineseIDCardNumber) {
-    return this.test('chineseIDCardNumber', message, isChineseIDCardNumber)
-  },
-)
 
 // 实现 validateInOrder 方法
 yup.addMethod(yup.object, 'validateInOrder', function (data, options) {

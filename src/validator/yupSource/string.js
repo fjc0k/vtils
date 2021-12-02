@@ -2,6 +2,10 @@ import inherits from './util/inherits'
 import MixedSchema from './mixed'
 import { string as locale } from './locale'
 import isAbsent from './util/isAbsent'
+import {
+  isChineseIDCardNumber,
+  isPossibleChineseMobilePhoneNumber,
+} from '../../utils'
 
 // eslint-disable-next-line
 let rEmail =
@@ -129,6 +133,23 @@ inherits(StringSchema, MixedSchema, {
       name: 'uuid',
       message,
       excludeEmptyString: false,
+    })
+  },
+
+  // -- 自定义 --
+  chineseIDCardNumber(message = locale.chineseIDCardNumber) {
+    return this.test({
+      message,
+      name: 'chineseIDCardNumber',
+      test: isChineseIDCardNumber,
+    })
+  },
+
+  chineseMobilePhoneNumber(message = locale.chineseMobilePhoneNumber) {
+    return this.test({
+      message,
+      name: 'chineseMobilePhoneNumber',
+      test: isPossibleChineseMobilePhoneNumber,
     })
   },
 

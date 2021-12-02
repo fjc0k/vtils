@@ -31,6 +31,8 @@ export let string = {
   email: '${path} must be a valid email',
   url: '${path} must be a valid URL',
   uuid: '${path} must be a valid UUID',
+  chineseIDCardNumber: '${path} must be a Chinese identity card number',
+  chineseMobilePhoneNumber: '${path} must be a Chinese mobile phone number',
   trim: '${path} must be a trimmed string',
   lowercase: '${path} must be a lowercase string',
   uppercase: '${path} must be a upper case string',
