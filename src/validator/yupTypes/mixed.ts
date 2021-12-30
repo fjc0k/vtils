@@ -131,8 +131,18 @@ export interface MixedSchema<T = any> {
 
   notOneOf(arrayOfValues: T[], message?: MixedLocale['notOneOf']): this
 
-  /** @仅保留了类型友好的用法 */
   when(builder: (value: T, schema: this) => this): this
+
+  when<V>(
+    key: string,
+    builder: {
+      is: boolean | ((value: V) => boolean)
+      then: GetSchema<T>
+      otherwise: GetSchema<T>
+    },
+  ): this
+
+  when<V>(key: string, builder: (value: V, schema: this) => this): this
 
   test(
     test: SchemaTestOptions<this, T>['test'] | RegExp,
