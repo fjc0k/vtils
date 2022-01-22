@@ -1,3 +1,5 @@
+import { JsonValue } from '../types'
+
 export interface LocalStoragePlusOptions {
   /** 存储键 */
   key: string
@@ -30,7 +32,7 @@ interface LocalStoragePlusRawData<T> {
 /**
  * 本地存储增强。
  */
-export class LocalStoragePlus<T> {
+export class LocalStoragePlus<T extends JsonValue> {
   private static prefix = 'plus:'
 
   private key: string
@@ -45,13 +47,18 @@ export class LocalStoragePlus<T> {
    * @param value 值
    * @param options 选项
    */
-  set(value: T, options?: LocalStoragePlusSetOptions): void {
+  set(
+    value: T | ((prevValue: T | null) => T),
+    options?: LocalStoragePlusSetOptions,
+  ): void {
     const { ttl, tag } = options || {}
     const expiredAt = ttl && Date.now() + ttl
+    const nextValue =
+      typeof value === 'function' ? value(this.get({ tag })) : value
     localStorage.setItem(
       this.key,
       JSON.stringify({
-        v: value,
+        v: nextValue,
         e: expiredAt,
         t: tag,
       } as LocalStoragePlusRawData<T>),
