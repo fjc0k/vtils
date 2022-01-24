@@ -51,6 +51,8 @@ export interface MixedSchema<T = any>
 |  [validatePlusSync(value, options)](./validator.yup.mixedschema.validateplussync.md) | 验证增强，包括：对象顺序验证、返回结果包含错误信息。 |
 |  [validateSync(value, options)](./validator.yup.mixedschema.validatesync.md) |  |
 |  [validateSyncAt(path, value, options)](./validator.yup.mixedschema.validatesyncat.md) | @<!-- -->类型不友好 |
-|  [when(builder)](./validator.yup.mixedschema.when.md) | @<!-- -->仅保留了类型友好的用法 |
+|  [when(builder)](./validator.yup.mixedschema.when.md) |  |
+|  [when(key, builder)](./validator.yup.mixedschema.when_1.md) |  |
+|  [when(key, builder)](./validator.yup.mixedschema.when_2.md) |  |
 |  [withMutation(fn)](./validator.yup.mixedschema.withmutation.md) |  |
 

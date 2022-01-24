@@ -9,18 +9,18 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function pascalCase(text: string): string;
+export declare function pascalCase<T extends string>(text: T): PascalCase<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  text | string | 要转换的文本 |
+|  text | T | 要转换的文本 |
 
 <b>Returns:</b>
 
-string
+PascalCase&lt;T&gt;
 
 返回结果
 

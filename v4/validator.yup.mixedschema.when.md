@@ -4,8 +4,6 @@
 
 ## yup.MixedSchema.when() method
 
-@<!-- -->仅保留了类型友好的用法
-
 <b>Signature:</b>
 
 ```typescript

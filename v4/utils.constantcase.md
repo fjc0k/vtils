@@ -9,18 +9,18 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function constantCase(text: string): string;
+export declare function constantCase<T extends string>(text: T): ConstantCase<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  text | string | 要转换的文本 |
+|  text | T | 要转换的文本 |
 
 <b>Returns:</b>
 
-string
+ConstantCase&lt;T&gt;
 
 返回结果
 

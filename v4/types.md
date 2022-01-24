@@ -33,14 +33,17 @@
 |  [Buildable](./types.buildable.md) | Combination of DeepPartial and DeepWritable |
 |  [CamelCase](./types.camelcase.md) | Convert a string literal to camel-case.<!-- -->This can be useful when, for example, converting some kebab-cased command-line flags or a snake-cased database result. |
 |  [Class](./types.class.md) | Matches a \[<code>class</code>\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). Basic |
+|  [ConstantCase](./types.constantcase.md) | Convert a string literal to screaming-snake-case.<!-- -->This can be useful when, for example, converting a camel-cased object property to a screaming-snake-cased SQL column name. |
 |  [Defined](./types.defined.md) | 去除类型 T 中的 undefined。 |
 |  [DelimiterCase](./types.delimitercase.md) | Convert a string literal to a custom string delimiter casing.<!-- -->This can be useful when, for example, converting a camel-cased object property to an oddly cased one. |
 |  [DotPath](./types.dotpath.md) |  |
 |  [DotPathValue](./types.dotpathvalue.md) |  |
 |  [ElementOf](./types.elementof.md) | Easily extract the type of a given array's elements |
+|  [Finite](./types.finite.md) | A finite <code>number</code>. You can't pass a <code>bigint</code> as they are already guaranteed to be finite.<!-- -->Use-case: Validating and documenting parameters. |
 |  [FirstParameter](./types.firstparameter.md) | 返回函数 T 第一个参数的类型。 |
 |  [FixedLengthArray](./types.fixedlengtharray.md) | Create a type that represents an array of the given type and length. The array's length and the <code>Array</code> prototype methods that manipulate its length are excluded in the resulting type.<!-- -->Please participate in \[this issue\](https://github.com/microsoft/TypeScript/issues/26223) if you want to have a similiar type built into TypeScript.<!-- -->Use-cases: - Declaring fixed-length tuples or arrays with a large number of items. - Creating a range union (for example, <code>0 &#124; 1 &#124; 2 &#124; 3 &#124; 4</code> from the keys of such a type) without having to resort to recursive types. - Creating an array of coordinates with a static length, for example, length of 3 for a 3D vector. |
 |  [Head](./types.head.md) | Functional programming essentials |
+|  [Integer](./types.integer.md) | A <code>number</code> that is an integer. You can't pass a <code>bigint</code> as they are already guaranteed to be integers.<!-- -->Use-case: Validating and documenting parameters. |
 |  [IsAny](./types.isany.md) | 判断 <code>T</code> 是否是 <code>any</code> 类型。 |
 |  [IsEmptyArray](./types.isemptyarray.md) | 判断 <code>T</code> 是否是空数组。 |
 |  [IsEmptyObject](./types.isemptyobject.md) | 判断 <code>T</code> 是否是空对象。 |
@@ -51,7 +54,12 @@
 |  [KebabCase](./types.kebabcase.md) | Convert a string literal to kebab-case.<!-- -->This can be useful when, for example, converting a camel-cased object property to a kebab-cased CSS class name or a command-line flag. |
 |  [LiteralUnion](./types.literalunion.md) | Allows creating a union type by combining primitive types and literal types without sacrificing auto-completion in IDEs for the literal type part of the union.<!-- -->Currently, when a union type of a primitive type is combined with literal types, TypeScript loses all information about the combined literals. Thus, when such type is used in an IDE with autocompletion, no suggestions are made for the declared literals.<!-- -->This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com/Microsoft/TypeScript/issues/29729). It will be removed as soon as it's not needed anymore. |
 |  [Merge](./types.merge.md) | Merge 2 types, properties types from the latter override the ones defined on the former type |
+|  [Negative](./types.negative.md) | A negative <code>number</code>/<code>bigint</code> (<code>-∞ &lt; x &lt; 0</code>)<!-- -->Use-case: Validating and documenting parameters. |
+|  [NegativeInfinity](./types.negativeinfinity.md) | Matches the hidden <code>-Infinity</code> type.<!-- -->Please upvote \[this issue\](https://github.com/microsoft/TypeScript/issues/32277) if you want to have this type as a built-in in TypeScript. |
+|  [NegativeInteger](./types.negativeinteger.md) | A negative (<code>-∞ &lt; x &lt; 0</code>) <code>number</code> that is an integer. Equivalent to <code>Negative&lt;Integer&lt;T&gt;&gt;</code>.<!-- -->You can't pass a <code>bigint</code> as they are already guaranteed to be integers, instead use <code>Negative&lt;T&gt;</code>.<!-- -->Use-case: Validating and documenting parameters. |
 |  [NonEmptyArray](./types.nonemptyarray.md) | 非空数组类型。 |
+|  [NonNegative](./types.nonnegative.md) | A non-negative <code>number</code>/<code>bigint</code> (<code>0 &lt;= x &lt; ∞</code>).<!-- -->Use-case: Validating and documenting parameters. |
+|  [NonNegativeInteger](./types.nonnegativeinteger.md) | A non-negative (<code>0 &lt;= x &lt; ∞</code>) <code>number</code> that is an integer. Equivalent to <code>NonNegative&lt;Integer&lt;T&gt;&gt;</code>.<!-- -->You can't pass a <code>bigint</code> as they are already guaranteed to be integers, instead use <code>NonNegative&lt;T&gt;</code>.<!-- -->Use-case: Validating and documenting parameters. |
 |  [NonNullableDeep](./types.nonnullabledeep.md) | Like NonNullable but recursive |
 |  [NullableDeep](./types.nullabledeep.md) | Recursive nullable |
 |  [OmitBy](./types.omitby.md) | Omit all properties of given type in object type |
@@ -66,6 +74,7 @@
 |  [Path](./types.path.md) | 获取对象的路径。最多支持 7 级路径。 |
 |  [PathValue](./types.pathvalue.md) | 获取对象的路径值。最多支持 7 级路径。 |
 |  [PickBy](./types.pickby.md) | Pick all properties of given type in object type |
+|  [PositiveInfinity](./types.positiveinfinity.md) | Matches the hidden <code>Infinity</code> type.<!-- -->Please upvote \[this issue\](https://github.com/microsoft/TypeScript/issues/32277) if you want to have this type as a built-in in TypeScript. |
 |  [ReadonlyDeep](./types.readonlydeep.md) | Like Readonly but recursive |
 |  [ReadonlyKeys](./types.readonlykeys.md) | Gets keys of an object which are readonly |
 |  [RequiredBy](./types.requiredby.md) | Mark some properties as required, leaving others unchanged |

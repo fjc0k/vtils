@@ -2,7 +2,7 @@
 
 [Home](./index.md) &gt; [utils](./utils.md) &gt; [devOrProd](./utils.devorprod.md)
 
-## devOrProd() function
+## devOrProd variable
 
 开发环境和生产环境返回不同的值或调用不同的函数。
 
@@ -11,17 +11,8 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function devOrProd<R, T extends R = R, F extends () => R = () => R>(devValue: T | F, prodValue: T | F): R;
+devOrProd: {
+    <R, T extends R = R, F extends () => R = () => R>(devValue: T | F, prodValue: T | F): R;
+    make: typeof makeDevOrProd;
+}
 ```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  devValue | T \| F | 开发环境返回的值或调用的函数 |
-|  prodValue | T \| F | 生产环境返回的值或调用的函数 |
-
-<b>Returns:</b>
-
-R
-

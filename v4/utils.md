@@ -12,6 +12,7 @@
 |  --- | --- |
 |  [DataPacker](./utils.datapacker.md) | 数据打包器。 |
 |  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TListeners 事件名称及其对应的回调描述 |
+|  [LocalStoragePlus](./utils.localstorageplus.md) | 本地存储增强。 |
 |  [LoopUntilRetryLimitExceededError](./utils.loopuntilretrylimitexceedederror.md) |  |
 |  [RichUrl](./utils.richurl.md) | 富链接，同普通链接相比，富链接可包含一些描述信息。<!-- -->结构描述：
 ```text
@@ -55,7 +56,6 @@ rich://{"url":"***","desc":"***"}
 |  [dedent(text)](./utils.dedent.md) | 移除每一行的公共前导空白。 |
 |  [dedent(literals, interpolations)](./utils.dedent_1.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
 |  [defaultIndexTo(index, defaultIndex)](./utils.defaultindexto.md) | 设置默认索引。当前索引为 <code>-1</code> 或 <code>NaN</code> 时会使用默认索引。 |
-|  [devOrProd(devValue, prodValue)](./utils.devorprod.md) | 开发环境和生产环境返回不同的值或调用不同的函数。<code>process.env.NODE_ENV</code> 为空值、<code>production</code>、<code>prod</code> 时被认为是生产环境，否则是开发环境。 |
 |  [formatBytes(value)](./utils.formatbytes.md) | 格式化字节数，以 1024 作为千字节数。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
 |  [getCurrentScript()](./utils.getcurrentscript.md) | 返回当前正在运行的脚本所属的 <code>&lt;script&gt;</code> 元素。有两点限制：<!-- -->- 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 <code>null</code>。 |
@@ -133,6 +133,9 @@ rich://{"url":"***","desc":"***"}
 |  [LoadCssResult](./utils.loadcssresult.md) |  |
 |  [LoadResourceOptions](./utils.loadresourceoptions.md) |  |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
+|  [LocalStoragePlusGetOptions](./utils.localstorageplusgetoptions.md) |  |
+|  [LocalStoragePlusOptions](./utils.localstorageplusoptions.md) |  |
+|  [LocalStoragePlusSetOptions](./utils.localstorageplussetoptions.md) |  |
 |  [LoopUntilOptions](./utils.loopuntiloptions.md) |  |
 |  [ParseDataUrlResult](./utils.parsedataurlresult.md) |  |
 |  [ParsedFileRichUrl](./utils.parsedfilerichurl.md) |  |
@@ -164,6 +167,7 @@ rich://{"url":"***","desc":"***"}
 
 |  Variable | Description |
 |  --- | --- |
+|  [devOrProd](./utils.devorprod.md) | 开发环境和生产环境返回不同的值或调用不同的函数。<code>process.env.NODE_ENV</code> 为空值、<code>production</code>、<code>prod</code> 时被认为是生产环境，否则是开发环境。 |
 |  [keysStrict](./utils.keysstrict.md) | 同 [keys](https://lodash.com/docs/4.17.15#keys)<!-- -->，不过采用了严格的类型定义。 |
 |  [omitStrict](./utils.omitstrict.md) | 同 [omit](https://lodash.com/docs/4.17.15#omit)<!-- -->，不过采用了严格的类型定义。 |
 |  [pickStrict](./utils.pickstrict.md) | 同 [pick](https://lodash.com/docs/4.17.15#pick)<!-- -->，不过采用了严格的类型定义。 |

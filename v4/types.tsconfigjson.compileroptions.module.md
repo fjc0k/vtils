@@ -15,6 +15,7 @@ export type Module =
         			| 'ES6'
         			| 'ES2015'
         			| 'ES2020'
+        			| 'ES2022'
         			| 'ESNext'
         			| 'None'
         			// Lowercase alternatives
@@ -25,6 +26,7 @@ export type Module =
         			| 'es6'
         			| 'es2015'
         			| 'es2020'
+        			| 'es2022'
         			| 'esnext'
         			| 'none';
 ```

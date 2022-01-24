@@ -11,7 +11,7 @@ This can be useful when, for example, converting some kebab-cased command-line f
 <b>Signature:</b>
 
 ```typescript
-export declare type CamelCase<K> = K extends string ? K extends Uppercase<K> ? CamelCaseStringArray<Split<Lowercase<K>, WordSeparators>> : CamelCaseStringArray<Split<K, WordSeparators>> : K;
+export declare type CamelCase<K> = K extends string ? CamelCaseStringArray<Split<K extends Uppercase<K> ? Lowercase<K> : K, WordSeparators>> : K;
 ```
 
 ## Example
@@ -28,7 +28,7 @@ type CamelCasedProperties<T> = { \[K in keyof T as CamelCase<K>\]: T\[K\] }<!-- 
 
 interface RawOptions { 'dry-run': boolean; 'full\_family\_name': string; foo: number; BAR: string; QUZ\_QUX: number; 'OTHER-FIELD': boolean; }
 
-const dbResult: CamelCasedProperties<ModelProps> = { dryRun: true, fullFamilyName: 'bar.js', foo: 123, bar: 'foo', quzQux: 6, otherField: false }<!-- -->; \`\`\`
+const dbResult: CamelCasedProperties<RawOptions> = { dryRun: true, fullFamilyName: 'bar.js', foo: 123, bar: 'foo', quzQux: 6, otherField: false }<!-- -->; \`\`\`
 
  Template Literals
 

@@ -14,6 +14,7 @@ This can be useful when, for example, converting a camel-cased object property t
 export declare type DelimiterCase<Value, Delimiter extends string> = Value extends string
 	? StringArrayToDelimiterCase<
 		SplitIncludingDelimiters<Value, WordSeparators | UpperCaseCharacters>,
+		true,
 		WordSeparators,
 		UpperCaseCharacters,
 		Delimiter
