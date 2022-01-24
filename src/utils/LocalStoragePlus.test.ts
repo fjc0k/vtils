@@ -94,4 +94,21 @@ describe('LocalStoragePlus', () => {
       }),
     ).toBe(null)
   })
+
+  test('静态方法正常', () => {
+    expect(LocalStoragePlus.get<number>('s')).toBe(null)
+    expect(LocalStoragePlus.has('s')).toBe(false)
+    LocalStoragePlus.set<number>('s', 1)
+    expect(LocalStoragePlus.has('s')).toBe(true)
+    expect(LocalStoragePlus.get<number>('s')).toBe(1)
+    LocalStoragePlus.set<number>('s', s => (s || 0) + 2)
+    expect(LocalStoragePlus.get<number>('s')).toBe(3)
+    LocalStoragePlus.remove('s')
+    expect(LocalStoragePlus.has('s')).toBe(false)
+    LocalStoragePlus.set<number>('s', s => (s || 0) + 2)
+    expect(LocalStoragePlus.get<number>('s')).toBe(2)
+    LocalStoragePlus.clear()
+    expect(LocalStoragePlus.has('s')).toBe(false)
+    expect(LocalStoragePlus.get<number>('s')).toBe(null)
+  })
 })

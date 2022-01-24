@@ -33,30 +33,38 @@ interface LocalStoragePlusRawData<T> {
  * 本地存储增强。
  */
 export class LocalStoragePlus<T extends JsonValue> {
-  private static prefix = 'plus:'
+  /**
+   * 本地存储键名前缀。
+   */
+  private static prefix = 'LSP:'
 
-  private key: string
-
-  constructor(private options: LocalStoragePlusOptions) {
-    this.key = `${LocalStoragePlus.prefix}${options.key}`
+  /**
+   * 获取完全的键名。
+   *
+   * @param key 键名
+   */
+  private static getFullKey(key: string): string {
+    return `${this.prefix}${key}`
   }
 
   /**
-   * 设置值。
+   * 设置本地存储。
    *
+   * @param key 键
    * @param value 值
    * @param options 选项
    */
-  set(
+  static set<T extends JsonValue>(
+    key: string,
     value: T | ((prevValue: T | null) => T),
     options?: LocalStoragePlusSetOptions,
   ): void {
     const { ttl, tag } = options || {}
     const expiredAt = ttl && Date.now() + ttl
     const nextValue =
-      typeof value === 'function' ? value(this.get({ tag })) : value
+      typeof value === 'function' ? value(this.get<T>(key, { tag })) : value
     localStorage.setItem(
-      this.key,
+      this.getFullKey(key),
       JSON.stringify({
         v: nextValue,
         e: expiredAt,
@@ -66,15 +74,19 @@ export class LocalStoragePlus<T extends JsonValue> {
   }
 
   /**
-   * 获取值。
+   * 获取本地存储。
    *
+   * @param key 键
    * @param options 选项
    */
-  get(options?: LocalStoragePlusGetOptions): T | null {
+  static get<T extends JsonValue>(
+    key: string,
+    options?: LocalStoragePlusGetOptions,
+  ): T | null {
     const { tag } = options || {}
 
     try {
-      const rawText = localStorage.getItem(this.key)
+      const rawText = localStorage.getItem(this.getFullKey(key))
       if (rawText != null) {
         const rawData = JSON.parse(rawText) as LocalStoragePlusRawData<T>
 
@@ -93,18 +105,73 @@ export class LocalStoragePlus<T extends JsonValue> {
   }
 
   /**
+   * 是否存在本地存储。
+   *
+   * @param key 键
+   * @param options 选项
+   */
+  static has(key: string, options?: LocalStoragePlusGetOptions): boolean {
+    return this.get(key, options) !== null
+  }
+
+  /**
+   * 删除本地存储。
+   *
+   * @param key 键
+   */
+  static remove(key: string): void {
+    localStorage.removeItem(this.getFullKey(key))
+  }
+
+  /**
+   * 清空本地存储。
+   */
+  static clear(): void {
+    for (let i = 0, len = localStorage.length; i < len; i++) {
+      const key = localStorage.key(i)
+      if (key != null && key.indexOf(this.prefix) === 0) {
+        localStorage.removeItem(key)
+      }
+    }
+  }
+
+  constructor(private options: LocalStoragePlusOptions) {}
+
+  /**
+   * 设置值。
+   *
+   * @param value 值
+   * @param options 选项
+   */
+  set(
+    value: T | ((prevValue: T | null) => T),
+    options?: LocalStoragePlusSetOptions,
+  ): void {
+    return LocalStoragePlus.set<T>(this.options.key, value, options)
+  }
+
+  /**
+   * 获取值。
+   *
+   * @param options 选项
+   */
+  get(options?: LocalStoragePlusGetOptions): T | null {
+    return LocalStoragePlus.get(this.options.key, options)
+  }
+
+  /**
    * 是否存在值。
    *
    * @param options 选项
    */
   has(options?: LocalStoragePlusGetOptions): boolean {
-    return this.get(options) !== null
+    return LocalStoragePlus.has(this.options.key, options)
   }
 
   /**
    * 删除值。
    */
   remove(): void {
-    localStorage.removeItem(this.key)
+    return LocalStoragePlus.remove(this.options.key)
   }
 }
