@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.54.0](https://github.com/fjc0k/vtils/compare/v4.53.0...v4.54.0) (2022-01-24)
+
+### Features
+
+- 类型更新 ([8c2f6f6](https://github.com/fjc0k/vtils/commit/8c2f6f616fc3825b944beaf677c1ed9d2dd8af6a))
+- **devOrProd:** 支持自定义判定 ([ebd8320](https://github.com/fjc0k/vtils/commit/ebd8320d4aefcd3d23d454ae2cbe32f7daa75982))
+- **LocalStoragePlus:** 添加静态方法支持 ([0c20f39](https://github.com/fjc0k/vtils/commit/0c20f399dea5d6e393a081872457a8fcd1edd79b))
+- **LocalStoragePlus:** set 支持传入函数根据上一个值返回新值 ([6eb4138](https://github.com/fjc0k/vtils/commit/6eb4138f9c8c78aa69887aab002150aa0024b74c))
+- **utils:** 新增 LocalStoragePlus ([1b98102](https://github.com/fjc0k/vtils/commit/1b98102e7d2c08da534d3d9c7122189fe4dd9546))
+- **validator:** 优化 when 的类型 ([5206139](https://github.com/fjc0k/vtils/commit/52061399fe103022c0e67ef2d6fa26d10ca10f37))
+
 ## [4.53.0](https://github.com/fjc0k/vtils/compare/v4.52.0...v4.53.0) (2021-11-29)
 
 ### Features
