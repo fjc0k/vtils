@@ -46,9 +46,11 @@ export function wait<T>(milliseconds: number, value?: T): WaitResult<T> {
 wait.reject = function reject(
   milliseconds: number,
   value?: any,
-): WaitResult<void> {
+): WaitResult<never> {
   const waitRes = wait(milliseconds)
-  const res: WaitResult<void> = waitRes.then(() => Promise.reject(value)) as any
+  const res: WaitResult<never> = waitRes.then(() =>
+    Promise.reject(value),
+  ) as any
   res.cancel = waitRes.cancel
   return res
 }
