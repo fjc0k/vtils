@@ -23,10 +23,14 @@ export declare class LocalStoragePlus<T extends JsonValue>
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [clear()](./utils.localstorageplus.clear.md) | <code>static</code> | 清空本地存储。 |
+|  [decrease(value, options)](./utils.localstorageplus.decrease.md) |  | 自减。 |
+|  [decrease(key, value, options)](./utils.localstorageplus.decrease.md) | <code>static</code> | 将本地存储的值减少给定值，若本地存储不存在，则初始化为 <code>0</code> 后操作。 |
 |  [get(options)](./utils.localstorageplus.get.md) |  | 获取值。 |
 |  [get(key, options)](./utils.localstorageplus.get.md) | <code>static</code> | 获取本地存储。 |
 |  [has(options)](./utils.localstorageplus.has.md) |  | 是否存在值。 |
 |  [has(key, options)](./utils.localstorageplus.has.md) | <code>static</code> | 是否存在本地存储。 |
+|  [increase(value, options)](./utils.localstorageplus.increase.md) |  | 自增。 |
+|  [increase(key, value, options)](./utils.localstorageplus.increase.md) | <code>static</code> | 将本地存储的值增加给定值，若本地存储不存在，则初始化为 <code>0</code> 后操作。 |
 |  [remove()](./utils.localstorageplus.remove.md) |  | 删除值。 |
 |  [remove(key)](./utils.localstorageplus.remove.md) | <code>static</code> | 删除本地存储。 |
 |  [set(value, options)](./utils.localstorageplus.set.md) |  | 设置值。 |

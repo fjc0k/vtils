@@ -10,6 +10,7 @@
 
 |  Class | Description |
 |  --- | --- |
+|  [Calculator](./utils.calculator.md) | 科学计算器。主要是为了避免 js 的浮点数精度计算问题。 |
 |  [DataPacker](./utils.datapacker.md) | 数据打包器。 |
 |  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TListeners 事件名称及其对应的回调描述 |
 |  [LocalStoragePlus](./utils.localstorageplus.md) | 本地存储增强。 |

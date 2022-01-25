@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-reject: (milliseconds: number, value?: any) => WaitResult<void>
+reject: (milliseconds: number, value?: any) => WaitResult<never>
 ```
