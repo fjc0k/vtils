@@ -95,6 +95,32 @@ describe('LocalStoragePlus', () => {
     ).toBe(null)
   })
 
+  test('increase 正常', () => {
+    const countStorage = new LocalStoragePlus<number>({
+      key: 'increase',
+    })
+    expect(countStorage.get()).toBe(null)
+    countStorage.increase(2)
+    expect(countStorage.get()).toBe(2)
+    countStorage.increase(2)
+    expect(countStorage.get()).toBe(4)
+    countStorage.increase(-5)
+    expect(countStorage.get()).toBe(-1)
+  })
+
+  test('decrease 正常', () => {
+    const countStorage = new LocalStoragePlus<number>({
+      key: 'decrease',
+    })
+    expect(countStorage.get()).toBe(null)
+    countStorage.decrease(2)
+    expect(countStorage.get()).toBe(-2)
+    countStorage.decrease(2)
+    expect(countStorage.get()).toBe(-4)
+    countStorage.decrease(-5)
+    expect(countStorage.get()).toBe(1)
+  })
+
   test('静态方法正常', () => {
     expect(LocalStoragePlus.get<number>('s')).toBe(null)
     expect(LocalStoragePlus.has('s')).toBe(false)

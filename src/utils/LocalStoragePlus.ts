@@ -135,6 +135,44 @@ export class LocalStoragePlus<T extends JsonValue> {
     }
   }
 
+  /**
+   * 将本地存储的值增加给定值，若本地存储不存在，则初始化为 `0` 后操作。
+   *
+   * @param key 键
+   * @param value 增加值，默认 `1`
+   * @param options 选项
+   */
+  static increase(
+    key: string,
+    value = 1,
+    options?: LocalStoragePlusSetOptions,
+  ): void {
+    this.set(
+      key,
+      (prevValue: number | null) => Number(prevValue || 0) + value,
+      options,
+    )
+  }
+
+  /**
+   * 将本地存储的值减少给定值，若本地存储不存在，则初始化为 `0` 后操作。
+   *
+   * @param key 键
+   * @param value 减小值，默认 `1`
+   * @param options 选项
+   */
+  static decrease(
+    key: string,
+    value = 1,
+    options?: LocalStoragePlusSetOptions,
+  ): void {
+    this.set(
+      key,
+      (prevValue: number | null) => Number(prevValue || 0) - value,
+      options,
+    )
+  }
+
   constructor(private options: LocalStoragePlusOptions) {}
 
   /**
@@ -173,5 +211,25 @@ export class LocalStoragePlus<T extends JsonValue> {
    */
   remove(): void {
     return LocalStoragePlus.remove(this.options.key)
+  }
+
+  /**
+   * 自增。
+   *
+   * @param value 增加值
+   * @param options 选项
+   */
+  increase(value = 1, options?: LocalStoragePlusSetOptions): void {
+    return LocalStoragePlus.increase(this.options.key, value, options)
+  }
+
+  /**
+   * 自减。
+   *
+   * @param value 减少值
+   * @param options 选项
+   */
+  decrease(value = 1, options?: LocalStoragePlusSetOptions): void {
+    return LocalStoragePlus.decrease(this.options.key, value, options)
   }
 }
