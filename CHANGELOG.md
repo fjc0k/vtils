@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.55.0](https://github.com/fjc0k/vtils/compare/v4.54.0...v4.55.0) (2022-01-25)
+
+### Features
+
+- **LocalStoragePlus:** 新增 increase, decrease ([d4e9dd9](https://github.com/fjc0k/vtils/commit/d4e9dd92d5a89d8bc2dcd185809a0cbc5228d0ed))
+- **utils:** 新增 Calculator 科学计算器 ([5880148](https://github.com/fjc0k/vtils/commit/5880148bcba0a16a64e94f66c20bd8bdcd22a774))
+
+### Bug Fixes
+
+- **wait.reject:** 将返回结果的类型设为 never ([5ef338a](https://github.com/fjc0k/vtils/commit/5ef338aa6c378cb1ef9409b9016507107a942aa3))
+
 ## [4.54.0](https://github.com/fjc0k/vtils/compare/v4.53.0...v4.54.0) (2022-01-24)
 
 ### Features
