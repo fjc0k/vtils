@@ -1,12 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`htmlToDom htmlToDocumentFragment 正常 1`] = `
+exports[`htmlToDom htmlToDocumentFragment 正常 1`] = `<DocumentFragment />`;
+
+exports[`htmlToDom htmlToDocumentFragment 正常 2`] = `
 <DocumentFragment>
   test
 </DocumentFragment>
 `;
 
-exports[`htmlToDom htmlToDocumentFragment 正常 2`] = `
+exports[`htmlToDom htmlToDocumentFragment 正常 3`] = `
 <DocumentFragment>
   test 
   <a>
@@ -15,7 +17,7 @@ exports[`htmlToDom htmlToDocumentFragment 正常 2`] = `
 </DocumentFragment>
 `;
 
-exports[`htmlToDom htmlToDocumentFragment 正常 3`] = `
+exports[`htmlToDom htmlToDocumentFragment 正常 4`] = `
 <DocumentFragment>
   <a>
     hello
@@ -23,7 +25,7 @@ exports[`htmlToDom htmlToDocumentFragment 正常 3`] = `
 </DocumentFragment>
 `;
 
-exports[`htmlToDom htmlToDocumentFragment 正常 4`] = `"hello"`;
+exports[`htmlToDom htmlToDocumentFragment 正常 5`] = `"hello"`;
 
 exports[`htmlToDom htmlToElement 正常 1`] = `undefined`;
 
