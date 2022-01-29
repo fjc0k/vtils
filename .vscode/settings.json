@@ -2,5 +2,6 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "eslint.options": {
     "resolvePluginsRelativeTo": "."
-  }
+  },
+  "jestrunner.jestCommand": "npx haoma run scripts/vscodeRunJest.ts"
 }
