@@ -36,6 +36,7 @@ export function copyTextToClipboard(
 
   const selection = document.getSelection()!
   let originalRange: Range | undefined
+  /* istanbul ignore if */
   if (selection.rangeCount > 0) {
     originalRange = selection.getRangeAt(0)
   }
@@ -54,6 +55,7 @@ export function copyTextToClipboard(
 
   document.body.removeChild(element)
 
+  /* istanbul ignore if */
   if (originalRange) {
     selection.removeAllRanges()
     selection.addRange(originalRange)
