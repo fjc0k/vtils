@@ -100,12 +100,14 @@ describe('LocalStoragePlus', () => {
       key: 'increase',
     })
     expect(countStorage.get()).toBe(null)
+    countStorage.increase()
+    expect(countStorage.get()).toBe(1)
     countStorage.increase(2)
-    expect(countStorage.get()).toBe(2)
+    expect(countStorage.get()).toBe(3)
     countStorage.increase(2)
-    expect(countStorage.get()).toBe(4)
+    expect(countStorage.get()).toBe(5)
     countStorage.increase(-5)
-    expect(countStorage.get()).toBe(-1)
+    expect(countStorage.get()).toBe(0)
   })
 
   test('decrease 正常', () => {
@@ -113,12 +115,14 @@ describe('LocalStoragePlus', () => {
       key: 'decrease',
     })
     expect(countStorage.get()).toBe(null)
+    countStorage.decrease()
+    expect(countStorage.get()).toBe(-1)
     countStorage.decrease(2)
-    expect(countStorage.get()).toBe(-2)
+    expect(countStorage.get()).toBe(-3)
     countStorage.decrease(2)
-    expect(countStorage.get()).toBe(-4)
+    expect(countStorage.get()).toBe(-5)
     countStorage.decrease(-5)
-    expect(countStorage.get()).toBe(1)
+    expect(countStorage.get()).toBe(0)
   })
 
   test('静态方法正常', () => {
@@ -136,5 +140,9 @@ describe('LocalStoragePlus', () => {
     LocalStoragePlus.clear()
     expect(LocalStoragePlus.has('s')).toBe(false)
     expect(LocalStoragePlus.get<number>('s')).toBe(null)
+    LocalStoragePlus.increase('s')
+    expect(LocalStoragePlus.get<number>('s')).toBe(1)
+    LocalStoragePlus.decrease('s')
+    expect(LocalStoragePlus.get<number>('s')).toBe(0)
   })
 })
