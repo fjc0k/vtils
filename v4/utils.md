@@ -10,7 +10,6 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [Calculator](./utils.calculator.md) | 科学计算器。主要是为了避免 js 的浮点数精度计算问题。 |
 |  [DataPacker](./utils.datapacker.md) | 数据打包器。 |
 |  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TListeners 事件名称及其对应的回调描述 |
 |  [LocalStoragePlus](./utils.localstorageplus.md) | 本地存储增强。 |
@@ -124,6 +123,7 @@ rich://{"url":"***","desc":"***"}
 
 |  Interface | Description |
 |  --- | --- |
+|  [CalculatorInstance](./utils.calculatorinstance.md) |  |
 |  [CopyTextToClipboardOptions](./utils.copytexttoclipboardoptions.md) |  |
 |  [CreateSubmitOptions](./utils.createsubmitoptions.md) |  |
 |  [CreateUrlQueryStringOptions](./utils.createurlquerystringoptions.md) |  |
@@ -168,6 +168,7 @@ rich://{"url":"***","desc":"***"}
 
 |  Variable | Description |
 |  --- | --- |
+|  [Calculator](./utils.calculator.md) | 科学计算器。主要是为了避免 js 的浮点数精度计算问题。 |
 |  [devOrProd](./utils.devorprod.md) | 开发环境和生产环境返回不同的值或调用不同的函数。<code>process.env.NODE_ENV</code> 为空值、<code>production</code>、<code>prod</code> 时被认为是生产环境，否则是开发环境。 |
 |  [keysStrict](./utils.keysstrict.md) | 同 [keys](https://lodash.com/docs/4.17.15#keys)<!-- -->，不过采用了严格的类型定义。 |
 |  [omitStrict](./utils.omitstrict.md) | 同 [omit](https://lodash.com/docs/4.17.15#omit)<!-- -->，不过采用了严格的类型定义。 |

@@ -2,22 +2,12 @@
 
 [Home](./index.md) &gt; [utils](./utils.md) &gt; [Calculator](./utils.calculator.md)
 
-## Calculator class
+## Calculator variable
 
 科学计算器。主要是为了避免 js 的浮点数精度计算问题。
 
 <b>Signature:</b>
 
 ```typescript
-export declare class Calculator 
+Calculator: CalculatorInstance
 ```
-
-## Methods
-
-|  Method | Modifiers | Description |
-|  --- | --- | --- |
-|  [add(values)](./utils.calculator.add.md) | <code>static</code> | 加。<!-- -->- 加数列表为空时返回 0； - 加数列表长度为 1 时返回第 1 个的值。 |
-|  [div(values)](./utils.calculator.div.md) | <code>static</code> | 除。<!-- -->- 除数列表为空时返回 0； - 除数列表长度为 1 时返回第 1 个的值。 |
-|  [mul(values)](./utils.calculator.mul.md) | <code>static</code> | 乘。<!-- -->- 乘数列表为空时返回 0； - 乘数列表长度为 1 时返回第 1 个的值。 |
-|  [sub(values)](./utils.calculator.sub.md) | <code>static</code> | 减。<!-- -->- 减数列表为空时返回 0； - 减数列表长度为 1 时返回第 1 个的值。 |
-
