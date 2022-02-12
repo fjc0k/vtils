@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>17/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>17/17</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -106,82 +106,82 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Table from 'cli-table3'
 import { formatNumber, Options, Suite } from 'benchmark'
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >runBenchmark(</span>
+export function runBenchmark(
   suites: Record&lt;string, () =&gt; any&gt;,
   options?: Options,
 ) {
-  const table = <span class="cstat-no" title="statement not covered" >new Table({</span>
+  const table = new Table({
     head: ['name', 'ops/sec'],
     colAligns: ['left', 'right'],
   })
-  const suite = <span class="cstat-no" title="statement not covered" >new Suite()</span>
+  const suite = new Suite()
   let expectFastestName: string | undefined
-<span class="cstat-no" title="statement not covered" >  for (let name of Object.keys(suites)) {</span>
-    const fn = <span class="cstat-no" title="statement not covered" >suites[name]</span>
-<span class="cstat-no" title="statement not covered" >    if (name.endsWith('!fastest')) {</span>
-<span class="cstat-no" title="statement not covered" >      name = name.replace(/!fastest$/, '')</span>
-<span class="cstat-no" title="statement not covered" >      expectFastestName = name</span>
+  for (let name of Object.keys(suites)) {
+    const fn = suites[name]
+    if (name.endsWith('!fastest')) {
+      name = name.replace(/!fastest$/, '')
+      expectFastestName = name
     }
-<span class="cstat-no" title="statement not covered" >    suite.add(name, fn)</span>
+    suite.add(name, fn)
   }
-<span class="cstat-no" title="statement not covered" >  suite.on('cycle', <span class="fstat-no" title="function not covered" >fu</span>nction (event: any) {</span>
-<span class="cstat-no" title="statement not covered" >    table.push([event.target.name, formatNumber(Math.round(event.target.hz))])</span>
+  suite.on('cycle', function (event: any) {
+    table.push([event.target.name, formatNumber(Math.round(event.target.hz))])
   })
-<span class="cstat-no" title="statement not covered" >  suite.on('complete', <span class="fstat-no" title="function not covered" >fu</span>nction (this: any) {</span>
-    const actualFastestName = <span class="cstat-no" title="statement not covered" >this.filter('fastest').map('name')[0]</span>
-<span class="cstat-no" title="statement not covered" >    if (expectFastestName != null &amp;&amp; expectFastestName !== actualFastestName) {</span>
-<span class="cstat-no" title="statement not covered" >      throw new Error(</span>
+  suite.on('complete', function (this: any) {
+    const actualFastestName = this.filter('fastest').map('name')[0]
+    if (expectFastestName != null &amp;&amp; expectFastestName !== actualFastestName) {
+      throw new Error(
         `Expect fastest is ${expectFastestName}, actual fastest is ${actualFastestName}.`,
       )
     }
-<span class="cstat-no" title="statement not covered" >    console.log(</span>
+    console.log(
       table
         .sort(
-<span class="fstat-no" title="function not covered" >          (a</span>, b) =&gt;
-<span class="cstat-no" title="statement not covered" >            (b as any)[1].replace(/,/, '') - (a as any)[1].replace(/,/, ''),</span>
+          (a, b) =&gt;
+            (b as any)[1].replace(/,/, '') - (a as any)[1].replace(/,/, ''),
         )
         .toString(),
     )
   })
-<span class="cstat-no" title="statement not covered" >  suite.run(options)</span>
+  suite.run(options)
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -190,7 +190,7 @@ export function <span class="fstat-no" title="function not covered" >runBenchmar
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Jan 25 2022 09:26:37 GMT+0000 (Coordinated Universal Time)
+                at Sat Feb 12 2022 10:13:54 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

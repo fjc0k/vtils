@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">82.76% </span>
+                <span class="strong">96.55% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>24/29</span>
+                <span class='fraction'>28/29</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80.77% </span>
+                <span class="strong">96.15% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>21/26</span>
+                <span class='fraction'>25/26</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>22/24</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
@@ -133,39 +133,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10738x</span>
-<span class="cline-any cline-yes">10738x</span>
-<span class="cline-any cline-yes">10738x</span>
-<span class="cline-any cline-yes">5352x</span>
-<span class="cline-any cline-yes">5352x</span>
-<span class="cline-any cline-yes">11027x</span>
-<span class="cline-any cline-yes">11027x</span>
-<span class="cline-any cline-yes">11027x</span>
-<span class="cline-any cline-yes">5697x</span>
-<span class="cline-any cline-yes">5330x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10759x</span>
+<span class="cline-any cline-yes">10757x</span>
+<span class="cline-any cline-yes">10755x</span>
+<span class="cline-any cline-yes">5366x</span>
+<span class="cline-any cline-yes">5366x</span>
+<span class="cline-any cline-yes">11066x</span>
+<span class="cline-any cline-yes">11066x</span>
+<span class="cline-any cline-yes">11066x</span>
+<span class="cline-any cline-yes">5722x</span>
+<span class="cline-any cline-yes">5344x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5330x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5352x</span>
+<span class="cline-any cline-yes">5338x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5386x</span>
-<span class="cline-any cline-yes">5386x</span>
-<span class="cline-any cline-yes">5386x</span>
-<span class="cline-any cline-yes">5352x</span>
-<span class="cline-any cline-yes">5352x</span>
-<span class="cline-any cline-yes">5352x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">5349x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5349x</span>
+<span class="cline-any cline-yes">5366x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5386x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5389x</span>
+<span class="cline-any cline-yes">5389x</span>
+<span class="cline-any cline-yes">5389x</span>
+<span class="cline-any cline-yes">5367x</span>
+<span class="cline-any cline-yes">5367x</span>
+<span class="cline-any cline-yes">5367x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">5361x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5355x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5389x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @ts-nocheck
 // Copyright 2019 "David Mark Clements &lt;david.mark.clements@gmail.com&gt;"
@@ -188,8 +188,8 @@ export function cloneDeepFast&lt;T&gt;(
   value: T,
   ignore?: (value: unknown) =&gt; boolean | undefined,
 ): T {
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof value !== 'object' || value === null) <span class="cstat-no" title="statement not covered" >return value</span>
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (value instanceof Date) <span class="cstat-no" title="statement not covered" >return new Date(value)</span>
+  if (typeof value !== 'object' || value === null) return value
+  if (value instanceof Date) return new Date(value)
   if (Array.isArray(value)) return cloneArray(value, ignore)
   const o2 = {}
   for (const k in value) {
@@ -197,8 +197,8 @@ export function cloneDeepFast&lt;T&gt;(
     const cur = value[k]
     if (typeof cur !== 'object' || cur === null || (ignore &amp;&amp; ignore(cur))) {
       o2[k] = cur
-    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (cur instanceof Date) {
-<span class="cstat-no" title="statement not covered" >      o2[k] = new Date(cur)</span>
+    } else if (cur instanceof Date) {
+      o2[k] = new Date(cur)
     } else {
       o2[k] = cloneDeepFast(cur, ignore)
     }
@@ -214,8 +214,8 @@ function cloneArray(a, ignore) {
     const cur = a[k]
     if (typeof cur !== 'object' || cur === null || (ignore &amp;&amp; ignore(cur))) {
       a2[k] = cur
-    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (cur instanceof Date) {
-<span class="cstat-no" title="statement not covered" >      a2[k] = new Date(cur)</span>
+    } else if (cur instanceof Date) {
+      a2[k] = new Date(cur)
     } else {
       a2[k] = cloneDeepFast(cur, ignore)
     }
@@ -229,7 +229,7 @@ function cloneArray(a, ignore) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Jan 25 2022 09:26:37 GMT+0000 (Coordinated Universal Time)
+                at Sat Feb 12 2022 10:13:54 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
