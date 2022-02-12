@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.56.0](https://github.com/fjc0k/vtils/compare/v4.55.0...v4.56.0) (2022-02-12)
+
+### Features
+
+- **Calculator:** 可通过 make 创建新的计算器 ([cf1a02b](https://github.com/fjc0k/vtils/commit/cf1a02bd4f2cb261a0709edfb4081b3de8abd3a8))
+
 ## [4.55.0](https://github.com/fjc0k/vtils/compare/v4.54.0...v4.55.0) (2022-01-25)
 
 ### Features
