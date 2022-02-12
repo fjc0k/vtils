@@ -1,9 +1,20 @@
-import Decimal from 'decimal.js'
+import DecimalLight, { Config } from 'decimal.js-light'
 
-/**
- * 科学计算器。主要是为了避免 js 的浮点数精度计算问题。
- */
-export class Calculator {
+export interface CalculatorInstance {
+  /**
+   * decimal.js 引用。
+   */
+  decimal: typeof DecimalLight
+  /**
+   * 根据配置创建一个新的计算器。
+   *
+   * @param config 配置
+   */
+  make(
+    config?: Config & {
+      decimalPlaces?: number
+    },
+  ): CalculatorInstance
   /**
    * 加。
    *
@@ -12,14 +23,7 @@ export class Calculator {
    *
    * @param values 加数列表
    */
-  static add(...values: number[]): number {
-    return values.length === 0
-      ? 0
-      : values.length === 1
-      ? values[0]
-      : values.reduce((res, value) => res.add(value), new Decimal(0)).toNumber()
-  }
-
+  add(...values: number[]): number
   /**
    * 减。
    *
@@ -28,20 +32,7 @@ export class Calculator {
    *
    * @param values 减数列表
    */
-  static sub(...values: number[]): number {
-    return values.length === 0
-      ? 0
-      : values.length === 1
-      ? values[0]
-      : values
-          .reduce(
-            (res, value, index) =>
-              index === 0 ? res.add(value) : res.sub(value),
-            new Decimal(0),
-          )
-          .toNumber()
-  }
-
+  sub(...values: number[]): number
   /**
    * 乘。
    *
@@ -50,14 +41,7 @@ export class Calculator {
    *
    * @param values 乘数列表
    */
-  static mul(...values: number[]): number {
-    return values.length === 0
-      ? 0
-      : values.length === 1
-      ? values[0]
-      : values.reduce((res, value) => res.mul(value), new Decimal(1)).toNumber()
-  }
-
+  mul(...values: number[]): number
   /**
    * 除。
    *
@@ -66,17 +50,69 @@ export class Calculator {
    *
    * @param values 除数列表
    */
-  static div(...values: number[]): number {
-    return values.length === 0
-      ? 0
-      : values.length === 1
-      ? values[0]
-      : values
-          .reduce(
-            (res, value, index) =>
-              index === 0 ? res.add(value) : res.div(value),
-            new Decimal(0),
-          )
-          .toNumber()
-  }
+  div(...values: number[]): number
 }
+
+const make: CalculatorInstance['make'] = config => {
+  const Decimal = DecimalLight.clone(config)
+
+  const Calculator: CalculatorInstance = {
+    decimal: DecimalLight,
+    make: make,
+    add(...values) {
+      return values.length === 0
+        ? 0
+        : values.length === 1
+        ? values[0]
+        : values
+            .reduce((res, value) => res.add(value), new Decimal(0))
+            .toDecimalPlaces(config?.decimalPlaces)
+            .toNumber()
+    },
+    sub(...values) {
+      return values.length === 0
+        ? 0
+        : values.length === 1
+        ? values[0]
+        : values
+            .reduce(
+              (res, value, index) =>
+                index === 0 ? res.add(value) : res.sub(value),
+              new Decimal(0),
+            )
+            .toDecimalPlaces(config?.decimalPlaces)
+            .toNumber()
+    },
+    mul(...values) {
+      return values.length === 0
+        ? 0
+        : values.length === 1
+        ? values[0]
+        : values
+            .reduce((res, value) => res.mul(value), new Decimal(1))
+            .toDecimalPlaces(config?.decimalPlaces)
+            .toNumber()
+    },
+    div(...values) {
+      return values.length === 0
+        ? 0
+        : values.length === 1
+        ? values[0]
+        : values
+            .reduce(
+              (res, value, index) =>
+                index === 0 ? res.add(value) : res.div(value),
+              new Decimal(0),
+            )
+            .toDecimalPlaces(config?.decimalPlaces)
+            .toNumber()
+    },
+  }
+
+  return Calculator
+}
+
+/**
+ * 科学计算器。主要是为了避免 js 的浮点数精度计算问题。
+ */
+export const Calculator = make()

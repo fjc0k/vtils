@@ -75,4 +75,23 @@ describe('Calculator', () => {
       expect(Calculator.div(0.69, 10)).toBe(0.069)
     })
   })
+
+  describe('银行家舍入法', () => {
+    // https://baike.baidu.com/item/%E9%93%B6%E8%A1%8C%E5%AE%B6%E8%88%8D%E5%85%A5/4781630?fr=aladdin
+    test('ok', () => {
+      expect(Calculator.make({ decimalPlaces: 2 }).add(9, 0.825)).toBe(9.83)
+      expect(
+        Calculator.make({
+          decimalPlaces: 2,
+          rounding: Calculator.decimal.ROUND_HALF_EVEN,
+        }).add(9, 0.825),
+      ).toBe(9.82)
+      expect(
+        Calculator.make({
+          decimalPlaces: 2,
+          rounding: Calculator.decimal.ROUND_HALF_EVEN,
+        }).add(9, 0.82501),
+      ).toBe(9.83)
+    })
+  })
 })
