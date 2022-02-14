@@ -11,16 +11,16 @@
 <b>Signature:</b>
 
 ```typescript
-sub(...values: number[]): number;
+sub(...values: CalculatorValue[]): T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  values | number\[\] | 减数列表 |
+|  values | [CalculatorValue](./utils.calculatorvalue.md)<!-- -->\[\] | 减数列表 |
 
 <b>Returns:</b>
 
-number
+T
 

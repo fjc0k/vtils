@@ -179,6 +179,8 @@ rich://{"url":"***","desc":"***"}
 |  Type Alias | Description |
 |  --- | --- |
 |  [BindEventFunction](./utils.bindeventfunction.md) | 绑定事件函数。 |
+|  [CalculatorPrimitiveValue](./utils.calculatorprimitivevalue.md) |  |
+|  [CalculatorValue](./utils.calculatorvalue.md) |  |
 |  [CreateSubmitResult](./utils.createsubmitresult.md) |  |
 |  [ElementOfRawData](./utils.elementofrawdata.md) |  |
 |  [EnumKey](./utils.enumkey.md) |  |

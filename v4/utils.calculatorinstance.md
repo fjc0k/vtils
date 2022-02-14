@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare interface CalculatorInstance 
+export declare interface CalculatorInstance<T = number> 
 ```
 
 ## Properties
@@ -25,4 +25,5 @@ export declare interface CalculatorInstance
 |  [make(config)](./utils.calculatorinstance.make.md) | 根据配置创建一个新的计算器。 |
 |  [mul(values)](./utils.calculatorinstance.mul.md) | 乘。<!-- -->- 乘数列表为空时返回 0； - 乘数列表长度为 1 时返回第 1 个的值。 |
 |  [sub(values)](./utils.calculatorinstance.sub.md) | 减。<!-- -->- 减数列表为空时返回 0； - 减数列表长度为 1 时返回第 1 个的值。 |
+|  [toNumber(value)](./utils.calculatorinstance.tonumber.md) | 转换为数字。 |
 

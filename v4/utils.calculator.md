@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-Calculator: CalculatorInstance
+Calculator: CalculatorInstance<number>
 ```

@@ -11,16 +11,16 @@
 <b>Signature:</b>
 
 ```typescript
-mul(...values: number[]): number;
+mul(...values: CalculatorValue[]): T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  values | number\[\] | 乘数列表 |
+|  values | [CalculatorValue](./utils.calculatorvalue.md)<!-- -->\[\] | 乘数列表 |
 
 <b>Returns:</b>
 
-number
+T
 
