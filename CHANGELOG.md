@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.57.0](https://github.com/fjc0k/vtils/compare/v4.56.0...v4.57.0) (2022-02-14)
+
+### Features
+
+- **Calculator:** 支持四则运算 ([0fde095](https://github.com/fjc0k/vtils/commit/0fde095235c0da122f4db04b6a958c65fc88cdc1))
+
 ## [4.56.0](https://github.com/fjc0k/vtils/compare/v4.55.0...v4.56.0) (2022-02-12)
 
 ### Features
