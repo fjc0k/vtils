@@ -76,6 +76,20 @@ describe('Calculator', () => {
     })
   })
 
+  describe('四则运算', () => {
+    test('ok', () => {
+      expect(
+        // 1+3*2+10/(5-1-2)-6
+        Calculator.add(
+          1,
+          _ => _.mul(3, 2),
+          _ => _.div(10, _.sub(5, 1, 2)),
+          -6,
+        ),
+      ).toBe(6)
+    })
+  })
+
   describe('银行家舍入法', () => {
     // https://baike.baidu.com/item/%E9%93%B6%E8%A1%8C%E5%AE%B6%E8%88%8D%E5%85%A5/4781630?fr=aladdin
     test('ok', () => {

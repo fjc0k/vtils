@@ -1,6 +1,12 @@
-import DecimalLight, { Config } from 'decimal.js-light'
+import DecimalLight, { Config, Numeric } from 'decimal.js-light'
 
-export interface CalculatorInstance {
+export type CalculatorPrimitiveValue = Numeric
+
+export type CalculatorValue =
+  | CalculatorPrimitiveValue
+  | ((calculator: CalculatorInstance<DecimalLight>) => DecimalLight)
+
+export interface CalculatorInstance<T = number> {
   /**
    * decimal.js 引用。
    */
@@ -23,7 +29,7 @@ export interface CalculatorInstance {
    *
    * @param values 加数列表
    */
-  add(...values: number[]): number
+  add(...values: CalculatorValue[]): T
   /**
    * 减。
    *
@@ -32,7 +38,7 @@ export interface CalculatorInstance {
    *
    * @param values 减数列表
    */
-  sub(...values: number[]): number
+  sub(...values: CalculatorValue[]): T
   /**
    * 乘。
    *
@@ -41,7 +47,7 @@ export interface CalculatorInstance {
    *
    * @param values 乘数列表
    */
-  mul(...values: number[]): number
+  mul(...values: CalculatorValue[]): T
   /**
    * 除。
    *
@@ -50,62 +56,87 @@ export interface CalculatorInstance {
    *
    * @param values 除数列表
    */
-  div(...values: number[]): number
+  div(...values: CalculatorValue[]): T
+  /**
+   * 转换为数字。
+   *
+   * @param value 值
+   */
+  toNumber(value: CalculatorPrimitiveValue): T
 }
 
 const make: CalculatorInstance['make'] = config => {
   const Decimal = DecimalLight.clone(config)
 
+  const getValue = (value: CalculatorValue) =>
+    typeof value === 'function'
+      ? value({
+          ...Calculator,
+          toNumber: (value: any) => new Decimal(value),
+        } as any as CalculatorInstance<DecimalLight>)
+      : value
+
   const Calculator: CalculatorInstance = {
     decimal: DecimalLight,
     make: make,
     add(...values) {
-      return values.length === 0
-        ? 0
-        : values.length === 1
-        ? values[0]
-        : values
-            .reduce((res, value) => res.add(value), new Decimal(0))
-            .toDecimalPlaces(config?.decimalPlaces)
-            .toNumber()
+      return this.toNumber(
+        values.length === 0
+          ? 0
+          : values.length === 1
+          ? getValue(values[0])
+          : values.reduce<DecimalLight>(
+              (res, value) => res.add(getValue(value)),
+              new Decimal(0),
+            ),
+      )
     },
     sub(...values) {
-      return values.length === 0
-        ? 0
-        : values.length === 1
-        ? values[0]
-        : values
-            .reduce(
+      return this.toNumber(
+        values.length === 0
+          ? 0
+          : values.length === 1
+          ? getValue(values[0])
+          : values.reduce<DecimalLight>(
               (res, value, index) =>
-                index === 0 ? res.add(value) : res.sub(value),
+                index === 0
+                  ? res.add(getValue(value))
+                  : res.sub(getValue(value)),
               new Decimal(0),
-            )
-            .toDecimalPlaces(config?.decimalPlaces)
-            .toNumber()
+            ),
+      )
     },
     mul(...values) {
-      return values.length === 0
-        ? 0
-        : values.length === 1
-        ? values[0]
-        : values
-            .reduce((res, value) => res.mul(value), new Decimal(1))
-            .toDecimalPlaces(config?.decimalPlaces)
-            .toNumber()
+      return this.toNumber(
+        values.length === 0
+          ? 0
+          : values.length === 1
+          ? getValue(values[0])
+          : values.reduce<DecimalLight>(
+              (res, value) => res.mul(getValue(value)),
+              new Decimal(1),
+            ),
+      )
     },
     div(...values) {
-      return values.length === 0
-        ? 0
-        : values.length === 1
-        ? values[0]
-        : values
-            .reduce(
+      return this.toNumber(
+        values.length === 0
+          ? 0
+          : values.length === 1
+          ? getValue(values[0])
+          : values.reduce<DecimalLight>(
               (res, value, index) =>
-                index === 0 ? res.add(value) : res.div(value),
+                index === 0
+                  ? res.add(getValue(value))
+                  : res.div(getValue(value)),
               new Decimal(0),
-            )
-            .toDecimalPlaces(config?.decimalPlaces)
-            .toNumber()
+            ),
+      )
+    },
+    toNumber(value) {
+      return new Decimal(value)
+        .toDecimalPlaces(config?.decimalPlaces)
+        .toNumber()
     },
   }
 
