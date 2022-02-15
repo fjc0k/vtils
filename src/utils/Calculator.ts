@@ -1,5 +1,10 @@
 import DecimalLight, { Config, Numeric } from 'decimal.js-light'
 
+export interface CalculatorConfig extends Config {
+  /** 小数位数 */
+  decimalPlaces?: number
+}
+
 export type CalculatorPrimitiveValue = Numeric
 
 export type CalculatorValue =
@@ -16,11 +21,7 @@ export interface CalculatorInstance<T = number> {
    *
    * @param config 配置
    */
-  make(
-    config?: Config & {
-      decimalPlaces?: number
-    },
-  ): CalculatorInstance
+  make(config?: CalculatorConfig): CalculatorInstance
   /**
    * 加。
    *
