@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.58.0](https://github.com/fjc0k/vtils/compare/v4.57.0...v4.58.0) (2022-02-21)
+
+### Features
+
+- **Calculator:** 支持函数返回数组 ([04cc3c9](https://github.com/fjc0k/vtils/commit/04cc3c9f7e62cb690a8c50cfbbf5552dc0da17b3))
+
 ## [4.57.0](https://github.com/fjc0k/vtils/compare/v4.56.0...v4.57.0) (2022-02-14)
 
 ### Features
