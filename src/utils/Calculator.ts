@@ -1,4 +1,6 @@
 import DecimalLight, { Config, Numeric } from 'decimal.js-light'
+import { castArray } from 'lodash-uni'
+import { OneOrMore } from '../types'
 
 export interface CalculatorConfig extends Config {
   /** 小数位数 */
@@ -7,9 +9,11 @@ export interface CalculatorConfig extends Config {
 
 export type CalculatorPrimitiveValue = Numeric
 
-export type CalculatorValue =
-  | CalculatorPrimitiveValue
-  | ((calculator: CalculatorInstance<DecimalLight>) => DecimalLight)
+export type CalculatorFunctionValue = (
+  calculator: CalculatorInstance<DecimalLight>,
+) => OneOrMore<DecimalLight>
+
+export type CalculatorValue = CalculatorPrimitiveValue | CalculatorFunctionValue
 
 export interface CalculatorInstance<T = number> {
   /**
@@ -84,10 +88,12 @@ const make: CalculatorInstance['make'] = config => {
       return this.toNumber(
         values.length === 0
           ? 0
-          : values.length === 1
-          ? getValue(values[0])
           : values.reduce<DecimalLight>(
-              (res, value) => res.add(getValue(value)),
+              (res, value) =>
+                castArray(getValue(value)).reduce<DecimalLight>(
+                  (res, item) => res.add(item),
+                  res,
+                ),
               new Decimal(0),
             ),
       )
@@ -96,13 +102,13 @@ const make: CalculatorInstance['make'] = config => {
       return this.toNumber(
         values.length === 0
           ? 0
-          : values.length === 1
-          ? getValue(values[0])
           : values.reduce<DecimalLight>(
               (res, value, index) =>
-                index === 0
-                  ? res.add(getValue(value))
-                  : res.sub(getValue(value)),
+                castArray(getValue(value)).reduce<DecimalLight>(
+                  (res, item, index2) =>
+                    index === 0 && index2 === 0 ? res.add(item) : res.sub(item),
+                  res,
+                ),
               new Decimal(0),
             ),
       )
@@ -111,10 +117,12 @@ const make: CalculatorInstance['make'] = config => {
       return this.toNumber(
         values.length === 0
           ? 0
-          : values.length === 1
-          ? getValue(values[0])
           : values.reduce<DecimalLight>(
-              (res, value) => res.mul(getValue(value)),
+              (res, value) =>
+                castArray(getValue(value)).reduce<DecimalLight>(
+                  (res, item) => res.mul(item),
+                  res,
+                ),
               new Decimal(1),
             ),
       )
@@ -123,13 +131,13 @@ const make: CalculatorInstance['make'] = config => {
       return this.toNumber(
         values.length === 0
           ? 0
-          : values.length === 1
-          ? getValue(values[0])
           : values.reduce<DecimalLight>(
               (res, value, index) =>
-                index === 0
-                  ? res.add(getValue(value))
-                  : res.div(getValue(value)),
+                castArray(getValue(value)).reduce<DecimalLight>(
+                  (res, item, index2) =>
+                    index === 0 && index2 === 0 ? res.add(item) : res.div(item),
+                  res,
+                ),
               new Decimal(0),
             ),
       )

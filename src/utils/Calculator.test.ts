@@ -108,4 +108,41 @@ describe('Calculator', () => {
       ).toBe(9.83)
     })
   })
+
+  describe('支持函数返回数组', () => {
+    test('ok', () => {
+      expect(
+        Calculator.add(_ =>
+          [
+            { x: 1, y: 2 },
+            { x: 4, y: 6 },
+            { x: 0.8, y: 3 },
+          ].map(item => _.mul(item.x, item.y)),
+        ),
+      ).toBe(28.4)
+
+      expect(
+        Calculator.make({
+          decimalPlaces: 2,
+        }).add(_ =>
+          [
+            { x: 3, y: 3 },
+            { x: 0.825, y: 1 },
+          ].map(item => _.mul(item.x, item.y)),
+        ),
+      ).toBe(9.83)
+
+      expect(
+        Calculator.make({
+          decimalPlaces: 2,
+          rounding: Calculator.decimal.ROUND_HALF_EVEN,
+        }).add(_ =>
+          [
+            { x: 3, y: 3 },
+            { x: 0.825, y: 1 },
+          ].map(item => _.mul(item.x, item.y)),
+        ),
+      ).toBe(9.82)
+    })
+  })
 })
