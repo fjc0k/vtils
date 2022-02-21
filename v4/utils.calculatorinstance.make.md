@@ -9,16 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-make(config?: Config & {
-        decimalPlaces?: number;
-    }): CalculatorInstance;
+make(config?: CalculatorConfig): CalculatorInstance;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | Config &amp; { decimalPlaces?: number; } | 配置 |
+|  config | [CalculatorConfig](./utils.calculatorconfig.md) | 配置 |
 
 <b>Returns:</b>
 

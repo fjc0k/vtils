@@ -123,6 +123,7 @@ rich://{"url":"***","desc":"***"}
 
 |  Interface | Description |
 |  --- | --- |
+|  [CalculatorConfig](./utils.calculatorconfig.md) |  |
 |  [CalculatorInstance](./utils.calculatorinstance.md) |  |
 |  [CopyTextToClipboardOptions](./utils.copytexttoclipboardoptions.md) |  |
 |  [CreateSubmitOptions](./utils.createsubmitoptions.md) |  |
@@ -179,6 +180,7 @@ rich://{"url":"***","desc":"***"}
 |  Type Alias | Description |
 |  --- | --- |
 |  [BindEventFunction](./utils.bindeventfunction.md) | 绑定事件函数。 |
+|  [CalculatorFunctionValue](./utils.calculatorfunctionvalue.md) |  |
 |  [CalculatorPrimitiveValue](./utils.calculatorprimitivevalue.md) |  |
 |  [CalculatorValue](./utils.calculatorvalue.md) |  |
 |  [CreateSubmitResult](./utils.createsubmitresult.md) |  |

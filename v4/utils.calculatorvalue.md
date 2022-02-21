@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type CalculatorValue = CalculatorPrimitiveValue | ((calculator: CalculatorInstance<DecimalLight>) => DecimalLight);
+export declare type CalculatorValue = CalculatorPrimitiveValue | CalculatorFunctionValue;
 ```
-<b>References:</b> [CalculatorPrimitiveValue](./utils.calculatorprimitivevalue.md)<!-- -->, [CalculatorInstance](./utils.calculatorinstance.md)
+<b>References:</b> [CalculatorPrimitiveValue](./utils.calculatorprimitivevalue.md)<!-- -->, [CalculatorFunctionValue](./utils.calculatorfunctionvalue.md)
 
