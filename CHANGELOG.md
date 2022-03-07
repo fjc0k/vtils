@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.59.0](https://github.com/fjc0k/vtils/compare/v4.58.0...v4.59.0) (2022-03-07)
+
+### Features
+
+- **utils:** 新增 asRequiredDeep 将给定的值 `RequiredDeep` 化 ([feb381a](https://github.com/fjc0k/vtils/commit/feb381a07d44fe1576b3ee5a77da83c40b9c5898))
+- **utils:** 新增 GeoCoord 地理坐标系转换工具 ([b87f3bb](https://github.com/fjc0k/vtils/commit/b87f3bbc070eb90ef6e2807262294634d2e17879))
+- **Wechat:** 新增 getLocation 方法 ([8a833f8](https://github.com/fjc0k/vtils/commit/8a833f81b69aeb63b42cb94263b165e927aa3e40))
+
 ## [4.58.0](https://github.com/fjc0k/vtils/compare/v4.57.0...v4.58.0) (2022-02-21)
 
 ### Features
