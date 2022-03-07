@@ -52,6 +52,7 @@ wechat.invoke('scanQRCode').then(res => {
 |  [chooseImage(params)](./utils.wechat.chooseimage.md) |  | 选择图片。 |
 |  [closeWindow()](./utils.wechat.closewindow.md) |  | 关闭当前网页窗口。 |
 |  [config(params)](./utils.wechat.config.md) |  | 注入微信 <code>JSSDK</code> 的权限验证配置。 |
+|  [getLocation(params)](./utils.wechat.getlocation.md) |  | 获取地理位置接口。 |
 |  [hideAllNonBaseMenuItems()](./utils.wechat.hideallnonbasemenuitems.md) |  | 隐藏所有的非基础菜单项。 |
 |  [hideNonBaseMenuItems(menuList)](./utils.wechat.hidenonbasemenuitems.md) |  | 批量隐藏非基础菜单项。 |
 |  [invoke(jsApi, params)](./utils.wechat.invoke.md) |  | 调用 JSSDK 的 API 方法。 |

@@ -12,6 +12,7 @@
 |  --- | --- |
 |  [DataPacker](./utils.datapacker.md) | 数据打包器。 |
 |  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TListeners 事件名称及其对应的回调描述 |
+|  [GeoCoord](./utils.geocoord.md) | 地理坐标系转换工具。<!-- -->- <code>大地坐标系（WGS84 坐标系）</code>: GPS 全球卫星定位系统使用的坐标系； - <code>火星坐标系（GCJ02 坐标系）</code>: 腾讯地图、高德地图等使用的坐标系，是由中国国家测绘局制定的由 WGS84 加密后得到的坐标系； - <code>百度坐标系（BD09 坐标系）</code>: 百度地图使用的坐标系，是在 GCJ02 基础上再次加密得到的坐标系。 |
 |  [LocalStoragePlus](./utils.localstorageplus.md) | 本地存储增强。 |
 |  [LoopUntilRetryLimitExceededError](./utils.loopuntilretrylimitexceedederror.md) |  |
 |  [RichUrl](./utils.richurl.md) | 富链接，同普通链接相比，富链接可包含一些描述信息。<!-- -->结构描述：
@@ -33,6 +34,7 @@ rich://{"url":"***","desc":"***"}
 
 |  Function | Description |
 |  --- | --- |
+|  [asRequiredDeep(value)](./utils.asrequireddeep.md) | 将给定的值 <code>RequiredDeep</code> 化。 |
 |  [base64Decode(value)](./utils.base64decode.md) | 将给定的 base64 字符串解码为 UTF8 字符串。 |
 |  [base64Encode(value)](./utils.base64encode.md) | 将给定的 UTF8 字符串编码为 base64 字符串。 |
 |  [base64UrlDecode(value)](./utils.base64urldecode.md) | 将给定的 base64url 字符串解码为 UTF8 字符串。 |
@@ -131,6 +133,8 @@ rich://{"url":"***","desc":"***"}
 |  [EventBusListenerDescriptor](./utils.eventbuslistenerdescriptor.md) |  |
 |  [EventBusOptions](./utils.eventbusoptions.md) |  |
 |  [FormatNumberOptions](./utils.formatnumberoptions.md) | 格式化数字选项。 |
+|  [GeoCoordTransformInput](./utils.geocoordtransforminput.md) |  |
+|  [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) |  |
 |  [GetEnvironmentResult](./utils.getenvironmentresult.md) |  |
 |  [LoadCssResult](./utils.loadcssresult.md) |  |
 |  [LoadResourceOptions](./utils.loadresourceoptions.md) |  |
@@ -151,6 +155,8 @@ rich://{"url":"***","desc":"***"}
 |  [WaitResult](./utils.waitresult.md) |  |
 |  [WechatChooseImageParams](./utils.wechatchooseimageparams.md) |  |
 |  [WechatConfigParams](./utils.wechatconfigparams.md) |  |
+|  [WechatGetLocationParams](./utils.wechatgetlocationparams.md) |  |
+|  [WechatGetLocationResult](./utils.wechatgetlocationresult.md) |  |
 |  [WechatOpenLocationParams](./utils.wechatopenlocationparams.md) |  |
 |  [WechatPreviewImageParams](./utils.wechatpreviewimageparams.md) |  |
 |  [WechatRequestPaymentParams](./utils.wechatrequestpaymentparams.md) |  |
