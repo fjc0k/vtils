@@ -196,6 +196,41 @@ export interface WechatUploadImageParams {
 /**
  * @public
  */
+export interface WechatGetLocationParams {
+  /**
+   * 默认为 wgs84 的 gps 坐标，如果要返回直接给 openLocation 用的火星坐标，可传入 gcj02。
+   */
+  type?: 'wgs84' | 'gcj02'
+}
+
+/**
+ * @public
+ */
+export interface WechatGetLocationResult {
+  /**
+   * 纬度，浮点数，范围为90 ~ -90。
+   */
+  latitude: number
+
+  /**
+   * 经度，浮点数，范围为180 ~ -180。
+   */
+  longitude: number
+
+  /**
+   * 速度，以米/每秒计。
+   */
+  speed: number
+
+  /**
+   * 位置精度。
+   */
+  accuracy: number
+}
+
+/**
+ * @public
+ */
 export interface WechatOpenLocationParams {
   /**
    * 纬度，浮点数，范围为 90 ~ -90。
@@ -510,6 +545,17 @@ export class Wechat {
       localId: params.localId,
       isShowProgressTips: params.isShowProgressTips ? 1 : 0,
     }).then(res => res.serverId)
+  }
+
+  /**
+   * 获取地理位置接口。
+   *
+   * @param params 参数
+   */
+  getLocation(
+    params?: WechatGetLocationParams,
+  ): Promise<WechatGetLocationResult> {
+    return this.invoke<WechatGetLocationParams>('getLocation', params || {})
   }
 
   /**
