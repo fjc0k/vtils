@@ -4495,6 +4495,11 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.npm.taobao.org/functional-red-black-tree/download/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
+gcoord@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.npmmirror.com/gcoord/-/gcoord-0.3.2.tgz#57efe1535e1fe79095d0b2166600941c33438d42"
+  integrity sha512-LwhA+ev6fBXadAFprI+Q593TTC1QYa0Quewd3YUT51wQS2S6gekrC1YCQlJhKA8HpqCF+dX+fBcX/lkYM5Kgog==
+
 generic-names@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/generic-names/download/generic-names-2.0.1.tgz?cache=0&sync_timestamp=1603542435591&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgeneric-names%2Fdownload%2Fgeneric-names-2.0.1.tgz#f8a378ead2ccaa7a34f0317b05554832ae41b872"
