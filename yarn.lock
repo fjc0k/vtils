@@ -9155,10 +9155,15 @@ typescript-snapshots-plugin@1.7.0:
   resolved "https://registry.nlark.com/typescript-snapshots-plugin/download/typescript-snapshots-plugin-1.7.0.tgz#14c7699381e2244a37e4273a68fd11fd2bb480a9"
   integrity sha1-FMdpk4HiJEo35Cc6aP0R/Su0gKk=
 
-typescript@4.4.2, typescript@^4.3.5, typescript@~4.3.5:
+typescript@^4.3.5, typescript@~4.3.5:
   version "4.4.2"
   resolved "https://registry.nlark.com/typescript/download/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
   integrity sha1-bWGGQNQw41aaHftE99fmAM7T7oY=
+
+typescript@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.npmmirror.com/typescript/-/typescript-4.6.2.tgz#fe12d2727b708f4eef40f51598b3398baa9611d4"
+  integrity sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==
 
 uglify-js@^3.1.4:
   version "3.14.1"
