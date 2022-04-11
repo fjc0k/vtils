@@ -101,6 +101,7 @@ rich://{"url":"***","desc":"***"}
 |  [placeKitten(size)](./utils.placekitten.md) | 给定大小获取占位猫咪图片。 |
 |  [placeKitten(width, height)](./utils.placekitten_1.md) | 给定宽高获取占位猫咪图片。 |
 |  [pMap(list, callback)](./utils.pmap.md) | <code>Promise.all(data.map(callback))</code> 的简写。 |
+|  [prepareData(getter)](./utils.preparedata.md) | 准备数据。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
 |  [rot13(str)](./utils.rot13.md) | 回转 13 位替换式密码。 |
 |  [roundTo(number, precision, threshold)](./utils.roundto.md) | 保留 n 位小数下的 x 舍 y 入。 |

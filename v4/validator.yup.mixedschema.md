@@ -21,6 +21,7 @@ export interface MixedSchema<T = any>
 
 |  Method | Description |
 |  --- | --- |
+|  [allowEmptyString()](./validator.yup.mixedschema.allowemptystring.md) |  |
 |  [cast(value, options)](./validator.yup.mixedschema.cast.md) |  |
 |  [clone()](./validator.yup.mixedschema.clone.md) |  |
 |  [concat(schema)](./validator.yup.mixedschema.concat.md) | @<!-- -->类型不友好 |
