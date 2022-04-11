@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.60.0](https://github.com/fjc0k/vtils/compare/v4.59.0...v4.60.0) (2022-04-11)
+
+### Features
+
+- **utils:** 新增 prepareData 准备数据 ([f4c5045](https://github.com/fjc0k/vtils/commit/f4c504518706bb063f1ea32578ff7c96f10af54d))
+- **yup:** 新增 allowEmptyString ([43b7c99](https://github.com/fjc0k/vtils/commit/43b7c991664941cc4d4b825746bc223e0c5790d8))
+
 ## [4.59.0](https://github.com/fjc0k/vtils/compare/v4.58.0...v4.59.0) (2022-03-07)
 
 ### Features
