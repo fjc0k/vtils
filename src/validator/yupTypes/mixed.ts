@@ -117,6 +117,8 @@ export interface MixedSchema<T = any> {
 
   nullable(isNullable?: boolean): this
 
+  allowEmptyString(): this
+
   required(message?: MixedLocale['required']): this
 
   notRequired(): this

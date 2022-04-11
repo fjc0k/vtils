@@ -294,4 +294,14 @@ describe('yup', () => {
     )
     expect(rule2.validatePlusSync(2)).toMatchSnapshot()
   })
+
+  test('allowEmptyString 正常', () => {
+    const rule1 = yup.number()
+    // @ts-expect-error
+    expect(rule1.validatePlusSync('')).toMatchSnapshot()
+
+    const rule2 = yup.number().allowEmptyString()
+    // @ts-expect-error
+    expect(rule2.validatePlusSync('')).toMatchSnapshot()
+  })
 })

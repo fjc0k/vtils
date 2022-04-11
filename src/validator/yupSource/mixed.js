@@ -168,6 +168,7 @@ const proto = (SchemaType.prototype = {
 
   isType(v) {
     if (this._nullable && v === null) return true
+    if (this._allowEmptyString && v === '') return true
     return !this._typeCheck || this._typeCheck(v)
   },
 
@@ -410,6 +411,12 @@ const proto = (SchemaType.prototype = {
   nullable(isNullable = true) {
     var next = this.clone()
     next._nullable = isNullable
+    return next
+  },
+
+  allowEmptyString() {
+    var next = this.clone()
+    next._allowEmptyString = true
     return next
   },
 

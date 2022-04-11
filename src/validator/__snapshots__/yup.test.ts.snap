@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`yup allowEmptyString 正常 1`] = `
+Object {
+  "data": "",
+  "error": [ValidationError: 此项必须是一个数字],
+}
+`;
+
+exports[`yup allowEmptyString 正常 2`] = `
+Object {
+  "data": "",
+}
+`;
+
 exports[`yup number 支持 id() 1`] = `
 Object {
   "data": 1,
