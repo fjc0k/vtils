@@ -80,6 +80,7 @@
 |  [RequiredBy](./types.requiredby.md) | Mark some properties as required, leaving others unchanged |
 |  [RequiredDeep](./types.requireddeep.md) | Like Required but recursive |
 |  [RequiredKeys](./types.requiredkeys.md) | Gets keys of an object which are required |
+|  [Simplify](./types.simplify.md) | Useful to flatten the type output to improve type hints shown in editors. And also to transform an interface into a type to aide with assignability. |
 |  [SnakeCase](./types.snakecase.md) | Convert a string literal to snake-case.<!-- -->This can be useful when, for example, converting a camel-cased object property to a snake-cased SQL column name. |
 |  [Tail](./types.tail.md) |  |
 |  [UnionToIntersection](./types.uniontointersection.md) | Convert a union type to an intersection type using \[distributive conditional types\](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html\#distributive-conditional-types).<!-- -->Inspired by \[this Stack Overflow answer\](https://stackoverflow.com/a/50375286/2172153). |
