@@ -32,6 +32,7 @@ export type {
   Finite,
   PositiveInfinity,
   NegativeInfinity,
+  Simplify,
 } from 'type-fest'
 
 export type {
