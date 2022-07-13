@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.62.0](https://github.com/fjc0k/vtils/compare/v4.61.0...v4.62.0) (2022-07-13)
+
+### Features
+
+- **loopUntil:** 可不传 fn ([f8fc3b2](https://github.com/fjc0k/vtils/commit/f8fc3b26b42c784e956a6473b0f5f72c47e2a7c7))
+
 ## [4.61.0](https://github.com/fjc0k/vtils/compare/v4.60.0...v4.61.0) (2022-05-05)
 
 ### Features
