@@ -4,8 +4,6 @@
 
 ## loopUntil() function
 
-循环调用某个函数直至达到某个条件后返回调用结果。
-
 <b>Signature:</b>
 
 ```typescript
@@ -16,9 +14,9 @@ export declare function loopUntil<T>(fn: () => AsyncOrSync<T>, condition: (res: 
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fn | () =&gt; AsyncOrSync&lt;T&gt; | 要调用的函数 |
-|  condition | (res: T) =&gt; AsyncOrSync&lt;boolean&gt; | 条件 |
-|  options | [LoopUntilOptions](./utils.loopuntiloptions.md) | 选项 |
+|  fn | () =&gt; AsyncOrSync&lt;T&gt; |  |
+|  condition | (res: T) =&gt; AsyncOrSync&lt;boolean&gt; |  |
+|  options | [LoopUntilOptions](./utils.loopuntiloptions.md) |  |
 
 <b>Returns:</b>
 

@@ -86,7 +86,8 @@ rich://{"url":"***","desc":"***"}
 |  [jsonp(url, keyOfCallbackName)](./utils.jsonp.md) | 发起 jsonp 请求。 |
 |  [loadCss(urlOrContent)](./utils.loadcss.md) | 加载 CSS 样式，支持链接和内容。 |
 |  [loadResource(url, options)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
-|  [loopUntil(fn, condition, options)](./utils.loopuntil.md) | 循环调用某个函数直至达到某个条件后返回调用结果。 |
+|  [loopUntil(fn, condition, options)](./utils.loopuntil.md) |  |
+|  [loopUntil(condition, options)](./utils.loopuntil_1.md) |  |
 |  [makeEnum(map)](./utils.makeenum.md) | 构造枚举数据。 |
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
