@@ -16,6 +16,17 @@ export interface LoopUntilOptions {
 
 export class LoopUntilRetryLimitExceededError extends Error {}
 
+export async function loopUntil<T>(
+  fn: () => AsyncOrSync<T>,
+  condition: (res: T) => AsyncOrSync<boolean>,
+  options: LoopUntilOptions,
+): Promise<T>
+
+export async function loopUntil(
+  condition: () => AsyncOrSync<boolean>,
+  options: LoopUntilOptions,
+): Promise<void>
+
 /**
  * 循环调用某个函数直至达到某个条件后返回调用结果。
  *
@@ -24,14 +35,20 @@ export class LoopUntilRetryLimitExceededError extends Error {}
  * @param options 选项
  */
 export async function loopUntil<T>(
-  fn: () => AsyncOrSync<T>,
-  condition: (res: T) => AsyncOrSync<boolean>,
-  options: LoopUntilOptions,
+  fn: any,
+  condition: any,
+  options?: any,
 ): Promise<T> {
+  if (options == null) {
+    options = condition
+    condition = fn
+    fn = undefined
+  }
+
   let retryCount = 0
   // eslint-disable-next-line no-constant-condition
   while (true) {
-    const res = await fn()
+    const res = fn ? await fn() : undefined
     if (await condition(res)) {
       return res
     }

@@ -44,4 +44,20 @@ describe('loopUntil', () => {
     ).rejects.toBeInstanceOf(LoopUntilRetryLimitExceededError)
     expect(i).toBe(6)
   })
+
+  test('异步正常2', async () => {
+    const i = 0
+    const fn = jest.fn().mockImplementation(
+      () =>
+        // @ts-ignore
+        i === 0,
+    )
+    expect(
+      await loopUntil(fn, {
+        retryDelay: 0,
+        retryLimit: 1,
+      }),
+    ).toBe(undefined)
+    expect(fn).toBeCalled()
+  })
 })
