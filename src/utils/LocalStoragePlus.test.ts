@@ -67,7 +67,7 @@ describe('LocalStoragePlus', () => {
     expect(countStorage.get()).toBe(null)
 
     countStorage.set(2, {
-      ttl: 10,
+      ttl: 100,
       tag: '1',
     })
     expect(countStorage.get()).toBe(2)
@@ -81,7 +81,7 @@ describe('LocalStoragePlus', () => {
         tag: '2',
       }),
     ).toBe(null)
-    await wait(20)
+    await wait(120)
     expect(countStorage.get()).toBe(null)
     expect(
       countStorage.get({
