@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.63.0](https://github.com/fjc0k/vtils/compare/v4.62.0...v4.63.0) (2022-08-07)
+
+### Features
+
+- **utils:** 新增 MiniProgramUrl ([8907a29](https://github.com/fjc0k/vtils/commit/8907a2993905235c5f654bf4f85fa5eb48bc28c0))
+
 ## [4.62.0](https://github.com/fjc0k/vtils/compare/v4.61.0...v4.62.0) (2022-07-13)
 
 ### Features
