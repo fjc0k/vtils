@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MiniProgramUrl ok 1`] = `
+Object {
+  "appId": "testApp",
+  "path": "/pages/index",
+  "query": Object {
+    "x": "1",
+  },
+}
+`;
+
+exports[`MiniProgramUrl ok 2`] = `"mp://{\\"appId\\":\\"testApp\\",\\"path\\":\\"/pages/index\\",\\"query\\":{\\"x\\":\\"1\\"}}"`;
+
+exports[`MiniProgramUrl ok 3`] = `
+Object {
+  "appId": "testApp",
+  "path": "/pages/user",
+  "query": Object {
+    "id": "333",
+  },
+}
+`;
+
+exports[`MiniProgramUrl ok 4`] = `
+Object {
+  "envVersion": undefined,
+  "extraData": undefined,
+  "path": "pages/index?x=1",
+  "username": undefined,
+}
+`;
+
+exports[`MiniProgramUrl ok 5`] = `
+Object {
+  "envVersion": undefined,
+  "extraData": undefined,
+  "path": "pages/index?x=1",
+  "username": "testApp",
+}
+`;
+
+exports[`MiniProgramUrl ok 6`] = `
+Object {
+  "envVersion": undefined,
+  "extraData": undefined,
+  "path": "pages/home?from=223&se=33",
+  "username": "testApp",
+}
+`;
+
+exports[`MiniProgramUrl ok 7`] = `"mp://{\\"rawId\\":\\"testApp\\",\\"path\\":\\"/pages/home\\",\\"query\\":{\\"from\\":\\"223\\",\\"se\\":\\"33\\"}}"`;
+
+exports[`MiniProgramUrl ok 8`] = `"mp://{\\"rawId\\":\\"testApp\\",\\"path\\":\\"/pages/home\\",\\"query\\":{\\"from\\":\\"223\\",\\"se\\":\\"33\\"}}"`;
+
+exports[`MiniProgramUrl ok 9`] = `
+Object {
+  "appId": "testApp",
+  "envVersion": undefined,
+  "extraData": undefined,
+  "path": "pages/home?from=223&se=33",
+}
+`;
