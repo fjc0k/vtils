@@ -75,7 +75,7 @@ Object {
 }
 `;
 
-exports[`RichUrl toFile 非文件富链接报错 1`] = `"richUrl 不是一个合法的文件富链接: rich://{\\"url\\":\\"http://gg.gg\\",\\"desc\\":{\\"x\\":1}}"`;
+exports[`RichUrl toFile 非文件富链接报错 1`] = `"richUrl 不是一个合法的文件富链接: \\"rich://{\\\\\\"url\\\\\\":\\\\\\"http://gg.gg\\\\\\",\\\\\\"desc\\\\\\":{\\\\\\"x\\\\\\":1}}\\""`;
 
 exports[`RichUrl transform 表现正常 1`] = `
 Object {
@@ -106,23 +106,23 @@ Object {
 
 exports[`RichUrl transformFile 表现正常 1`] = `
 Object {
-  "icon": "rich://{\\"url\\":\\"icon\\",\\"desc\\":{\\"name\\":\\"icon\\"}}",
+  "icon": "url: blob://x0, file: icon",
   "id": 1,
   "title": "hello",
   "users": Array [
     Object {
-      "avatar": "rich://{\\"url\\":\\"2-avatar\\"}",
+      "avatar": "url: blob://x1, file: undefined",
       "id": 2,
     },
     Object {
-      "avatar": "rich://{\\"url\\":\\"3-avatar\\",\\"desc\\":{\\"url\\":\\".\\"}}",
+      "avatar": "url: blob://x2, file: undefined",
       "id": 3,
     },
     Object {
       "albums": Array [
-        "rich://{\\"url\\":\\"http://gg.gg\\"}",
-        "rich://{\\"url\\":\\"https://gg.gg\\"}",
-        "rich://{\\"url\\":\\"ftp://gg.gg\\",\\"desc\\":{\\"ftp\\":true}}",
+        "url: blob://x3, file: undefined",
+        "url: blob://x4, file: undefined",
+        "url: blob://x5, file: undefined",
       ],
       "avatar": "url: blob:http://localhost/ffsfeeer44, file: h.css",
       "id": 4,

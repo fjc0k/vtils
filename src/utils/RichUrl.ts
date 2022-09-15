@@ -145,7 +145,11 @@ export class RichUrl {
         url.substr(0, 5) !== 'blob:' ||
         typeof desc !== 'object'
       ) {
-        reject(new Error(`richUrl 不是一个合法的文件富链接: ${richUrl}`))
+        reject(
+          new Error(
+            `richUrl 不是一个合法的文件富链接: ${JSON.stringify(richUrl)}`,
+          ),
+        )
       } else {
         const xhr = new XMLHttpRequest()
         xhr.open('GET', url)
@@ -174,12 +178,8 @@ export class RichUrl {
     data: TData,
     callback: (parsedFileRichUrl: ParsedFileRichUrl) => Promise<string>,
   ): Promise<TData> {
-    return RichUrl.transform<TData, File>(data, (parsedRichUrl, rawData) => {
-      return new Promise(resolve => {
-        RichUrl.toFile(parsedRichUrl)
-          .then(callback, () => rawData as any)
-          .then(resolve)
-      })
+    return RichUrl.transform<TData, File>(data, parsedRichUrl => {
+      return RichUrl.toFile(parsedRichUrl).then(callback)
     })
   }
 }

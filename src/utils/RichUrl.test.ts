@@ -201,15 +201,15 @@ describe('RichUrl', () => {
           {
             id: 1,
             title: 'hello',
-            icon: RichUrl.build('icon', { name: 'icon' }),
+            icon: RichUrl.build('blob://x0', { name: 'icon' }),
             users: [
               {
                 id: 2,
-                avatar: RichUrl.build('2-avatar'),
+                avatar: RichUrl.build('blob://x1', { url: '.' }),
               },
               {
                 id: 3,
-                avatar: RichUrl.build('3-avatar', { url: '.' }),
+                avatar: RichUrl.build('blob://x2', { url: '.' }),
               },
               {
                 id: 4,
@@ -220,9 +220,9 @@ describe('RichUrl', () => {
                   }),
                 ),
                 albums: [
-                  RichUrl.build('http://gg.gg'),
-                  RichUrl.build('https://gg.gg'),
-                  RichUrl.build('ftp://gg.gg', { ftp: true }),
+                  RichUrl.build('blob://x3', { url: '.' }),
+                  RichUrl.build('blob://x4', { url: '.' }),
+                  RichUrl.build('blob://x5', { ftp: true }),
                 ],
               },
             ],
