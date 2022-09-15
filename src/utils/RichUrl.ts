@@ -87,7 +87,7 @@ export class RichUrl {
       data: TData,
     ) => Promise<string>,
   ): Promise<TData> {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       if (Array.isArray(data)) {
         Promise.all(
           (data as any[]).map((value, index) => {
@@ -95,7 +95,7 @@ export class RichUrl {
               ;(data as any[])[index] = res
             })
           }),
-        ).then(() => resolve(data))
+        ).then(() => resolve(data), reject)
       } else if (isPlainObject(data)) {
         Promise.all(
           Object.keys(data).map(key => {
@@ -103,9 +103,9 @@ export class RichUrl {
               ;(data as any)[key] = res
             })
           }),
-        ).then(() => resolve(data))
+        ).then(() => resolve(data), reject)
       } else if (RichUrl.check(data)) {
-        callback(RichUrl.parse(data), data).then(resolve as any)
+        callback(RichUrl.parse(data), data).then(resolve as any, reject)
       } else {
         resolve(data)
       }
