@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.63.2](https://github.com/fjc0k/vtils/compare/v4.63.1...v4.63.2) (2022-09-15)
+
+### Bug Fixes
+
+- **RichUrl:** transformFile 报错时应抛出 ([0e915ce](https://github.com/fjc0k/vtils/commit/0e915ceb87006c74c050e4e5a5bc8eec8252913d))
+
 ### [4.63.1](https://github.com/fjc0k/vtils/compare/v4.63.0...v4.63.1) (2022-08-07)
 
 ## [4.63.0](https://github.com/fjc0k/vtils/compare/v4.62.0...v4.63.0) (2022-08-07)
