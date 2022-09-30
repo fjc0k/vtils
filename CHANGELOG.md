@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.64.0](https://github.com/fjc0k/vtils/compare/v4.63.3...v4.64.0) (2022-09-30)
+
+### Features
+
+- **utils:** 新增 isElementVisible ([16c149c](https://github.com/fjc0k/vtils/commit/16c149c349493afd4183e61d540ca7cf182c01d3))
+
 ### [4.63.3](https://github.com/fjc0k/vtils/compare/v4.63.2...v4.63.3) (2022-09-15)
 
 ### Bug Fixes
