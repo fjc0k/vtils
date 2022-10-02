@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.65.0](https://github.com/fjc0k/vtils/compare/v4.64.0...v4.65.0) (2022-10-02)
+
+### Features
+
+- **utils:** 新增 removeBlankChars ([fbf58db](https://github.com/fjc0k/vtils/commit/fbf58db2c9dd5b401cfa5201938ce82ae3e27263))
+- **utils:** 新增 toFullWidthString ([9f9295f](https://github.com/fjc0k/vtils/commit/9f9295f283d68e063fead1ec075a3ce3d4d5a599))
+- **utils:** 新增 toHalfWidthString ([be3ca28](https://github.com/fjc0k/vtils/commit/be3ca289b1a5ffd78581e8d5000147136b055323))
+
 ## [4.64.0](https://github.com/fjc0k/vtils/compare/v4.63.3...v4.64.0) (2022-09-30)
 
 ### Features
