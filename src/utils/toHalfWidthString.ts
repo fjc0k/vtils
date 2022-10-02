@@ -9,7 +9,7 @@ export function toHalfWidthString(value: string): string {
   for (let i = 0; i < value.length; i++) {
     const charCode = value.charCodeAt(i)
     if (charCode === 12288) {
-      result += String.fromCharCode(charCode - 12256)
+      result += String.fromCharCode(32)
     } else if (charCode > 65280 && charCode < 65375) {
       result += String.fromCharCode(charCode - 65248)
     } else {
