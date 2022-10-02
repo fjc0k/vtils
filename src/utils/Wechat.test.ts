@@ -8,7 +8,7 @@ describe('Wechat', () => {
     const readyCbs: AnyFunction[] = []
     const errorCbs: AnyFunction[] = []
 
-    ;(global as any).wx = new Proxy(
+    ;(window as any).wx = new Proxy(
       {},
       {
         get(_, method) {
@@ -38,7 +38,7 @@ describe('Wechat', () => {
             if (method === 'testError') {
               errorCbs.forEach(cb => cb())
             }
-            return params.success && params.success()
+            return params.success && params.success({})
           }
         },
       },
@@ -78,15 +78,14 @@ describe('Wechat', () => {
   test('可以正常调用微信 JSSDK 的方法', async () => {
     const wechat = new Wechat(wechatConfigParams)
 
-    expect(wechat.invoke('addCard')).resolves.toBeUndefined()
-    expect(wechat.invoke('checkJsApi')).resolves.toBeUndefined()
-    expect(wechat.invoke('chooseImage', {})).resolves.toBeUndefined()
+    await expect(wechat.invoke('addCard')).toResolve()
+    await expect(wechat.invoke('chooseImage', {})).toResolve()
   })
 
-  test('可以正常处理调用微信 JSSDK 的方法失败的情况', () => {
+  test('可以正常处理调用微信 JSSDK 的方法失败的情况', async () => {
     const wechat = new Wechat(wechatConfigParams)
 
-    expect(wechat.invoke('testFail' as any)).rejects.toBeUndefined()
+    await expect(wechat.invoke('testFail' as any)).toReject()
   })
 
   test('可以收集错误信息', async () => {
@@ -111,24 +110,22 @@ describe('Wechat', () => {
   test('正常调用内置方法', async () => {
     const wechat = new Wechat(wechatConfigParams)
 
-    expect(wechat.checkJsApi(['chooseImage'])).resolves.toBeUndefined()
-    expect(wechat.updateShareData({})).resolves.toBeUndefined()
-    expect(wechat.chooseImage()).resolves.toBeUndefined()
-    expect(
-      wechat.previewImage({ urls: ['https://foo.bar'] }),
-    ).resolves.toBeUndefined()
-    expect(wechat.uploadImage({ localId: 'ss' })).resolves.toBeUndefined()
-    expect(wechat.closeWindow()).resolves.toBeUndefined()
-    expect(
+    await expect(wechat.checkJsApi(['chooseImage'])).toResolve()
+    await expect(wechat.updateShareData({})).toResolve()
+    await expect(wechat.chooseImage()).toResolve()
+    await expect(wechat.previewImage({ urls: ['https://foo.bar'] })).toResolve()
+    await expect(wechat.uploadImage({ localId: 'ss' })).toResolve()
+    await expect(wechat.closeWindow()).toResolve()
+    await expect(
       wechat.hideNonBaseMenuItems(['menuItem:share:brand']),
-    ).resolves.toBeUndefined()
-    expect(
+    ).toResolve()
+    await expect(
       wechat.showNonBaseMenuItems(['menuItem:originPage']),
-    ).resolves.toBeUndefined()
-    expect(wechat.hideAllNonBaseMenuItems()).resolves.toBeUndefined()
-    expect(wechat.showAllNonBaseMenuItems()).resolves.toBeUndefined()
-    expect(
+    ).toResolve()
+    await expect(wechat.hideAllNonBaseMenuItems()).toResolve()
+    await expect(wechat.showAllNonBaseMenuItems()).toResolve()
+    await expect(
       wechat.openLocation({ latitude: 60, longitude: 40, name: '云南' }),
-    ).resolves.toBeUndefined()
+    ).toResolve()
   })
 })
