@@ -106,6 +106,7 @@ rich://{"url":"***","desc":"***"}
 |  [pMap(list, callback)](./utils.pmap.md) | <code>Promise.all(data.map(callback))</code> 的简写。 |
 |  [prepareData(getter)](./utils.preparedata.md) | 准备数据。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
+|  [removeBlankChars(value)](./utils.removeblankchars.md) | 从字符串中移除空白字符。 |
 |  [rot13(str)](./utils.rot13.md) | 回转 13 位替换式密码。 |
 |  [roundTo(number, precision, threshold)](./utils.roundto.md) | 保留 n 位小数下的 x 舍 y 入。 |
 |  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
@@ -122,6 +123,8 @@ rich://{"url":"***","desc":"***"}
 |  [selectElementLast(selectors, baseElement)](./utils.selectelementlast_1.md) |  |
 |  [signal()](./utils.signal.md) | 信号。 |
 |  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
+|  [toFullWidthString(value)](./utils.tofullwidthstring.md) | 转换为全角字符串。 |
+|  [toHalfWidthString(value)](./utils.tohalfwidthstring.md) | 转换为半角字符串。 |
 |  [traverse(value, callback)](./utils.traverse.md) | 遍历对象和数组。 |
 |  [wait(milliseconds, value)](./utils.wait.md) | 等待一段时间 resolve。 |
 
