@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.65.1](https://github.com/fjc0k/vtils/compare/v4.65.0...v4.65.1) (2022-10-19)
+
+### Bug Fixes
+
+- **removeBlankChars:** 新增 200E, 200F ([fa9cbbf](https://github.com/fjc0k/vtils/commit/fa9cbbf548975b53f57c517f33a5f35e4e81018a))
+
 ## [4.65.0](https://github.com/fjc0k/vtils/compare/v4.64.0...v4.65.0) (2022-10-02)
 
 ### Features
