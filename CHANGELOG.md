@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.66.0](https://github.com/fjc0k/vtils/compare/v4.65.1...v4.66.0) (2022-11-03)
+
+### Features
+
+- **utils:** 新增 removeEmojiChars 从字符串中移除 emoji 字符 ([81a752d](https://github.com/fjc0k/vtils/commit/81a752d42979be4464076eec3d0440e0d0219680))
+- **utils:** 新增 removeNonWordChars 从字符串中移除非单词字符（移除非英文单词、阿拉伯数字、汉字的所有字符） ([14919e9](https://github.com/fjc0k/vtils/commit/14919e9c6c0af2a85fc854142928d9e908d51ba8))
+
 ### [4.65.1](https://github.com/fjc0k/vtils/compare/v4.65.0...v4.65.1) (2022-10-19)
 
 ### Bug Fixes
