@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for mp/getCurrentPagePath.ts</title>
+    <title>Code coverage report for utils/removeNonWordChars.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">mp</a> getCurrentPagePath.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> removeNonWordChars.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/4</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>3/4</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
                 <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -72,13 +72,11 @@
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a>
-<a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -87,38 +85,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { AnyObject } from '../types'
-import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { last } from '../utils'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// https://zhuanlan.zhihu.com/p/33335629
+// https://babeljs.io/repl/#?browsers=iOS%209&amp;build=&amp;builtIns=false&amp;corejs=3.6&amp;spec=false&amp;loose=true&amp;code_lz=MYewdgzgLgBATgUxgXhgegNoD0CGBaALwEE8AtABjwE4AdABwG8BVMASwDNWEATAfQEluCEAHM4OOgAsAvgF00AVxFA&amp;debug=false&amp;forceAllTransforms=true&amp;shippedProposals=true&amp;circleciRepo=&amp;evaluate=false&amp;fileSize=false&amp;timeTravel=false&amp;sourceType=script&amp;lineWrap=true&amp;presets=env%2Ctypescript&amp;prettier=true&amp;targets=Node-12&amp;version=7.20.1&amp;externalPlugins=&amp;assumptions=%7B%7D
+// /[^a-zA-Z0-9\p{Unified_Ideograph}]/ug
+const re =
+  /(?:(?![0-9A-Za-z\u3400-\u4DBF\u4E00-\u9FFF\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879\uD880-\uD883\uD885-\uD887][\uDC00-\uDFFF]|\uD869[\uDC00-\uDEDF\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF39\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0]|\uD884[\uDC00-\uDF4A\uDF50-\uDFFF]|\uD888[\uDC00-\uDFAF])[\s\S])/g
 &nbsp;
 /**
- * 获取当前页面的路径（不含查询参数），始终以 `/` 开头。
+ * 从字符串中移除非单词字符（移除非英文单词、阿拉伯数字、汉字的所有字符）。
  *
- * @param pageInstance 页面实例，默认当前页面
- * @returns 返回当前页面的路径
+ * @param value 要操作的字符串
+ * @returns 返回移除非单词字符后的字符串
  */
-export function getCurrentPagePath(
-  pageInstance?: WechatMiniprogram.Page.Instance&lt;AnyObject, AnyObject&gt;,
-): string {
-  return ensureInMiniProgram(() =&gt; {
-    pageInstance = pageInstance || last(getCurrentPages())!
-    const path = `/${
-      pageInstance.route || /* 字节跳动 */ <span class="branch-1 cbranch-no" title="branch not covered" >pageInstance.__route__</span>
-    }`.replace(/\/{2,}/g, '/')
-    return path
-  })
+export function removeNonWordChars(value: string): string {
+  return value.replace(re, '')
 }
 &nbsp;</pre></td></tr></table></pre>
 
