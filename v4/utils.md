@@ -107,6 +107,8 @@ rich://{"url":"***","desc":"***"}
 |  [prepareData(getter)](./utils.preparedata.md) | 准备数据。 |
 |  [readFile(file)](./utils.readfile.md) | 读取给定文件的内容。 |
 |  [removeBlankChars(value)](./utils.removeblankchars.md) | 从字符串中移除空白字符。 |
+|  [removeEmojiChars(value)](./utils.removeemojichars.md) | 从字符串中移除 emoji 字符。 |
+|  [removeNonWordChars(value)](./utils.removenonwordchars.md) | 从字符串中移除非单词字符（移除非英文单词、阿拉伯数字、汉字的所有字符）。 |
 |  [rot13(str)](./utils.rot13.md) | 回转 13 位替换式密码。 |
 |  [roundTo(number, precision, threshold)](./utils.roundto.md) | 保留 n 位小数下的 x 舍 y 入。 |
 |  [run(fn)](./utils.run.md) | 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。 |
