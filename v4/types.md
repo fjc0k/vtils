@@ -77,9 +77,12 @@
 |  [PositiveInfinity](./types.positiveinfinity.md) | Matches the hidden <code>Infinity</code> type.<!-- -->Please upvote \[this issue\](https://github.com/microsoft/TypeScript/issues/32277) if you want to have this type as a built-in in TypeScript. |
 |  [ReadonlyDeep](./types.readonlydeep.md) | Like Readonly but recursive |
 |  [ReadonlyKeys](./types.readonlykeys.md) | Gets keys of an object which are readonly |
+|  [RequireAllOrNone](./types.requireallornone.md) | Create a type that requires all of the given keys or none of the given keys. The remaining keys are kept as is.<!-- -->Use-cases: - Creating interfaces for components with mutually-inclusive keys.<!-- -->The caveat with <code>RequireAllOrNone</code> is that TypeScript doesn't always know at compile time every key that will exist at runtime. Therefore <code>RequireAllOrNone</code> can't do anything to prevent extra keys it doesn't know about. |
+|  [RequireAtLeastOne](./types.requireatleastone.md) | Create a type that requires at least one of the given keys. The remaining keys are kept as is. |
 |  [RequiredBy](./types.requiredby.md) | Mark some properties as required, leaving others unchanged |
 |  [RequiredDeep](./types.requireddeep.md) | Like Required but recursive |
 |  [RequiredKeys](./types.requiredkeys.md) | Gets keys of an object which are required |
+|  [RequireExactlyOne](./types.requireexactlyone.md) | Create a type that requires exactly one of the given keys and disallows more. The remaining keys are kept as is.<!-- -->Use-cases: - Creating interfaces for components that only need one of the keys to display properly. - Declaring generic keys in a single place for a single use-case that gets narrowed down via <code>RequireExactlyOne</code>.<!-- -->The caveat with <code>RequireExactlyOne</code> is that TypeScript doesn't always know at compile time every key that will exist at runtime. Therefore <code>RequireExactlyOne</code> can't do anything to prevent extra keys it doesn't know about. |
 |  [Simplify](./types.simplify.md) | Useful to flatten the type output to improve type hints shown in editors. And also to transform an interface into a type to aide with assignability. |
 |  [SnakeCase](./types.snakecase.md) | Convert a string literal to snake-case.<!-- -->This can be useful when, for example, converting a camel-cased object property to a snake-cased SQL column name. |
 |  [Tail](./types.tail.md) |  |
