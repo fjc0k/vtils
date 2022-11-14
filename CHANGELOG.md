@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.67.0](https://github.com/fjc0k/vtils/compare/v4.66.0...v4.67.0) (2022-11-14)
+
+### Features
+
+- **types:** add RequireAtLeastOne, RequireExactlyOne, RequireAllOrNone ([1a09798](https://github.com/fjc0k/vtils/commit/1a0979859a5d1e2861fe271abbe486ea70ed206e))
+
 ## [4.66.0](https://github.com/fjc0k/vtils/compare/v4.65.1...v4.66.0) (2022-11-03)
 
 ### Features
