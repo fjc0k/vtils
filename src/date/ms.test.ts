@@ -71,4 +71,9 @@ describe('ms', () => {
       )
     }).toThrowError()
   })
+
+  test('小数正常', () => {
+    expect(ms('1.1ms')).toBe(1.1)
+    expect(ms(1.1, 'ms')).toBe(1.1)
+  })
 })

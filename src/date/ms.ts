@@ -23,7 +23,7 @@ const unitToTimes: Record<MsUnit, number> = Object.create({
   ms: _ms,
 })
 
-const re = /^(\d+)(y|w|d|h|m|s|ms)$/
+const re = /^(\d+(?:\.\d+)?)(y|w|d|h|m|s|ms)$/
 
 /**
  * 获取毫秒值。
