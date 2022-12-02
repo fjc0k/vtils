@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.67.1](https://github.com/fjc0k/vtils/compare/v4.67.0...v4.67.1) (2022-12-02)
+
+### Bug Fixes
+
+- **ms:** 支持小数 ([65247d5](https://github.com/fjc0k/vtils/commit/65247d5ef0a4eb1ffd8a2ade315ce4073c9ee892))
+
 ## [4.67.0](https://github.com/fjc0k/vtils/compare/v4.66.0...v4.67.0) (2022-11-14)
 
 ### Features
