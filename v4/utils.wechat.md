@@ -48,6 +48,7 @@ wechat.invoke('scanQRCode').then(res => {
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [beforeInvoke(cb)](./utils.wechat.beforeinvoke.md) |  |  |
 |  [checkJsApi(jsApiList)](./utils.wechat.checkjsapi.md) |  | 判断当前客户端版本是否支持指定 JS 接口。 |
 |  [chooseImage(params)](./utils.wechat.chooseimage.md) |  | 选择图片。 |
 |  [closeWindow()](./utils.wechat.closewindow.md) |  | 关闭当前网页窗口。 |

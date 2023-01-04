@@ -232,6 +232,7 @@ rich://{"url":"***","desc":"***"}
 |  [TreeDataStandardNode](./utils.treedatastandardnode.md) |  |
 |  [TreeDataTraverseFn](./utils.treedatatraversefn.md) |  |
 |  [ValueOfRawData](./utils.valueofrawdata.md) |  |
+|  [WechatBeforeInvokeCallback](./utils.wechatbeforeinvokecallback.md) |  |
 |  [WechatErrorCallback](./utils.wechaterrorcallback.md) |  |
 |  [WechatJsApi](./utils.wechatjsapi.md) | 微信 JSSDK 支持的 API。 |
 |  [WechatNonBaseMenuItem](./utils.wechatnonbasemenuitem.md) | 微信内网页的非基础菜单列表。 |
