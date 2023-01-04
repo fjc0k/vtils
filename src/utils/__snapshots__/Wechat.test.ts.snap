@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wechat beforeInvoke 正常 1`] = `
+Array [
+  Object {
+    "jsApi": "updateAppMessageShareData",
+    "params": Object {},
+  },
+  Object {
+    "jsApi": "updateTimelineShareData",
+    "params": Object {},
+  },
+  Object {
+    "jsApi": "onMenuShareAppMessage",
+    "params": Object {},
+  },
+  Object {
+    "jsApi": "onMenuShareTimeline",
+    "params": Object {},
+  },
+  Object {
+    "jsApi": "onMenuShareQQ",
+    "params": Object {},
+  },
+  Object {
+    "jsApi": "onMenuShareQZone",
+    "params": Object {},
+  },
+  Object {
+    "jsApi": "closeWindow",
+    "params": Object {},
+  },
+]
+`;

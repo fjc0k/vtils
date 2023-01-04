@@ -327,6 +327,11 @@ const shareJsApiList: WechatJsApi[] = [
   'onMenuShareQZone',
 ]
 
+export type WechatBeforeInvokeCallback = (
+  jsApi: WechatJsApi,
+  params: Record<string, any>,
+) => any
+
 /**
  * 对微信 JSSDK 的封装。
  *
@@ -372,6 +377,8 @@ export class Wechat {
    * 上一次设置分享时的参数。
    */
   private prevShareParams: WechatUpdateShareDataParams = {}
+
+  private beforeInvokeCallbacks: WechatBeforeInvokeCallback[] = []
 
   /**
    * 注入微信 `JSSDK` 的权限验证配置参数。
@@ -628,6 +635,10 @@ export class Wechat {
     return this.bus.on('error', callback)
   }
 
+  beforeInvoke(cb: WechatBeforeInvokeCallback) {
+    this.beforeInvokeCallbacks.push(cb)
+  }
+
   /**
    * 调用 JSSDK 的 API 方法。
    *
@@ -640,15 +651,26 @@ export class Wechat {
     params: P = {} as any,
   ): Promise<T> {
     return new Promise((resolve, reject) => {
-      const invoke = () => {
+      const invoke = async () => {
         if (!wx[jsApi]) return reject(`wx.${jsApi} 不可用`)
-        this.config()
-        wx[jsApi]({
-          ...params,
-          success: resolve,
-          fail: reject,
-          cancel: reject,
-        })
+        try {
+          this.config()
+
+          if (this.beforeInvokeCallbacks.length) {
+            await Promise.all(
+              this.beforeInvokeCallbacks.map(cb => cb(jsApi, params)),
+            )
+          }
+
+          wx[jsApi]({
+            ...params,
+            success: resolve,
+            fail: reject,
+            cancel: reject,
+          })
+        } catch (err) {
+          reject(err)
+        }
       }
       if (typeof wx === 'undefined' || !this.ready) {
         this.bus.once('ready', invoke)

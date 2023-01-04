@@ -128,4 +128,19 @@ describe('Wechat', () => {
       wechat.openLocation({ latitude: 60, longitude: 40, name: '云南' }),
     ).toResolve()
   })
+
+  test('beforeInvoke 正常', async () => {
+    const wechat = new Wechat()
+    const invokeHistory: any = []
+    wechat.beforeInvoke((jsApi, params) => {
+      invokeHistory.push({
+        jsApi,
+        params,
+      })
+    })
+    wechat.config(wechatConfigParams)
+    await wechat.updateShareData({})
+    await wechat.closeWindow()
+    expect(invokeHistory).toMatchSnapshot()
+  })
 })
