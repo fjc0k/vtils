@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.68.0](https://github.com/fjc0k/vtils/compare/v4.67.1...v4.68.0) (2023-01-04)
+
+### Features
+
+- **Wechat:** 支持 beforeInvoke 回调 ([1f4994c](https://github.com/fjc0k/vtils/commit/1f4994c84ffebb9d744b0a017268aa7d62ff83f2))
+
 ### [4.67.1](https://github.com/fjc0k/vtils/compare/v4.67.0...v4.67.1) (2022-12-02)
 
 ### Bug Fixes
