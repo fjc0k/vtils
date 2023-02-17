@@ -19,6 +19,7 @@
 |  [anyToDate(value)](./date.anytodate.md) | 增强版的 toDate，支持： - 秒时间戳、毫秒时间戳； - Date 实例； - 符合 ISO 标准的时间字符串。 |
 |  [formatDate(date, renderer)](./date.formatdate.md) | 格式化日期。 |
 |  [formatDistanceAgo(date)](./date.formatdistanceago.md) | 将时间转化为 <code>xxx前</code> 表示。 |
+|  [formatDistancePlus(date, baseDate)](./date.formatdistanceplus.md) | 将时间转化为 <code>xxx前/后</code> 表示。 |
 |  [intervalToRestrictiveDuration(start, end, target)](./date.intervaltorestrictiveduration.md) |  |
 |  [ms(value, unit, returnSeconds)](./date.ms.md) | 获取毫秒值。 |
 |  [ms(value, returnSeconds)](./date.ms_1.md) | 获取毫秒值。 |
