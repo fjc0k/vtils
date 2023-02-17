@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.69.0](https://github.com/fjc0k/vtils/compare/v4.68.0...v4.69.0) (2023-02-17)
+
+### Features
+
+- **date:** 新增 formatDistancePlus ([668ccd5](https://github.com/fjc0k/vtils/commit/668ccd5615f5dd6c3fe5717496348406ef716996))
+
 ## [4.68.0](https://github.com/fjc0k/vtils/compare/v4.67.1...v4.68.0) (2023-01-04)
 
 ### Features
