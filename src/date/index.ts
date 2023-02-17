@@ -342,6 +342,7 @@ export {
 export * from './anyToDate'
 export * from './formatDate'
 export * from './formatDistanceAgo'
+export * from './formatDistancePlus'
 export * from './intervalToRestrictiveDuration'
 export * from './ms'
 export * from './numeralDayToChineseDay'
