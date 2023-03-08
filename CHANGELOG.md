@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.70.0](https://github.com/fjc0k/vtils/compare/v4.69.0...v4.70.0) (2023-03-08)
+
+### Features
+
+- **utils:** createSubmit 支持泛型 ([e5f1e8a](https://github.com/fjc0k/vtils/commit/e5f1e8aba6afa939804c54365fe96fccc80c10b9))
+
 ## [4.69.0](https://github.com/fjc0k/vtils/compare/v4.68.0...v4.69.0) (2023-02-17)
 
 ### Features
