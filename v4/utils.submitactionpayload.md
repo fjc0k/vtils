@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare interface SubmitActionPayload 
+export declare interface SubmitActionPayload<T = string> 
 ```
 
 ## Methods

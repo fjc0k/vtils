@@ -9,16 +9,16 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function createSubmit(options: CreateSubmitOptions): CreateSubmitResult;
+export declare function createSubmit(options: CreateSubmitOptions<string>): CreateSubmitResult<string>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  options | [CreateSubmitOptions](./utils.createsubmitoptions.md) | 选项 |
+|  options | [CreateSubmitOptions](./utils.createsubmitoptions.md)<!-- -->&lt;string&gt; | 选项 |
 
 <b>Returns:</b>
 
-[CreateSubmitResult](./utils.createsubmitresult.md)
+[CreateSubmitResult](./utils.createsubmitresult.md)<!-- -->&lt;string&gt;
 

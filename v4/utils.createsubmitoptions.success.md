@@ -9,14 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-success(message: string, duration: number): AsyncOrSync<any>;
+success(message: T, duration: number): AsyncOrSync<any>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | string | 提示信息 |
+|  message | T | 提示信息 |
 |  duration | number | 持续时间（毫秒） |
 
 <b>Returns:</b>

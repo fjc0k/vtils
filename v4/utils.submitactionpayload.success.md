@@ -9,14 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-success(message: string, duration?: number): Promise<any>;
+success(message: T, duration?: number): Promise<any>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | string | 提示信息 |
+|  message | T | 提示信息 |
 |  duration | number | 持续时间（毫秒），默认 1500 |
 
 <b>Returns:</b>

@@ -55,6 +55,7 @@ rich://{"url":"***","desc":"***"}
 |  [constantCase(text)](./utils.constantcase.md) | 转换文本为大写字符串，单词之间带有下划线。 |
 |  [copyTextToClipboard(text, options)](./utils.copytexttoclipboard.md) | 复制文本到剪切板。 |
 |  [createSubmit(options)](./utils.createsubmit.md) | 创建提交类行为。 |
+|  [createSubmit(options)](./utils.createsubmit_1.md) | 创建提交类行为。 |
 |  [createUrlQueryString(parameters, options)](./utils.createurlquerystring.md) | 创建 url 查询字符串。 |
 |  [dedent(text)](./utils.dedent.md) | 移除每一行的公共前导空白。 |
 |  [dedent(literals, interpolations)](./utils.dedent_1.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |

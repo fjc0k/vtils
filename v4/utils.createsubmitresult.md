@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type CreateSubmitResult = <TResult>(action: (payload: SubmitActionPayload) => Promise<TResult>) => Promise<TResult>;
+export declare type CreateSubmitResult<T = string> = <TResult>(action: (payload: SubmitActionPayload<T>) => Promise<TResult>) => Promise<TResult>;
 ```
 <b>References:</b> [SubmitActionPayload](./utils.submitactionpayload.md)
 

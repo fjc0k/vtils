@@ -9,14 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-start(message?: string): Promise<any>;
+start(message?: T): Promise<any>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | string | 提示信息 |
+|  message | T | 提示信息 |
 
 <b>Returns:</b>
 
