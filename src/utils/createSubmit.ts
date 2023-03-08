@@ -2,7 +2,7 @@ import { AsyncOrSync } from '../types'
 import { run } from './run'
 import { wait } from './wait'
 
-export interface CreateSubmitOptions<T> {
+export interface CreateSubmitOptions<T = string> {
   /**
    * 开始回调。
    *
@@ -37,7 +37,7 @@ export interface CreateSubmitOptions<T> {
   throw?(error: unknown): AsyncOrSync<any>
 }
 
-export interface SubmitActionPayload<T> {
+export interface SubmitActionPayload<T = string> {
   /**
    * 开始提示。
    *
@@ -62,7 +62,7 @@ export interface SubmitActionPayload<T> {
   success(message: T, duration?: number): Promise<any>
 }
 
-export type CreateSubmitResult<T> = <TResult>(
+export type CreateSubmitResult<T = string> = <TResult>(
   action: (payload: SubmitActionPayload<T>) => Promise<TResult>,
 ) => Promise<TResult>
 
