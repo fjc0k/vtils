@@ -159,7 +159,43 @@
 <a name='L100'></a><a href='#L100'>100</a>
 <a name='L101'></a><a href='#L101'>101</a>
 <a name='L102'></a><a href='#L102'>102</a>
-<a name='L103'></a><a href='#L103'>103</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -265,13 +301,13 @@
 import { run } from './run'
 import { wait } from './wait'
 &nbsp;
-export interface CreateSubmitOptions {
+export interface CreateSubmitOptions&lt;T = string&gt; {
   /**
    * 开始回调。
    *
    * @param message 提示信息
    */
-  start(message?: string): AsyncOrSync&lt;any&gt;
+  start(message?: T): AsyncOrSync&lt;any&gt;
 &nbsp;
   /**
    * 失败回调。
@@ -279,7 +315,7 @@ export interface CreateSubmitOptions {
    * @param message 提示信息
    * @param duration 持续时间（毫秒）
    */
-  fail(message: string, duration: number): AsyncOrSync&lt;any&gt;
+  fail(message: T, duration: number): AsyncOrSync&lt;any&gt;
 &nbsp;
   /**
    * 成功回调。
@@ -287,7 +323,7 @@ export interface CreateSubmitOptions {
    * @param message 提示信息
    * @param duration 持续时间（毫秒）
    */
-  success(message: string, duration: number): AsyncOrSync&lt;any&gt;
+  success(message: T, duration: number): AsyncOrSync&lt;any&gt;
 &nbsp;
   /**
    * 完成回调。
@@ -300,13 +336,13 @@ export interface CreateSubmitOptions {
   throw?(error: unknown): AsyncOrSync&lt;any&gt;
 }
 &nbsp;
-export interface SubmitActionPayload {
+export interface SubmitActionPayload&lt;T = string&gt; {
   /**
    * 开始提示。
    *
    * @param message 提示信息
    */
-  start(message?: string): Promise&lt;any&gt;
+  start(message?: T): Promise&lt;any&gt;
 &nbsp;
   /**
    * 失败提示。
@@ -314,7 +350,7 @@ export interface SubmitActionPayload {
    * @param message 提示信息
    * @param duration 持续时间（毫秒），默认 1500
    */
-  fail(message: string, duration?: number): Promise&lt;any&gt;
+  fail(message: T, duration?: number): Promise&lt;any&gt;
 &nbsp;
   /**
    * 成功提示。
@@ -322,11 +358,11 @@ export interface SubmitActionPayload {
    * @param message 提示信息
    * @param duration 持续时间（毫秒），默认 1500
    */
-  success(message: string, duration?: number): Promise&lt;any&gt;
+  success(message: T, duration?: number): Promise&lt;any&gt;
 }
 &nbsp;
-export type CreateSubmitResult = &lt;TResult&gt;(
-  action: (payload: SubmitActionPayload) =&gt; Promise&lt;TResult&gt;,
+export type CreateSubmitResult&lt;T = string&gt; = &lt;TResult&gt;(
+  action: (payload: SubmitActionPayload&lt;T&gt;) =&gt; Promise&lt;TResult&gt;,
 ) =&gt; Promise&lt;TResult&gt;
 &nbsp;
 /**
@@ -334,8 +370,26 @@ export type CreateSubmitResult = &lt;TResult&gt;(
  *
  * @param options 选项
  */
-export function createSubmit(options: CreateSubmitOptions): CreateSubmitResult {
-  const payload: SubmitActionPayload = {
+export function createSubmit(
+  options: CreateSubmitOptions&lt;string&gt;,
+): CreateSubmitResult&lt;string&gt;
+/**
+ * 创建提交类行为。
+ *
+ * @param options 选项
+ */
+export function createSubmit&lt;T&gt;(
+  options: CreateSubmitOptions&lt;T&gt;,
+): CreateSubmitResult&lt;T&gt;
+/**
+ * 创建提交类行为。
+ *
+ * @param options 选项
+ */
+export function createSubmit&lt;T&gt;(
+  options: CreateSubmitOptions&lt;T&gt;,
+): CreateSubmitResult&lt;T&gt; {
+  const payload: SubmitActionPayload&lt;T&gt; = {
     start(message) {
       return run(() =&gt; options.start(message))
     },
@@ -370,7 +424,7 @@ export function createSubmit(options: CreateSubmitOptions): CreateSubmitResult {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Feb 17 2023 02:35:46 GMT+0000 (Coordinated Universal Time)
+                at Wed Mar 08 2023 08:49:35 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
