@@ -2,13 +2,13 @@ import { AsyncOrSync } from '../types'
 import { run } from './run'
 import { wait } from './wait'
 
-export interface CreateSubmitOptions {
+export interface CreateSubmitOptions<T> {
   /**
    * 开始回调。
    *
    * @param message 提示信息
    */
-  start(message?: string): AsyncOrSync<any>
+  start(message?: T): AsyncOrSync<any>
 
   /**
    * 失败回调。
@@ -16,7 +16,7 @@ export interface CreateSubmitOptions {
    * @param message 提示信息
    * @param duration 持续时间（毫秒）
    */
-  fail(message: string, duration: number): AsyncOrSync<any>
+  fail(message: T, duration: number): AsyncOrSync<any>
 
   /**
    * 成功回调。
@@ -24,7 +24,7 @@ export interface CreateSubmitOptions {
    * @param message 提示信息
    * @param duration 持续时间（毫秒）
    */
-  success(message: string, duration: number): AsyncOrSync<any>
+  success(message: T, duration: number): AsyncOrSync<any>
 
   /**
    * 完成回调。
@@ -37,13 +37,13 @@ export interface CreateSubmitOptions {
   throw?(error: unknown): AsyncOrSync<any>
 }
 
-export interface SubmitActionPayload {
+export interface SubmitActionPayload<T> {
   /**
    * 开始提示。
    *
    * @param message 提示信息
    */
-  start(message?: string): Promise<any>
+  start(message?: T): Promise<any>
 
   /**
    * 失败提示。
@@ -51,7 +51,7 @@ export interface SubmitActionPayload {
    * @param message 提示信息
    * @param duration 持续时间（毫秒），默认 1500
    */
-  fail(message: string, duration?: number): Promise<any>
+  fail(message: T, duration?: number): Promise<any>
 
   /**
    * 成功提示。
@@ -59,11 +59,11 @@ export interface SubmitActionPayload {
    * @param message 提示信息
    * @param duration 持续时间（毫秒），默认 1500
    */
-  success(message: string, duration?: number): Promise<any>
+  success(message: T, duration?: number): Promise<any>
 }
 
-export type CreateSubmitResult = <TResult>(
-  action: (payload: SubmitActionPayload) => Promise<TResult>,
+export type CreateSubmitResult<T> = <TResult>(
+  action: (payload: SubmitActionPayload<T>) => Promise<TResult>,
 ) => Promise<TResult>
 
 /**
@@ -71,8 +71,26 @@ export type CreateSubmitResult = <TResult>(
  *
  * @param options 选项
  */
-export function createSubmit(options: CreateSubmitOptions): CreateSubmitResult {
-  const payload: SubmitActionPayload = {
+export function createSubmit(
+  options: CreateSubmitOptions<string>,
+): CreateSubmitResult<string>
+/**
+ * 创建提交类行为。
+ *
+ * @param options 选项
+ */
+export function createSubmit<T>(
+  options: CreateSubmitOptions<T>,
+): CreateSubmitResult<T>
+/**
+ * 创建提交类行为。
+ *
+ * @param options 选项
+ */
+export function createSubmit<T>(
+  options: CreateSubmitOptions<T>,
+): CreateSubmitResult<T> {
+  const payload: SubmitActionPayload<T> = {
     start(message) {
       return run(() => options.start(message))
     },
