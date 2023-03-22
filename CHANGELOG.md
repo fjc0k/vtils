@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.71.0](https://github.com/fjc0k/vtils/compare/v4.70.0...v4.71.0) (2023-03-22)
+
+### Features
+
+- **utils:** 新增 toSingleLineString ([2e43ceb](https://github.com/fjc0k/vtils/commit/2e43ceb66d6e949f2cce348dad2cbba650c24887))
+
 ## [4.70.0](https://github.com/fjc0k/vtils/compare/v4.69.0...v4.70.0) (2023-03-08)
 
 ### Features
