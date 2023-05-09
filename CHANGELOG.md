@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.71.1](https://github.com/fjc0k/vtils/compare/v4.71.0...v4.71.1) (2023-05-09)
+
+### Bug Fixes
+
+- **prepareData:** 仅支持函数形式 ([4d55bce](https://github.com/fjc0k/vtils/commit/4d55bce43033b09ce9681b792c1d95b4579922e3))
+
 ## [4.71.0](https://github.com/fjc0k/vtils/compare/v4.70.0...v4.71.0) (2023-03-22)
 
 ### Features
