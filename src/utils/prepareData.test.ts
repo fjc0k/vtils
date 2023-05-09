@@ -4,17 +4,14 @@ import { prepareData } from './prepareData'
 describe('prepareData', () => {
   test('ok', async () => {
     const data = await prepareData({
-      x: 1,
-      y: Promise.resolve(Promise.resolve('y')),
-      z: null,
+      f: () => 'fn',
+      fa: async () => 'fns',
     })
-    expectType<typeof data['x'], number>()
-    expectType<typeof data['y'], string>()
-    expectType<typeof data['z'], null>()
+    expectType<typeof data['f'], 'fn'>()
+    expectType<typeof data['fa'], string>()
     expect(data).toEqual({
-      x: 1,
-      y: 'y',
-      z: null,
+      f: 'fn',
+      fa: 'fns',
     })
   })
 })
