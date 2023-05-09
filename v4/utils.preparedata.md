@@ -9,8 +9,8 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function prepareData<T extends Record<string, any>>(getter: T): Promise<{
-    [K in keyof T]: Awaited<T[K]>;
+export declare function prepareData<T extends Record<string, () => any>>(getter: T): Promise<{
+    [K in keyof T]: Awaited<ReturnType<T[K]>>;
 }>;
 ```
 
@@ -22,5 +22,5 @@ export declare function prepareData<T extends Record<string, any>>(getter: T): P
 
 <b>Returns:</b>
 
-Promise&lt;{ \[K in keyof T\]: Awaited&lt;T\[K\]&gt;; }&gt;
+Promise&lt;{ \[K in keyof T\]: Awaited&lt;ReturnType&lt;T\[K\]&gt;&gt;; }&gt;
 
