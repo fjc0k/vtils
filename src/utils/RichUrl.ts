@@ -98,7 +98,7 @@ export class RichUrl {
         ).then(() => resolve(data), reject)
       } else if (isPlainObject(data)) {
         Promise.all(
-          Object.keys(data).map(key => {
+          Object.keys(data as any).map(key => {
             return RichUrl.transform((data as any)[key], callback).then(res => {
               ;(data as any)[key] = res
             })

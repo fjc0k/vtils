@@ -1,5 +1,5 @@
-import { base64UrlDecode, base64UrlEncode } from './base64'
 import { isPlainObject, mapValues, range, shuffle } from 'lodash-uni'
+import { base64UrlDecode, base64UrlEncode } from './base64'
 import { isType } from './isType'
 import { rot13 } from './rot13'
 
@@ -68,7 +68,7 @@ export class DataPacker {
    * 返回结果同 `pack()`，不过类型是原数据的类型。
    */
   static packAsRawType<T>(rawData: T): T {
-    return DataPacker.pack(rawData) as any
+    return DataPacker.pack(rawData as any) as any
   }
 
   /**

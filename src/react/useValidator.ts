@@ -1,6 +1,6 @@
-import { yup as _yup } from '../validator'
-import { AnyObject } from '../types'
 import { DependencyList, useMemo } from 'react'
+import { AnyObject } from '../types'
+import { yup as _yup } from '../validator'
 
 const validateOptions: _yup.SchemaValidateOptions = {
   strict: true,
@@ -63,6 +63,7 @@ export function useValidator<T>(
 
   const yupSchema = useMemo((): _yup.MixedSchema => {
     const schemaOrObjectDefinitions = _schema(_yup)
+    // @ts-ignore
     if (schemaOrObjectDefinitions.__isYupSchema__) {
       return schemaOrObjectDefinitions as any
     }

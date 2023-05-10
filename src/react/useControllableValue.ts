@@ -1,13 +1,13 @@
-import { Defined } from '../types'
 import { useCallback, useState } from 'react'
 import { useLatest, useUpdateEffect } from 'react-use'
+import { Defined } from '../types'
 
 export type UseControllableValueOptions<
   TProps,
   TDefaultValuePropName extends keyof TProps,
   TValuePropName extends keyof TProps,
   TCallbackPropName extends keyof TProps,
-  TDefaultValue extends TProps[TValuePropName]
+  TDefaultValue extends TProps[TValuePropName],
 > = {
   /**
    * 默认值的属性名。
@@ -39,7 +39,7 @@ export type UseControllableValueResult<
   TProps,
   TValuePropName extends keyof TProps,
   TCallbackPropName extends keyof TProps,
-  TDefaultValue extends TProps[TValuePropName]
+  TDefaultValue extends TProps[TValuePropName],
 > = [
   TDefaultValue extends undefined
     ? TProps[TValuePropName]
@@ -55,11 +55,11 @@ export type UseControllableValueResult<
  * @param options 选项
  */
 export function useControllableValue<
-  TProps,
+  TProps extends {},
   TDefaultValuePropName extends keyof TProps,
   TValuePropName extends keyof TProps,
   TCallbackPropName extends keyof TProps,
-  TDefaultValue extends TProps[TValuePropName]
+  TDefaultValue extends TProps[TValuePropName],
 >(
   props: TProps,
   options: UseControllableValueOptions<

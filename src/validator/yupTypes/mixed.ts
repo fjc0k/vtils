@@ -24,7 +24,7 @@ export interface SchemaValidateOptions {
   context?: {}
 }
 
-export interface SchemaTestOptions<TSchema, TValue, TParams = {}> {
+export interface SchemaTestOptions<TSchema, TValue, TParams extends {} = {}> {
   name: string
   message: LocaleValue<TParams>
   test: (
@@ -151,7 +151,9 @@ export interface MixedSchema<T = any> {
     message?: SchemaTestOptions<this, T>['message'],
   ): this
 
-  test<TParams = {}>(options: SchemaTestOptions<this, T, TParams>): this
+  test<TParams extends {} = {}>(
+    options: SchemaTestOptions<this, T, TParams>,
+  ): this
 
   transform(
     transformer: (this: this, currentValue: T, originalValue: T) => T,
