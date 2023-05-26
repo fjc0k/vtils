@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.72.0](https://github.com/fjc0k/vtils/compare/v4.71.1...v4.72.0) (2023-05-26)
+
+### Features
+
+- **utils:** 新增 StringTemplate ([7a62e93](https://github.com/fjc0k/vtils/commit/7a62e9318fdf28404f299e2f508e6265661bc9b9))
+
 ### [4.71.1](https://github.com/fjc0k/vtils/compare/v4.71.0...v4.71.1) (2023-05-09)
 
 ### Bug Fixes
