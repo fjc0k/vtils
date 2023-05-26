@@ -81,6 +81,7 @@ rich://{"url":"***","desc":"***"}
 |  [isChineseIDCardNumber(value)](./utils.ischineseidcardnumber.md) | 检测传入的值是否是合法的中国大陆居民 <code>18</code> 位身份证号码。 |
 |  [isDataUrl(value)](./utils.isdataurl.md) | 检测传入值是否是 Data URL。 |
 |  [isElementVisible(el)](./utils.iselementvisible.md) | 检查 HTML 元素是否可见。 |
+|  [isEmail(value)](./utils.isemail.md) | 检测传入值是否是邮箱地址。 |
 |  [isNumeric(value)](./utils.isnumeric.md) | 检查 <code>value</code> 是否是数值，需要注意的是 <code>Infinity</code>、<code>-Infinity</code>、<code>NaN</code> 不被认为是数值。 |
 |  [isPossibleChineseMobilePhoneNumber(value)](./utils.ispossiblechinesemobilephonenumber.md) | 检测传入的值是否可能是中国的手机号码。 |
 |  [isPromiseLike(value)](./utils.ispromiselike.md) | 检查 <code>value</code> 是否像 <code>Promise</code>。 |
