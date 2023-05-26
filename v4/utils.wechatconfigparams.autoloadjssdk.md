@@ -10,7 +10,7 @@
 
  '1.4.0'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 autoLoadJSSDK?: false | string;

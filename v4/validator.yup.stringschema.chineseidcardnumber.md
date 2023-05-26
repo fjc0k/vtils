@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.chineseIDCardNumber() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 chineseIDCardNumber(message?: StringLocale['chineseIDCardNumber']): this;
@@ -14,9 +14,9 @@ chineseIDCardNumber(message?: StringLocale['chineseIDCardNumber']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | StringLocale\['chineseIDCardNumber'\] |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['chineseIDCardNumber'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

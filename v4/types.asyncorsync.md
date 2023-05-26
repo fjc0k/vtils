@@ -6,7 +6,7 @@
 
 Useful as a return type in interfaces or abstract classes with missing implementation
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type AsyncOrSync<T> = PromiseLike<T> | T;

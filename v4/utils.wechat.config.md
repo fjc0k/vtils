@@ -6,7 +6,7 @@
 
 注入微信 `JSSDK` 的权限验证配置。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 config(params?: WechatConfigParams): void;
@@ -16,9 +16,9 @@ config(params?: WechatConfigParams): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  params | [WechatConfigParams](./utils.wechatconfigparams.md) | 配置参数 |
+|  params | [WechatConfigParams](./utils.wechatconfigparams.md) | _(Optional)_ 配置参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

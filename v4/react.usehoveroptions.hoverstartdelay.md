@@ -8,7 +8,7 @@
 
  50
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 hoverStartDelay?: number;

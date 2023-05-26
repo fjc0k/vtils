@@ -4,12 +4,12 @@
 
 ## yup.NumberSchema.truncate() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 truncate(): this;
 ```
-<b>Returns:</b>
+**Returns:**
 
 this
 

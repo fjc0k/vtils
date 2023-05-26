@@ -8,7 +8,7 @@ Do not emit comments to output.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 removeComments?: boolean;

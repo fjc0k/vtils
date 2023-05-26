@@ -4,7 +4,7 @@
 
 ## LoadResourceOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface LoadResourceOptions 
@@ -12,7 +12,7 @@ export declare interface LoadResourceOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [hook?](./utils.loadresourceoptions.hook.md) | [LoadResourceHook](./utils.loadresourcehook.md) | <i>(Optional)</i> 钩子 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [hook?](./utils.loadresourceoptions.hook.md) |  | [LoadResourceHook](./utils.loadresourcehook.md) | _(Optional)_ 钩子 |
 

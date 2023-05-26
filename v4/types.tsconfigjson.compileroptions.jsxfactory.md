@@ -10,7 +10,7 @@ Requires TypeScript version 2.1 or later.
 
  'React.createElement'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 jsxFactory?: string;

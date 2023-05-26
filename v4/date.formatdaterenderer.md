@@ -6,10 +6,10 @@
 
 日期格式化渲染器。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type FormatDateRenderer = ((placeholders: typeof FormatDatePlaceholder) => string) | string;
 ```
-<b>References:</b> [FormatDatePlaceholder](./date.formatdateplaceholder.md)
+**References:** [FormatDatePlaceholder](./date.formatdateplaceholder.md)
 

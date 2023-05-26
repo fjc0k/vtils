@@ -6,7 +6,7 @@
 
 对提交类行为的封装。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 submit: CreateSubmitResult

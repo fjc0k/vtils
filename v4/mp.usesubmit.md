@@ -6,7 +6,7 @@
 
 对提交类行为的封装。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useSubmit<TResult>(action: (payload: SubmitActionPayload) => Promise<TResult>, deps: React_2.DependencyList): () => Promise<TResult>;
@@ -19,7 +19,7 @@ export declare function useSubmit<TResult>(action: (payload: SubmitActionPayload
 |  action | (payload: SubmitActionPayload) =&gt; Promise&lt;TResult&gt; |  |
 |  deps | React\_2.DependencyList |  |
 
-<b>Returns:</b>
+**Returns:**
 
 () =&gt; Promise&lt;TResult&gt;
 

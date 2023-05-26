@@ -6,7 +6,7 @@
 
 速度，以米/每秒计。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 speed: number;

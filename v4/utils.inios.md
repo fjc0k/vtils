@@ -6,12 +6,12 @@
 
 检查是否在 iOS 设备中。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function inIOS(): boolean;
 ```
-<b>Returns:</b>
+**Returns:**
 
 boolean
 
@@ -24,6 +24,5 @@ boolean
 if (inIOS()) {
   console.log('你在 iOS 设备中')
 }
-
 ```
 

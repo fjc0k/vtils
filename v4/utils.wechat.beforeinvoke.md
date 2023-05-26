@@ -4,7 +4,7 @@
 
 ## Wechat.beforeInvoke() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 beforeInvoke(cb: WechatBeforeInvokeCallback): void;
@@ -16,7 +16,7 @@ beforeInvoke(cb: WechatBeforeInvokeCallback): void;
 |  --- | --- | --- |
 |  cb | [WechatBeforeInvokeCallback](./utils.wechatbeforeinvokecallback.md) |  |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

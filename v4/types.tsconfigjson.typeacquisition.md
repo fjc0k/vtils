@@ -8,7 +8,7 @@ Auto type (.d.ts) acquisition options for this project.
 
 Requires TypeScript version 2.1 or later.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface TypeAcquisition 
@@ -16,9 +16,9 @@ export interface TypeAcquisition
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [enable?](./types.tsconfigjson.typeacquisition.enable.md) | boolean | <i>(Optional)</i> Enable auto type acquisition. |
-|  [exclude?](./types.tsconfigjson.typeacquisition.exclude.md) | string\[\] | <i>(Optional)</i> Specifies a list of type declarations to be excluded from auto type acquisition. For example, <code>['jquery', 'lodash']</code>. |
-|  [include?](./types.tsconfigjson.typeacquisition.include.md) | string\[\] | <i>(Optional)</i> Specifies a list of type declarations to be included in auto type acquisition. For example, <code>['jquery', 'lodash']</code>. |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [enable?](./types.tsconfigjson.typeacquisition.enable.md) |  | boolean | _(Optional)_ Enable auto type acquisition. |
+|  [exclude?](./types.tsconfigjson.typeacquisition.exclude.md) |  | string\[\] | _(Optional)_ Specifies a list of type declarations to be excluded from auto type acquisition. For example, <code>['jquery', 'lodash']</code>. |
+|  [include?](./types.tsconfigjson.typeacquisition.include.md) |  | string\[\] | _(Optional)_ Specifies a list of type declarations to be included in auto type acquisition. For example, <code>['jquery', 'lodash']</code>. |
 

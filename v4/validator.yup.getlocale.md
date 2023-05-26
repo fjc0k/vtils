@@ -4,12 +4,12 @@
 
 ## yup.getLocale() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function getLocale(): Locale;
 ```
-<b>Returns:</b>
+**Returns:**
 
-Locale
+[Locale](./validator.yup.locale.md)
 

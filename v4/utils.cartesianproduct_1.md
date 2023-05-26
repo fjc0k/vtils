@@ -4,7 +4,7 @@
 
 ## cartesianProduct() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function cartesianProduct<T, U>(arr: [T[], U[]]): [T, U][];
@@ -16,7 +16,7 @@ export declare function cartesianProduct<T, U>(arr: [T[], U[]]): [T, U][];
 |  --- | --- | --- |
 |  arr | \[T\[\], U\[\]\] |  |
 
-<b>Returns:</b>
+**Returns:**
 
 \[T, U\]\[\]
 

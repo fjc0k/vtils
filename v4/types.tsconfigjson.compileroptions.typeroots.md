@@ -8,7 +8,7 @@ Specify list of directories for type definition files to be included.
 
 Requires TypeScript version 2.0 or later.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 typeRoots?: string[];

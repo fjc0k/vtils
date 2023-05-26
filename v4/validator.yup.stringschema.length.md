@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.length() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 length(limit: number | Ref<number>, message?: StringLocale['length']): this;
@@ -14,10 +14,10 @@ length(limit: number | Ref<number>, message?: StringLocale['length']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| Ref&lt;number&gt; |  |
-|  message | StringLocale\['length'\] |  |
+|  limit | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['length'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

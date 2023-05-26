@@ -6,7 +6,7 @@
 
 关闭当前页面，跳转至某个页面，跳转失败时会尝试切换到 Tab 页。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function redirectPageTo(url: string, query?: AnyObject_2): Promise<any>;
@@ -17,9 +17,9 @@ export declare function redirectPageTo(url: string, query?: AnyObject_2): Promis
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  url | string | 要跳转去的页面地址 |
-|  query | AnyObject\_2 | 查询参数 |
+|  query | AnyObject\_2 | _(Optional)_ 查询参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

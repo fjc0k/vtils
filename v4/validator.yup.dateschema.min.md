@@ -4,7 +4,7 @@
 
 ## yup.DateSchema.min() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 min(limit: Date | Ref<Date>, message?: DateLocale['min']): this;
@@ -14,10 +14,10 @@ min(limit: Date | Ref<Date>, message?: DateLocale['min']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | Date \| Ref&lt;Date&gt; |  |
-|  message | DateLocale\['min'\] |  |
+|  limit | Date \| [Ref](./validator.yup.ref.md)<!-- -->&lt;Date&gt; |  |
+|  message | [DateLocale](./validator.yup.datelocale.md)<!-- -->\['min'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

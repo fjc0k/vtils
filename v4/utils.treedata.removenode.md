@@ -6,7 +6,7 @@
 
 移除符合条件的第一个节点。返回被移除的节点。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 removeNode(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): TNode | undefined;
@@ -18,7 +18,7 @@ removeNode(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): T
 |  --- | --- | --- |
 |  predicate | (payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean | 条件 |
 
-<b>Returns:</b>
+**Returns:**
 
 TNode \| undefined
 

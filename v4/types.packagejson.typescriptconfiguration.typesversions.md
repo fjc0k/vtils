@@ -6,7 +6,7 @@
 
 Version selection map of TypeScript.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 typesVersions?: Record<string, Record<string, string[]>>;

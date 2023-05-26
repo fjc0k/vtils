@@ -4,7 +4,7 @@
 
 ## yup.MixedLocale.oneOf property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 oneOf: LocaleValue<{

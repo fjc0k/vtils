@@ -6,7 +6,7 @@
 
 检测传入值是否是 URL。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function isUrl(value: string): boolean;
@@ -18,7 +18,7 @@ export declare function isUrl(value: string): boolean;
 |  --- | --- | --- |
 |  value | string | 要检测的值 |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 
@@ -30,6 +30,5 @@ boolean
 ```typescript
 isUrl('foo.bar') // => false
 isUrl('http://foo.bar') // => true
-
 ```
 

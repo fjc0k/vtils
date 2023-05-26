@@ -6,7 +6,7 @@
 
 订阅事件，但只订阅一次即取消订阅。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 once<TListenerName extends keyof TListeners>(eventName: TListenerName, callback: TListeners[TListenerName]): EventBusOffListener;
@@ -19,7 +19,7 @@ once<TListenerName extends keyof TListeners>(eventName: TListenerName, callback:
 |  eventName | TListenerName | 事件名称 |
 |  callback | TListeners\[TListenerName\] | 事件触发回调 |
 
-<b>Returns:</b>
+**Returns:**
 
 [EventBusOffListener](./utils.eventbusofflistener.md)
 

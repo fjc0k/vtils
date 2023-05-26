@@ -6,7 +6,7 @@
 
 数字星期。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type NumeralDay = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;

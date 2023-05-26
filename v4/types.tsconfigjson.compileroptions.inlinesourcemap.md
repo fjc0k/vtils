@@ -8,7 +8,7 @@ Emit a single file with source maps instead of having a separate file.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 inlineSourceMap?: boolean;

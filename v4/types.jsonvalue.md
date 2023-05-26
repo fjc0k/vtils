@@ -6,10 +6,10 @@
 
 Matches any valid JSON value.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type JsonValue = JsonPrimitive | JsonObject | JsonArray;
 ```
-<b>References:</b> [JsonObject](./types.jsonobject.md)<!-- -->, [JsonArray](./types.jsonarray.md)
+**References:** [JsonObject](./types.jsonobject.md)<!-- -->, [JsonArray](./types.jsonarray.md)
 

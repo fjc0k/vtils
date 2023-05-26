@@ -5,7 +5,7 @@
 ## WechatUpdateShareDataParams interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatUpdateShareDataParams 
@@ -13,10 +13,10 @@ export declare interface WechatUpdateShareDataParams
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [desc?](./utils.wechatupdatesharedataparams.desc.md) | string \| (() =&gt; string) | <i>(Optional)</i> 分享描述 |
-|  [imgUrl?](./utils.wechatupdatesharedataparams.imgurl.md) | string \| (() =&gt; string) | <i>(Optional)</i> 分享图标地址 |
-|  [link?](./utils.wechatupdatesharedataparams.link.md) | string \| (() =&gt; string) | <i>(Optional)</i> 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致 |
-|  [title?](./utils.wechatupdatesharedataparams.title.md) | string \| (() =&gt; string) | <i>(Optional)</i> 分享标题 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [desc?](./utils.wechatupdatesharedataparams.desc.md) |  | string \| (() =&gt; string) | _(Optional)_ 分享描述 |
+|  [imgUrl?](./utils.wechatupdatesharedataparams.imgurl.md) |  | string \| (() =&gt; string) | _(Optional)_ 分享图标地址 |
+|  [link?](./utils.wechatupdatesharedataparams.link.md) |  | string \| (() =&gt; string) | _(Optional)_ 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致 |
+|  [title?](./utils.wechatupdatesharedataparams.title.md) |  | string \| (() =&gt; string) | _(Optional)_ 分享标题 |
 

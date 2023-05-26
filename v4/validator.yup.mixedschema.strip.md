@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.strip() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 strip(stripField?: boolean): this;
@@ -14,9 +14,9 @@ strip(stripField?: boolean): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  stripField | boolean |  |
+|  stripField | boolean | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

@@ -8,7 +8,7 @@
 
  window
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 containerRef?: ReturnType<typeof useReachBottom>;

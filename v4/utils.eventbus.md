@@ -8,7 +8,7 @@
 
  TListeners 事件名称及其对应的回调描述
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class EventBus<TListeners extends EventBusListeners> 
@@ -24,7 +24,6 @@ const bus = new EventBus<{
 bus.on('success', ({ message }) => console.log(message))
 bus.emit('success', { message: '提交成功' })
 // => 控制台输出: 提交成功
-
 ```
 
 ## Constructors

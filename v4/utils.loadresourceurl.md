@@ -6,7 +6,7 @@
 
 资源地址。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface LoadResourceUrl 
@@ -14,10 +14,10 @@ export declare interface LoadResourceUrl
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [alternatePath?](./utils.loadresourceurl.alternatepath.md) | string | <i>(Optional)</i> 备用资源路径 |
-|  [hook?](./utils.loadresourceurl.hook.md) | [LoadResourceHook](./utils.loadresourcehook.md) | <i>(Optional)</i> 钩子 |
-|  [path](./utils.loadresourceurl.path.md) | string | 资源路径 |
-|  [type](./utils.loadresourceurl.type.md) | [LoadResourceUrlType](./utils.loadresourceurltype.md) | 资源类型 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [alternatePath?](./utils.loadresourceurl.alternatepath.md) |  | string | _(Optional)_ 备用资源路径 |
+|  [hook?](./utils.loadresourceurl.hook.md) |  | [LoadResourceHook](./utils.loadresourcehook.md) | _(Optional)_ 钩子 |
+|  [path](./utils.loadresourceurl.path.md) |  | string | 资源路径 |
+|  [type](./utils.loadresourceurl.type.md) |  | [LoadResourceUrlType](./utils.loadresourceurltype.md) | 资源类型 |
 

@@ -4,7 +4,7 @@
 
 ## WechatMessageCryptoOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatMessageCryptoOptions 
@@ -12,9 +12,9 @@ export declare interface WechatMessageCryptoOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [appId](./x.wechatmessagecryptooptions.appid.md) | string | 公众号/第三方平台的 APPID |
-|  [encodingAESKey](./x.wechatmessagecryptooptions.encodingaeskey.md) | string | 消息加解密密钥 |
-|  [token](./x.wechatmessagecryptooptions.token.md) | string | 消息校验口令 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [appId](./x.wechatmessagecryptooptions.appid.md) |  | string | 公众号/第三方平台的 APPID |
+|  [encodingAESKey](./x.wechatmessagecryptooptions.encodingaeskey.md) |  | string | 消息加解密密钥 |
+|  [token](./x.wechatmessagecryptooptions.token.md) |  | string | 消息校验口令 |
 

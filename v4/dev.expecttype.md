@@ -4,12 +4,12 @@
 
 ## expectType() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function expectType<X, Y extends X>(): void;
 ```
-<b>Returns:</b>
+**Returns:**
 
 void
 

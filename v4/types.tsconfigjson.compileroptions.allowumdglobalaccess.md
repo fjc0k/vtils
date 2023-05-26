@@ -8,7 +8,7 @@ Allow accessing UMD globals from modules.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 allowUmdGlobalAccess?: boolean;

@@ -4,10 +4,12 @@
 
 ## yup.GetObjectSchema type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare type GetObjectSchema<T extends {}> = {
+export type GetObjectSchema<T extends {}> = {
     [K in keyof T]: GetSchema<T[K]>;
 };
 ```
+**References:** [GetSchema](./validator.yup.getschema.md)
+

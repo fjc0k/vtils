@@ -4,7 +4,7 @@
 
 ## yup.SchemaDescription.tests property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 tests: Array<{

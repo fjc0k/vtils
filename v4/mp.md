@@ -18,7 +18,7 @@
 |  [getSceneParams(parser)](./mp.getsceneparams.md) | 获取场景参数。 |
 |  [getTopBarInfo()](./mp.gettopbarinfo.md) | 获取顶栏信息。 |
 |  [navigatePageBack(delta)](./mp.navigatepageback.md) | 关闭当前页面，返回上一页面或多级页面。 |
-|  [navigatePageTo(url, query, redirect)](./mp.navigatepageto.md) | 跳转至某个页面，跳转失败时会尝试切换到 Tab 页。<!-- -->\*\*注意：在页面真正切换后 Promise 才会被 resolve，因而此时的页面上下文已经是新页面。\*\* |
+|  [navigatePageTo(url, query, redirect)](./mp.navigatepageto.md) | <p>跳转至某个页面，跳转失败时会尝试切换到 Tab 页。</p><p>\*\*注意：在页面真正切换后 Promise 才会被 resolve，因而此时的页面上下文已经是新页面。\*\*</p> |
 |  [patchMiniProgram()](./mp.patchminiprogram.md) | 打补丁。 |
 |  [redirectPageTo(url, query)](./mp.redirectpageto.md) | 关闭当前页面，跳转至某个页面，跳转失败时会尝试切换到 Tab 页。 |
 |  [setMiniProgramConfig(config)](./mp.setminiprogramconfig.md) |  |

@@ -4,7 +4,7 @@
 
 ## EventBusListenerTag type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type EventBusListenerTag = string | number;

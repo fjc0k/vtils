@@ -8,7 +8,7 @@ Denote which files in your project are "pure" and therefore safe for Webpack to 
 
 \[Read more.\](https://webpack.js.org/guides/tree-shaking/)
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sideEffects?: boolean | string[];

@@ -4,7 +4,7 @@
 
 ## createXml.cdata variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 cdata: <T = any>(value: T) => any

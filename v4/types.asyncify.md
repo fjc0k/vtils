@@ -8,7 +8,7 @@ Create an async version of the given function type, by boxing the return type in
 
 Use-case: You have two functions, one synchronous and one asynchronous that do the same thing. Instead of having to duplicate the type definition, you can use `Asyncify` to reuse the synchronous type.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Asyncify<Fn extends (...args: any[]) => any> = SetReturnType<Fn, Promise<PromiseValue<ReturnType<Fn>>>>;

@@ -6,7 +6,7 @@
 
 解析富链接。非富链接的会直接将其值作为 url 返回。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static parse<TDesc>(richUrl: string): ParsedRichUrl<TDesc>;
@@ -18,7 +18,7 @@ static parse<TDesc>(richUrl: string): ParsedRichUrl<TDesc>;
 |  --- | --- | --- |
 |  richUrl | string | 富链接 |
 
-<b>Returns:</b>
+**Returns:**
 
 [ParsedRichUrl](./utils.parsedrichurl.md)<!-- -->&lt;TDesc&gt;
 

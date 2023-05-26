@@ -5,7 +5,7 @@
 ## WechatConfigParams interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatConfigParams 
@@ -13,14 +13,14 @@ export declare interface WechatConfigParams
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [appId](./utils.wechatconfigparams.appid.md) | string | 公众号的唯一标识。 |
-|  [autoLoadJSSDK?](./utils.wechatconfigparams.autoloadjssdk.md) | false \| string | <i>(Optional)</i> 当全局变量 <code>wx</code> 不存在时，自动引入微信 JSSDK。<!-- -->- 设为 <code>false</code> 可禁止自动引入； - 设为版本号表示引入特定版本的 JSSDK； - 设为链接表示通过该链接引入 JSSDK。 '1.4.0' |
-|  [debug?](./utils.wechatconfigparams.debug.md) | boolean | <i>(Optional)</i> 开启调试模式。<!-- -->调用的所有api的返回值会在客户端 alert 出来， 若要查看传入的参数，可以在 pc 端打开， 参数信息会通过 log 打出，仅在 pc 端时才会打印。 false |
-|  [jsApiList?](./utils.wechatconfigparams.jsapilist.md) | [WechatJsApi](./utils.wechatjsapi.md)<!-- -->\[\] | <i>(Optional)</i> 需要使用的JS接口列表。 \[\] |
-|  [nonceStr](./utils.wechatconfigparams.noncestr.md) | string | 生成签名的随机串。 |
-|  [sharable?](./utils.wechatconfigparams.sharable.md) | boolean | <i>(Optional)</i> 是否可分享。<!-- -->设置为 <code>true</code> 将把分享系列接口自动加入 <code>jsApiList</code>。 true |
-|  [signature](./utils.wechatconfigparams.signature.md) | string | 签名。 |
-|  [timestamp](./utils.wechatconfigparams.timestamp.md) | number \| string | 生成签名的时间戳。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [appId](./utils.wechatconfigparams.appid.md) |  | string | 公众号的唯一标识。 |
+|  [autoLoadJSSDK?](./utils.wechatconfigparams.autoloadjssdk.md) |  | false \| string | <p>_(Optional)_ 当全局变量 <code>wx</code> 不存在时，自动引入微信 JSSDK。</p><p>- 设为 <code>false</code> 可禁止自动引入； - 设为版本号表示引入特定版本的 JSSDK； - 设为链接表示通过该链接引入 JSSDK。</p><p> '1.4.0'</p> |
+|  [debug?](./utils.wechatconfigparams.debug.md) |  | boolean | <p>_(Optional)_ 开启调试模式。</p><p>调用的所有api的返回值会在客户端 alert 出来， 若要查看传入的参数，可以在 pc 端打开， 参数信息会通过 log 打出，仅在 pc 端时才会打印。</p><p> false</p> |
+|  [jsApiList?](./utils.wechatconfigparams.jsapilist.md) |  | [WechatJsApi](./utils.wechatjsapi.md)<!-- -->\[\] | <p>_(Optional)_ 需要使用的JS接口列表。</p><p> \[\]</p> |
+|  [nonceStr](./utils.wechatconfigparams.noncestr.md) |  | string | 生成签名的随机串。 |
+|  [sharable?](./utils.wechatconfigparams.sharable.md) |  | boolean | <p>_(Optional)_ 是否可分享。</p><p>设置为 <code>true</code> 将把分享系列接口自动加入 <code>jsApiList</code>。</p><p> true</p> |
+|  [signature](./utils.wechatconfigparams.signature.md) |  | string | 签名。 |
+|  [timestamp](./utils.wechatconfigparams.timestamp.md) |  | number \| string | 生成签名的时间戳。 |
 

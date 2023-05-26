@@ -4,12 +4,12 @@
 
 ## yup.MixedSchema.describe() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 describe(): SchemaDescription;
 ```
-<b>Returns:</b>
+**Returns:**
 
-SchemaDescription
+[SchemaDescription](./validator.yup.schemadescription.md)
 

@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.url() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 url(message?: StringLocale['url']): this;
@@ -14,9 +14,9 @@ url(message?: StringLocale['url']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | StringLocale\['url'\] |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['url'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

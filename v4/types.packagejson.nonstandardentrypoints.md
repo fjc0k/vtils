@@ -4,7 +4,7 @@
 
 ## PackageJson.NonStandardEntryPoints interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface NonStandardEntryPoints 
@@ -12,10 +12,10 @@ export interface NonStandardEntryPoints
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [browser?](./types.packagejson.nonstandardentrypoints.browser.md) | \| string \| Record&lt;string, string \| false&gt; | <i>(Optional)</i> A hint to JavaScript bundlers or component tools when packaging modules for client side use. |
-|  [esnext?](./types.packagejson.nonstandardentrypoints.esnext.md) | \| string \| { \[moduleName: string\]: string \| undefined; main?: string; browser?: string; } | <i>(Optional)</i> A module ID with untranspiled code that is the primary entry point to the program. |
-|  [module?](./types.packagejson.nonstandardentrypoints.module.md) | string | <i>(Optional)</i> An ECMAScript module ID that is the primary entry point to the program. |
-|  [sideEffects?](./types.packagejson.nonstandardentrypoints.sideeffects.md) | boolean \| string\[\] | <i>(Optional)</i> Denote which files in your project are "pure" and therefore safe for Webpack to prune if unused.<!-- -->\[Read more.\](https://webpack.js.org/guides/tree-shaking/) |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [browser?](./types.packagejson.nonstandardentrypoints.browser.md) |  | \| string \| Record&lt;string, string \| false&gt; | _(Optional)_ A hint to JavaScript bundlers or component tools when packaging modules for client side use. |
+|  [esnext?](./types.packagejson.nonstandardentrypoints.esnext.md) |  | \| string \| { \[moduleName: string\]: string \| undefined; main?: string; browser?: string; } | _(Optional)_ A module ID with untranspiled code that is the primary entry point to the program. |
+|  [module?](./types.packagejson.nonstandardentrypoints.module.md) |  | string | _(Optional)_ An ECMAScript module ID that is the primary entry point to the program. |
+|  [sideEffects?](./types.packagejson.nonstandardentrypoints.sideeffects.md) |  | boolean \| string\[\] | <p>_(Optional)_ Denote which files in your project are "pure" and therefore safe for Webpack to prune if unused.</p><p>\[Read more.\](https://webpack.js.org/guides/tree-shaking/)</p> |
 

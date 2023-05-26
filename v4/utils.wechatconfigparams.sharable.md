@@ -10,7 +10,7 @@
 
  true
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sharable?: boolean;

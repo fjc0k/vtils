@@ -8,7 +8,7 @@ Convert a union type to an intersection type using \[distributive conditional ty
 
 Inspired by \[this Stack Overflow answer\](https://stackoverflow.com/a/50375286/2172153).
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type UnionToIntersection<Union> = (
@@ -40,7 +40,6 @@ type Intersection = UnionToIntersection<Union>; //=> {the(): void; great(arg: st
 A more applicable example which could make its way into your library code follows.
 
 @example
-
 
 ```
 import {<!-- -->UnionToIntersection<!-- -->} from 'type-fest';

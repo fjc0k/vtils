@@ -5,7 +5,7 @@
 ## WechatPreviewImageParams interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatPreviewImageParams 
@@ -13,8 +13,8 @@ export declare interface WechatPreviewImageParams
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [current?](./utils.wechatpreviewimageparams.current.md) | string | <i>(Optional)</i> 当前显示图片的链接。 urls\[0\] |
-|  [urls](./utils.wechatpreviewimageparams.urls.md) | string\[\] | 需要预览的图片链接列表。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [current?](./utils.wechatpreviewimageparams.current.md) |  | string | <p>_(Optional)_ 当前显示图片的链接。</p><p> urls\[0\]</p> |
+|  [urls](./utils.wechatpreviewimageparams.urls.md) |  | string\[\] | 需要预览的图片链接列表。 |
 

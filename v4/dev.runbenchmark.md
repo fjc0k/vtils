@@ -4,7 +4,7 @@
 
 ## runBenchmark() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function runBenchmark(suites: Record<string, () => any>, options?: Options): void;
@@ -15,9 +15,9 @@ export declare function runBenchmark(suites: Record<string, () => any>, options?
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  suites | Record&lt;string, () =&gt; any&gt; |  |
-|  options | Options |  |
+|  options | Options | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

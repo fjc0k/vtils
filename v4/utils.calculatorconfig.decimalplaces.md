@@ -6,7 +6,7 @@
 
 小数位数
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 decimalPlaces?: number;

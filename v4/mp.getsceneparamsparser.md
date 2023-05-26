@@ -4,7 +4,7 @@
 
 ## GetSceneParamsParser type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type GetSceneParamsParser<T> = 'searchParams' | 'json' | ((data: string) => T);

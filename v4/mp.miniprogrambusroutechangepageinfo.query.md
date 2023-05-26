@@ -4,7 +4,7 @@
 
 ## MiniProgramBusRouteChangePageInfo.query property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 query: AnyObject_2;

@@ -4,7 +4,7 @@
 
 ## PackageJson.YarnConfiguration interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface YarnConfiguration 
@@ -12,9 +12,9 @@ export interface YarnConfiguration
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [flat?](./types.packagejson.yarnconfiguration.flat.md) | boolean | <i>(Optional)</i> If your package only allows one version of a given dependency, and you’d like to enforce the same behavior as <code>yarn install --flat</code> on the command-line, set this to <code>true</code>.<!-- -->Note that if your <code>package.json</code> contains <code>&quot;flat&quot;: true</code> and other packages depend on yours (e.g. you are building a library rather than an app), those other packages will also need <code>&quot;flat&quot;: true</code> in their <code>package.json</code> or be installed with <code>yarn install --flat</code> on the command-line. |
-|  [resolutions?](./types.packagejson.yarnconfiguration.resolutions.md) | [Dependency](./types.packagejson.dependency.md) | <i>(Optional)</i> Selective version resolutions. Allows the definition of custom package versions inside dependencies without manual edits in the <code>yarn.lock</code> file. |
-|  [workspaces?](./types.packagejson.yarnconfiguration.workspaces.md) | [WorkspacePattern](./types.packagejson.workspacepattern.md)<!-- -->\[\] \| [WorkspaceConfig](./types.packagejson.workspaceconfig.md) | <i>(Optional)</i> Used to configure \[Yarn workspaces\](https://classic.yarnpkg.com/docs/workspaces/).<!-- -->Workspaces allow you to manage multiple packages within the same repository in such a way that you only need to run <code>yarn install</code> once to install all of them in a single pass.<!-- -->Please note that the top-level <code>private</code> property of <code>package.json</code> \*\*must\*\* be set to <code>true</code> in order to use workspaces. |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [flat?](./types.packagejson.yarnconfiguration.flat.md) |  | boolean | <p>_(Optional)_ If your package only allows one version of a given dependency, and you’d like to enforce the same behavior as <code>yarn install --flat</code> on the command-line, set this to <code>true</code>.</p><p>Note that if your <code>package.json</code> contains <code>&quot;flat&quot;: true</code> and other packages depend on yours (e.g. you are building a library rather than an app), those other packages will also need <code>&quot;flat&quot;: true</code> in their <code>package.json</code> or be installed with <code>yarn install --flat</code> on the command-line.</p> |
+|  [resolutions?](./types.packagejson.yarnconfiguration.resolutions.md) |  | [Dependency](./types.packagejson.dependency.md) | _(Optional)_ Selective version resolutions. Allows the definition of custom package versions inside dependencies without manual edits in the <code>yarn.lock</code> file. |
+|  [workspaces?](./types.packagejson.yarnconfiguration.workspaces.md) |  | [WorkspacePattern](./types.packagejson.workspacepattern.md)<!-- -->\[\] \| [WorkspaceConfig](./types.packagejson.workspaceconfig.md) | <p>_(Optional)_ Used to configure \[Yarn workspaces\](https://classic.yarnpkg.com/docs/workspaces/).</p><p>Workspaces allow you to manage multiple packages within the same repository in such a way that you only need to run <code>yarn install</code> once to install all of them in a single pass.</p><p>Please note that the top-level <code>private</code> property of <code>package.json</code> \*\*must\*\* be set to <code>true</code> in order to use workspaces.</p> |
 

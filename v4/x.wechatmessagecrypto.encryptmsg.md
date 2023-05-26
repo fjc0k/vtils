@@ -6,7 +6,7 @@
 
 加密原始消息。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 encryptMsg(msg: string): string;
@@ -18,7 +18,7 @@ encryptMsg(msg: string): string;
 |  --- | --- | --- |
 |  msg | string | 原始消息 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.label() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 label(label: string): this;
@@ -16,7 +16,7 @@ label(label: string): this;
 |  --- | --- | --- |
 |  label | string |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

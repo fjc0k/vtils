@@ -6,7 +6,7 @@
 
 根据给定的字符串计算 MD5 值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function md5(string: string, key?: string, raw?: boolean): string;
@@ -17,10 +17,10 @@ export declare function md5(string: string, key?: string, raw?: boolean): string
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  string | string | 要进行 MD5 计算的字符串 |
-|  key | string | 用于创建 HMAC 的密码 |
-|  raw | boolean | 是否输出原始数据 |
+|  key | string | _(Optional)_ 用于创建 HMAC 的密码 |
+|  raw | boolean | _(Optional)_ 是否输出原始数据 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -32,6 +32,5 @@ string
 ```typescript
 md5('龙') // => '682570a229cbd3d67e76ad99b3152060'
 md5('龙', '🐉') // => '293a529180e8b949aa820b9d071f31fa'
-
 ```
 

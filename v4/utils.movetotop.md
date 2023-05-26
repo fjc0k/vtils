@@ -6,7 +6,7 @@
 
 原地置顶数组中的某个元素。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function moveToTop<T>(arr: T[], from: number): T[];
@@ -19,7 +19,7 @@ export declare function moveToTop<T>(arr: T[], from: number): T[];
 |  arr | T\[\] | 要处理的数组 |
 |  from | number | 要移动元素的索引 |
 
-<b>Returns:</b>
+**Returns:**
 
 T\[\]
 
@@ -30,6 +30,5 @@ T\[\]
 
 ```typescript
 moveToTop([1, 2, 3], 2) // => [3, 1, 2]
-
 ```
 

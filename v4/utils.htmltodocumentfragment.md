@@ -6,7 +6,7 @@
 
 将 HTML 字符串转为 DocumentFragment。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function htmlToDocumentFragment(html: string): DocumentFragment;
@@ -18,7 +18,7 @@ export declare function htmlToDocumentFragment(html: string): DocumentFragment;
 |  --- | --- | --- |
 |  html | string | HTML 字符串 |
 
-<b>Returns:</b>
+**Returns:**
 
 DocumentFragment
 

@@ -6,7 +6,7 @@
 
 当前节点索引。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 index: number;

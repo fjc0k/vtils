@@ -4,7 +4,7 @@
 
 ## UseHoverOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface UseHoverOptions 
@@ -12,8 +12,8 @@ export declare interface UseHoverOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [hoverEndDelay?](./react.usehoveroptions.hoverenddelay.md) | number | <i>(Optional)</i> 悬停结束后多久关闭悬停态，单位为毫秒。 400 |
-|  [hoverStartDelay?](./react.usehoveroptions.hoverstartdelay.md) | number | <i>(Optional)</i> 悬停开始后多久开启悬停态，单位为毫秒。 50 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [hoverEndDelay?](./react.usehoveroptions.hoverenddelay.md) |  | number | <p>_(Optional)_ 悬停结束后多久关闭悬停态，单位为毫秒。</p><p> 400</p> |
+|  [hoverStartDelay?](./react.usehoveroptions.hoverstartdelay.md) |  | number | <p>_(Optional)_ 悬停开始后多久开启悬停态，单位为毫秒。</p><p> 50</p> |
 

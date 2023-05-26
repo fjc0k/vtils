@@ -6,7 +6,7 @@
 
 Filenames to put in place for the `man` program to find.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 man?: string | string[];

@@ -4,7 +4,7 @@
 
 ## ParseDataUrlResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface ParseDataUrlResult 
@@ -12,10 +12,10 @@ export declare interface ParseDataUrlResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [base64](./utils.parsedataurlresult.base64.md) | boolean |  |
-|  [content](./utils.parsedataurlresult.content.md) | string |  |
-|  [mimeType](./utils.parsedataurlresult.mimetype.md) | string |  |
-|  [parameters](./utils.parsedataurlresult.parameters.md) | Record&lt;LiteralUnion&lt;'name' \| 'charset' \| 'base64', string&gt;, string&gt; |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [base64](./utils.parsedataurlresult.base64.md) |  | boolean |  |
+|  [content](./utils.parsedataurlresult.content.md) |  | string |  |
+|  [mimeType](./utils.parsedataurlresult.mimetype.md) |  | string |  |
+|  [parameters](./utils.parsedataurlresult.parameters.md) |  | Record&lt;LiteralUnion&lt;'name' \| 'charset' \| 'base64', string&gt;, string&gt; |  |
 

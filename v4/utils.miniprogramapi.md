@@ -4,12 +4,12 @@
 
 ## MiniProgramApi type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MiniProgramApi = WechatMiniprogram.Wx & {
     readonly $brand: MiniProgramBrand;
 };
 ```
-<b>References:</b> [MiniProgramBrand](./utils.miniprogrambrand.md)
+**References:** [MiniProgramBrand](./utils.miniprogrambrand.md)
 

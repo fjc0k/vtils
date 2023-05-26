@@ -4,10 +4,10 @@
 
 ## CreateSubmitResult type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type CreateSubmitResult<T = string> = <TResult>(action: (payload: SubmitActionPayload<T>) => Promise<TResult>) => Promise<TResult>;
 ```
-<b>References:</b> [SubmitActionPayload](./utils.submitactionpayload.md)
+**References:** [SubmitActionPayload](./utils.submitactionpayload.md)
 

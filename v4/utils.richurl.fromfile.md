@@ -6,7 +6,7 @@
 
 将文件转换为文件富链接。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static fromFile(file: File): string;
@@ -18,7 +18,7 @@ static fromFile(file: File): string;
 |  --- | --- | --- |
 |  file | File | 要转换的文件 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

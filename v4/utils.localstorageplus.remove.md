@@ -6,7 +6,7 @@
 
 删除本地存储。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static remove(key: string): void;
@@ -18,7 +18,7 @@ static remove(key: string): void;
 |  --- | --- | --- |
 |  key | string | 键 |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

@@ -6,12 +6,12 @@
 
 使用 Redis 作为 Cookie Jar。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class RedisCookieJar extends CookieJar 
 ```
-<b>Extends:</b> CookieJar
+**Extends:** CookieJar
 
 ## Constructors
 

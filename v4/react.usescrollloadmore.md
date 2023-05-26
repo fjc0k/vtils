@@ -6,7 +6,7 @@
 
 滚动数据加载。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useScrollLoadMore<TItem>(service: UseLoadMoreService<TItem>, deps: DependencyList, options?: UseScrollLoadMoreOptions): UseLoadMoreResult<TItem>;
@@ -18,9 +18,9 @@ export declare function useScrollLoadMore<TItem>(service: UseLoadMoreService<TIt
 |  --- | --- | --- |
 |  service | [UseLoadMoreService](./react.useloadmoreservice.md)<!-- -->&lt;TItem&gt; | 数据加载服务 |
 |  deps | DependencyList | 依赖，依赖若发生变化则从首页重新加载数据 |
-|  options | [UseScrollLoadMoreOptions](./react.usescrollloadmoreoptions.md) | 滚动选项 |
+|  options | [UseScrollLoadMoreOptions](./react.usescrollloadmoreoptions.md) | _(Optional)_ 滚动选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 [UseLoadMoreResult](./react.useloadmoreresult.md)<!-- -->&lt;TItem&gt;
 

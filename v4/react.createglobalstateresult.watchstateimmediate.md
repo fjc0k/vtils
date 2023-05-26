@@ -4,7 +4,7 @@
 
 ## CreateGlobalStateResult.watchStateImmediate() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 watchStateImmediate(callback: (nextState: S, prevState: S) => any): () => void;
@@ -16,7 +16,7 @@ watchStateImmediate(callback: (nextState: S, prevState: S) => any): () => void;
 |  --- | --- | --- |
 |  callback | (nextState: S, prevState: S) =&gt; any |  |
 
-<b>Returns:</b>
+**Returns:**
 
 () =&gt; void
 

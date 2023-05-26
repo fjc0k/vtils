@@ -6,7 +6,7 @@
 
 浏览器
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly browser: boolean;

@@ -6,7 +6,7 @@
 
 验证增强，包括：对象顺序验证、返回结果包含错误信息。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 validatePlusSync(value: T, options?: SchemaValidateOptions): {
@@ -20,9 +20,9 @@ validatePlusSync(value: T, options?: SchemaValidateOptions): {
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T |  |
-|  options | SchemaValidateOptions |  |
+|  options | [SchemaValidateOptions](./validator.yup.schemavalidateoptions.md) | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
-{ error?: ValidationError; data: T; }
+{ error?: [ValidationError](./validator.yup.validationerror.md)<!-- -->; data: T; }
 

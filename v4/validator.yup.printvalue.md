@@ -4,7 +4,7 @@
 
 ## yup.printValue() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function printValue(value: string, quoteStrings: boolean): string;
@@ -17,7 +17,7 @@ export declare function printValue(value: string, quoteStrings: boolean): string
 |  value | string |  |
 |  quoteStrings | boolean |  |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

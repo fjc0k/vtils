@@ -6,7 +6,7 @@
 
 移除节点上指定的属性。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 omitNodeProps<TPropName extends keyof TNode>(propNames: TPropName[]): TreeData<Omit<TNode, TPropName>>;
@@ -18,7 +18,7 @@ omitNodeProps<TPropName extends keyof TNode>(propNames: TPropName[]): TreeData<O
 |  --- | --- | --- |
 |  propNames | TPropName\[\] | 属性名列表 |
 
-<b>Returns:</b>
+**Returns:**
 
 [TreeData](./utils.treedata.md)<!-- -->&lt;Omit&lt;TNode, TPropName&gt;&gt;
 

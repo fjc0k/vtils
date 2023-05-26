@@ -6,12 +6,12 @@
 
 检查是否在 Node.js 中。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function inNodeJS(): boolean;
 ```
-<b>Returns:</b>
+**Returns:**
 
 boolean
 
@@ -24,6 +24,5 @@ boolean
 if (inNodeJS()) {
   console.log('你在 Node.js 中')
 }
-
 ```
 

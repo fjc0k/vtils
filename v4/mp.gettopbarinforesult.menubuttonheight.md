@@ -6,7 +6,7 @@
 
 菜单按钮高度。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 menuButtonHeight: number;

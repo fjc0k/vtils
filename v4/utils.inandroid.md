@@ -6,12 +6,12 @@
 
 检查是否在 Android 设备中。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function inAndroid(): boolean;
 ```
-<b>Returns:</b>
+**Returns:**
 
 boolean
 
@@ -24,6 +24,5 @@ boolean
 if (inAndroid()) {
   console.log('你在 Android 设备中')
 }
-
 ```
 

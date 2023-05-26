@@ -8,7 +8,7 @@
 
 - 乘数列表为空时返回 0； - 乘数列表长度为 1 时返回第 1 个的值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 mul(...values: CalculatorValue[]): T;
@@ -20,7 +20,7 @@ mul(...values: CalculatorValue[]): T;
 |  --- | --- | --- |
 |  values | [CalculatorValue](./utils.calculatorvalue.md)<!-- -->\[\] | 乘数列表 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

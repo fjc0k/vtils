@@ -5,7 +5,7 @@
 ## pageListenerToCurrentPageListener variable
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pageListenerToCurrentPageListener: Partial<Record<keyof MiniProgramBusListeners, keyof MiniProgramBusListeners>>

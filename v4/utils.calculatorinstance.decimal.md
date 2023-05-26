@@ -6,7 +6,7 @@
 
 decimal.js 引用。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 decimal: typeof DecimalLight;

@@ -4,7 +4,7 @@
 
 ## EventBusOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface EventBusOptions<TListeners extends EventBusListeners> 
@@ -12,8 +12,8 @@ export declare interface EventBusOptions<TListeners extends EventBusListeners>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [beforeEmit?](./utils.eventbusoptions.beforeemit.md) | [EventBusBeforeEmit](./utils.eventbusbeforeemit.md)<!-- -->&lt;TListeners&gt; | <i>(Optional)</i> |
-|  [beforeOn?](./utils.eventbusoptions.beforeon.md) | [EventBusBeforeOn](./utils.eventbusbeforeon.md)<!-- -->&lt;TListeners&gt; | <i>(Optional)</i> |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [beforeEmit?](./utils.eventbusoptions.beforeemit.md) |  | [EventBusBeforeEmit](./utils.eventbusbeforeemit.md)<!-- -->&lt;TListeners&gt; | _(Optional)_ |
+|  [beforeOn?](./utils.eventbusoptions.beforeon.md) |  | [EventBusBeforeOn](./utils.eventbusbeforeon.md)<!-- -->&lt;TListeners&gt; | _(Optional)_ |
 

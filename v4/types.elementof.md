@@ -6,7 +6,7 @@
 
 Easily extract the type of a given array's elements
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type ElementOf<T extends readonly any[]> = T extends readonly (infer ET)[] ? ET : never;

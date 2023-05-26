@@ -4,7 +4,7 @@
 
 ## isBlobUrl.regex variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 regex: RegExp

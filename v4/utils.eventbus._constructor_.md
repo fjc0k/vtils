@@ -6,7 +6,7 @@
 
 构造函数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 constructor(options?: EventBusOptions<TListeners>);
@@ -16,5 +16,5 @@ constructor(options?: EventBusOptions<TListeners>);
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  options | [EventBusOptions](./utils.eventbusoptions.md)<!-- -->&lt;TListeners&gt; |  |
+|  options | [EventBusOptions](./utils.eventbusoptions.md)<!-- -->&lt;TListeners&gt; | _(Optional)_ |
 

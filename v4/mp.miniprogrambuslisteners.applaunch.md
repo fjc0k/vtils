@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.appLaunch property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 appLaunch: Defined<WechatMiniprogram.App.Options<{}>['onLaunch']>;

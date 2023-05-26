@@ -4,7 +4,7 @@
 
 ## yup.BooleanLocale interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface BooleanLocale 

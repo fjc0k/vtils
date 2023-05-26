@@ -8,7 +8,7 @@ Ensure overriding members in derived classes are marked with an override modifie
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noImplicitOverride?: boolean;

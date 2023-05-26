@@ -4,10 +4,10 @@
 
 ## TreeDataNode interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface TreeDataNode extends Record<any, any> 
 ```
-<b>Extends:</b> Record&lt;any, any&gt;
+**Extends:** Record&lt;any, any&gt;
 

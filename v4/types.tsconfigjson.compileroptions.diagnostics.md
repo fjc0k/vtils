@@ -8,7 +8,7 @@ Show diagnostic information.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 diagnostics?: boolean;

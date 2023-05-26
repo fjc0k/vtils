@@ -8,7 +8,7 @@ Specifies module resolution strategy: 'node' (Node) or 'classic' (TypeScript pre
 
  \['AMD', 'System', 'ES6'\].includes(module) ? 'classic' : 'node'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 moduleResolution?: 'classic' | 'node';

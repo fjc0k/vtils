@@ -6,7 +6,7 @@
 
 签名方式。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 signType: string;

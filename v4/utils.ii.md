@@ -8,7 +8,7 @@
 
 注：`ii = immediately invoke`
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function ii<R, F extends () => R = () => R>(fn: F): R;
@@ -20,7 +20,7 @@ export declare function ii<R, F extends () => R = () => R>(fn: F): R;
 |  --- | --- | --- |
 |  fn | F | 要调用的函数 |
 
-<b>Returns:</b>
+**Returns:**
 
 R
 
@@ -31,6 +31,5 @@ R
 
 ```typescript
 ii(() => 1) // => 1
-
 ```
 

@@ -8,7 +8,7 @@ Generates corresponding d.ts files.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 declaration?: boolean;

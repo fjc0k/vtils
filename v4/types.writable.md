@@ -6,7 +6,7 @@
 
 Make readonly object writable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Writable<T> = {

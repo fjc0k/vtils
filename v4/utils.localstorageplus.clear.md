@@ -6,12 +6,12 @@
 
 清空本地存储。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static clear(): void;
 ```
-<b>Returns:</b>
+**Returns:**
 
 void
 

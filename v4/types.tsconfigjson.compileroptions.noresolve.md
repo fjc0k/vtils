@@ -8,7 +8,7 @@ Do not add triple-slash references or module import targets to the list of compi
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noResolve?: boolean;

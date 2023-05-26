@@ -4,7 +4,7 @@
 
 ## yup.ValidationError.stack property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 stack?: any;

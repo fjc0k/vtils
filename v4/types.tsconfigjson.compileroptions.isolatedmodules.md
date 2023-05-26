@@ -8,7 +8,7 @@ Unconditionally emit imports for unresolved files.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 isolatedModules?: boolean;

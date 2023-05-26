@@ -4,7 +4,7 @@
 
 ## EventBusOffListener type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type EventBusOffListener = () => any;

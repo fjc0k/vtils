@@ -4,10 +4,10 @@
 
 ## CalculatorFunctionValue type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type CalculatorFunctionValue = (calculator: CalculatorInstance<DecimalLight>) => OneOrMore<DecimalLight>;
 ```
-<b>References:</b> [CalculatorInstance](./utils.calculatorinstance.md)
+**References:** [CalculatorInstance](./utils.calculatorinstance.md)
 

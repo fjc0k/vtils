@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.nullable() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 nullable(isNullable?: boolean): this;
@@ -14,9 +14,9 @@ nullable(isNullable?: boolean): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  isNullable | boolean |  |
+|  isNullable | boolean | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

@@ -6,7 +6,7 @@
 
 格式化字节数，以 1024 作为千字节数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function formatBytes(value: number): string;
@@ -18,7 +18,7 @@ export declare function formatBytes(value: number): string;
 |  --- | --- | --- |
 |  value | number | 要格式化的字节数 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

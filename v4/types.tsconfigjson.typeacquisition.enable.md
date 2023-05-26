@@ -6,7 +6,7 @@
 
 Enable auto type acquisition.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 enable?: boolean;

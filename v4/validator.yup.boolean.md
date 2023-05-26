@@ -4,12 +4,12 @@
 
 ## yup.boolean() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function boolean<T extends boolean = boolean>(): BooleanSchema<T>;
 ```
-<b>Returns:</b>
+**Returns:**
 
-BooleanSchema&lt;T&gt;
+[BooleanSchema](./validator.yup.booleanschema.md)<!-- -->&lt;T&gt;
 

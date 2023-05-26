@@ -6,7 +6,7 @@
 
 转换数据中的富链接。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static transform<TData, TDesc>(data: TData, callback: (parsedRichUrl: ParsedRichUrl<TDesc>, data: TData) => Promise<string>): Promise<TData>;
@@ -19,7 +19,7 @@ static transform<TData, TDesc>(data: TData, callback: (parsedRichUrl: ParsedRich
 |  data | TData | 数据 |
 |  callback | (parsedRichUrl: [ParsedRichUrl](./utils.parsedrichurl.md)<!-- -->&lt;TDesc&gt;, data: TData) =&gt; Promise&lt;string&gt; | 回调 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;TData&gt;
 

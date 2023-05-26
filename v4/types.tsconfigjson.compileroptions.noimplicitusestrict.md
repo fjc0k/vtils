@@ -8,7 +8,7 @@ Do not emit `'use strict'` directives in module output.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noImplicitUseStrict?: boolean;

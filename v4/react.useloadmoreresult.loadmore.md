@@ -6,7 +6,7 @@
 
 加载更多数据
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 loadMore: () => Promise<void>;

@@ -6,7 +6,7 @@
 
 回转 13 位替换式密码。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function rot13(str: string): string;
@@ -18,7 +18,7 @@ export declare function rot13(str: string): string;
 |  --- | --- | --- |
 |  str | string | 原文 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -27,6 +27,5 @@ string
 
 ```typescript
 rot13('hello world') // => 'uryyb jbeyq'
-
 ```
 

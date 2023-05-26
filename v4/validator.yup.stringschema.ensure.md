@@ -4,12 +4,12 @@
 
 ## yup.StringSchema.ensure() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 ensure(): this;
 ```
-<b>Returns:</b>
+**Returns:**
 
 this
 

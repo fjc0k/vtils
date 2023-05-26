@@ -6,7 +6,7 @@
 
 以一定的间隔时间重复调用某函数，并返回调用结果。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useInterval<TResult>(callback: () => TResult, delay: any, duration?: number): UseIntervalResult<TResult>;
@@ -18,9 +18,9 @@ export declare function useInterval<TResult>(callback: () => TResult, delay: any
 |  --- | --- | --- |
 |  callback | () =&gt; TResult | 回调函数 |
 |  delay | any | 间隔时间（毫秒），非数字时将不调用或停止调用函数 |
-|  duration | number | 持续时间（毫秒） |
+|  duration | number | _(Optional)_ 持续时间（毫秒） |
 
-<b>Returns:</b>
+**Returns:**
 
 [UseIntervalResult](./react.useintervalresult.md)<!-- -->&lt;TResult&gt;
 

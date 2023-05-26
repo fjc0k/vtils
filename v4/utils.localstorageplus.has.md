@@ -6,7 +6,7 @@
 
 是否存在本地存储。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static has(key: string, options?: LocalStoragePlusGetOptions): boolean;
@@ -17,9 +17,9 @@ static has(key: string, options?: LocalStoragePlusGetOptions): boolean;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  key | string | 键 |
-|  options | [LocalStoragePlusGetOptions](./utils.localstorageplusgetoptions.md) | 选项 |
+|  options | [LocalStoragePlusGetOptions](./utils.localstorageplusgetoptions.md) | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 

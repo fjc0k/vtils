@@ -4,7 +4,7 @@
 
 ## EnumResult type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type EnumResult<T extends EnumMap> = T & InvertResult<T> & {
@@ -13,5 +13,5 @@ export declare type EnumResult<T extends EnumMap> = T & InvertResult<T> & {
     $is(value: any, keys: OneOrMore<LiteralUnion<keyof T, ValueOf<T>>>): boolean;
 };
 ```
-<b>References:</b> [EnumMap](./utils.enummap.md)
+**References:** [EnumMap](./utils.enummap.md)
 

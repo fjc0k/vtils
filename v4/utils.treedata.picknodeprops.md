@@ -6,7 +6,7 @@
 
 选取节点上指定的属性。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pickNodeProps<TPropName extends keyof TNode>(propNames: TPropName[]): TreeData<Pick<TNode, TPropName>>;
@@ -18,7 +18,7 @@ pickNodeProps<TPropName extends keyof TNode>(propNames: TPropName[]): TreeData<P
 |  --- | --- | --- |
 |  propNames | TPropName\[\] | 属性名列表 |
 
-<b>Returns:</b>
+**Returns:**
 
 [TreeData](./utils.treedata.md)<!-- -->&lt;Pick&lt;TNode, TPropName&gt;&gt;
 

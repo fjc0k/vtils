@@ -10,7 +10,7 @@ Requires TypeScript version 3.7 or later.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 useDefineForClassFields?: boolean;

@@ -4,7 +4,7 @@
 
 ## useValidator() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useValidator<T>(data: T, dataDeps: DependencyList, schema: UseValidatorSchema<T>, schemaDeps?: DependencyList): UseValidatorResult<T>;
@@ -17,9 +17,9 @@ export declare function useValidator<T>(data: T, dataDeps: DependencyList, schem
 |  data | T |  |
 |  dataDeps | DependencyList |  |
 |  schema | [UseValidatorSchema](./react.usevalidatorschema.md)<!-- -->&lt;T&gt; |  |
-|  schemaDeps | DependencyList |  |
+|  schemaDeps | DependencyList | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 [UseValidatorResult](./react.usevalidatorresult.md)<!-- -->&lt;T&gt;
 

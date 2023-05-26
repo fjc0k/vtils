@@ -6,7 +6,7 @@
 
 加载图片、代码、样式等资源。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function loadResource(url: string | LoadResourceUrl | Array<string | LoadResourceUrl>, options?: LoadResourceOptions): Promise<Array<LoadResourceElement>>;
@@ -17,9 +17,9 @@ export declare function loadResource(url: string | LoadResourceUrl | Array<strin
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  url | string \| [LoadResourceUrl](./utils.loadresourceurl.md) \| Array&lt;string \| [LoadResourceUrl](./utils.loadresourceurl.md)<!-- -->&gt; | 要加载的资源地址 |
-|  options | [LoadResourceOptions](./utils.loadresourceoptions.md) | 选项 |
+|  options | [LoadResourceOptions](./utils.loadresourceoptions.md) | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;Array&lt;[LoadResourceElement](./utils.loadresourceelement.md)<!-- -->&gt;&gt;
 
@@ -41,6 +41,5 @@ loadResource([
 ]).then(() => {
   // 资源加载完成后的操作
 })
-
 ```
 

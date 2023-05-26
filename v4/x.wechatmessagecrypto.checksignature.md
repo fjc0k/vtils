@@ -6,7 +6,7 @@
 
 检查签名是否正确。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 checkSignature(signature: string, payload: WechatMessageCryptoSignOptions): boolean;
@@ -19,7 +19,7 @@ checkSignature(signature: string, payload: WechatMessageCryptoSignOptions): bool
 |  signature | string | 要验证的签名 |
 |  payload | [WechatMessageCryptoSignOptions](./x.wechatmessagecryptosignoptions.md) | 载荷 |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 

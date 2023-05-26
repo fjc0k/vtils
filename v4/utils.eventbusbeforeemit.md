@@ -4,12 +4,12 @@
 
 ## EventBusBeforeEmit type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type EventBusBeforeEmit<TListeners extends EventBusListeners> = {
     [TListenerName in keyof TListeners]?: (this: EventBus<TListeners>, context: any) => any;
 };
 ```
-<b>References:</b> [EventBusListeners](./utils.eventbuslisteners.md)<!-- -->, [EventBus](./utils.eventbus.md)
+**References:** [EventBusListeners](./utils.eventbuslisteners.md)<!-- -->, [EventBus](./utils.eventbus.md)
 

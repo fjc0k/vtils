@@ -4,7 +4,7 @@
 
 ## SignalResult.throw() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 throw(error: any): void;
@@ -16,7 +16,7 @@ throw(error: any): void;
 |  --- | --- | --- |
 |  error | any |  |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

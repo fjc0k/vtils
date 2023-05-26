@@ -4,7 +4,7 @@
 
 ## yup.Locale.array property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 array: ArrayLocale;

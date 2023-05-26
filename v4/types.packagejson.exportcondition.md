@@ -6,7 +6,7 @@
 
 Conditions which provide a way to resolve a package entry point based on the environment.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type ExportCondition = LiteralUnion<
@@ -21,5 +21,5 @@ export type ExportCondition = LiteralUnion<
     		string
     	>;
 ```
-<b>References:</b> [LiteralUnion](./types.literalunion.md)
+**References:** [LiteralUnion](./types.literalunion.md)
 

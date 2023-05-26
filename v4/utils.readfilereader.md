@@ -6,7 +6,7 @@
 
 各种内容类型的读取器。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface ReadFileReader 

@@ -4,7 +4,7 @@
 
 ## EnumValue type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type EnumValue = string | number | boolean;

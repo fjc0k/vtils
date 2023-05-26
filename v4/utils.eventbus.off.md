@@ -6,7 +6,7 @@
 
 取消订阅事件，若没有指定回调，则取消所有回调。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 off<TListenerName extends keyof TListeners>(eventName: TListenerName, callbackOrTag?: TListeners[TListenerName] | string | number): void;
@@ -17,9 +17,9 @@ off<TListenerName extends keyof TListeners>(eventName: TListenerName, callbackOr
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  eventName | TListenerName | 事件名称 |
-|  callbackOrTag | TListeners\[TListenerName\] \| string \| number |  |
+|  callbackOrTag | TListeners\[TListenerName\] \| string \| number | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.meta() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 meta(meta: {}): this;
@@ -16,7 +16,7 @@ meta(meta: {}): this;
 |  --- | --- | --- |
 |  meta | {} |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

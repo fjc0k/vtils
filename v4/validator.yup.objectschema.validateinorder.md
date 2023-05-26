@@ -4,7 +4,7 @@
 
 ## yup.ObjectSchema.validateInOrder() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 validateInOrder(value: T, options?: SchemaValidateOptions): Promise<T>;
@@ -15,9 +15,9 @@ validateInOrder(value: T, options?: SchemaValidateOptions): Promise<T>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T |  |
-|  options | SchemaValidateOptions |  |
+|  options | [SchemaValidateOptions](./validator.yup.schemavalidateoptions.md) | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;T&gt;
 

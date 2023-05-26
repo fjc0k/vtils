@@ -6,7 +6,7 @@
 
 When publishing scoped packages, the access level defaults to restricted. If you want your scoped package to be publicly viewable (and installable) set `--access=public`<!-- -->. The only valid values for access are public and restricted. Unscoped packages always have an access level of public.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 access?: 'public' | 'restricted';

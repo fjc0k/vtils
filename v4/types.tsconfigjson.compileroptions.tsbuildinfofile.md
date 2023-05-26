@@ -8,7 +8,7 @@ Specify file to store incremental compilation information.
 
  '.tsbuildinfo'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 tsBuildInfoFile?: string;

@@ -4,12 +4,12 @@
 
 ## yup.ObjectSchema.constantCase() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 constantCase(): this;
 ```
-<b>Returns:</b>
+**Returns:**
 
 this
 

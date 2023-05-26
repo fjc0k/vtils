@@ -6,7 +6,7 @@
 
 分享标题
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 title?: string | (() => string);

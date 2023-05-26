@@ -6,7 +6,7 @@
 
 检查是否在指定品牌的小程序中，若在，返回承载其 API 的全局对象，若不在，返回 false。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function inMiniProgram(brand?: MiniProgramBrand | MiniProgramBrand[]): MiniProgramApi | false;
@@ -16,9 +16,9 @@ export declare function inMiniProgram(brand?: MiniProgramBrand | MiniProgramBran
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  brand | [MiniProgramBrand](./utils.miniprogrambrand.md) \| [MiniProgramBrand](./utils.miniprogrambrand.md)<!-- -->\[\] | 指定的小程序品牌，若未指定，则表示所有小程序品牌 |
+|  brand | [MiniProgramBrand](./utils.miniprogrambrand.md) \| [MiniProgramBrand](./utils.miniprogrambrand.md)<!-- -->\[\] | _(Optional)_ 指定的小程序品牌，若未指定，则表示所有小程序品牌 |
 
-<b>Returns:</b>
+**Returns:**
 
 [MiniProgramApi](./utils.miniprogramapi.md) \| false
 

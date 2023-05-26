@@ -4,12 +4,12 @@
 
 ## yup.mixed() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function mixed<T = any>(): MixedSchema<T>;
 ```
-<b>Returns:</b>
+**Returns:**
 
-MixedSchema&lt;T&gt;
+[MixedSchema](./validator.yup.mixedschema.md)<!-- -->&lt;T&gt;
 

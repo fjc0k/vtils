@@ -10,7 +10,7 @@ Requires TypeScript version 4.4 or later.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 exactOptionalPropertyTypes?: boolean;

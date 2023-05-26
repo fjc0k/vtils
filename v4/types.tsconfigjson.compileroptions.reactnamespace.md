@@ -8,7 +8,7 @@ Specifies the object invoked for `createElement` and `__spread` when targeting `
 
  'React'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 reactNamespace?: string;

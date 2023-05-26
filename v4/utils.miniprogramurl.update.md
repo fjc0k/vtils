@@ -4,7 +4,7 @@
 
 ## MiniProgramUrl.update() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 update(payload: Partial<MiniProgramUrlJsonInput>): this;
@@ -16,7 +16,7 @@ update(payload: Partial<MiniProgramUrlJsonInput>): this;
 |  --- | --- | --- |
 |  payload | Partial&lt;[MiniProgramUrlJsonInput](./utils.miniprogramurljsoninput.md)<!-- -->&gt; |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

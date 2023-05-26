@@ -4,7 +4,7 @@
 
 ## CommonComponentProps.ref property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 ref?: React_2.Ref<TRef>;

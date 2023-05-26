@@ -4,7 +4,7 @@
 
 ## TsConfigJson.CompilerOptions.Plugin interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Plugin 
@@ -12,7 +12,7 @@ export interface Plugin
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [name?](./types.tsconfigjson.compileroptions.plugin.name.md) | string | <i>(Optional)</i> Plugin name. |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [name?](./types.tsconfigjson.compileroptions.plugin.name.md) |  | string | _(Optional)_ Plugin name. |
 

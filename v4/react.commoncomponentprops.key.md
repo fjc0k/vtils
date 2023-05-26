@@ -4,7 +4,7 @@
 
 ## CommonComponentProps.key property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 key?: React_2.Key;

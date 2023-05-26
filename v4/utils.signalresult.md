@@ -4,7 +4,7 @@
 
 ## SignalResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface SignalResult<T> 

@@ -8,7 +8,7 @@
 
 \*\*备注：\*\* 上传图片有效期3天， 可用微信多媒体接口下载图片到自己的服务器， 此处获得的服务器端 ID 即 `media_id`<!-- -->。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 uploadImage(params: WechatUploadImageParams): Promise<string>;
@@ -20,7 +20,7 @@ uploadImage(params: WechatUploadImageParams): Promise<string>;
 |  --- | --- | --- |
 |  params | [WechatUploadImageParams](./utils.wechatuploadimageparams.md) | 参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;string&gt;
 

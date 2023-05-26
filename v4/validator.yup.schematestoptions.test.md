@@ -4,7 +4,7 @@
 
 ## yup.SchemaTestOptions.test property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 test: (this: {

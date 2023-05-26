@@ -4,7 +4,7 @@
 
 ## MiniProgramConfig.webUrlToMiniProgramUrl property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 webUrlToMiniProgramUrl?: (url: string) => string;

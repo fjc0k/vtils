@@ -6,7 +6,7 @@
 
 查找符合条件的第一个节点。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 findNode(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): TNode | undefined;
@@ -18,7 +18,7 @@ findNode(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): TNo
 |  --- | --- | --- |
 |  predicate | (payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean | 条件 |
 
-<b>Returns:</b>
+**Returns:**
 
 TNode \| undefined
 

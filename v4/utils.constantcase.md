@@ -6,7 +6,7 @@
 
 转换文本为大写字符串，单词之间带有下划线。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function constantCase<T extends string>(text: T): ConstantCase<T>;
@@ -18,7 +18,7 @@ export declare function constantCase<T extends string>(text: T): ConstantCase<T>
 |  --- | --- | --- |
 |  text | T | 要转换的文本 |
 
-<b>Returns:</b>
+**Returns:**
 
 ConstantCase&lt;T&gt;
 
@@ -30,6 +30,5 @@ ConstantCase&lt;T&gt;
 ```typescript
 constantCase('test string')
 // => TEST_STRING
-
 ```
 

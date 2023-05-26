@@ -4,7 +4,7 @@
 
 ## yup.SchemaDescription.label property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 label: string;

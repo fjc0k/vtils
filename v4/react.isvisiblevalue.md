@@ -6,7 +6,7 @@
 
 是否是渲染后可见的值。 渲染后不可见的值包括：`undefined`<!-- -->、`null`<!-- -->、`true`<!-- -->、`false`<!-- -->、空字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function isVisibleValue(value: any): boolean;
@@ -18,7 +18,7 @@ export declare function isVisibleValue(value: any): boolean;
 |  --- | --- | --- |
 |  value | any | 值 |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 
@@ -27,6 +27,5 @@ boolean
 ```typescript
 isVisibleValue(null) // => false
 isVisibleValue(0) // => true
-
 ```
 

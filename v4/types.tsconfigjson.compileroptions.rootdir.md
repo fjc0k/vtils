@@ -8,7 +8,7 @@ Specifies the root directory of input files.
 
 Use to control the output directory structure with `--outDir`<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 rootDir?: string;

@@ -6,7 +6,7 @@
 
 Omit all properties of given type in object type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type OmitBy<T, P> = Pick<

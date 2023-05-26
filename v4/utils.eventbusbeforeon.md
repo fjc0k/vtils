@@ -4,12 +4,12 @@
 
 ## EventBusBeforeOn type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type EventBusBeforeOn<TListeners extends EventBusListeners> = {
     [TListenerName in keyof TListeners]?: (this: EventBus<TListeners>, callback: EventBusListener<TListeners[TListenerName]>) => TListeners[TListenerName];
 };
 ```
-<b>References:</b> [EventBusListeners](./utils.eventbuslisteners.md)<!-- -->, [EventBus](./utils.eventbus.md)<!-- -->, [EventBusListener](./utils.eventbuslistener.md)
+**References:** [EventBusListeners](./utils.eventbuslisteners.md)<!-- -->, [EventBus](./utils.eventbus.md)<!-- -->, [EventBusListener](./utils.eventbuslistener.md)
 

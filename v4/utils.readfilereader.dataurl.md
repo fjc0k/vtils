@@ -6,12 +6,12 @@
 
 读取并返回 dataURL 内容。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 dataUrl(): Promise<string>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;string&gt;
 

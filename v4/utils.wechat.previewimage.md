@@ -6,7 +6,7 @@
 
 预览图片。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 previewImage(params: WechatPreviewImageParams): Promise<any>;
@@ -18,7 +18,7 @@ previewImage(params: WechatPreviewImageParams): Promise<any>;
 |  --- | --- | --- |
 |  params | [WechatPreviewImageParams](./utils.wechatpreviewimageparams.md) | 参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

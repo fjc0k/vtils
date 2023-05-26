@@ -4,7 +4,7 @@
 
 ## yup.NumberSchema.nonNegative() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 nonNegative(message?: NumberLocale['nonNegative']): this;
@@ -14,9 +14,9 @@ nonNegative(message?: NumberLocale['nonNegative']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | NumberLocale\['nonNegative'\] |  |
+|  message | [NumberLocale](./validator.yup.numberlocale.md)<!-- -->\['nonNegative'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

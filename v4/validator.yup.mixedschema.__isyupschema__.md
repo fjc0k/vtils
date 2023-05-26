@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.\_\_isYupSchema\_\_ property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 __isYupSchema__: true;

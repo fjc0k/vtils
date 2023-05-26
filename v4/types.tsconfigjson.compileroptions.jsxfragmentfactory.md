@@ -10,7 +10,7 @@ Requires TypeScript version 4.0 or later.
 
  'React.Fragment'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 jsxFragmentFactory?: string;

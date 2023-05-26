@@ -6,7 +6,7 @@
 
 原地上移数组中的某个元素。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function moveUp<T>(arr: T[], from: number, step?: number): T[];
@@ -18,9 +18,9 @@ export declare function moveUp<T>(arr: T[], from: number, step?: number): T[];
 |  --- | --- | --- |
 |  arr | T\[\] | 要处理的数组 |
 |  from | number | 要移动元素的索引 |
-|  step | number | 移动步值 |
+|  step | number | _(Optional)_ 移动步值 |
 
-<b>Returns:</b>
+**Returns:**
 
 T\[\]
 
@@ -32,6 +32,5 @@ T\[\]
 ```typescript
 moveUp([1, 2, 3], 2) // => [1, 3, 2]
 moveUp([1, 2, 3], 2, 2) // => [3, 1, 2]
-
 ```
 

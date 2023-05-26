@@ -6,7 +6,7 @@
 
 Unix 时间戳
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 timestamp: number;

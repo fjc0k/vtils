@@ -6,7 +6,7 @@
 
 返回结果同 `pack()`<!-- -->，不过类型是原数据的类型。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static packAsRawType<T>(rawData: T): T;
@@ -18,7 +18,7 @@ static packAsRawType<T>(rawData: T): T;
 |  --- | --- | --- |
 |  rawData | T |  |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

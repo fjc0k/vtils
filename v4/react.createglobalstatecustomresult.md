@@ -4,7 +4,7 @@
 
 ## CreateGlobalStateCustomResult type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type CreateGlobalStateCustomResult<S extends CreateGlobalStateState | undefined, R = never> = (payload: {
@@ -12,5 +12,5 @@ export declare type CreateGlobalStateCustomResult<S extends CreateGlobalStateSta
     setState: CreateGlobalStateResultResult<S, never>[1];
 }) => R;
 ```
-<b>References:</b> [CreateGlobalStateState](./react.createglobalstatestate.md)<!-- -->, [CreateGlobalStateResultResult](./react.createglobalstateresultresult.md)
+**References:** [CreateGlobalStateState](./react.createglobalstatestate.md)<!-- -->, [CreateGlobalStateResultResult](./react.createglobalstateresultresult.md)
 

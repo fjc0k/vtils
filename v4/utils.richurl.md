@@ -10,10 +10,9 @@
 
 ```text
 rich://{"url":"***","desc":"***"}
-
 ```
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class RichUrl 

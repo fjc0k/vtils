@@ -4,7 +4,7 @@
 
 ## ParsedRichUrl interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface ParsedRichUrl<TDesc> 
@@ -12,8 +12,8 @@ export declare interface ParsedRichUrl<TDesc>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [desc?](./utils.parsedrichurl.desc.md) | TDesc | <i>(Optional)</i> |
-|  [url](./utils.parsedrichurl.url.md) | string |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [desc?](./utils.parsedrichurl.desc.md) |  | TDesc | _(Optional)_ |
+|  [url](./utils.parsedrichurl.url.md) |  | string |  |
 

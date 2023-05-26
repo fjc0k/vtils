@@ -11,7 +11,7 @@
 
 获取对象的路径。最多支持 7 级路径。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Path<T = any, L = any> = string | string[];

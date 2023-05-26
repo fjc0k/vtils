@@ -6,7 +6,7 @@
 
 对微信 JSSDK 的封装。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class Wechat 
@@ -29,7 +29,6 @@ wechat.updateShareData({
 wechat.invoke('scanQRCode').then(res => {
   // => API 调用结果
 })
-
 ```
 
 ## Constructors
@@ -63,6 +62,6 @@ wechat.invoke('scanQRCode').then(res => {
 |  [requestPayment(params)](./utils.wechat.requestpayment.md) |  | 发起微信支付。 |
 |  [showAllNonBaseMenuItems()](./utils.wechat.showallnonbasemenuitems.md) |  | 显示所有的非基础菜单项。 |
 |  [showNonBaseMenuItems(menuList)](./utils.wechat.shownonbasemenuitems.md) |  | 批量显示非基础菜单项。 |
-|  [updateShareData(params)](./utils.wechat.updatesharedata.md) |  | 设置分享数据。<!-- -->\*\*注意\*\*：每次分享的数据会和上次分享的数据合并作为最终分享的数据，因此，可以设置全局的分享数据。 |
-|  [uploadImage(params)](./utils.wechat.uploadimage.md) |  | 上传图片。<!-- -->\*\*备注：\*\* 上传图片有效期3天， 可用微信多媒体接口下载图片到自己的服务器， 此处获得的服务器端 ID 即 <code>media_id</code>。 |
+|  [updateShareData(params)](./utils.wechat.updatesharedata.md) |  | <p>设置分享数据。</p><p>\*\*注意\*\*：每次分享的数据会和上次分享的数据合并作为最终分享的数据，因此，可以设置全局的分享数据。</p> |
+|  [uploadImage(params)](./utils.wechat.uploadimage.md) |  | <p>上传图片。</p><p>\*\*备注：\*\* 上传图片有效期3天， 可用微信多媒体接口下载图片到自己的服务器， 此处获得的服务器端 ID 即 <code>media_id</code>。</p> |
 

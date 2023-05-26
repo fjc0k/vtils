@@ -4,7 +4,7 @@
 
 ## IntervalToRestrictiveDurationResult.months property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 months: number;

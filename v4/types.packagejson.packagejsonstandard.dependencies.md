@@ -6,7 +6,7 @@
 
 The dependencies of the package.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 dependencies?: Dependency;

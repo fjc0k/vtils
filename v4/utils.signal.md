@@ -6,12 +6,12 @@
 
 信号。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function signal<T>(): SignalResult<T>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 [SignalResult](./utils.signalresult.md)<!-- -->&lt;T&gt;
 

@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.pagePullDownRefresh property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pagePullDownRefresh: Defined<WechatMiniprogram.Page.Options<{}, {}>['onPullDownRefresh']>;

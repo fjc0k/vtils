@@ -6,7 +6,7 @@
 
 各参数间的连接符。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 partSeparator?: string;

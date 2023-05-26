@@ -4,7 +4,7 @@
 
 ## yup.SchemaTestOptions.exclusive property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 exclusive?: boolean;

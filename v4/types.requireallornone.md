@@ -10,7 +10,7 @@ Use-cases: - Creating interfaces for components with mutually-inclusive keys.
 
 The caveat with `RequireAllOrNone` is that TypeScript doesn't always know at compile time every key that will exist at runtime. Therefore `RequireAllOrNone` can't do anything to prevent extra keys it doesn't know about.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type RequireAllOrNone<ObjectType, KeysType extends keyof ObjectType = never> = (

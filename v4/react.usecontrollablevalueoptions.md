@@ -4,7 +4,7 @@
 
 ## UseControllableValueOptions type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type UseControllableValueOptions<TProps, TDefaultValuePropName extends keyof TProps, TValuePropName extends keyof TProps, TCallbackPropName extends keyof TProps, TDefaultValue extends TProps[TValuePropName]> = {

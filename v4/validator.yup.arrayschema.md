@@ -4,12 +4,12 @@
 
 ## yup.ArraySchema interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface ArraySchema<T extends any = any> extends MixedSchema<T[]> 
 ```
-<b>Extends:</b> MixedSchema&lt;T\[\]&gt;
+**Extends:** [MixedSchema](./validator.yup.mixedschema.md)<!-- -->&lt;T\[\]&gt;
 
 ## Methods
 

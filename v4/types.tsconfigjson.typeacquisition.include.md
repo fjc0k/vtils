@@ -6,7 +6,7 @@
 
 Specifies a list of type declarations to be included in auto type acquisition. For example, `['jquery', 'lodash']`<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 include?: string[];

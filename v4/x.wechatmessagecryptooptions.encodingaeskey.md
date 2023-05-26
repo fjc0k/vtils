@@ -6,7 +6,7 @@
 
 消息加解密密钥
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 encodingAESKey: string;

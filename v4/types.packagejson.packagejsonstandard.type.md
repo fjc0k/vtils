@@ -8,7 +8,7 @@ Resolution algorithm for importing ".js" files from the package's scope.
 
 \[Read more.\](https://nodejs.org/api/esm.html\#esm\_package\_json\_type\_field)
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 type?: 'module' | 'commonjs';

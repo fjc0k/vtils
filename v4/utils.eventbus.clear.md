@@ -6,12 +6,12 @@
 
 清空事件订阅。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 clear(): void;
 ```
-<b>Returns:</b>
+**Returns:**
 
 void
 

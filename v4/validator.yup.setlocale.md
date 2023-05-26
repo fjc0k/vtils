@@ -4,7 +4,7 @@
 
 ## yup.setLocale() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function setLocale(locale: PartialDeep<Locale>): void;
@@ -14,9 +14,9 @@ export declare function setLocale(locale: PartialDeep<Locale>): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  locale | PartialDeep&lt;Locale&gt; |  |
+|  locale | PartialDeep&lt;[Locale](./validator.yup.locale.md)<!-- -->&gt; |  |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

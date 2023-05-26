@@ -6,7 +6,7 @@
 
 The URL to the package's homepage.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 homepage?: LiteralUnion<'.', string>;

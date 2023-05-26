@@ -6,7 +6,7 @@
 
 设置默认索引。当前索引为 `-1` 或 `NaN` 时会使用默认索引。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function defaultIndexTo(index: number, defaultIndex: number): number;
@@ -19,7 +19,7 @@ export declare function defaultIndexTo(index: number, defaultIndex: number): num
 |  index | number | 当前索引 |
 |  defaultIndex | number | 默认索引 |
 
-<b>Returns:</b>
+**Returns:**
 
 number
 

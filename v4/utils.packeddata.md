@@ -4,7 +4,7 @@
 
 ## PackedData type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type PackedData<TRawData extends RawData> = {
@@ -13,5 +13,5 @@ export declare type PackedData<TRawData extends RawData> = {
     readonly _s: string;
 };
 ```
-<b>References:</b> [RawData](./utils.rawdata.md)<!-- -->, [KeyOfRawData](./utils.keyofrawdata.md)<!-- -->, [ValueOfRawData](./utils.valueofrawdata.md)
+**References:** [RawData](./utils.rawdata.md)<!-- -->, [KeyOfRawData](./utils.keyofrawdata.md)<!-- -->, [ValueOfRawData](./utils.valueofrawdata.md)
 

@@ -6,7 +6,7 @@
 
 开始回调。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 start(message?: T): AsyncOrSync<any>;
@@ -16,9 +16,9 @@ start(message?: T): AsyncOrSync<any>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | T | 提示信息 |
+|  message | T | _(Optional)_ 提示信息 |
 
-<b>Returns:</b>
+**Returns:**
 
 AsyncOrSync&lt;any&gt;
 

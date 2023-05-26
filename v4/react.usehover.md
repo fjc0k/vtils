@@ -4,7 +4,7 @@
 
 ## useHover() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useHover(options?: UseHoverOptions): UseHoverResult;
@@ -14,9 +14,9 @@ export declare function useHover(options?: UseHoverOptions): UseHoverResult;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  options | [UseHoverOptions](./react.usehoveroptions.md) |  |
+|  options | [UseHoverOptions](./react.usehoveroptions.md) | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 [UseHoverResult](./react.usehoverresult.md)
 

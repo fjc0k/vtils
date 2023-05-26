@@ -5,7 +5,7 @@
 ## WechatUploadImageParams interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatUploadImageParams 
@@ -13,8 +13,8 @@ export declare interface WechatUploadImageParams
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [isShowProgressTips?](./utils.wechatuploadimageparams.isshowprogresstips.md) | boolean | <i>(Optional)</i> 是否显示进度提示。 false |
-|  [localId](./utils.wechatuploadimageparams.localid.md) | string | 需要上传的图片的本地 ID，由 chooseImage 接口获得。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [isShowProgressTips?](./utils.wechatuploadimageparams.isshowprogresstips.md) |  | boolean | <p>_(Optional)_ 是否显示进度提示。</p><p> false</p> |
+|  [localId](./utils.wechatuploadimageparams.localid.md) |  | string | 需要上传的图片的本地 ID，由 chooseImage 接口获得。 |
 

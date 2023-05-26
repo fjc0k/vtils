@@ -4,7 +4,7 @@
 
 ## yup.StringLocale.length property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 length: LocaleValue<{

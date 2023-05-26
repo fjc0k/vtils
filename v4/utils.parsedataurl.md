@@ -6,7 +6,7 @@
 
 解析 Data URL。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function parseDataUrl(dataUrl: string): ParseDataUrlResult;
@@ -18,7 +18,7 @@ export declare function parseDataUrl(dataUrl: string): ParseDataUrlResult;
 |  --- | --- | --- |
 |  dataUrl | string | 要解析的 Data URL |
 
-<b>Returns:</b>
+**Returns:**
 
 [ParseDataUrlResult](./utils.parsedataurlresult.md)
 

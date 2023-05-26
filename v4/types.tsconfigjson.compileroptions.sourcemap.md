@@ -8,7 +8,7 @@ Generates corresponding '.map' file.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sourceMap?: boolean;

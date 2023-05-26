@@ -6,7 +6,7 @@
 
 对 `value is T` 的封装。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function isType<T>(value: any): value is T;
@@ -18,7 +18,7 @@ export declare function isType<T>(value: any): value is T;
 |  --- | --- | --- |
 |  value | any |  |
 
-<b>Returns:</b>
+**Returns:**
 
 value is T
 

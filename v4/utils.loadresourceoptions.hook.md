@@ -6,7 +6,7 @@
 
 钩子
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 hook?: LoadResourceHook;

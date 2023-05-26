@@ -6,7 +6,7 @@
 
 失败回调。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 fail(message: T, duration: number): AsyncOrSync<any>;
@@ -19,7 +19,7 @@ fail(message: T, duration: number): AsyncOrSync<any>;
 |  message | T | 提示信息 |
 |  duration | number | 持续时间（毫秒） |
 
-<b>Returns:</b>
+**Returns:**
 
 AsyncOrSync&lt;any&gt;
 

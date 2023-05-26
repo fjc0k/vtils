@@ -6,7 +6,7 @@
 
 原地交换数组中的两个元素。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function swap<T>(arr: T[], i: number, j: number): T[];
@@ -20,7 +20,7 @@ export declare function swap<T>(arr: T[], i: number, j: number): T[];
 |  i | number | 第一个元素的索引 |
 |  j | number | 第二个元素的索引 |
 
-<b>Returns:</b>
+**Returns:**
 
 T\[\]
 
@@ -31,6 +31,5 @@ T\[\]
 
 ```typescript
 swap([1, 2, 3], 0, 2) // => [3, 2, 1]
-
 ```
 

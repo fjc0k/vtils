@@ -8,7 +8,7 @@
 
 应用场景：腾讯地图、高德地图坐标转百度地图坐标。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static GCJ02ToBD09: (input: GeoCoordTransformInput) => GeoCoordTransformOutput;

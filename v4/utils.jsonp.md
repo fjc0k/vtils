@@ -6,7 +6,7 @@
 
 发起 jsonp 请求。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function jsonp<T>(url: string, keyOfCallbackName?: string): Promise<T>;
@@ -17,9 +17,9 @@ export declare function jsonp<T>(url: string, keyOfCallbackName?: string): Promi
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  url | string | 请求地址 |
-|  keyOfCallbackName | string | 回调函数名的键 |
+|  keyOfCallbackName | string | _(Optional)_ 回调函数名的键 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;T&gt;
 

@@ -8,7 +8,7 @@ Raise error on 'this' expressions with an implied any type.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noImplicitThis?: boolean;

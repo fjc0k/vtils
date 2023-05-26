@@ -6,7 +6,7 @@
 
 失败提示。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 fail(message: T, duration?: number): Promise<any>;
@@ -17,9 +17,9 @@ fail(message: T, duration?: number): Promise<any>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  message | T | 提示信息 |
-|  duration | number | 持续时间（毫秒），默认 1500 |
+|  duration | number | _(Optional)_ 持续时间（毫秒），默认 1500 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

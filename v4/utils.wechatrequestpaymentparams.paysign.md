@@ -6,7 +6,7 @@
 
 支付签名。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 paySign: string;

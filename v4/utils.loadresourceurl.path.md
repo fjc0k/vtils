@@ -6,7 +6,7 @@
 
 资源路径
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 path: string;

@@ -6,7 +6,7 @@
 
 非空数组类型。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type NonEmptyArray<T> = [T, ...T[]];
@@ -18,6 +18,5 @@ export declare type NonEmptyArray<T> = [T, ...T[]];
 ```typescript
 type X = NonEmptyArray<number>
 const x: X = [] // => error
-
 ```
 

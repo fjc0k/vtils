@@ -4,7 +4,7 @@
 
 ## yup.StringLocale.chineseIDCardNumber property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 chineseIDCardNumber: LocaleValue;

@@ -6,7 +6,7 @@
 
 The path as the user originally wrote it.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 originalPath?: string;

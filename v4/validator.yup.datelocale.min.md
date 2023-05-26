@@ -4,7 +4,7 @@
 
 ## yup.DateLocale.min property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 min: LocaleValue<{

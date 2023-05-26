@@ -6,7 +6,7 @@
 
 设置本地存储。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static set<T extends JsonValue>(key: string, value: T | ((prevValue: T | null) => T), options?: LocalStoragePlusSetOptions): void;
@@ -18,9 +18,9 @@ static set<T extends JsonValue>(key: string, value: T | ((prevValue: T | null) =
 |  --- | --- | --- |
 |  key | string | 键 |
 |  value | T \| ((prevValue: T \| null) =&gt; T) | 值 |
-|  options | [LocalStoragePlusSetOptions](./utils.localstorageplussetoptions.md) | 选项 |
+|  options | [LocalStoragePlusSetOptions](./utils.localstorageplussetoptions.md) | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

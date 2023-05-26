@@ -4,7 +4,7 @@
 
 ## yup.StringLocale.chineseMobilePhoneNumber property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 chineseMobilePhoneNumber: LocaleValue;

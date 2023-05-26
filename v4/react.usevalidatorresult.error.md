@@ -4,7 +4,7 @@
 
 ## UseValidatorResult.error property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 error?: yup.ValidationError | undefined;

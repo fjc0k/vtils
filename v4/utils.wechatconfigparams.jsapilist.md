@@ -8,7 +8,7 @@
 
  \[\]
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 jsApiList?: WechatJsApi[];

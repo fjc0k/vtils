@@ -6,7 +6,7 @@
 
 Recursively omit deep properties
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type OmitDeep<T extends DeepOmitModify<Filter>, Filter> = T extends Builtin
@@ -70,5 +70,5 @@ OmitBy<
 never
 >;
 ```
-<b>References:</b> [OmitDeep](./types.omitdeep.md)<!-- -->, [OptionalKeys](./types.optionalkeys.md)<!-- -->, [OmitBy](./types.omitby.md)<!-- -->, [RequiredKeys](./types.requiredkeys.md)
+**References:** [OmitDeep](./types.omitdeep.md)<!-- -->, [OptionalKeys](./types.optionalkeys.md)<!-- -->, [OmitBy](./types.omitby.md)<!-- -->, [RequiredKeys](./types.requiredkeys.md)
 

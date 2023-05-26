@@ -6,7 +6,7 @@
 
 使用微信内置地图查看位置。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 openLocation(params: WechatOpenLocationParams): Promise<any>;
@@ -18,7 +18,7 @@ openLocation(params: WechatOpenLocationParams): Promise<any>;
 |  --- | --- | --- |
 |  params | [WechatOpenLocationParams](./utils.wechatopenlocationparams.md) | 参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

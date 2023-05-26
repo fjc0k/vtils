@@ -4,7 +4,7 @@
 
 ## LoopUntilOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface LoopUntilOptions 
@@ -12,8 +12,8 @@ export declare interface LoopUntilOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [retryDelay](./utils.loopuntiloptions.retrydelay.md) | OneOrMore&lt;number&gt; | 重试延时，为数组时随机挑选一个。 |
-|  [retryLimit?](./utils.loopuntiloptions.retrylimit.md) | number | <i>(Optional)</i> 重试限制。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [retryDelay](./utils.loopuntiloptions.retrydelay.md) |  | OneOrMore&lt;number&gt; | 重试延时，为数组时随机挑选一个。 |
+|  [retryLimit?](./utils.loopuntiloptions.retrylimit.md) |  | number | _(Optional)_ 重试限制。 |
 

@@ -6,7 +6,7 @@
 
 注入微信 `JSSDK` 的权限验证配置参数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 configParams: WechatConfigParams;

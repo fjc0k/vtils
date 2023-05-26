@@ -4,7 +4,7 @@
 
 ## yup.MixedLocale.default property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 default: LocaleValue;

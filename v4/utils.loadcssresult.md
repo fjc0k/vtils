@@ -4,7 +4,7 @@
 
 ## LoadCssResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface LoadCssResult 
@@ -12,8 +12,8 @@ export declare interface LoadCssResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [destroy](./utils.loadcssresult.destroy.md) | () =&gt; void | 销毁函数。 |
-|  [el](./utils.loadcssresult.el.md) | HTMLStyleElement | 样式元素。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [destroy](./utils.loadcssresult.destroy.md) |  | () =&gt; void | 销毁函数。 |
+|  [el](./utils.loadcssresult.el.md) |  | HTMLStyleElement | 样式元素。 |
 

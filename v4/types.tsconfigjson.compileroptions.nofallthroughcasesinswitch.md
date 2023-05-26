@@ -8,7 +8,7 @@ Report errors for fallthrough cases in switch statement.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noFallthroughCasesInSwitch?: boolean;

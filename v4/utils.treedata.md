@@ -6,7 +6,7 @@
 
 树数据处理。支持单根节点、多根节点树数据。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class TreeData<TNode extends TreeDataNode> 

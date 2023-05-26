@@ -4,7 +4,7 @@
 
 ## ParseDataUrlResult.base64 property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 base64: boolean;

@@ -4,10 +4,10 @@
 
 ## WechatBeforeInvokeCallback type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type WechatBeforeInvokeCallback = (jsApi: WechatJsApi, params: Record<string, any>) => any;
 ```
-<b>References:</b> [WechatJsApi](./utils.wechatjsapi.md)
+**References:** [WechatJsApi](./utils.wechatjsapi.md)
 

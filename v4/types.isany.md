@@ -6,7 +6,7 @@
 
 判断 `T` 是否是 `any` 类型。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type IsAny<T> = 0 extends 1 & T ? true : false;
@@ -18,6 +18,5 @@ export declare type IsAny<T> = 0 extends 1 & T ? true : false;
 ```typescript
 type X = IsAny<any>
 // => true
-
 ```
 

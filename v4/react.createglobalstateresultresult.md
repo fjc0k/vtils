@@ -4,10 +4,10 @@
 
 ## CreateGlobalStateResultResult type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type CreateGlobalStateResultResult<S extends CreateGlobalStateState | undefined, R = never> = [R] extends [never] ? readonly [S, Dispatch<SetStateAction<S>>] : R;
 ```
-<b>References:</b> [CreateGlobalStateState](./react.createglobalstatestate.md)
+**References:** [CreateGlobalStateState](./react.createglobalstatestate.md)
 

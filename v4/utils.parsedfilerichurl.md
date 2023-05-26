@@ -4,7 +4,7 @@
 
 ## ParsedFileRichUrl interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface ParsedFileRichUrl 
@@ -12,8 +12,8 @@ export declare interface ParsedFileRichUrl
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [file](./utils.parsedfilerichurl.file.md) | File |  |
-|  [url](./utils.parsedfilerichurl.url.md) | string |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [file](./utils.parsedfilerichurl.file.md) |  | File |  |
+|  [url](./utils.parsedfilerichurl.url.md) |  | string |  |
 

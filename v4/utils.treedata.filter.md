@@ -6,7 +6,7 @@
 
 筛选符合条件的节点。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 filter(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): this;
@@ -18,7 +18,7 @@ filter(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): this;
 |  --- | --- | --- |
 |  predicate | (payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean | 条件 |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

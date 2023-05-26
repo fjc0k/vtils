@@ -6,7 +6,7 @@
 
 将时间转化为 `xxx前` 表示。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function formatDistanceAgo(date: number | Date): string;
@@ -18,7 +18,7 @@ export declare function formatDistanceAgo(date: number | Date): string;
 |  --- | --- | --- |
 |  date | number \| Date | 时间 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

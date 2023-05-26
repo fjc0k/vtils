@@ -6,7 +6,7 @@
 
 JSPM configuration.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 jspm?: PackageJson;

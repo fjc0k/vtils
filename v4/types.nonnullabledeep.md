@@ -6,7 +6,7 @@
 
 Like NonNullable but recursive
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type NonNullableDeep<T> = T extends Builtin
@@ -31,5 +31,5 @@ export declare type NonNullableDeep<T> = T extends Builtin
 }
 : NonNullable<T>;
 ```
-<b>References:</b> [NonNullableDeep](./types.nonnullabledeep.md)
+**References:** [NonNullableDeep](./types.nonnullabledeep.md)
 

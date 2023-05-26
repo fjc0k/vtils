@@ -4,7 +4,7 @@
 
 ## CreateUrlQueryStringOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface CreateUrlQueryStringOptions 
@@ -12,8 +12,8 @@ export declare interface CreateUrlQueryStringOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [pairSeparator?](./utils.createurlquerystringoptions.pairseparator.md) | string | <i>(Optional)</i> 键值内部的连接符。 |
-|  [partSeparator?](./utils.createurlquerystringoptions.partseparator.md) | string | <i>(Optional)</i> 各参数间的连接符。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [pairSeparator?](./utils.createurlquerystringoptions.pairseparator.md) |  | string | _(Optional)_ 键值内部的连接符。 |
+|  [partSeparator?](./utils.createurlquerystringoptions.partseparator.md) |  | string | _(Optional)_ 各参数间的连接符。 |
 

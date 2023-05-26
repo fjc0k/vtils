@@ -8,7 +8,7 @@ Keep outdated console output in watch mode instead of clearing the screen.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 preserveWatchOutput?: boolean;

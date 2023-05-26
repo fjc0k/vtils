@@ -4,7 +4,7 @@
 
 ## CommonComponentProps.style property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 style?: React_2.CSSProperties;

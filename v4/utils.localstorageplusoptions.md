@@ -4,7 +4,7 @@
 
 ## LocalStoragePlusOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface LocalStoragePlusOptions 
@@ -12,7 +12,7 @@ export declare interface LocalStoragePlusOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [key](./utils.localstorageplusoptions.key.md) | string | 存储键 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [key](./utils.localstorageplusoptions.key.md) |  | string | 存储键 |
 

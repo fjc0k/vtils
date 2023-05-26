@@ -6,7 +6,7 @@
 
 iOS
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly ios: boolean;

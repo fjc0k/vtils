@@ -6,7 +6,7 @@
 
 Package names that are bundled when the package is published.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 bundledDependencies?: string[];

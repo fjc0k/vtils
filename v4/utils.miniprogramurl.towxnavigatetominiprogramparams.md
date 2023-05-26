@@ -4,7 +4,7 @@
 
 ## MiniProgramUrl.toWxNavigateToMiniProgramParams() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 toWxNavigateToMiniProgramParams(): {
@@ -14,7 +14,7 @@ toWxNavigateToMiniProgramParams(): {
         extraData: any;
     };
 ```
-<b>Returns:</b>
+**Returns:**
 
 { appId: string; path: string; envVersion: [MiniProgramUrlVersion](./utils.miniprogramurlversion.md)<!-- -->; extraData: any; }
 

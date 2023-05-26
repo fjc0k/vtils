@@ -4,7 +4,7 @@
 
 ## PackageJson.PublishConfig interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface PublishConfig 
@@ -12,9 +12,9 @@ export interface PublishConfig
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [access?](./types.packagejson.publishconfig.access.md) | 'public' \| 'restricted' | <i>(Optional)</i> When publishing scoped packages, the access level defaults to restricted. If you want your scoped package to be publicly viewable (and installable) set <code>--access=public</code>. The only valid values for access are public and restricted. Unscoped packages always have an access level of public. |
-|  [registry?](./types.packagejson.publishconfig.registry.md) | string | <i>(Optional)</i> The base URL of the npm registry.<!-- -->Default: <code>'https://registry.npmjs.org/'</code> |
-|  [tag?](./types.packagejson.publishconfig.tag.md) | string | <i>(Optional)</i> The tag to publish the package under.<!-- -->Default: <code>'latest'</code> |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [access?](./types.packagejson.publishconfig.access.md) |  | 'public' \| 'restricted' | _(Optional)_ When publishing scoped packages, the access level defaults to restricted. If you want your scoped package to be publicly viewable (and installable) set <code>--access=public</code>. The only valid values for access are public and restricted. Unscoped packages always have an access level of public. |
+|  [registry?](./types.packagejson.publishconfig.registry.md) |  | string | <p>_(Optional)_ The base URL of the npm registry.</p><p>Default: <code>'https://registry.npmjs.org/'</code></p> |
+|  [tag?](./types.packagejson.publishconfig.tag.md) |  | string | <p>_(Optional)_ The tag to publish the package under.</p><p>Default: <code>'latest'</code></p> |
 

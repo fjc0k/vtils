@@ -8,12 +8,12 @@ A finite `number`<!-- -->. You can't pass a `bigint` as they are already guarant
 
 Use-case: Validating and documenting parameters.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Finite<T extends number> = T extends PositiveInfinity | NegativeInfinity ? never : T;
 ```
-<b>References:</b> [PositiveInfinity](./types.positiveinfinity.md)<!-- -->, [NegativeInfinity](./types.negativeinfinity.md)
+**References:** [PositiveInfinity](./types.positiveinfinity.md)<!-- -->, [NegativeInfinity](./types.negativeinfinity.md)
 
 ## Example
 

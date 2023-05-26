@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.isType() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 isType(value: T): boolean;
@@ -16,7 +16,7 @@ isType(value: T): boolean;
 |  --- | --- | --- |
 |  value | T |  |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 

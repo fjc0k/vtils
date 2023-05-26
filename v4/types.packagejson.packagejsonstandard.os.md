@@ -6,7 +6,7 @@
 
 Operating systems the module runs on.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 os?: Array<LiteralUnion<

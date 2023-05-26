@@ -6,7 +6,7 @@
 
 销毁函数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 destroy: () => void;

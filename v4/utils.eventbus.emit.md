@@ -6,7 +6,7 @@
 
 发布事件。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 emit<TListenerName extends keyof TListeners>(eventName: TListenerName | EventBusListenerDescriptor<TListenerName>, ...args: Parameters<TListeners[TListenerName]>): Array<ReturnType<TListeners[TListenerName]>>;
@@ -19,7 +19,7 @@ emit<TListenerName extends keyof TListeners>(eventName: TListenerName | EventBus
 |  eventName | TListenerName \| [EventBusListenerDescriptor](./utils.eventbuslistenerdescriptor.md)<!-- -->&lt;TListenerName&gt; |  |
 |  args | Parameters&lt;TListeners\[TListenerName\]&gt; | 传给事件回调的参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Array&lt;ReturnType&lt;TListeners\[TListenerName\]&gt;&gt;
 

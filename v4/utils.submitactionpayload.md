@@ -4,7 +4,7 @@
 
 ## SubmitActionPayload interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface SubmitActionPayload<T = string> 

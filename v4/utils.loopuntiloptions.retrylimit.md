@@ -6,7 +6,7 @@
 
 重试限制。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 retryLimit?: number;

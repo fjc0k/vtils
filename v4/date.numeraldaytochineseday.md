@@ -6,7 +6,7 @@
 
 数字星期转中文星期。`0` 和 `7` 都视为星期日。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function numeralDayToChineseDay(day: NumeralDay): string;
@@ -18,7 +18,7 @@ export declare function numeralDayToChineseDay(day: NumeralDay): string;
 |  --- | --- | --- |
 |  day | [NumeralDay](./date.numeralday.md) | 数字的星期几 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -32,6 +32,5 @@ numeralDayToChineseDay(0) // => 日
 numeralDayToChineseDay(1) // => 一
 numeralDayToChineseDay(5) // => 五
 numeralDayToChineseDay(7) // => 日
-
 ```
 

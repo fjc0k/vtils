@@ -8,7 +8,7 @@ The tag to publish the package under.
 
 Default: `'latest'`
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 tag?: string;

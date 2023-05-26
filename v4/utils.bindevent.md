@@ -6,7 +6,7 @@
 
 绑定事件。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function bindEvent<T extends Record<'addEventListener' | 'removeEventListener', AnyFunction_2>>(target: T): BindEventFunction<T>;
@@ -18,7 +18,7 @@ export declare function bindEvent<T extends Record<'addEventListener' | 'removeE
 |  --- | --- | --- |
 |  target | T | 事件绑定的目标 |
 
-<b>Returns:</b>
+**Returns:**
 
 [BindEventFunction](./utils.bindeventfunction.md)<!-- -->&lt;T&gt;
 
@@ -31,6 +31,5 @@ export declare function bindEvent<T extends Record<'addEventListener' | 'removeE
 const bindWindowEvent = bindEvent(window)
 const unbindClick = bindWindowEvent('click', console.log)
 const unbindScroll = bindWindowEvent('scroll', console.log)
-
 ```
 

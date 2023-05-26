@@ -6,7 +6,7 @@
 
 A hint to JavaScript bundlers or component tools when packaging modules for client side use.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 browser?:

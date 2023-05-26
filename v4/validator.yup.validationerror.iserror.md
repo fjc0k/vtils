@@ -4,7 +4,7 @@
 
 ## yup.ValidationError.isError() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static isError<T>(err: T): boolean;
@@ -16,7 +16,7 @@ static isError<T>(err: T): boolean;
 |  --- | --- | --- |
 |  err | T |  |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 

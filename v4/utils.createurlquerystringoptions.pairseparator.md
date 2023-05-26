@@ -6,7 +6,7 @@
 
 键值内部的连接符。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pairSeparator?: string;

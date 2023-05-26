@@ -4,7 +4,7 @@
 
 ## WechatRequestPaymentParams interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatRequestPaymentParams 
@@ -12,11 +12,11 @@ export declare interface WechatRequestPaymentParams
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [nonceStr](./utils.wechatrequestpaymentparams.noncestr.md) | string | 支付签名随机串。 |
-|  [package](./utils.wechatrequestpaymentparams.package.md) | string | 统一支付接口返回的 prepay\_id 参数值，如：<code>prepay_id=xxx</code>。 |
-|  [paySign](./utils.wechatrequestpaymentparams.paysign.md) | string | 支付签名。 |
-|  [signType](./utils.wechatrequestpaymentparams.signtype.md) | string | 签名方式。 |
-|  [timestamp](./utils.wechatrequestpaymentparams.timestamp.md) | number | 支付签名时间戳。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [nonceStr](./utils.wechatrequestpaymentparams.noncestr.md) |  | string | 支付签名随机串。 |
+|  [package](./utils.wechatrequestpaymentparams.package.md) |  | string | 统一支付接口返回的 prepay\_id 参数值，如：<code>prepay_id=xxx</code>。 |
+|  [paySign](./utils.wechatrequestpaymentparams.paysign.md) |  | string | 支付签名。 |
+|  [signType](./utils.wechatrequestpaymentparams.signtype.md) |  | string | 签名方式。 |
+|  [timestamp](./utils.wechatrequestpaymentparams.timestamp.md) |  | number | 支付签名时间戳。 |
 

@@ -4,12 +4,12 @@
 
 ## yup.MixedSchema.clone() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 clone(): this;
 ```
-<b>Returns:</b>
+**Returns:**
 
 this
 

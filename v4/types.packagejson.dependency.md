@@ -6,7 +6,7 @@
 
 Dependencies of the package. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or Git URL.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type Dependency = Record<string, string>;

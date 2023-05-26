@@ -4,7 +4,7 @@
 
 ## SignalResult.set() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 set(value: T): void;
@@ -16,7 +16,7 @@ set(value: T): void;
 |  --- | --- | --- |
 |  value | T |  |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

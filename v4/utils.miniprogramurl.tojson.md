@@ -4,12 +4,12 @@
 
 ## MiniProgramUrl.toJson() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 toJson(): MiniProgramUrlJsonInput;
 ```
-<b>Returns:</b>
+**Returns:**
 
 [MiniProgramUrlJsonInput](./utils.miniprogramurljsoninput.md)
 

@@ -4,7 +4,7 @@
 
 ## MiniProgramBrand type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MiniProgramBrand = typeof brands[number];

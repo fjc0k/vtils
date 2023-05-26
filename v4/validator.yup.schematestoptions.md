@@ -4,19 +4,19 @@
 
 ## yup.SchemaTestOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export interface SchemaTestOptions<TSchema, TValue, TParams = {}> 
+export interface SchemaTestOptions<TSchema, TValue, TParams extends {} = {}> 
 ```
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [exclusive?](./validator.yup.schematestoptions.exclusive.md) | boolean | <i>(Optional)</i> |
-|  [message](./validator.yup.schematestoptions.message.md) | LocaleValue&lt;TParams&gt; |  |
-|  [name](./validator.yup.schematestoptions.name.md) | string |  |
-|  [params?](./validator.yup.schematestoptions.params.md) | TParams | <i>(Optional)</i> |
-|  [test](./validator.yup.schematestoptions.test.md) | (this: { path: string; schema: TSchema; options: SchemaValidateOptions; parent: any; createError: (options: { path: string; message: LocaleValue; params?: TParams; }) =&gt; ValidationError; }, value: TValue) =&gt; boolean \| Promise&lt;boolean&gt; |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [exclusive?](./validator.yup.schematestoptions.exclusive.md) |  | boolean | _(Optional)_ |
+|  [message](./validator.yup.schematestoptions.message.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;TParams&gt; |  |
+|  [name](./validator.yup.schematestoptions.name.md) |  | string |  |
+|  [params?](./validator.yup.schematestoptions.params.md) |  | TParams | _(Optional)_ |
+|  [test](./validator.yup.schematestoptions.test.md) |  | (this: { path: string; schema: TSchema; options: [SchemaValidateOptions](./validator.yup.schemavalidateoptions.md)<!-- -->; parent: any; createError: (options: { path: string; message: [LocaleValue](./validator.yup.localevalue.md)<!-- -->; params?: TParams; }) =&gt; [ValidationError](./validator.yup.validationerror.md)<!-- -->; }, value: TValue) =&gt; boolean \| Promise&lt;boolean&gt; |  |
 

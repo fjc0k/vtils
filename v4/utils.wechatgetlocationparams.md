@@ -5,7 +5,7 @@
 ## WechatGetLocationParams interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatGetLocationParams 
@@ -13,7 +13,7 @@ export declare interface WechatGetLocationParams
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [type?](./utils.wechatgetlocationparams.type.md) | 'wgs84' \| 'gcj02' | <i>(Optional)</i> 默认为 wgs84 的 gps 坐标，如果要返回直接给 openLocation 用的火星坐标，可传入 gcj02。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [type?](./utils.wechatgetlocationparams.type.md) |  | 'wgs84' \| 'gcj02' | _(Optional)_ 默认为 wgs84 的 gps 坐标，如果要返回直接给 openLocation 用的火星坐标，可传入 gcj02。 |
 

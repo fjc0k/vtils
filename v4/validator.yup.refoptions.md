@@ -4,7 +4,7 @@
 
 ## yup.RefOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface RefOptions<T> 
@@ -12,7 +12,7 @@ export interface RefOptions<T>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [map?](./validator.yup.refoptions.map.md) | (value: any) =&gt; T | <i>(Optional)</i> |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [map?](./validator.yup.refoptions.map.md) |  | (value: any) =&gt; T | _(Optional)_ |
 

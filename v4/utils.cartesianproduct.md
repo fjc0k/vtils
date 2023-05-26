@@ -6,7 +6,7 @@
 
 计算多个数组的笛卡尔积。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function cartesianProduct<T>(arr: [T[]]): [T][];
@@ -18,7 +18,7 @@ export declare function cartesianProduct<T>(arr: [T[]]): [T][];
 |  --- | --- | --- |
 |  arr | \[T\[\]\] | 数组内容 |
 
-<b>Returns:</b>
+**Returns:**
 
 \[T\]\[\]
 
@@ -31,6 +31,5 @@ cartesianProduct([
   [1, 2],
 ])
 // => [['a', 1], ['a', 2], ['b', 1], ['b', 2]]
-
 ```
 

@@ -6,12 +6,12 @@
 
 销毁组件并移除 DOM 节点。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 destroy(): void;
 ```
-<b>Returns:</b>
+**Returns:**
 
 void
 

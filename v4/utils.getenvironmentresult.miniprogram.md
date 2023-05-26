@@ -6,7 +6,7 @@
 
 小程序
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly miniProgram: boolean;

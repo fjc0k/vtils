@@ -8,7 +8,7 @@ Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 emitBOM?: boolean;

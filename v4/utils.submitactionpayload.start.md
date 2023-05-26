@@ -6,7 +6,7 @@
 
 开始提示。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 start(message?: T): Promise<any>;
@@ -16,9 +16,9 @@ start(message?: T): Promise<any>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | T | 提示信息 |
+|  message | T | _(Optional)_ 提示信息 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

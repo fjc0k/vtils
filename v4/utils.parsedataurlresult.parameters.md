@@ -4,7 +4,7 @@
 
 ## ParseDataUrlResult.parameters property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 parameters: Record<LiteralUnion<'name' | 'charset' | 'base64', string>, string>;

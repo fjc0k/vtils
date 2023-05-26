@@ -4,7 +4,7 @@
 
 ## yup.RefOptions.map property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 map?: (value: any) => T;

@@ -8,7 +8,7 @@
 
  urls\[0\]
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 current?: string;

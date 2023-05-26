@@ -6,7 +6,7 @@
 
 准备数据。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function prepareData<T extends Record<string, () => any>>(getter: T): Promise<{
@@ -20,7 +20,7 @@ export declare function prepareData<T extends Record<string, () => any>>(getter:
 |  --- | --- | --- |
 |  getter | T | 数据源 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;{ \[K in keyof T\]: Awaited&lt;ReturnType&lt;T\[K\]&gt;&gt;; }&gt;
 

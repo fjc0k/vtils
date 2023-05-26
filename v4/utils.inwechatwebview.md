@@ -6,12 +6,12 @@
 
 检查是否在微信内置浏览器中。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function inWechatWebView(): boolean;
 ```
-<b>Returns:</b>
+**Returns:**
 
 boolean
 
@@ -24,6 +24,5 @@ boolean
 if (inWechatWebView()) {
   console.log('你在微信内置浏览器中')
 }
-
 ```
 

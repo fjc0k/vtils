@@ -8,7 +8,7 @@
 
 - 加数列表为空时返回 0； - 加数列表长度为 1 时返回第 1 个的值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 add(...values: CalculatorValue[]): T;
@@ -20,7 +20,7 @@ add(...values: CalculatorValue[]): T;
 |  --- | --- | --- |
 |  values | [CalculatorValue](./utils.calculatorvalue.md)<!-- -->\[\] | 加数列表 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

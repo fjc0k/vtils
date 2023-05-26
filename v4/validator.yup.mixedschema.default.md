@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.default() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 default(value: T | (() => T)): this;
@@ -16,7 +16,7 @@ default(value: T | (() => T)): this;
 |  --- | --- | --- |
 |  value | T \| (() =&gt; T) |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

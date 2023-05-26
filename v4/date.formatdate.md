@@ -6,7 +6,7 @@
 
 格式化日期。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function formatDate(date: Date | number, renderer: FormatDateRenderer): string;
@@ -19,7 +19,7 @@ export declare function formatDate(date: Date | number, renderer: FormatDateRend
 |  date | Date \| number | 要格式化的日期，支持 Date、秒或毫秒时间戳 |
 |  renderer | [FormatDateRenderer](./date.formatdaterenderer.md) | 渲染器 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -33,6 +33,5 @@ formatDate(
   new Date(2020, 5 - 1, 20, 13, 14, 21),
   _ => `${_.yyyy}-${_.mm}-${_.dd} ${_.hh}:${_.ii}:${_.ss}`,
 ) // => '2020-05-20 13:14:21'
-
 ```
 

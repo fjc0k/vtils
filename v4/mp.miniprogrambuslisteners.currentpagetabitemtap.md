@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.currentPageTabItemTap property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 currentPageTabItemTap: Defined<WechatMiniprogram.Page.Options<{}, {}>['onTabItemTap']>;

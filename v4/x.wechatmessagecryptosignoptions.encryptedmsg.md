@@ -6,7 +6,7 @@
 
 加密后的消息
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 encryptedMsg: string;

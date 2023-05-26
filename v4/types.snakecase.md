@@ -8,12 +8,12 @@ Convert a string literal to snake-case.
 
 This can be useful when, for example, converting a camel-cased object property to a snake-cased SQL column name.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type SnakeCase<Value> = DelimiterCase<Value, '_'>;
 ```
-<b>References:</b> [DelimiterCase](./types.delimitercase.md)
+**References:** [DelimiterCase](./types.delimitercase.md)
 
 ## Example
 

@@ -4,7 +4,7 @@
 
 ## ParsedRichUrl.desc property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 desc?: TDesc;

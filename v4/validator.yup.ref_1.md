@@ -4,7 +4,7 @@
 
 ## yup.ref() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function ref<X, T extends X>(path: string, map?: NonNullable<RefOptions<T>['map']>): Ref<X>;
@@ -15,9 +15,9 @@ export declare function ref<X, T extends X>(path: string, map?: NonNullable<RefO
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  path | string |  |
-|  map | NonNullable&lt;RefOptions&lt;T&gt;\['map'\]&gt; |  |
+|  map | NonNullable&lt;[RefOptions](./validator.yup.refoptions.md)<!-- -->&lt;T&gt;\['map'\]&gt; | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
-Ref&lt;X&gt;
+[Ref](./validator.yup.ref.md)<!-- -->&lt;X&gt;
 

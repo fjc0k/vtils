@@ -6,7 +6,7 @@
 
 解析 XML 文本。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function parseXml<T>(text: string, options?: X2jOptionsOptional): T;
@@ -17,9 +17,9 @@ export declare function parseXml<T>(text: string, options?: X2jOptionsOptional):
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  text | string | XML 文本 |
-|  options | X2jOptionsOptional | 选项 |
+|  options | X2jOptionsOptional | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

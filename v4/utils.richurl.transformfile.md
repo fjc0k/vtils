@@ -6,7 +6,7 @@
 
 转换数据中的文件富链接。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static transformFile<TData>(data: TData, callback: (parsedFileRichUrl: ParsedFileRichUrl) => Promise<string>): Promise<TData>;
@@ -19,7 +19,7 @@ static transformFile<TData>(data: TData, callback: (parsedFileRichUrl: ParsedFil
 |  data | TData | 数据 |
 |  callback | (parsedFileRichUrl: [ParsedFileRichUrl](./utils.parsedfilerichurl.md)<!-- -->) =&gt; Promise&lt;string&gt; | 回调 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;TData&gt;
 

@@ -5,7 +5,7 @@
 ## WechatChooseImageParams interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatChooseImageParams 
@@ -13,9 +13,9 @@ export declare interface WechatChooseImageParams
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [count?](./utils.wechatchooseimageparams.count.md) | number | <i>(Optional)</i> 选择图片数量。 9 |
-|  [sizeType?](./utils.wechatchooseimageparams.sizetype.md) | Array&lt;'original' \| 'compressed'&gt; | <i>(Optional)</i> 图片质量，可以指定是原图还是压缩图。 \['original', 'compressed'\] |
-|  [sourceType?](./utils.wechatchooseimageparams.sourcetype.md) | Array&lt;'album' \| 'camera'&gt; | <i>(Optional)</i> 选择来源，可以指定是相册还是相机。 \['album', 'camera'\] |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [count?](./utils.wechatchooseimageparams.count.md) |  | number | <p>_(Optional)_ 选择图片数量。</p><p> 9</p> |
+|  [sizeType?](./utils.wechatchooseimageparams.sizetype.md) |  | Array&lt;'original' \| 'compressed'&gt; | <p>_(Optional)_ 图片质量，可以指定是原图还是压缩图。</p><p> \['original', 'compressed'\]</p> |
+|  [sourceType?](./utils.wechatchooseimageparams.sourcetype.md) |  | Array&lt;'album' \| 'camera'&gt; | <p>_(Optional)_ 选择来源，可以指定是相册还是相机。</p><p> \['album', 'camera'\]</p> |
 

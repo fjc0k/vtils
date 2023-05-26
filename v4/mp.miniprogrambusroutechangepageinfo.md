@@ -4,7 +4,7 @@
 
 ## MiniProgramBusRouteChangePageInfo interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface MiniProgramBusRouteChangePageInfo 
@@ -12,9 +12,9 @@ export declare interface MiniProgramBusRouteChangePageInfo
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [path](./mp.miniprogrambusroutechangepageinfo.path.md) | string |  |
-|  [query](./mp.miniprogrambusroutechangepageinfo.query.md) | AnyObject\_2 |  |
-|  [url](./mp.miniprogrambusroutechangepageinfo.url.md) | string |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [path](./mp.miniprogrambusroutechangepageinfo.path.md) |  | string |  |
+|  [query](./mp.miniprogrambusroutechangepageinfo.query.md) |  | AnyObject\_2 |  |
+|  [url](./mp.miniprogrambusroutechangepageinfo.url.md) |  | string |  |
 

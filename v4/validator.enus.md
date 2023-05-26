@@ -4,7 +4,7 @@
 
 ## enUS variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 enUS: yup.Locale

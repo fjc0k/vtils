@@ -6,14 +6,14 @@
 
 Converts a string literal to pascal-case.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type PascalCase<Value> = CamelCase<Value> extends string
 	? Capitalize<CamelCase<Value>>
 	: CamelCase<Value>;
 ```
-<b>References:</b> [CamelCase](./types.camelcase.md)
+**References:** [CamelCase](./types.camelcase.md)
 
 ## Example
 

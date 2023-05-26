@@ -11,17 +11,17 @@
 |  Class | Description |
 |  --- | --- |
 |  [DataPacker](./utils.datapacker.md) | 数据打包器。 |
-|  [EventBus](./utils.eventbus.md) | 事件巴士，管理事件的发布与订阅。 TListeners 事件名称及其对应的回调描述 |
-|  [GeoCoord](./utils.geocoord.md) | 地理坐标系转换工具。<!-- -->- <code>大地坐标系（WGS84 坐标系）</code>: GPS 全球卫星定位系统使用的坐标系； - <code>火星坐标系（GCJ02 坐标系）</code>: 腾讯地图、高德地图等使用的坐标系，是由中国国家测绘局制定的由 WGS84 加密后得到的坐标系； - <code>百度坐标系（BD09 坐标系）</code>: 百度地图使用的坐标系，是在 GCJ02 基础上再次加密得到的坐标系。 |
+|  [EventBus](./utils.eventbus.md) | <p>事件巴士，管理事件的发布与订阅。</p><p> TListeners 事件名称及其对应的回调描述</p> |
+|  [GeoCoord](./utils.geocoord.md) | <p>地理坐标系转换工具。</p><p>- <code>大地坐标系（WGS84 坐标系）</code>: GPS 全球卫星定位系统使用的坐标系； - <code>火星坐标系（GCJ02 坐标系）</code>: 腾讯地图、高德地图等使用的坐标系，是由中国国家测绘局制定的由 WGS84 加密后得到的坐标系； - <code>百度坐标系（BD09 坐标系）</code>: 百度地图使用的坐标系，是在 GCJ02 基础上再次加密得到的坐标系。</p> |
 |  [LocalStoragePlus](./utils.localstorageplus.md) | 本地存储增强。 |
 |  [LoopUntilRetryLimitExceededError](./utils.loopuntilretrylimitexceedederror.md) |  |
 |  [MiniProgramUrl](./utils.miniprogramurl.md) | 小程序链接。 |
-|  [RichUrl](./utils.richurl.md) | 富链接，同普通链接相比，富链接可包含一些描述信息。<!-- -->结构描述：
+|  [RichUrl](./utils.richurl.md) | <p>富链接，同普通链接相比，富链接可包含一些描述信息。</p><p>结构描述：</p>
 ```text
 rich://{"url":"***","desc":"***"}
-
 ```
  |
+|  [StringTemplate](./utils.stringtemplate.md) | 字符串模板。 |
 |  [TreeData](./utils.treedata.md) | 树数据处理。支持单根节点、多根节点树数据。 |
 |  [Wechat](./utils.wechat.md) | 对微信 JSSDK 的封装。 |
 
@@ -62,12 +62,12 @@ rich://{"url":"***","desc":"***"}
 |  [defaultIndexTo(index, defaultIndex)](./utils.defaultindexto.md) | 设置默认索引。当前索引为 <code>-1</code> 或 <code>NaN</code> 时会使用默认索引。 |
 |  [formatBytes(value)](./utils.formatbytes.md) | 格式化字节数，以 1024 作为千字节数。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
-|  [getCurrentScript()](./utils.getcurrentscript.md) | 返回当前正在运行的脚本所属的 <code>&lt;script&gt;</code> 元素。有两点限制：<!-- -->- 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 <code>null</code>。 |
+|  [getCurrentScript()](./utils.getcurrentscript.md) | <p>返回当前正在运行的脚本所属的 <code>&lt;script&gt;</code> 元素。有两点限制：</p><p>- 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 <code>null</code>。</p> |
 |  [getEnvironment()](./utils.getenvironment.md) | 获取运行环境信息。 |
 |  [getWechatPublicAccountQrcodeUrl(accountId)](./utils.getwechatpublicaccountqrcodeurl.md) | 获取微信公众号的二维码链接。 |
 |  [htmlToDocumentFragment(html)](./utils.htmltodocumentfragment.md) | 将 HTML 字符串转为 DocumentFragment。 |
 |  [htmlToElement(html)](./utils.htmltoelement.md) | 将 HTML 字符串转为 Element。 |
-|  [ii(fn)](./utils.ii.md) | 立即调用函数并返回其返回值。<!-- -->注：<code>ii = immediately invoke</code> |
+|  [ii(fn)](./utils.ii.md) | <p>立即调用函数并返回其返回值。</p><p>注：<code>ii = immediately invoke</code></p> |
 |  [inAndroid()](./utils.inandroid.md) | 检查是否在 Android 设备中。 |
 |  [inBrowser()](./utils.inbrowser.md) | 检查是否在浏览器环境中。 |
 |  [inDeno()](./utils.indeno.md) | 检查是否在 Deno 中。 |
@@ -100,7 +100,7 @@ rich://{"url":"***","desc":"***"}
 |  [moveUp(arr, from, step)](./utils.moveup.md) | 原地上移数组中的某个元素。 |
 |  [onceMeanwhile(fn)](./utils.oncemeanwhile.md) | 同一时间对函数的调用只会触发一次运行。 |
 |  [parseDataUrl(dataUrl)](./utils.parsedataurl.md) | 解析 Data URL。 |
-|  [parseUrlQueryString(query, options)](./utils.parseurlquerystring.md) | 解析 url 查询字符串。<!-- -->兼容以 <code>?</code> 开头的查询字符串，因此你可以直接传入 <code>location.search</code> 的值。 |
+|  [parseUrlQueryString(query, options)](./utils.parseurlquerystring.md) | <p>解析 url 查询字符串。</p><p>兼容以 <code>?</code> 开头的查询字符串，因此你可以直接传入 <code>location.search</code> 的值。</p> |
 |  [pascalCase(text)](./utils.pascalcase.md) | 转换文本为没有分隔符的大写单词字符串。 |
 |  [placeKitten(size)](./utils.placekitten.md) | 给定大小获取占位猫咪图片。 |
 |  [placeKitten(width, height)](./utils.placekitten_1.md) | 给定宽高获取占位猫咪图片。 |
@@ -159,6 +159,7 @@ rich://{"url":"***","desc":"***"}
 |  [ParsedRichUrl](./utils.parsedrichurl.md) |  |
 |  [ReadFileReader](./utils.readfilereader.md) | 各种内容类型的读取器。 |
 |  [SignalResult](./utils.signalresult.md) |  |
+|  [StringTemplateRenderOptions](./utils.stringtemplaterenderoptions.md) |  |
 |  [SubmitActionPayload](./utils.submitactionpayload.md) |  |
 |  [TreeDataNode](./utils.treedatanode.md) |  |
 |  [TreeDataOptions](./utils.treedataoptions.md) |  |
@@ -187,7 +188,7 @@ rich://{"url":"***","desc":"***"}
 |  Variable | Description |
 |  --- | --- |
 |  [Calculator](./utils.calculator.md) | 科学计算器。主要是为了避免 js 的浮点数精度计算问题。 |
-|  [devOrProd](./utils.devorprod.md) | 开发环境和生产环境返回不同的值或调用不同的函数。<code>process.env.NODE_ENV</code> 为空值、<code>production</code>、<code>prod</code> 时被认为是生产环境，否则是开发环境。 |
+|  [devOrProd](./utils.devorprod.md) | <p>开发环境和生产环境返回不同的值或调用不同的函数。</p><p><code>process.env.NODE_ENV</code> 为空值、<code>production</code>、<code>prod</code> 时被认为是生产环境，否则是开发环境。</p> |
 |  [keysStrict](./utils.keysstrict.md) | 同 [keys](https://lodash.com/docs/4.17.15#keys)<!-- -->，不过采用了严格的类型定义。 |
 |  [omitStrict](./utils.omitstrict.md) | 同 [omit](https://lodash.com/docs/4.17.15#omit)<!-- -->，不过采用了严格的类型定义。 |
 |  [pickStrict](./utils.pickstrict.md) | 同 [pick](https://lodash.com/docs/4.17.15#pick)<!-- -->，不过采用了严格的类型定义。 |

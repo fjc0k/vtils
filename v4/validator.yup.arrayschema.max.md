@@ -4,7 +4,7 @@
 
 ## yup.ArraySchema.max() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 max(limit: number | Ref<number>, message?: ArrayLocale['max']): this;
@@ -14,10 +14,10 @@ max(limit: number | Ref<number>, message?: ArrayLocale['max']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| Ref&lt;number&gt; |  |
-|  message | ArrayLocale\['max'\] |  |
+|  limit | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  message | [ArrayLocale](./validator.yup.arraylocale.md)<!-- -->\['max'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

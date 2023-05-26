@@ -4,7 +4,7 @@
 
 ## EventBusOptions.beforeEmit property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 beforeEmit?: EventBusBeforeEmit<TListeners>;

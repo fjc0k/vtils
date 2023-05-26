@@ -6,7 +6,7 @@
 
 Base directory to resolve non-relative module names.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 baseUrl?: string;

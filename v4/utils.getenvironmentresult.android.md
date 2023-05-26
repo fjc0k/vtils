@@ -6,7 +6,7 @@
 
 安卓
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly android: boolean;

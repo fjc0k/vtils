@@ -6,7 +6,7 @@
 
 获取给定值的 sha1 哈希。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function sha1(value: BinaryLike): string;
@@ -18,7 +18,7 @@ export declare function sha1(value: BinaryLike): string;
 |  --- | --- | --- |
 |  value | BinaryLike | 给定值 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

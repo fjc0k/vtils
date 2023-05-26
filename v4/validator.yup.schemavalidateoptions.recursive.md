@@ -4,7 +4,7 @@
 
 ## yup.SchemaValidateOptions.recursive property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 recursive?: boolean;

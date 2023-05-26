@@ -6,12 +6,12 @@
 
 读取并返回 JSON 内容。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 json<T>(): Promise<T>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;T&gt;
 

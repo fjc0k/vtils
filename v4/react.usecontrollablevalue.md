@@ -6,10 +6,10 @@
 
 受控值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare function useControllableValue<TProps, TDefaultValuePropName extends keyof TProps, TValuePropName extends keyof TProps, TCallbackPropName extends keyof TProps, TDefaultValue extends TProps[TValuePropName]>(props: TProps, options: UseControllableValueOptions<TProps, TDefaultValuePropName, TValuePropName, TCallbackPropName, TDefaultValue>): UseControllableValueResult<TProps, TValuePropName, TCallbackPropName, TDefaultValue>;
+export declare function useControllableValue<TProps extends {}, TDefaultValuePropName extends keyof TProps, TValuePropName extends keyof TProps, TCallbackPropName extends keyof TProps, TDefaultValue extends TProps[TValuePropName]>(props: TProps, options: UseControllableValueOptions<TProps, TDefaultValuePropName, TValuePropName, TCallbackPropName, TDefaultValue>): UseControllableValueResult<TProps, TValuePropName, TCallbackPropName, TDefaultValue>;
 ```
 
 ## Parameters
@@ -19,7 +19,7 @@ export declare function useControllableValue<TProps, TDefaultValuePropName exten
 |  props | TProps | 组件的属性 |
 |  options | [UseControllableValueOptions](./react.usecontrollablevalueoptions.md)<!-- -->&lt;TProps, TDefaultValuePropName, TValuePropName, TCallbackPropName, TDefaultValue&gt; | 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 [UseControllableValueResult](./react.usecontrollablevalueresult.md)<!-- -->&lt;TProps, TValuePropName, TCallbackPropName, TDefaultValue&gt;
 

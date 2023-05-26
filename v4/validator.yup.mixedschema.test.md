@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.test() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 test(test: SchemaTestOptions<this, T>['test'] | RegExp, message?: SchemaTestOptions<this, T>['message']): this;
@@ -14,10 +14,10 @@ test(test: SchemaTestOptions<this, T>['test'] | RegExp, message?: SchemaTestOpti
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  test | SchemaTestOptions&lt;this, T&gt;\['test'\] \| RegExp |  |
-|  message | SchemaTestOptions&lt;this, T&gt;\['message'\] |  |
+|  test | [SchemaTestOptions](./validator.yup.schematestoptions.md)<!-- -->&lt;this, T&gt;\['test'\] \| RegExp |  |
+|  message | [SchemaTestOptions](./validator.yup.schematestoptions.md)<!-- -->&lt;this, T&gt;\['message'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

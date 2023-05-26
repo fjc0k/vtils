@@ -10,7 +10,7 @@ Currently, when a union type of a primitive type is combined with literal types,
 
 This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com/Microsoft/TypeScript/issues/29729). It will be removed as soon as it's not needed anymore.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type LiteralUnion<

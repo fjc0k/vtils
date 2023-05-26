@@ -4,7 +4,7 @@
 
 ## CopyTextToClipboardOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface CopyTextToClipboardOptions 
@@ -12,7 +12,7 @@ export declare interface CopyTextToClipboardOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [containerClass?](./utils.copytexttoclipboardoptions.containerclass.md) | string | <i>(Optional)</i> 复制容器的类名。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [containerClass?](./utils.copytexttoclipboardoptions.containerclass.md) |  | string | _(Optional)_ 复制容器的类名。 |
 

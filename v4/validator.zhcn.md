@@ -4,7 +4,7 @@
 
 ## zhCN variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 zhCN: yup.Locale

@@ -4,7 +4,7 @@
 
 ## yup.ObjectSchema.shape() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 shape(fields: GetObjectSchema<T>, noSortEdges?: Array<[string, string]>): this;
@@ -14,10 +14,10 @@ shape(fields: GetObjectSchema<T>, noSortEdges?: Array<[string, string]>): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fields | GetObjectSchema&lt;T&gt; |  |
-|  noSortEdges | Array&lt;\[string, string\]&gt; |  |
+|  fields | [GetObjectSchema](./validator.yup.getobjectschema.md)<!-- -->&lt;T&gt; |  |
+|  noSortEdges | Array&lt;\[string, string\]&gt; | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

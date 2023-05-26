@@ -6,7 +6,7 @@
 
 复制容器的类名。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 containerClass?: string;

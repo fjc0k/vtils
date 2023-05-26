@@ -6,7 +6,7 @@
 
 微信内网页的非基础菜单列表。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type WechatNonBaseMenuItem = 'menuItem:share:appMessage' | 'menuItem:share:timeline' | 'menuItem:share:qq' | 'menuItem:share:weiboApp' | 'menuItem:favorite' | 'menuItem:share:facebook' | 'menuItem:share:QZone' | 'menuItem:editTag' | 'menuItem:delete' | 'menuItem:copyUrl' | 'menuItem:originPage' | 'menuItem:readMode' | 'menuItem:openWithQQBrowser' | 'menuItem:openWithSafari' | 'menuItem:share:email' | 'menuItem:share:brand';

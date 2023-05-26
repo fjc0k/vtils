@@ -4,7 +4,7 @@
 
 ## yup.NumberSchema.integer() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 integer(message?: NumberLocale['integer']): this;
@@ -14,9 +14,9 @@ integer(message?: NumberLocale['integer']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | NumberLocale\['integer'\] |  |
+|  message | [NumberLocale](./validator.yup.numberlocale.md)<!-- -->\['integer'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

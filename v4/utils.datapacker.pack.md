@@ -6,7 +6,7 @@
 
 打包数据。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static pack<TRawObjectData extends RawData>(rawData: TRawObjectData): PackedData<TRawObjectData>;
@@ -18,7 +18,7 @@ static pack<TRawObjectData extends RawData>(rawData: TRawObjectData): PackedData
 |  --- | --- | --- |
 |  rawData | TRawObjectData |  |
 
-<b>Returns:</b>
+**Returns:**
 
 [PackedData](./utils.packeddata.md)<!-- -->&lt;TRawObjectData&gt;
 

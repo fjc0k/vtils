@@ -4,7 +4,7 @@
 
 ## intervalToRestrictiveDuration() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function intervalToRestrictiveDuration(start: string | number | Date, end: string | number | Date, target?: IntervalToRestrictiveDurationTarget): IntervalToRestrictiveDurationResult;
@@ -16,9 +16,9 @@ export declare function intervalToRestrictiveDuration(start: string | number | D
 |  --- | --- | --- |
 |  start | string \| number \| Date |  |
 |  end | string \| number \| Date |  |
-|  target | [IntervalToRestrictiveDurationTarget](./date.intervaltorestrictivedurationtarget.md) |  |
+|  target | [IntervalToRestrictiveDurationTarget](./date.intervaltorestrictivedurationtarget.md) | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 [IntervalToRestrictiveDurationResult](./date.intervaltorestrictivedurationresult.md)
 

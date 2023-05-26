@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.currentPageReady property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 currentPageReady: Defined<WechatMiniprogram.Page.Options<{}, {}>['onReady']>;

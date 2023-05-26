@@ -6,7 +6,7 @@
 
 完全重渲染，新属性将直接作为全部属性传给组件。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 fullRerender(props: React_2.ComponentProps<TComponent>): void;
@@ -18,7 +18,7 @@ fullRerender(props: React_2.ComponentProps<TComponent>): void;
 |  --- | --- | --- |
 |  props | React\_2.ComponentProps&lt;TComponent&gt; | 新属性 |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

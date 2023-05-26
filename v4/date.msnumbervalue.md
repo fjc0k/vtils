@@ -4,7 +4,7 @@
 
 ## MsNumberValue type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MsNumberValue = number;

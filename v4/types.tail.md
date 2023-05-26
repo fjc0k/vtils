@@ -4,7 +4,7 @@
 
 ## Tail type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Tail<T extends AnyArray_2> = T["length"] extends 0
@@ -13,3 +13,5 @@ export declare type Tail<T extends AnyArray_2> = T["length"] extends 0
 ? Rest
 : never;
 ```
+**References:** [AnyArray\_2](./types.anyarray_2.md)
+

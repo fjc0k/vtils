@@ -4,10 +4,10 @@
 
 ## RawData type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type RawData<TRawObjectData extends RawObjectData = RawObjectData> = TRawObjectData | RawListData<TRawObjectData>;
 ```
-<b>References:</b> [RawObjectData](./utils.rawobjectdata.md)<!-- -->, [RawListData](./utils.rawlistdata.md)
+**References:** [RawObjectData](./utils.rawobjectdata.md)<!-- -->, [RawListData](./utils.rawlistdata.md)
 

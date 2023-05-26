@@ -6,7 +6,7 @@
 
 当前深度。从 `0` 开始。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 depth: number;

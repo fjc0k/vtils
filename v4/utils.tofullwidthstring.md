@@ -6,7 +6,7 @@
 
 转换为全角字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function toFullWidthString(value: string): string;
@@ -18,7 +18,7 @@ export declare function toFullWidthString(value: string): string;
 |  --- | --- | --- |
 |  value | string | 要转换的字符串 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

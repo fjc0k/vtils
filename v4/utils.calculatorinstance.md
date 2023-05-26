@@ -4,7 +4,7 @@
 
 ## CalculatorInstance interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface CalculatorInstance<T = number> 
@@ -12,18 +12,18 @@ export declare interface CalculatorInstance<T = number>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [decimal](./utils.calculatorinstance.decimal.md) | typeof DecimalLight | decimal.js 引用。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [decimal](./utils.calculatorinstance.decimal.md) |  | typeof DecimalLight | decimal.js 引用。 |
 
 ## Methods
 
 |  Method | Description |
 |  --- | --- |
-|  [add(values)](./utils.calculatorinstance.add.md) | 加。<!-- -->- 加数列表为空时返回 0； - 加数列表长度为 1 时返回第 1 个的值。 |
-|  [div(values)](./utils.calculatorinstance.div.md) | 除。<!-- -->- 除数列表为空时返回 0； - 除数列表长度为 1 时返回第 1 个的值。 |
+|  [add(values)](./utils.calculatorinstance.add.md) | <p>加。</p><p>- 加数列表为空时返回 0； - 加数列表长度为 1 时返回第 1 个的值。</p> |
+|  [div(values)](./utils.calculatorinstance.div.md) | <p>除。</p><p>- 除数列表为空时返回 0； - 除数列表长度为 1 时返回第 1 个的值。</p> |
 |  [make(config)](./utils.calculatorinstance.make.md) | 根据配置创建一个新的计算器。 |
-|  [mul(values)](./utils.calculatorinstance.mul.md) | 乘。<!-- -->- 乘数列表为空时返回 0； - 乘数列表长度为 1 时返回第 1 个的值。 |
-|  [sub(values)](./utils.calculatorinstance.sub.md) | 减。<!-- -->- 减数列表为空时返回 0； - 减数列表长度为 1 时返回第 1 个的值。 |
+|  [mul(values)](./utils.calculatorinstance.mul.md) | <p>乘。</p><p>- 乘数列表为空时返回 0； - 乘数列表长度为 1 时返回第 1 个的值。</p> |
+|  [sub(values)](./utils.calculatorinstance.sub.md) | <p>减。</p><p>- 减数列表为空时返回 0； - 减数列表长度为 1 时返回第 1 个的值。</p> |
 |  [toNumber(value)](./utils.calculatorinstance.tonumber.md) | 转换为数字。 |
 

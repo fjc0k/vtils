@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.appError property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 appError: Defined<WechatMiniprogram.App.Options<{}>['onError']>;

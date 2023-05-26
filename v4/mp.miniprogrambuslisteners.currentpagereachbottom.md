@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.currentPageReachBottom property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 currentPageReachBottom: Defined<WechatMiniprogram.Page.Options<{}, {}>['onReachBottom']>;

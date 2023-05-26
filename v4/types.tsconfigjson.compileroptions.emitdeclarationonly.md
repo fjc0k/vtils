@@ -8,7 +8,7 @@ Only emit `.d.ts` declaration files.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 emitDeclarationOnly?: boolean;

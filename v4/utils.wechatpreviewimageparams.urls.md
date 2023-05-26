@@ -6,7 +6,7 @@
 
 需要预览的图片链接列表。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 urls: string[];

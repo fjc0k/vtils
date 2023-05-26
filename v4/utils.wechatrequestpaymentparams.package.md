@@ -6,7 +6,7 @@
 
 统一支付接口返回的 prepay\_id 参数值，如：`prepay_id=xxx`<!-- -->。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 package: string;

@@ -4,12 +4,12 @@
 
 ## TreeDataStandardNode type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type TreeDataStandardNode<TNode extends TreeDataNode> = Merge<TNode, {
     children: Array<TreeDataStandardNode<TNode>>;
 }>;
 ```
-<b>References:</b> [TreeDataNode](./utils.treedatanode.md)<!-- -->, [TreeDataStandardNode](./utils.treedatastandardnode.md)
+**References:** [TreeDataNode](./utils.treedatanode.md)<!-- -->, [TreeDataStandardNode](./utils.treedatastandardnode.md)
 

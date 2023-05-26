@@ -4,7 +4,7 @@
 
 ## yup.NumberSchema.moreThan() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 moreThan(min: number | Ref<number>, message?: NumberLocale['moreThan']): this;
@@ -14,10 +14,10 @@ moreThan(min: number | Ref<number>, message?: NumberLocale['moreThan']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  min | number \| Ref&lt;number&gt; |  |
-|  message | NumberLocale\['moreThan'\] |  |
+|  min | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  message | [NumberLocale](./validator.yup.numberlocale.md)<!-- -->\['moreThan'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

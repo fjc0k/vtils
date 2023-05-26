@@ -4,7 +4,7 @@
 
 ## yup.MixedLocale interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface MixedLocale 
@@ -12,12 +12,12 @@ export interface MixedLocale
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [default](./validator.yup.mixedlocale.default.md) | LocaleValue |  |
-|  [defined](./validator.yup.mixedlocale.defined.md) | LocaleValue |  |
-|  [notOneOf](./validator.yup.mixedlocale.notoneof.md) | LocaleValue&lt;{ values: string; }&gt; |  |
-|  [notType](./validator.yup.mixedlocale.nottype.md) | LocaleValue |  |
-|  [oneOf](./validator.yup.mixedlocale.oneof.md) | LocaleValue&lt;{ values: string; }&gt; |  |
-|  [required](./validator.yup.mixedlocale.required.md) | LocaleValue |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [default](./validator.yup.mixedlocale.default.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [defined](./validator.yup.mixedlocale.defined.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [notOneOf](./validator.yup.mixedlocale.notoneof.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ values: string; }&gt; |  |
+|  [notType](./validator.yup.mixedlocale.nottype.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [oneOf](./validator.yup.mixedlocale.oneof.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ values: string; }&gt; |  |
+|  [required](./validator.yup.mixedlocale.required.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
 

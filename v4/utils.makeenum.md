@@ -6,7 +6,7 @@
 
 构造枚举数据。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function makeEnum<T extends EnumMap>(map: T): EnumResult<T>;
@@ -18,7 +18,7 @@ export declare function makeEnum<T extends EnumMap>(map: T): EnumResult<T>;
 |  --- | --- | --- |
 |  map | T | 枚举映射数据 |
 
-<b>Returns:</b>
+**Returns:**
 
 [EnumResult](./utils.enumresult.md)<!-- -->&lt;T&gt;
 

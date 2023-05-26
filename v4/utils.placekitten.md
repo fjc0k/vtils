@@ -6,7 +6,7 @@
 
 给定大小获取占位猫咪图片。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function placeKitten(size: number): string;
@@ -18,7 +18,7 @@ export declare function placeKitten(size: number): string;
 |  --- | --- | --- |
 |  size | number | 大小 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

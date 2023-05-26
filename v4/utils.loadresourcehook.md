@@ -4,10 +4,10 @@
 
 ## LoadResourceHook type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type LoadResourceHook = (el: LoadResourceElement) => any;
 ```
-<b>References:</b> [LoadResourceElement](./utils.loadresourceelement.md)
+**References:** [LoadResourceElement](./utils.loadresourceelement.md)
 

@@ -6,7 +6,7 @@
 
 选择图片。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 chooseImage(params?: WechatChooseImageParams): Promise<string[]>;
@@ -16,9 +16,9 @@ chooseImage(params?: WechatChooseImageParams): Promise<string[]>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  params | [WechatChooseImageParams](./utils.wechatchooseimageparams.md) | 参数 |
+|  params | [WechatChooseImageParams](./utils.wechatchooseimageparams.md) | _(Optional)_ 参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;string\[\]&gt;
 

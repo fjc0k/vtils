@@ -4,7 +4,7 @@
 
 ## yup.SchemaValidateOptions.stripUnknown property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 stripUnknown?: boolean;

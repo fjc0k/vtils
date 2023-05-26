@@ -4,10 +4,10 @@
 
 ## yup.BooleanSchema interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface BooleanSchema<T extends boolean = boolean> extends MixedSchema<T> 
 ```
-<b>Extends:</b> MixedSchema&lt;T&gt;
+**Extends:** [MixedSchema](./validator.yup.mixedschema.md)<!-- -->&lt;T&gt;
 

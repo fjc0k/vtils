@@ -8,7 +8,7 @@ True if the output of this reference should be prepended to the output of this p
 
 Only valid for `--outFile` compilations.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 prepend?: boolean;

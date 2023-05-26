@@ -4,12 +4,12 @@
 
 ## yup.ObjectSchema.camelCase() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 camelCase(): this;
 ```
-<b>Returns:</b>
+**Returns:**
 
 this
 

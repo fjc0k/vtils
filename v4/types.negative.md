@@ -8,7 +8,7 @@ A negative `number`<!-- -->/`bigint` (`-∞ < x < 0`<!-- -->)
 
 Use-case: Validating and documenting parameters.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Negative<T extends Numeric> = T extends Zero ? never : `${T}` extends `-${string}` ? T : never;

@@ -6,7 +6,7 @@
 
 顶栏高度。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 topBarHeight: number;

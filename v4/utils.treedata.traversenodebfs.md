@@ -6,7 +6,7 @@
 
 广度优先遍历节点。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 traverseNodeBFS(node: OneOrMore<TNode> | ((payload: TreeDataTraverseFnPayload<TNode>) => boolean), fn: OneOrMore<TreeDataTraverseFn<TNode> | false>): this;
@@ -19,7 +19,7 @@ traverseNodeBFS(node: OneOrMore<TNode> | ((payload: TreeDataTraverseFnPayload<TN
 |  node | OneOrMore&lt;TNode&gt; \| ((payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean) |  |
 |  fn | OneOrMore&lt;[TreeDataTraverseFn](./utils.treedatatraversefn.md)<!-- -->&lt;TNode&gt; \| false&gt; | 遍历函数 |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

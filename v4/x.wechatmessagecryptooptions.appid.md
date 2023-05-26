@@ -6,7 +6,7 @@
 
 公众号/第三方平台的 APPID
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 appId: string;

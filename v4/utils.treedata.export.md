@@ -6,12 +6,12 @@
 
 导出数据。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export(): TreeDataData<TNode>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 [TreeDataData](./utils.treedatadata.md)<!-- -->&lt;TNode&gt;
 

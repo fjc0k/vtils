@@ -4,7 +4,7 @@
 
 ## IntervalToRestrictiveDurationResult.milliseconds property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 milliseconds: number;

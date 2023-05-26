@@ -8,7 +8,7 @@
 
 \*\*注意: QQ 小程序下该项为 0，请自行选取默认值\*\*
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 menuButtonHorizontalMargin: number;

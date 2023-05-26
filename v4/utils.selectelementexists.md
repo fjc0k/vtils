@@ -4,7 +4,7 @@
 
 ## selectElementExists() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function selectElementExists(selectors: string | string[], baseElement?: ParentNode): boolean;
@@ -15,9 +15,9 @@ export declare function selectElementExists(selectors: string | string[], baseEl
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  selectors | string \| string\[\] | One or more CSS selectors separated by commas |
-|  baseElement | ParentNode | The element to look inside of  Whether it's been found |
+|  baseElement | ParentNode | _(Optional)_ The element to look inside of  Whether it's been found |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 

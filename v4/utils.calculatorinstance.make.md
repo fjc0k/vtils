@@ -6,7 +6,7 @@
 
 根据配置创建一个新的计算器。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 make(config?: CalculatorConfig): CalculatorInstance;
@@ -16,9 +16,9 @@ make(config?: CalculatorConfig): CalculatorInstance;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | [CalculatorConfig](./utils.calculatorconfig.md) | 配置 |
+|  config | [CalculatorConfig](./utils.calculatorconfig.md) | _(Optional)_ 配置 |
 
-<b>Returns:</b>
+**Returns:**
 
 [CalculatorInstance](./utils.calculatorinstance.md)
 

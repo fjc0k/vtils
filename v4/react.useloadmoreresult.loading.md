@@ -6,7 +6,7 @@
 
 是否正在加载数据
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 loading: boolean;

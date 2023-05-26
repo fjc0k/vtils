@@ -6,7 +6,7 @@
 
 遍历对象和数组。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function traverse(value: any, callback: (value: any, key: string | number, parent: any) => any): void;
@@ -19,7 +19,7 @@ export declare function traverse(value: any, callback: (value: any, key: string 
 |  value | any | 要遍历的值 |
 |  callback | (value: any, key: string \| number, parent: any) =&gt; any | 遍历回调 |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 
@@ -36,6 +36,5 @@ traverse([1, 2, {3: 4}], value => {
   // => {3: 4}
   // => 4
 })
-
 ```
 

@@ -6,7 +6,7 @@
 
 CPU architectures the module runs on.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 cpu?: Array<LiteralUnion<

@@ -4,7 +4,7 @@
 
 ## yup.ValidationError.inner property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 inner: any[];

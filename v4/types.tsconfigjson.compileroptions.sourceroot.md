@@ -6,7 +6,7 @@
 
 Specifies the location where debugger should locate TypeScript files instead of source locations.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sourceRoot?: string;

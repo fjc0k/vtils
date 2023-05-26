@@ -4,12 +4,12 @@
 
 ## yup.NumberSchema interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface NumberSchema<T extends number = number> extends MixedSchema<T> 
 ```
-<b>Extends:</b> MixedSchema&lt;T&gt;
+**Extends:** [MixedSchema](./validator.yup.mixedschema.md)<!-- -->&lt;T&gt;
 
 ## Methods
 

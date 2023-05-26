@@ -6,7 +6,7 @@
 
 An array of workspace pattern strings which contain the workspace packages.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 packages?: WorkspacePattern[];

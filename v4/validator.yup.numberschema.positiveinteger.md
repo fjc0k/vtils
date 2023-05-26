@@ -4,7 +4,7 @@
 
 ## yup.NumberSchema.positiveInteger() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 positiveInteger(message?: NumberLocale['positiveInteger']): this;
@@ -14,9 +14,9 @@ positiveInteger(message?: NumberLocale['positiveInteger']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | NumberLocale\['positiveInteger'\] |  |
+|  message | [NumberLocale](./validator.yup.numberlocale.md)<!-- -->\['positiveInteger'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

@@ -9,7 +9,7 @@
 > use `skipLibCheck` instead.
 > 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 skipDefaultLibCheck?: boolean;

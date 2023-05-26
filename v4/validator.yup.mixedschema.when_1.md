@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.when() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 when<V>(key: string, builder: {
@@ -19,9 +19,9 @@ when<V>(key: string, builder: {
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  key | string |  |
-|  builder | { is: boolean \| ((value: V) =&gt; boolean); then: GetSchema&lt;T&gt;; otherwise: GetSchema&lt;T&gt;; } |  |
+|  builder | { is: boolean \| ((value: V) =&gt; boolean); then: [GetSchema](./validator.yup.getschema.md)<!-- -->&lt;T&gt;; otherwise: [GetSchema](./validator.yup.getschema.md)<!-- -->&lt;T&gt;; } |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

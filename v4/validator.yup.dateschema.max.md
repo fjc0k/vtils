@@ -4,7 +4,7 @@
 
 ## yup.DateSchema.max() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 max(limit: Date | Ref<Date>, message?: DateLocale['max']): this;
@@ -14,10 +14,10 @@ max(limit: Date | Ref<Date>, message?: DateLocale['max']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | Date \| Ref&lt;Date&gt; |  |
-|  message | DateLocale\['max'\] |  |
+|  limit | Date \| [Ref](./validator.yup.ref.md)<!-- -->&lt;Date&gt; |  |
+|  message | [DateLocale](./validator.yup.datelocale.md)<!-- -->\['max'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

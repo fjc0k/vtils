@@ -10,7 +10,7 @@ Workspaces allow you to manage multiple packages within the same repository in s
 
 Please note that the top-level `private` property of `package.json` \*\*must\*\* be set to `true` in order to use workspaces.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 workspaces?: WorkspacePattern[] | WorkspaceConfig;

@@ -4,7 +4,7 @@
 
 ## yup.ObjectLocale.noUnknown property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noUnknown: LocaleValue<{

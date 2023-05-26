@@ -4,7 +4,7 @@
 
 ## yup.SchemaDescription interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface SchemaDescription 
@@ -12,10 +12,10 @@ export interface SchemaDescription
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [label](./validator.yup.schemadescription.label.md) | string |  |
-|  [meta](./validator.yup.schemadescription.meta.md) | {} |  |
-|  [tests](./validator.yup.schemadescription.tests.md) | Array&lt;{ name: string; params: {}; }&gt; |  |
-|  [type](./validator.yup.schemadescription.type.md) | string |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [label](./validator.yup.schemadescription.label.md) |  | string |  |
+|  [meta](./validator.yup.schemadescription.meta.md) |  | {} |  |
+|  [tests](./validator.yup.schemadescription.tests.md) |  | Array&lt;{ name: string; params: {}; }&gt; |  |
+|  [type](./validator.yup.schemadescription.type.md) |  | string |  |
 

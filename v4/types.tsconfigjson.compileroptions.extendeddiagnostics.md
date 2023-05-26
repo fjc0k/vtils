@@ -8,7 +8,7 @@ Output more detailed compiler performance information after building.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 extendedDiagnostics?: boolean;

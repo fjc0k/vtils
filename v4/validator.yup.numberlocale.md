@@ -4,7 +4,7 @@
 
 ## yup.NumberLocale interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface NumberLocale 
@@ -12,20 +12,20 @@ export interface NumberLocale
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [id](./validator.yup.numberlocale.id.md) | LocaleValue |  |
-|  [integer](./validator.yup.numberlocale.integer.md) | LocaleValue |  |
-|  [lessThan](./validator.yup.numberlocale.lessthan.md) | LocaleValue&lt;{ less: number; }&gt; |  |
-|  [max](./validator.yup.numberlocale.max.md) | LocaleValue&lt;{ max: number; }&gt; |  |
-|  [min](./validator.yup.numberlocale.min.md) | LocaleValue&lt;{ min: number; }&gt; |  |
-|  [moreThan](./validator.yup.numberlocale.morethan.md) | LocaleValue&lt;{ more: number; }&gt; |  |
-|  [negative](./validator.yup.numberlocale.negative.md) | LocaleValue&lt;{ less: number; }&gt; |  |
-|  [negativeInteger](./validator.yup.numberlocale.negativeinteger.md) | LocaleValue |  |
-|  [nonNegative](./validator.yup.numberlocale.nonnegative.md) | LocaleValue |  |
-|  [nonNegativeInteger](./validator.yup.numberlocale.nonnegativeinteger.md) | LocaleValue |  |
-|  [nonPositive](./validator.yup.numberlocale.nonpositive.md) | LocaleValue |  |
-|  [nonPositiveInteger](./validator.yup.numberlocale.nonpositiveinteger.md) | LocaleValue |  |
-|  [positive](./validator.yup.numberlocale.positive.md) | LocaleValue&lt;{ more: number; }&gt; |  |
-|  [positiveInteger](./validator.yup.numberlocale.positiveinteger.md) | LocaleValue |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [id](./validator.yup.numberlocale.id.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [integer](./validator.yup.numberlocale.integer.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [lessThan](./validator.yup.numberlocale.lessthan.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ less: number; }&gt; |  |
+|  [max](./validator.yup.numberlocale.max.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ max: number; }&gt; |  |
+|  [min](./validator.yup.numberlocale.min.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ min: number; }&gt; |  |
+|  [moreThan](./validator.yup.numberlocale.morethan.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ more: number; }&gt; |  |
+|  [negative](./validator.yup.numberlocale.negative.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ less: number; }&gt; |  |
+|  [negativeInteger](./validator.yup.numberlocale.negativeinteger.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [nonNegative](./validator.yup.numberlocale.nonnegative.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [nonNegativeInteger](./validator.yup.numberlocale.nonnegativeinteger.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [nonPositive](./validator.yup.numberlocale.nonpositive.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [nonPositiveInteger](./validator.yup.numberlocale.nonpositiveinteger.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  [positive](./validator.yup.numberlocale.positive.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ more: number; }&gt; |  |
+|  [positiveInteger](./validator.yup.numberlocale.positiveinteger.md) |  | [LocaleValue](./validator.yup.localevalue.md) |  |
 

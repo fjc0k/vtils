@@ -6,7 +6,7 @@
 
 异常回调。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 throw?(error: unknown): AsyncOrSync<any>;
@@ -18,7 +18,7 @@ throw?(error: unknown): AsyncOrSync<any>;
 |  --- | --- | --- |
 |  error | unknown |  |
 
-<b>Returns:</b>
+**Returns:**
 
 AsyncOrSync&lt;any&gt;
 

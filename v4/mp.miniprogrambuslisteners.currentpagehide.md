@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.currentPageHide property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 currentPageHide: Defined<WechatMiniprogram.Page.Options<{}, {}>['onHide']>;

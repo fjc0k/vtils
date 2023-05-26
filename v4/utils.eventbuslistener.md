@@ -4,12 +4,12 @@
 
 ## EventBusListener type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type EventBusListener<TCallback extends (...args: any[]) => any = (...args: any[]) => any> = TCallback & {
     __EVENT_BUS_TAG__?: EventBusListenerTag;
 };
 ```
-<b>References:</b> [EventBusListenerTag](./utils.eventbuslistenertag.md)
+**References:** [EventBusListenerTag](./utils.eventbuslistenertag.md)
 

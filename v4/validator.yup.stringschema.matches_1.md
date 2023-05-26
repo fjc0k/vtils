@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.matches() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 matches(regex: RegExp, options?: {
@@ -18,9 +18,9 @@ matches(regex: RegExp, options?: {
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  regex | RegExp |  |
-|  options | { excludeEmptyString?: boolean; message?: StringLocale\['matches'\]; } |  |
+|  options | { excludeEmptyString?: boolean; message?: [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['matches'\]; } | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

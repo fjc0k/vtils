@@ -8,7 +8,7 @@ Disallow inconsistently-cased references to the same file.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 forceConsistentCasingInFileNames?: boolean;

@@ -6,7 +6,7 @@
 
 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function base64UrlEncode(value: string): string;
@@ -18,7 +18,7 @@ export declare function base64UrlEncode(value: string): string;
 |  --- | --- | --- |
 |  value | string | 要编码的 UTF8 字符串 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -31,6 +31,5 @@ string
 base64UrlEncode('v') // => 'dg'
 base64UrlEncode('龙') // => '6b6Z'
 base64UrlEncode('🐱') // => '8J-QsQ'
-
 ```
 

@@ -6,7 +6,7 @@
 
 The licenses for the package.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 licenses?: Array<{

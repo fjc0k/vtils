@@ -8,7 +8,7 @@ Suppress excess property checks for object literals.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 suppressExcessPropertyErrors?: boolean;

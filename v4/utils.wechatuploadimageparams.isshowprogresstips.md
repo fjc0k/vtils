@@ -8,7 +8,7 @@
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 isShowProgressTips?: boolean;

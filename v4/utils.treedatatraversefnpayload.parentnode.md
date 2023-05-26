@@ -6,7 +6,7 @@
 
 父节点。为 `undefined` 时表示当前节点是根节点。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 parentNode: TNode | undefined;

@@ -4,7 +4,7 @@
 
 ## EventBusListenerDescriptor interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface EventBusListenerDescriptor<TListenerName extends keyof EventBusListeners> 
@@ -12,9 +12,9 @@ export declare interface EventBusListenerDescriptor<TListenerName extends keyof 
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [context?](./utils.eventbuslistenerdescriptor.context.md) | any | <i>(Optional)</i> |
-|  [name](./utils.eventbuslistenerdescriptor.name.md) | TListenerName |  |
-|  [tag?](./utils.eventbuslistenerdescriptor.tag.md) | [EventBusListenerTag](./utils.eventbuslistenertag.md) | <i>(Optional)</i> |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [context?](./utils.eventbuslistenerdescriptor.context.md) |  | any | _(Optional)_ |
+|  [name](./utils.eventbuslistenerdescriptor.name.md) |  | TListenerName |  |
+|  [tag?](./utils.eventbuslistenerdescriptor.tag.md) |  | [EventBusListenerTag](./utils.eventbuslistenertag.md) | _(Optional)_ |
 

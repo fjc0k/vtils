@@ -4,7 +4,7 @@
 
 ## TsConfigJson.CompilerOptions.Module type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type Module =

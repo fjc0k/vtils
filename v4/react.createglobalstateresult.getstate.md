@@ -4,12 +4,12 @@
 
 ## CreateGlobalStateResult.getState() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 getState(): S;
 ```
-<b>Returns:</b>
+**Returns:**
 
 S
 

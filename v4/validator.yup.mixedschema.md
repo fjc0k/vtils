@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface MixedSchema<T = any> 
@@ -12,10 +12,10 @@ export interface MixedSchema<T = any>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [\_\_isYupSchema\_\_](./validator.yup.mixedschema.__isyupschema__.md) | true |  |
-|  [type](./validator.yup.mixedschema.type.md) | 'mixed' \| 'string' \| 'number' \| 'boolean' \| 'object' \| 'date' \| 'array' |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [\_\_isYupSchema\_\_](./validator.yup.mixedschema.__isyupschema__.md) |  | true |  |
+|  [type](./validator.yup.mixedschema.type.md) |  | 'mixed' \| 'string' \| 'number' \| 'boolean' \| 'object' \| 'date' \| 'array' |  |
 
 ## Methods
 

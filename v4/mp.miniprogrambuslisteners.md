@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface MiniProgramBusListeners 
@@ -12,37 +12,37 @@ export declare interface MiniProgramBusListeners
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [appError](./mp.miniprogrambuslisteners.apperror.md) | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onError'\]&gt; |  |
-|  [appHide](./mp.miniprogrambuslisteners.apphide.md) | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onHide'\]&gt; |  |
-|  [appLaunch](./mp.miniprogrambuslisteners.applaunch.md) | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onLaunch'\]&gt; |  |
-|  [appShow](./mp.miniprogrambuslisteners.appshow.md) | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onShow'\]&gt; |  |
-|  [appThemeChange](./mp.miniprogrambuslisteners.appthemechange.md) | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onThemeChange'\]&gt; |  |
-|  [appUnhandledRejectionThrow](./mp.miniprogrambuslisteners.appunhandledrejectionthrow.md) | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onUnhandledRejection'\]&gt; |  |
-|  [currentPageAddToFavorites](./mp.miniprogrambuslisteners.currentpageaddtofavorites.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onAddToFavorites'\]&gt; |  |
-|  [currentPageHide](./mp.miniprogrambuslisteners.currentpagehide.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onHide'\]&gt; |  |
-|  [currentPagePullDownRefresh](./mp.miniprogrambuslisteners.currentpagepulldownrefresh.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onPullDownRefresh'\]&gt; |  |
-|  [currentPageReachBottom](./mp.miniprogrambuslisteners.currentpagereachbottom.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onReachBottom'\]&gt; |  |
-|  [currentPageReady](./mp.miniprogrambuslisteners.currentpageready.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onReady'\]&gt; |  |
-|  [currentPageResize](./mp.miniprogrambuslisteners.currentpageresize.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onResize'\]&gt; |  |
-|  [currentPageShareAppMessage](./mp.miniprogrambuslisteners.currentpageshareappmessage.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShareAppMessage'\]&gt; |  |
-|  [currentPageShareTimeline](./mp.miniprogrambuslisteners.currentpagesharetimeline.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShareTimeline'\]&gt; |  |
-|  [currentPageShow](./mp.miniprogrambuslisteners.currentpageshow.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShow'\]&gt; |  |
-|  [currentPageTabItemTap](./mp.miniprogrambuslisteners.currentpagetabitemtap.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onTabItemTap'\]&gt; |  |
-|  [currentPageUnload](./mp.miniprogrambuslisteners.currentpageunload.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onUnload'\]&gt; |  |
-|  [pageAddToFavorites](./mp.miniprogrambuslisteners.pageaddtofavorites.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onAddToFavorites'\]&gt; |  |
-|  [pageHide](./mp.miniprogrambuslisteners.pagehide.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onHide'\]&gt; |  |
-|  [pageLoad](./mp.miniprogrambuslisteners.pageload.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onLoad'\]&gt; |  |
-|  [pageNotFound](./mp.miniprogrambuslisteners.pagenotfound.md) | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onPageNotFound'\]&gt; |  |
-|  [pagePullDownRefresh](./mp.miniprogrambuslisteners.pagepulldownrefresh.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onPullDownRefresh'\]&gt; |  |
-|  [pageReachBottom](./mp.miniprogrambuslisteners.pagereachbottom.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onReachBottom'\]&gt; |  |
-|  [pageReady](./mp.miniprogrambuslisteners.pageready.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onReady'\]&gt; |  |
-|  [pageResize](./mp.miniprogrambuslisteners.pageresize.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onResize'\]&gt; |  |
-|  [pageShareAppMessage](./mp.miniprogrambuslisteners.pageshareappmessage.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShareAppMessage'\]&gt; |  |
-|  [pageShareTimeline](./mp.miniprogrambuslisteners.pagesharetimeline.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShareTimeline'\]&gt; |  |
-|  [pageShow](./mp.miniprogrambuslisteners.pageshow.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShow'\]&gt; |  |
-|  [pageTabItemTap](./mp.miniprogrambuslisteners.pagetabitemtap.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onTabItemTap'\]&gt; |  |
-|  [pageUnload](./mp.miniprogrambuslisteners.pageunload.md) | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onUnload'\]&gt; |  |
-|  [routeChange](./mp.miniprogrambuslisteners.routechange.md) | (payload: [MiniProgramBusRouteChangePayload](./mp.miniprogrambusroutechangepayload.md)<!-- -->) =&gt; any |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [appError](./mp.miniprogrambuslisteners.apperror.md) |  | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onError'\]&gt; |  |
+|  [appHide](./mp.miniprogrambuslisteners.apphide.md) |  | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onHide'\]&gt; |  |
+|  [appLaunch](./mp.miniprogrambuslisteners.applaunch.md) |  | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onLaunch'\]&gt; |  |
+|  [appShow](./mp.miniprogrambuslisteners.appshow.md) |  | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onShow'\]&gt; |  |
+|  [appThemeChange](./mp.miniprogrambuslisteners.appthemechange.md) |  | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onThemeChange'\]&gt; |  |
+|  [appUnhandledRejectionThrow](./mp.miniprogrambuslisteners.appunhandledrejectionthrow.md) |  | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onUnhandledRejection'\]&gt; |  |
+|  [currentPageAddToFavorites](./mp.miniprogrambuslisteners.currentpageaddtofavorites.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onAddToFavorites'\]&gt; |  |
+|  [currentPageHide](./mp.miniprogrambuslisteners.currentpagehide.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onHide'\]&gt; |  |
+|  [currentPagePullDownRefresh](./mp.miniprogrambuslisteners.currentpagepulldownrefresh.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onPullDownRefresh'\]&gt; |  |
+|  [currentPageReachBottom](./mp.miniprogrambuslisteners.currentpagereachbottom.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onReachBottom'\]&gt; |  |
+|  [currentPageReady](./mp.miniprogrambuslisteners.currentpageready.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onReady'\]&gt; |  |
+|  [currentPageResize](./mp.miniprogrambuslisteners.currentpageresize.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onResize'\]&gt; |  |
+|  [currentPageShareAppMessage](./mp.miniprogrambuslisteners.currentpageshareappmessage.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShareAppMessage'\]&gt; |  |
+|  [currentPageShareTimeline](./mp.miniprogrambuslisteners.currentpagesharetimeline.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShareTimeline'\]&gt; |  |
+|  [currentPageShow](./mp.miniprogrambuslisteners.currentpageshow.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShow'\]&gt; |  |
+|  [currentPageTabItemTap](./mp.miniprogrambuslisteners.currentpagetabitemtap.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onTabItemTap'\]&gt; |  |
+|  [currentPageUnload](./mp.miniprogrambuslisteners.currentpageunload.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onUnload'\]&gt; |  |
+|  [pageAddToFavorites](./mp.miniprogrambuslisteners.pageaddtofavorites.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onAddToFavorites'\]&gt; |  |
+|  [pageHide](./mp.miniprogrambuslisteners.pagehide.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onHide'\]&gt; |  |
+|  [pageLoad](./mp.miniprogrambuslisteners.pageload.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onLoad'\]&gt; |  |
+|  [pageNotFound](./mp.miniprogrambuslisteners.pagenotfound.md) |  | Defined&lt;WechatMiniprogram.App.Options&lt;{}&gt;\['onPageNotFound'\]&gt; |  |
+|  [pagePullDownRefresh](./mp.miniprogrambuslisteners.pagepulldownrefresh.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onPullDownRefresh'\]&gt; |  |
+|  [pageReachBottom](./mp.miniprogrambuslisteners.pagereachbottom.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onReachBottom'\]&gt; |  |
+|  [pageReady](./mp.miniprogrambuslisteners.pageready.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onReady'\]&gt; |  |
+|  [pageResize](./mp.miniprogrambuslisteners.pageresize.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onResize'\]&gt; |  |
+|  [pageShareAppMessage](./mp.miniprogrambuslisteners.pageshareappmessage.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShareAppMessage'\]&gt; |  |
+|  [pageShareTimeline](./mp.miniprogrambuslisteners.pagesharetimeline.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShareTimeline'\]&gt; |  |
+|  [pageShow](./mp.miniprogrambuslisteners.pageshow.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShow'\]&gt; |  |
+|  [pageTabItemTap](./mp.miniprogrambuslisteners.pagetabitemtap.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onTabItemTap'\]&gt; |  |
+|  [pageUnload](./mp.miniprogrambuslisteners.pageunload.md) |  | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onUnload'\]&gt; |  |
+|  [routeChange](./mp.miniprogrambuslisteners.routechange.md) |  | (payload: [MiniProgramBusRouteChangePayload](./mp.miniprogrambusroutechangepayload.md)<!-- -->) =&gt; any |  |
 

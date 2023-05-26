@@ -5,7 +5,7 @@
 ## WechatGetLocationResult interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatGetLocationResult 
@@ -13,10 +13,10 @@ export declare interface WechatGetLocationResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [accuracy](./utils.wechatgetlocationresult.accuracy.md) | number | 位置精度。 |
-|  [latitude](./utils.wechatgetlocationresult.latitude.md) | number | 纬度，浮点数，范围为90 \~ -90。 |
-|  [longitude](./utils.wechatgetlocationresult.longitude.md) | number | 经度，浮点数，范围为180 \~ -180。 |
-|  [speed](./utils.wechatgetlocationresult.speed.md) | number | 速度，以米/每秒计。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [accuracy](./utils.wechatgetlocationresult.accuracy.md) |  | number | 位置精度。 |
+|  [latitude](./utils.wechatgetlocationresult.latitude.md) |  | number | 纬度，浮点数，范围为90 \~ -90。 |
+|  [longitude](./utils.wechatgetlocationresult.longitude.md) |  | number | 经度，浮点数，范围为180 \~ -180。 |
+|  [speed](./utils.wechatgetlocationresult.speed.md) |  | number | 速度，以米/每秒计。 |
 

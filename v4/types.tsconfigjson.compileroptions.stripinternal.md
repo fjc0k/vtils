@@ -6,7 +6,7 @@
 
 Do not emit declarations for code that has an `@internal` annotation.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 stripInternal?: boolean;

@@ -6,7 +6,7 @@
 
 菜单按钮宽度。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 menuButtonWidth: number;

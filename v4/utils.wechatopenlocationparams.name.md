@@ -6,7 +6,7 @@
 
 位置名。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 name: string;

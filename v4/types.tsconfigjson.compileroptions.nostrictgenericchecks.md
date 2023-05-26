@@ -8,7 +8,7 @@ Disable strict checking of generic signatures in function types.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noStrictGenericChecks?: boolean;

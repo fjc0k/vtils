@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.appUnhandledRejectionThrow property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 appUnhandledRejectionThrow: Defined<WechatMiniprogram.App.Options<{}>['onUnhandledRejection']>;

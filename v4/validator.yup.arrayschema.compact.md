@@ -4,7 +4,7 @@
 
 ## yup.ArraySchema.compact() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 compact(rejector: (value: T) => boolean): this;
@@ -16,7 +16,7 @@ compact(rejector: (value: T) => boolean): this;
 |  --- | --- | --- |
 |  rejector | (value: T) =&gt; boolean |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

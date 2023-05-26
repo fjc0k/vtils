@@ -8,7 +8,7 @@
 
  0
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 offset?: number;

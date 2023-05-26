@@ -6,7 +6,7 @@
 
 @<!-- -->类型不友好
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 validateSyncAt(path: string, value: any, options?: SchemaValidateOptions): any;
@@ -18,9 +18,9 @@ validateSyncAt(path: string, value: any, options?: SchemaValidateOptions): any;
 |  --- | --- | --- |
 |  path | string |  |
 |  value | any |  |
-|  options | SchemaValidateOptions |  |
+|  options | [SchemaValidateOptions](./validator.yup.schemavalidateoptions.md) | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 any
 

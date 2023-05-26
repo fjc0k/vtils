@@ -8,7 +8,7 @@ Type declaration files to be included in compilation.
 
 Requires TypeScript version 2.0 or later.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 types?: string[];

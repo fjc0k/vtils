@@ -6,7 +6,7 @@
 
 批量隐藏非基础菜单项。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 hideNonBaseMenuItems(menuList: WechatNonBaseMenuItem[]): Promise<any>;
@@ -18,7 +18,7 @@ hideNonBaseMenuItems(menuList: WechatNonBaseMenuItem[]): Promise<any>;
 |  --- | --- | --- |
 |  menuList | [WechatNonBaseMenuItem](./utils.wechatnonbasemenuitem.md)<!-- -->\[\] | 要隐藏的非基础菜单项列表 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

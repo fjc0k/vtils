@@ -4,7 +4,7 @@
 
 ## useShareAppMessage() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useShareAppMessage(callback: Defined<WechatMiniprogram.Page.Options<{}, {}>['onShareAppMessage']>): void;
@@ -16,7 +16,7 @@ export declare function useShareAppMessage(callback: Defined<WechatMiniprogram.P
 |  --- | --- | --- |
 |  callback | Defined&lt;WechatMiniprogram.Page.Options&lt;{}, {}&gt;\['onShareAppMessage'\]&gt; |  |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

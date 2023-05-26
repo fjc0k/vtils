@@ -6,7 +6,7 @@
 
 Like Readonly but recursive
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type ReadonlyDeep<T> = T extends Builtin
@@ -31,5 +31,5 @@ export declare type ReadonlyDeep<T> = T extends Builtin
 }
 : Readonly<T>;
 ```
-<b>References:</b> [ReadonlyDeep](./types.readonlydeep.md)
+**References:** [ReadonlyDeep](./types.readonlydeep.md)
 

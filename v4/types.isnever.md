@@ -6,7 +6,7 @@
 
 判断 `T` 是否是 `never` 类型。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type IsNever<T> = [T] extends [never] ? true : false;
@@ -18,6 +18,5 @@ export declare type IsNever<T> = [T] extends [never] ? true : false;
 ```typescript
 type X = IsNever<never>
 // => true
-
 ```
 

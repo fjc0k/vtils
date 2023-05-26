@@ -4,7 +4,7 @@
 
 ## yup.NumberSchema.lessThan() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 lessThan(max: number | Ref<number>, message?: NumberLocale['lessThan']): this;
@@ -14,10 +14,10 @@ lessThan(max: number | Ref<number>, message?: NumberLocale['lessThan']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  max | number \| Ref&lt;number&gt; |  |
-|  message | NumberLocale\['lessThan'\] |  |
+|  max | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  message | [NumberLocale](./validator.yup.numberlocale.md)<!-- -->\['lessThan'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

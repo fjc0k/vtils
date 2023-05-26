@@ -8,7 +8,7 @@
 
 应用场景：GPS 坐标转腾讯地图、高德地图坐标。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static WGS84ToGCJ02: (input: GeoCoordTransformInput) => GeoCoordTransformOutput;

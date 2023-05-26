@@ -10,7 +10,7 @@ Requires TypeScript version 2.1 or later.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 alwaysStrict?: boolean;

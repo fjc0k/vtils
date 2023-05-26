@@ -8,7 +8,7 @@ Disable preferring source files instead of declaration files when referencing co
 
  true if composite, false otherwise
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 disableSourceOfProjectReferenceRedirect?: boolean;

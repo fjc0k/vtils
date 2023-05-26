@@ -6,7 +6,7 @@
 
 加载服务结果。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type UseLoadMoreServiceResult<TItem> = TItem[] | {

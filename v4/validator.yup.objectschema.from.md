@@ -4,7 +4,7 @@
 
 ## yup.ObjectSchema.from() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 from(fromKey: keyof T, toKey: string, alias?: boolean): this;
@@ -16,9 +16,9 @@ from(fromKey: keyof T, toKey: string, alias?: boolean): this;
 |  --- | --- | --- |
 |  fromKey | keyof T |  |
 |  toKey | string |  |
-|  alias | boolean |  |
+|  alias | boolean | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

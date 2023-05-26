@@ -6,7 +6,7 @@
 
 检查是否是富链接。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static check(value: any): value is string;
@@ -18,7 +18,7 @@ static check(value: any): value is string;
 |  --- | --- | --- |
 |  value | any | 要检查的值 |
 
-<b>Returns:</b>
+**Returns:**
 
 value is string
 
@@ -29,6 +29,5 @@ value is string
 
 ```typescript
 RichUrl.check('http://www.google.com') // => false
-
 ```
 

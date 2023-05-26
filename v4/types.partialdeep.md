@@ -6,7 +6,7 @@
 
 Like Partial but recursive
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type PartialDeep<T> = T extends Builtin
@@ -37,5 +37,5 @@ export declare type PartialDeep<T> = T extends Builtin
 }
 : Partial<T>;
 ```
-<b>References:</b> [PartialDeep](./types.partialdeep.md)
+**References:** [PartialDeep](./types.partialdeep.md)
 

@@ -6,7 +6,7 @@
 
 任意函数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 declare type AnyFunction_2 = Record<any, any> & {

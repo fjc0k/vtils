@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.equals() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 equals(arrayOfValues: T[], message?: MixedLocale['oneOf']): this;
@@ -15,9 +15,9 @@ equals(arrayOfValues: T[], message?: MixedLocale['oneOf']): this;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  arrayOfValues | T\[\] |  |
-|  message | MixedLocale\['oneOf'\] |  |
+|  message | [MixedLocale](./validator.yup.mixedlocale.md)<!-- -->\['oneOf'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

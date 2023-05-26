@@ -4,7 +4,7 @@
 
 ## yup.NumberLocale.moreThan property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 moreThan: LocaleValue<{

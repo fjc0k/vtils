@@ -4,10 +4,10 @@
 
 ## EventBusListeners type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type EventBusListeners = Record<string, EventBusListener>;
 ```
-<b>References:</b> [EventBusListener](./utils.eventbuslistener.md)
+**References:** [EventBusListener](./utils.eventbuslistener.md)
 

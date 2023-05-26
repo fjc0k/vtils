@@ -6,7 +6,7 @@
 
 是否正在加载更多数据
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 incrementalLoading: boolean;

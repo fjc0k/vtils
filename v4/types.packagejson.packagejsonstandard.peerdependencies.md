@@ -6,7 +6,7 @@
 
 Dependencies that will usually be required by the package user directly or via another dependency.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 peerDependencies?: Dependency;

@@ -6,7 +6,7 @@
 
 Concatenate and emit output to single file.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 outFile?: string;

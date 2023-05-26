@@ -6,7 +6,7 @@
 
 类似 `chunk`<!-- -->，但当每组条目数量不一致时会在最后一组添加填充值以达到每组条目数量一致。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function chunkEqual<T>(array: T[], size: number, filler: (index: number) => T): T[][];
@@ -20,7 +20,7 @@ export declare function chunkEqual<T>(array: T[], size: number, filler: (index: 
 |  size | number | 分组大小 |
 |  filler | (index: number) =&gt; T | 填充值 |
 
-<b>Returns:</b>
+**Returns:**
 
 T\[\]\[\]
 

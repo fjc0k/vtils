@@ -6,7 +6,7 @@
 
 资源类型
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 type: LoadResourceUrlType;

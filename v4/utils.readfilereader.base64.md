@@ -6,12 +6,12 @@
 
 读取并返回 base64 内容。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 base64(): Promise<string>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;string&gt;
 

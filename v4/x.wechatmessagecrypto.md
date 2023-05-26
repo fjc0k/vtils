@@ -6,7 +6,7 @@
 
 微信公众号消息加解密。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class WechatMessageCrypto 

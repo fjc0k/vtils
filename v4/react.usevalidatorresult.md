@@ -4,7 +4,7 @@
 
 ## UseValidatorResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface UseValidatorResult<T> 
@@ -12,9 +12,9 @@ export declare interface UseValidatorResult<T>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [data](./react.usevalidatorresult.data.md) | T |  |
-|  [error?](./react.usevalidatorresult.error.md) | yup.ValidationError \| undefined | <i>(Optional)</i> |
-|  [valid](./react.usevalidatorresult.valid.md) | boolean |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [data](./react.usevalidatorresult.data.md) |  | T |  |
+|  [error?](./react.usevalidatorresult.error.md) |  | yup.ValidationError \| undefined | _(Optional)_ |
+|  [valid](./react.usevalidatorresult.valid.md) |  | boolean |  |
 

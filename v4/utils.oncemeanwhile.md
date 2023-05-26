@@ -6,7 +6,7 @@
 
 同一时间对函数的调用只会触发一次运行。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function onceMeanwhile<TFunc extends AnyAsyncFunction>(fn: TFunc): TFunc;
@@ -18,7 +18,7 @@ export declare function onceMeanwhile<TFunc extends AnyAsyncFunction>(fn: TFunc)
 |  --- | --- | --- |
 |  fn | TFunc | 函数 |
 
-<b>Returns:</b>
+**Returns:**
 
 TFunc
 

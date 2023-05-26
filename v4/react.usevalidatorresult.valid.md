@@ -4,7 +4,7 @@
 
 ## UseValidatorResult.valid property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 valid: boolean;

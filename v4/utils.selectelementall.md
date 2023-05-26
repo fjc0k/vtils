@@ -4,7 +4,7 @@
 
 ## selectElementAll() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function selectElementAll<Selector extends string, TElement extends Element = ParseSelector<Selector, HTMLElement>>(selectors: Selector | Selector[], baseElements?: BaseElements): TElement[];
@@ -15,9 +15,9 @@ export declare function selectElementAll<Selector extends string, TElement exten
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  selectors | Selector \| Selector\[\] | One or more CSS selectors separated by commas |
-|  baseElements | BaseElements | The element or list of elements to look inside of  An array of elements found |
+|  baseElements | BaseElements | _(Optional)_ The element or list of elements to look inside of  An array of elements found |
 
-<b>Returns:</b>
+**Returns:**
 
 TElement\[\]
 

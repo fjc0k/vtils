@@ -6,7 +6,7 @@
 
 Specify path mapping to be computed relative to baseUrl option.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 paths?: Record<string, string[]>;

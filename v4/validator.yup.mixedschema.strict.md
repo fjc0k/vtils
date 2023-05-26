@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.strict() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 strict(isStrict?: boolean): this;
@@ -14,9 +14,9 @@ strict(isStrict?: boolean): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  isStrict | boolean |  |
+|  isStrict | boolean | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

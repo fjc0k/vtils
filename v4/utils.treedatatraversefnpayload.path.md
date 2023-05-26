@@ -6,7 +6,7 @@
 
 到当前节点的路径节点列表。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 path: TNode[];

@@ -4,7 +4,7 @@
 
 ## yup.MixedLocale.notType property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 notType: LocaleValue;

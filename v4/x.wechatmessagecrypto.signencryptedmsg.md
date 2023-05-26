@@ -6,7 +6,7 @@
 
 签名加密后的消息。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 signEncryptedMsg(encryptedMsg: string): WechatMessageCryptoSignEncryptedMsgResult;
@@ -18,7 +18,7 @@ signEncryptedMsg(encryptedMsg: string): WechatMessageCryptoSignEncryptedMsgResul
 |  --- | --- | --- |
 |  encryptedMsg | string | 加密后的消息 |
 
-<b>Returns:</b>
+**Returns:**
 
 [WechatMessageCryptoSignEncryptedMsgResult](./x.wechatmessagecryptosignencryptedmsgresult.md)
 

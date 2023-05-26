@@ -8,7 +8,7 @@ A workspace pattern points to a directory or group of directories which contain 
 
 The patterns are handled with \[minimatch\](https://github.com/isaacs/minimatch).
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type WorkspacePattern = string;

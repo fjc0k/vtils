@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.pageUnload property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pageUnload: Defined<WechatMiniprogram.Page.Options<{}, {}>['onUnload']>;

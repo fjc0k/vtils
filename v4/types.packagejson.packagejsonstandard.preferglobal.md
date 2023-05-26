@@ -10,7 +10,7 @@
 
 If set to `true`<!-- -->, a warning will be shown if package is installed locally. Useful if the package is primarily a command-line application that should be installed globally.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 preferGlobal?: boolean;

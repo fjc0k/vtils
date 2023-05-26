@@ -4,7 +4,7 @@
 
 ## sampleIndex() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function sampleIndex<T extends Record<any, any>>(collection: T): keyof T | undefined;
@@ -16,7 +16,7 @@ export declare function sampleIndex<T extends Record<any, any>>(collection: T): 
 |  --- | --- | --- |
 |  collection | T |  |
 
-<b>Returns:</b>
+**Returns:**
 
 keyof T \| undefined
 

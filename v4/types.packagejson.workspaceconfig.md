@@ -6,7 +6,7 @@
 
 An alternative configuration for Yarn workspaces.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface WorkspaceConfig 
@@ -14,8 +14,8 @@ export interface WorkspaceConfig
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [nohoist?](./types.packagejson.workspaceconfig.nohoist.md) | [WorkspacePattern](./types.packagejson.workspacepattern.md)<!-- -->\[\] | <i>(Optional)</i> Designed to solve the problem of packages which break when their <code>node_modules</code> are moved to the root workspace directory - a process known as hoisting. For these packages, both within your workspace, and also some that have been installed via <code>node_modules</code>, it is important to have a mechanism for preventing the default Yarn workspace behavior. By adding workspace pattern strings here, Yarn will resume non-workspace behavior for any package which matches the defined patterns.<!-- -->\[Read more\](https://classic.yarnpkg.com/blog/2018/02/15/nohoist/) |
-|  [packages?](./types.packagejson.workspaceconfig.packages.md) | [WorkspacePattern](./types.packagejson.workspacepattern.md)<!-- -->\[\] | <i>(Optional)</i> An array of workspace pattern strings which contain the workspace packages. |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [nohoist?](./types.packagejson.workspaceconfig.nohoist.md) |  | [WorkspacePattern](./types.packagejson.workspacepattern.md)<!-- -->\[\] | <p>_(Optional)_ Designed to solve the problem of packages which break when their <code>node_modules</code> are moved to the root workspace directory - a process known as hoisting. For these packages, both within your workspace, and also some that have been installed via <code>node_modules</code>, it is important to have a mechanism for preventing the default Yarn workspace behavior. By adding workspace pattern strings here, Yarn will resume non-workspace behavior for any package which matches the defined patterns.</p><p>\[Read more\](https://classic.yarnpkg.com/blog/2018/02/15/nohoist/)</p> |
+|  [packages?](./types.packagejson.workspaceconfig.packages.md) |  | [WorkspacePattern](./types.packagejson.workspacepattern.md)<!-- -->\[\] | _(Optional)_ An array of workspace pattern strings which contain the workspace packages. |
 

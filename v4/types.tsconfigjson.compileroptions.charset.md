@@ -8,7 +8,7 @@ The character set of the input files.
 
  'utf8'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 charset?: string;

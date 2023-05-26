@@ -6,7 +6,7 @@
 
 立即触发一次回调，并且每当到达页面底部时触发回调。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useReachBottom<T extends HTMLElement>(callback: () => any, offset?: number): MutableRefObject<T>;
@@ -17,9 +17,9 @@ export declare function useReachBottom<T extends HTMLElement>(callback: () => an
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  callback | () =&gt; any | 回调 |
-|  offset | number | 触底偏移量 |
+|  offset | number | _(Optional)_ 触底偏移量 |
 
-<b>Returns:</b>
+**Returns:**
 
 MutableRefObject&lt;T&gt;
 

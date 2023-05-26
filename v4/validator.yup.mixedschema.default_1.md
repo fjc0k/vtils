@@ -4,12 +4,12 @@
 
 ## yup.MixedSchema.default() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 default(): T | undefined;
 ```
-<b>Returns:</b>
+**Returns:**
 
 T \| undefined
 

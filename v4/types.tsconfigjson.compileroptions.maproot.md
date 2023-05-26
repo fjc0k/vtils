@@ -6,7 +6,7 @@
 
 Specifies the location where debugger should locate map files instead of generated locations.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 mapRoot?: string;

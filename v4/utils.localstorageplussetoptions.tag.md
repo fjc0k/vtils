@@ -6,7 +6,7 @@
 
 标签
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 tag?: string | number;

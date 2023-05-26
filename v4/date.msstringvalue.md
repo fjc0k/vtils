@@ -4,10 +4,10 @@
 
 ## MsStringValue type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MsStringValue = `${number}${MsUnit}`;
 ```
-<b>References:</b> [MsUnit](./date.msunit.md)
+**References:** [MsUnit](./date.msunit.md)
 

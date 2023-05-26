@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.pageAddToFavorites property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pageAddToFavorites: Defined<WechatMiniprogram.Page.Options<{}, {}>['onAddToFavorites']>;

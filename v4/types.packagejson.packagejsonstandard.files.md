@@ -6,7 +6,7 @@
 
 The files included in the package.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 files?: string[];

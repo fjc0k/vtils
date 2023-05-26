@@ -6,7 +6,7 @@
 
 Dependencies that are skipped if they fail to install.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 optionalDependencies?: Dependency;

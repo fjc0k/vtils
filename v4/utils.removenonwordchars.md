@@ -6,7 +6,7 @@
 
 从字符串中移除非单词字符（移除非英文单词、阿拉伯数字、汉字的所有字符）。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function removeNonWordChars(value: string): string;
@@ -18,7 +18,7 @@ export declare function removeNonWordChars(value: string): string;
 |  --- | --- | --- |
 |  value | string | 要操作的字符串 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

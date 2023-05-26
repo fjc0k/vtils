@@ -6,7 +6,7 @@
 
 开始悬停。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 startHover: () => any;

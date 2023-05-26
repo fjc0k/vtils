@@ -6,7 +6,7 @@
 
 The license for the package.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 license?: string;

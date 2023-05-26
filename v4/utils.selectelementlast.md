@@ -4,7 +4,7 @@
 
 ## selectElementLast() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function selectElementLast<Selector extends string, TElement extends Element = ParseSelector<Selector, HTMLElement>>(selectors: Selector | Selector[], baseElement?: ParentNode): TElement | undefined;
@@ -15,9 +15,9 @@ export declare function selectElementLast<Selector extends string, TElement exte
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  selectors | Selector \| Selector\[\] | One or more CSS selectors separated by commas |
-|  baseElement | ParentNode | The element to look inside of  The element found, if any |
+|  baseElement | ParentNode | _(Optional)_ The element to look inside of  The element found, if any |
 
-<b>Returns:</b>
+**Returns:**
 
 TElement \| undefined
 

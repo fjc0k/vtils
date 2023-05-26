@@ -8,7 +8,7 @@
 
 \*\*注意\*\*：每次分享的数据会和上次分享的数据合并作为最终分享的数据，因此，可以设置全局的分享数据。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 updateShareData(params: WechatUpdateShareDataParams): Promise<void>;
@@ -20,7 +20,7 @@ updateShareData(params: WechatUpdateShareDataParams): Promise<void>;
 |  --- | --- | --- |
 |  params | [WechatUpdateShareDataParams](./utils.wechatupdatesharedataparams.md) | 分享数据 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;void&gt;
 

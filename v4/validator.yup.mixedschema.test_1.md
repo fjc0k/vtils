@@ -4,19 +4,19 @@
 
 ## yup.MixedSchema.test() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-test<TParams = {}>(options: SchemaTestOptions<this, T, TParams>): this;
+test<TParams extends {} = {}>(options: SchemaTestOptions<this, T, TParams>): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  options | SchemaTestOptions&lt;this, T, TParams&gt; |  |
+|  options | [SchemaTestOptions](./validator.yup.schematestoptions.md)<!-- -->&lt;this, T, TParams&gt; |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

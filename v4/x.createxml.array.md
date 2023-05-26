@@ -4,7 +4,7 @@
 
 ## createXml.array variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 array: <T = any>(value: T[]) => any

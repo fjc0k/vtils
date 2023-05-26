@@ -4,7 +4,7 @@
 
 ## yup.ArraySchema.of() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 of(type: GetSchema<T>): this;
@@ -14,9 +14,9 @@ of(type: GetSchema<T>): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | GetSchema&lt;T&gt; |  |
+|  type | [GetSchema](./validator.yup.getschema.md)<!-- -->&lt;T&gt; |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

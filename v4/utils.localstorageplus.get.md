@@ -6,7 +6,7 @@
 
 获取本地存储。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static get<T extends JsonValue>(key: string, options?: LocalStoragePlusGetOptions): T | null;
@@ -17,9 +17,9 @@ static get<T extends JsonValue>(key: string, options?: LocalStoragePlusGetOption
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  key | string | 键 |
-|  options | [LocalStoragePlusGetOptions](./utils.localstorageplusgetoptions.md) | 选项 |
+|  options | [LocalStoragePlusGetOptions](./utils.localstorageplusgetoptions.md) | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 T \| null
 

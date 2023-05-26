@@ -6,7 +6,7 @@
 
 Taro 3
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly taro: boolean;

@@ -4,7 +4,7 @@
 
 ## sampleBy() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function sampleBy<T extends Record<any, any>, X>(collection: T, iteratee: <K extends keyof T>(value: T[K], key: K) => X): X | undefined;
@@ -17,7 +17,7 @@ export declare function sampleBy<T extends Record<any, any>, X>(collection: T, i
 |  collection | T |  |
 |  iteratee | &lt;K extends keyof T&gt;(value: T\[K\], key: K) =&gt; X |  |
 
-<b>Returns:</b>
+**Returns:**
 
 X \| undefined
 

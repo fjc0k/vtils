@@ -6,12 +6,12 @@
 
 生成 CUID。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function cuid(): string;
 ```
-<b>Returns:</b>
+**Returns:**
 
 string
 

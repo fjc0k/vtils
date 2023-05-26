@@ -6,7 +6,7 @@
 
 签名。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sign(options: WechatMessageCryptoSignOptions): string;
@@ -18,7 +18,7 @@ sign(options: WechatMessageCryptoSignOptions): string;
 |  --- | --- | --- |
 |  options | [WechatMessageCryptoSignOptions](./x.wechatmessagecryptosignoptions.md) | 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

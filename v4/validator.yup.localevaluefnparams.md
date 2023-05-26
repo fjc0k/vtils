@@ -4,10 +4,10 @@
 
 ## yup.LocaleValueFnParams type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare type LocaleValueFnParams<TExtra extends {} = {}> = {
+export type LocaleValueFnParams<TExtra extends {} = {}> = {
     path: string;
     type: string;
     label?: string;

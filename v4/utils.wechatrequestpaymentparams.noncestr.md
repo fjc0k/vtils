@@ -6,7 +6,7 @@
 
 支付签名随机串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 nonceStr: string;

@@ -6,7 +6,7 @@
 
 Location for example scripts.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 example?: string;

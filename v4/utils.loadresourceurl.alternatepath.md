@@ -6,7 +6,7 @@
 
 备用资源路径
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 alternatePath?: string;

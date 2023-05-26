@@ -6,7 +6,7 @@
 
 默认为 wgs84 的 gps 坐标，如果要返回直接给 openLocation 用的火星坐标，可传入 gcj02。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 type?: 'wgs84' | 'gcj02';

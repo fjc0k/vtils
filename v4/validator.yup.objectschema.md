@@ -4,12 +4,12 @@
 
 ## yup.ObjectSchema interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface ObjectSchema<T extends {} = {}> extends MixedSchema<T> 
 ```
-<b>Extends:</b> MixedSchema&lt;T&gt;
+**Extends:** [MixedSchema](./validator.yup.mixedschema.md)<!-- -->&lt;T&gt;
 
 ## Methods
 

@@ -6,7 +6,7 @@
 
 本地存储增强。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class LocalStoragePlus<T extends JsonValue> 

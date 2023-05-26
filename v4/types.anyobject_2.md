@@ -6,7 +6,7 @@
 
 任意对象。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 declare type AnyObject_2 = Record<any, any>;

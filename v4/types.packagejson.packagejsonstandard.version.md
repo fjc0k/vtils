@@ -6,7 +6,7 @@
 
 Package version, parseable by \[`node-semver`<!-- -->\](https://github.com/npm/node-semver).
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 version?: string;

@@ -57,7 +57,7 @@ React 工具库。基于 [react-use](https://github.com/streamich/react-use#read
 |  [CreateGlobalStateResultResult](./react.createglobalstateresultresult.md) |  |
 |  [CreateGlobalStateState](./react.createglobalstatestate.md) |  |
 |  [DefineComponentOptions](./react.definecomponentoptions.md) | 定义组件的选项。 |
-|  [DeriveComponentProps](./react.derivecomponentprops.md) | 派生新的组件属性。 TComponent 原组件  TExclude 需去除的属性  TRef 新的 ref  TOverride 覆盖属性 |
+|  [DeriveComponentProps](./react.derivecomponentprops.md) | <p>派生新的组件属性。</p><p> TComponent 原组件  TExclude 需去除的属性  TRef 新的 ref  TOverride 覆盖属性</p> |
 |  [UseControllableValueOptions](./react.usecontrollablevalueoptions.md) |  |
 |  [UseControllableValueResult](./react.usecontrollablevalueresult.md) |  |
 |  [UseIntervalResult](./react.useintervalresult.md) |  |

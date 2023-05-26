@@ -6,7 +6,7 @@
 
 格式化数字。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function formatNumber(value: number, options?: FormatNumberOptions): string;
@@ -17,9 +17,9 @@ export declare function formatNumber(value: number, options?: FormatNumberOption
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | number | 要格式化的数字 |
-|  options | [FormatNumberOptions](./utils.formatnumberoptions.md) | 选项 |
+|  options | [FormatNumberOptions](./utils.formatnumberoptions.md) | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -32,6 +32,5 @@ string
 formatNumber(1314.56789) // => '1,314.56789'
 formatNumber(1314.56789, { thousandsSeparator: ' ' }) // => '1 314.56789'
 formatNumber(1314.56789, { thousandthsSeparator: ',' }) // => '1,314.567,89'
-
 ```
 

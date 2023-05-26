@@ -6,7 +6,7 @@
 
 Like Writable but recursive
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type WritableDeep<T> = T extends Builtin
@@ -31,5 +31,5 @@ export declare type WritableDeep<T> = T extends Builtin
 }
 : T;
 ```
-<b>References:</b> [WritableDeep](./types.writabledeep.md)
+**References:** [WritableDeep](./types.writabledeep.md)
 

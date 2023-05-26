@@ -8,7 +8,7 @@ Suppress noImplicitAny errors for indexing objects lacking index signatures.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 suppressImplicitAnyIndexErrors?: boolean;

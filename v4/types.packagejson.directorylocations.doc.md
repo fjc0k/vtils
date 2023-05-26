@@ -6,7 +6,7 @@
 
 Location for Markdown files.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 doc?: string;

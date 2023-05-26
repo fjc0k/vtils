@@ -6,7 +6,7 @@
 
 Gets keys of an object which are readonly
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type ReadonlyKeys<T extends object> = {

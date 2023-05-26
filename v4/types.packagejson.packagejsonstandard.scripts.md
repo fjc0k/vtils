@@ -6,7 +6,7 @@
 
 Script commands that are run at various times in the lifecycle of the package. The key is the lifecycle event, and the value is the command to run at that point.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 scripts?: Scripts;

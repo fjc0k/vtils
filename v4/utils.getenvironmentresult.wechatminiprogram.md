@@ -6,7 +6,7 @@
 
 微信小程序
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly wechatMiniProgram: boolean;

@@ -5,7 +5,7 @@
 ## currentPageListeners variable
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 currentPageListeners: (keyof MiniProgramBusListeners)[]

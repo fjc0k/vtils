@@ -4,10 +4,10 @@
 
 ## KeyOfRawData type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type KeyOfRawData<TRawData extends RawData> = keyof ElementOfRawData<TRawData>;
 ```
-<b>References:</b> [RawData](./utils.rawdata.md)<!-- -->, [ElementOfRawData](./utils.elementofrawdata.md)
+**References:** [RawData](./utils.rawdata.md)<!-- -->, [ElementOfRawData](./utils.elementofrawdata.md)
 

@@ -6,7 +6,7 @@
 
 The executable files that should be installed into the `PATH`<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 bin?:

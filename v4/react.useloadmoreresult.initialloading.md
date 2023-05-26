@@ -6,7 +6,7 @@
 
 是否正在加载初始数据
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 initialLoading: boolean;

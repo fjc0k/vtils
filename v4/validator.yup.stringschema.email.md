@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.email() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 email(message?: StringLocale['email']): this;
@@ -14,9 +14,9 @@ email(message?: StringLocale['email']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | StringLocale\['email'\] |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['email'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

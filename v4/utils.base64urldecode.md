@@ -6,7 +6,7 @@
 
 将给定的 base64url 字符串解码为 UTF8 字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function base64UrlDecode(value: string): string;
@@ -18,7 +18,7 @@ export declare function base64UrlDecode(value: string): string;
 |  --- | --- | --- |
 |  value | string | 要解码的 base64url 字符串 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -31,6 +31,5 @@ string
 base64UrlDecode('dg') // => 'v'
 base64UrlDecode('6b6Z') // => '龙'
 base64UrlDecode('8J-QsQ') // => '🐱'
-
 ```
 

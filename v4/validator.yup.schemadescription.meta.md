@@ -4,7 +4,7 @@
 
 ## yup.SchemaDescription.meta property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 meta: {};

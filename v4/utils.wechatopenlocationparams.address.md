@@ -6,7 +6,7 @@
 
 地址详情说明。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 address?: string;

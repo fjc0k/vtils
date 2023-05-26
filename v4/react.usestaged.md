@@ -6,7 +6,7 @@
 
 暂存状态。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useStaged<T>(value: T, setValue: (value: T) => void): [
@@ -26,7 +26,7 @@ T,
 |  value | T |  |
 |  setValue | (value: T) =&gt; void |  |
 
-<b>Returns:</b>
+**Returns:**
 
 \[ T, { set: (value: T) =&gt; void; commit: () =&gt; void; reset: () =&gt; void; } \]
 

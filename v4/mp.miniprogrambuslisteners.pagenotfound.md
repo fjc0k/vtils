@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.pageNotFound property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pageNotFound: Defined<WechatMiniprogram.App.Options<{}>['onPageNotFound']>;

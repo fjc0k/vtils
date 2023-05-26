@@ -8,7 +8,7 @@
 
 `process.env.NODE_ENV` 为空值、`production`<!-- -->、`prod` 时被认为是生产环境，否则是开发环境。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 devOrProd: {

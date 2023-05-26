@@ -6,7 +6,7 @@
 
 Like Required but recursive
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type RequiredDeep<T> = T extends Builtin
@@ -31,5 +31,5 @@ export declare type RequiredDeep<T> = T extends Builtin
 }
 : NonNullable<T>;
 ```
-<b>References:</b> [RequiredDeep](./types.requireddeep.md)
+**References:** [RequiredDeep](./types.requireddeep.md)
 

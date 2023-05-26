@@ -4,10 +4,10 @@
 
 ## TreeDataSingleRootData type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type TreeDataSingleRootData<TNode extends TreeDataNode> = TNode;
 ```
-<b>References:</b> [TreeDataNode](./utils.treedatanode.md)
+**References:** [TreeDataNode](./utils.treedatanode.md)
 

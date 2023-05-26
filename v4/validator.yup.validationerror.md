@@ -4,7 +4,7 @@
 
 ## yup.ValidationError class
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class ValidationError 
@@ -18,7 +18,7 @@ export declare class ValidationError
 |  [inner](./validator.yup.validationerror.inner.md) |  | any\[\] |  |
 |  [message](./validator.yup.validationerror.message.md) |  | string |  |
 |  [path](./validator.yup.validationerror.path.md) |  | string |  |
-|  [stack?](./validator.yup.validationerror.stack.md) |  | any | <i>(Optional)</i> |
+|  [stack?](./validator.yup.validationerror.stack.md) |  | any | _(Optional)_ |
 |  [type](./validator.yup.validationerror.type.md) |  | string |  |
 |  [value](./validator.yup.validationerror.value.md) |  | any |  |
 

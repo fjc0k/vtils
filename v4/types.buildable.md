@@ -6,10 +6,10 @@
 
 Combination of DeepPartial and DeepWritable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Buildable<T> = PartialDeep<WritableDeep<T>>;
 ```
-<b>References:</b> [PartialDeep](./types.partialdeep.md)<!-- -->, [WritableDeep](./types.writabledeep.md)
+**References:** [PartialDeep](./types.partialdeep.md)<!-- -->, [WritableDeep](./types.writabledeep.md)
 

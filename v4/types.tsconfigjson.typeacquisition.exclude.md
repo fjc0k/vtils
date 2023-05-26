@@ -6,7 +6,7 @@
 
 Specifies a list of type declarations to be excluded from auto type acquisition. For example, `['jquery', 'lodash']`<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 exclude?: string[];

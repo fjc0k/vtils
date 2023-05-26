@@ -8,7 +8,7 @@ Do not emit output.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noEmit?: boolean;

@@ -4,7 +4,7 @@
 
 ## GetTopBarInfoResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface GetTopBarInfoResult 
@@ -12,13 +12,13 @@ export declare interface GetTopBarInfoResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [menuButtonHeight](./mp.gettopbarinforesult.menubuttonheight.md) | number | 菜单按钮高度。 |
-|  [menuButtonHorizontalMargin](./mp.gettopbarinforesult.menubuttonhorizontalmargin.md) | number | 菜单按钮水平外边距。<!-- -->\*\*注意: QQ 小程序下该项为 0，请自行选取默认值\*\* |
-|  [menuButtonVerticalMargin](./mp.gettopbarinforesult.menubuttonverticalmargin.md) | number | 菜单按钮垂直外边距。 |
-|  [menuButtonWidth](./mp.gettopbarinforesult.menubuttonwidth.md) | number | 菜单按钮宽度。 |
-|  [navigationBarHeight](./mp.gettopbarinforesult.navigationbarheight.md) | number | 导航栏高度。 |
-|  [statusBarHeight](./mp.gettopbarinforesult.statusbarheight.md) | number | 状态栏高度。 |
-|  [topBarHeight](./mp.gettopbarinforesult.topbarheight.md) | number | 顶栏高度。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [menuButtonHeight](./mp.gettopbarinforesult.menubuttonheight.md) |  | number | 菜单按钮高度。 |
+|  [menuButtonHorizontalMargin](./mp.gettopbarinforesult.menubuttonhorizontalmargin.md) |  | number | <p>菜单按钮水平外边距。</p><p>\*\*注意: QQ 小程序下该项为 0，请自行选取默认值\*\*</p> |
+|  [menuButtonVerticalMargin](./mp.gettopbarinforesult.menubuttonverticalmargin.md) |  | number | 菜单按钮垂直外边距。 |
+|  [menuButtonWidth](./mp.gettopbarinforesult.menubuttonwidth.md) |  | number | 菜单按钮宽度。 |
+|  [navigationBarHeight](./mp.gettopbarinforesult.navigationbarheight.md) |  | number | 导航栏高度。 |
+|  [statusBarHeight](./mp.gettopbarinforesult.statusbarheight.md) |  | number | 状态栏高度。 |
+|  [topBarHeight](./mp.gettopbarinforesult.topbarheight.md) |  | number | 顶栏高度。 |
 

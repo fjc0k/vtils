@@ -4,7 +4,7 @@
 
 ## MiniProgramBusRouteChangePayload interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface MiniProgramBusRouteChangePayload 
@@ -12,9 +12,9 @@ export declare interface MiniProgramBusRouteChangePayload
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [action](./mp.miniprogrambusroutechangepayload.action.md) | [MiniProgramBusRouteChangeAction](./mp.miniprogrambusroutechangeaction.md) |  |
-|  [from](./mp.miniprogrambusroutechangepayload.from.md) | [MiniProgramBusRouteChangePageInfo](./mp.miniprogrambusroutechangepageinfo.md) \| undefined |  |
-|  [to](./mp.miniprogrambusroutechangepayload.to.md) | [MiniProgramBusRouteChangePageInfo](./mp.miniprogrambusroutechangepageinfo.md) |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [action](./mp.miniprogrambusroutechangepayload.action.md) |  | [MiniProgramBusRouteChangeAction](./mp.miniprogrambusroutechangeaction.md) |  |
+|  [from](./mp.miniprogrambusroutechangepayload.from.md) |  | [MiniProgramBusRouteChangePageInfo](./mp.miniprogrambusroutechangepageinfo.md) \| undefined |  |
+|  [to](./mp.miniprogrambusroutechangepayload.to.md) |  | [MiniProgramBusRouteChangePageInfo](./mp.miniprogrambusroutechangepageinfo.md) |  |
 

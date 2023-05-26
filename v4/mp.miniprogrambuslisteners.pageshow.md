@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.pageShow property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pageShow: Defined<WechatMiniprogram.Page.Options<{}, {}>['onShow']>;

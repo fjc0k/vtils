@@ -4,7 +4,7 @@
 
 ## yup.SchemaValidateOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface SchemaValidateOptions 
@@ -12,11 +12,11 @@ export interface SchemaValidateOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [abortEarly?](./validator.yup.schemavalidateoptions.abortearly.md) | boolean | <i>(Optional)</i> |
-|  [context?](./validator.yup.schemavalidateoptions.context.md) | {} | <i>(Optional)</i> |
-|  [recursive?](./validator.yup.schemavalidateoptions.recursive.md) | boolean | <i>(Optional)</i> |
-|  [strict?](./validator.yup.schemavalidateoptions.strict.md) | boolean | <i>(Optional)</i> |
-|  [stripUnknown?](./validator.yup.schemavalidateoptions.stripunknown.md) | boolean | <i>(Optional)</i> |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [abortEarly?](./validator.yup.schemavalidateoptions.abortearly.md) |  | boolean | _(Optional)_ |
+|  [context?](./validator.yup.schemavalidateoptions.context.md) |  | {} | _(Optional)_ |
+|  [recursive?](./validator.yup.schemavalidateoptions.recursive.md) |  | boolean | _(Optional)_ |
+|  [strict?](./validator.yup.schemavalidateoptions.strict.md) |  | boolean | _(Optional)_ |
+|  [stripUnknown?](./validator.yup.schemavalidateoptions.stripunknown.md) |  | boolean | _(Optional)_ |
 

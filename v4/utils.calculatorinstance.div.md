@@ -8,7 +8,7 @@
 
 - 除数列表为空时返回 0； - 除数列表长度为 1 时返回第 1 个的值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 div(...values: CalculatorValue[]): T;
@@ -20,7 +20,7 @@ div(...values: CalculatorValue[]): T;
 |  --- | --- | --- |
 |  values | [CalculatorValue](./utils.calculatorvalue.md)<!-- -->\[\] | 除数列表 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

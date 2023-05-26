@@ -6,12 +6,12 @@
 
 获取运行环境信息。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function getEnvironment(): GetEnvironmentResult;
 ```
-<b>Returns:</b>
+**Returns:**
 
 [GetEnvironmentResult](./utils.getenvironmentresult.md)
 

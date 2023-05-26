@@ -6,7 +6,7 @@
 
 需要上传的图片的本地 ID，由 chooseImage 接口获得。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 localId: string;

@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.min() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 min(limit: number | Ref<number>, message?: StringLocale['min']): this;
@@ -14,10 +14,10 @@ min(limit: number | Ref<number>, message?: StringLocale['min']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| Ref&lt;number&gt; |  |
-|  message | StringLocale\['min'\] |  |
+|  limit | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['min'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

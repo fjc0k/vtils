@@ -6,7 +6,7 @@
 
 获取当前页面的查询参数，已经对每个值执行了 decodeURIComponent。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function getCurrentPageQuery<T extends Record<string, string | undefined>>(pageInstance?: WechatMiniprogram.Page.Instance<AnyObject_2, AnyObject_2>): T;
@@ -16,9 +16,9 @@ export declare function getCurrentPageQuery<T extends Record<string, string | un
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  pageInstance | WechatMiniprogram.Page.Instance&lt;AnyObject\_2, AnyObject\_2&gt; | 页面实例，默认当前页面 |
+|  pageInstance | WechatMiniprogram.Page.Instance&lt;AnyObject\_2, AnyObject\_2&gt; | _(Optional)_ 页面实例，默认当前页面 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

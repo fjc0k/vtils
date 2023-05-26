@@ -4,7 +4,7 @@
 
 ## TsConfigJson.CompilerOptions.JSX type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type JSX =

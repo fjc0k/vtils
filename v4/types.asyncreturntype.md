@@ -8,7 +8,7 @@ Unwrap the return type of a function that returns a `Promise`<!-- -->.
 
 There has been \[discussion\](https://github.com/microsoft/TypeScript/pull/35998) about implementing this type in TypeScript.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type AsyncReturnType<Target extends AsyncFunction> = PromiseValue<ReturnType<Target>>;

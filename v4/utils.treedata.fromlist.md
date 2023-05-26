@@ -6,7 +6,7 @@
 
 从一维列表生成实例。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static fromList<TItem extends Record<any, any>>(list: TItem[], idKey: keyof TItem, parentIdKey: keyof TItem): TreeData<TreeDataStandardNode<TItem>>;
@@ -20,7 +20,7 @@ static fromList<TItem extends Record<any, any>>(list: TItem[], idKey: keyof TIte
 |  idKey | keyof TItem | ID 所在键 |
 |  parentIdKey | keyof TItem | 父 ID 所在键 |
 
-<b>Returns:</b>
+**Returns:**
 
 [TreeData](./utils.treedata.md)<!-- -->&lt;[TreeDataStandardNode](./utils.treedatastandardnode.md)<!-- -->&lt;TItem&gt;&gt;
 

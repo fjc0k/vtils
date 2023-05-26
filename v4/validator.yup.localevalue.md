@@ -4,8 +4,10 @@
 
 ## yup.LocaleValue type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare type LocaleValue<TExtra extends {} = {}> = string | LocaleValueFn<TExtra>;
+export type LocaleValue<TExtra extends {} = {}> = string | LocaleValueFn<TExtra>;
 ```
+**References:** [LocaleValueFn](./validator.yup.localevaluefn.md)
+

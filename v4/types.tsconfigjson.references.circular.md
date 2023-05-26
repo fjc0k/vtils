@@ -6,7 +6,7 @@
 
 True if it is intended that this reference form a circularity.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 circular?: boolean;

@@ -6,7 +6,7 @@
 
 位置精度。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 accuracy: number;

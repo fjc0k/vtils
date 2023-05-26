@@ -4,7 +4,7 @@
 
 ## MiniProgramUrlVersion type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MiniProgramUrlVersion = 'release' | 'develop' | 'trial';

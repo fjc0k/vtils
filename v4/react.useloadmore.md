@@ -6,7 +6,7 @@
 
 数据加载。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useLoadMore<TItem>(service: UseLoadMoreService<TItem>, deps: DependencyList): UseLoadMoreResult<TItem>;
@@ -19,7 +19,7 @@ export declare function useLoadMore<TItem>(service: UseLoadMoreService<TItem>, d
 |  service | [UseLoadMoreService](./react.useloadmoreservice.md)<!-- -->&lt;TItem&gt; | 数据加载服务 |
 |  deps | DependencyList | 依赖若发生变化则从首页重新加载数据 |
 
-<b>Returns:</b>
+**Returns:**
 
 [UseLoadMoreResult](./react.useloadmoreresult.md)<!-- -->&lt;TItem&gt;
 

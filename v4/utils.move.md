@@ -6,7 +6,7 @@
 
 原地移动数组中的元素。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function move<T>(arr: T[], from: number, to: number): T[];
@@ -20,7 +20,7 @@ export declare function move<T>(arr: T[], from: number, to: number): T[];
 |  from | number | 要移动元素的索引 |
 |  to | number | 要移动到的位置索引 |
 
-<b>Returns:</b>
+**Returns:**
 
 T\[\]
 
@@ -31,6 +31,5 @@ T\[\]
 
 ```typescript
 move([1, 2, 3], 0, 1) // => [2, 1, 3]
-
 ```
 

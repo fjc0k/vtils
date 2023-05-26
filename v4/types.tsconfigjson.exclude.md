@@ -8,7 +8,7 @@ Specifies a list of files to be excluded from compilation. The `exclude` propert
 
 Glob patterns require TypeScript version 2.0 or later.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 exclude?: string[];

@@ -6,7 +6,7 @@
 
 将给定的 base64 字符串解码为 UTF8 字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function base64Decode(value: string): string;
@@ -18,7 +18,7 @@ export declare function base64Decode(value: string): string;
 |  --- | --- | --- |
 |  value | string | 要解码的 base64 字符串 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -31,6 +31,5 @@ string
 base64Decode('dg==') // => 'v'
 base64Decode('6b6Z') // => '龙'
 base64Decode('8J+QsQ==') // => '🐱'
-
 ```
 

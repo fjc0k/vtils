@@ -6,7 +6,7 @@
 
 转换文本为没有分隔符的大写单词字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function pascalCase<T extends string>(text: T): PascalCase<T>;
@@ -18,7 +18,7 @@ export declare function pascalCase<T extends string>(text: T): PascalCase<T>;
 |  --- | --- | --- |
 |  text | T | 要转换的文本 |
 
-<b>Returns:</b>
+**Returns:**
 
 PascalCase&lt;T&gt;
 
@@ -30,6 +30,5 @@ PascalCase&lt;T&gt;
 ```typescript
 pascalCase('test string')
 // => TestString
-
 ```
 

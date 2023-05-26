@@ -6,7 +6,7 @@
 
 类型工具库。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 declare type AnyArray_2<T = any> = Array<T> | ReadonlyArray<T>;

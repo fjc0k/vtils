@@ -4,7 +4,7 @@
 
 ## yup.SchemaValidateOptions.strict property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 strict?: boolean;

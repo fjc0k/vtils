@@ -6,7 +6,7 @@
 
 纬度。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 latitude: number;

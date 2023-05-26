@@ -10,7 +10,7 @@ If no `files` or `include` property is present in a `tsconfig.json`<!-- -->, the
 
 Requires TypeScript version 2.0 or later.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 include?: string[];

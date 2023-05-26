@@ -6,7 +6,7 @@
 
 确保当前在小程序环境并执行回调。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function ensureInMiniProgram<T>(cb: (mp: Exclude<typeof $mp, false | undefined>) => T): T;
@@ -18,7 +18,7 @@ export declare function ensureInMiniProgram<T>(cb: (mp: Exclude<typeof $mp, fals
 |  --- | --- | --- |
 |  cb | (mp: Exclude&lt;typeof $mp, false \| undefined&gt;) =&gt; T | 要执行的回调，第一个参数为小程序 API 挂载的全局变量 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

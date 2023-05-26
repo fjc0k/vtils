@@ -4,7 +4,7 @@
 
 ## createXml.text variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 text: <T = any>(value: T) => any

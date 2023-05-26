@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.chineseMobilePhoneNumber() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 chineseMobilePhoneNumber(message?: StringLocale['chineseMobilePhoneNumber']): this;
@@ -14,9 +14,9 @@ chineseMobilePhoneNumber(message?: StringLocale['chineseMobilePhoneNumber']): th
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | StringLocale\['chineseMobilePhoneNumber'\] |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['chineseMobilePhoneNumber'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

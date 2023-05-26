@@ -6,7 +6,7 @@
 
 Selective version resolutions. Allows the definition of custom package versions inside dependencies without manual edits in the `yarn.lock` file.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 resolutions?: Dependency;

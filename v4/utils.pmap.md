@@ -6,7 +6,7 @@
 
 `Promise.all(data.map(callback))` 的简写。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function pMap<T, R>(list: T[], callback: (item: T, index: number, list: T[]) => R | PromiseLike<R>): Promise<R[]>;
@@ -19,7 +19,7 @@ export declare function pMap<T, R>(list: T[], callback: (item: T, index: number,
 |  list | T\[\] | 列表数据 |
 |  callback | (item: T, index: number, list: T\[\]) =&gt; R \| PromiseLike&lt;R&gt; | 回调 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;R\[\]&gt;
 
@@ -32,6 +32,5 @@ const res = await pMap(
   i => Promise.resolve(i),
 )
 // => [1, 2]
-
 ```
 

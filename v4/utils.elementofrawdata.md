@@ -4,10 +4,10 @@
 
 ## ElementOfRawData type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type ElementOfRawData<TRawData extends RawData> = TRawData extends RawData<infer X> ? X : never;
 ```
-<b>References:</b> [RawData](./utils.rawdata.md)
+**References:** [RawData](./utils.rawdata.md)
 

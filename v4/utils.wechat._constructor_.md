@@ -6,7 +6,7 @@
 
 构造函数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 constructor(params?: WechatConfigParams);
@@ -16,5 +16,5 @@ constructor(params?: WechatConfigParams);
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  params | [WechatConfigParams](./utils.wechatconfigparams.md) | 注入微信 <code>JSSDK</code> 的权限验证配置参数 |
+|  params | [WechatConfigParams](./utils.wechatconfigparams.md) | _(Optional)_ 注入微信 <code>JSSDK</code> 的权限验证配置参数 |
 

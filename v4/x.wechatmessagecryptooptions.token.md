@@ -6,7 +6,7 @@
 
 消息校验口令
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 token: string;

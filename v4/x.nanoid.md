@@ -6,7 +6,7 @@
 
 生成一个 \[nanoid\](https://github.com/ai/nanoid/)。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function nanoid(size?: number): string;
@@ -16,9 +16,9 @@ export declare function nanoid(size?: number): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  size | number | 生成的 ID 长度，默认 21 |
+|  size | number | _(Optional)_ 生成的 ID 长度，默认 21 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -27,6 +27,5 @@ string
 
 ```typescript
 nanoid() // => "Uakgb_J5m9g-0JDMbcJqL"
-
 ```
 

@@ -4,7 +4,7 @@
 
 ## usePullDownRefresh() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function usePullDownRefresh(callback: () => any): void;
@@ -16,7 +16,7 @@ export declare function usePullDownRefresh(callback: () => any): void;
 |  --- | --- | --- |
 |  callback | () =&gt; any |  |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

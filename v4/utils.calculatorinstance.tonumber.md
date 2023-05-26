@@ -6,7 +6,7 @@
 
 转换为数字。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 toNumber(value: CalculatorPrimitiveValue): T;
@@ -18,7 +18,7 @@ toNumber(value: CalculatorPrimitiveValue): T;
 |  --- | --- | --- |
 |  value | [CalculatorPrimitiveValue](./utils.calculatorprimitivevalue.md) | 值 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

@@ -4,7 +4,7 @@
 
 ## yup.Ref interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Ref<T> 

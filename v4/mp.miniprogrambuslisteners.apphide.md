@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.appHide property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 appHide: Defined<WechatMiniprogram.App.Options<{}>['onHide']>;

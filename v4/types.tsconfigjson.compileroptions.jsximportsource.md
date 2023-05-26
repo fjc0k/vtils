@@ -10,7 +10,7 @@ Requires TypeScript version 4.1 or later.
 
  'react'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 jsxImportSource?: string;

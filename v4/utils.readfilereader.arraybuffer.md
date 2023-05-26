@@ -6,12 +6,12 @@
 
 读取并返回 ArrayBuffer 内容。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 arrayBuffer(): Promise<ArrayBuffer>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;ArrayBuffer&gt;
 

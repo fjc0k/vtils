@@ -4,7 +4,7 @@
 
 ## createXml.attr variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 attr: <T = any>(value: T) => any

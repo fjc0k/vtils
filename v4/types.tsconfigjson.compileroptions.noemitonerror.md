@@ -8,7 +8,7 @@ Do not emit outputs if any type checking errors were reported.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noEmitOnError?: boolean;

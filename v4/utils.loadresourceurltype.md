@@ -6,7 +6,7 @@
 
 资源类型。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum LoadResourceUrlType 

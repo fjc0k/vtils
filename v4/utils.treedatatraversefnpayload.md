@@ -4,7 +4,7 @@
 
 ## TreeDataTraverseFnPayload interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface TreeDataTraverseFnPayload<TNode extends TreeDataNode> 
@@ -12,14 +12,14 @@ export declare interface TreeDataTraverseFnPayload<TNode extends TreeDataNode>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [depth](./utils.treedatatraversefnpayload.depth.md) | number | 当前深度。从 <code>0</code> 开始。 |
-|  [exit](./utils.treedatatraversefnpayload.exit.md) | () =&gt; void | 退出遍历。 |
-|  [index](./utils.treedatatraversefnpayload.index.md) | number | 当前节点索引。 |
-|  [node](./utils.treedatatraversefnpayload.node.md) | TNode | 当前节点。 |
-|  [parentNode](./utils.treedatatraversefnpayload.parentnode.md) | TNode \| undefined | 父节点。为 <code>undefined</code> 时表示当前节点是根节点。 |
-|  [path](./utils.treedatatraversefnpayload.path.md) | TNode\[\] | 到当前节点的路径节点列表。 |
-|  [removeNode](./utils.treedatatraversefnpayload.removenode.md) | () =&gt; void | 移除当前节点。 |
-|  [skipChildrenTraverse](./utils.treedatatraversefnpayload.skipchildrentraverse.md) | () =&gt; void | 跳过子树遍历。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [depth](./utils.treedatatraversefnpayload.depth.md) |  | number | 当前深度。从 <code>0</code> 开始。 |
+|  [exit](./utils.treedatatraversefnpayload.exit.md) |  | () =&gt; void | 退出遍历。 |
+|  [index](./utils.treedatatraversefnpayload.index.md) |  | number | 当前节点索引。 |
+|  [node](./utils.treedatatraversefnpayload.node.md) |  | TNode | 当前节点。 |
+|  [parentNode](./utils.treedatatraversefnpayload.parentnode.md) |  | TNode \| undefined | 父节点。为 <code>undefined</code> 时表示当前节点是根节点。 |
+|  [path](./utils.treedatatraversefnpayload.path.md) |  | TNode\[\] | 到当前节点的路径节点列表。 |
+|  [removeNode](./utils.treedatatraversefnpayload.removenode.md) |  | () =&gt; void | 移除当前节点。 |
+|  [skipChildrenTraverse](./utils.treedatatraversefnpayload.skipchildrentraverse.md) |  | () =&gt; void | 跳过子树遍历。 |
 

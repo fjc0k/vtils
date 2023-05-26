@@ -6,7 +6,7 @@
 
 去除类型 T 中的 undefined。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Defined<T> = Exclude<T, undefined>;
@@ -18,6 +18,5 @@ export declare type Defined<T> = Exclude<T, undefined>;
 ```typescript
 type X = string | undefined
 type Y = Defined<X> // => string
-
 ```
 

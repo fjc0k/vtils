@@ -6,7 +6,7 @@
 
 解包数据。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static unpack<TRawObjectData extends RawData>(packedData: PackedData<TRawObjectData>): RawData<TRawObjectData>;
@@ -18,7 +18,7 @@ static unpack<TRawObjectData extends RawData>(packedData: PackedData<TRawObjectD
 |  --- | --- | --- |
 |  packedData | [PackedData](./utils.packeddata.md)<!-- -->&lt;TRawObjectData&gt; |  |
 
-<b>Returns:</b>
+**Returns:**
 
 [RawData](./utils.rawdata.md)<!-- -->&lt;TRawObjectData&gt;
 

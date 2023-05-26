@@ -6,7 +6,7 @@
 
 Package description, listed in `npm search`<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 description?: string;

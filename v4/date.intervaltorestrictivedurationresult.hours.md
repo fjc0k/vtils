@@ -4,7 +4,7 @@
 
 ## IntervalToRestrictiveDurationResult.hours property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 hours: number;

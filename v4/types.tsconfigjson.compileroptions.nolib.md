@@ -8,7 +8,7 @@ Do not include the default library file (lib.d.ts).
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noLib?: boolean;

@@ -4,7 +4,7 @@
 
 ## MiniProgramUrl.toWxOpenLaunchWeappAttrs() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 toWxOpenLaunchWeappAttrs(): {
@@ -14,7 +14,7 @@ toWxOpenLaunchWeappAttrs(): {
         extraData: string;
     };
 ```
-<b>Returns:</b>
+**Returns:**
 
 { username: string; path: string; envVersion: [MiniProgramUrlVersion](./utils.miniprogramurlversion.md)<!-- -->; extraData: string; }
 

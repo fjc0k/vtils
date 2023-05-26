@@ -4,7 +4,7 @@
 
 ## CreateGlobalStateResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface CreateGlobalStateResult<S extends CreateGlobalStateState | undefined, R = never> 

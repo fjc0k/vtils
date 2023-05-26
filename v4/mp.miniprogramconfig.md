@@ -4,7 +4,7 @@
 
 ## MiniProgramConfig interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface MiniProgramConfig 
@@ -12,7 +12,7 @@ export declare interface MiniProgramConfig
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [webUrlToMiniProgramUrl?](./mp.miniprogramconfig.weburltominiprogramurl.md) | (url: string) =&gt; string | <i>(Optional)</i> |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [webUrlToMiniProgramUrl?](./mp.miniprogramconfig.weburltominiprogramurl.md) |  | (url: string) =&gt; string | _(Optional)_ |
 

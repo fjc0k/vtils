@@ -6,7 +6,7 @@
 
 Location for executable scripts. Sugar to generate entries in the `bin` property by walking the folder.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 bin?: string;

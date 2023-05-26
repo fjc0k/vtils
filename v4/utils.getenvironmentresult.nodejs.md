@@ -6,7 +6,7 @@
 
 Node.js
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly nodejs: boolean;

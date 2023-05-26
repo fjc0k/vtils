@@ -4,22 +4,22 @@
 
 ## yup.reach() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare function reach<T>(schema: ObjectSchema<T>, path: string, value?: T, context?: {}): MixedSchema;
+export declare function reach<T extends {}>(schema: ObjectSchema<T>, path: string, value?: T, context?: {}): MixedSchema;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  schema | ObjectSchema&lt;T&gt; |  |
+|  schema | [ObjectSchema](./validator.yup.objectschema.md)<!-- -->&lt;T&gt; |  |
 |  path | string |  |
-|  value | T |  |
-|  context | {} |  |
+|  value | T | _(Optional)_ |
+|  context | {} | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
-MixedSchema
+[MixedSchema](./validator.yup.mixedschema.md)
 

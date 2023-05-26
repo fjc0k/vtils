@@ -6,7 +6,7 @@
 
 读取给定文件的内容。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function readFile(file: File): ReadFileReader;
@@ -18,7 +18,7 @@ export declare function readFile(file: File): ReadFileReader;
 |  --- | --- | --- |
 |  file | File | 要读取的文件 |
 
-<b>Returns:</b>
+**Returns:**
 
 [ReadFileReader](./utils.readfilereader.md)
 
@@ -32,6 +32,5 @@ const file = new File(['{"x":1}'], 'x.json')
 const reader = readFile(file)
 console.log(await reader.text()) // => '{"x":1}'
 console.log(await reader.json()) // => {x: 1}
-
 ```
 

@@ -6,7 +6,7 @@
 
 从集合中随机获得一个元素的索引（数组）或键（对象）。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function sampleIndex<T>(collection: T[]): number | undefined;
@@ -18,7 +18,7 @@ export declare function sampleIndex<T>(collection: T[]): number | undefined;
 |  --- | --- | --- |
 |  collection | T\[\] | 集合 |
 
-<b>Returns:</b>
+**Returns:**
 
 number \| undefined
 

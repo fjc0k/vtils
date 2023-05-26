@@ -6,7 +6,7 @@
 
 Redirect output structure to the directory.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 outDir?: string;

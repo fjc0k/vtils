@@ -8,7 +8,7 @@ Type for \[npm's `package.json` file\](https://docs.npmjs.com/creating-a-package
 
  Miscellaneous
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type PackageJson =
@@ -18,5 +18,5 @@ PackageJson.TypeScriptConfiguration &
 PackageJson.YarnConfiguration &
 PackageJson.JSPMConfiguration;
 ```
-<b>References:</b> [PackageJson.PackageJsonStandard](./types.packagejson.packagejsonstandard.md)<!-- -->, [PackageJson.NonStandardEntryPoints](./types.packagejson.nonstandardentrypoints.md)<!-- -->, [PackageJson.TypeScriptConfiguration](./types.packagejson.typescriptconfiguration.md)<!-- -->, [PackageJson.YarnConfiguration](./types.packagejson.yarnconfiguration.md)<!-- -->, [PackageJson.JSPMConfiguration](./types.packagejson.jspmconfiguration.md)
+**References:** [PackageJson.PackageJsonStandard](./types.packagejson.packagejsonstandard.md)<!-- -->, [PackageJson.NonStandardEntryPoints](./types.packagejson.nonstandardentrypoints.md)<!-- -->, [PackageJson.TypeScriptConfiguration](./types.packagejson.typescriptconfiguration.md)<!-- -->, [PackageJson.YarnConfiguration](./types.packagejson.yarnconfiguration.md)<!-- -->, [PackageJson.JSPMConfiguration](./types.packagejson.jspmconfiguration.md)
 

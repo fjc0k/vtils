@@ -6,7 +6,7 @@
 
 Location for test files.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 test?: string;

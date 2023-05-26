@@ -6,7 +6,7 @@
 
 将文件富链接转换为文件和普通链接。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static toFile(richUrl: string | ParsedRichUrl<File>): Promise<ParsedFileRichUrl>;
@@ -18,7 +18,7 @@ static toFile(richUrl: string | ParsedRichUrl<File>): Promise<ParsedFileRichUrl>
 |  --- | --- | --- |
 |  richUrl | string \| [ParsedRichUrl](./utils.parsedrichurl.md)<!-- -->&lt;File&gt; | 要转换的文件富链接 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;[ParsedFileRichUrl](./utils.parsedfilerichurl.md)<!-- -->&gt;
 

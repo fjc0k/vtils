@@ -6,7 +6,7 @@
 
 Indicate peer dependencies that are optional.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 peerDependenciesMeta?: Record<string, {optional: true}>;

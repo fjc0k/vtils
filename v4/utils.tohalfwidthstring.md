@@ -6,7 +6,7 @@
 
 转换为半角字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function toHalfWidthString(value: string): string;
@@ -18,7 +18,7 @@ export declare function toHalfWidthString(value: string): string;
 |  --- | --- | --- |
 |  value | string | 要转换的字符串 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

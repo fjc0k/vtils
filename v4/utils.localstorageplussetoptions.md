@@ -4,7 +4,7 @@
 
 ## LocalStoragePlusSetOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface LocalStoragePlusSetOptions 
@@ -12,8 +12,8 @@ export declare interface LocalStoragePlusSetOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [tag?](./utils.localstorageplussetoptions.tag.md) | string \| number | <i>(Optional)</i> 标签 |
-|  [ttl?](./utils.localstorageplussetoptions.ttl.md) | number | <i>(Optional)</i> 存活时间(毫秒) |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [tag?](./utils.localstorageplussetoptions.tag.md) |  | string \| number | _(Optional)_ 标签 |
+|  [ttl?](./utils.localstorageplussetoptions.ttl.md) |  | number | _(Optional)_ 存活时间(毫秒) |
 

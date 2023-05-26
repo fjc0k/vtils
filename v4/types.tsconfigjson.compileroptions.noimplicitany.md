@@ -8,7 +8,7 @@ Warn on expressions and declarations with an implied 'any' type.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noImplicitAny?: boolean;

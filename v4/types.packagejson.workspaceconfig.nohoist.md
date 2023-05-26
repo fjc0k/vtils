@@ -8,7 +8,7 @@ Designed to solve the problem of packages which break when their `node_modules` 
 
 \[Read more\](https://classic.yarnpkg.com/blog/2018/02/15/nohoist/)
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 nohoist?: WorkspacePattern[];

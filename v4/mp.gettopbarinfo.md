@@ -6,12 +6,12 @@
 
 获取顶栏信息。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function getTopBarInfo(): GetTopBarInfoResult;
 ```
-<b>Returns:</b>
+**Returns:**
 
 [GetTopBarInfoResult](./mp.gettopbarinforesult.md)
 

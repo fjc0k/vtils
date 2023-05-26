@@ -6,7 +6,7 @@
 
 Engines that this package runs on.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 engines?: {

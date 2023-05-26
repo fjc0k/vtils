@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.withMutation() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 withMutation<X>(fn: (schema: this) => X): X;
@@ -16,7 +16,7 @@ withMutation<X>(fn: (schema: this) => X): X;
 |  --- | --- | --- |
 |  fn | (schema: this) =&gt; X |  |
 
-<b>Returns:</b>
+**Returns:**
 
 X
 

@@ -6,12 +6,12 @@
 
 返回函数 T 第一个参数的类型。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type FirstParameter<T extends (...args: any[]) => any> = Head<Parameters<T>>;
 ```
-<b>References:</b> [Head](./types.head.md)
+**References:** [Head](./types.head.md)
 
 ## Example
 
@@ -19,6 +19,5 @@ export declare type FirstParameter<T extends (...args: any[]) => any> = Head<Par
 ```typescript
 type F = (x: string, y: number) => any
 type X = FirstParameter<F> // => string
-
 ```
 

@@ -4,7 +4,7 @@
 
 ## MiniProgramUrlStringInput type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MiniProgramUrlStringInput = `mp://${string}`;

@@ -6,7 +6,7 @@
 
 保留 n 位小数下的 x 舍 y 入。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function roundTo(number: number, precision?: number, threshold?: number): number;
@@ -17,10 +17,10 @@ export declare function roundTo(number: number, precision?: number, threshold?: 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  number | number | 数值 |
-|  precision | number | 精度 |
-|  threshold | number | 舍入阈值，等于大于这个值时入，小于这个值时舍 |
+|  precision | number | _(Optional)_ 精度 |
+|  threshold | number | _(Optional)_ 舍入阈值，等于大于这个值时入，小于这个值时舍 |
 
-<b>Returns:</b>
+**Returns:**
 
 number
 

@@ -6,7 +6,7 @@
 
 Indicates the structure of the package.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 directories?: DirectoryLocations;

@@ -6,7 +6,7 @@
 
 验证增强，包括：对象顺序验证、返回结果包含错误信息。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 validatePlus(value: T, options?: SchemaValidateOptions): Promise<{
@@ -20,9 +20,9 @@ validatePlus(value: T, options?: SchemaValidateOptions): Promise<{
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T |  |
-|  options | SchemaValidateOptions |  |
+|  options | [SchemaValidateOptions](./validator.yup.schemavalidateoptions.md) | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
-Promise&lt;{ error?: ValidationError; data: T; }&gt;
+Promise&lt;{ error?: [ValidationError](./validator.yup.validationerror.md)<!-- -->; data: T; }&gt;
 

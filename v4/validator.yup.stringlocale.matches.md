@@ -4,7 +4,7 @@
 
 ## yup.StringLocale.matches property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 matches: LocaleValue<{

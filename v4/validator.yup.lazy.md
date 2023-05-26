@@ -4,10 +4,10 @@
 
 ## yup.Lazy interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Lazy extends MixedSchema 
 ```
-<b>Extends:</b> MixedSchema
+**Extends:** [MixedSchema](./validator.yup.mixedschema.md)
 

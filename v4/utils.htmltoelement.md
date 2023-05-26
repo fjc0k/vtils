@@ -6,7 +6,7 @@
 
 将 HTML 字符串转为 Element。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function htmlToElement<T extends Element = Element>(html: string): T | undefined;
@@ -18,7 +18,7 @@ export declare function htmlToElement<T extends Element = Element>(html: string)
 |  --- | --- | --- |
 |  html | string | HTML 字符串 |
 
-<b>Returns:</b>
+**Returns:**
 
 T \| undefined
 

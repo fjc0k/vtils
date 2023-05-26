@@ -4,7 +4,7 @@
 
 ## yup.StringLocale.trim property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 trim: LocaleValue;

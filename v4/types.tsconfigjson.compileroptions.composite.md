@@ -8,7 +8,7 @@ Enables building for project references.
 
  true
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 composite?: boolean;

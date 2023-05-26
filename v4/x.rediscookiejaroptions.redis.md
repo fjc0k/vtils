@@ -6,7 +6,7 @@
 
 Redis 实例或选项，内部使用 `ioredis`<!-- -->。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 redis: Redis.Redis | Redis.RedisOptions;

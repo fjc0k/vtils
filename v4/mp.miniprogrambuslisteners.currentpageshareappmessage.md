@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.currentPageShareAppMessage property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 currentPageShareAppMessage: Defined<WechatMiniprogram.Page.Options<{}, {}>['onShareAppMessage']>;

@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.max() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 max(limit: number | Ref<number>, message?: StringLocale['max']): this;
@@ -14,10 +14,10 @@ max(limit: number | Ref<number>, message?: StringLocale['max']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| Ref&lt;number&gt; |  |
-|  message | StringLocale\['max'\] |  |
+|  limit | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['max'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

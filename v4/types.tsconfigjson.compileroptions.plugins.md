@@ -8,7 +8,7 @@ List of TypeScript language server plugins to load.
 
 Requires TypeScript version 2.3 or later.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 plugins?: CompilerOptions.Plugin[];

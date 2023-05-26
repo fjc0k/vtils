@@ -4,7 +4,7 @@
 
 ## yup.SchemaValidateOptions.abortEarly property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 abortEarly?: boolean;

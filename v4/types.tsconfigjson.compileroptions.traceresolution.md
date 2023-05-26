@@ -8,7 +8,7 @@ Enable tracing of the name resolution process.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 traceResolution?: boolean;

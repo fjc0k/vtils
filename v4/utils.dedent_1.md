@@ -6,7 +6,7 @@
 
 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function dedent(literals: TemplateStringsArray, ...interpolations: Array<string | number>): string;
@@ -19,7 +19,7 @@ export declare function dedent(literals: TemplateStringsArray, ...interpolations
 |  literals | TemplateStringsArray | 字面值 |
 |  interpolations | Array&lt;string \| number&gt; | 插入值 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -30,6 +30,5 @@ string
 
 ```typescript
 dedent` a\n b` // => 'a\nb'
-
 ```
 

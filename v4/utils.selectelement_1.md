@@ -4,7 +4,7 @@
 
 ## selectElement() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function selectElement<TElement extends Element = HTMLElement>(selectors: string | string[], baseElement?: ParentNode): TElement | undefined;
@@ -15,9 +15,9 @@ export declare function selectElement<TElement extends Element = HTMLElement>(se
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  selectors | string \| string\[\] |  |
-|  baseElement | ParentNode |  |
+|  baseElement | ParentNode | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 TElement \| undefined
 

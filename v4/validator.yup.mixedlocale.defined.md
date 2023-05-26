@@ -4,7 +4,7 @@
 
 ## yup.MixedLocale.defined property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 defined: LocaleValue;

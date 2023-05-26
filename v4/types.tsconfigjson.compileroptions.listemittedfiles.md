@@ -10,7 +10,7 @@ Requires TypeScript version 2.0 or later.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 listEmittedFiles?: boolean;

@@ -10,7 +10,7 @@
 
  'DFS'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 searchStrategy?: TreeDataSearchStrategy;

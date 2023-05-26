@@ -8,7 +8,7 @@ The maximum dependency depth to search under `node_modules` and load JavaScript 
 
  0
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 maxNodeModuleJsDepth?: number;

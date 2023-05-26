@@ -6,7 +6,7 @@
 
 数据打包器。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class DataPacker 

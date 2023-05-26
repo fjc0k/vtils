@@ -6,7 +6,7 @@
 
 克隆数据时忽略的值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 cloneIgnore?: (value: unknown) => boolean | undefined;

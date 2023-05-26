@@ -4,7 +4,7 @@
 
 ## MiniProgramBusRouteChangePayload.from property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 from: MiniProgramBusRouteChangePageInfo | undefined;

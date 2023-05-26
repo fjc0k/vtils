@@ -6,7 +6,7 @@
 
 加载 CSS 样式，支持链接和内容。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function loadCss(urlOrContent: string): Promise<LoadCssResult>;
@@ -18,7 +18,7 @@ export declare function loadCss(urlOrContent: string): Promise<LoadCssResult>;
 |  --- | --- | --- |
 |  urlOrContent | string | 链接或内容 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;[LoadCssResult](./utils.loadcssresult.md)<!-- -->&gt;
 
@@ -28,6 +28,5 @@ Promise&lt;[LoadCssResult](./utils.loadcssresult.md)<!-- -->&gt;
 ```typescript
 loadCss('https://foo.bar/global.css')
 loadCss(`body { font-size: 20px; }`)
-
 ```
 

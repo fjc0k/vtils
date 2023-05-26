@@ -4,7 +4,7 @@
 
 ## LocalStoragePlusGetOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface LocalStoragePlusGetOptions 
@@ -12,7 +12,7 @@ export declare interface LocalStoragePlusGetOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [tag?](./utils.localstorageplusgetoptions.tag.md) | string \| number | <i>(Optional)</i> 标签 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [tag?](./utils.localstorageplusgetoptions.tag.md) |  | string \| number | _(Optional)_ 标签 |
 

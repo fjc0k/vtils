@@ -6,7 +6,7 @@
 
 构造函数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 constructor(data: TreeDataSingleRootData<TNode> | TreeDataMultipleRootData<TNode>, options?: TreeDataOptions<TNode>);
@@ -17,5 +17,5 @@ constructor(data: TreeDataSingleRootData<TNode> | TreeDataMultipleRootData<TNode
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  data | [TreeDataSingleRootData](./utils.treedatasinglerootdata.md)<!-- -->&lt;TNode&gt; \| [TreeDataMultipleRootData](./utils.treedatamultiplerootdata.md)<!-- -->&lt;TNode&gt; | 整棵树的数据 |
-|  options | [TreeDataOptions](./utils.treedataoptions.md)<!-- -->&lt;TNode&gt; | 选项 |
+|  options | [TreeDataOptions](./utils.treedataoptions.md)<!-- -->&lt;TNode&gt; | _(Optional)_ 选项 |
 

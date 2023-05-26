@@ -4,7 +4,7 @@
 
 ## yup.MixedLocale.notOneOf property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 notOneOf: LocaleValue<{

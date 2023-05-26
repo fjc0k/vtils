@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.type property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 type: 'mixed' | 'string' | 'number' | 'boolean' | 'object' | 'date' | 'array';

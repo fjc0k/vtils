@@ -6,7 +6,7 @@
 
 签名
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 signature: string;

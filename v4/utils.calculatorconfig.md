@@ -4,16 +4,16 @@
 
 ## CalculatorConfig interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface CalculatorConfig extends Config 
 ```
-<b>Extends:</b> Config
+**Extends:** Config
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [decimalPlaces?](./utils.calculatorconfig.decimalplaces.md) | number | <i>(Optional)</i> 小数位数 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [decimalPlaces?](./utils.calculatorconfig.decimalplaces.md) |  | number | _(Optional)_ 小数位数 |
 

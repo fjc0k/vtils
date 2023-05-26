@@ -8,7 +8,7 @@ Enable incremental compilation.
 
  `composite`
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 incremental?: boolean;

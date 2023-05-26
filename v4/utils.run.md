@@ -6,7 +6,7 @@
 
 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function run<T extends () => any, R extends ReturnType<T>>(fn: T): Promise<[
@@ -21,7 +21,7 @@ R extends PromiseLike<any> ? R extends PromiseLike<infer X> ? X : unknown : R
 |  --- | --- | --- |
 |  fn | T | 要执行的函数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;\[ unknown, R extends PromiseLike&lt;any&gt; ? R extends PromiseLike&lt;infer X&gt; ? X : unknown : R \]&gt;
 
@@ -38,6 +38,5 @@ const [err, res] = await run(async () => 'ok') // => [null, 'ok']
 // 函数执行出错
 const [err, res] = await run(() => { throw 'err' }) // => ['err']
 const [err, res] = await run(async () => { throw 'err' }) // => ['err']
-
 ```
 

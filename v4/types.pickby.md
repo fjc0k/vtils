@@ -6,7 +6,7 @@
 
 Pick all properties of given type in object type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type PickBy<T, P> = Pick<

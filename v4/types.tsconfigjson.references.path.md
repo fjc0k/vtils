@@ -6,7 +6,7 @@
 
 A normalized path on disk.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 path: string;

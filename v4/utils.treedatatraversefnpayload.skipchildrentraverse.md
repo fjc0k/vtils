@@ -6,7 +6,7 @@
 
 跳过子树遍历。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 skipChildrenTraverse: () => void;

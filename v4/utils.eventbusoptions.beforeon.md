@@ -4,7 +4,7 @@
 
 ## EventBusOptions.beforeOn property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 beforeOn?: EventBusBeforeOn<TListeners>;

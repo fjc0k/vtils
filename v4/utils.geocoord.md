@@ -8,7 +8,7 @@
 
 - `大地坐标系（WGS84 坐标系）`<!-- -->: GPS 全球卫星定位系统使用的坐标系； - `火星坐标系（GCJ02 坐标系）`<!-- -->: 腾讯地图、高德地图等使用的坐标系，是由中国国家测绘局制定的由 WGS84 加密后得到的坐标系； - `百度坐标系（BD09 坐标系）`<!-- -->: 百度地图使用的坐标系，是在 GCJ02 基础上再次加密得到的坐标系。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class GeoCoord 
@@ -18,10 +18,10 @@ export declare class GeoCoord
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [BD09ToGCJ02](./utils.geocoord.bd09togcj02.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <code>BD09 坐标系</code> 转 <code>GCJ02 坐标系</code>。<!-- -->应用场景：百度地图坐标转腾讯地图、高德地图坐标。 |
-|  [BD09ToWGS84](./utils.geocoord.bd09towgs84.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <code>BD09 坐标系</code> 转 <code>WGS84 坐标系</code>。<!-- -->应用场景：百度地图坐标转 GPS 坐标。 |
-|  [GCJ02ToBD09](./utils.geocoord.gcj02tobd09.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <code>GCJ02 坐标系</code> 转 <code>BD09 坐标系</code>。<!-- -->应用场景：腾讯地图、高德地图坐标转百度地图坐标。 |
-|  [GCJ02ToWGS84](./utils.geocoord.gcj02towgs84.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <code>GCJ02 坐标系</code> 转 <code>WGS84 坐标系</code>。<!-- -->应用场景：腾讯地图、高德地图坐标转 GPS 坐标。 |
-|  [WGS84ToBD09](./utils.geocoord.wgs84tobd09.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <code>WGS84 坐标系</code> 转 <code>BD09 坐标系</code>。<!-- -->应用场景：GPS 坐标转百度地图坐标。 |
-|  [WGS84ToGCJ02](./utils.geocoord.wgs84togcj02.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <code>WGS84 坐标系</code> 转 <code>GCJ02 坐标系</code>。<!-- -->应用场景：GPS 坐标转腾讯地图、高德地图坐标。 |
+|  [BD09ToGCJ02](./utils.geocoord.bd09togcj02.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <p><code>BD09 坐标系</code> 转 <code>GCJ02 坐标系</code>。</p><p>应用场景：百度地图坐标转腾讯地图、高德地图坐标。</p> |
+|  [BD09ToWGS84](./utils.geocoord.bd09towgs84.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <p><code>BD09 坐标系</code> 转 <code>WGS84 坐标系</code>。</p><p>应用场景：百度地图坐标转 GPS 坐标。</p> |
+|  [GCJ02ToBD09](./utils.geocoord.gcj02tobd09.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <p><code>GCJ02 坐标系</code> 转 <code>BD09 坐标系</code>。</p><p>应用场景：腾讯地图、高德地图坐标转百度地图坐标。</p> |
+|  [GCJ02ToWGS84](./utils.geocoord.gcj02towgs84.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <p><code>GCJ02 坐标系</code> 转 <code>WGS84 坐标系</code>。</p><p>应用场景：腾讯地图、高德地图坐标转 GPS 坐标。</p> |
+|  [WGS84ToBD09](./utils.geocoord.wgs84tobd09.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <p><code>WGS84 坐标系</code> 转 <code>BD09 坐标系</code>。</p><p>应用场景：GPS 坐标转百度地图坐标。</p> |
+|  [WGS84ToGCJ02](./utils.geocoord.wgs84togcj02.md) | <code>static</code> | (input: [GeoCoordTransformInput](./utils.geocoordtransforminput.md)<!-- -->) =&gt; [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) | <p><code>WGS84 坐标系</code> 转 <code>GCJ02 坐标系</code>。</p><p>应用场景：GPS 坐标转腾讯地图、高德地图坐标。</p> |
 

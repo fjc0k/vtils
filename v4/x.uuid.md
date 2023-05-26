@@ -6,12 +6,12 @@
 
 生成 RFC4122 V4 版本的 UUID。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function uuid(): string;
 ```
-<b>Returns:</b>
+**Returns:**
 
 string
 

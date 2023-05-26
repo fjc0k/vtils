@@ -6,7 +6,7 @@
 
 A list of people who contributed to the package.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 contributors?: Person[];

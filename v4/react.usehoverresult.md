@@ -4,7 +4,7 @@
 
 ## UseHoverResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface UseHoverResult 
@@ -12,9 +12,9 @@ export declare interface UseHoverResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [endHover](./react.usehoverresult.endhover.md) | () =&gt; any | 结束悬停。 |
-|  [hovering](./react.usehoverresult.hovering.md) | boolean | 当前的悬停态。 |
-|  [startHover](./react.usehoverresult.starthover.md) | () =&gt; any | 开始悬停。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [endHover](./react.usehoverresult.endhover.md) |  | () =&gt; any | 结束悬停。 |
+|  [hovering](./react.usehoverresult.hovering.md) |  | boolean | 当前的悬停态。 |
+|  [startHover](./react.usehoverresult.starthover.md) |  | () =&gt; any | 开始悬停。 |
 

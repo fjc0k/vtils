@@ -4,7 +4,7 @@
 
 ## yup.NumberLocale.negativeInteger property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 negativeInteger: LocaleValue;

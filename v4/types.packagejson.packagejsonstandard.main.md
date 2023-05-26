@@ -6,7 +6,7 @@
 
 The module ID that is the primary entry point to the program.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 main?: string;

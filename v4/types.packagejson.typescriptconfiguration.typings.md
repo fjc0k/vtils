@@ -6,7 +6,7 @@
 
 Location of the bundled TypeScript declaration file. Alias of `types`<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 typings?: string;

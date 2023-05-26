@@ -6,7 +6,7 @@
 
 科学计算器。主要是为了避免 js 的浮点数精度计算问题。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 Calculator: CalculatorInstance<number>

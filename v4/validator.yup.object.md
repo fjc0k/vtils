@@ -4,7 +4,7 @@
 
 ## yup.object() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function object<T extends {} = {}>(fields?: GetObjectSchema<T>): ObjectSchema<T>;
@@ -14,9 +14,9 @@ export declare function object<T extends {} = {}>(fields?: GetObjectSchema<T>): 
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fields | GetObjectSchema&lt;T&gt; |  |
+|  fields | [GetObjectSchema](./validator.yup.getobjectschema.md)<!-- -->&lt;T&gt; | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
-ObjectSchema&lt;T&gt;
+[ObjectSchema](./validator.yup.objectschema.md)<!-- -->&lt;T&gt;
 

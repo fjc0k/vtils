@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.trim() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 trim(message?: StringLocale['trim']): this;
@@ -14,9 +14,9 @@ trim(message?: StringLocale['trim']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | StringLocale\['trim'\] |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['trim'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

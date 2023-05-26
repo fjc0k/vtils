@@ -6,7 +6,7 @@
 
 菜单按钮垂直外边距。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 menuButtonVerticalMargin: number;

@@ -4,7 +4,7 @@
 
 ## PackageJson.TypeScriptConfiguration interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface TypeScriptConfiguration 
@@ -12,9 +12,9 @@ export interface TypeScriptConfiguration
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [types?](./types.packagejson.typescriptconfiguration.types.md) | string | <i>(Optional)</i> Location of the bundled TypeScript declaration file. |
-|  [typesVersions?](./types.packagejson.typescriptconfiguration.typesversions.md) | Record&lt;string, Record&lt;string, string\[\]&gt;&gt; | <i>(Optional)</i> Version selection map of TypeScript. |
-|  [typings?](./types.packagejson.typescriptconfiguration.typings.md) | string | <i>(Optional)</i> Location of the bundled TypeScript declaration file. Alias of <code>types</code>. |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [types?](./types.packagejson.typescriptconfiguration.types.md) |  | string | _(Optional)_ Location of the bundled TypeScript declaration file. |
+|  [typesVersions?](./types.packagejson.typescriptconfiguration.typesversions.md) |  | Record&lt;string, Record&lt;string, string\[\]&gt;&gt; | _(Optional)_ Version selection map of TypeScript. |
+|  [typings?](./types.packagejson.typescriptconfiguration.typings.md) |  | string | _(Optional)_ Location of the bundled TypeScript declaration file. Alias of <code>types</code>. |
 

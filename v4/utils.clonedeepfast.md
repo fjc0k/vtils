@@ -6,7 +6,7 @@
 
 深克隆快速版。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function cloneDeepFast<T>(value: T, ignore?: (value: unknown) => boolean | undefined): T;
@@ -17,9 +17,9 @@ export declare function cloneDeepFast<T>(value: T, ignore?: (value: unknown) => 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T | 要克隆的值 |
-|  ignore | (value: unknown) =&gt; boolean \| undefined | 忽略的值 |
+|  ignore | (value: unknown) =&gt; boolean \| undefined | _(Optional)_ 忽略的值 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 
@@ -31,6 +31,5 @@ T
 ```typescript
 cloneDeepFast({ x: [1] })
 // => { x: [1] }
-
 ```
 

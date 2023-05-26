@@ -6,7 +6,7 @@
 
 将本地存储的值减少给定值，若本地存储不存在，则初始化为 `0` 后操作。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static decrease(key: string, value?: number, options?: LocalStoragePlusSetOptions): void;
@@ -17,10 +17,10 @@ static decrease(key: string, value?: number, options?: LocalStoragePlusSetOption
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  key | string | 键 |
-|  value | number | 减小值，默认 <code>1</code> |
-|  options | [LocalStoragePlusSetOptions](./utils.localstorageplussetoptions.md) | 选项 |
+|  value | number | _(Optional)_ 减小值，默认 <code>1</code> |
+|  options | [LocalStoragePlusSetOptions](./utils.localstorageplussetoptions.md) | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

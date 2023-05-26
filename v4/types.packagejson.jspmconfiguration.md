@@ -4,7 +4,7 @@
 
 ## PackageJson.JSPMConfiguration interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface JSPMConfiguration 
@@ -12,7 +12,7 @@ export interface JSPMConfiguration
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [jspm?](./types.packagejson.jspmconfiguration.jspm.md) | [PackageJson](./types.packagejson.md) | <i>(Optional)</i> JSPM configuration. |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [jspm?](./types.packagejson.jspmconfiguration.jspm.md) |  | [PackageJson](./types.packagejson.md) | _(Optional)_ JSPM configuration. |
 

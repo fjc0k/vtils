@@ -8,7 +8,7 @@ Enables experimental support for ES7 decorators.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 experimentalDecorators?: boolean;

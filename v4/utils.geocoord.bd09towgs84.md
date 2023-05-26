@@ -8,7 +8,7 @@
 
 应用场景：百度地图坐标转 GPS 坐标。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static BD09ToWGS84: (input: GeoCoordTransformInput) => GeoCoordTransformOutput;

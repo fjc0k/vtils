@@ -10,7 +10,7 @@ Use-cases: - Creating interfaces for components that only need one of the keys t
 
 The caveat with `RequireExactlyOne` is that TypeScript doesn't always know at compile time every key that will exist at runtime. Therefore `RequireExactlyOne` can't do anything to prevent extra keys it doesn't know about.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type RequireExactlyOne<ObjectType, KeysType extends keyof ObjectType = keyof ObjectType> =

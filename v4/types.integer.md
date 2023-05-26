@@ -8,7 +8,7 @@ A `number` that is an integer. You can't pass a `bigint` as they are already gua
 
 Use-case: Validating and documenting parameters.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Integer<T extends number> = `${T}` extends `${bigint}` ? T : never;

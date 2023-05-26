@@ -6,7 +6,7 @@
 
 移除每一行的公共前导空白。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function dedent(text: string): string;
@@ -18,7 +18,7 @@ export declare function dedent(text: string): string;
 |  --- | --- | --- |
 |  text | string | 文本 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -29,6 +29,5 @@ string
 
 ```typescript
 dedent(' a\n b') // => 'a\nb'
-
 ```
 

@@ -6,12 +6,12 @@
 
 检查是否在 \[Taro 3\](https://taro.js.org/) 中。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function inTaro(): boolean;
 ```
-<b>Returns:</b>
+**Returns:**
 
 boolean
 

@@ -4,7 +4,7 @@
 
 ## setMiniProgramConfig() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function setMiniProgramConfig(config: Partial<MiniProgramConfig>): Readonly<MiniProgramConfig>;
@@ -16,7 +16,7 @@ export declare function setMiniProgramConfig(config: Partial<MiniProgramConfig>)
 |  --- | --- | --- |
 |  config | Partial&lt;[MiniProgramConfig](./mp.miniprogramconfig.md)<!-- -->&gt; |  |
 
-<b>Returns:</b>
+**Returns:**
 
 Readonly&lt;[MiniProgramConfig](./mp.miniprogramconfig.md)<!-- -->&gt;
 

@@ -6,7 +6,7 @@
 
 获取微信公众号的二维码链接。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function getWechatPublicAccountQrcodeUrl(accountId: string): string;
@@ -18,7 +18,7 @@ export declare function getWechatPublicAccountQrcodeUrl(accountId: string): stri
 |  --- | --- | --- |
 |  accountId | string | 公众号 ID |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -30,6 +30,5 @@ string
 ```typescript
 getWechatPublicAccountQrcodeUrl('rmrbwx')
 // => https://open.weixin.qq.com/qr/code?username=rmrbwx
-
 ```
 

@@ -4,7 +4,7 @@
 
 ## yup.DateLocale interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface DateLocale 
@@ -12,8 +12,8 @@ export interface DateLocale
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [max](./validator.yup.datelocale.max.md) | LocaleValue&lt;{ max: Date \| string; }&gt; |  |
-|  [min](./validator.yup.datelocale.min.md) | LocaleValue&lt;{ min: Date \| string; }&gt; |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [max](./validator.yup.datelocale.max.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ max: Date \| string; }&gt; |  |
+|  [min](./validator.yup.datelocale.min.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ min: Date \| string; }&gt; |  |
 

@@ -4,7 +4,7 @@
 
 ## wait.reject variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 reject: (milliseconds: number, value?: any) => WaitResult<never>

@@ -10,7 +10,7 @@ Requires TypeScript version 3.7 or later.
 
  'profile.cpuprofile'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 generateCpuProfile?: string;

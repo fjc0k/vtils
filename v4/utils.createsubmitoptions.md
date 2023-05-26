@@ -4,7 +4,7 @@
 
 ## CreateSubmitOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface CreateSubmitOptions<T = string> 
@@ -18,5 +18,5 @@ export declare interface CreateSubmitOptions<T = string>
 |  [fail(message, duration)](./utils.createsubmitoptions.fail.md) | 失败回调。 |
 |  [start(message)](./utils.createsubmitoptions.start.md) | 开始回调。 |
 |  [success(message, duration)](./utils.createsubmitoptions.success.md) | 成功回调。 |
-|  [throw(error)?](./utils.createsubmitoptions.throw.md) | <i>(Optional)</i> 异常回调。 |
+|  [throw(error)?](./utils.createsubmitoptions.throw.md) | _(Optional)_ 异常回调。 |
 

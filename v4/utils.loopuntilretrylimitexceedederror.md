@@ -4,10 +4,10 @@
 
 ## LoopUntilRetryLimitExceededError class
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class LoopUntilRetryLimitExceededError extends Error 
 ```
-<b>Extends:</b> Error
+**Extends:** Error
 

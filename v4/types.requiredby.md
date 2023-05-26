@@ -6,7 +6,7 @@
 
 Mark some properties as required, leaving others unchanged
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type RequiredBy<T, RK extends keyof T> = Exclude<T, RK> & Required<Pick<T, RK>>;

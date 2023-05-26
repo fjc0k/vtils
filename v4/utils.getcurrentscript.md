@@ -8,12 +8,12 @@
 
 - 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 `null`<!-- -->。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function getCurrentScript(): HTMLScriptElement | null;
 ```
-<b>Returns:</b>
+**Returns:**
 
 HTMLScriptElement \| null
 

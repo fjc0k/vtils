@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.lowercase() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 lowercase(message?: StringLocale['lowercase']): this;
@@ -14,9 +14,9 @@ lowercase(message?: StringLocale['lowercase']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | StringLocale\['lowercase'\] |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['lowercase'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

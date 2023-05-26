@@ -6,7 +6,7 @@
 
 日期格式化占位符。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum FormatDatePlaceholder 

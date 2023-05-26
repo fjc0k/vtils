@@ -8,7 +8,7 @@ Matches the hidden `Infinity` type.
 
 Please upvote \[this issue\](https://github.com/microsoft/TypeScript/issues/32277) if you want to have this type as a built-in in TypeScript.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type PositiveInfinity = 1e999;

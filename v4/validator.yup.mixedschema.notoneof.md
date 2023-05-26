@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.notOneOf() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 notOneOf(arrayOfValues: T[], message?: MixedLocale['notOneOf']): this;
@@ -15,9 +15,9 @@ notOneOf(arrayOfValues: T[], message?: MixedLocale['notOneOf']): this;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  arrayOfValues | T\[\] |  |
-|  message | MixedLocale\['notOneOf'\] |  |
+|  message | [MixedLocale](./validator.yup.mixedlocale.md)<!-- -->\['notOneOf'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

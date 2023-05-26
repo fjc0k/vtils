@@ -4,7 +4,7 @@
 
 ## miniProgramBus variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 miniProgramBus: EventBus<MiniProgramBusListeners>

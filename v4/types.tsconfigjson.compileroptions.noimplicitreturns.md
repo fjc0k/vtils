@@ -8,7 +8,7 @@ Report error when not all code paths in function return a value.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noImplicitReturns?: boolean;

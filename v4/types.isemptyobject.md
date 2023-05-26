@@ -6,12 +6,12 @@
 
 判断 `T` 是否是空对象。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type IsEmptyObject<T> = T extends Object ? IsNever<keyof T> : false;
 ```
-<b>References:</b> [IsNever](./types.isnever.md)
+**References:** [IsNever](./types.isnever.md)
 
 ## Example
 
@@ -19,6 +19,5 @@ export declare type IsEmptyObject<T> = T extends Object ? IsNever<keyof T> : fal
 ```typescript
 type X = IsEmptyObject<{}>
 // => true
-
 ```
 

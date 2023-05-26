@@ -4,7 +4,7 @@
 
 ## yup.StringSchema.uppercase() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 uppercase(message?: StringLocale['uppercase']): this;
@@ -14,9 +14,9 @@ uppercase(message?: StringLocale['uppercase']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | StringLocale\['uppercase'\] |  |
+|  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['uppercase'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

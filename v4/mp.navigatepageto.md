@@ -8,7 +8,7 @@
 
 \*\*注意：在页面真正切换后 Promise 才会被 resolve，因而此时的页面上下文已经是新页面。\*\*
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function navigatePageTo(url: string, query?: AnyObject_2, redirect?: boolean): Promise<any>;
@@ -19,10 +19,10 @@ export declare function navigatePageTo(url: string, query?: AnyObject_2, redirec
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  url | string | 要跳转去的页面地址 |
-|  query | AnyObject\_2 | 查询参数 |
-|  redirect | boolean | 是否关闭当前页面后跳转 |
+|  query | AnyObject\_2 | _(Optional)_ 查询参数 |
+|  redirect | boolean | _(Optional)_ 是否关闭当前页面后跳转 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

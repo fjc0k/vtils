@@ -6,7 +6,7 @@
 
 当前的悬停态。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 hovering: boolean;

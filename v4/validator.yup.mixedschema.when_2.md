@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.when() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 when<V>(key: string, builder: (value: V, schema: this) => this): this;
@@ -17,7 +17,7 @@ when<V>(key: string, builder: (value: V, schema: this) => this): this;
 |  key | string |  |
 |  builder | (value: V, schema: this) =&gt; this |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

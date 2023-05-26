@@ -6,7 +6,7 @@
 
 Alias of `bundledDependencies`<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 bundleDependencies?: string[];

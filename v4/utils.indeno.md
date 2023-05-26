@@ -6,12 +6,12 @@
 
 检查是否在 Deno 中。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function inDeno(): boolean;
 ```
-<b>Returns:</b>
+**Returns:**
 
 boolean
 
@@ -24,6 +24,5 @@ boolean
 if (inDeno()) {
   console.log('你在 Deno 中')
 }
-
 ```
 

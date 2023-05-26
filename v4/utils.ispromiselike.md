@@ -6,7 +6,7 @@
 
 检查 `value` 是否像 `Promise`<!-- -->。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function isPromiseLike(value: any): value is PromiseLike<any>;
@@ -18,7 +18,7 @@ export declare function isPromiseLike(value: any): value is PromiseLike<any>;
 |  --- | --- | --- |
 |  value | any | 要检查的值 |
 
-<b>Returns:</b>
+**Returns:**
 
 value is PromiseLike&lt;any&gt;
 
@@ -29,6 +29,5 @@ value is PromiseLike&lt;any&gt;
 
 ```typescript
 isPromiseLike(Promise.resolve()) // => true
-
 ```
 

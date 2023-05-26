@@ -6,7 +6,7 @@
 
 A person who has been involved in creating or maintaining the package.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type Person =

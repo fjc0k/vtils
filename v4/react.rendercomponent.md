@@ -6,7 +6,7 @@
 
 独立渲染一个组件在 document.body 下，常应用于弹窗类组件。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function renderComponent<TComponent extends React_2.ComponentType<any>>(Component: TComponent, initialProps: React_2.ComponentProps<TComponent>, injectCallbacks?: PickProperties<React_2.ComponentProps<TComponent>, Function | undefined>): RenderComponentResult<TComponent>;
@@ -18,9 +18,9 @@ export declare function renderComponent<TComponent extends React_2.ComponentType
 |  --- | --- | --- |
 |  Component | TComponent | 要渲染的组件 |
 |  initialProps | React\_2.ComponentProps&lt;TComponent&gt; | 初始属性 |
-|  injectCallbacks | PickProperties&lt;React\_2.ComponentProps&lt;TComponent&gt;, Function \| undefined&gt; | 回调函数注入 |
+|  injectCallbacks | PickProperties&lt;React\_2.ComponentProps&lt;TComponent&gt;, Function \| undefined&gt; | _(Optional)_ 回调函数注入 |
 
-<b>Returns:</b>
+**Returns:**
 
 [RenderComponentResult](./react.rendercomponentresult.md)<!-- -->&lt;TComponent&gt;
 

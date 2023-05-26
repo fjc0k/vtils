@@ -4,7 +4,7 @@
 
 ## MiniProgramUrlJsonInput type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MiniProgramUrlJsonInput = {
@@ -17,5 +17,5 @@ export declare type MiniProgramUrlJsonInput = {
     data?: any;
 };
 ```
-<b>References:</b> [MiniProgramUrlProvider](./utils.miniprogramurlprovider.md)<!-- -->, [MiniProgramUrlVersion](./utils.miniprogramurlversion.md)
+**References:** [MiniProgramUrlProvider](./utils.miniprogramurlprovider.md)<!-- -->, [MiniProgramUrlVersion](./utils.miniprogramurlversion.md)
 

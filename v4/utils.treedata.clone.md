@@ -6,12 +6,12 @@
 
 克隆实例。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 clone(): TreeData<TNode>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 [TreeData](./utils.treedata.md)<!-- -->&lt;TNode&gt;
 

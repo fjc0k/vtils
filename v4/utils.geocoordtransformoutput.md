@@ -4,7 +4,7 @@
 
 ## GeoCoordTransformOutput interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface GeoCoordTransformOutput 
@@ -12,8 +12,8 @@ export declare interface GeoCoordTransformOutput
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [latitude](./utils.geocoordtransformoutput.latitude.md) | number | 纬度。 |
-|  [longitude](./utils.geocoordtransformoutput.longitude.md) | number | 经度。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [latitude](./utils.geocoordtransformoutput.latitude.md) |  | number | 纬度。 |
+|  [longitude](./utils.geocoordtransformoutput.longitude.md) |  | number | 经度。 |
 

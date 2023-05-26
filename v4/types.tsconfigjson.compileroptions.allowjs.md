@@ -8,7 +8,7 @@ Allow javascript files to be compiled.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 allowJs?: boolean;

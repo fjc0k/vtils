@@ -4,7 +4,7 @@
 
 ## yup.MixedLocale.required property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 required: LocaleValue;

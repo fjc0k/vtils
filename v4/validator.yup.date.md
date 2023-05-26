@@ -4,12 +4,12 @@
 
 ## yup.date() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function date<T extends Date = Date>(): DateSchema<T>;
 ```
-<b>Returns:</b>
+**Returns:**
 
-DateSchema&lt;T&gt;
+[DateSchema](./validator.yup.dateschema.md)<!-- -->&lt;T&gt;
 

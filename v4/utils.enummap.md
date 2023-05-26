@@ -4,10 +4,10 @@
 
 ## EnumMap type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type EnumMap = Record<EnumKey, EnumValue>;
 ```
-<b>References:</b> [EnumKey](./utils.enumkey.md)<!-- -->, [EnumValue](./utils.enumvalue.md)
+**References:** [EnumKey](./utils.enumkey.md)<!-- -->, [EnumValue](./utils.enumvalue.md)
 

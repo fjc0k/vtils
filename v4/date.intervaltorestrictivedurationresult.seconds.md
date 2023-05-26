@@ -4,7 +4,7 @@
 
 ## IntervalToRestrictiveDurationResult.seconds property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 seconds: number;

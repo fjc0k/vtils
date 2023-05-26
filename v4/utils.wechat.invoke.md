@@ -6,7 +6,7 @@
 
 调用 JSSDK 的 API 方法。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 invoke<P extends Record<string, any> = Record<string, any>, T = any>(jsApi: WechatJsApi, params?: P): Promise<T>;
@@ -17,9 +17,9 @@ invoke<P extends Record<string, any> = Record<string, any>, T = any>(jsApi: Wech
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  jsApi | [WechatJsApi](./utils.wechatjsapi.md) | 要调用的 API 名称 |
-|  params | P | 传给 API 的参数 |
+|  params | P | _(Optional)_ 传给 API 的参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;T&gt;
 

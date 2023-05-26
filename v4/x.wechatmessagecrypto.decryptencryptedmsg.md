@@ -6,7 +6,7 @@
 
 解密加密后的消息。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 decryptEncryptedMsg(encryptedMsg: string): string;
@@ -18,7 +18,7 @@ decryptEncryptedMsg(encryptedMsg: string): string;
 |  --- | --- | --- |
 |  encryptedMsg | string | 加密后的消息 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

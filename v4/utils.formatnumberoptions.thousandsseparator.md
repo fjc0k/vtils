@@ -8,7 +8,7 @@
 
  ','
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 thousandsSeparator?: string;

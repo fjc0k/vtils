@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.oneOf() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 oneOf(arrayOfValues: T[], message?: MixedLocale['oneOf']): this;
@@ -15,9 +15,9 @@ oneOf(arrayOfValues: T[], message?: MixedLocale['oneOf']): this;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  arrayOfValues | T\[\] |  |
-|  message | MixedLocale\['oneOf'\] |  |
+|  message | [MixedLocale](./validator.yup.mixedlocale.md)<!-- -->\['oneOf'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

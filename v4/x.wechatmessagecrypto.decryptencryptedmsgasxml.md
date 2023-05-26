@@ -6,7 +6,7 @@
 
 解密加密后的消息并作为 XML 解码返回。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 decryptEncryptedMsgAsXml<T>(encryptedMsg: string): T;
@@ -18,7 +18,7 @@ decryptEncryptedMsgAsXml<T>(encryptedMsg: string): T;
 |  --- | --- | --- |
 |  encryptedMsg | string | 加密后的消息 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

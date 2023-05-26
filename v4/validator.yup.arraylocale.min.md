@@ -4,7 +4,7 @@
 
 ## yup.ArrayLocale.min property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 min: LocaleValue<{

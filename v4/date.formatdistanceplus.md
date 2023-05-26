@@ -6,7 +6,7 @@
 
 将时间转化为 `xxx前/后` 表示。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function formatDistancePlus(date: Date, baseDate?: Date): string;
@@ -17,9 +17,9 @@ export declare function formatDistancePlus(date: Date, baseDate?: Date): string;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  date | Date | 时间 |
-|  baseDate | Date | 基准时间（默认当前时间） |
+|  baseDate | Date | _(Optional)_ 基准时间（默认当前时间） |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

@@ -10,7 +10,7 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [TsConfigJson](./types.tsconfigjson.md) | Type for \[TypeScript's <code>tsconfig.json</code> file\](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) (TypeScript 3.7). Miscellaneous |
+|  [TsConfigJson](./types.tsconfigjson.md) | <p>Type for \[TypeScript's <code>tsconfig.json</code> file\](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) (TypeScript 3.7).</p><p> Miscellaneous</p> |
 
 ## Namespaces
 
@@ -27,39 +27,39 @@
 |  [AnyAsyncFunction](./types.anyasyncfunction.md) | 任意异步函数。 |
 |  [AnyFunction\_2](./types.anyfunction_2.md) | 任意函数。 |
 |  [AnyObject\_2](./types.anyobject_2.md) | 任意对象。 |
-|  [Asyncify](./types.asyncify.md) | Create an async version of the given function type, by boxing the return type in <code>Promise</code> while keeping the same parameter types.<!-- -->Use-case: You have two functions, one synchronous and one asynchronous that do the same thing. Instead of having to duplicate the type definition, you can use <code>Asyncify</code> to reuse the synchronous type. |
+|  [Asyncify](./types.asyncify.md) | <p>Create an async version of the given function type, by boxing the return type in <code>Promise</code> while keeping the same parameter types.</p><p>Use-case: You have two functions, one synchronous and one asynchronous that do the same thing. Instead of having to duplicate the type definition, you can use <code>Asyncify</code> to reuse the synchronous type.</p> |
 |  [AsyncOrSync](./types.asyncorsync.md) | Useful as a return type in interfaces or abstract classes with missing implementation |
-|  [AsyncReturnType](./types.asyncreturntype.md) | Unwrap the return type of a function that returns a <code>Promise</code>.<!-- -->There has been \[discussion\](https://github.com/microsoft/TypeScript/pull/35998) about implementing this type in TypeScript. |
+|  [AsyncReturnType](./types.asyncreturntype.md) | <p>Unwrap the return type of a function that returns a <code>Promise</code>.</p><p>There has been \[discussion\](https://github.com/microsoft/TypeScript/pull/35998) about implementing this type in TypeScript.</p> |
 |  [Buildable](./types.buildable.md) | Combination of DeepPartial and DeepWritable |
-|  [CamelCase](./types.camelcase.md) | Convert a string literal to camel-case.<!-- -->This can be useful when, for example, converting some kebab-cased command-line flags or a snake-cased database result. |
-|  [Class](./types.class.md) | Matches a \[<code>class</code>\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). Basic |
-|  [ConstantCase](./types.constantcase.md) | Convert a string literal to screaming-snake-case.<!-- -->This can be useful when, for example, converting a camel-cased object property to a screaming-snake-cased SQL column name. |
+|  [CamelCase](./types.camelcase.md) | <p>Convert a string literal to camel-case.</p><p>This can be useful when, for example, converting some kebab-cased command-line flags or a snake-cased database result.</p> |
+|  [Class](./types.class.md) | <p>Matches a \[<code>class</code>\](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).</p><p> Basic</p> |
+|  [ConstantCase](./types.constantcase.md) | <p>Convert a string literal to screaming-snake-case.</p><p>This can be useful when, for example, converting a camel-cased object property to a screaming-snake-cased SQL column name.</p> |
 |  [Defined](./types.defined.md) | 去除类型 T 中的 undefined。 |
-|  [DelimiterCase](./types.delimitercase.md) | Convert a string literal to a custom string delimiter casing.<!-- -->This can be useful when, for example, converting a camel-cased object property to an oddly cased one. |
+|  [DelimiterCase](./types.delimitercase.md) | <p>Convert a string literal to a custom string delimiter casing.</p><p>This can be useful when, for example, converting a camel-cased object property to an oddly cased one.</p> |
 |  [DotPath](./types.dotpath.md) |  |
 |  [DotPathValue](./types.dotpathvalue.md) |  |
 |  [ElementOf](./types.elementof.md) | Easily extract the type of a given array's elements |
-|  [Finite](./types.finite.md) | A finite <code>number</code>. You can't pass a <code>bigint</code> as they are already guaranteed to be finite.<!-- -->Use-case: Validating and documenting parameters. |
+|  [Finite](./types.finite.md) | <p>A finite <code>number</code>. You can't pass a <code>bigint</code> as they are already guaranteed to be finite.</p><p>Use-case: Validating and documenting parameters.</p> |
 |  [FirstParameter](./types.firstparameter.md) | 返回函数 T 第一个参数的类型。 |
-|  [FixedLengthArray](./types.fixedlengtharray.md) | Create a type that represents an array of the given type and length. The array's length and the <code>Array</code> prototype methods that manipulate its length are excluded in the resulting type.<!-- -->Please participate in \[this issue\](https://github.com/microsoft/TypeScript/issues/26223) if you want to have a similiar type built into TypeScript.<!-- -->Use-cases: - Declaring fixed-length tuples or arrays with a large number of items. - Creating a range union (for example, <code>0 &#124; 1 &#124; 2 &#124; 3 &#124; 4</code> from the keys of such a type) without having to resort to recursive types. - Creating an array of coordinates with a static length, for example, length of 3 for a 3D vector. |
+|  [FixedLengthArray](./types.fixedlengtharray.md) | <p>Create a type that represents an array of the given type and length. The array's length and the <code>Array</code> prototype methods that manipulate its length are excluded in the resulting type.</p><p>Please participate in \[this issue\](https://github.com/microsoft/TypeScript/issues/26223) if you want to have a similiar type built into TypeScript.</p><p>Use-cases: - Declaring fixed-length tuples or arrays with a large number of items. - Creating a range union (for example, <code>0 &#124; 1 &#124; 2 &#124; 3 &#124; 4</code> from the keys of such a type) without having to resort to recursive types. - Creating an array of coordinates with a static length, for example, length of 3 for a 3D vector.</p> |
 |  [Head](./types.head.md) | Functional programming essentials |
-|  [Integer](./types.integer.md) | A <code>number</code> that is an integer. You can't pass a <code>bigint</code> as they are already guaranteed to be integers.<!-- -->Use-case: Validating and documenting parameters. |
+|  [Integer](./types.integer.md) | <p>A <code>number</code> that is an integer. You can't pass a <code>bigint</code> as they are already guaranteed to be integers.</p><p>Use-case: Validating and documenting parameters.</p> |
 |  [IsAny](./types.isany.md) | 判断 <code>T</code> 是否是 <code>any</code> 类型。 |
 |  [IsEmptyArray](./types.isemptyarray.md) | 判断 <code>T</code> 是否是空数组。 |
 |  [IsEmptyObject](./types.isemptyobject.md) | 判断 <code>T</code> 是否是空对象。 |
 |  [IsNever](./types.isnever.md) | 判断 <code>T</code> 是否是 <code>never</code> 类型。 |
-|  [JsonArray](./types.jsonarray.md) | Matches a JSON array. Basic |
-|  [JsonObject](./types.jsonobject.md) | Matches a JSON object.<!-- -->This type can be useful to enforce some input to be JSON-compatible or as a super-type to be extended from. Don't use this as a direct return type as the user would have to double-cast it: <code>jsonObject as unknown as CustomResponse</code>. Instead, you could extend your CustomResponse type from it to ensure your type only uses JSON-compatible types: <code>interface CustomResponse extends JsonObject { … }</code>. Basic |
+|  [JsonArray](./types.jsonarray.md) | <p>Matches a JSON array.</p><p> Basic</p> |
+|  [JsonObject](./types.jsonobject.md) | <p>Matches a JSON object.</p><p>This type can be useful to enforce some input to be JSON-compatible or as a super-type to be extended from. Don't use this as a direct return type as the user would have to double-cast it: <code>jsonObject as unknown as CustomResponse</code>. Instead, you could extend your CustomResponse type from it to ensure your type only uses JSON-compatible types: <code>interface CustomResponse extends JsonObject { … }</code>.</p><p> Basic</p> |
 |  [JsonValue](./types.jsonvalue.md) | Matches any valid JSON value. |
-|  [KebabCase](./types.kebabcase.md) | Convert a string literal to kebab-case.<!-- -->This can be useful when, for example, converting a camel-cased object property to a kebab-cased CSS class name or a command-line flag. |
-|  [LiteralUnion](./types.literalunion.md) | Allows creating a union type by combining primitive types and literal types without sacrificing auto-completion in IDEs for the literal type part of the union.<!-- -->Currently, when a union type of a primitive type is combined with literal types, TypeScript loses all information about the combined literals. Thus, when such type is used in an IDE with autocompletion, no suggestions are made for the declared literals.<!-- -->This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com/Microsoft/TypeScript/issues/29729). It will be removed as soon as it's not needed anymore. |
+|  [KebabCase](./types.kebabcase.md) | <p>Convert a string literal to kebab-case.</p><p>This can be useful when, for example, converting a camel-cased object property to a kebab-cased CSS class name or a command-line flag.</p> |
+|  [LiteralUnion](./types.literalunion.md) | <p>Allows creating a union type by combining primitive types and literal types without sacrificing auto-completion in IDEs for the literal type part of the union.</p><p>Currently, when a union type of a primitive type is combined with literal types, TypeScript loses all information about the combined literals. Thus, when such type is used in an IDE with autocompletion, no suggestions are made for the declared literals.</p><p>This type is a workaround for \[Microsoft/TypeScript\#29729\](https://github.com/Microsoft/TypeScript/issues/29729). It will be removed as soon as it's not needed anymore.</p> |
 |  [Merge](./types.merge.md) | Merge 2 types, properties types from the latter override the ones defined on the former type |
-|  [Negative](./types.negative.md) | A negative <code>number</code>/<code>bigint</code> (<code>-∞ &lt; x &lt; 0</code>)<!-- -->Use-case: Validating and documenting parameters. |
-|  [NegativeInfinity](./types.negativeinfinity.md) | Matches the hidden <code>-Infinity</code> type.<!-- -->Please upvote \[this issue\](https://github.com/microsoft/TypeScript/issues/32277) if you want to have this type as a built-in in TypeScript. |
-|  [NegativeInteger](./types.negativeinteger.md) | A negative (<code>-∞ &lt; x &lt; 0</code>) <code>number</code> that is an integer. Equivalent to <code>Negative&lt;Integer&lt;T&gt;&gt;</code>.<!-- -->You can't pass a <code>bigint</code> as they are already guaranteed to be integers, instead use <code>Negative&lt;T&gt;</code>.<!-- -->Use-case: Validating and documenting parameters. |
+|  [Negative](./types.negative.md) | <p>A negative <code>number</code>/<code>bigint</code> (<code>-∞ &lt; x &lt; 0</code>)</p><p>Use-case: Validating and documenting parameters.</p> |
+|  [NegativeInfinity](./types.negativeinfinity.md) | <p>Matches the hidden <code>-Infinity</code> type.</p><p>Please upvote \[this issue\](https://github.com/microsoft/TypeScript/issues/32277) if you want to have this type as a built-in in TypeScript.</p> |
+|  [NegativeInteger](./types.negativeinteger.md) | <p>A negative (<code>-∞ &lt; x &lt; 0</code>) <code>number</code> that is an integer. Equivalent to <code>Negative&lt;Integer&lt;T&gt;&gt;</code>.</p><p>You can't pass a <code>bigint</code> as they are already guaranteed to be integers, instead use <code>Negative&lt;T&gt;</code>.</p><p>Use-case: Validating and documenting parameters.</p> |
 |  [NonEmptyArray](./types.nonemptyarray.md) | 非空数组类型。 |
-|  [NonNegative](./types.nonnegative.md) | A non-negative <code>number</code>/<code>bigint</code> (<code>0 &lt;= x &lt; ∞</code>).<!-- -->Use-case: Validating and documenting parameters. |
-|  [NonNegativeInteger](./types.nonnegativeinteger.md) | A non-negative (<code>0 &lt;= x &lt; ∞</code>) <code>number</code> that is an integer. Equivalent to <code>NonNegative&lt;Integer&lt;T&gt;&gt;</code>.<!-- -->You can't pass a <code>bigint</code> as they are already guaranteed to be integers, instead use <code>NonNegative&lt;T&gt;</code>.<!-- -->Use-case: Validating and documenting parameters. |
+|  [NonNegative](./types.nonnegative.md) | <p>A non-negative <code>number</code>/<code>bigint</code> (<code>0 &lt;= x &lt; ∞</code>).</p><p>Use-case: Validating and documenting parameters.</p> |
+|  [NonNegativeInteger](./types.nonnegativeinteger.md) | <p>A non-negative (<code>0 &lt;= x &lt; ∞</code>) <code>number</code> that is an integer. Equivalent to <code>NonNegative&lt;Integer&lt;T&gt;&gt;</code>.</p><p>You can't pass a <code>bigint</code> as they are already guaranteed to be integers, instead use <code>NonNegative&lt;T&gt;</code>.</p><p>Use-case: Validating and documenting parameters.</p> |
 |  [NonNullableDeep](./types.nonnullabledeep.md) | Like NonNullable but recursive |
 |  [NullableDeep](./types.nullabledeep.md) | Recursive nullable |
 |  [OmitBy](./types.omitby.md) | Omit all properties of given type in object type |
@@ -67,26 +67,26 @@
 |  [OmitStrict](./types.omitstrict.md) | Similar to the builtin Omit, but checks the filter strictly. |
 |  [OneOrMore](./types.oneormore.md) | 同 <code>T &#124; T[]</code>。 |
 |  [OptionalKeys](./types.optionalkeys.md) | Gets keys of an object which are optional |
-|  [PackageJson](./types.packagejson.md) | Type for \[npm's <code>package.json</code> file\](https://docs.npmjs.com/creating-a-package-json-file). Also includes types for fields used by other popular projects, like TypeScript and Yarn. Miscellaneous |
+|  [PackageJson](./types.packagejson.md) | <p>Type for \[npm's <code>package.json</code> file\](https://docs.npmjs.com/creating-a-package-json-file). Also includes types for fields used by other popular projects, like TypeScript and Yarn.</p><p> Miscellaneous</p> |
 |  [PartialBy](./types.partialby.md) | Mark some properties as optional, leaving others unchanged |
 |  [PartialDeep](./types.partialdeep.md) | Like Partial but recursive |
 |  [PascalCase](./types.pascalcase.md) | Converts a string literal to pascal-case. |
 |  [Path](./types.path.md) | 获取对象的路径。最多支持 7 级路径。 |
 |  [PathValue](./types.pathvalue.md) | 获取对象的路径值。最多支持 7 级路径。 |
 |  [PickBy](./types.pickby.md) | Pick all properties of given type in object type |
-|  [PositiveInfinity](./types.positiveinfinity.md) | Matches the hidden <code>Infinity</code> type.<!-- -->Please upvote \[this issue\](https://github.com/microsoft/TypeScript/issues/32277) if you want to have this type as a built-in in TypeScript. |
+|  [PositiveInfinity](./types.positiveinfinity.md) | <p>Matches the hidden <code>Infinity</code> type.</p><p>Please upvote \[this issue\](https://github.com/microsoft/TypeScript/issues/32277) if you want to have this type as a built-in in TypeScript.</p> |
 |  [ReadonlyDeep](./types.readonlydeep.md) | Like Readonly but recursive |
 |  [ReadonlyKeys](./types.readonlykeys.md) | Gets keys of an object which are readonly |
-|  [RequireAllOrNone](./types.requireallornone.md) | Create a type that requires all of the given keys or none of the given keys. The remaining keys are kept as is.<!-- -->Use-cases: - Creating interfaces for components with mutually-inclusive keys.<!-- -->The caveat with <code>RequireAllOrNone</code> is that TypeScript doesn't always know at compile time every key that will exist at runtime. Therefore <code>RequireAllOrNone</code> can't do anything to prevent extra keys it doesn't know about. |
+|  [RequireAllOrNone](./types.requireallornone.md) | <p>Create a type that requires all of the given keys or none of the given keys. The remaining keys are kept as is.</p><p>Use-cases: - Creating interfaces for components with mutually-inclusive keys.</p><p>The caveat with <code>RequireAllOrNone</code> is that TypeScript doesn't always know at compile time every key that will exist at runtime. Therefore <code>RequireAllOrNone</code> can't do anything to prevent extra keys it doesn't know about.</p> |
 |  [RequireAtLeastOne](./types.requireatleastone.md) | Create a type that requires at least one of the given keys. The remaining keys are kept as is. |
 |  [RequiredBy](./types.requiredby.md) | Mark some properties as required, leaving others unchanged |
 |  [RequiredDeep](./types.requireddeep.md) | Like Required but recursive |
 |  [RequiredKeys](./types.requiredkeys.md) | Gets keys of an object which are required |
-|  [RequireExactlyOne](./types.requireexactlyone.md) | Create a type that requires exactly one of the given keys and disallows more. The remaining keys are kept as is.<!-- -->Use-cases: - Creating interfaces for components that only need one of the keys to display properly. - Declaring generic keys in a single place for a single use-case that gets narrowed down via <code>RequireExactlyOne</code>.<!-- -->The caveat with <code>RequireExactlyOne</code> is that TypeScript doesn't always know at compile time every key that will exist at runtime. Therefore <code>RequireExactlyOne</code> can't do anything to prevent extra keys it doesn't know about. |
+|  [RequireExactlyOne](./types.requireexactlyone.md) | <p>Create a type that requires exactly one of the given keys and disallows more. The remaining keys are kept as is.</p><p>Use-cases: - Creating interfaces for components that only need one of the keys to display properly. - Declaring generic keys in a single place for a single use-case that gets narrowed down via <code>RequireExactlyOne</code>.</p><p>The caveat with <code>RequireExactlyOne</code> is that TypeScript doesn't always know at compile time every key that will exist at runtime. Therefore <code>RequireExactlyOne</code> can't do anything to prevent extra keys it doesn't know about.</p> |
 |  [Simplify](./types.simplify.md) | Useful to flatten the type output to improve type hints shown in editors. And also to transform an interface into a type to aide with assignability. |
-|  [SnakeCase](./types.snakecase.md) | Convert a string literal to snake-case.<!-- -->This can be useful when, for example, converting a camel-cased object property to a snake-cased SQL column name. |
+|  [SnakeCase](./types.snakecase.md) | <p>Convert a string literal to snake-case.</p><p>This can be useful when, for example, converting a camel-cased object property to a snake-cased SQL column name.</p> |
 |  [Tail](./types.tail.md) |  |
-|  [UnionToIntersection](./types.uniontointersection.md) | Convert a union type to an intersection type using \[distributive conditional types\](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html\#distributive-conditional-types).<!-- -->Inspired by \[this Stack Overflow answer\](https://stackoverflow.com/a/50375286/2172153). |
+|  [UnionToIntersection](./types.uniontointersection.md) | <p>Convert a union type to an intersection type using \[distributive conditional types\](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html\#distributive-conditional-types).</p><p>Inspired by \[this Stack Overflow answer\](https://stackoverflow.com/a/50375286/2172153).</p> |
 |  [ValueOf](./types.valueof.md) | Easily extract the type of a given object's values |
 |  [Writable](./types.writable.md) | Make readonly object writable |
 |  [WritableDeep](./types.writabledeep.md) | Like Writable but recursive |

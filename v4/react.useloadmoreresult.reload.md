@@ -6,7 +6,7 @@
 
 从首页重新加载数据
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 reload: () => Promise<void>;

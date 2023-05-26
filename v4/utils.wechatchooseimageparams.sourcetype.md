@@ -8,7 +8,7 @@
 
  \['album', 'camera'\]
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sourceType?: Array<'album' | 'camera'>;

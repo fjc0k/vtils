@@ -6,7 +6,7 @@
 
 给 useState 插上依赖的翅膀。依赖变化时会更新状态。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useStateWithDeps<S>(state: S | (() => S), deps: React_2.DependencyList): [S, React_2.Dispatch<React_2.SetStateAction<S>>];
@@ -19,7 +19,7 @@ export declare function useStateWithDeps<S>(state: S | (() => S), deps: React_2.
 |  state | S \| (() =&gt; S) | 状态 |
 |  deps | React\_2.DependencyList | 依赖 |
 
-<b>Returns:</b>
+**Returns:**
 
 \[S, React\_2.Dispatch&lt;React\_2.SetStateAction&lt;S&gt;&gt;\]
 

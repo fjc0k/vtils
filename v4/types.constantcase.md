@@ -8,7 +8,7 @@ Convert a string literal to screaming-snake-case.
 
 This can be useful when, for example, converting a camel-cased object property to a screaming-snake-cased SQL column name.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type ConstantCase<Value> = Value extends string
@@ -17,7 +17,7 @@ export declare type ConstantCase<Value> = Value extends string
 		: Uppercase<SnakeCase<Value>>
 	: Value;
 ```
-<b>References:</b> [SnakeCase](./types.snakecase.md)
+**References:** [SnakeCase](./types.snakecase.md)
 
 ## Example
 

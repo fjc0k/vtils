@@ -6,7 +6,7 @@
 
 订阅事件。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 on<TListenerName extends keyof TListeners>(eventName: TListenerName, callback: TListeners[TListenerName]): EventBusOffListener;
@@ -19,7 +19,7 @@ on<TListenerName extends keyof TListeners>(eventName: TListenerName, callback: T
 |  eventName | TListenerName | 事件名称 |
 |  callback | TListeners\[TListenerName\] | 事件触发回调 |
 
-<b>Returns:</b>
+**Returns:**
 
 [EventBusOffListener](./utils.eventbusofflistener.md)
 

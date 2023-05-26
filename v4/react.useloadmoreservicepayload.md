@@ -6,7 +6,7 @@
 
 加载服务载荷。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface UseLoadMoreServicePayload 
@@ -14,8 +14,8 @@ export declare interface UseLoadMoreServicePayload
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [offset](./react.useloadmoreservicepayload.offset.md) | number | 已加载的数据量 |
-|  [pageNumber](./react.useloadmoreservicepayload.pagenumber.md) | number | 当前页码 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [offset](./react.useloadmoreservicepayload.offset.md) |  | number | 已加载的数据量 |
+|  [pageNumber](./react.useloadmoreservicepayload.pagenumber.md) |  | number | 当前页码 |
 

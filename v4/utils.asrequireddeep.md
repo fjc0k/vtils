@@ -6,7 +6,7 @@
 
 将给定的值 `RequiredDeep` 化。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function asRequiredDeep<T>(value: T): RequiredDeep<T>;
@@ -18,7 +18,7 @@ export declare function asRequiredDeep<T>(value: T): RequiredDeep<T>;
 |  --- | --- | --- |
 |  value | T | 值 |
 
-<b>Returns:</b>
+**Returns:**
 
 RequiredDeep&lt;T&gt;
 

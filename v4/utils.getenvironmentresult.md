@@ -4,7 +4,7 @@
 
 ## GetEnvironmentResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface GetEnvironmentResult 
@@ -12,15 +12,15 @@ export declare interface GetEnvironmentResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [android](./utils.getenvironmentresult.android.md) | boolean | 安卓 |
-|  [browser](./utils.getenvironmentresult.browser.md) | boolean | 浏览器 |
-|  [deno](./utils.getenvironmentresult.deno.md) | boolean | Deno |
-|  [ios](./utils.getenvironmentresult.ios.md) | boolean | iOS |
-|  [miniProgram](./utils.getenvironmentresult.miniprogram.md) | boolean | 小程序 |
-|  [nodejs](./utils.getenvironmentresult.nodejs.md) | boolean | Node.js |
-|  [taro](./utils.getenvironmentresult.taro.md) | boolean | Taro 3 |
-|  [wechatMiniProgram](./utils.getenvironmentresult.wechatminiprogram.md) | boolean | 微信小程序 |
-|  [wechatWebView](./utils.getenvironmentresult.wechatwebview.md) | boolean | 微信 WebView |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [android](./utils.getenvironmentresult.android.md) | <code>readonly</code> | boolean | 安卓 |
+|  [browser](./utils.getenvironmentresult.browser.md) | <code>readonly</code> | boolean | 浏览器 |
+|  [deno](./utils.getenvironmentresult.deno.md) | <code>readonly</code> | boolean | Deno |
+|  [ios](./utils.getenvironmentresult.ios.md) | <code>readonly</code> | boolean | iOS |
+|  [miniProgram](./utils.getenvironmentresult.miniprogram.md) | <code>readonly</code> | boolean | 小程序 |
+|  [nodejs](./utils.getenvironmentresult.nodejs.md) | <code>readonly</code> | boolean | Node.js |
+|  [taro](./utils.getenvironmentresult.taro.md) | <code>readonly</code> | boolean | Taro 3 |
+|  [wechatMiniProgram](./utils.getenvironmentresult.wechatminiprogram.md) | <code>readonly</code> | boolean | 微信小程序 |
+|  [wechatWebView](./utils.getenvironmentresult.wechatwebview.md) | <code>readonly</code> | boolean | 微信 WebView |
 

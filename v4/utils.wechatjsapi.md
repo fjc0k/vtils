@@ -6,7 +6,7 @@
 
 微信 JSSDK 支持的 API。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type WechatJsApi = 'checkJsApi' | 'updateAppMessageShareData' | 'updateTimelineShareData' | 'onMenuShareTimeline' | 'onMenuShareAppMessage' | 'onMenuShareQQ' | 'onMenuShareQZone' | 'startRecord' | 'stopRecord' | 'onVoiceRecordEnd' | 'playVoice' | 'pauseVoice' | 'stopVoice' | 'onVoicePlayEnd' | 'uploadVoice' | 'downloadVoice' | 'chooseImage' | 'previewImage' | 'uploadImage' | 'downloadImage' | 'translateVoice' | 'getNetworkType' | 'openLocation' | 'getLocation' | 'hideOptionMenu' | 'showOptionMenu' | 'hideMenuItems' | 'showMenuItems' | 'hideAllNonBaseMenuItem' | 'showAllNonBaseMenuItem' | 'closeWindow' | 'scanQRCode' | 'chooseWXPay' | 'openProductSpecificView' | 'addCard' | 'chooseCard' | 'openCard';

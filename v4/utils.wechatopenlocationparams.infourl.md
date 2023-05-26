@@ -6,7 +6,7 @@
 
 在查看位置界面底部显示的超链接，可点击跳转。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 infoUrl?: string;

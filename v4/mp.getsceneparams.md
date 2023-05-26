@@ -6,7 +6,7 @@
 
 获取场景参数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function getSceneParams<T extends Record<any, any> = Record<any, any>>(parser?: GetSceneParamsParser<T>): T;
@@ -16,9 +16,9 @@ export declare function getSceneParams<T extends Record<any, any> = Record<any, 
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  parser | [GetSceneParamsParser](./mp.getsceneparamsparser.md)<!-- -->&lt;T&gt; | 解析器 |
+|  parser | [GetSceneParamsParser](./mp.getsceneparamsparser.md)<!-- -->&lt;T&gt; | _(Optional)_ 解析器 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 

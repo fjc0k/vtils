@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.isValidSync() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 isValidSync(value: T, options?: SchemaValidateOptions): boolean;
@@ -15,9 +15,9 @@ isValidSync(value: T, options?: SchemaValidateOptions): boolean;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T |  |
-|  options | SchemaValidateOptions |  |
+|  options | [SchemaValidateOptions](./validator.yup.schemavalidateoptions.md) | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 

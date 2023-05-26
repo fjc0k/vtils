@@ -6,7 +6,7 @@
 
 Enable Compile-on-Save for this project.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 compileOnSave?: boolean;

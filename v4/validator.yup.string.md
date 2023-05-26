@@ -4,12 +4,12 @@
 
 ## yup.string() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function string<T extends string = string>(): StringSchema<T>;
 ```
-<b>Returns:</b>
+**Returns:**
 
-StringSchema&lt;T&gt;
+[StringSchema](./validator.yup.stringschema.md)<!-- -->&lt;T&gt;
 

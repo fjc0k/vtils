@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.transform() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 transform(transformer: (this: this, currentValue: T, originalValue: T) => T): this;
@@ -16,7 +16,7 @@ transform(transformer: (this: this, currentValue: T, originalValue: T) => T): th
 |  --- | --- | --- |
 |  transformer | (this: this, currentValue: T, originalValue: T) =&gt; T |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

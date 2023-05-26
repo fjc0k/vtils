@@ -6,7 +6,7 @@
 
 取消等待，不执行后续逻辑。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 cancel: () => void;

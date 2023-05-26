@@ -4,7 +4,7 @@
 
 ## yup.ObjectSchema.noUnknown() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noUnknown(onlyKnownKeys?: boolean, message?: ObjectLocale['noUnknown']): this;
@@ -14,10 +14,10 @@ noUnknown(onlyKnownKeys?: boolean, message?: ObjectLocale['noUnknown']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  onlyKnownKeys | boolean |  |
-|  message | ObjectLocale\['noUnknown'\] |  |
+|  onlyKnownKeys | boolean | _(Optional)_ |
+|  message | [ObjectLocale](./validator.yup.objectlocale.md)<!-- -->\['noUnknown'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

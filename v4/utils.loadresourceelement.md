@@ -4,7 +4,7 @@
 
 ## LoadResourceElement type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type LoadResourceElement = HTMLScriptElement | HTMLLinkElement | HTMLStyleElement | HTMLImageElement;

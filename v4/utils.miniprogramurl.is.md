@@ -4,7 +4,7 @@
 
 ## MiniProgramUrl.is() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static is(value: MiniProgramUrlStringInput): value is MiniProgramUrlStringInput;
@@ -16,7 +16,7 @@ static is(value: MiniProgramUrlStringInput): value is MiniProgramUrlStringInput;
 |  --- | --- | --- |
 |  value | [MiniProgramUrlStringInput](./utils.miniprogramurlstringinput.md) |  |
 
-<b>Returns:</b>
+**Returns:**
 
 value is [MiniProgramUrlStringInput](./utils.miniprogramurlstringinput.md)
 

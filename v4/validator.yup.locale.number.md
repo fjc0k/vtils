@@ -4,7 +4,7 @@
 
 ## yup.Locale.number property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 number: NumberLocale;

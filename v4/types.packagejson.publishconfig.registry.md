@@ -8,7 +8,7 @@ The base URL of the npm registry.
 
 Default: `'https://registry.npmjs.org/'`
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 registry?: string;

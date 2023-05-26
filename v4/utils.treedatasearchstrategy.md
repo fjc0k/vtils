@@ -4,7 +4,7 @@
 
 ## TreeDataSearchStrategy type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type TreeDataSearchStrategy = 'DFS' | 'BFS';

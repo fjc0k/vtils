@@ -8,7 +8,7 @@ Do not generate custom helper functions like `__extends` in compiled output.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noEmitHelpers?: boolean;

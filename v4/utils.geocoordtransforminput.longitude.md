@@ -6,7 +6,7 @@
 
 经度。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 longitude: number;

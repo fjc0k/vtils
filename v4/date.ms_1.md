@@ -6,7 +6,7 @@
 
 获取毫秒值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function ms(value: MsValue, returnSeconds?: boolean): number;
@@ -17,9 +17,9 @@ export declare function ms(value: MsValue, returnSeconds?: boolean): number;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | [MsValue](./date.msvalue.md) | 值 |
-|  returnSeconds | boolean | 是否返回秒值 |
+|  returnSeconds | boolean | _(Optional)_ 是否返回秒值 |
 
-<b>Returns:</b>
+**Returns:**
 
 number
 

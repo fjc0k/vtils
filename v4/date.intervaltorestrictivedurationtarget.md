@@ -4,7 +4,7 @@
 
 ## IntervalToRestrictiveDurationTarget type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type IntervalToRestrictiveDurationTarget = 'year' | 'month' | 'day' | 'hour' | 'minute' | 'second' | 'millisecond';

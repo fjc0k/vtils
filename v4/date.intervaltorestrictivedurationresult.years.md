@@ -4,7 +4,7 @@
 
 ## IntervalToRestrictiveDurationResult.years property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 years: number;

@@ -4,12 +4,12 @@
 
 ## getMiniProgramConfig() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function getMiniProgramConfig(): Readonly<MiniProgramConfig>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 Readonly&lt;[MiniProgramConfig](./mp.miniprogramconfig.md)<!-- -->&gt;
 

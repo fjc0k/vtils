@@ -6,7 +6,7 @@
 
 样式元素。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 el: HTMLStyleElement;

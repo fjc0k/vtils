@@ -6,7 +6,7 @@
 
 将多行字符串转换为单行字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function toSingleLineString(value: string, truncateOptions?: number | TruncateOptions): string;
@@ -17,9 +17,9 @@ export declare function toSingleLineString(value: string, truncateOptions?: numb
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | string | 要转换的字符串 |
-|  truncateOptions | number \| TruncateOptions |  |
+|  truncateOptions | number \| TruncateOptions | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

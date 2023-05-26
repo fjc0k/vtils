@@ -6,7 +6,7 @@
 
 分享图标地址
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 imgUrl?: string | (() => string);

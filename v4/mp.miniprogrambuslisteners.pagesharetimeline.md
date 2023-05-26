@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.pageShareTimeline property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pageShareTimeline: Defined<WechatMiniprogram.Page.Options<{}, {}>['onShareTimeline']>;

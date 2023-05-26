@@ -4,7 +4,7 @@
 
 ## MiniProgramBusRouteChangeAction type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MiniProgramBusRouteChangeAction = 'replace' | 'pop' | 'push';

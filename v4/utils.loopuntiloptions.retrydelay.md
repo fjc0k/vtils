@@ -6,7 +6,7 @@
 
 重试延时，为数组时随机挑选一个。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 retryDelay: OneOrMore<number>;

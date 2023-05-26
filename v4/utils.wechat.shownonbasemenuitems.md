@@ -6,7 +6,7 @@
 
 批量显示非基础菜单项。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 showNonBaseMenuItems(menuList: WechatNonBaseMenuItem[]): Promise<any>;
@@ -18,7 +18,7 @@ showNonBaseMenuItems(menuList: WechatNonBaseMenuItem[]): Promise<any>;
 |  --- | --- | --- |
 |  menuList | [WechatNonBaseMenuItem](./utils.wechatnonbasemenuitem.md)<!-- -->\[\] | 要显示的非基础菜单项列表 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

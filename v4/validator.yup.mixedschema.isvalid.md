@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.isValid() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 isValid(value: T, options?: SchemaValidateOptions): Promise<boolean>;
@@ -15,9 +15,9 @@ isValid(value: T, options?: SchemaValidateOptions): Promise<boolean>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T |  |
-|  options | SchemaValidateOptions |  |
+|  options | [SchemaValidateOptions](./validator.yup.schemavalidateoptions.md) | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;boolean&gt;
 

@@ -8,10 +8,10 @@ Matches a JSON array.
 
  Basic
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type JsonArray = JsonValue[];
 ```
-<b>References:</b> [JsonValue](./types.jsonvalue.md)
+**References:** [JsonValue](./types.jsonvalue.md)
 

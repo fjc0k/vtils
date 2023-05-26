@@ -6,7 +6,7 @@
 
 Gets keys of an object which are writable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type WritableKeys<T extends {}> = {

@@ -4,7 +4,7 @@
 
 ## yup.ObjectLocale interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface ObjectLocale 
@@ -12,7 +12,7 @@ export interface ObjectLocale
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [noUnknown](./validator.yup.objectlocale.nounknown.md) | LocaleValue&lt;{ unknown: string; }&gt; |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [noUnknown](./validator.yup.objectlocale.nounknown.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ unknown: string; }&gt; |  |
 

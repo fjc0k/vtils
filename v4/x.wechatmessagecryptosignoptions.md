@@ -4,7 +4,7 @@
 
 ## WechatMessageCryptoSignOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatMessageCryptoSignOptions 
@@ -12,9 +12,9 @@ export declare interface WechatMessageCryptoSignOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [encryptedMsg](./x.wechatmessagecryptosignoptions.encryptedmsg.md) | string | 加密后的消息 |
-|  [nonceStr](./x.wechatmessagecryptosignoptions.noncestr.md) | string | 随机字符串 |
-|  [timestamp](./x.wechatmessagecryptosignoptions.timestamp.md) | number | Unix 时间戳 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [encryptedMsg](./x.wechatmessagecryptosignoptions.encryptedmsg.md) |  | string | 加密后的消息 |
+|  [nonceStr](./x.wechatmessagecryptosignoptions.noncestr.md) |  | string | 随机字符串 |
+|  [timestamp](./x.wechatmessagecryptosignoptions.timestamp.md) |  | number | Unix 时间戳 |
 

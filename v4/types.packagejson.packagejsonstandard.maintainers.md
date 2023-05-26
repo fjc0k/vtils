@@ -6,7 +6,7 @@
 
 A list of people who maintain the package.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 maintainers?: Person[];

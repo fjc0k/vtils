@@ -8,7 +8,7 @@ Emit design-type metadata for decorated declarations in source.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 emitDecoratorMetadata?: boolean;

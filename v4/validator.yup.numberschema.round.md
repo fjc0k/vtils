@@ -4,7 +4,7 @@
 
 ## yup.NumberSchema.round() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 round(type?: 'floor' | 'ceil' | 'trunc' | 'round'): this;
@@ -14,9 +14,9 @@ round(type?: 'floor' | 'ceil' | 'trunc' | 'round'): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | 'floor' \| 'ceil' \| 'trunc' \| 'round' |  |
+|  type | 'floor' \| 'ceil' \| 'trunc' \| 'round' | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

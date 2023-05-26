@@ -6,7 +6,7 @@
 
 检测传入的值是否可能是中国的手机号码。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function isPossibleChineseMobilePhoneNumber(value: string | number): boolean;
@@ -18,7 +18,7 @@ export declare function isPossibleChineseMobilePhoneNumber(value: string | numbe
 |  --- | --- | --- |
 |  value | string \| number | 要检测的值 |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 
@@ -30,6 +30,5 @@ boolean
 ```typescript
 isPossibleChineseMobilePhoneNumber('10086') // => false
 isPossibleChineseMobilePhoneNumber('18087030088') // => true
-
 ```
 

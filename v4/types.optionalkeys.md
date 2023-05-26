@@ -6,7 +6,7 @@
 
 Gets keys of an object which are optional
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type OptionalKeys<T> = {

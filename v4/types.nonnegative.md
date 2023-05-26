@@ -8,12 +8,12 @@ A non-negative `number`<!-- -->/`bigint` (`0 <= x < ∞`<!-- -->).
 
 Use-case: Validating and documenting parameters.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type NonNegative<T extends Numeric> = T extends Zero ? T : Negative<T> extends never ? T : never;
 ```
-<b>References:</b> [Negative](./types.negative.md)
+**References:** [Negative](./types.negative.md)
 
 ## Example
 

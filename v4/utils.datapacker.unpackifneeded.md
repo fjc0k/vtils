@@ -6,7 +6,7 @@
 
 如果是打包后的数据，则解包后返回，否则直接返回。如果是对象，则递归尝试解包。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static unpackIfNeeded(value: any, depth?: number): any;
@@ -17,9 +17,9 @@ static unpackIfNeeded(value: any, depth?: number): any;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | any | 数据 |
-|  depth | number | 递归层级，默认：2 |
+|  depth | number | _(Optional)_ 递归层级，默认：2 |
 
-<b>Returns:</b>
+**Returns:**
 
 any
 

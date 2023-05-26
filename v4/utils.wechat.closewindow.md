@@ -6,12 +6,12 @@
 
 关闭当前网页窗口。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 closeWindow(): Promise<any>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

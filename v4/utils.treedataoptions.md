@@ -4,7 +4,7 @@
 
 ## TreeDataOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface TreeDataOptions<TNode extends TreeDataNode> 
@@ -12,9 +12,9 @@ export declare interface TreeDataOptions<TNode extends TreeDataNode>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [childrenPropName?](./utils.treedataoptions.childrenpropname.md) | [TreeDataChildrenPropName](./utils.treedatachildrenpropname.md)<!-- -->&lt;TNode&gt; | <i>(Optional)</i> 节点上子树数据所在的属性名。 'children' |
-|  [cloneIgnore?](./utils.treedataoptions.cloneignore.md) | (value: unknown) =&gt; boolean \| undefined | <i>(Optional)</i> 克隆数据时忽略的值。 |
-|  [searchStrategy?](./utils.treedataoptions.searchstrategy.md) | [TreeDataSearchStrategy](./utils.treedatasearchstrategy.md) | <i>(Optional)</i> 遍历时的搜索策略。<!-- -->- <code>DFS</code>: 深度优先搜索 - <code>BFS</code>: 广度优先搜索 'DFS' |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [childrenPropName?](./utils.treedataoptions.childrenpropname.md) |  | [TreeDataChildrenPropName](./utils.treedatachildrenpropname.md)<!-- -->&lt;TNode&gt; | <p>_(Optional)_ 节点上子树数据所在的属性名。</p><p> 'children'</p> |
+|  [cloneIgnore?](./utils.treedataoptions.cloneignore.md) |  | (value: unknown) =&gt; boolean \| undefined | _(Optional)_ 克隆数据时忽略的值。 |
+|  [searchStrategy?](./utils.treedataoptions.searchstrategy.md) |  | [TreeDataSearchStrategy](./utils.treedatasearchstrategy.md) | <p>_(Optional)_ 遍历时的搜索策略。</p><p>- <code>DFS</code>: 深度优先搜索 - <code>BFS</code>: 广度优先搜索</p><p> 'DFS'</p> |
 

@@ -6,7 +6,7 @@
 
 微信 WebView
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly wechatWebView: boolean;

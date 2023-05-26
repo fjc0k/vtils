@@ -4,7 +4,7 @@
 
 ## yup.SchemaTestOptions.message property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 message: LocaleValue<TParams>;

@@ -6,7 +6,7 @@
 
 获取地理位置接口。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 getLocation(params?: WechatGetLocationParams): Promise<WechatGetLocationResult>;
@@ -16,9 +16,9 @@ getLocation(params?: WechatGetLocationParams): Promise<WechatGetLocationResult>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  params | [WechatGetLocationParams](./utils.wechatgetlocationparams.md) | 参数 |
+|  params | [WechatGetLocationParams](./utils.wechatgetlocationparams.md) | _(Optional)_ 参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;[WechatGetLocationResult](./utils.wechatgetlocationresult.md)<!-- -->&gt;
 

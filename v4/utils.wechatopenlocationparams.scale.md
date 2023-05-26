@@ -8,7 +8,7 @@
 
  28
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 scale?: number;

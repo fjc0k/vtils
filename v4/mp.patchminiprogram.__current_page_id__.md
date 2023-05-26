@@ -4,7 +4,7 @@
 
 ## patchMiniProgram.\_\_CURRENT\_PAGE\_ID\_\_ variable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 __CURRENT_PAGE_ID__: number

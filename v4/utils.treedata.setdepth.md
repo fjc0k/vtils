@@ -6,7 +6,7 @@
 
 设置数据深度。从 `0` 开始，将会移除超过指定深度的数据。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 setDepth(depth: number): this;
@@ -18,7 +18,7 @@ setDepth(depth: number): this;
 |  --- | --- | --- |
 |  depth | number | 深度 |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

@@ -6,7 +6,7 @@
 
 A module ID with untranspiled code that is the primary entry point to the program.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 esnext?:

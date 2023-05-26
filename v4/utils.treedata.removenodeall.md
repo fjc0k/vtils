@@ -6,7 +6,7 @@
 
 移除符合条件的所有节点。返回被移除的节点组成的数组。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 removeNodeAll(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): TNode[];
@@ -18,7 +18,7 @@ removeNodeAll(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean)
 |  --- | --- | --- |
 |  predicate | (payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean | 条件 |
 
-<b>Returns:</b>
+**Returns:**
 
 TNode\[\]
 

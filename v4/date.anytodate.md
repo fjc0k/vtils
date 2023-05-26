@@ -6,7 +6,7 @@
 
 增强版的 toDate，支持： - 秒时间戳、毫秒时间戳； - Date 实例； - 符合 ISO 标准的时间字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function anyToDate(value: string | number | Date): Date;
@@ -18,7 +18,7 @@ export declare function anyToDate(value: string | number | Date): Date;
 |  --- | --- | --- |
 |  value | string \| number \| Date | 要转换的值 |
 
-<b>Returns:</b>
+**Returns:**
 
 Date
 

@@ -4,7 +4,7 @@
 
 ## yup.ArraySchema.min() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 min(limit: number | Ref<number>, message?: ArrayLocale['min']): this;
@@ -14,10 +14,10 @@ min(limit: number | Ref<number>, message?: ArrayLocale['min']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| Ref&lt;number&gt; |  |
-|  message | ArrayLocale\['min'\] |  |
+|  limit | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  message | [ArrayLocale](./validator.yup.arraylocale.md)<!-- -->\['min'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

@@ -6,7 +6,7 @@
 
 同 `T | T[]`<!-- -->。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type OneOrMore<T> = T | T[];
@@ -17,6 +17,5 @@ export declare type OneOrMore<T> = T | T[];
 
 ```typescript
 type X = OneOrMore<number> // => number | number[]
-
 ```
 

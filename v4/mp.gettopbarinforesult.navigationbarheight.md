@@ -6,7 +6,7 @@
 
 导航栏高度。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 navigationBarHeight: number;

@@ -6,7 +6,7 @@
 
 设置节点属性。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 setNodeProps<TProps extends {
@@ -24,7 +24,7 @@ setNodeProps<TProps extends {
 |  --- | --- | --- |
 |  props | TProps | 节点属性键值映射对象，值为函数，用其返回值作为新的属性值 |
 
-<b>Returns:</b>
+**Returns:**
 
 [TreeData](./utils.treedata.md)<!-- -->&lt;Merge&lt;TNode, { \[K in keyof TProps\]: ReturnType&lt;TProps\[K\]&gt;; }&gt;&gt;
 

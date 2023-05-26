@@ -4,7 +4,7 @@
 
 ## IntervalToRestrictiveDurationResult.days property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 days: number;

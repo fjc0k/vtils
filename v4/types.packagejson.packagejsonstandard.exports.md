@@ -8,7 +8,7 @@ Standard entry points of the package, with enhanced support for ECMAScript Modul
 
 \[Read more.\](https://nodejs.org/api/esm.html\#esm\_package\_entry\_points)
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 exports?: Exports;

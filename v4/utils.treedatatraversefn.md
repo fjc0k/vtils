@@ -4,10 +4,10 @@
 
 ## TreeDataTraverseFn type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type TreeDataTraverseFn<TNode extends TreeDataNode> = (payload: TreeDataTraverseFnPayload<TNode>) => void;
 ```
-<b>References:</b> [TreeDataNode](./utils.treedatanode.md)<!-- -->, [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)
+**References:** [TreeDataNode](./utils.treedatanode.md)<!-- -->, [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)
 

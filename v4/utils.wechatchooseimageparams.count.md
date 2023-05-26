@@ -8,7 +8,7 @@
 
  9
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 count?: number;

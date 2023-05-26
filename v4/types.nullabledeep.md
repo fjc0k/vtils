@@ -6,7 +6,7 @@
 
 Recursive nullable
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type NullableDeep<T> = T extends Builtin
@@ -33,5 +33,5 @@ export declare type NullableDeep<T> = T extends Builtin
 }
 : T | null;
 ```
-<b>References:</b> [NullableDeep](./types.nullabledeep.md)
+**References:** [NullableDeep](./types.nullabledeep.md)
 

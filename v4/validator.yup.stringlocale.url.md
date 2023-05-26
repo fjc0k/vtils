@@ -4,7 +4,7 @@
 
 ## yup.StringLocale.url property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 url: LocaleValue<{

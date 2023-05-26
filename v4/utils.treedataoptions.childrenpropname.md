@@ -8,7 +8,7 @@
 
  'children'
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 childrenPropName?: TreeDataChildrenPropName<TNode>;

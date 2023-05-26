@@ -4,12 +4,12 @@
 
 ## yup.MixedSchema.allowEmptyString() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 allowEmptyString(): this;
 ```
-<b>Returns:</b>
+**Returns:**
 
 this
 

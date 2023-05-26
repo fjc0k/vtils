@@ -8,7 +8,7 @@
 
  TComponent 原组件  TExclude 需去除的属性  TRef 新的 ref  TOverride 覆盖属性
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type DeriveComponentProps<TComponent extends React_2.ComponentType | keyof JSX.IntrinsicElements | React_2.JSXElementConstructor<any>, TExclude extends keyof React_2.ComponentProps<TComponent>, TRef extends any = never, TOverride extends Partial<Record<keyof React_2.ComponentProps<TComponent>, any>> = never> = Merge<Merge<Omit<React_2.ComponentProps<TComponent>, TExclude>, [

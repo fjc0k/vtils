@@ -6,7 +6,7 @@
 
 Location for the bulk of the library.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 lib?: string;

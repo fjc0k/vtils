@@ -4,7 +4,7 @@
 
 ## loopUntil() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function loopUntil<T>(fn: () => AsyncOrSync<T>, condition: (res: T) => AsyncOrSync<boolean>, options: LoopUntilOptions): Promise<T>;
@@ -18,7 +18,7 @@ export declare function loopUntil<T>(fn: () => AsyncOrSync<T>, condition: (res: 
 |  condition | (res: T) =&gt; AsyncOrSync&lt;boolean&gt; |  |
 |  options | [LoopUntilOptions](./utils.loopuntiloptions.md) |  |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;T&gt;
 

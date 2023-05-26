@@ -6,7 +6,7 @@
 
 原地下移数组中的某个元素。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function moveDown<T>(arr: T[], from: number, step?: number): T[];
@@ -18,9 +18,9 @@ export declare function moveDown<T>(arr: T[], from: number, step?: number): T[];
 |  --- | --- | --- |
 |  arr | T\[\] | 要处理的数组 |
 |  from | number | 要移动元素的索引 |
-|  step | number | 移动步值 |
+|  step | number | _(Optional)_ 移动步值 |
 
-<b>Returns:</b>
+**Returns:**
 
 T\[\]
 
@@ -32,6 +32,5 @@ T\[\]
 ```typescript
 moveDown([1, 2, 3], 0) // => [2, 1, 3]
 moveDown([1, 2, 3], 0, 2) // => [2, 3, 1]
-
 ```
 

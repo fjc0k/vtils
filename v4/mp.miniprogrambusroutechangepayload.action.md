@@ -4,7 +4,7 @@
 
 ## MiniProgramBusRouteChangePayload.action property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 action: MiniProgramBusRouteChangeAction;

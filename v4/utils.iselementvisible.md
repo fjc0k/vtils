@@ -6,7 +6,7 @@
 
 检查 HTML 元素是否可见。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function isElementVisible(el: HTMLElement): boolean;
@@ -18,7 +18,7 @@ export declare function isElementVisible(el: HTMLElement): boolean;
 |  --- | --- | --- |
 |  el | HTMLElement | 要检查的 HTML 元素 |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 

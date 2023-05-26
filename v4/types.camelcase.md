@@ -8,7 +8,7 @@ Convert a string literal to camel-case.
 
 This can be useful when, for example, converting some kebab-cased command-line flags or a snake-cased database result.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type CamelCase<K> = K extends string ? CamelCaseStringArray<Split<K extends Uppercase<K> ? Lowercase<K> : K, WordSeparators>> : K;

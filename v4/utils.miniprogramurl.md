@@ -6,7 +6,7 @@
 
 小程序链接。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare class MiniProgramUrl 

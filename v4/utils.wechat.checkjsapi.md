@@ -6,7 +6,7 @@
 
 判断当前客户端版本是否支持指定 JS 接口。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 checkJsApi<T extends WechatJsApi>(jsApiList: T[]): Promise<Record<T, boolean>>;
@@ -18,7 +18,7 @@ checkJsApi<T extends WechatJsApi>(jsApiList: T[]): Promise<Record<T, boolean>>;
 |  --- | --- | --- |
 |  jsApiList | T\[\] | 需要检测的 JS 接口列表 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;Record&lt;T, boolean&gt;&gt;
 

@@ -6,12 +6,12 @@
 
 读取并返回文本内容。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 text(): Promise<string>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;string&gt;
 

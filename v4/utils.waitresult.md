@@ -5,16 +5,16 @@
 ## WaitResult interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WaitResult<T> extends Promise<T> 
 ```
-<b>Extends:</b> Promise&lt;T&gt;
+**Extends:** Promise&lt;T&gt;
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [cancel](./utils.waitresult.cancel.md) | () =&gt; void | 取消等待，不执行后续逻辑。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [cancel](./utils.waitresult.cancel.md) |  | () =&gt; void | 取消等待，不执行后续逻辑。 |
 

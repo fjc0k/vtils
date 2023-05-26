@@ -6,7 +6,7 @@
 
 部分重渲染，新属性将与初始属性合并。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 partialRerender(props: Partial<React_2.ComponentProps<TComponent>>): void;
@@ -18,7 +18,7 @@ partialRerender(props: Partial<React_2.ComponentProps<TComponent>>): void;
 |  --- | --- | --- |
 |  props | Partial&lt;React\_2.ComponentProps&lt;TComponent&gt;&gt; | 新属性 |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

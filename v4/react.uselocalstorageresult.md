@@ -4,7 +4,7 @@
 
 ## UseLocalStorageResult type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type UseLocalStorageResult<S> = readonly [

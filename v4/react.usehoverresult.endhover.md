@@ -6,7 +6,7 @@
 
 结束悬停。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 endHover: () => any;

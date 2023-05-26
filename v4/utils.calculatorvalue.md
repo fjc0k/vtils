@@ -4,10 +4,10 @@
 
 ## CalculatorValue type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type CalculatorValue = CalculatorPrimitiveValue | CalculatorFunctionValue;
 ```
-<b>References:</b> [CalculatorPrimitiveValue](./utils.calculatorprimitivevalue.md)<!-- -->, [CalculatorFunctionValue](./utils.calculatorfunctionvalue.md)
+**References:** [CalculatorPrimitiveValue](./utils.calculatorprimitivevalue.md)<!-- -->, [CalculatorFunctionValue](./utils.calculatorfunctionvalue.md)
 

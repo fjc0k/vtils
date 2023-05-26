@@ -8,7 +8,7 @@ Do not erase const enum declarations in generated code.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 preserveConstEnums?: boolean;

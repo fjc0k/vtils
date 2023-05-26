@@ -10,10 +10,10 @@ You can't pass a `bigint` as they are already guaranteed to be integers, instead
 
 Use-case: Validating and documenting parameters.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type NegativeInteger<T extends number> = Negative<Integer<T>>;
 ```
-<b>References:</b> [Negative](./types.negative.md)<!-- -->, [Integer](./types.integer.md)
+**References:** [Negative](./types.negative.md)<!-- -->, [Integer](./types.integer.md)
 

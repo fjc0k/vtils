@@ -8,7 +8,7 @@ Print names of files that are part of the compilation and then stop processing.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 listFilesOnly?: boolean;

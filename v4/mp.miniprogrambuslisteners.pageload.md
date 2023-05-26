@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.pageLoad property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pageLoad: Defined<WechatMiniprogram.Page.Options<{}, {}>['onLoad']>;

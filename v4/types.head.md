@@ -6,8 +6,10 @@
 
 Functional programming essentials
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Head<T extends AnyArray_2> = T["length"] extends 0 ? never : T[0];
 ```
+**References:** [AnyArray\_2](./types.anyarray_2.md)
+

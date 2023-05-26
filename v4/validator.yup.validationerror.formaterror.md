@@ -4,7 +4,7 @@
 
 ## yup.ValidationError.formatError() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static formatError(message: LocaleValue, params: LocaleValueFnParams): string;
@@ -14,10 +14,10 @@ static formatError(message: LocaleValue, params: LocaleValueFnParams): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | LocaleValue |  |
-|  params | LocaleValueFnParams |  |
+|  message | [LocaleValue](./validator.yup.localevalue.md) |  |
+|  params | [LocaleValueFnParams](./validator.yup.localevaluefnparams.md) |  |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

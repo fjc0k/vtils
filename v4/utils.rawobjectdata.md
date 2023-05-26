@@ -4,7 +4,7 @@
 
 ## RawObjectData type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type RawObjectData = Record<any, any>;

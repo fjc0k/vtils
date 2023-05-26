@@ -4,7 +4,7 @@
 
 ## yup.ArrayLocale interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface ArrayLocale 
@@ -12,8 +12,8 @@ export interface ArrayLocale
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [max](./validator.yup.arraylocale.max.md) | LocaleValue&lt;{ max: number; }&gt; |  |
-|  [min](./validator.yup.arraylocale.min.md) | LocaleValue&lt;{ min: number; }&gt; |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [max](./validator.yup.arraylocale.max.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ max: number; }&gt; |  |
+|  [min](./validator.yup.arraylocale.min.md) |  | [LocaleValue](./validator.yup.localevalue.md)<!-- -->&lt;{ min: number; }&gt; |  |
 

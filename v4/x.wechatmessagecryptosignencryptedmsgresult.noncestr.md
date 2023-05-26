@@ -6,7 +6,7 @@
 
 随机字符串
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 nonceStr: string;

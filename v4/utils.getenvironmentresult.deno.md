@@ -6,7 +6,7 @@
 
 Deno
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 readonly deno: boolean;

@@ -6,7 +6,7 @@
 
 绑定事件函数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type BindEventFunction<T> = <E extends T extends typeof window ? WindowEventMap : T extends HTMLMediaElement ? HTMLMediaElementEventMap : T extends HTMLBodyElement ? HTMLBodyElementEventMap : T extends HTMLFrameSetElement ? HTMLFrameSetElementEventMap : T extends FileReader ? FileReaderEventMap : T extends WebSocket ? WebSocketEventMap : T extends SVGElement ? SVGElementEventMap : T extends HTMLElement ? HTMLElementEventMap : Record<string, any>, K extends keyof E>(type: K, callback: (this: T, ev: E[K]) => any, options?: boolean | AddEventListenerOptions) => () => any;

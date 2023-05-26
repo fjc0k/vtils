@@ -6,12 +6,12 @@
 
 判断 `T` 是否是空数组。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type IsEmptyArray<T> = T extends any[] ? T extends NonEmptyArray<any> ? false : true : false;
 ```
-<b>References:</b> [NonEmptyArray](./types.nonemptyarray.md)
+**References:** [NonEmptyArray](./types.nonemptyarray.md)
 
 ## Example
 
@@ -19,6 +19,5 @@ export declare type IsEmptyArray<T> = T extends any[] ? T extends NonEmptyArray<
 ```typescript
 type X = IsEmptyArray<[]>
 // => true
-
 ```
 

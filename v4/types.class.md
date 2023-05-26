@@ -8,7 +8,7 @@ Matches a \[`class`<!-- -->\](https://developer.mozilla.org/en-US/docs/Web/JavaS
 
  Basic
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Class<T, Arguments extends unknown[] = any[]> = Constructor<T, Arguments> & {prototype: T};

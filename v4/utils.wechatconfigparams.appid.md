@@ -6,7 +6,7 @@
 
 公众号的唯一标识。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 appId: string;

@@ -4,14 +4,14 @@
 
 ## RenderComponentContainer() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function RenderComponentContainer(): React_2.FunctionComponentElement<{
     children: any[];
 }>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 React\_2.FunctionComponentElement&lt;{ children: any\[\]; }&gt;
 

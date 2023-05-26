@@ -6,7 +6,7 @@
 
 Additional tooling dependencies that are not required for the package to work. Usually test, build, or documentation tooling.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 devDependencies?: Dependency;

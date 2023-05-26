@@ -6,7 +6,7 @@
 
 If set to `true`<!-- -->, then npm will refuse to publish it.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 private?: boolean;

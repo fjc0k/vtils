@@ -6,7 +6,7 @@
 
 获取类名字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useClassName(getClassValues: () => any[] | undefined, deps: DependencyList): string | undefined;
@@ -19,7 +19,7 @@ export declare function useClassName(getClassValues: () => any[] | undefined, de
 |  getClassValues | () =&gt; any\[\] \| undefined | 获取类名列表函数 |
 |  deps | DependencyList | 当依赖变更时重新获取 |
 
-<b>Returns:</b>
+**Returns:**
 
 string \| undefined
 
@@ -37,6 +37,5 @@ const buttonClassName = useClassName(() => [
 console.log(buttonClassName) // => 'ui-btn ui-btn_mini'
 setMini(false)
 console.log(buttonClassName) // => 'ui-btn'
-
 ```
 

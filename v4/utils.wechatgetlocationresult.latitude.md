@@ -6,7 +6,7 @@
 
 纬度，浮点数，范围为90 \~ -90。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 latitude: number;

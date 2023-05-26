@@ -10,7 +10,7 @@ Requires `--inlineSourceMap` to be set.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 inlineSources?: boolean;

@@ -5,7 +5,7 @@
 ## UseScrollLoadMoreOptions interface
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface UseScrollLoadMoreOptions 
@@ -13,8 +13,8 @@ export declare interface UseScrollLoadMoreOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [containerRef?](./react.usescrollloadmoreoptions.containerref.md) | ReturnType&lt;typeof useReachBottom&gt; | <i>(Optional)</i> 滚动容器，默认以窗口作为滚动容器。 window |
-|  [offset?](./react.usescrollloadmoreoptions.offset.md) | number | <i>(Optional)</i> 距离底部偏移量（单位：像素），小于该值时触发加载。 0 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [containerRef?](./react.usescrollloadmoreoptions.containerref.md) |  | ReturnType&lt;typeof useReachBottom&gt; | <p>_(Optional)_ 滚动容器，默认以窗口作为滚动容器。</p><p> window</p> |
+|  [offset?](./react.usescrollloadmoreoptions.offset.md) |  | number | <p>_(Optional)_ 距离底部偏移量（单位：像素），小于该值时触发加载。</p><p> 0</p> |
 

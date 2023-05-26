@@ -4,7 +4,7 @@
 
 ## yup.StringLocale.email property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 email: LocaleValue<{

@@ -4,12 +4,12 @@
 
 ## yup.number() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function number<T extends number = number>(): NumberSchema<T>;
 ```
-<b>Returns:</b>
+**Returns:**
 
-NumberSchema&lt;T&gt;
+[NumberSchema](./validator.yup.numberschema.md)<!-- -->&lt;T&gt;
 

@@ -6,7 +6,7 @@
 
 查找符合条件的所有节点的路径。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 findNodePathAll(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): Array<TNode[]>;
@@ -18,7 +18,7 @@ findNodePathAll(predicate: (payload: TreeDataTraverseFnPayload<TNode>) => boolea
 |  --- | --- | --- |
 |  predicate | (payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean | 条件 |
 
-<b>Returns:</b>
+**Returns:**
 
 Array&lt;TNode\[\]&gt;
 

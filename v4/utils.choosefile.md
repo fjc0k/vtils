@@ -6,7 +6,7 @@
 
 选择文件。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function chooseFile(accept: LiteralUnion<'image', string>, multiple?: boolean): Promise<ReadonlyArray<File>>;
@@ -17,9 +17,9 @@ export declare function chooseFile(accept: LiteralUnion<'image', string>, multip
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  accept | LiteralUnion&lt;'image', string&gt; | 接受的文件类型 |
-|  multiple | boolean | 是否多选 |
+|  multiple | boolean | _(Optional)_ 是否多选 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;ReadonlyArray&lt;File&gt;&gt;
 

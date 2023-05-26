@@ -6,7 +6,7 @@
 
 @<!-- -->类型不友好
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 concat(schema: MixedSchema<any>): this;
@@ -16,9 +16,9 @@ concat(schema: MixedSchema<any>): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  schema | MixedSchema&lt;any&gt; |  |
+|  schema | [MixedSchema](./validator.yup.mixedschema.md)<!-- -->&lt;any&gt; |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

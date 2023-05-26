@@ -4,12 +4,12 @@
 
 ## yup.MixedSchema.defined() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 defined(): this;
 ```
-<b>Returns:</b>
+**Returns:**
 
 this
 

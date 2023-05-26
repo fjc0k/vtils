@@ -6,7 +6,7 @@
 
 定义组件。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function defineComponent<TProps extends Record<string, any>, TRef extends any = any>(options: DefineComponentOptions<TProps, false>): React_2.FC<TProps>;
@@ -18,7 +18,7 @@ export declare function defineComponent<TProps extends Record<string, any>, TRef
 |  --- | --- | --- |
 |  options | [DefineComponentOptions](./react.definecomponentoptions.md)<!-- -->&lt;TProps, false&gt; | 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 React\_2.FC&lt;TProps&gt;
 

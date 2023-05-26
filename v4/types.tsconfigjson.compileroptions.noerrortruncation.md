@@ -8,7 +8,7 @@ Do not truncate error messages.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 noErrorTruncation?: boolean;

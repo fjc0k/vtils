@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.currentPageResize property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 currentPageResize: Defined<WechatMiniprogram.Page.Options<{}, {}>['onResize']>;

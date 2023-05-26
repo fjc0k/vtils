@@ -4,7 +4,7 @@
 
 ## MsUnit type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MsUnit = 'y' | 'w' | 'd' | 'h' | 'm' | 's' | 'ms';

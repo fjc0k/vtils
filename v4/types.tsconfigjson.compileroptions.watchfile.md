@@ -4,7 +4,7 @@
 
 ## TsConfigJson.CompilerOptions.WatchFile type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type WatchFile =

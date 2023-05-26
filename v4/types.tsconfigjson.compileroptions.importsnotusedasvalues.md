@@ -4,7 +4,7 @@
 
 ## TsConfigJson.CompilerOptions.ImportsNotUsedAsValues type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type ImportsNotUsedAsValues =

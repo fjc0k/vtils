@@ -4,7 +4,7 @@
 
 ## yup.Locale interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Locale 
@@ -12,13 +12,13 @@ export interface Locale
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [array](./validator.yup.locale.array.md) | ArrayLocale |  |
-|  [boolean](./validator.yup.locale.boolean.md) | BooleanLocale |  |
-|  [date](./validator.yup.locale.date.md) | DateLocale |  |
-|  [mixed](./validator.yup.locale.mixed.md) | MixedLocale |  |
-|  [number](./validator.yup.locale.number.md) | NumberLocale |  |
-|  [object](./validator.yup.locale.object.md) | ObjectLocale |  |
-|  [string](./validator.yup.locale.string.md) | StringLocale |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [array](./validator.yup.locale.array.md) |  | [ArrayLocale](./validator.yup.arraylocale.md) |  |
+|  [boolean](./validator.yup.locale.boolean.md) |  | [BooleanLocale](./validator.yup.booleanlocale.md) |  |
+|  [date](./validator.yup.locale.date.md) |  | [DateLocale](./validator.yup.datelocale.md) |  |
+|  [mixed](./validator.yup.locale.mixed.md) |  | [MixedLocale](./validator.yup.mixedlocale.md) |  |
+|  [number](./validator.yup.locale.number.md) |  | [NumberLocale](./validator.yup.numberlocale.md) |  |
+|  [object](./validator.yup.locale.object.md) |  | [ObjectLocale](./validator.yup.objectlocale.md) |  |
+|  [string](./validator.yup.locale.string.md) |  | [StringLocale](./validator.yup.stringlocale.md) |  |
 

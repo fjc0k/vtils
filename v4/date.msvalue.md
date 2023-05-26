@@ -4,10 +4,10 @@
 
 ## MsValue type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MsValue = MsNumberValue | MsStringValue;
 ```
-<b>References:</b> [MsNumberValue](./date.msnumbervalue.md)<!-- -->, [MsStringValue](./date.msstringvalue.md)
+**References:** [MsNumberValue](./date.msnumbervalue.md)<!-- -->, [MsStringValue](./date.msstringvalue.md)
 

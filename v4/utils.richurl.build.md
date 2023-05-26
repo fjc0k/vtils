@@ -6,7 +6,7 @@
 
 创建富链接。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 static build(url: string, desc?: any): string;
@@ -17,9 +17,9 @@ static build(url: string, desc?: any): string;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  url | string | 普通链接 |
-|  desc | any | 描述信息 |
+|  desc | any | _(Optional)_ 描述信息 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

@@ -6,7 +6,7 @@
 
 复制文本到剪切板。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function copyTextToClipboard(text: string, options?: CopyTextToClipboardOptions): boolean;
@@ -17,9 +17,9 @@ export declare function copyTextToClipboard(text: string, options?: CopyTextToCl
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  text | string | 要复制的文本 |
-|  options | [CopyTextToClipboardOptions](./utils.copytexttoclipboardoptions.md) | 选项 |
+|  options | [CopyTextToClipboardOptions](./utils.copytexttoclipboardoptions.md) | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 boolean
 

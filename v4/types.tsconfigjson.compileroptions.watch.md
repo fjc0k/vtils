@@ -8,7 +8,7 @@ Watch input files.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 watch?: boolean;

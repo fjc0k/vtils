@@ -6,7 +6,7 @@
 
 Entry points of a module, optionally with conditions and subpath exports.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type Exports =
@@ -15,5 +15,5 @@ export type Exports =
     	| {[key in ExportCondition]: Exports}
     	| {[key: string]: Exports};
 ```
-<b>References:</b> [ExportCondition](./types.packagejson.exportcondition.md)<!-- -->, [Exports](./types.packagejson.exports.md)
+**References:** [ExportCondition](./types.packagejson.exportcondition.md)<!-- -->, [Exports](./types.packagejson.exports.md)
 

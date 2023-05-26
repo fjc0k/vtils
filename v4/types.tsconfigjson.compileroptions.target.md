@@ -4,7 +4,7 @@
 
 ## TsConfigJson.CompilerOptions.Target type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export type Target =

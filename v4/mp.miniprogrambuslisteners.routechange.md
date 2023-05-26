@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.routeChange property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 routeChange: (payload: MiniProgramBusRouteChangePayload) => any;

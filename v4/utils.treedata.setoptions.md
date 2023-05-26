@@ -6,7 +6,7 @@
 
 设置选项。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 setOptions(options: TreeDataOptions<TNode>): this;
@@ -18,7 +18,7 @@ setOptions(options: TreeDataOptions<TNode>): this;
 |  --- | --- | --- |
 |  options | [TreeDataOptions](./utils.treedataoptions.md)<!-- -->&lt;TNode&gt; | 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

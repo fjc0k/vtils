@@ -8,7 +8,7 @@ Do not report errors on unreachable code.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 allowUnreachableCode?: boolean;

@@ -4,12 +4,12 @@
 
 ## SignalResult.get() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 get(): Promise<T>;
 ```
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;T&gt;
 

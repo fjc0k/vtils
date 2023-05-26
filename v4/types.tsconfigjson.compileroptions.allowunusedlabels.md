@@ -8,7 +8,7 @@ Do not report errors on unused labels.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 allowUnusedLabels?: boolean;

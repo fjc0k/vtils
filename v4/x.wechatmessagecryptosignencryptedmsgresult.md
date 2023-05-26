@@ -4,7 +4,7 @@
 
 ## WechatMessageCryptoSignEncryptedMsgResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface WechatMessageCryptoSignEncryptedMsgResult 
@@ -12,9 +12,9 @@ export declare interface WechatMessageCryptoSignEncryptedMsgResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [nonceStr](./x.wechatmessagecryptosignencryptedmsgresult.noncestr.md) | string | 随机字符串 |
-|  [signature](./x.wechatmessagecryptosignencryptedmsgresult.signature.md) | string | 签名 |
-|  [timestamp](./x.wechatmessagecryptosignencryptedmsgresult.timestamp.md) | number | Unix 时间戳 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [nonceStr](./x.wechatmessagecryptosignencryptedmsgresult.noncestr.md) |  | string | 随机字符串 |
+|  [signature](./x.wechatmessagecryptosignencryptedmsgresult.signature.md) |  | string | 签名 |
+|  [timestamp](./x.wechatmessagecryptosignencryptedmsgresult.timestamp.md) |  | number | Unix 时间戳 |
 

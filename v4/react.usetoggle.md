@@ -6,7 +6,7 @@
 
 布尔值切换器。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useToggle(initialValue: boolean): UseToggleResult;
@@ -18,7 +18,7 @@ export declare function useToggle(initialValue: boolean): UseToggleResult;
 |  --- | --- | --- |
 |  initialValue | boolean | 初始值 |
 
-<b>Returns:</b>
+**Returns:**
 
 [UseToggleResult](./react.usetoggleresult.md)
 
@@ -33,6 +33,5 @@ toggle() // value: true
 toggle.set(false) // value: false
 toggle.true() // => value: true
 toggle.false() // => value: false
-
 ```
 

@@ -6,7 +6,7 @@
 
 存活时间(毫秒)
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 ttl?: number;

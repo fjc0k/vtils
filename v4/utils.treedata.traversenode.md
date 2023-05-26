@@ -6,7 +6,7 @@
 
 遍历节点。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 traverseNode(node: OneOrMore<TNode> | ((payload: TreeDataTraverseFnPayload<TNode>) => boolean), fn: OneOrMore<TreeDataTraverseFn<TNode> | false>, searchStrategy?: TreeDataSearchStrategy): this;
@@ -18,9 +18,9 @@ traverseNode(node: OneOrMore<TNode> | ((payload: TreeDataTraverseFnPayload<TNode
 |  --- | --- | --- |
 |  node | OneOrMore&lt;TNode&gt; \| ((payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean) | 节点 |
 |  fn | OneOrMore&lt;[TreeDataTraverseFn](./utils.treedatatraversefn.md)<!-- -->&lt;TNode&gt; \| false&gt; | 遍历函数 |
-|  searchStrategy | [TreeDataSearchStrategy](./utils.treedatasearchstrategy.md) | 遍历搜索方式，默认为选项中的遍历搜索方式 |
+|  searchStrategy | [TreeDataSearchStrategy](./utils.treedatasearchstrategy.md) | _(Optional)_ 遍历搜索方式，默认为选项中的遍历搜索方式 |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

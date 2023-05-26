@@ -4,7 +4,7 @@
 
 ## useLocalStorage() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function useLocalStorage<S>(key: string, initialState: S): UseLocalStorageResult<S>;
@@ -17,7 +17,7 @@ export declare function useLocalStorage<S>(key: string, initialState: S): UseLoc
 |  key | string |  |
 |  initialState | S |  |
 
-<b>Returns:</b>
+**Returns:**
 
 [UseLocalStorageResult](./react.uselocalstorageresult.md)<!-- -->&lt;S&gt;
 

@@ -4,7 +4,7 @@
 
 ## yup.StringLocale.lowercase property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 lowercase: LocaleValue;

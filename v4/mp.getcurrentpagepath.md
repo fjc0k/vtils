@@ -6,7 +6,7 @@
 
 获取当前页面的路径（不含查询参数），始终以 `/` 开头。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function getCurrentPagePath(pageInstance?: WechatMiniprogram.Page.Instance<AnyObject_2, AnyObject_2>): string;
@@ -16,9 +16,9 @@ export declare function getCurrentPagePath(pageInstance?: WechatMiniprogram.Page
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  pageInstance | WechatMiniprogram.Page.Instance&lt;AnyObject\_2, AnyObject\_2&gt; | 页面实例，默认当前页面 |
+|  pageInstance | WechatMiniprogram.Page.Instance&lt;AnyObject\_2, AnyObject\_2&gt; | _(Optional)_ 页面实例，默认当前页面 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

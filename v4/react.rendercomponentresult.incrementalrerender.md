@@ -6,7 +6,7 @@
 
 增量重渲染，新属性将与增量属性合并并成为新的增量属性。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 incrementalRerender(props: Partial<React_2.ComponentProps<TComponent>>): void;
@@ -18,7 +18,7 @@ incrementalRerender(props: Partial<React_2.ComponentProps<TComponent>>): void;
 |  --- | --- | --- |
 |  props | Partial&lt;React\_2.ComponentProps&lt;TComponent&gt;&gt; | 新属性 |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

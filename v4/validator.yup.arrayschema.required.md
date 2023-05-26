@@ -4,7 +4,7 @@
 
 ## yup.ArraySchema.required() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 required(message?: MixedLocale['required']): this;
@@ -14,9 +14,9 @@ required(message?: MixedLocale['required']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | MixedLocale\['required'\] |  |
+|  message | [MixedLocale](./validator.yup.mixedlocale.md)<!-- -->\['required'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

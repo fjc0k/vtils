@@ -6,7 +6,7 @@
 
 Specify list of root directories to be used when resolving modules.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 rootDirs?: string[];

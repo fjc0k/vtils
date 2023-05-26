@@ -6,12 +6,12 @@
 
 检查是否在浏览器环境中。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function inBrowser(): boolean;
 ```
-<b>Returns:</b>
+**Returns:**
 
 boolean
 
@@ -24,6 +24,5 @@ boolean
 if (inBrowser()) {
   console.log('你在浏览器中')
 }
-
 ```
 

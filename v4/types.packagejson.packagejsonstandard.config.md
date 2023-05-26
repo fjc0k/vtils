@@ -6,7 +6,7 @@
 
 Is used to set configuration parameters used in package scripts that persist across upgrades.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 config?: Record<string, unknown>;

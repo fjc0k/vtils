@@ -6,7 +6,7 @@
 
 从集合中随机获得一个元素的迭代值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function sampleBy<T, X>(collection: T[], iteratee: (element: T, index: number) => X): X | undefined;
@@ -19,7 +19,7 @@ export declare function sampleBy<T, X>(collection: T[], iteratee: (element: T, i
 |  collection | T\[\] | 集合 |
 |  iteratee | (element: T, index: number) =&gt; X | 迭代函数 |
 
-<b>Returns:</b>
+**Returns:**
 
 X \| undefined
 

@@ -4,7 +4,7 @@
 
 ## CreateGlobalStateResult.setStatePartial() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 setStatePartial(nextState: Partial<S> | ((prevState: S) => Partial<S>)): void;
@@ -16,7 +16,7 @@ setStatePartial(nextState: Partial<S> | ((prevState: S) => Partial<S>)): void;
 |  --- | --- | --- |
 |  nextState | Partial&lt;S&gt; \| ((prevState: S) =&gt; Partial&lt;S&gt;) |  |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

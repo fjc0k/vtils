@@ -6,7 +6,7 @@
 
 计算符合条件的节点个数。不给出条件则计算所有节点的个数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 count(predicate?: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): number;
@@ -16,9 +16,9 @@ count(predicate?: (payload: TreeDataTraverseFnPayload<TNode>) => boolean): numbe
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  predicate | (payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean | 条件 |
+|  predicate | (payload: [TreeDataTraverseFnPayload](./utils.treedatatraversefnpayload.md)<!-- -->&lt;TNode&gt;) =&gt; boolean | _(Optional)_ 条件 |
 
-<b>Returns:</b>
+**Returns:**
 
 number
 

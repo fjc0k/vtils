@@ -8,7 +8,7 @@
 
  \['original', 'compressed'\]
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sizeType?: Array<'original' | 'compressed'>;

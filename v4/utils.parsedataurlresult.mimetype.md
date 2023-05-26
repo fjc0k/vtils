@@ -4,7 +4,7 @@
 
 ## ParseDataUrlResult.mimeType property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 mimeType: string;

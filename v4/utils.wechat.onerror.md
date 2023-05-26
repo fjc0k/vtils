@@ -6,7 +6,7 @@
 
 错误处理。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 onError(callback: WechatErrorCallback): EventBusOffListener;
@@ -18,7 +18,7 @@ onError(callback: WechatErrorCallback): EventBusOffListener;
 |  --- | --- | --- |
 |  callback | [WechatErrorCallback](./utils.wechaterrorcallback.md) | 出错时的回调函数 |
 
-<b>Returns:</b>
+**Returns:**
 
 [EventBusOffListener](./utils.eventbusofflistener.md)
 

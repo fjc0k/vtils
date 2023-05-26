@@ -6,7 +6,7 @@
 
 任意异步函数。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type AnyAsyncFunction = Record<any, any> & {

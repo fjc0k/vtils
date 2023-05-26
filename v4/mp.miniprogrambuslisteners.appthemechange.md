@@ -4,7 +4,7 @@
 
 ## MiniProgramBusListeners.appThemeChange property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 appThemeChange: Defined<WechatMiniprogram.App.Options<{}>['onThemeChange']>;

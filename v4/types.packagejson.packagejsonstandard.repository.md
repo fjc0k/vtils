@@ -6,7 +6,7 @@
 
 Location for the code repository.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 repository?:

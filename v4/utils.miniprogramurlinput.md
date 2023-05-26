@@ -4,10 +4,10 @@
 
 ## MiniProgramUrlInput type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type MiniProgramUrlInput = MiniProgramUrlStringInput | MiniProgramUrlJsonInput;
 ```
-<b>References:</b> [MiniProgramUrlStringInput](./utils.miniprogramurlstringinput.md)<!-- -->, [MiniProgramUrlJsonInput](./utils.miniprogramurljsoninput.md)
+**References:** [MiniProgramUrlStringInput](./utils.miniprogramurlstringinput.md)<!-- -->, [MiniProgramUrlJsonInput](./utils.miniprogramurljsoninput.md)
 

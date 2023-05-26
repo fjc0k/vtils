@@ -8,7 +8,7 @@
 
 兼容以 `?` 开头的查询字符串，因此你可以直接传入 `location.search` 的值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function parseUrlQueryString<T extends Record<string, string> = Record<string, string>>(query: string, options?: CreateUrlQueryStringOptions): T;
@@ -19,9 +19,9 @@ export declare function parseUrlQueryString<T extends Record<string, string> = R
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  query | string | 查询字符串 |
-|  options | [CreateUrlQueryStringOptions](./utils.createurlquerystringoptions.md) | 选项 |
+|  options | [CreateUrlQueryStringOptions](./utils.createurlquerystringoptions.md) | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 T
 
@@ -32,6 +32,5 @@ T
 
 ```typescript
 parseUrlQueryString('x=1&y=z') // => { x: '1', y: 'z' }
-
 ```
 

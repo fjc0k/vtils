@@ -4,17 +4,17 @@
 
 ## RedisCookieJarOptions interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface RedisCookieJarOptions extends CookieJar.Options 
 ```
-<b>Extends:</b> CookieJar.Options
+**Extends:** CookieJar.Options
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [key](./x.rediscookiejaroptions.key.md) | string | 唯一的键名。 |
-|  [redis](./x.rediscookiejaroptions.redis.md) | Redis.Redis \| Redis.RedisOptions | Redis 实例或选项，内部使用 <code>ioredis</code>。 |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [key](./x.rediscookiejaroptions.key.md) |  | string | 唯一的键名。 |
+|  [redis](./x.rediscookiejaroptions.redis.md) |  | Redis.Redis \| Redis.RedisOptions | Redis 实例或选项，内部使用 <code>ioredis</code>。 |
 

@@ -8,7 +8,7 @@ Allow default imports from modules with no default export. This does not affect 
 
  module === 'system' \|\| esModuleInterop
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 allowSyntheticDefaultImports?: boolean;

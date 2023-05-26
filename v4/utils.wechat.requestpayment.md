@@ -6,7 +6,7 @@
 
 发起微信支付。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 requestPayment(params: WechatRequestPaymentParams): Promise<any>;
@@ -18,7 +18,7 @@ requestPayment(params: WechatRequestPaymentParams): Promise<any>;
 |  --- | --- | --- |
 |  params | [WechatRequestPaymentParams](./utils.wechatrequestpaymentparams.md) | 参数 |
 
-<b>Returns:</b>
+**Returns:**
 
 Promise&lt;any&gt;
 

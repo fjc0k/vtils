@@ -4,12 +4,12 @@
 
 ## yup.array() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function array<T extends any = any>(): ArraySchema<T>;
 ```
-<b>Returns:</b>
+**Returns:**
 
-ArraySchema&lt;T&gt;
+[ArraySchema](./validator.yup.arrayschema.md)<!-- -->&lt;T&gt;
 

@@ -6,7 +6,7 @@
 
 检查 `value` 是否是数值，需要注意的是 `Infinity`<!-- -->、`-Infinity`<!-- -->、`NaN` 不被认为是数值。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function isNumeric(value: any): value is number | string;
@@ -18,7 +18,7 @@ export declare function isNumeric(value: any): value is number | string;
 |  --- | --- | --- |
 |  value | any | 要检查的值 |
 
-<b>Returns:</b>
+**Returns:**
 
 value is number \| string
 
@@ -30,6 +30,5 @@ value is number \| string
 ```typescript
 isNumeric(1) // => true
 isNumeric('1') // => true
-
 ```
 

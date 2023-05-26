@@ -6,7 +6,7 @@
 
 生成签名的时间戳。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 timestamp: number | string;

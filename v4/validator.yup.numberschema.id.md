@@ -4,7 +4,7 @@
 
 ## yup.NumberSchema.id() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 id(message?: NumberLocale['id']): this;
@@ -14,9 +14,9 @@ id(message?: NumberLocale['id']): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | NumberLocale\['id'\] |  |
+|  message | [NumberLocale](./validator.yup.numberlocale.md)<!-- -->\['id'\] | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

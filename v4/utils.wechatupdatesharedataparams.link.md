@@ -6,7 +6,7 @@
 
 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 link?: string | (() => string);

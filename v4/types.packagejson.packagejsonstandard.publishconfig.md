@@ -6,7 +6,7 @@
 
 A set of config values that will be used at publish-time. It's especially handy to set the tag, registry or access, to ensure that a given package is not tagged with 'latest', published to the global public registry or that a scoped module is private by default.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 publishConfig?: PublishConfig;

@@ -6,7 +6,7 @@
 
 总数据量
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 total: number;

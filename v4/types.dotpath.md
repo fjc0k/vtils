@@ -4,7 +4,7 @@
 
 ## DotPath type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type DotPath<T> = object extends T ? string : T extends readonly any[] ? Extract<keyof T, `${number}`> | SubKeys<T, Extract<keyof T, `${number}`>> : T extends object ? Extract<keyof T, string> | SubKeys<T, Extract<keyof T, string>> : never;

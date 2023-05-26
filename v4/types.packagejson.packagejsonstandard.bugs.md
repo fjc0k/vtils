@@ -6,7 +6,7 @@
 
 The URL to the package's issue tracker and/or the email address to which issues should be reported.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 bugs?: BugsLocation;

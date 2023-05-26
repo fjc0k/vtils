@@ -6,7 +6,7 @@
 
 从字符串中移除 emoji 字符。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function removeEmojiChars(value: string): string;
@@ -18,7 +18,7 @@ export declare function removeEmojiChars(value: string): string;
 |  --- | --- | --- |
 |  value | string | 要操作的字符串 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 

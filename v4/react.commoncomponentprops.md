@@ -6,7 +6,7 @@
 
 常用的组件属性。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface CommonComponentProps<TRef = never> 
@@ -14,10 +14,10 @@ export declare interface CommonComponentProps<TRef = never>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [className?](./react.commoncomponentprops.classname.md) | string | <i>(Optional)</i> |
-|  [key?](./react.commoncomponentprops.key.md) | React\_2.Key | <i>(Optional)</i> |
-|  [ref?](./react.commoncomponentprops.ref.md) | React\_2.Ref&lt;TRef&gt; | <i>(Optional)</i> |
-|  [style?](./react.commoncomponentprops.style.md) | React\_2.CSSProperties | <i>(Optional)</i> |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [className?](./react.commoncomponentprops.classname.md) |  | string | _(Optional)_ |
+|  [key?](./react.commoncomponentprops.key.md) |  | React\_2.Key | _(Optional)_ |
+|  [ref?](./react.commoncomponentprops.ref.md) |  | React\_2.Ref&lt;TRef&gt; | _(Optional)_ |
+|  [style?](./react.commoncomponentprops.style.md) |  | React\_2.CSSProperties | _(Optional)_ |
 

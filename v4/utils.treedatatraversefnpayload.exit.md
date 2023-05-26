@@ -6,7 +6,7 @@
 
 退出遍历。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 exit: () => void;

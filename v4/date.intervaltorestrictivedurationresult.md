@@ -4,7 +4,7 @@
 
 ## IntervalToRestrictiveDurationResult interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface IntervalToRestrictiveDurationResult 
@@ -12,13 +12,13 @@ export declare interface IntervalToRestrictiveDurationResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [days](./date.intervaltorestrictivedurationresult.days.md) | number |  |
-|  [hours](./date.intervaltorestrictivedurationresult.hours.md) | number |  |
-|  [milliseconds](./date.intervaltorestrictivedurationresult.milliseconds.md) | number |  |
-|  [minutes](./date.intervaltorestrictivedurationresult.minutes.md) | number |  |
-|  [months](./date.intervaltorestrictivedurationresult.months.md) | number |  |
-|  [seconds](./date.intervaltorestrictivedurationresult.seconds.md) | number |  |
-|  [years](./date.intervaltorestrictivedurationresult.years.md) | number |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [days](./date.intervaltorestrictivedurationresult.days.md) |  | number |  |
+|  [hours](./date.intervaltorestrictivedurationresult.hours.md) |  | number |  |
+|  [milliseconds](./date.intervaltorestrictivedurationresult.milliseconds.md) |  | number |  |
+|  [minutes](./date.intervaltorestrictivedurationresult.minutes.md) |  | number |  |
+|  [months](./date.intervaltorestrictivedurationresult.months.md) |  | number |  |
+|  [seconds](./date.intervaltorestrictivedurationresult.seconds.md) |  | number |  |
+|  [years](./date.intervaltorestrictivedurationresult.years.md) |  | number |  |
 

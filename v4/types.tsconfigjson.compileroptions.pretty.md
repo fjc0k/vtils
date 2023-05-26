@@ -8,7 +8,7 @@ Stylize errors and messages using color and context (experimental).
 
  true // Unless piping to another program or redirecting output to a file.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pretty?: boolean;

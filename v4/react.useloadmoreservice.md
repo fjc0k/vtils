@@ -6,7 +6,7 @@
 
 加载服务。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface UseLoadMoreService<TItem> 

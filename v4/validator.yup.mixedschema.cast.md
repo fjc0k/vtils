@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.cast() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 cast(value: T, options?: SchemaValidateOptions): any;
@@ -15,9 +15,9 @@ cast(value: T, options?: SchemaValidateOptions): any;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T |  |
-|  options | SchemaValidateOptions |  |
+|  options | [SchemaValidateOptions](./validator.yup.schemavalidateoptions.md) | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 any
 

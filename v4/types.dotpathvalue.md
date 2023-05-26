@@ -4,10 +4,10 @@
 
 ## DotPathValue type
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type DotPathValue<T, Path extends string> = Path extends keyof T ? T[Path] : Path extends `${infer K}.${infer R}` ? K extends keyof T ? DotPathValue<T[K], R> : unknown : unknown;
 ```
-<b>References:</b> [DotPathValue](./types.dotpathvalue.md)
+**References:** [DotPathValue](./types.dotpathvalue.md)
 

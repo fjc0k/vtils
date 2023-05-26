@@ -4,7 +4,7 @@
 
 ## TsConfigJson namespace
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare namespace TsConfigJson 
@@ -16,7 +16,7 @@ export declare namespace TsConfigJson
 |  --- | --- |
 |  [CompilerOptions](./types.tsconfigjson.compileroptions.md) |  |
 |  [References](./types.tsconfigjson.references.md) |  |
-|  [TypeAcquisition](./types.tsconfigjson.typeacquisition.md) | Auto type (.d.ts) acquisition options for this project.<!-- -->Requires TypeScript version 2.1 or later. |
+|  [TypeAcquisition](./types.tsconfigjson.typeacquisition.md) | <p>Auto type (.d.ts) acquisition options for this project.</p><p>Requires TypeScript version 2.1 or later.</p> |
 
 ## Namespaces
 

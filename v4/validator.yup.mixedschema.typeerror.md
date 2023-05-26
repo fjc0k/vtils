@@ -4,7 +4,7 @@
 
 ## yup.MixedSchema.typeError() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 typeError(message: LocaleValue): this;
@@ -14,9 +14,9 @@ typeError(message: LocaleValue): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | LocaleValue |  |
+|  message | [LocaleValue](./validator.yup.localevalue.md) |  |
 
-<b>Returns:</b>
+**Returns:**
 
 this
 

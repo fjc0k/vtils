@@ -8,7 +8,7 @@ Print names of files part of the compilation.
 
  false
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 listFiles?: boolean;

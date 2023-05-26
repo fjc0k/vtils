@@ -4,7 +4,7 @@
 
 ## CreateGlobalStateResult.setState() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 setState(nextState: SetStateAction<S>): void;
@@ -16,7 +16,7 @@ setState(nextState: SetStateAction<S>): void;
 |  --- | --- | --- |
 |  nextState | SetStateAction&lt;S&gt; |  |
 
-<b>Returns:</b>
+**Returns:**
 
 void
 

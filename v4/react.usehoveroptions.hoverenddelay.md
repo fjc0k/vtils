@@ -8,7 +8,7 @@
 
  400
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 hoverEndDelay?: number;

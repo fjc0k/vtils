@@ -6,7 +6,7 @@
 
 Keywords associated with package, listed in `npm search`<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 keywords?: string[];

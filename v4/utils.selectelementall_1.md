@@ -4,7 +4,7 @@
 
 ## selectElementAll() function
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function selectElementAll<TElement extends Element = HTMLElement>(selectors: string | string[], baseElements?: BaseElements): TElement[];
@@ -15,9 +15,9 @@ export declare function selectElementAll<TElement extends Element = HTMLElement>
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  selectors | string \| string\[\] |  |
-|  baseElements | BaseElements |  |
+|  baseElements | BaseElements | _(Optional)_ |
 
-<b>Returns:</b>
+**Returns:**
 
 TElement\[\]
 

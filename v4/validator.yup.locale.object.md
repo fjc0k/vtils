@@ -4,7 +4,7 @@
 
 ## yup.Locale.object property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 object: ObjectLocale;

@@ -6,7 +6,7 @@
 
 状态栏高度。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 statusBarHeight: number;

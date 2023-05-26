@@ -6,7 +6,7 @@
 
 移除当前节点。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 removeNode: () => void;

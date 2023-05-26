@@ -4,7 +4,7 @@
 
 ## TsConfigJson.References interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface References 
@@ -12,10 +12,10 @@ export interface References
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [circular?](./types.tsconfigjson.references.circular.md) | boolean | <i>(Optional)</i> True if it is intended that this reference form a circularity. |
-|  [originalPath?](./types.tsconfigjson.references.originalpath.md) | string | <i>(Optional)</i> The path as the user originally wrote it. |
-|  [path](./types.tsconfigjson.references.path.md) | string | A normalized path on disk. |
-|  [prepend?](./types.tsconfigjson.references.prepend.md) | boolean | <i>(Optional)</i> True if the output of this reference should be prepended to the output of this project.<!-- -->Only valid for <code>--outFile</code> compilations. |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [circular?](./types.tsconfigjson.references.circular.md) |  | boolean | _(Optional)_ True if it is intended that this reference form a circularity. |
+|  [originalPath?](./types.tsconfigjson.references.originalpath.md) |  | string | _(Optional)_ The path as the user originally wrote it. |
+|  [path](./types.tsconfigjson.references.path.md) |  | string | A normalized path on disk. |
+|  [prepend?](./types.tsconfigjson.references.prepend.md) |  | boolean | <p>_(Optional)_ True if the output of this reference should be prepended to the output of this project.</p><p>Only valid for <code>--outFile</code> compilations.</p> |
 

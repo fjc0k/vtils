@@ -6,7 +6,7 @@
 
 创建提交类行为。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function createSubmit(options: CreateSubmitOptions<string>): CreateSubmitResult<string>;
@@ -18,7 +18,7 @@ export declare function createSubmit(options: CreateSubmitOptions<string>): Crea
 |  --- | --- | --- |
 |  options | [CreateSubmitOptions](./utils.createsubmitoptions.md)<!-- -->&lt;string&gt; | 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 [CreateSubmitResult](./utils.createsubmitresult.md)<!-- -->&lt;string&gt;
 

@@ -4,7 +4,7 @@
 
 ## PackageJson.PackageJsonStandard.author property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 author?: Person;

@@ -4,7 +4,7 @@
 
 ## EventBusListenerDescriptor.context property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 context?: any;

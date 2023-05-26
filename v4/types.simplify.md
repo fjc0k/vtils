@@ -6,7 +6,7 @@
 
 Useful to flatten the type output to improve type hints shown in editors. And also to transform an interface into a type to aide with assignability.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type Simplify<T> = {[KeyType in keyof T]: T[KeyType]};
@@ -28,7 +28,6 @@ Sometimes it is desired to pass a value as a function argument that has a differ
 If the type definition must be an interface (perhaps it was defined in a third-party npm package), then the `value` can be defined as `const value: Simplify<SomeInterface> = ...`. Then `value` will be assignable to the `fn` argument. Or the `value` can be cast as `Simplify<SomeInterface>` if you can't re-declare the `value`.
 
 @example
-
 
 ```
 import {<!-- -->Simplify<!-- -->} from 'type-fest';

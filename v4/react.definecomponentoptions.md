@@ -6,7 +6,7 @@
 
 定义组件的选项。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare type DefineComponentOptions<

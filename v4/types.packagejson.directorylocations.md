@@ -4,7 +4,7 @@
 
 ## PackageJson.DirectoryLocations interface
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface DirectoryLocations 
@@ -12,12 +12,12 @@ export interface DirectoryLocations
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [bin?](./types.packagejson.directorylocations.bin.md) | string | <i>(Optional)</i> Location for executable scripts. Sugar to generate entries in the <code>bin</code> property by walking the folder. |
-|  [doc?](./types.packagejson.directorylocations.doc.md) | string | <i>(Optional)</i> Location for Markdown files. |
-|  [example?](./types.packagejson.directorylocations.example.md) | string | <i>(Optional)</i> Location for example scripts. |
-|  [lib?](./types.packagejson.directorylocations.lib.md) | string | <i>(Optional)</i> Location for the bulk of the library. |
-|  [man?](./types.packagejson.directorylocations.man.md) | string | <i>(Optional)</i> Location for man pages. Sugar to generate a <code>man</code> array by walking the folder. |
-|  [test?](./types.packagejson.directorylocations.test.md) | string | <i>(Optional)</i> Location for test files. |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [bin?](./types.packagejson.directorylocations.bin.md) |  | string | _(Optional)_ Location for executable scripts. Sugar to generate entries in the <code>bin</code> property by walking the folder. |
+|  [doc?](./types.packagejson.directorylocations.doc.md) |  | string | _(Optional)_ Location for Markdown files. |
+|  [example?](./types.packagejson.directorylocations.example.md) |  | string | _(Optional)_ Location for example scripts. |
+|  [lib?](./types.packagejson.directorylocations.lib.md) |  | string | _(Optional)_ Location for the bulk of the library. |
+|  [man?](./types.packagejson.directorylocations.man.md) |  | string | _(Optional)_ Location for man pages. Sugar to generate a <code>man</code> array by walking the folder. |
+|  [test?](./types.packagejson.directorylocations.test.md) |  | string | _(Optional)_ Location for test files. |
 

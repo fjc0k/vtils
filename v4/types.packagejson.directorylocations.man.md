@@ -6,7 +6,7 @@
 
 Location for man pages. Sugar to generate a `man` array by walking the folder.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 man?: string;

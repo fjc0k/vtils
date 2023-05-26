@@ -6,7 +6,7 @@
 
 创建 url 查询字符串。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function createUrlQueryString(parameters: AnyObject_2, options?: CreateUrlQueryStringOptions): string;
@@ -17,9 +17,9 @@ export declare function createUrlQueryString(parameters: AnyObject_2, options?: 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  parameters | AnyObject\_2 | 查询参数 |
-|  options | [CreateUrlQueryStringOptions](./utils.createurlquerystringoptions.md) | 选项 |
+|  options | [CreateUrlQueryStringOptions](./utils.createurlquerystringoptions.md) | _(Optional)_ 选项 |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
@@ -30,6 +30,5 @@ string
 
 ```typescript
 createUrlQueryString({ x: 1, y: 'z' }) // => x=1&y=z
-
 ```
 

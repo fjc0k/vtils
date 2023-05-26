@@ -4,12 +4,12 @@
 
 ## yup.MixedSchema.notRequired() method
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 notRequired(): this;
 ```
-<b>Returns:</b>
+**Returns:**
 
 this
 

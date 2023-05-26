@@ -6,7 +6,7 @@
 
 格式化数字选项。
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare interface FormatNumberOptions 
@@ -14,8 +14,8 @@ export declare interface FormatNumberOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [thousandsSeparator?](./utils.formatnumberoptions.thousandsseparator.md) | string | <i>(Optional)</i> 整数部分的千分位分隔符。 ',' |
-|  [thousandthsSeparator?](./utils.formatnumberoptions.thousandthsseparator.md) | string | <i>(Optional)</i> 小数部分的千分位分隔符。 '' |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [thousandsSeparator?](./utils.formatnumberoptions.thousandsseparator.md) |  | string | <p>_(Optional)_ 整数部分的千分位分隔符。</p><p> ','</p> |
+|  [thousandthsSeparator?](./utils.formatnumberoptions.thousandthsseparator.md) |  | string | <p>_(Optional)_ 小数部分的千分位分隔符。</p><p> ''</p> |
 
