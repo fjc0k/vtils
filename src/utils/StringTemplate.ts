@@ -46,7 +46,7 @@ export class StringTemplate {
       template = template.replace(/\{\{(.+?)\}\}/g, (_, code) => {
         return eval(`
           (() => {
-            const {${keys.join(',')}} = arguments[1];
+            const {${keys.join(',')}} = ${JSON.stringify(data)};
             return ${code};
           })()
         `)
