@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.73.0](https://github.com/fjc0k/vtils/compare/v4.72.3...v4.73.0) (2023-05-26)
+
+### Features
+
+- **utils:** 新增 isEmail ([a2fd62c](https://github.com/fjc0k/vtils/commit/a2fd62cdbc566f32912f87f40cbf3ceb78716743))
+
 ### [4.72.3](https://github.com/fjc0k/vtils/compare/v4.72.2...v4.72.3) (2023-05-26)
 
 ### [4.72.2](https://github.com/fjc0k/vtils/compare/v4.72.1...v4.72.2) (2023-05-26)
