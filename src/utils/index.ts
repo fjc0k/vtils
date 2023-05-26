@@ -52,6 +52,7 @@ export * from './isBlobUrl'
 export * from './isChineseIDCardNumber'
 export * from './isDataUrl'
 export * from './isElementVisible'
+export * from './isEmail'
 export * from './isNumeric'
 export * from './isPossibleChineseMobilePhoneNumber'
 export * from './isPromiseLike'
@@ -91,5 +92,4 @@ export * from './toHalfWidthString'
 export * from './toSingleLineString'
 export * from './traverse'
 export * from './wait'
-
 // @endindex
