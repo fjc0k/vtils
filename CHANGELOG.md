@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.74.0](https://github.com/fjc0k/vtils/compare/v4.73.0...v4.74.0) (2023-05-27)
+
+### Features
+
+- **regexp:** 新增 blankCharsRegExpBuilder ([db05dbf](https://github.com/fjc0k/vtils/commit/db05dbf826dcfcd55edaf5cf60faba85b5dc5f4e))
+- **regexp:** 新增 dataUrlRegExpBuilder ([e4dc050](https://github.com/fjc0k/vtils/commit/e4dc0509c012db6a6013130637380bcedb833c74))
+- **regexp:** 新增 emoji, email ([59e0896](https://github.com/fjc0k/vtils/commit/59e0896ee3de6df012fe24980eda21c0fe810578))
+- 新增 regexp 分类 ([a8f8fcc](https://github.com/fjc0k/vtils/commit/a8f8fcc01be46ce5f58f9692cccb68cc2d96e017))
+
+### Bug Fixes
+
+- **RegExpBuilder:** ?: ([d532d53](https://github.com/fjc0k/vtils/commit/d532d53a142b7b19ccd78d576dcfbde787cbd88b))
+
 ## [4.73.0](https://github.com/fjc0k/vtils/compare/v4.72.3...v4.73.0) (2023-05-26)
 
 ### Features
