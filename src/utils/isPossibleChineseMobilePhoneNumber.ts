@@ -1,4 +1,6 @@
-const re = /^1[3-9][0-9]{9}$/
+import { phoneNumberRegExpBuilder } from '../regexp'
+
+const regExp = phoneNumberRegExpBuilder.build({ exact: true })
 
 /**
  * 检测传入的值是否可能是中国的手机号码。
@@ -13,5 +15,5 @@ const re = /^1[3-9][0-9]{9}$/
  * ```
  */
 export function isPossibleChineseMobilePhoneNumber(value: string | number) {
-  return re.test(String(value))
+  return regExp.test(String(value))
 }

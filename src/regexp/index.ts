@@ -12,4 +12,5 @@ export * from './blankCharsRegExpBuilder'
 export * from './dataUrlRegExpBuilder'
 export * from './emailRegExpBuilder'
 export * from './emojiRegExpBuilder'
+export * from './phoneNumberRegExpBuilder'
 // @endindex

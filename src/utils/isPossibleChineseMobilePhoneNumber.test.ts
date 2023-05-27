@@ -1,6 +1,6 @@
 import { isPossibleChineseMobilePhoneNumber } from './isPossibleChineseMobilePhoneNumber'
 
-describe(isPossibleChineseMobilePhoneNumber.name, () => {
+describe('isPossibleChineseMobilePhoneNumber', () => {
   test('不可能是中国的手机号码', () => {
     for (const value of [
       '',
