@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.75.0](https://github.com/fjc0k/vtils/compare/v4.74.0...v4.75.0) (2023-05-27)
+
+### Features
+
+- **regexp:** 新增 phoneNumberRegExpBuilder ([4a09230](https://github.com/fjc0k/vtils/commit/4a092308f2f28613569c084f2c6189c4e1a51458))
+- **utils:** 新增 codepointToCharacter ([eee8868](https://github.com/fjc0k/vtils/commit/eee88687aecc3a4c90222bfd6454ab1e87343844))
+
 ## [4.74.0](https://github.com/fjc0k/vtils/compare/v4.73.0...v4.74.0) (2023-05-27)
 
 ### Features
