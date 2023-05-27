@@ -1,3 +1,7 @@
+import { dataUrlRegExpBuilder } from '../regexp'
+
+const regExp = dataUrlRegExpBuilder.build({ exact: true })
+
 /**
  * 检测传入值是否是 Data URL。
  *
@@ -11,7 +15,5 @@
  * ```
  */
 export function isDataUrl(value: string) {
-  return isDataUrl.regex.test(value)
+  return regExp.test(value)
 }
-
-isDataUrl.regex = /^data:(([a-z]+\/[a-z0-9-+.]+)(;[a-z0-9-.!#$%*+.{}|~`]+=[a-z0-9-.!#$%*+.{}()|~`]+)*)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)$/i

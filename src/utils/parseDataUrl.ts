@@ -1,6 +1,10 @@
-import { isDataUrl } from './isDataUrl'
+import { dataUrlRegExpBuilder } from '../regexp'
 import { LiteralUnion } from '../types'
 import { parseUrlQueryString } from './parseUrlQueryString'
+
+const regExp = dataUrlRegExpBuilder.build({
+  exact: true,
+})
 
 export interface ParseDataUrlResult {
   mimeType: string
@@ -26,7 +30,7 @@ export function parseDataUrl(dataUrl: string): ParseDataUrlResult {
     ,
     extraParameters = '',
     content = '',
-  ] = dataUrl.match(isDataUrl.regex) || []
+  ] = dataUrl.match(regExp) || []
 
   const parameters = parseUrlQueryString(
     `${mimeType}${extraParameters}`.replace(/^[^;]*;?/, ''),
