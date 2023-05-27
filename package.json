@@ -66,6 +66,11 @@
       "require": "./_cjs/dev/index.js",
       "import": "./dev/index.js",
       "types": "./dev/index.d.ts"
+    },
+    "./regexp": {
+      "require": "./_cjs/regexp/index.js",
+      "import": "./regexp/index.js",
+      "types": "./regexp/index.d.ts"
     }
   },
   "main": "_cjs/utils/index.js",
