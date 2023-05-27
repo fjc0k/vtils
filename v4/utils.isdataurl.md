@@ -2,17 +2,33 @@
 
 [Home](./index.md) &gt; [utils](./utils.md) &gt; [isDataUrl](./utils.isdataurl.md)
 
-## isDataUrl namespace
+## isDataUrl() function
+
+检测传入值是否是 Data URL。
 
 **Signature:**
 
 ```typescript
-export declare namespace isDataUrl 
+export declare function isDataUrl(value: string): boolean;
 ```
 
-## Variables
+## Parameters
 
-|  Variable | Description |
-|  --- | --- |
-|  [regex](./utils.isdataurl.regex.md) |  |
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  value | string | 要检测的值 |
+
+**Returns:**
+
+boolean
+
+返回检测结果
+
+## Example
+
+
+```typescript
+isDataUrl('http://foo.bar') // => false
+isDataUrl('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D') // => true
+```
 

@@ -12,6 +12,7 @@
 |  [dev](./dev.md) | 开发工具库。 |
 |  [mp](./mp.md) | 小程序工具库。 |
 |  [react](./react.md) | React 工具库。基于 [react-use](https://github.com/streamich/react-use#readme)<!-- -->。 |
+|  [regexp](./regexp.md) | 正则表达式收集。 |
 |  [types](./types.md) | 类型工具库。 |
 |  [utils](./utils.md) | 基础工具库。基于 [Lodash](https://lodash.com/docs/4.17.15)<!-- -->。 |
 |  [validator](./validator.md) | 验证工具库。基于 [yup](https://github.com/jquense/yup#readme)<!-- -->。 |

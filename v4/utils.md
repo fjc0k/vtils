@@ -181,7 +181,6 @@ rich://{"url":"***","desc":"***"}
 |  Namespace | Description |
 |  --- | --- |
 |  [isBlobUrl](./utils.isbloburl.md) |  |
-|  [isDataUrl](./utils.isdataurl.md) |  |
 |  [wait](./utils.wait.md) |  |
 
 ## Variables
