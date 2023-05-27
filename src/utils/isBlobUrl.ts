@@ -1,3 +1,7 @@
+import { blobUrlRegExpBuilder } from '../regexp'
+
+const regExp = blobUrlRegExpBuilder.build({ exact: true })
+
 /**
  * 检测传入值是否是 Blob URL，也称 Object URL。
  *
@@ -11,7 +15,5 @@
  * ```
  */
 export function isBlobUrl(value: string) {
-  return isBlobUrl.regex.test(value)
+  return regExp.test(value)
 }
-
-isBlobUrl.regex = /^blob:.+\/[\w-]{36,}(?:#.+)?$/

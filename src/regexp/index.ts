@@ -8,6 +8,7 @@
 
 // @index(['./**/*.ts', '!./**/*.test.*', '!**/__*'], f => `export * from '${f.path}'`)
 export * from './blankChars'
+export * from './blobUrl'
 export * from './dataUrl'
 export * from './email'
 export * from './emoji'
