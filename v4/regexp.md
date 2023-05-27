@@ -27,4 +27,5 @@
 |  [dataUrlRegExpBuilder](./regexp.dataurlregexpbuilder.md) |  |
 |  [emailRegExpBuilder](./regexp.emailregexpbuilder.md) |  |
 |  [emojiRegExpBuilder](./regexp.emojiregexpbuilder.md) |  |
+|  [phoneNumberRegExpBuilder](./regexp.phonenumberregexpbuilder.md) |  |
 
