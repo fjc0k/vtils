@@ -1,10 +1,15 @@
 export interface RegExpBuilderOptions {
+  /** 基础正则表达式 */
   baseRegExp: RegExp
 }
 
 export interface RegExpBuilderBuildOptions {
+  /** `g` */
   global?: boolean
+  /** `^...$` */
   exact?: boolean
+  /** `...+` */
+  repeat?: boolean
 }
 
 export class RegExpBuilder {
@@ -15,15 +20,20 @@ export class RegExpBuilder {
   }
 
   build(options?: RegExpBuilderBuildOptions): RegExp {
-    const regExp = new RegExp(
-      options?.exact
-        ? `^${this.options.baseRegExp.source}$`
-        : this.options.baseRegExp.source,
-      this.options.baseRegExp.flags +
-        (options?.global && this.options.baseRegExp.flags.indexOf('g') === -1
-          ? 'g'
-          : ''),
-    )
+    let regExpSource = `(${this.options.baseRegExp.source})`
+    if (options?.repeat) {
+      regExpSource = `${regExpSource}+`
+    }
+    if (options?.exact) {
+      regExpSource = `^${regExpSource}$`
+    }
+
+    let regExpFlags = this.options.baseRegExp.flags
+    if (options?.global && this.options.baseRegExp.flags.indexOf('g') === -1) {
+      regExpFlags = `${regExpFlags}g`
+    }
+
+    const regExp = new RegExp(regExpSource, regExpFlags)
     return regExp
   }
 }
