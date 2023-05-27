@@ -20,7 +20,7 @@ export class RegExpBuilder {
   }
 
   build(options?: RegExpBuilderBuildOptions): RegExp {
-    let regExpSource = `(${this.options.baseRegExp.source})`
+    let regExpSource = `(?:${this.options.baseRegExp.source})`
     if (options?.repeat) {
       regExpSource = `${regExpSource}+`
     }
