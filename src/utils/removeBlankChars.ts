@@ -1,7 +1,6 @@
-// https://github.com/frandiox/normalize-unicode-text/blob/master/src/index.ts
-// 新增 200E, 200F
-const re =
-  /(\s+|[\u180E\u200B-\u200F\u2060\uFEFF]+|[ \u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]+|[\u2420\u2422\u2423]+)/gs
+import { blankCharsRegExpBuilder } from '../regexp'
+
+const regExp = blankCharsRegExpBuilder.build({ global: true })
 
 /**
  * 从字符串中移除空白字符。
@@ -10,5 +9,5 @@ const re =
  * @returns 返回移除空白字符后的字符串
  */
 export function removeBlankChars(value: string): string {
-  return value.replace(re, '')
+  return value.replace(regExp, '')
 }
