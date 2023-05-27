@@ -1,4 +1,4 @@
-import { blankCharsRegExpBuilder } from './blankCharsRegExpBuilder'
+import { blankCharsRegExpBuilder } from './blankChars'
 
 describe('blankCharsRegExpBuilder', () => {
   test('ok', () => {

@@ -1,4 +1,4 @@
-import { dataUrlRegExpBuilder } from './dataUrlRegExpBuilder'
+import { dataUrlRegExpBuilder } from './dataUrl'
 
 describe('dataUrlRegExpBuilder', () => {
   test('test', () => {

@@ -1,4 +1,4 @@
-import { phoneNumberRegExpBuilder } from './phoneNumberRegExpBuilder'
+import { phoneNumberRegExpBuilder } from './phoneNumber'
 
 describe('chineseMobilePhoneNumberRegExpBuilder', () => {
   test('test', () => {
