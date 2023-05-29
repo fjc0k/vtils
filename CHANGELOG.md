@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.76.0](https://github.com/fjc0k/vtils/compare/v4.75.0...v4.76.0) (2023-05-29)
+
+### Features
+
+- **regexp:** 新增 blobUrl ([d1e1ba5](https://github.com/fjc0k/vtils/commit/d1e1ba533c7cef469a57fd682731f395b11d0b58))
+- **utils:** 新增 characterToCodepoint ([f91d0db](https://github.com/fjc0k/vtils/commit/f91d0dbf32560b2a0b41908c1fbe1841259413b0))
+
 ## [4.75.0](https://github.com/fjc0k/vtils/compare/v4.74.0...v4.75.0) (2023-05-27)
 
 ### Features
