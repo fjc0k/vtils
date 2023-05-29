@@ -24,6 +24,7 @@
 |  Variable | Description |
 |  --- | --- |
 |  [blankCharsRegExpBuilder](./regexp.blankcharsregexpbuilder.md) | 正则表达式收集。 |
+|  [blobUrlRegExpBuilder](./regexp.bloburlregexpbuilder.md) |  |
 |  [dataUrlRegExpBuilder](./regexp.dataurlregexpbuilder.md) |  |
 |  [emailRegExpBuilder](./regexp.emailregexpbuilder.md) |  |
 |  [emojiRegExpBuilder](./regexp.emojiregexpbuilder.md) |  |

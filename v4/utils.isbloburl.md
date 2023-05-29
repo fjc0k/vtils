@@ -2,17 +2,33 @@
 
 [Home](./index.md) &gt; [utils](./utils.md) &gt; [isBlobUrl](./utils.isbloburl.md)
 
-## isBlobUrl namespace
+## isBlobUrl() function
+
+检测传入值是否是 Blob URL，也称 Object URL。
 
 **Signature:**
 
 ```typescript
-export declare namespace isBlobUrl 
+export declare function isBlobUrl(value: string): boolean;
 ```
 
-## Variables
+## Parameters
 
-|  Variable | Description |
-|  --- | --- |
-|  [regex](./utils.isbloburl.regex.md) |  |
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  value | string | 要检测的值 |
+
+**Returns:**
+
+boolean
+
+返回检测结果
+
+## Example
+
+
+```typescript
+isBlobUrl('http://foo.bar') // => false
+isBlobUrl('blob:https://example.org/9115d58c-bcda-ff47-86e5-083e9a215304') // => true
+```
 

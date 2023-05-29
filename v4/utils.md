@@ -49,6 +49,7 @@ rich://{"url":"***","desc":"***"}
 |  [cartesianProduct(arr)](./utils.cartesianproduct_5.md) |  |
 |  [cartesianProduct(arr)](./utils.cartesianproduct_6.md) |  |
 |  [cartesianProduct(arr)](./utils.cartesianproduct_7.md) |  |
+|  [characterToCodepoint(character)](./utils.charactertocodepoint.md) | UTF8 字符转为 Unicode 码点。 |
 |  [chooseFile(accept, multiple)](./utils.choosefile.md) | 选择文件。 |
 |  [chunkEqual(array, size, filler)](./utils.chunkequal.md) | 类似 <code>chunk</code>，但当每组条目数量不一致时会在最后一组添加填充值以达到每组条目数量一致。 |
 |  [cloneDeepFast(value, ignore)](./utils.clonedeepfast.md) | 深克隆快速版。 |
@@ -181,7 +182,6 @@ rich://{"url":"***","desc":"***"}
 
 |  Namespace | Description |
 |  --- | --- |
-|  [isBlobUrl](./utils.isbloburl.md) |  |
 |  [wait](./utils.wait.md) |  |
 
 ## Variables
