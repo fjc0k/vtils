@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.78.0](https://github.com/fjc0k/vtils/compare/v4.77.0...v4.78.0) (2023-05-30)
+
+### Features
+
+- **utils:** 新增 makeConditionalArray ([6f87b8f](https://github.com/fjc0k/vtils/commit/6f87b8f3bea44e61d42f75508a10ae47a00a605e))
+
 ## [4.77.0](https://github.com/fjc0k/vtils/compare/v4.76.1...v4.77.0) (2023-05-30)
 
 ### Features
