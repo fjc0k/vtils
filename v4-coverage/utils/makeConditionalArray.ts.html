@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for react/useToggle.ts</title>
+    <title>Code coverage report for utils/makeConditionalArray.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">react</a> useToggle.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> makeConditionalArray.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -103,7 +103,12 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,67 +139,77 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useCallback, useState } from 'react'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { IsNever, Merge } from '../types'
+&nbsp;
+export type ConditionalArrayItem&lt;T, K extends keyof T = never&gt; =
+  | (IsNever&lt;K&gt; extends true
+      ? T
+      : Merge&lt;
+          T,
+          {
+            [k in K]: Array&lt;ConditionalArrayItem&lt;T, K&gt;&gt;
+          }
+        &gt;)
+  | false
 &nbsp;
 /**
- * @public
- */
-export type UseToggleResult = [
-  boolean,
-  {
-    (): void
-    set(value: boolean): void
-    true(): void
-    false(): void
-  },
-]
-&nbsp;
-/**
- * 布尔值切换器。
+ * 构造条件数组，即允许一个数组的项出现 false 值，且最终 false 值的项目会被排除。
  *
- * @public
- * @param initialValue 初始值
- * @returns 返回结果和操作
- * @example
- * ```typescript
- * const [value, toggle] = useToggle(false) // value: false
- * toggle() // value: true
- * toggle.set(false) // value: false
- * toggle.true() // =&gt; value: true
- * toggle.false() // =&gt; value: false
- * ```
+ * @param array 数组
+ * @param childrenKey 子数组键
  */
-export function useToggle(initialValue: boolean): UseToggleResult {
-  const [value, setValue] = useState(initialValue)
-  const toggle = (useCallback(() =&gt; {
-    setValue(value =&gt; !value)
-  }, []) as any) as UseToggleResult[1]
-  toggle.set = useCallback(value =&gt; {
-    setValue(value)
-  }, [])
-  toggle.true = useCallback(() =&gt; {
-    setValue(true)
-  }, [])
-  toggle.false = useCallback(() =&gt; {
-    setValue(false)
-  }, [])
-  return [value, toggle]
+export function makeConditionalArray&lt;T extends any, K extends keyof T&gt;(
+  array: Array&lt;ConditionalArrayItem&lt;T, K&gt;&gt;,
+  childrenKey: K,
+): T[]
+/**
+ * 构造条件数组，即允许一个数组的项出现 false 值，且最终 false 值的项目会被排除。
+ *
+ * @param array 数组
+ */
+export function makeConditionalArray&lt;T extends any&gt;(
+  array: Array&lt;ConditionalArrayItem&lt;T&gt;&gt;,
+): T[]
+export function makeConditionalArray(array: any[], childrenKey?: any): any[] {
+  return array.filter(function filter(item) {
+    if (item &amp;&amp; childrenKey &amp;&amp; Array.isArray(item[childrenKey])) {
+      item[childrenKey] = (item[childrenKey] as any).filter(filter)
+    }
+    return !!item
+  }) as any
 }
+&nbsp;
+function makeConditionalArrayFork&lt;T extends any&gt;(): (
+  array: Array&lt;ConditionalArrayItem&lt;T&gt;&gt;,
+) =&gt; T[]
+function makeConditionalArrayFork&lt;T extends any, K extends keyof T&gt;(
+  childrenKey: K,
+): (array: Array&lt;ConditionalArrayItem&lt;T, K&gt;&gt;) =&gt; T[]
+function makeConditionalArrayFork(childrenKey?: any) {
+  // @ts-ignore
+  return (array: any) =&gt; makeConditionalArray(array, childrenKey)
+}
+makeConditionalArray.fork = makeConditionalArrayFork
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
