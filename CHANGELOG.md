@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.77.0](https://github.com/fjc0k/vtils/compare/v4.76.1...v4.77.0) (2023-05-30)
+
+### Features
+
+- **utils:** 新增 asyncLimit ([b1baa50](https://github.com/fjc0k/vtils/commit/b1baa50dd2fe62703c0ddb352c886abd9ca88239))
+
 ### [4.76.1](https://github.com/fjc0k/vtils/compare/v4.76.0...v4.76.1) (2023-05-30)
 
 ### Bug Fixes
