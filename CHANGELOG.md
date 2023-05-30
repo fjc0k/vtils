@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.76.1](https://github.com/fjc0k/vtils/compare/v4.76.0...v4.76.1) (2023-05-30)
+
+### Bug Fixes
+
+- **characterToCodepoint:** 用 Array.from 代替 ... ([5163b7c](https://github.com/fjc0k/vtils/commit/5163b7c11279b83efc2f616fc70556823c500012))
+
 ## [4.76.0](https://github.com/fjc0k/vtils/compare/v4.75.0...v4.76.0) (2023-05-29)
 
 ### Features
