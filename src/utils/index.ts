@@ -10,6 +10,7 @@ export * from 'lodash-uni'
 
 // @index(['./**/*.ts', '!./**/*.{test,perf}.*'], f => `export * from '${f.path}'`)
 export * from './asRequiredDeep'
+export * from './asyncLimit'
 export * from './base64'
 export * from './bindEvent'
 export * from './Calculator'
