@@ -95,6 +95,8 @@ rich://{"url":"***","desc":"***"}
 |  [loadResource(url, options)](./utils.loadresource.md) | 加载图片、代码、样式等资源。 |
 |  [loopUntil(fn, condition, options)](./utils.loopuntil.md) |  |
 |  [loopUntil(condition, options)](./utils.loopuntil_1.md) |  |
+|  [makeConditionalArray(array, childrenKey)](./utils.makeconditionalarray.md) | 构造条件数组，即允许一个数组的项出现 false 值，且最终 false 值的项目会被排除。 |
+|  [makeConditionalArray(array)](./utils.makeconditionalarray_1.md) | 构造条件数组，即允许一个数组的项出现 false 值，且最终 false 值的项目会被排除。 |
 |  [makeEnum(map)](./utils.makeenum.md) | 构造枚举数据。 |
 |  [md5(string, key, raw)](./utils.md5.md) | 根据给定的字符串计算 MD5 值。 |
 |  [move(arr, from, to)](./utils.move.md) | 原地移动数组中的元素。 |
@@ -183,6 +185,7 @@ rich://{"url":"***","desc":"***"}
 
 |  Namespace | Description |
 |  --- | --- |
+|  [makeConditionalArray](./utils.makeconditionalarray.md) |  |
 |  [wait](./utils.wait.md) |  |
 
 ## Variables
@@ -203,6 +206,7 @@ rich://{"url":"***","desc":"***"}
 |  [CalculatorFunctionValue](./utils.calculatorfunctionvalue.md) |  |
 |  [CalculatorPrimitiveValue](./utils.calculatorprimitivevalue.md) |  |
 |  [CalculatorValue](./utils.calculatorvalue.md) |  |
+|  [ConditionalArrayItem](./utils.conditionalarrayitem.md) |  |
 |  [CreateSubmitResult](./utils.createsubmitresult.md) |  |
 |  [ElementOfRawData](./utils.elementofrawdata.md) |  |
 |  [EnumKey](./utils.enumkey.md) |  |
