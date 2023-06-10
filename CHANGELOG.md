@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.79.0](https://github.com/fjc0k/vtils/compare/v4.78.0...v4.79.0) (2023-06-10)
+
+### Features
+
+- **asyncLimit:** 调整入参 ([ef67100](https://github.com/fjc0k/vtils/commit/ef67100dcd1ae793dca244acdcf80c22a4aba843))
+- **utils:** 新增 asyncMemoize ([cd2cfca](https://github.com/fjc0k/vtils/commit/cd2cfcad599e9acd5c4567e63bd3de35d7d534e9))
+
 ## [4.78.0](https://github.com/fjc0k/vtils/compare/v4.77.0...v4.78.0) (2023-05-30)
 
 ### Features
