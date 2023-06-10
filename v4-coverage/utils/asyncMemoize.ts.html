@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for validator/yupSource/util/runTests.js</title>
+    <title>Code coverage report for utils/asyncMemoize.ts</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../prettify.css" />
-    <link rel="stylesheet" href="../../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">validator/yupSource/util</a> runTests.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> asyncMemoize.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">68.97% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>20/29</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.55% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>12/22</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.08% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/26</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -109,109 +109,127 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">181x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">181x</span>
-<span class="cline-any cline-yes">181x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">181x</span>
-<span class="cline-any cline-yes">181x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">181x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">180x</span>
-<span class="cline-any cline-yes">211x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">211x</span>
-<span class="cline-any cline-yes">211x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">50x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">50x</span>
-<span class="cline-any cline-yes">50x</span>
-<span class="cline-any cline-yes">50x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">161x</span>
-<span class="cline-any cline-yes">130x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">130x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">130x</span>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import ValidationError from '../ValidationError'
-import { once } from './async'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export interface AsyncMemoizeOptions&lt;
+  T extends (...args: any[]) =&gt; Promise&lt;any&gt;,
+&gt; {
+  /**
+   * 缓存键。
+   *
+   * @default arg0 =&gt; arg0
+   */
+  cacheKey?: (...args: Parameters&lt;T&gt;) =&gt; any
 &nbsp;
-export default function runTests(options, cb) {
-  let { endEarly, tests, args, value, errors, sort, path } = options
+  /**
+   * 缓存时效（毫秒）。
+   *
+   * @default 0
+   */
+  cacheTTL?: number
+}
 &nbsp;
-  let callback = once(cb)
-  let count = tests.length
+/**
+ * 异步函数执行缓存。
+ *
+ * @param asyncFn 异步函数
+ * @param options 选项
+ */
+export function asyncMemoize&lt;T extends (...args: any[]) =&gt; Promise&lt;any&gt;&gt;(
+  asyncFn: T,
+  options: AsyncMemoizeOptions&lt;T&gt; = {},
+): T {
+  const { cacheKey = (...args: any[]) =&gt; args[0], cacheTTL } = options
+  const cache = new Map&lt;
+    string,
+    {
+      value: any
+      expiredAt: number
+    }
+  &gt;()
 &nbsp;
-  const nestedErrors = []
-  errors = errors ? <span class="branch-0 cbranch-no" title="branch not covered" >errors </span>: []
-&nbsp;
-  if (!count)
-    return errors.length
-      ? <span class="branch-0 cbranch-no" title="branch not covered" >callback(new ValidationError(errors, value, path))</span>
-      : callback(null, value)
-&nbsp;
-  for (let i = 0; i &lt; tests.length; i++) {
-    const test = tests[i]
-&nbsp;
-    test(args, function finishTestRun(err) {
-      if (err) {
-        // always return early for non validation errors
-        <span class="missing-if-branch" title="if path not taken" >I</span>if (!ValidationError.isError(err)) {
-<span class="cstat-no" title="statement not covered" >          return callback(err)</span>
-        }
-        <span class="missing-if-branch" title="else path not taken" >E</span>if (endEarly) {
-          err.value = value
-          return callback(err)
-        }
-<span class="cstat-no" title="statement not covered" >        nestedErrors.push(err)</span>
-      }
-&nbsp;
-      if (--count &lt;= 0) {
-        <span class="missing-if-branch" title="if path not taken" >I</span>if (nestedErrors.length) {
-<span class="cstat-no" title="statement not covered" >          if (sort) <span class="cstat-no" title="statement not covered" >nestedErrors.sort(sort)</span></span>
-&nbsp;
-          //show parent errors after the nested ones: name.first, name
-<span class="cstat-no" title="statement not covered" >          if (errors.length) <span class="cstat-no" title="statement not covered" >nestedErrors.push(...errors)</span></span>
-<span class="cstat-no" title="statement not covered" >          errors = nestedErrors</span>
-        }
-&nbsp;
-        <span class="missing-if-branch" title="if path not taken" >I</span>if (errors.length) {
-<span class="cstat-no" title="statement not covered" >          callback(new ValidationError(errors, value, path))</span>
-<span class="cstat-no" title="statement not covered" >          return</span>
-        }
-&nbsp;
-        callback(null, value)
-      }
+  const call = (...args: any[]) =&gt; {
+    const _cacheKey = cacheKey(...args)
+    const cacheValue = cache.get(_cacheKey)
+    const currentMs = Date.now()
+    if (
+      cacheValue &amp;&amp;
+      (cacheValue.expiredAt ? currentMs &lt; cacheValue.expiredAt : true)
+    ) {
+      return cacheValue.value
+    }
+    const cacheValueNew = asyncFn(...args)
+    cacheValueNew.catch(() =&gt; cache.delete(_cacheKey))
+    cache.set(_cacheKey, {
+      value: cacheValueNew,
+      expiredAt: cacheTTL ? currentMs + cacheTTL : 0,
     })
+    return cacheValueNew
   }
+&nbsp;
+  return call as any
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -223,14 +241,14 @@ export default function runTests(options, cb) {
                 at Sat Jun 10 2023 09:24:05 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
-        <script src="../../../prettify.js"></script>
+        <script src="../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../../sorter.js"></script>
-        <script src="../../../block-navigation.js"></script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
     </body>
 </html>
     
