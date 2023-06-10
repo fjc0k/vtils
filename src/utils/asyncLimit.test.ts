@@ -9,7 +9,7 @@ describe('asyncLimit', () => {
       }
       return id
     }
-    const getIdLimit = asyncLimit(getId, 1)
+    const getIdLimit = asyncLimit(getId)
     expect(await getIdLimit(1)).toBe(1)
     expect(await getIdLimit(2)).toBe(2)
     expect(await Promise.all([getIdLimit(2), getIdLimit(3)])).toEqual([2, 3])
@@ -27,7 +27,7 @@ describe('asyncLimit', () => {
       await wait(500)
       return id
     }
-    const getIdLimit = asyncLimit(getId, 1)
+    const getIdLimit = asyncLimit(getId, { concurrency: 1 })
     let id1 = 0
     let id2 = 0
     let id3 = 0
@@ -62,7 +62,7 @@ describe('asyncLimit', () => {
       await wait(500)
       return id
     }
-    const getIdLimit = asyncLimit(getId, 2)
+    const getIdLimit = asyncLimit(getId, { concurrency: 2 })
     let id1 = 0
     let id2 = 0
     let id3 = 0
