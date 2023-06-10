@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-export declare function asyncLimit<T extends (...args: any[]) => Promise<any>>(asyncFn: T, concurrency: number): T;
+export declare function asyncLimit<T extends (...args: any[]) => Promise<any>>(asyncFn: T, options?: AsyncLimitOptions): T;
 ```
 
 ## Parameters
@@ -17,7 +17,7 @@ export declare function asyncLimit<T extends (...args: any[]) => Promise<any>>(a
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  asyncFn | T | 异步函数 |
-|  concurrency | number | 并行量 |
+|  options | [AsyncLimitOptions](./utils.asynclimitoptions.md) | _(Optional)_ 选项 |
 
 **Returns:**
 

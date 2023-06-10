@@ -36,7 +36,8 @@ rich://{"url":"***","desc":"***"}
 |  Function | Description |
 |  --- | --- |
 |  [asRequiredDeep(value)](./utils.asrequireddeep.md) | 将给定的值 <code>RequiredDeep</code> 化。 |
-|  [asyncLimit(asyncFn, concurrency)](./utils.asynclimit.md) | 异步函数并行执行限制。 |
+|  [asyncLimit(asyncFn, options)](./utils.asynclimit.md) | 异步函数并行执行限制。 |
+|  [asyncMemoize(asyncFn, options)](./utils.asyncmemoize.md) | 异步函数执行缓存。 |
 |  [base64Decode(value)](./utils.base64decode.md) | 将给定的 base64 字符串解码为 UTF8 字符串。 |
 |  [base64Encode(value)](./utils.base64encode.md) | 将给定的 UTF8 字符串编码为 base64 字符串。 |
 |  [base64UrlDecode(value)](./utils.base64urldecode.md) | 将给定的 base64url 字符串解码为 UTF8 字符串。 |
@@ -142,6 +143,8 @@ rich://{"url":"***","desc":"***"}
 
 |  Interface | Description |
 |  --- | --- |
+|  [AsyncLimitOptions](./utils.asynclimitoptions.md) |  |
+|  [AsyncMemoizeOptions](./utils.asyncmemoizeoptions.md) |  |
 |  [CalculatorConfig](./utils.calculatorconfig.md) |  |
 |  [CalculatorInstance](./utils.calculatorinstance.md) |  |
 |  [CopyTextToClipboardOptions](./utils.copytexttoclipboardoptions.md) |  |
