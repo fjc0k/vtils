@@ -31,11 +31,13 @@ export function createUrlQueryString(
   const partSeparator = options?.partSeparator ?? '&'
   const parts: string[] = []
   for (const key of Object.keys(parameters)) {
-    parts.push(
-      `${encodeURIComponent(key)}${pairSeparator}${encodeURIComponent(
-        parameters[key],
-      )}`,
-    )
+    if (parameters[key] != null) {
+      parts.push(
+        `${encodeURIComponent(key)}${pairSeparator}${encodeURIComponent(
+          parameters[key],
+        )}`,
+      )
+    }
   }
   return parts.join(partSeparator)
 }

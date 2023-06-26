@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getEmailUrl ok 1`] = `"mailto:hello@gmail.com?cc=hello2%40gmail.com&bcc=hello3%40gmail.com&subject=hello&body=%E4%BD%A0%E5%A5%BD"`;
+
+exports[`getEmailUrl ok 2`] = `"mailto:hello@gmail.com?cc=hello2%40gmail.com%2Chello22%40gmail.com&bcc=hello3%40gmail.com%2Chello333%40gmail.com&subject=hello&body=%E4%BD%A0%E5%A5%BD"`;

@@ -7,6 +7,7 @@ describe('createUrlQueryString', () => {
       '2': 'xxx',
       '0': '0 = & ?😁',
       '😁🥳': 'hello',
+      'un': undefined,
     }
     const query = createUrlQueryString(parameters)
     expect(query).toMatchSnapshot()
