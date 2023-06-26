@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.81.0](https://github.com/fjc0k/vtils/compare/v4.80.0...v4.81.0) (2023-06-26)
+
+### Features
+
+- **utils:** 新增 getEmailUrl ([6eccb18](https://github.com/fjc0k/vtils/commit/6eccb185fc3ee5b7ecf4675da96a1ca1fe0ea9b5))
+
 ## [4.80.0](https://github.com/fjc0k/vtils/compare/v4.79.0...v4.80.0) (2023-06-26)
 
 ### Features
