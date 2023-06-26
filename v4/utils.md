@@ -137,6 +137,7 @@ rich://{"url":"***","desc":"***"}
 |  [swap(arr, i, j)](./utils.swap.md) | 原地交换数组中的两个元素。 |
 |  [toFullWidthString(value)](./utils.tofullwidthstring.md) | 转换为全角字符串。 |
 |  [toHalfWidthString(value)](./utils.tohalfwidthstring.md) | 转换为半角字符串。 |
+|  [toHttpsUrl(url)](./utils.tohttpsurl.md) | 转换为 https 链接。 |
 |  [toSingleLineString(value, truncateOptions)](./utils.tosinglelinestring.md) | 将多行字符串转换为单行字符串。 |
 |  [traverse(value, callback)](./utils.traverse.md) | 遍历对象和数组。 |
 |  [wait(milliseconds, value)](./utils.wait.md) | 等待一段时间 resolve。 |
