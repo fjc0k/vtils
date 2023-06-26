@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.80.0](https://github.com/fjc0k/vtils/compare/v4.79.0...v4.80.0) (2023-06-26)
+
+### Features
+
+- **utils:** 新增 getSmsUrl ([217d733](https://github.com/fjc0k/vtils/commit/217d733664c4a9cdaf30972caa5074fb0288969e))
+
 ## [4.79.0](https://github.com/fjc0k/vtils/compare/v4.78.0...v4.79.0) (2023-06-10)
 
 ### Features
