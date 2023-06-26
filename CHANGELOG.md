@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.82.0](https://github.com/fjc0k/vtils/compare/v4.81.0...v4.82.0) (2023-06-26)
+
+### Features
+
+- **utils:** 新增 toHttpsUrl ([069a883](https://github.com/fjc0k/vtils/commit/069a883b9903b437fb61ba68a762f30f09df1e71))
+
 ## [4.81.0](https://github.com/fjc0k/vtils/compare/v4.80.0...v4.81.0) (2023-06-26)
 
 ### Features
