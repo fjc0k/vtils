@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for utils/onceMeanwhile.ts</title>
+    <title>Code coverage report for utils/getEmailUrl.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> onceMeanwhile.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> getEmailUrl.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -86,7 +86,11 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -98,51 +102,59 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { AnyAsyncFunction } from '../types'
-import { isPromiseLike } from './isPromiseLike'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createUrlQueryString } from './createUrlQueryString'
+&nbsp;
+export interface GetEmailUrlOptions {
+  /** 收件人 */
+  to?: string | string[]
+  /** 抄送人 */
+  cc?: string | string[]
+  /** 密送人 */
+  bcc?: string | string[]
+  /** 主题 */
+  subject?: string
+  /** 内容 */
+  body?: string
+}
 &nbsp;
 /**
- * 同一时间对函数的调用只会触发一次运行。
+ * 获取邮件链接。
  *
- * @param fn 函数
- * @returns 返回函数调用结果
+ * @param options 选项
  */
-export function onceMeanwhile&lt;TFunc extends AnyAsyncFunction&gt;(
-  fn: TFunc,
-): TFunc {
-  let running = false
-  let result: Promise&lt;any&gt;
-  const proxy = (...args: any[]) =&gt; {
-    if (!running) {
-      running = true
-      const res = fn(...args)
-      <span class="missing-if-branch" title="else path not taken" >E</span>if (isPromiseLike(res)) {
-        result = res.then(_ =&gt; {
-          running = false
-          return _
-        })
-      }
-    }
-    return result
+export function getEmailUrl(options: GetEmailUrlOptions): string {
+  const { to, cc, bcc, subject, body } = options
+  let url = `mailto:${Array.isArray(to) ? to.join(',') : to}`
+  if (cc || bcc || subject || body) {
+    url += `?${createUrlQueryString({
+      cc: cc &amp;&amp; (Array.isArray(cc) ? cc.join(',') : cc),
+      bcc: bcc &amp;&amp; (Array.isArray(bcc) ? bcc.join(',') : bcc),
+      subject: subject,
+      body: body,
+    })}`
   }
-  return proxy as any
+  return url
 }
 &nbsp;</pre></td></tr></table></pre>
 
