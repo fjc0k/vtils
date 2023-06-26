@@ -67,6 +67,7 @@ rich://{"url":"***","desc":"***"}
 |  [formatBytes(value)](./utils.formatbytes.md) | 格式化字节数，以 1024 作为千字节数。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
 |  [getCurrentScript()](./utils.getcurrentscript.md) | <p>返回当前正在运行的脚本所属的 <code>&lt;script&gt;</code> 元素。有两点限制：</p><p>- 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 <code>null</code>。</p> |
+|  [getEmailUrl(options)](./utils.getemailurl.md) | 获取邮件链接。 |
 |  [getEnvironment()](./utils.getenvironment.md) | 获取运行环境信息。 |
 |  [getSmsUrl(options)](./utils.getsmsurl.md) | 获取短信链接。 |
 |  [getWechatPublicAccountQrcodeUrl(accountId)](./utils.getwechatpublicaccountqrcodeurl.md) | 获取微信公众号的二维码链接。 |
@@ -156,6 +157,7 @@ rich://{"url":"***","desc":"***"}
 |  [FormatNumberOptions](./utils.formatnumberoptions.md) | 格式化数字选项。 |
 |  [GeoCoordTransformInput](./utils.geocoordtransforminput.md) |  |
 |  [GeoCoordTransformOutput](./utils.geocoordtransformoutput.md) |  |
+|  [GetEmailUrlOptions](./utils.getemailurloptions.md) |  |
 |  [GetEnvironmentResult](./utils.getenvironmentresult.md) |  |
 |  [GetSmsUrlOptions](./utils.getsmsurloptions.md) |  |
 |  [LoadCssResult](./utils.loadcssresult.md) |  |
