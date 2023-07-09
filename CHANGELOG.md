@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.83.0](https://github.com/fjc0k/vtils/compare/v4.82.0...v4.83.0) (2023-07-09)
+
+### Features
+
+- **utils:** 新增 bytes ([7ea6ae7](https://github.com/fjc0k/vtils/commit/7ea6ae7615e94531f90bae532b571c8e012070b5))
+
 ## [4.82.0](https://github.com/fjc0k/vtils/compare/v4.81.0...v4.82.0) (2023-06-26)
 
 ### Features
