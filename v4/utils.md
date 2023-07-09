@@ -43,6 +43,8 @@ rich://{"url":"***","desc":"***"}
 |  [base64UrlDecode(value)](./utils.base64urldecode.md) | 将给定的 base64url 字符串解码为 UTF8 字符串。 |
 |  [base64UrlEncode(value)](./utils.base64urlencode.md) | 将给定的 UTF8 字符串编码为 URL 安全的 base64url 字符串。 |
 |  [bindEvent(target)](./utils.bindevent.md) | 绑定事件。 |
+|  [bytes(value, unit)](./utils.bytes.md) | 获取字节值。 |
+|  [bytes(value)](./utils.bytes_1.md) | 获取字节值。 |
 |  [cartesianProduct(arr)](./utils.cartesianproduct.md) | 计算多个数组的笛卡尔积。 |
 |  [cartesianProduct(arr)](./utils.cartesianproduct_1.md) |  |
 |  [cartesianProduct(arr)](./utils.cartesianproduct_2.md) |  |
@@ -107,6 +109,8 @@ rich://{"url":"***","desc":"***"}
 |  [moveToBottom(arr, from)](./utils.movetobottom.md) | 原地置底数组中的某个元素。 |
 |  [moveToTop(arr, from)](./utils.movetotop.md) | 原地置顶数组中的某个元素。 |
 |  [moveUp(arr, from, step)](./utils.moveup.md) | 原地上移数组中的某个元素。 |
+|  [ms(value, unit, returnSeconds)](./utils.ms.md) | 获取毫秒值。 |
+|  [ms(value, returnSeconds)](./utils.ms_1.md) | 获取毫秒值。 |
 |  [onceMeanwhile(fn)](./utils.oncemeanwhile.md) | 同一时间对函数的调用只会触发一次运行。 |
 |  [parseDataUrl(dataUrl)](./utils.parsedataurl.md) | 解析 Data URL。 |
 |  [parseUrlQueryString(query, options)](./utils.parseurlquerystring.md) | <p>解析 url 查询字符串。</p><p>兼容以 <code>?</code> 开头的查询字符串，因此你可以直接传入 <code>location.search</code> 的值。</p> |
@@ -211,6 +215,10 @@ rich://{"url":"***","desc":"***"}
 |  Type Alias | Description |
 |  --- | --- |
 |  [BindEventFunction](./utils.bindeventfunction.md) | 绑定事件函数。 |
+|  [BytesNumberValue](./utils.bytesnumbervalue.md) |  |
+|  [BytesStringValue](./utils.bytesstringvalue.md) |  |
+|  [BytesUnit](./utils.bytesunit.md) |  |
+|  [BytesValue](./utils.bytesvalue.md) |  |
 |  [CalculatorFunctionValue](./utils.calculatorfunctionvalue.md) |  |
 |  [CalculatorPrimitiveValue](./utils.calculatorprimitivevalue.md) |  |
 |  [CalculatorValue](./utils.calculatorvalue.md) |  |
@@ -237,6 +245,10 @@ rich://{"url":"***","desc":"***"}
 |  [MiniProgramUrlProvider](./utils.miniprogramurlprovider.md) |  |
 |  [MiniProgramUrlStringInput](./utils.miniprogramurlstringinput.md) |  |
 |  [MiniProgramUrlVersion](./utils.miniprogramurlversion.md) |  |
+|  [MsNumberValue](./utils.msnumbervalue.md) |  |
+|  [MsStringValue](./utils.msstringvalue.md) |  |
+|  [MsUnit](./utils.msunit.md) |  |
+|  [MsValue](./utils.msvalue.md) |  |
 |  [PackedData](./utils.packeddata.md) |  |
 |  [RawData](./utils.rawdata.md) |  |
 |  [RawListData](./utils.rawlistdata.md) |  |

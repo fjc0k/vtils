@@ -2,25 +2,15 @@
 
 [Home](./index.md) &gt; [date](./date.md) &gt; [ms](./date.ms.md)
 
-## ms() function
+## ms variable
 
-获取毫秒值。
+> Warning: This API is now obsolete.
+> 
+> use `import { ms } from 'vtils'` instead
+> 
 
 **Signature:**
 
 ```typescript
-export declare function ms(value: number, unit: MsUnit, returnSeconds?: boolean): number;
+ms: typeof ms_2
 ```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  value | number | 值 |
-|  unit | [MsUnit](./date.msunit.md) | 单位 |
-|  returnSeconds | boolean | _(Optional)_ 是否返回秒值 |
-
-**Returns:**
-
-number
-
