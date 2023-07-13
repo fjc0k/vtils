@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.84.0](https://github.com/fjc0k/vtils/compare/v4.83.0...v4.84.0) (2023-07-13)
+
+### Features
+
+- **validator:** 支持 ref rootValue ([641875d](https://github.com/fjc0k/vtils/commit/641875da1f6013b21c58343026b20187ea8ceb2c))
+
+### Bug Fixes
+
+- **validator:** 修复 yup.GetSchema 的一些问题 ([094bf83](https://github.com/fjc0k/vtils/commit/094bf83eca32c3a17e311124ddad9e33d9253fa1))
+
 ## [4.83.0](https://github.com/fjc0k/vtils/compare/v4.82.0...v4.83.0) (2023-07-09)
 
 ### Features
