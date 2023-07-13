@@ -364,4 +364,48 @@ describe('yup', () => {
       }),
     ).toMatchSnapshot()
   })
+
+  test('ref root', () => {
+    type Login = {
+      pass1: string
+      pass2: string
+      v: {
+        p1: string
+        p2: string
+      }
+    }
+    const _ = yup
+    const loginSchema: yup.GetSchema<Login> = _.object($ =>
+      $.shape({
+        pass1: _.string().required(),
+        pass2: _.string().required(),
+        v: _.object({
+          p1: _.string()
+            .required()
+            .equals([_.ref('@pass1')]),
+          p2: _.string().required(),
+        }).required(),
+      }),
+    )
+    expect(
+      loginSchema.validatePlusSync({
+        pass1: '123',
+        pass2: '456',
+        v: {
+          p1: '1234',
+          p2: '4566',
+        },
+      }),
+    ).toMatchSnapshot()
+    expect(
+      loginSchema.validatePlusSync({
+        pass1: '123',
+        pass2: '456',
+        v: {
+          p1: '123',
+          p2: '4566',
+        },
+      }),
+    ).toMatchSnapshot()
+  })
 })

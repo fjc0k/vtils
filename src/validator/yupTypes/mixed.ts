@@ -4,6 +4,7 @@ import { DateSchema } from './date'
 import { LocaleValue, MixedLocale } from './Locale'
 import { NumberSchema } from './number'
 import { ObjectSchema } from './object'
+import { Refable } from './ref'
 import { StringSchema } from './string'
 import { ValidationError } from './ValidationError'
 
@@ -128,11 +129,11 @@ export interface MixedSchema<T = any> {
 
   typeError(message: LocaleValue): this
 
-  oneOf(arrayOfValues: T[], message?: MixedLocale['oneOf']): this
+  oneOf(arrayOfValues: Refable<T>[], message?: MixedLocale['oneOf']): this
 
-  equals(arrayOfValues: T[], message?: MixedLocale['oneOf']): this
+  equals(arrayOfValues: Refable<T>[], message?: MixedLocale['oneOf']): this
 
-  notOneOf(arrayOfValues: T[], message?: MixedLocale['notOneOf']): this
+  notOneOf(arrayOfValues: Refable<T>[], message?: MixedLocale['notOneOf']): this
 
   when(builder: (value: T, schema: this) => this): this
 

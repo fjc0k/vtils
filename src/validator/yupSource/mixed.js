@@ -1,14 +1,14 @@
-import { has, cloneDeepWith, toArray } from '../../utils'
+import { cloneDeepWith, has, toArray } from '../../utils'
 
-import { mixed as locale } from './locale'
 import Condition from './Condition'
-import runTests from './util/runTests'
-import prependDeep from './util/prependDeep'
-import isSchema from './util/isSchema'
-import createValidation from './util/createValidation'
-import printValue from './util/printValue'
 import Ref from './Reference'
+import { mixed as locale } from './locale'
+import createValidation from './util/createValidation'
+import isSchema from './util/isSchema'
+import prependDeep from './util/prependDeep'
+import printValue from './util/printValue'
 import { getIn } from './util/reach'
+import runTests from './util/runTests'
 
 class RefSet {
   constructor() {
@@ -307,6 +307,7 @@ const proto = (SchemaType.prototype = {
   },
 
   validate(value, options = {}, maybeCb) {
+    if (!options.rootValue) options.rootValue = value
     let schema = this.resolve({ ...options, value })
 
     // callback case is for nested validations
@@ -321,6 +322,7 @@ const proto = (SchemaType.prototype = {
   },
 
   validateSync(value, options = {}) {
+    if (!options.rootValue) options.rootValue = value
     let schema = this.resolve({ ...options, value })
     let result
 
@@ -627,6 +629,7 @@ const proto = (SchemaType.prototype = {
 
 for (const method of ['validate', 'validateSync'])
   proto[`${method}At`] = function (path, value, options = {}) {
+    if (!options.rootValue) options.rootValue = value
     const { parent, parentPath, schema } = getIn(
       this,
       path,

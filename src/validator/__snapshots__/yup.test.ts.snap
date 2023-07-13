@@ -358,6 +358,33 @@ Object {
 }
 `;
 
+exports[`yup ref root 1`] = `
+Object {
+  "data": Object {
+    "pass1": "123",
+    "pass2": "456",
+    "v": Object {
+      "p1": "1234",
+      "p2": "4566",
+    },
+  },
+  "error": [ValidationError: 此项必须是下列值之一: Ref(@pass1)],
+}
+`;
+
+exports[`yup ref root 2`] = `
+Object {
+  "data": Object {
+    "pass1": "123",
+    "pass2": "456",
+    "v": Object {
+      "p1": "123",
+      "p2": "4566",
+    },
+  },
+}
+`;
+
 exports[`yup ref 支持 map 1`] = `
 Object {
   "data": 2,

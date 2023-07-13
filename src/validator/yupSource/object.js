@@ -1,12 +1,12 @@
-import { has, snakeCase, camelCase, mapKeys, mapValues } from '../../utils'
 import { getter } from 'property-expr'
+import { camelCase, has, mapKeys, mapValues, snakeCase } from '../../utils'
 
-import MixedSchema from './mixed'
 import { object as locale } from './locale.js'
-import sortFields from './util/sortFields'
-import sortByKeyOrder from './util/sortByKeyOrder'
+import MixedSchema from './mixed'
 import inherits from './util/inherits'
 import runTests from './util/runTests'
+import sortByKeyOrder from './util/sortByKeyOrder'
+import sortFields from './util/sortFields'
 
 let isObject = obj => Object.prototype.toString.call(obj) === '[object Object]'
 

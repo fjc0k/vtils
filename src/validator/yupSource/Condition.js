@@ -38,7 +38,12 @@ class Condition {
 
   resolve(base, options) {
     let values = this.refs.map(ref =>
-      ref.getValue(options?.value, options?.parent, options?.context),
+      ref.getValue(
+        options?.value,
+        options?.parent,
+        options?.context,
+        options?.rootValue,
+      ),
     )
 
     let schema = this.fn.apply(base, values.concat(base, options))

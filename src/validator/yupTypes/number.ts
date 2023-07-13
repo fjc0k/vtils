@@ -1,20 +1,20 @@
 import { NumberLocale } from './Locale'
 import { MixedSchema } from './mixed'
-import { Ref } from './ref'
+import { Refable } from './ref'
 
 export interface NumberSchema<T extends number = number>
   extends MixedSchema<T> {
   /** 最小值 */
-  min(limit: number | Ref<number>, message?: NumberLocale['min']): this
+  min(limit: Refable<number>, message?: NumberLocale['min']): this
 
   /** 最大值 */
-  max(limit: number | Ref<number>, message?: NumberLocale['max']): this
+  max(limit: Refable<number>, message?: NumberLocale['max']): this
 
   /** 应小于 */
-  lessThan(max: number | Ref<number>, message?: NumberLocale['lessThan']): this
+  lessThan(max: Refable<number>, message?: NumberLocale['lessThan']): this
 
   /** 应大于 */
-  moreThan(min: number | Ref<number>, message?: NumberLocale['moreThan']): this
+  moreThan(min: Refable<number>, message?: NumberLocale['moreThan']): this
 
   /** 正数 */
   positive(message?: NumberLocale['positive']): this

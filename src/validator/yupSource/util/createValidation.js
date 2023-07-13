@@ -1,6 +1,6 @@
 import { mapValues } from '../../../utils'
-import ValidationError from '../ValidationError'
 import Ref from '../Reference'
+import ValidationError from '../ValidationError'
 
 export default function createValidation(config) {
   function validate(
@@ -8,10 +8,12 @@ export default function createValidation(config) {
     cb,
   ) {
     const { name, test, params, message } = config
-    let { parent, context } = options
+    let { parent, context, rootValue } = options
 
     function resolve(item) {
-      return Ref.isRef(item) ? item.getValue(value, parent, context) : item
+      return Ref.isRef(item)
+        ? item.getValue(value, parent, context, rootValue)
+        : item
     }
 
     function createError(overrides = {}) {

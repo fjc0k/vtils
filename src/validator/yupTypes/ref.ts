@@ -1,6 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-empty-interface,@typescript-eslint/no-unused-vars
 export interface Ref<T> {}
 
+export type Refable<T> = T | Ref<T>
+
 export interface RefOptions<T> {
   map?: (value: any) => T
 }

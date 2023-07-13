@@ -3,6 +3,7 @@ import { getter } from 'property-expr'
 const prefixes = {
   context: '$',
   value: '.',
+  rootValue: '@',
 }
 
 export default class Reference {
@@ -22,12 +23,15 @@ export default class Reference {
 
     this.isContext = this.key[0] === prefixes.context
     this.isValue = this.key[0] === prefixes.value
-    this.isSibling = !this.isContext && !this.isValue
+    this.isRootValue = this.key[0] === prefixes.rootValue
+    this.isSibling = !this.isContext && !this.isValue && !this.isRootValue
 
     let prefix = this.isContext
       ? prefixes.context
       : this.isValue
       ? prefixes.value
+      : this.isRootValue
+      ? prefixes.rootValue
       : ''
 
     this.path = this.key.slice(prefix.length)
@@ -35,8 +39,14 @@ export default class Reference {
     this.map = options.map
   }
 
-  getValue(value, parent, context) {
-    let result = this.isContext ? context : this.isValue ? value : parent
+  getValue(value, parent, context, rootValue) {
+    let result = this.isContext
+      ? context
+      : this.isValue
+      ? value
+      : this.isRootValue
+      ? rootValue
+      : parent
 
     if (this.getter) result = this.getter(result || {})
 
@@ -53,7 +63,12 @@ export default class Reference {
    * @param {Object=} options.parent
    */
   cast(value, options) {
-    return this.getValue(value, options?.parent, options?.context)
+    return this.getValue(
+      value,
+      options?.parent,
+      options?.context,
+      options?.rootValue,
+    )
   }
 
   resolve() {
