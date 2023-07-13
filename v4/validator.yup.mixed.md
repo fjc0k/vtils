@@ -7,8 +7,15 @@
 **Signature:**
 
 ```typescript
-export declare function mixed<T = any>(): MixedSchema<T>;
+export declare function mixed<T = any>(payload?: (schema: MixedSchema<T>) => MixedSchema<T>): MixedSchema<T>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  payload | (schema: [MixedSchema](./validator.yup.mixedschema.md)<!-- -->&lt;T&gt;) =&gt; [MixedSchema](./validator.yup.mixedschema.md)<!-- -->&lt;T&gt; | _(Optional)_ |
+
 **Returns:**
 
 [MixedSchema](./validator.yup.mixedschema.md)<!-- -->&lt;T&gt;

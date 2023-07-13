@@ -15,20 +15,20 @@ export interface NumberSchema<T extends number = number> extends MixedSchema<T>
 
 |  Method | Description |
 |  --- | --- |
-|  [id(message)](./validator.yup.numberschema.id.md) |  |
-|  [integer(message)](./validator.yup.numberschema.integer.md) |  |
-|  [lessThan(max, message)](./validator.yup.numberschema.lessthan.md) |  |
-|  [max(limit, message)](./validator.yup.numberschema.max.md) |  |
-|  [min(limit, message)](./validator.yup.numberschema.min.md) |  |
-|  [moreThan(min, message)](./validator.yup.numberschema.morethan.md) |  |
-|  [negative(message)](./validator.yup.numberschema.negative.md) |  |
-|  [negativeInteger(message)](./validator.yup.numberschema.negativeinteger.md) |  |
-|  [nonNegative(message)](./validator.yup.numberschema.nonnegative.md) |  |
-|  [nonNegativeInteger(message)](./validator.yup.numberschema.nonnegativeinteger.md) |  |
-|  [nonPositive(message)](./validator.yup.numberschema.nonpositive.md) |  |
-|  [nonPositiveInteger(message)](./validator.yup.numberschema.nonpositiveinteger.md) |  |
-|  [positive(message)](./validator.yup.numberschema.positive.md) |  |
-|  [positiveInteger(message)](./validator.yup.numberschema.positiveinteger.md) |  |
+|  [id(message)](./validator.yup.numberschema.id.md) | ID (positiveInteger 的别名) |
+|  [integer(message)](./validator.yup.numberschema.integer.md) | 整数 |
+|  [lessThan(max, message)](./validator.yup.numberschema.lessthan.md) | 应小于 |
+|  [max(limit, message)](./validator.yup.numberschema.max.md) | 最大值 |
+|  [min(limit, message)](./validator.yup.numberschema.min.md) | 最小值 |
+|  [moreThan(min, message)](./validator.yup.numberschema.morethan.md) | 应大于 |
+|  [negative(message)](./validator.yup.numberschema.negative.md) | 负数 |
+|  [negativeInteger(message)](./validator.yup.numberschema.negativeinteger.md) | 负整数 |
+|  [nonNegative(message)](./validator.yup.numberschema.nonnegative.md) | 非负数 |
+|  [nonNegativeInteger(message)](./validator.yup.numberschema.nonnegativeinteger.md) | 非负整数 |
+|  [nonPositive(message)](./validator.yup.numberschema.nonpositive.md) | 非正数 |
+|  [nonPositiveInteger(message)](./validator.yup.numberschema.nonpositiveinteger.md) | 非正整数 |
+|  [positive(message)](./validator.yup.numberschema.positive.md) | 正数 |
+|  [positiveInteger(message)](./validator.yup.numberschema.positiveinteger.md) | 正整数 |
 |  [round(type)](./validator.yup.numberschema.round.md) |  |
 |  [truncate()](./validator.yup.numberschema.truncate.md) |  |
 

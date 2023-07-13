@@ -4,6 +4,8 @@
 
 ## yup.NumberSchema.positive() method
 
+正数
+
 **Signature:**
 
 ```typescript

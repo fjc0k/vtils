@@ -4,17 +4,19 @@
 
 ## yup.NumberSchema.moreThan() method
 
+应大于
+
 **Signature:**
 
 ```typescript
-moreThan(min: number | Ref<number>, message?: NumberLocale['moreThan']): this;
+moreThan(min: Refable<number>, message?: NumberLocale['moreThan']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  min | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  min | [Refable](./validator.yup.refable.md)<!-- -->&lt;number&gt; |  |
 |  message | [NumberLocale](./validator.yup.numberlocale.md)<!-- -->\['moreThan'\] | _(Optional)_ |
 
 **Returns:**

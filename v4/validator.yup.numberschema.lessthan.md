@@ -4,17 +4,19 @@
 
 ## yup.NumberSchema.lessThan() method
 
+应小于
+
 **Signature:**
 
 ```typescript
-lessThan(max: number | Ref<number>, message?: NumberLocale['lessThan']): this;
+lessThan(max: Refable<number>, message?: NumberLocale['lessThan']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  max | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  max | [Refable](./validator.yup.refable.md)<!-- -->&lt;number&gt; |  |
 |  message | [NumberLocale](./validator.yup.numberlocale.md)<!-- -->\['lessThan'\] | _(Optional)_ |
 
 **Returns:**

@@ -7,7 +7,9 @@
 **Signature:**
 
 ```typescript
-export type GetSchema<T> = T extends string ? StringSchema<string> : T extends number ? NumberSchema<number> : T extends boolean ? BooleanSchema<boolean> : T extends Array<infer X> ? ArraySchema<X> : T extends {} ? ObjectSchema<T> : MixedSchema<T>;
+export type GetSchema<T> = [
+    T
+] extends [string] ? StringSchema<T> : [T] extends [number] ? NumberSchema<T> : [T] extends [boolean] ? BooleanSchema<T> : T extends Date ? DateSchema<T> : T extends Array<infer X> ? ArraySchema<X> : T extends {} ? ObjectSchema<T> : MixedSchema<T>;
 ```
-**References:** [StringSchema](./validator.yup.stringschema.md)<!-- -->, [NumberSchema](./validator.yup.numberschema.md)<!-- -->, [BooleanSchema](./validator.yup.booleanschema.md)<!-- -->, [ArraySchema](./validator.yup.arrayschema.md)<!-- -->, [ObjectSchema](./validator.yup.objectschema.md)<!-- -->, [MixedSchema](./validator.yup.mixedschema.md)
+**References:** [StringSchema](./validator.yup.stringschema.md)<!-- -->, [NumberSchema](./validator.yup.numberschema.md)<!-- -->, [BooleanSchema](./validator.yup.booleanschema.md)<!-- -->, [DateSchema](./validator.yup.dateschema.md)<!-- -->, [ArraySchema](./validator.yup.arrayschema.md)<!-- -->, [ObjectSchema](./validator.yup.objectschema.md)<!-- -->, [MixedSchema](./validator.yup.mixedschema.md)
 

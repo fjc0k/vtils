@@ -7,8 +7,15 @@
 **Signature:**
 
 ```typescript
-export declare function array<T extends any = any>(): ArraySchema<T>;
+export declare function array<T extends any = any>(payload?: (schema: ArraySchema<T>) => ArraySchema<T>): ArraySchema<T>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  payload | (schema: [ArraySchema](./validator.yup.arrayschema.md)<!-- -->&lt;T&gt;) =&gt; [ArraySchema](./validator.yup.arrayschema.md)<!-- -->&lt;T&gt; | _(Optional)_ |
+
 **Returns:**
 
 [ArraySchema](./validator.yup.arrayschema.md)<!-- -->&lt;T&gt;

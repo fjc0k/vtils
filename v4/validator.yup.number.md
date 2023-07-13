@@ -7,8 +7,15 @@
 **Signature:**
 
 ```typescript
-export declare function number<T extends number = number>(): NumberSchema<T>;
+export declare function number<T extends number = number>(payload?: (schema: NumberSchema<T>) => NumberSchema<T>): NumberSchema<T>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  payload | (schema: [NumberSchema](./validator.yup.numberschema.md)<!-- -->&lt;T&gt;) =&gt; [NumberSchema](./validator.yup.numberschema.md)<!-- -->&lt;T&gt; | _(Optional)_ |
+
 **Returns:**
 
 [NumberSchema](./validator.yup.numberschema.md)<!-- -->&lt;T&gt;

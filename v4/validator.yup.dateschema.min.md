@@ -7,14 +7,14 @@
 **Signature:**
 
 ```typescript
-min(limit: Date | Ref<Date>, message?: DateLocale['min']): this;
+min(limit: Refable<Date>, message?: DateLocale['min']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | Date \| [Ref](./validator.yup.ref.md)<!-- -->&lt;Date&gt; |  |
+|  limit | [Refable](./validator.yup.refable.md)<!-- -->&lt;Date&gt; |  |
 |  message | [DateLocale](./validator.yup.datelocale.md)<!-- -->\['min'\] | _(Optional)_ |
 
 **Returns:**

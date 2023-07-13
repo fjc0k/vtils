@@ -7,14 +7,14 @@
 **Signature:**
 
 ```typescript
-notOneOf(arrayOfValues: T[], message?: MixedLocale['notOneOf']): this;
+notOneOf(arrayOfValues: Refable<T>[], message?: MixedLocale['notOneOf']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arrayOfValues | T\[\] |  |
+|  arrayOfValues | [Refable](./validator.yup.refable.md)<!-- -->&lt;T&gt;\[\] |  |
 |  message | [MixedLocale](./validator.yup.mixedlocale.md)<!-- -->\['notOneOf'\] | _(Optional)_ |
 
 **Returns:**

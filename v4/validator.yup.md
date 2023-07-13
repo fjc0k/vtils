@@ -15,20 +15,20 @@
 |  Function | Description |
 |  --- | --- |
 |  [addMethod(schemaType, name, fn)](./validator.yup.addmethod.md) |  |
-|  [array()](./validator.yup.array.md) |  |
-|  [boolean()](./validator.yup.boolean.md) |  |
-|  [date()](./validator.yup.date.md) |  |
+|  [array(payload)](./validator.yup.array.md) |  |
+|  [boolean(payload)](./validator.yup.boolean.md) |  |
+|  [date(payload)](./validator.yup.date.md) |  |
 |  [getLocale()](./validator.yup.getlocale.md) |  |
 |  [lazy(fn)](./validator.yup.lazy.md) |  |
-|  [mixed()](./validator.yup.mixed.md) |  |
-|  [number()](./validator.yup.number.md) |  |
+|  [mixed(payload)](./validator.yup.mixed.md) |  |
+|  [number(payload)](./validator.yup.number.md) |  |
 |  [object(fields)](./validator.yup.object.md) |  |
 |  [printValue(value, quoteStrings)](./validator.yup.printvalue.md) |  |
 |  [reach(schema, path, value, context)](./validator.yup.reach.md) |  |
 |  [ref(path, options)](./validator.yup.ref.md) |  |
 |  [ref(path, map)](./validator.yup.ref_1.md) |  |
 |  [setLocale(locale)](./validator.yup.setlocale.md) |  |
-|  [string()](./validator.yup.string.md) |  |
+|  [string(payload)](./validator.yup.string.md) |  |
 
 ## Interfaces
 
@@ -65,4 +65,5 @@
 |  [LocaleValue](./validator.yup.localevalue.md) |  |
 |  [LocaleValueFn](./validator.yup.localevaluefn.md) |  |
 |  [LocaleValueFnParams](./validator.yup.localevaluefnparams.md) |  |
+|  [Refable](./validator.yup.refable.md) |  |
 

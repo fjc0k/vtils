@@ -4,6 +4,8 @@
 
 ## yup.NumberSchema.nonNegativeInteger() method
 
+非负整数
+
 **Signature:**
 
 ```typescript

@@ -7,14 +7,14 @@
 **Signature:**
 
 ```typescript
-max(limit: number | Ref<number>, message?: StringLocale['max']): this;
+max(limit: Refable<number>, message?: StringLocale['max']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  limit | [Refable](./validator.yup.refable.md)<!-- -->&lt;number&gt; |  |
 |  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['max'\] | _(Optional)_ |
 
 **Returns:**

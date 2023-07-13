@@ -4,17 +4,19 @@
 
 ## yup.NumberSchema.min() method
 
+最小值
+
 **Signature:**
 
 ```typescript
-min(limit: number | Ref<number>, message?: NumberLocale['min']): this;
+min(limit: Refable<number>, message?: NumberLocale['min']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  limit | [Refable](./validator.yup.refable.md)<!-- -->&lt;number&gt; |  |
 |  message | [NumberLocale](./validator.yup.numberlocale.md)<!-- -->\['min'\] | _(Optional)_ |
 
 **Returns:**

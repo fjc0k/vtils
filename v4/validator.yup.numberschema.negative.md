@@ -4,6 +4,8 @@
 
 ## yup.NumberSchema.negative() method
 
+负数
+
 **Signature:**
 
 ```typescript

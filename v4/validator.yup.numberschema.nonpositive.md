@@ -4,6 +4,8 @@
 
 ## yup.NumberSchema.nonPositive() method
 
+非正数
+
 **Signature:**
 
 ```typescript

@@ -7,8 +7,15 @@
 **Signature:**
 
 ```typescript
-export declare function string<T extends string = string>(): StringSchema<T>;
+export declare function string<T extends string = string>(payload?: (schema: StringSchema<T>) => StringSchema<T>): StringSchema<T>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  payload | (schema: [StringSchema](./validator.yup.stringschema.md)<!-- -->&lt;T&gt;) =&gt; [StringSchema](./validator.yup.stringschema.md)<!-- -->&lt;T&gt; | _(Optional)_ |
+
 **Returns:**
 
 [StringSchema](./validator.yup.stringschema.md)<!-- -->&lt;T&gt;

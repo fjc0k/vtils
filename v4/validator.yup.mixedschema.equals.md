@@ -7,14 +7,14 @@
 **Signature:**
 
 ```typescript
-equals(arrayOfValues: T[], message?: MixedLocale['oneOf']): this;
+equals(arrayOfValues: Refable<T>[], message?: MixedLocale['oneOf']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arrayOfValues | T\[\] |  |
+|  arrayOfValues | [Refable](./validator.yup.refable.md)<!-- -->&lt;T&gt;\[\] |  |
 |  message | [MixedLocale](./validator.yup.mixedlocale.md)<!-- -->\['oneOf'\] | _(Optional)_ |
 
 **Returns:**

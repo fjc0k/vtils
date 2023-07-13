@@ -4,6 +4,8 @@
 
 ## yup.NumberSchema.integer() method
 
+整数
+
 **Signature:**
 
 ```typescript

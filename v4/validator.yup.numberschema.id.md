@@ -4,6 +4,8 @@
 
 ## yup.NumberSchema.id() method
 
+ID (positiveInteger 的别名)
+
 **Signature:**
 
 ```typescript

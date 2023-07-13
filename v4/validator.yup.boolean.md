@@ -7,8 +7,15 @@
 **Signature:**
 
 ```typescript
-export declare function boolean<T extends boolean = boolean>(): BooleanSchema<T>;
+export declare function boolean<T extends boolean = boolean>(payload?: (schema: BooleanSchema<T>) => BooleanSchema<T>): BooleanSchema<T>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  payload | (schema: [BooleanSchema](./validator.yup.booleanschema.md)<!-- -->&lt;T&gt;) =&gt; [BooleanSchema](./validator.yup.booleanschema.md)<!-- -->&lt;T&gt; | _(Optional)_ |
+
 **Returns:**
 
 [BooleanSchema](./validator.yup.booleanschema.md)<!-- -->&lt;T&gt;

@@ -7,14 +7,14 @@
 **Signature:**
 
 ```typescript
-length(limit: number | Ref<number>, message?: StringLocale['length']): this;
+length(limit: Refable<number>, message?: StringLocale['length']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  limit | [Refable](./validator.yup.refable.md)<!-- -->&lt;number&gt; |  |
 |  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['length'\] | _(Optional)_ |
 
 **Returns:**

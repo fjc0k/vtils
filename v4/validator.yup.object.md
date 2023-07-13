@@ -7,14 +7,14 @@
 **Signature:**
 
 ```typescript
-export declare function object<T extends {} = {}>(fields?: GetObjectSchema<T>): ObjectSchema<T>;
+export declare function object<T extends {} = {}>(fields?: GetObjectSchema<T> | ((schema: ObjectSchema<T>) => ObjectSchema<T>)): ObjectSchema<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fields | [GetObjectSchema](./validator.yup.getobjectschema.md)<!-- -->&lt;T&gt; | _(Optional)_ |
+|  fields | [GetObjectSchema](./validator.yup.getobjectschema.md)<!-- -->&lt;T&gt; \| ((schema: [ObjectSchema](./validator.yup.objectschema.md)<!-- -->&lt;T&gt;) =&gt; [ObjectSchema](./validator.yup.objectschema.md)<!-- -->&lt;T&gt;) | _(Optional)_ |
 
 **Returns:**
 

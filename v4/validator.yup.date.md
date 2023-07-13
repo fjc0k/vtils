@@ -7,8 +7,15 @@
 **Signature:**
 
 ```typescript
-export declare function date<T extends Date = Date>(): DateSchema<T>;
+export declare function date<T extends Date = Date>(payload?: (schema: DateSchema<T>) => DateSchema<T>): DateSchema<T>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  payload | (schema: [DateSchema](./validator.yup.dateschema.md)<!-- -->&lt;T&gt;) =&gt; [DateSchema](./validator.yup.dateschema.md)<!-- -->&lt;T&gt; | _(Optional)_ |
+
 **Returns:**
 
 [DateSchema](./validator.yup.dateschema.md)<!-- -->&lt;T&gt;

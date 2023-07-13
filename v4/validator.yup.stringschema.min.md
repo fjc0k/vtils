@@ -7,14 +7,14 @@
 **Signature:**
 
 ```typescript
-min(limit: number | Ref<number>, message?: StringLocale['min']): this;
+min(limit: Refable<number>, message?: StringLocale['min']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  limit | number \| [Ref](./validator.yup.ref.md)<!-- -->&lt;number&gt; |  |
+|  limit | [Refable](./validator.yup.refable.md)<!-- -->&lt;number&gt; |  |
 |  message | [StringLocale](./validator.yup.stringlocale.md)<!-- -->\['min'\] | _(Optional)_ |
 
 **Returns:**
