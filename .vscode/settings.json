@@ -4,13 +4,5 @@
     "resolvePluginsRelativeTo": "."
   },
   "jestrunner.jestCommand": "npx haoma run scripts/vscodeRunJest.ts",
-  "explorer.experimental.fileNesting.enabled": true,
-  "explorer.experimental.fileNesting.expand": false,
-  "explorer.experimental.fileNesting.patterns": {
-    "package.json": "*",
-    "*.ts": "$(capture).*.ts, $(capture).*.tsx",
-    "*.tsx": "$(capture).*.tsx, $(capture).*.ts",
-    "*.js": "$(capture).*.js, $(capture).*.jsx",
-    "*.jsx": "$(capture).*.jsx, $(capture).*.js"
-  }
+  "npm.exclude": "**/bundle"
 }
