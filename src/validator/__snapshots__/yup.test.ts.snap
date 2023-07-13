@@ -5,7 +5,15 @@ Object {
   "data": Object {
     "id": 1,
     "name": "ddd",
-    "posts": Array [],
+    "posts": Array [
+      Object {
+        "content": "dd",
+        "createdAt": 2023-07-13T08:53:33.243Z,
+        "id": 1,
+        "isTop": true,
+        "tags": Array [],
+      },
+    ],
     "role": "vip",
   },
 }

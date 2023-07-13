@@ -342,7 +342,16 @@ describe('yup', () => {
         id: 1,
         name: 'ddd',
         role: 'vip',
-        posts: [],
+        posts: [
+          {
+            id: 1,
+            content: 'dd',
+            // @ts-expect-error
+            createdAt: new Date().toISOString(),
+            isTop: true,
+            tags: [],
+          },
+        ],
       }),
     ).toMatchSnapshot()
     expect(
