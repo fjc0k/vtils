@@ -97,7 +97,23 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -137,38 +153,68 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { MixedSchema } from './mixed'
-import { NumberLocale } from './Locale'
-import { Ref } from './ref'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { NumberLocale } from './Locale'
+import { MixedSchema } from './mixed'
+import { Refable } from './ref'
 &nbsp;
 export interface NumberSchema&lt;T extends number = number&gt;
   extends MixedSchema&lt;T&gt; {
-  min(limit: number | Ref&lt;number&gt;, message?: NumberLocale['min']): this
+  /** 最小值 */
+  min(limit: Refable&lt;number&gt;, message?: NumberLocale['min']): this
 &nbsp;
-  max(limit: number | Ref&lt;number&gt;, message?: NumberLocale['max']): this
+  /** 最大值 */
+  max(limit: Refable&lt;number&gt;, message?: NumberLocale['max']): this
 &nbsp;
-  lessThan(max: number | Ref&lt;number&gt;, message?: NumberLocale['lessThan']): this
+  /** 应小于 */
+  lessThan(max: Refable&lt;number&gt;, message?: NumberLocale['lessThan']): this
 &nbsp;
-  moreThan(min: number | Ref&lt;number&gt;, message?: NumberLocale['moreThan']): this
+  /** 应大于 */
+  moreThan(min: Refable&lt;number&gt;, message?: NumberLocale['moreThan']): this
 &nbsp;
+  /** 正数 */
   positive(message?: NumberLocale['positive']): this
 &nbsp;
+  /** 负数 */
   negative(message?: NumberLocale['negative']): this
 &nbsp;
+  /** 整数 */
   integer(message?: NumberLocale['integer']): this
 &nbsp;
+  /** ID (positiveInteger 的别名) */
   id(message?: NumberLocale['id']): this
 &nbsp;
+  /** 正整数 */
   positiveInteger(message?: NumberLocale['positiveInteger']): this
 &nbsp;
+  /** 负整数 */
   negativeInteger(message?: NumberLocale['negativeInteger']): this
 &nbsp;
+  /** 非正数 */
   nonPositive(message?: NumberLocale['nonPositive']): this
 &nbsp;
+  /** 非负数 */
   nonNegative(message?: NumberLocale['nonNegative']): this
 &nbsp;
+  /** 非正整数 */
   nonPositiveInteger(message?: NumberLocale['nonPositiveInteger']): this
 &nbsp;
+  /** 非负整数 */
   nonNegativeInteger(message?: NumberLocale['nonNegativeInteger']): this
 &nbsp;
   truncate(): this
@@ -176,7 +222,9 @@ export interface NumberSchema&lt;T extends number = number&gt;
   round(type?: 'floor' | 'ceil' | 'trunc' | 'round'): this
 }
 &nbsp;
-export declare function number&lt;T extends number = number&gt;(): NumberSchema&lt;T&gt;
+export declare function number&lt;T extends number = number&gt;(
+  payload?: (schema: NumberSchema&lt;T&gt;) =&gt; NumberSchema&lt;T&gt;,
+): NumberSchema&lt;T&gt;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -184,7 +232,7 @@ export declare function number&lt;T extends number = number&gt;(): NumberSchema&
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Jul 09 2023 16:35:46 GMT+0000 (Coordinated Universal Time)
+                at Thu Jul 13 2023 08:39:12 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
