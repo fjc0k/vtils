@@ -1,5 +1,5 @@
-import * as yup from './yupSource'
 import { zhCN } from './locale/zhCN'
+import * as yup from './yupSource'
 
 // 实现 validateInOrder 方法
 yup.addMethod(yup.object, 'validateInOrder', function (data, options) {
@@ -51,6 +51,34 @@ yup.addMethod(yup.mixed, 'validatePlusSync', function (data, options) {
     return { data: _data }
   } catch (error) {
     return { error, data }
+  }
+})
+
+// 支持函数参数增强类型支持
+Object.keys(yup).forEach(key => {
+  if (
+    key === 'mixed' ||
+    key === 'string' ||
+    key === 'number' ||
+    key === 'bool' ||
+    key === 'boolean' ||
+    key === 'date' ||
+    key === 'object' ||
+    key === 'array'
+  ) {
+    const raw = yup[key]
+    // eslint-disable-next-line no-import-assign
+    Object.defineProperty(yup, key, {
+      enumerable: true,
+      writable: false,
+      configurable: false,
+      value: payload => {
+        if (typeof payload === 'function') {
+          return payload(raw())
+        }
+        return raw(payload)
+      },
+    })
   }
 })
 

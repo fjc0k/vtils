@@ -1,5 +1,6 @@
 import { ArraySchema } from './array'
 import { BooleanSchema } from './boolean'
+import { DateSchema } from './date'
 import { LocaleValue, MixedLocale } from './Locale'
 import { NumberSchema } from './number'
 import { ObjectSchema } from './object'
@@ -160,20 +161,27 @@ export interface MixedSchema<T = any> {
   ): this
 }
 
-export type GetSchema<T> = T extends string
-  ? StringSchema<string>
-  : T extends number
-  ? NumberSchema<number>
-  : T extends boolean
-  ? BooleanSchema<boolean>
-  : T extends Array<infer X>
-  ? ArraySchema<X>
-  : T extends {}
-  ? ObjectSchema<T>
-  : MixedSchema<T>
+export type GetSchema<T> =
+  // 为何要加 []
+  // https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
+  [T] extends [string]
+    ? StringSchema<T>
+    : [T] extends [number]
+    ? NumberSchema<T>
+    : [T] extends [boolean]
+    ? BooleanSchema<T>
+    : T extends Date
+    ? DateSchema<T>
+    : T extends Array<infer X>
+    ? ArraySchema<X>
+    : T extends {}
+    ? ObjectSchema<T>
+    : MixedSchema<T>
 
 export type GetObjectSchema<T extends {}> = {
   [K in keyof T]: GetSchema<T[K]>
 }
 
-export declare function mixed<T = any>(): MixedSchema<T>
+export declare function mixed<T = any>(
+  payload?: (schema: MixedSchema<T>) => MixedSchema<T>,
+): MixedSchema<T>

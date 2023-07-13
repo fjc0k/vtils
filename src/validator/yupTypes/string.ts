@@ -41,4 +41,6 @@ export interface StringSchema<T extends string = string>
   chineseIDCardNumber(message?: StringLocale['chineseIDCardNumber']): this
 }
 
-export declare function string<T extends string = string>(): StringSchema<T>
+export declare function string<T extends string = string>(
+  payload?: (schema: StringSchema<T>) => StringSchema<T>,
+): StringSchema<T>

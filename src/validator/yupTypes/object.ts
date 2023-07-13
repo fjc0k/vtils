@@ -1,5 +1,5 @@
-import { GetObjectSchema, MixedSchema, SchemaValidateOptions } from './mixed'
 import { ObjectLocale } from './Locale'
+import { GetObjectSchema, MixedSchema, SchemaValidateOptions } from './mixed'
 
 export interface ObjectSchema<T extends {} = {}> extends MixedSchema<T> {
   shape(fields: GetObjectSchema<T>, noSortEdges?: Array<[string, string]>): this
@@ -18,5 +18,5 @@ export interface ObjectSchema<T extends {} = {}> extends MixedSchema<T> {
 }
 
 export declare function object<T extends {} = {}>(
-  fields?: GetObjectSchema<T>,
+  fields?: GetObjectSchema<T> | ((schema: ObjectSchema<T>) => ObjectSchema<T>),
 ): ObjectSchema<T>

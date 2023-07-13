@@ -16,4 +16,6 @@ export interface ArraySchema<T extends any = any> extends MixedSchema<T[]> {
   compact(rejector: (value: T) => boolean): this
 }
 
-export declare function array<T extends any = any>(): ArraySchema<T>
+export declare function array<T extends any = any>(
+  payload?: (schema: ArraySchema<T>) => ArraySchema<T>,
+): ArraySchema<T>

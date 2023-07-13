@@ -1,5 +1,5 @@
-import { MixedSchema } from './mixed'
 import { NumberLocale } from './Locale'
+import { MixedSchema } from './mixed'
 import { Ref } from './ref'
 
 export interface NumberSchema<T extends number = number>
@@ -37,4 +37,6 @@ export interface NumberSchema<T extends number = number>
   round(type?: 'floor' | 'ceil' | 'trunc' | 'round'): this
 }
 
-export declare function number<T extends number = number>(): NumberSchema<T>
+export declare function number<T extends number = number>(
+  payload?: (schema: NumberSchema<T>) => NumberSchema<T>,
+): NumberSchema<T>

@@ -8,4 +8,6 @@ export interface DateSchema<T extends Date = Date> extends MixedSchema<T> {
   max(limit: Date | Ref<Date>, message?: DateLocale['max']): this
 }
 
-export declare function date<T extends Date = Date>(): DateSchema<T>
+export declare function date<T extends Date = Date>(
+  payload?: (schema: DateSchema<T>) => DateSchema<T>,
+): DateSchema<T>

@@ -1,8 +1,8 @@
-import { enUS } from './locale/enUS'
 import { expectType } from '../dev'
 import { run } from '../utils'
-import { yup } from './yup'
+import { enUS } from './locale/enUS'
 import { zhCN } from './locale/zhCN'
+import { yup } from './yup'
 
 describe('yup', () => {
   test('默认语言为中文', async () => {
@@ -174,7 +174,7 @@ describe('yup', () => {
       X,
       {
         disabled: yup.BooleanSchema<boolean>
-        gender: yup.StringSchema<string>
+        gender: yup.StringSchema<'male' | 'female'>
       }
     >()
   })
@@ -303,5 +303,65 @@ describe('yup', () => {
     const rule2 = yup.number().allowEmptyString()
     // @ts-expect-error
     expect(rule2.validatePlusSync('')).toMatchSnapshot()
+  })
+
+  test('GetSchema', () => {
+    type User = {
+      id: number
+      name: string
+      role: 'normal' | 'vip'
+      posts: Array<{
+        id: number
+        content: string
+        image?: string
+        tags: string[]
+        createdAt: Date
+        isTop: boolean
+      }>
+    }
+    const _ = yup
+    const userSchema: yup.GetSchema<User> = _.object({
+      id: _.number().required(),
+      name: _.string().required(),
+      role: _.string($ => $.required()),
+      posts: _.array($ =>
+        $.of(
+          _.object({
+            id: _.number().required(),
+            content: _.string().required(),
+            image: _.string(),
+            tags: _.array($ => $.of(_.string()).required()),
+            createdAt: _.date().required(),
+            isTop: _.boolean().required(),
+          }),
+        ),
+      ),
+    })
+    expect(
+      userSchema.validatePlusSync({
+        id: 1,
+        name: 'ddd',
+        role: 'vip',
+        posts: [],
+      }),
+    ).toMatchSnapshot()
+    expect(
+      userSchema.validatePlusSync({
+        // @ts-expect-error
+        id: '1',
+        name: 'ddd',
+        role: 'vip',
+        posts: [],
+      }),
+    ).toMatchSnapshot()
+    expect(
+      userSchema.validatePlusSync({
+        // @ts-expect-error
+        id: false,
+        name: 'ddd',
+        role: 'vip',
+        posts: [],
+      }),
+    ).toMatchSnapshot()
   })
 })

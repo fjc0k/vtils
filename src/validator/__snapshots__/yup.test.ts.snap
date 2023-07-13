@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`yup GetSchema 1`] = `
+Object {
+  "data": Object {
+    "id": 1,
+    "name": "ddd",
+    "posts": Array [],
+    "role": "vip",
+  },
+}
+`;
+
+exports[`yup GetSchema 2`] = `
+Object {
+  "data": Object {
+    "id": 1,
+    "name": "ddd",
+    "posts": Array [],
+    "role": "vip",
+  },
+}
+`;
+
+exports[`yup GetSchema 3`] = `
+Object {
+  "data": Object {
+    "id": false,
+    "name": "ddd",
+    "posts": Array [],
+    "role": "vip",
+  },
+  "error": [ValidationError: 此项必须是一个数字],
+}
+`;
+
 exports[`yup allowEmptyString 正常 1`] = `
 Object {
   "data": "",
