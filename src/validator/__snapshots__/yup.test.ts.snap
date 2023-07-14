@@ -8,7 +8,7 @@ Object {
     "posts": Array [
       Object {
         "content": "dd",
-        "createdAt": 2023-07-13T08:53:33.243Z,
+        "createdAt": 2023-07-14T02:01:17.763Z,
         "id": 1,
         "isTop": true,
         "tags": Array [],
@@ -363,6 +363,44 @@ Object {
 exports[`yup number 支持 positiveInteger() 6`] = `
 Object {
   "data": 100,
+}
+`;
+
+exports[`yup oneOf-enum 1`] = `
+Object {
+  "data": Object {
+    "id": 1,
+    "status": "pending",
+  },
+}
+`;
+
+exports[`yup oneOf-enum 2`] = `
+Object {
+  "data": Object {
+    "id": 1,
+    "status": "pending2",
+  },
+  "error": [ValidationError: 此项必须是下列值之一: pending, success, failed],
+}
+`;
+
+exports[`yup oneOf-obj 1`] = `
+Object {
+  "data": Object {
+    "id": 1,
+    "status": "pending",
+  },
+}
+`;
+
+exports[`yup oneOf-obj 2`] = `
+Object {
+  "data": Object {
+    "id": 1,
+    "status": "pending2",
+  },
+  "error": [ValidationError: 此项必须是下列值之一: pending, success, failed],
 }
 `;
 

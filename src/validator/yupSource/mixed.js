@@ -1,4 +1,4 @@
-import { cloneDeepWith, has, toArray } from '../../utils'
+import { cloneDeepWith, has, toArray, values } from '../../utils'
 
 import Condition from './Condition'
 import Ref from './Reference'
@@ -534,6 +534,10 @@ const proto = (SchemaType.prototype = {
   },
 
   oneOf(enums, message = locale.oneOf) {
+    if (!Array.isArray(enums)) {
+      enums = values(enums)
+    }
+
     var next = this.clone()
 
     enums.forEach(val => {
@@ -643,6 +647,6 @@ for (const method of ['validate', 'validateSync'])
     })
   }
 
-for (const alias of ['equals', 'is']) proto[alias] = proto.oneOf
+for (const alias of ['equals', 'is', 'enum']) proto[alias] = proto.oneOf
 for (const alias of ['not', 'nope']) proto[alias] = proto.notOneOf
 proto.optional = proto.notRequired

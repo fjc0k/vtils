@@ -417,4 +417,73 @@ describe('yup', () => {
       }),
     ).toMatchSnapshot()
   })
+
+  test('oneOf-obj', () => {
+    const Status = {
+      pending: 'pending',
+      success: 'success',
+      failed: 'failed',
+    } as const
+    type Status = typeof Status[keyof typeof Status]
+
+    type Message = {
+      id: number
+      status: Status
+    }
+
+    const _ = yup
+    const messageSchema: yup.GetSchema<Message> = _.object($ =>
+      $.shape({
+        id: _.number().required(),
+        status: _.string($ => $.oneOf(Status)),
+      }),
+    )
+    expect(
+      messageSchema.validatePlusSync({
+        id: 1,
+        status: 'pending',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      messageSchema.validatePlusSync({
+        id: 1,
+        // @ts-expect-error
+        status: 'pending2',
+      }),
+    ).toMatchSnapshot()
+  })
+
+  test('oneOf-enum', () => {
+    enum Status {
+      pending = 'pending',
+      success = 'success',
+      failed = 'failed',
+    }
+
+    type Message = {
+      id: number
+      status: Status
+    }
+
+    const _ = yup
+    const messageSchema: yup.GetSchema<Message> = _.object($ =>
+      $.shape({
+        id: _.number().required(),
+        status: _.string($ => $.enum(Status)),
+      }),
+    )
+    expect(
+      messageSchema.validatePlusSync({
+        id: 1,
+        status: Status.pending,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      messageSchema.validatePlusSync({
+        id: 1,
+        // @ts-expect-error
+        status: 'pending2',
+      }),
+    ).toMatchSnapshot()
+  })
 })

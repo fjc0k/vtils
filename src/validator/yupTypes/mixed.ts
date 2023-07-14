@@ -129,9 +129,22 @@ export interface MixedSchema<T = any> {
 
   typeError(message: LocaleValue): this
 
-  oneOf(arrayOfValues: Refable<T>[], message?: MixedLocale['oneOf']): this
+  oneOf(
+    arrayOfValues: Record<any, T> | Refable<T>[],
+    message?: MixedLocale['oneOf'],
+  ): this
 
-  equals(arrayOfValues: Refable<T>[], message?: MixedLocale['oneOf']): this
+  /** oneOf 的别名 */
+  enum(
+    arrayOfValues: Record<any, T> | Refable<T>[],
+    message?: MixedLocale['oneOf'],
+  ): this
+
+  /** oneOf 的别名 */
+  equals(
+    arrayOfValues: Record<any, T> | Refable<T>[],
+    message?: MixedLocale['oneOf'],
+  ): this
 
   notOneOf(arrayOfValues: Refable<T>[], message?: MixedLocale['notOneOf']): this
 
