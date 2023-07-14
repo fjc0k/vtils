@@ -17,5 +17,5 @@ export interface ArraySchema<T extends any = any> extends MixedSchema<T[]> {
 }
 
 export declare function array<T extends any = any>(
-  payload?: (schema: ArraySchema<T>) => ArraySchema<T>,
+  type?: GetSchema<T> | ((schema: ArraySchema<T>) => ArraySchema<T>),
 ): ArraySchema<T>

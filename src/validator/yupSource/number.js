@@ -1,12 +1,15 @@
-import inherits from './util/inherits'
-import MixedSchema from './mixed'
 import { number as locale } from './locale'
+import MixedSchema from './mixed'
+import inherits from './util/inherits'
 import isAbsent from './util/isAbsent'
 
 let isNaN = value => value != +value
 
-export default function NumberSchema() {
-  if (!(this instanceof NumberSchema)) return new NumberSchema()
+export default function NumberSchema(payload) {
+  if (!(this instanceof NumberSchema))
+    return typeof payload === 'function'
+      ? payload(new NumberSchema())
+      : new NumberSchema()
 
   MixedSchema.call(this, { type: 'number' })
 

@@ -1,9 +1,10 @@
-import { getter } from 'property-expr'
 import { camelCase, has, mapKeys, mapValues, snakeCase } from '../../utils'
 
+import { getter } from 'property-expr'
 import { object as locale } from './locale.js'
 import MixedSchema from './mixed'
 import inherits from './util/inherits'
+import reach from './util/reach'
 import runTests from './util/runTests'
 import sortByKeyOrder from './util/sortByKeyOrder'
 import sortFields from './util/sortFields'
@@ -16,7 +17,10 @@ function unknown(ctx, value) {
 }
 
 export default function ObjectSchema(spec) {
-  if (!(this instanceof ObjectSchema)) return new ObjectSchema(spec)
+  if (!(this instanceof ObjectSchema))
+    return typeof spec === 'function'
+      ? spec(new ObjectSchema())
+      : new ObjectSchema(spec)
 
   MixedSchema.call(this, {
     type: 'object',
@@ -346,5 +350,32 @@ inherits(ObjectSchema, MixedSchema, {
     let base = MixedSchema.prototype.describe.call(this)
     base.fields = mapValues(this.fields, value => value.describe())
     return base
+  },
+
+  // 新增
+  validateInOrder(data, options) {
+    return Object.keys(data)
+      .reduce((prev, key) => {
+        return prev.then(() => {
+          let schema
+          try {
+            schema = reach(this, key)
+          } catch (e) {}
+          return schema ? this.validateAt(key, data, options) : undefined
+        })
+      }, Promise.resolve())
+      .then(() => this.cast(data))
+  },
+  validateInOrderSync(data, options) {
+    for (const key of Object.keys(data)) {
+      let schema
+      try {
+        schema = reach(this, key)
+      } catch (e) {}
+      if (schema) {
+        this.validateSyncAt(key, data, options)
+      }
+    }
+    return this.cast(data)
   },
 })

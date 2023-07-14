@@ -1,9 +1,9 @@
+import Ref from './Reference'
+import { date as locale } from './locale'
 import MixedSchema from './mixed'
 import inherits from './util/inherits'
-import isoParse from './util/isodate'
-import { date as locale } from './locale'
 import isAbsent from './util/isAbsent'
-import Ref from './Reference'
+import isoParse from './util/isodate'
 
 let invalidDate = new Date('')
 
@@ -11,8 +11,11 @@ let isDate = obj => Object.prototype.toString.call(obj) === '[object Date]'
 
 export default DateSchema
 
-function DateSchema() {
-  if (!(this instanceof DateSchema)) return new DateSchema()
+function DateSchema(payload) {
+  if (!(this instanceof DateSchema))
+    return typeof payload === 'function'
+      ? payload(new DateSchema())
+      : new DateSchema()
 
   MixedSchema.call(this, { type: 'date' })
 

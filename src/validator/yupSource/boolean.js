@@ -1,12 +1,15 @@
-import inherits from './util/inherits'
-import MixedSchema from './mixed'
 import { boolean as locale } from './locale'
+import MixedSchema from './mixed'
+import inherits from './util/inherits'
 import isAbsent from './util/isAbsent'
 
 export default BooleanSchema
 
-function BooleanSchema() {
-  if (!(this instanceof BooleanSchema)) return new BooleanSchema()
+function BooleanSchema(payload) {
+  if (!(this instanceof BooleanSchema))
+    return typeof payload === 'function'
+      ? payload(new BooleanSchema())
+      : new BooleanSchema()
 
   MixedSchema.call(this, { type: 'boolean' })
 

@@ -62,7 +62,10 @@ class RefSet {
 }
 
 export default function SchemaType(options = {}) {
-  if (!(this instanceof SchemaType)) return new SchemaType()
+  if (!(this instanceof SchemaType))
+    return typeof options === 'function'
+      ? options(new SchemaType())
+      : new SchemaType()
 
   this._deps = []
   this._conditions = []
@@ -628,6 +631,28 @@ const proto = (SchemaType.prototype = {
         return value !== undefined
       },
     })
+  },
+
+  // 新增
+  validatePlus(data, options) {
+    return (
+      this.type === 'object'
+        ? this.validateInOrder(data, options)
+        : this.validate(data, options)
+    )
+      .then(data => ({ data }))
+      .catch(error => ({ error, data }))
+  },
+  validatePlusSync(data, options) {
+    try {
+      const _data =
+        this.type === 'object'
+          ? this.validateInOrderSync(data, options)
+          : this.validateSync(data, options)
+      return { data: _data }
+    } catch (error) {
+      return { error, data }
+    }
   },
 })
 

@@ -1,11 +1,11 @@
-import inherits from './util/inherits'
-import MixedSchema from './mixed'
-import { string as locale } from './locale'
-import isAbsent from './util/isAbsent'
 import {
   isChineseIDCardNumber,
   isPossibleChineseMobilePhoneNumber,
 } from '../../utils'
+import { string as locale } from './locale'
+import MixedSchema from './mixed'
+import inherits from './util/inherits'
+import isAbsent from './util/isAbsent'
 
 // eslint-disable-next-line
 let rEmail =
@@ -21,8 +21,11 @@ let isTrimmed = value => isAbsent(value) || value === value.trim()
 
 let objStringTag = {}.toString()
 
-export default function StringSchema() {
-  if (!(this instanceof StringSchema)) return new StringSchema()
+export default function StringSchema(payload) {
+  if (!(this instanceof StringSchema))
+    return typeof payload === 'function'
+      ? payload(new StringSchema())
+      : new StringSchema()
 
   MixedSchema.call(this, { type: 'string' })
 

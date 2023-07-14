@@ -1,15 +1,18 @@
+import { array as locale } from './locale'
+import MixedSchema from './mixed'
 import inherits from './util/inherits'
 import isAbsent from './util/isAbsent'
 import isSchema from './util/isSchema'
 import printValue from './util/printValue'
-import MixedSchema from './mixed'
-import { array as locale } from './locale'
 import runTests from './util/runTests'
 
 export default ArraySchema
 
 function ArraySchema(type) {
-  if (!(this instanceof ArraySchema)) return new ArraySchema(type)
+  if (!(this instanceof ArraySchema))
+    return typeof type === 'function'
+      ? type(new ArraySchema())
+      : new ArraySchema(type)
 
   MixedSchema.call(this, { type: 'array' })
 
