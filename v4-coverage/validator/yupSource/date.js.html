@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">46.43% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/28</span>
+                <span class='fraction'>13/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.09% </span>
+                <span class="strong">27.27% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/22</span>
+                <span class='fraction'>6/22</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.22% </span>
+                <span class="strong">55.56% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/9</span>
+                <span class='fraction'>5/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28% </span>
+                <span class="strong">44% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/25</span>
+                <span class='fraction'>11/25</span>
             </div>
         
             
@@ -144,7 +144,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,18 +155,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -222,7 +222,7 @@ import Ref from './Reference'
 &nbsp;
 let invalidDate = new Date('')
 &nbsp;
-let isDate = <span class="fstat-no" title="function not covered" >ob</span>j =&gt; <span class="cstat-no" title="statement not covered" >Object.prototype.toString.call(obj) === '[object Date]'</span>
+let isDate = obj =&gt; Object.prototype.toString.call(obj) === '[object Date]'
 &nbsp;
 export default DateSchema
 &nbsp;
@@ -232,19 +232,19 @@ function DateSchema() {
   MixedSchema.call(this, { type: 'date' })
 &nbsp;
   this.withMutation(() =&gt; {
-    this.transform(<span class="fstat-no" title="function not covered" >fu</span>nction (value) {
-<span class="cstat-no" title="statement not covered" >      if (this.isType(value)) <span class="cstat-no" title="statement not covered" >return value</span></span>
+    this.transform(function (value) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.isType(value)) <span class="cstat-no" title="statement not covered" >return value</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      value = isoParse(value)</span>
+      value = isoParse(value)
       // 0 is a valid timestamp equivalent to 1970-01-01T00:00:00Z(unix epoch) or before.
-<span class="cstat-no" title="statement not covered" >      return !isNaN(value) ? new Date(value) : invalidDate</span>
+      return !isNaN(value) ? new Date(value) : <span class="branch-1 cbranch-no" title="branch not covered" >invalidDate</span>
     })
   })
 }
 &nbsp;
 inherits(DateSchema, MixedSchema, {
-<span class="fstat-no" title="function not covered" >  _t</span>ypeCheck(v) {
-<span class="cstat-no" title="statement not covered" >    return isDate(v) &amp;&amp; !isNaN(v.getTime())</span>
+  _typeCheck(v) {
+    return isDate(v) &amp;&amp; !isNaN(v.getTime())
   },
 &nbsp;
 <span class="fstat-no" title="function not covered" >  mi</span>n(min, message = <span class="branch-0 cbranch-no" title="branch not covered" >locale.min)</span> {
@@ -298,7 +298,7 @@ inherits(DateSchema, MixedSchema, {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jul 13 2023 08:39:12 GMT+0000 (Coordinated Universal Time)
+                at Fri Jul 14 2023 03:29:01 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
