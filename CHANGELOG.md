@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.85.0](https://github.com/fjc0k/vtils/compare/v4.84.0...v4.85.0) (2023-07-14)
+
+### Features
+
+- **validator:** oneOf 支持 enum ([ecbd9f6](https://github.com/fjc0k/vtils/commit/ecbd9f67a18b3a89ec97358188f9f887b3c7fd75))
+
 ## [4.84.0](https://github.com/fjc0k/vtils/compare/v4.83.0...v4.84.0) (2023-07-13)
 
 ### Features
