@@ -347,7 +347,7 @@ describe('yup', () => {
             id: 1,
             content: 'dd',
             // @ts-expect-error
-            createdAt: new Date('2022/12/20 12:33:11').toISOString(),
+            createdAt: new Date('2023-07-14T03:23:28.926Z').toISOString(),
             isTop: true,
             tags: [],
           },
