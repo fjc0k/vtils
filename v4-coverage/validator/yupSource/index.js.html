@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/12</span>
+                <span class='fraction'>4/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.5% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/8</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>1/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70% </span>
+                <span class="strong">30% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/10</span>
+                <span class='fraction'>3/10</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -131,15 +131,15 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,37 +161,37 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import mixed from './mixed'
-import bool from './boolean'
-import string from './string'
-import number from './number'
-import date from './date'
-import object from './object'
-import array from './array'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Lazy from './Lazy'
 import Ref from './Reference'
-import Lazy from './Lazy'
 import ValidationError from './ValidationError'
-import reach from './util/reach'
-import isSchema from './util/isSchema'
-import setLocale from './setLocale'
+import array from './array'
+import bool from './boolean'
+import date from './date'
 import getLocale from './getLocale'
+import mixed from './mixed'
+import number from './number'
+import object from './object'
+import setLocale from './setLocale'
+import string from './string'
+import isSchema from './util/isSchema'
 import printValue from './util/printValue'
+import reach from './util/reach'
 &nbsp;
 let boolean = bool
 let ref = (key, options) =&gt; new Ref(key, options)
 &nbsp;
 let lazy = <span class="fstat-no" title="function not covered" >fn</span> =&gt; <span class="cstat-no" title="statement not covered" >new Lazy(fn)</span>
 &nbsp;
-function addMethod(schemaType, name, fn) {
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (!schemaType || !isSchema(schemaType.prototype))
+function <span class="fstat-no" title="function not covered" >addMethod(</span>schemaType, name, fn) {
+<span class="cstat-no" title="statement not covered" >  if (!schemaType || !isSchema(schemaType.prototype))</span>
 <span class="cstat-no" title="statement not covered" >    throw new TypeError('You must provide a yup schema constructor function')</span>
 &nbsp;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof name !== 'string')
+<span class="cstat-no" title="statement not covered" >  if (typeof name !== 'string')</span>
 <span class="cstat-no" title="statement not covered" >    throw new TypeError('A Method name must be provided')</span>
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof fn !== 'function')
+<span class="cstat-no" title="statement not covered" >  if (typeof fn !== 'function')</span>
 <span class="cstat-no" title="statement not covered" >    throw new TypeError('Method function must be provided')</span>
 &nbsp;
-  schemaType.prototype[name] = fn
+<span class="cstat-no" title="statement not covered" >  schemaType.prototype[name] = fn</span>
 }
 &nbsp;
 export {
@@ -220,7 +220,7 @@ export {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Jul 14 2023 03:29:01 GMT+0000 (Coordinated Universal Time)
+                at Fri Jul 14 2023 04:23:19 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
