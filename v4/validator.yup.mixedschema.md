@@ -29,7 +29,8 @@ export interface MixedSchema<T = any>
 |  [default()](./validator.yup.mixedschema.default_1.md) |  |
 |  [defined()](./validator.yup.mixedschema.defined.md) |  |
 |  [describe()](./validator.yup.mixedschema.describe.md) |  |
-|  [equals(arrayOfValues, message)](./validator.yup.mixedschema.equals.md) |  |
+|  [enum(arrayOfValues, message)](./validator.yup.mixedschema.enum.md) | oneOf 的别名 |
+|  [equals(arrayOfValues, message)](./validator.yup.mixedschema.equals.md) | oneOf 的别名 |
 |  [isType(value)](./validator.yup.mixedschema.istype.md) |  |
 |  [isValid(value, options)](./validator.yup.mixedschema.isvalid.md) |  |
 |  [isValidSync(value, options)](./validator.yup.mixedschema.isvalidsync.md) |  |

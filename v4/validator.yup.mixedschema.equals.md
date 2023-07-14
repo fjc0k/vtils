@@ -4,17 +4,19 @@
 
 ## yup.MixedSchema.equals() method
 
+oneOf 的别名
+
 **Signature:**
 
 ```typescript
-equals(arrayOfValues: Refable<T>[], message?: MixedLocale['oneOf']): this;
+equals(arrayOfValues: Record<any, T> | Refable<T>[], message?: MixedLocale['oneOf']): this;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arrayOfValues | [Refable](./validator.yup.refable.md)<!-- -->&lt;T&gt;\[\] |  |
+|  arrayOfValues | Record&lt;any, T&gt; \| [Refable](./validator.yup.refable.md)<!-- -->&lt;T&gt;\[\] |  |
 |  message | [MixedLocale](./validator.yup.mixedlocale.md)<!-- -->\['oneOf'\] | _(Optional)_ |
 
 **Returns:**
