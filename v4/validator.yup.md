@@ -15,7 +15,7 @@
 |  Function | Description |
 |  --- | --- |
 |  [addMethod(schemaType, name, fn)](./validator.yup.addmethod.md) |  |
-|  [array(payload)](./validator.yup.array.md) |  |
+|  [array(type)](./validator.yup.array.md) |  |
 |  [boolean(payload)](./validator.yup.boolean.md) |  |
 |  [date(payload)](./validator.yup.date.md) |  |
 |  [getLocale()](./validator.yup.getlocale.md) |  |
