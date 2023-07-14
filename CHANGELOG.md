@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.85.2](https://github.com/fjc0k/vtils/compare/v4.85.1...v4.85.2) (2023-07-14)
+
+### Bug Fixes
+
+- **validator:** 重写部分实现 ([8f68b9b](https://github.com/fjc0k/vtils/commit/8f68b9bf900c13f0e1606eba3a937c690d79634d))
+
 ### [4.85.1](https://github.com/fjc0k/vtils/compare/v4.85.0...v4.85.1) (2023-07-14)
 
 ## [4.85.0](https://github.com/fjc0k/vtils/compare/v4.84.0...v4.85.0) (2023-07-14)
