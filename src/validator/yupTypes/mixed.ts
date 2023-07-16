@@ -176,21 +176,22 @@ export interface MixedSchema<T = any> {
 }
 
 export type GetSchema<T> =
-  // 为何要加 []
-  // https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
-  [T] extends [string]
-    ? StringSchema<T>
-    : [T] extends [number]
-    ? NumberSchema<T>
-    : [T] extends [boolean]
-    ? BooleanSchema<T>
-    : T extends Date
-    ? DateSchema<T>
-    : T extends Array<infer X>
-    ? ArraySchema<X>
-    : T extends {}
-    ? ObjectSchema<T>
-    : MixedSchema<T>
+  | (// 为何要加 []
+    // https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
+    [T] extends [string]
+      ? StringSchema<T>
+      : [T] extends [number]
+      ? NumberSchema<T>
+      : [T] extends [boolean]
+      ? BooleanSchema<T>
+      : [T] extends [Date]
+      ? DateSchema<T>
+      : T extends Array<infer X>
+      ? ArraySchema<X>
+      : T extends {}
+      ? ObjectSchema<T>
+      : MixedSchema<T>)
+  | MixedSchema<T>
 
 export type GetObjectSchema<T extends {}> = {
   [K in keyof T]: GetSchema<T[K]>

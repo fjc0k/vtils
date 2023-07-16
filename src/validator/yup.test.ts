@@ -486,4 +486,20 @@ describe('yup', () => {
       }),
     ).toMatchSnapshot()
   })
+
+  test('mixed', () => {
+    type Message = {
+      id: number
+      image: File
+    }
+
+    const _ = yup
+    const messageSchemaIgnored: yup.GetSchema<Message> = _.object($ =>
+      $.shape({
+        id: _.number().required(),
+        image: _.mixed().required(),
+      }),
+    )
+    expect(1).toBe(1)
+  })
 })
