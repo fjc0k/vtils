@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.85.3](https://github.com/fjc0k/vtils/compare/v4.85.2...v4.85.3) (2023-07-16)
+
+### Bug Fixes
+
+- **validator:** GetSchema ([e30c7ae](https://github.com/fjc0k/vtils/commit/e30c7aeda4a307ae8d98e05f6f117968cdbc93f8))
+
 ### [4.85.2](https://github.com/fjc0k/vtils/compare/v4.85.1...v4.85.2) (2023-07-14)
 
 ### Bug Fixes
