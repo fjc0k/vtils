@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for utils/formatNumber.ts</title>
+    <title>Code coverage report for utils/pickAll.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> formatNumber.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> pickAll.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -97,31 +97,7 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a>
-<a name='L42'></a><a href='#L42'>42</a>
-<a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a>
-<a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,97 +133,49 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">52x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">52x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">52x</span>
-<span class="cline-any cline-yes">39x</span>
-<span class="cline-any cline-yes">39x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">39x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">52x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">52x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">52x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * 格式化数字选项。
- */
-export interface FormatNumberOptions {
-  /**
-   * 整数部分的千分位分隔符。
-   *
-   * @default ','
-   */
-  thousandsSeparator?: string
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { pick } from 'lodash-uni'
 &nbsp;
-  /**
-   * 小数部分的千分位分隔符。
-   *
-   * @default ''
-   */
-  thousandthsSeparator?: string
-}
+// https://github.com/sindresorhus/type-fest/issues/656
+type IsEqual&lt;A, B&gt; = (&lt;G&gt;() =&gt; G extends A ? 1 : 2) extends &lt;G&gt;() =&gt; G extends B
+  ? 1
+  : 2
+  ? true
+  : false
+type TupleToUnion&lt;ArrayType&gt; = ArrayType extends readonly unknown[]
+  ? ArrayType[number]
+  : never
+type TupleOf&lt;Tuple extends ReadonlyArray&lt;Values&gt;, Values&gt; = IsEqual&lt;
+  Values,
+  TupleToUnion&lt;Tuple&gt;
+&gt; extends true
+  ? Tuple
+  : never
+&nbsp;
+// 过于卡顿
+// https://github.com/microsoft/TypeScript/issues/13298#issuecomment-692864087
+// type TupleUnion&lt;U extends string, R extends string[] = []&gt; = {
+//   [S in U]: Exclude&lt;U, S&gt; extends never
+//     ? [...R, S]
+//     : TupleUnion&lt;Exclude&lt;U, S&gt;, [...R, S]&gt;
+// }[U] &amp;
+//   string[]
 &nbsp;
 /**
- * 格式化数字。
+ * 选中对象中的所有类型上可见的属性并返回。
  *
- * @param value 要格式化的数字
- * @param options 选项
- * @returns 返回格式化后的数值
- * @example
- * ```typescript
- * formatNumber(1314.56789) // =&gt; '1,314.56789'
- * formatNumber(1314.56789, { thousandsSeparator: ' ' }) // =&gt; '1 314.56789'
- * formatNumber(1314.56789, { thousandthsSeparator: ',' }) // =&gt; '1,314.567,89'
- * ```
+ * @param data 对象
+ * @param keys 属性列表
  */
-export function formatNumber(
-  value: number,
-  options?: FormatNumberOptions,
-): string {
-  const { thousandsSeparator = ',', thousandthsSeparator = '' } = options || {}
-&nbsp;
-  let [integer, decimal = ''] = String(Math.abs(value)).split('.')
-&nbsp;
-  if (thousandsSeparator !== '') {
-    let result = ''
-    while (integer.length &gt; 3) {
-      result = `${thousandsSeparator}${integer.slice(-3)}${result}`
-      integer = integer.slice(0, integer.length - 3)
-    }
-    integer = `${integer}${result}`
-  }
-&nbsp;
-  if (thousandthsSeparator !== '') {
-    let result = ''
-    while (decimal.length &gt; 3) {
-      result = `${result}${decimal.slice(0, 3)}${thousandthsSeparator}`
-      decimal = decimal.slice(3)
-    }
-    decimal = `${result}${decimal}`
-  }
-&nbsp;
-  const numeral = `${value &lt; 0 ? '-' : ''}${integer}${
-    decimal ? `.${decimal}` : ''
-  }`
-&nbsp;
-  return numeral
+export function pickAll&lt;
+  T extends Record&lt;string, any&gt;,
+  K extends keyof T,
+  Tuple extends ReadonlyArray&lt;K&gt;,
+&gt;(data: T, keys: TupleOf&lt;Tuple, K&gt;): T {
+  return pick(data, keys as any) as any
 }
 &nbsp;</pre></td></tr></table></pre>
 
