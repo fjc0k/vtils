@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.86.0](https://github.com/fjc0k/vtils/compare/v4.85.3...v4.86.0) (2023-07-31)
+
+### Features
+
+- **utils:** 新增 pickAll ([07ee03e](https://github.com/fjc0k/vtils/commit/07ee03ecc4406cb3bd04b23a189ddd5243eb5cf5))
+
 ### [4.85.3](https://github.com/fjc0k/vtils/compare/v4.85.2...v4.85.3) (2023-07-16)
 
 ### Bug Fixes
