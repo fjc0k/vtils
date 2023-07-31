@@ -115,6 +115,7 @@ rich://{"url":"***","desc":"***"}
 |  [parseDataUrl(dataUrl)](./utils.parsedataurl.md) | 解析 Data URL。 |
 |  [parseUrlQueryString(query, options)](./utils.parseurlquerystring.md) | <p>解析 url 查询字符串。</p><p>兼容以 <code>?</code> 开头的查询字符串，因此你可以直接传入 <code>location.search</code> 的值。</p> |
 |  [pascalCase(text)](./utils.pascalcase.md) | 转换文本为没有分隔符的大写单词字符串。 |
+|  [pickAll(data, keys)](./utils.pickall.md) | 选中对象中的所有类型上可见的属性并返回。 |
 |  [placeKitten(size)](./utils.placekitten.md) | 给定大小获取占位猫咪图片。 |
 |  [placeKitten(width, height)](./utils.placekitten_1.md) | 给定宽高获取占位猫咪图片。 |
 |  [pMap(list, callback)](./utils.pmap.md) | <code>Promise.all(data.map(callback))</code> 的简写。 |
