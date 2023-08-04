@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.87.0](https://github.com/fjc0k/vtils/compare/v4.86.0...v4.87.0) (2023-08-04)
+
+### Features
+
+- **validator:** 新增 getZhCN ([1e47c14](https://github.com/fjc0k/vtils/commit/1e47c1477e01737f9c2778ada6068276b3522c02))
+
 ## [4.86.0](https://github.com/fjc0k/vtils/compare/v4.85.3...v4.86.0) (2023-07-31)
 
 ### Features
