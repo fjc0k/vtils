@@ -139,7 +139,8 @@
     "tough-cookie": "^4.0.0",
     "tough-cookie-redisstore": "^0.0.4",
     "typed-query-selector": "^2.6.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@microsoft/api-documenter": "^7.22.4",
