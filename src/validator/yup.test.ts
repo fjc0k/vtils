@@ -502,4 +502,77 @@ describe('yup', () => {
     )
     expect(1).toBe(1)
   })
+
+  // test('bug: 数组内对象字段会强制必填-前置验证', () => {
+  //   type Message = {
+  //     url: string
+  //     info?: {
+  //       name: string
+  //     }
+  //   }
+
+  //   const _ = yup
+  //   const messageSchema: yup.GetSchema<RequiredDeep<Message>> = _.object($ =>
+  //     $.shape({
+  //       url: _.string().required(),
+  //       info: _.object($ =>
+  //         $.shape({
+  //           name: _.string().required(),
+  //         }),
+  //       ),
+  //     }),
+  //   )
+
+  //   expect(
+  //     messageSchema.validatePlusSync({
+  //       url: 'heee',
+  //     } as Message as any),
+  //   ).toMatchSnapshot()
+  // })
+
+  // test('bug: 数组内对象字段会强制必填', () => {
+  //   type Message = {
+  //     id: number
+  //     images: Array<{
+  //       url: string
+  //       info?: {
+  //         name: string
+  //       }
+  //     }>
+  //   }
+
+  //   const _ = yup
+  //   const messageSchema: yup.GetSchema<RequiredDeep<Message>> = _.object($ =>
+  //     $.shape({
+  //       id: _.number().required(),
+  //       images: _.array($ =>
+  //         $.required()
+  //           .min(1)
+  //           .of(
+  //             _.object($ =>
+  //               $.shape({
+  //                 url: _.string().required(),
+  //                 info: _.object($ =>
+  //                   $.shape({
+  //                     name: _.string().required(),
+  //                   }),
+  //                 ),
+  //               }),
+  //             ),
+  //           ),
+  //       ),
+  //     }),
+  //   )
+
+  //   expect(
+  //     messageSchema.validatePlusSync({
+  //       id: 1,
+  //       images: [
+  //         {
+  //           url: 'heee',
+  //         },
+  //       ],
+  //     } as Message as any),
+  //   ).toMatchSnapshot()
+  // })
 })
