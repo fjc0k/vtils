@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`locale 中文-自定义label 1`] = `"id必须是一个数字"`;
