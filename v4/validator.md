@@ -17,5 +17,6 @@
 |  Variable | Description |
 |  --- | --- |
 |  [enUS](./validator.enus.md) |  |
+|  [getZhCN](./validator.getzhcn.md) |  |
 |  [zhCN](./validator.zhcn.md) |  |
 
