@@ -9,4 +9,12 @@ export class VaeNumberSchema extends VaeBaseSchema<number> {
       path: [],
     })
   }
+
+  max(maxNumber: number, message: VaeLocaleMessage = VaeLocale.number.min) {
+    return this.check({
+      fn: v => v <= maxNumber,
+      message: message,
+      path: [],
+    })
+  }
 }
