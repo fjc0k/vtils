@@ -66,8 +66,19 @@ export abstract class VaeBaseSchema<T = any> {
       } {
     const isRoot = !ctx
     ctx ??= new VaeContext()
-    for (let i = 0; i < this._processors.length; i++) {
-      const processor = this._processors[i]
+
+    const processors = this._processors.slice()
+    // 对于数组，将 element 的验证移到最后
+    if (this instanceof VaeArraySchema) {
+      processors.sort(
+        (a, b) =>
+          (typeof b === 'object' && b.fn instanceof VaeBaseSchema ? 0 : 1) -
+          (typeof a === 'object' && a.fn instanceof VaeBaseSchema ? 0 : 1),
+      )
+    }
+
+    for (let i = 0; i < processors.length; i++) {
+      const processor = processors[i]
       if (typeof processor === 'object') {
         const { fn, message, messageParams, path, tag } = processor
         if (fn instanceof VaeBaseSchema) {

@@ -9,12 +9,12 @@ describe('vae', () => {
       info: v.object({
         gender: v.string(),
       }),
-      images: v.array(v.string().min(2)),
+      images: v.array(v.string().min(2)).min(2),
     })
     const res = schema.safeParse({
-      id: 'oo',
-      name: 'dd3',
-      images: `['22', ';']`,
+      id: '1',
+      name: '00dd344',
+      images: ['22', ';9999'],
     })
     if (res.success) {
       console.log(res.data)
