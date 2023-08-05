@@ -8,7 +8,7 @@ export class VaeContext {
 
   withPath(path: VaeBaseSchemaPath, cb: () => any) {
     const oldPath = this.getPathSnapshot()
-    this.path.push(...path)
+    this.path = path
     cb()
     this.path = oldPath
   }

@@ -1,3 +1,4 @@
+import { VaeArraySchema } from './VaeArraySchema'
 import { VaeNumberSchema } from './VaeNumberSchema'
 import { VaeObjectSchema } from './VaeObjectSchema'
 import { VaeStringSchema } from './VaeStringSchema'
@@ -12,4 +13,8 @@ export function number() {
 
 export function object(schema?: any) {
   return new VaeObjectSchema(schema)
+}
+
+export function array(schema?: any) {
+  return new VaeArraySchema(schema)
 }
