@@ -1,3 +1,15 @@
+import { isBoolean } from 'lodash-uni'
 import { VaeBaseSchema } from './VaeBaseSchema'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
-export class VaeBooleanSchema extends VaeBaseSchema<boolean> {}
+export class VaeBooleanSchema<
+  T extends boolean = boolean,
+> extends VaeBaseSchema<T> {
+  constructor(message: VaeLocaleMessage = VaeLocale.boolean.type) {
+    super()
+    this.check({
+      fn: isBoolean,
+      message: message,
+    })
+  }
+}
