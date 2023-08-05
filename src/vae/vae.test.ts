@@ -1,4 +1,4 @@
-import * as v from './vae'
+import { v } from './vae'
 
 describe('vae', () => {
   test('ok', () => {
