@@ -6,27 +6,27 @@ import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
 export type VaeBaseSchemaPath = Array<string | number>
 
-export type VaeBaseSchemaCheckPayload<T> =
-  | {
-      transform?: false
-      fn: ((value: T) => boolean) | VaeBaseSchema
-      message: VaeLocaleMessage
-      path?: VaeBaseSchemaPath
-      tag?: string
-    }
-  | {
-      transform: true
-      fn: (value: T) => T
-      message?: undefined
-      path?: undefined
-      tag?: undefined
-    }
+export type VaeBaseSchemaCheckPayload<T> = {
+  fn: ((value: T) => boolean) | VaeBaseSchema
+  message: VaeLocaleMessage
+  path?: VaeBaseSchemaPath
+  tag?: string
+}
+
+export type VaeBaseSchemaTransformPayload<T> = (value: T) => T
 
 export abstract class VaeBaseSchema<T = any> {
-  private checks: VaeBaseSchemaCheckPayload<T>[] = []
+  private processors: Array<
+    VaeBaseSchemaCheckPayload<T> | VaeBaseSchemaTransformPayload<T>
+  > = []
 
   check(payload: VaeBaseSchemaCheckPayload<T>) {
-    this.checks.push(payload)
+    this.processors.push(payload)
+    return this
+  }
+
+  transform(payload: VaeBaseSchemaTransformPayload<T>) {
+    this.processors.push(payload)
     return this
   }
 
@@ -39,7 +39,9 @@ export abstract class VaeBaseSchema<T = any> {
   }
 
   isRequired() {
-    return this.checks.some(item => item.tag === 'required')
+    return this.processors.some(
+      item => typeof item === 'object' && item.tag === 'required',
+    )
   }
 
   safeParse(
@@ -56,10 +58,10 @@ export abstract class VaeBaseSchema<T = any> {
       } {
     const isRoot = !ctx
     ctx ??= new VaeContext()
-    for (let i = 0; i < this.checks.length; i++) {
-      const check = this.checks[i]
-      if (!check.transform) {
-        const { fn, message, path, tag } = check
+    for (let i = 0; i < this.processors.length; i++) {
+      const processor = this.processors[i]
+      if (typeof processor === 'object') {
+        const { fn, message, path, tag } = processor
         if (fn instanceof VaeBaseSchema) {
           // const issueCount = ctx.issues.length
           const pathData = path ? get(data, path) : data
@@ -87,7 +89,7 @@ export abstract class VaeBaseSchema<T = any> {
           break
         }
       } else {
-        data = check.fn(data)
+        data = processor(data)
       }
     }
     if (isRoot) {

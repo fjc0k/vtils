@@ -53,4 +53,10 @@ export class VaeLocale {
   static enum = {
     type: 'enum type',
   }
+
+  static date = {
+    type: 'date type',
+    min: 'date min',
+    max: 'date max',
+  }
 }

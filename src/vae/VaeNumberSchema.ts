@@ -1,4 +1,5 @@
-import { isInteger, isNaN, isNumber } from 'lodash-uni'
+import { isInteger, toNumber } from 'lodash-uni'
+import { isNumeric } from '../utils'
 import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
@@ -8,9 +9,9 @@ export class VaeNumberSchema<
   constructor(message: VaeLocaleMessage = VaeLocale.number.type) {
     super()
     this.check({
-      fn: v => isNumber(v) && !isNaN(v),
+      fn: isNumeric,
       message: message,
-    })
+    }).transform(toNumber as any)
   }
 
   min(value: number, message: VaeLocaleMessage = VaeLocale.number.min) {

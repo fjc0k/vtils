@@ -7,7 +7,7 @@ export class VaeBooleanSchema<
 > extends VaeBaseSchema<T> {
   constructor(message: VaeLocaleMessage = VaeLocale.boolean.type) {
     super()
-    this.check({
+    this.transform(Boolean as any).check({
       fn: isBoolean,
       message: message,
     })
