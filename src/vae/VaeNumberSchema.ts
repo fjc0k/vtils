@@ -17,4 +17,18 @@ export class VaeNumberSchema extends VaeBaseSchema<number> {
       path: [],
     })
   }
+
+  // https://zod.dev/?id=numbers
+  gt() {}
+  gte() {}
+  lt() {}
+  lte() {}
+  int() {}
+  positive() {}
+  nonnegative() {}
+  negative() {}
+  nonpositive() {}
+  multipleOf() {}
+  finite() {}
+  safe() {}
 }
