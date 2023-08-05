@@ -1,4 +1,4 @@
-import { isBoolean } from 'lodash-uni'
+import { isBoolean } from '../utils'
 import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 

@@ -1,4 +1,4 @@
-import { isPlainObject } from 'lodash-uni'
+import { isPlainObject } from '../utils'
 import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 

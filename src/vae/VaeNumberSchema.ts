@@ -1,5 +1,4 @@
-import { isInteger, toNumber } from 'lodash-uni'
-import { isNumeric } from '../utils'
+import { isInteger, isNumeric, toNumber } from '../utils'
 import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
@@ -18,6 +17,9 @@ export class VaeNumberSchema<
     return this.check({
       fn: v => v >= value,
       message: message,
+      messageParams: {
+        min: value,
+      },
     })
   }
 
@@ -25,6 +27,9 @@ export class VaeNumberSchema<
     return this.check({
       fn: v => v <= value,
       message: message,
+      messageParams: {
+        max: value,
+      },
     })
   }
 
@@ -35,6 +40,9 @@ export class VaeNumberSchema<
     return this.check({
       fn: v => v < value,
       message: message,
+      messageParams: {
+        lessThan: value,
+      },
     })
   }
 
@@ -45,6 +53,9 @@ export class VaeNumberSchema<
     return this.check({
       fn: v => v > value,
       message: message,
+      messageParams: {
+        moreThan: value,
+      },
     })
   }
 

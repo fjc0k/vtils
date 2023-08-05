@@ -1,4 +1,4 @@
-import { get } from 'lodash-uni'
+import { get } from '../utils'
 import { VaeArraySchema } from './VaeArraySchema'
 import { VaeContext } from './VaeContext'
 import { VaeError } from './VaeError'
@@ -9,6 +9,7 @@ export type VaeBaseSchemaPath = Array<string | number>
 export type VaeBaseSchemaCheckPayload<T> = {
   fn: ((value: T) => boolean) | VaeBaseSchema
   message: VaeLocaleMessage
+  messageParams?: Record<string, any>
   path?: VaeBaseSchemaPath
   tag?: string
 }
@@ -16,17 +17,24 @@ export type VaeBaseSchemaCheckPayload<T> = {
 export type VaeBaseSchemaTransformPayload<T> = (value: T) => T
 
 export abstract class VaeBaseSchema<T = any> {
-  private processors: Array<
+  private _label: string | undefined
+
+  private _processors: Array<
     VaeBaseSchemaCheckPayload<T> | VaeBaseSchemaTransformPayload<T>
   > = []
 
   check(payload: VaeBaseSchemaCheckPayload<T>) {
-    this.processors.push(payload)
+    this._processors.push(payload)
     return this
   }
 
   transform(payload: VaeBaseSchemaTransformPayload<T>) {
-    this.processors.push(payload)
+    this._processors.push(payload)
+    return this
+  }
+
+  label(label: string) {
+    this._label = label
     return this
   }
 
@@ -39,7 +47,7 @@ export abstract class VaeBaseSchema<T = any> {
   }
 
   isRequired() {
-    return this.processors.some(
+    return this._processors.some(
       item => typeof item === 'object' && item.tag === 'required',
     )
   }
@@ -58,10 +66,10 @@ export abstract class VaeBaseSchema<T = any> {
       } {
     const isRoot = !ctx
     ctx ??= new VaeContext()
-    for (let i = 0; i < this.processors.length; i++) {
-      const processor = this.processors[i]
+    for (let i = 0; i < this._processors.length; i++) {
+      const processor = this._processors[i]
       if (typeof processor === 'object') {
-        const { fn, message, path, tag } = processor
+        const { fn, message, messageParams, path, tag } = processor
         if (fn instanceof VaeBaseSchema) {
           // const issueCount = ctx.issues.length
           const pathData = path ? get(data, path) : data
@@ -82,9 +90,18 @@ export abstract class VaeBaseSchema<T = any> {
           //   break
           // }
         } else if (!fn(data)) {
+          const fullPath = [...ctx.path, ...(path || [])]
           ctx.addIssue({
-            path: [...ctx.path, ...(path || [])],
-            message: message,
+            path: fullPath,
+            message:
+              typeof message === 'function'
+                ? message({
+                    path: fullPath,
+                    params: messageParams || {},
+                    value: data,
+                    label: this._label,
+                  })
+                : message,
           })
           break
         }

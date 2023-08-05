@@ -1,9 +1,12 @@
-import { endsWith, includes, isString, startsWith } from 'lodash-uni'
 import {
+  endsWith,
+  includes,
   isChineseIDCardNumber,
   isEmail,
   isPossibleChineseMobilePhoneNumber,
+  isString,
   isUrl,
+  startsWith,
 } from '../utils'
 import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
@@ -31,6 +34,9 @@ export class VaeStringSchema<
     return this.check({
       fn: v => v.length >= value,
       message: message,
+      messageParams: {
+        min: value,
+      },
     })
   }
 
@@ -38,6 +44,9 @@ export class VaeStringSchema<
     return this.check({
       fn: v => v.length <= value,
       message: message,
+      messageParams: {
+        max: value,
+      },
     })
   }
 
@@ -45,6 +54,9 @@ export class VaeStringSchema<
     return this.check({
       fn: v => v.length === value,
       message: message,
+      messageParams: {
+        length: value,
+      },
     })
   }
 
@@ -69,6 +81,9 @@ export class VaeStringSchema<
         return value.test(v)
       },
       message: message,
+      messageParams: {
+        regex: value,
+      },
     })
   }
 
@@ -79,6 +94,9 @@ export class VaeStringSchema<
     return this.check({
       fn: v => includes(v, value),
       message: message,
+      messageParams: {
+        includes: value,
+      },
     })
   }
 
@@ -89,6 +107,9 @@ export class VaeStringSchema<
     return this.check({
       fn: v => startsWith(v, value),
       message: message,
+      messageParams: {
+        startsWith: value,
+      },
     })
   }
 
@@ -99,21 +120,20 @@ export class VaeStringSchema<
     return this.check({
       fn: v => endsWith(v, value),
       message: message,
+      messageParams: {
+        endsWith: value,
+      },
     })
   }
 
-  chinesePhoneNumber(
-    message: VaeLocaleMessage = VaeLocale.string.chinesePhoneNumber,
-  ) {
+  phoneNumber(message: VaeLocaleMessage = VaeLocale.string.phoneNumber) {
     return this.check({
       fn: isPossibleChineseMobilePhoneNumber,
       message: message,
     })
   }
 
-  chineseIDCardNumber(
-    message: VaeLocaleMessage = VaeLocale.string.chineseIDCardNumber,
-  ) {
+  idCardNumber(message: VaeLocaleMessage = VaeLocale.string.idCardNumber) {
     return this.check({
       fn: isChineseIDCardNumber,
       message: message,

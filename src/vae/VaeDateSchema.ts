@@ -15,6 +15,9 @@ export class VaeDateSchema<T extends Date = Date> extends VaeBaseSchema<T> {
     this.check({
       fn: v => value.getTime() <= v.getTime(),
       message: message,
+      messageParams: {
+        min: value,
+      },
     })
   }
 
@@ -22,6 +25,9 @@ export class VaeDateSchema<T extends Date = Date> extends VaeBaseSchema<T> {
     this.check({
       fn: v => value.getTime() >= v.getTime(),
       message: message,
+      messageParams: {
+        max: value,
+      },
     })
   }
 }

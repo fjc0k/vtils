@@ -1,4 +1,4 @@
-import { isArray } from 'lodash-uni'
+import { isArray } from '../utils'
 import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
@@ -29,6 +29,9 @@ export class VaeArraySchema<T extends any[] = any[]> extends VaeBaseSchema<T> {
     return this.check({
       fn: v => v.length >= value,
       message: message,
+      messageParams: {
+        min: value,
+      },
     })
   }
 
@@ -36,6 +39,9 @@ export class VaeArraySchema<T extends any[] = any[]> extends VaeBaseSchema<T> {
     return this.check({
       fn: v => v.length <= value,
       message: message,
+      messageParams: {
+        max: value,
+      },
     })
   }
 
@@ -43,6 +49,9 @@ export class VaeArraySchema<T extends any[] = any[]> extends VaeBaseSchema<T> {
     return this.check({
       fn: v => v.length === value,
       message: message,
+      messageParams: {
+        length: value,
+      },
     })
   }
 }

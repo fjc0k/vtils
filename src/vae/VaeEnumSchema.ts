@@ -1,4 +1,4 @@
-import { includes, isArray, values } from 'lodash-uni'
+import { includes, isArray, values } from '../utils'
 import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
@@ -8,10 +8,14 @@ export class VaeEnumSchema<T extends any = any> extends VaeBaseSchema<T> {
     message: VaeLocaleMessage = VaeLocale.enum.type,
   ) {
     super()
+
+    const enumValues = isArray(value) ? value : values(value)
     this.check({
-      fn: v =>
-        isArray(value) ? includes(value, v) : includes(values(value), v),
+      fn: v => includes(enumValues, v),
       message: message,
+      messageParams: {
+        enum: enumValues,
+      },
     })
   }
 }

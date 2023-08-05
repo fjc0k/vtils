@@ -2,7 +2,12 @@ import { VaeArraySchema } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeDateSchema } from './VaeDateSchema'
 import { VaeEnumSchema } from './VaeEnumSchema'
-import { VaeLocaleMessage } from './VaeLocale'
+import {
+  VaeLocale,
+  VaeLocaleBuilder,
+  VaeLocaleMessage,
+  VaeLocaleShape,
+} from './VaeLocale'
 import { VaeNumberSchema } from './VaeNumberSchema'
 import { VaeObjectSchema } from './VaeObjectSchema'
 import { VaeStringSchema } from './VaeStringSchema'
@@ -18,4 +23,9 @@ export const v = {
     new VaeEnumSchema(value, message),
   date: (message?: VaeLocaleMessage) => new VaeDateSchema(message),
   boolean: (message?: VaeLocaleMessage) => new VaeBooleanSchema(message),
+
+  localeBuilder: VaeLocaleBuilder,
+  setLocale: (locale: VaeLocaleShape) => {
+    VaeLocale.$set(locale)
+  },
 }
