@@ -1,8 +1,16 @@
+import { get } from 'lodash-uni'
 import { VaeContext } from './VaeContext'
 import { VaeError } from './VaeError'
 import { VaeLocaleMessage } from './VaeLocale'
 
 export type VaeBaseSchemaPath = Array<string | number>
+
+export type VaeBaseSchemaCheckPayload<T> = {
+  fn: ((value: T) => boolean) | VaeBaseSchema
+  message: VaeLocaleMessage
+  path?: VaeBaseSchemaPath
+  tag?: string
+}
 
 // export type VaeBaseSchemaPayload<T> = {
 //   /** 上下文 */
@@ -16,24 +24,30 @@ export type VaeBaseSchemaPath = Array<string | number>
 // }
 
 export abstract class VaeBaseSchema<T = any> {
-  private checks: Array<{
-    check: (value: T) => boolean
-    message: VaeLocaleMessage
-  }> = []
+  private checks: VaeBaseSchemaCheckPayload<T>[] = []
 
-  check(check: (value: T) => boolean, message: VaeLocaleMessage) {
-    this.checks.push({
-      check,
-      message,
-    })
+  check(payload: VaeBaseSchemaCheckPayload<T>) {
+    this.checks.push(payload)
     return this
   }
 
   required() {
-    return this.check(v => v != null, '必填')
+    return this.check({
+      fn: v => v != null,
+      message: '必填',
+      tag: 'required',
+      path: [],
+    })
   }
 
-  safeParse(data: T):
+  isRequired() {
+    return this.checks.some(item => item.tag === 'required')
+  }
+
+  safeParse(
+    data: T,
+    ctx?: VaeContext,
+  ):
     | {
         success: true
         data: T
@@ -42,25 +56,31 @@ export abstract class VaeBaseSchema<T = any> {
         success: false
         error: VaeError
       } {
-    const ctx = new VaeContext()
+    const isRoot = !ctx
+    ctx ??= new VaeContext()
     for (let i = 0; i < this.checks.length; i++) {
-      const { check, message } = this.checks[i]
-      if (!check(data)) {
+      const { fn, message, path } = this.checks[i]
+      if (fn instanceof VaeBaseSchema) {
+        ctx.withPath(path || [], () => fn.safeParse(get(data, ctx!.path), ctx))
+      } else if (!fn(data)) {
         ctx.addIssue({
-          path: [],
+          path: ctx.getPathSnapshot(),
           message: message,
         })
       }
     }
-    if (ctx.issues.length) {
+    if (isRoot) {
+      if (ctx.issues.length) {
+        return {
+          success: false,
+          error: new VaeError(ctx.issues),
+        }
+      }
       return {
-        success: false,
-        error: new VaeError(),
+        success: true,
+        data: data,
       }
     }
-    return {
-      success: true,
-      data: data,
-    }
+    return {} as any
   }
 }

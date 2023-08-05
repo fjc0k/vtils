@@ -2,10 +2,10 @@ export type VaeLocaleMessage = string
 
 export class VaeLocale {
   static string = {
-    min: '',
+    min: 's min',
   }
 
   static number = {
-    min: '',
+    min: 'n min',
   }
 }

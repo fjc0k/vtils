@@ -10,6 +10,6 @@ export function number() {
   return new VaeNumberSchema()
 }
 
-export function object() {
-  return new VaeObjectSchema()
+export function object(schema?: any) {
+  return new VaeObjectSchema(schema)
 }

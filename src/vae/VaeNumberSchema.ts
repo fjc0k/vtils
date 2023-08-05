@@ -3,6 +3,10 @@ import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
 export class VaeNumberSchema extends VaeBaseSchema<number> {
   min(minNumber: number, message: VaeLocaleMessage = VaeLocale.number.min) {
-    return this.check(v => v >= minNumber, message)
+    return this.check({
+      fn: v => v >= minNumber,
+      message: message,
+      path: [],
+    })
   }
 }
