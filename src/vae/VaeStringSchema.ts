@@ -8,4 +8,23 @@ export class VaeStringSchema extends VaeBaseSchema<string> {
       message: message,
     })
   }
+
+  // https://zod.dev/?id=strings
+  max() {}
+  length() {}
+  email() {}
+  url() {}
+  emoji() {}
+  uuid() {}
+  cuid() {}
+  cuid2() {}
+  regex() {}
+  includes() {}
+  startsWith() {}
+  endsWith() {}
+  datetime() {}
+  ip() {}
+  trim() {}
+  toLowerCase() {}
+  toUpperCase() {}
 }
