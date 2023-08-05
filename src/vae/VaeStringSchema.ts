@@ -8,7 +8,9 @@ import {
 import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
-export class VaeStringSchema extends VaeBaseSchema<string> {
+export class VaeStringSchema<
+  T extends string = string,
+> extends VaeBaseSchema<T> {
   constructor(message: VaeLocaleMessage = VaeLocale.string.type) {
     super()
     this.check({
