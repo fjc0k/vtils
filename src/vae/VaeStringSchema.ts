@@ -19,23 +19,31 @@ export class VaeStringSchema<
     })
   }
 
-  min(minLength: number, message: VaeLocaleMessage = VaeLocale.string.min) {
+  required(message: VaeLocaleMessage = VaeLocale.base.required) {
     return this.check({
-      fn: v => v.length >= minLength,
+      fn: v => v != null && v !== '',
+      message: message,
+      tag: 'required',
+    })
+  }
+
+  min(value: number, message: VaeLocaleMessage = VaeLocale.string.min) {
+    return this.check({
+      fn: v => v.length >= value,
       message: message,
     })
   }
 
-  max(maxLength: number, message: VaeLocaleMessage = VaeLocale.string.max) {
+  max(value: number, message: VaeLocaleMessage = VaeLocale.string.max) {
     return this.check({
-      fn: v => v.length <= maxLength,
+      fn: v => v.length <= value,
       message: message,
     })
   }
 
-  length(len: number, message: VaeLocaleMessage = VaeLocale.string.length) {
+  length(value: number, message: VaeLocaleMessage = VaeLocale.string.length) {
     return this.check({
-      fn: v => v.length === len,
+      fn: v => v.length === value,
       message: message,
     })
   }
@@ -54,11 +62,11 @@ export class VaeStringSchema<
     })
   }
 
-  regex(regex: RegExp, message: VaeLocaleMessage = VaeLocale.string.regex) {
+  regex(value: RegExp, message: VaeLocaleMessage = VaeLocale.string.regex) {
     return this.check({
       fn: v => {
-        regex.lastIndex = 0
-        return regex.test(v)
+        value.lastIndex = 0
+        return value.test(v)
       },
       message: message,
     })
@@ -95,7 +103,6 @@ export class VaeStringSchema<
   }
 
   chinesePhoneNumber(
-    value: string,
     message: VaeLocaleMessage = VaeLocale.string.chinesePhoneNumber,
   ) {
     return this.check({
@@ -105,7 +112,6 @@ export class VaeStringSchema<
   }
 
   chineseIDCardNumber(
-    value: string,
     message: VaeLocaleMessage = VaeLocale.string.chineseIDCardNumber,
   ) {
     return this.check({
