@@ -1,14 +1,24 @@
+import { isPlainObject } from 'lodash-uni'
 import { VaeBaseSchema } from './VaeBaseSchema'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
-export class VaeObjectSchema extends VaeBaseSchema<{}> {
-  constructor(schema?: any) {
+export class VaeObjectSchema<
+  T extends Record<any, any> = Record<any, any>,
+> extends VaeBaseSchema<T> {
+  constructor(schema?: any, message: VaeLocaleMessage = VaeLocale.object.type) {
     super()
+
+    this.check({
+      fn: isPlainObject,
+      message: message,
+    })
 
     if (schema) {
       this.shape(schema)
     }
   }
 
+  // TODO
   shape(schema: any) {
     Object.keys(schema).forEach(key => {
       this.check({
