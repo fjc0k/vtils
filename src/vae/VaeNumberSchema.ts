@@ -13,44 +13,36 @@ export class VaeNumberSchema<
     })
   }
 
-  min(minNumber: number, message: VaeLocaleMessage = VaeLocale.number.min) {
-    return this.check({
-      fn: v => v >= minNumber,
-      message: message,
-    })
-  }
-
-  max(maxNumber: number, message: VaeLocaleMessage = VaeLocale.number.max) {
-    return this.check({
-      fn: v => v <= maxNumber,
-      message: message,
-    })
-  }
-
-  gt(value: number, message: VaeLocaleMessage = VaeLocale.number.gt) {
-    return this.check({
-      fn: v => v > value,
-      message: message,
-    })
-  }
-
-  gte(value: number, message: VaeLocaleMessage = VaeLocale.number.gte) {
+  min(value: number, message: VaeLocaleMessage = VaeLocale.number.min) {
     return this.check({
       fn: v => v >= value,
       message: message,
     })
   }
 
-  lt(value: number, message: VaeLocaleMessage = VaeLocale.number.lt) {
+  max(value: number, message: VaeLocaleMessage = VaeLocale.number.max) {
+    return this.check({
+      fn: v => v <= value,
+      message: message,
+    })
+  }
+
+  lessThan(
+    value: number,
+    message: VaeLocaleMessage = VaeLocale.number.lessThan,
+  ) {
     return this.check({
       fn: v => v < value,
       message: message,
     })
   }
 
-  lte(value: number, message: VaeLocaleMessage = VaeLocale.number.lte) {
+  moreThan(
+    value: number,
+    message: VaeLocaleMessage = VaeLocale.number.moreThan,
+  ) {
     return this.check({
-      fn: v => v <= value,
+      fn: v => v > value,
       message: message,
     })
   }
