@@ -351,5 +351,12 @@ describe('vae', () => {
       isAdmin: v.boolean().default(false),
     })
     expect(schema.parse({ id: 1 })).toMatchSnapshot()
+    expect(schema.parse({ id: 1, name: 'jack' })).toMatchSnapshot()
+    expect(
+      schema.parse({ id: 1, name: 'jack', gender: 'male' }),
+    ).toMatchSnapshot()
+    expect(
+      schema.parse({ id: 1, name: 'jack', gender: 'male', images: [''] }),
+    ).toMatchSnapshot()
   })
 })

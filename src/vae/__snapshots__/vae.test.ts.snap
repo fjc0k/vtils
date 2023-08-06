@@ -746,10 +746,63 @@ Object {
 
 exports[`vae object 1`] = `
 Object {
+  "issues": Array [
+    Object {
+      "message": "name应必填",
+      "path": Array [
+        "name",
+      ],
+    },
+    Object {
+      "message": "gender应必填",
+      "path": Array [
+        "gender",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae object 2`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "gender应必填",
+      "path": Array [
+        "gender",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae object 3`] = `
+Object {
   "data": Object {
+    "gender": "male",
     "id": 1,
+    "images": Array [],
+    "isAdmin": false,
+    "name": "jack",
   },
   "success": true,
+}
+`;
+
+exports[`vae object 4`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "images.0应非空",
+      "path": Array [
+        "images",
+        0,
+      ],
+    },
+  ],
+  "success": false,
 }
 `;
 

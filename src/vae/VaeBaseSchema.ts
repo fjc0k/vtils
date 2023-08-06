@@ -125,8 +125,8 @@ export abstract class VaeBaseSchema<T extends any = any> {
         const fullPath = [...ctx.path, ...path]
         if (fn instanceof VaeBaseSchema) {
           const pathData = path.length ? get(data, path) : data
-          if (pathData != null) {
-            if (this._options.type === 'array' && tag === 'element') {
+          if (this._options.type === 'array' && tag === 'element') {
+            if (pathData) {
               ;(pathData as any[]).forEach((item, index) => {
                 ctx!.withPath([...fullPath, index], () => {
                   const res = fn.parse(item, ctx)
@@ -135,18 +135,18 @@ export abstract class VaeBaseSchema<T extends any = any> {
                   }
                 })
               })
-            } else {
-              ctx.withPath(fullPath, () => {
-                const res = fn.parse(pathData, ctx)
-                if (res.success) {
-                  if (path.length) {
-                    set(data as any, path, res.data)
-                  } else {
-                    data = res.data
-                  }
-                }
-              })
             }
+          } else {
+            ctx.withPath(fullPath, () => {
+              const res = fn.parse(pathData, ctx)
+              if (res.success) {
+                if (path.length) {
+                  set(data as any, path, res.data)
+                } else {
+                  data = res.data
+                }
+              }
+            })
           }
         } else if (!fn(data)) {
           ctx.addIssue({
