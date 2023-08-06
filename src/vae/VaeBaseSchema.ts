@@ -66,7 +66,7 @@ export abstract class VaeBaseSchema<T extends any = any> {
   default(value: T | (() => T)) {
     return this.transform(v =>
       v == null ||
-      // string 时空字符串也视为必填
+      // string 时空字符串也视为无值
       (this._options.type === 'string' && v === '')
         ? typeof value === 'function'
           ? (value as any)()
