@@ -1,4 +1,4 @@
-import { DotPath, RequiredDeep } from '../types'
+import { DotPath, RequiredBy, RequiredDeep } from '../types'
 import {
   get,
   includes,
@@ -27,8 +27,16 @@ export type VaeSchemaType =
   | 'boolean'
   | 'array'
 
-export type VaeSchemaOptions = {
+export type VaeSchemaOptions<T> = {
   type: VaeSchemaType
+  label?: string
+  default?: T | (() => T)
+  required?: boolean
+  requiredMessage?: VaeLocaleMessage
+  objectKeys?: string[]
+  stringTrim?: boolean
+  stringEmptyable?: boolean
+  processors?: Array<VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>>
 }
 
 export type VaeSchemaPath = Array<string | number>
@@ -93,52 +101,44 @@ export type VaeSchemaOf<T0, T = RequiredDeep<T0>> =
       VaeObjectSchema<T>
 
 export abstract class VaeSchema<T extends any = any> {
-  constructor(private _options: VaeSchemaOptions) {}
+  protected _options!: RequiredBy<VaeSchemaOptions<T>, 'processors'>
 
-  private _label: string | undefined
-
-  private _default: T | (() => T) | undefined
-
-  private _required: boolean | undefined
-  private _requiredMessage: VaeLocaleMessage | undefined
-
-  protected _objectKeys: string[] | undefined
-
-  protected _stringTrim: boolean | undefined
-  protected _stringEmptyable: boolean | undefined
-
-  private _processors: Array<
-    VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>
-  > = []
+  constructor(options: VaeSchemaOptions<T>) {
+    this._options = {
+      ...options,
+      processors: options.processors || [],
+    }
+  }
 
   check(payload: VaeSchemaCheckPayload<T>) {
-    this._processors.push(payload)
+    this._options.processors.push(payload)
     return this
   }
 
   transform(payload: VaeSchemaTransformPayload<T>) {
-    this._processors.push(payload)
+    this._options.processors.push(payload)
     return this
   }
 
   label(label: string) {
-    this._label = label
+    this._options.label = label
     return this
   }
 
   default(value: T | (() => T)) {
-    this._default = value
+    this._options.default = value
     return this
   }
 
   required(message: VaeLocaleMessage = VaeLocale.base.required) {
-    this._required = true
-    this._requiredMessage = message
+    this._options.required = true
+    this._options.requiredMessage = message
     return this
   }
 
   optional() {
-    this._required = false
+    this._options.required = false
+    this._options.requiredMessage = undefined
     return this
   }
 
@@ -165,10 +165,12 @@ export abstract class VaeSchema<T extends any = any> {
     return this.check({ fn, message, path })
   }
 
+  // clone() {}
+
   parse(data: T, options?: VaeSchemaParseOptions): VaeSchemaParseResult<T> {
     // 字符串 trim
     if (
-      this._stringTrim &&
+      this._options.stringTrim &&
       this._options.type === 'string' &&
       typeof data === 'string'
     ) {
@@ -177,36 +179,38 @@ export abstract class VaeSchema<T extends any = any> {
 
     let dataIsNil =
       data == null ||
-      (this._options.type === 'string' && !this._stringEmptyable && data === '')
+      (this._options.type === 'string' &&
+        !this._options.stringEmptyable &&
+        data === '')
 
     // 默认值
-    if (dataIsNil && this._default != null) {
+    if (dataIsNil && this._options.default != null) {
       data =
-        typeof this._default === 'function'
-          ? (this._default as any)()
-          : this._default
+        typeof this._options.default === 'function'
+          ? (this._options.default as any)()
+          : this._options.default
       dataIsNil =
         data == null ||
         (this._options.type === 'string' &&
-          !this._stringEmptyable &&
+          !this._options.stringEmptyable &&
           data === '')
     }
 
     // 非必填
-    if (dataIsNil && !this._required) {
+    if (dataIsNil && !this._options.required) {
       return {
         success: true,
         data: data,
       }
     }
 
-    const processors = this._processors.slice()
+    const processors = this._options.processors.slice()
 
     // 必填规则始终前置
-    if (this._required) {
+    if (this._options.required) {
       processors.unshift({
         fn: () => !dataIsNil,
-        message: this._requiredMessage!,
+        message: this._options.requiredMessage!,
       })
     }
 
@@ -278,7 +282,7 @@ export abstract class VaeSchema<T extends any = any> {
                     path: fullPath,
                     params: messageParams || {},
                     value: data,
-                    label: this._label,
+                    label: this._options.label,
                   })
                 : message,
           })
@@ -305,8 +309,8 @@ export abstract class VaeSchema<T extends any = any> {
       data:
         !options.preserveUnknownKeys &&
         this._options.type === 'object' &&
-        this._objectKeys?.length
-          ? (pick(data, this._objectKeys) as any)
+        this._options.objectKeys?.length
+          ? (pick(data, this._options.objectKeys) as any)
           : data,
     }
   }

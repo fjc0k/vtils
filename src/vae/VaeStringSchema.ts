@@ -135,12 +135,12 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
   }
 
   trim() {
-    this._stringTrim = true
+    this._options.stringTrim = true
     return this
   }
 
   emptyable() {
-    this._stringEmptyable = true
+    this._options.stringEmptyable = true
     return this
   }
 }

@@ -761,6 +761,13 @@ Object {
 }
 `;
 
+exports[`vae optional 3`] = `
+Object {
+  "data": "",
+  "success": true,
+}
+`;
+
 exports[`vae preserveUnknownKeys 1`] = `
 Object {
   "data": Object {

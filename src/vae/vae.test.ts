@@ -496,5 +496,6 @@ describe('vae', () => {
     const schema = v.string().required()
     expect(schema.parse('')).toMatchSnapshot()
     expect(schema.optional().parse('')).toMatchSnapshot()
+    expect(schema.parse('')).toMatchSnapshot()
   })
 })

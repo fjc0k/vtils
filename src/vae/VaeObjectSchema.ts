@@ -29,7 +29,7 @@ export class VaeObjectSchema<
 
   shape(shape: VaeObjectSchemaShapeOf<T>) {
     const keys = Object.keys(shape)
-    this._objectKeys = keys
+    this._options.objectKeys = keys
     keys.forEach(key => {
       this.check({
         fn: shape[key],
