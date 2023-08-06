@@ -4,7 +4,7 @@ import { VaeError } from './VaeError'
 import { VaeIssue } from './VaeIssue'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
-export type VaeBaseSchemaType =
+export type VaeSchemaType =
   | 'string'
   | 'number'
   | 'object'
@@ -13,23 +13,23 @@ export type VaeBaseSchemaType =
   | 'boolean'
   | 'array'
 
-export type VaeBaseSchemaOptions = {
-  type: VaeBaseSchemaType
+export type VaeSchemaOptions = {
+  type: VaeSchemaType
 }
 
-export type VaeBaseSchemaPath = Array<string | number>
+export type VaeSchemaPath = Array<string | number>
 
-export type VaeBaseSchemaCheckPayload<T> = {
-  fn: ((value: T) => boolean) | VaeBaseSchema
+export type VaeSchemaCheckPayload<T> = {
+  fn: ((value: T) => boolean) | VaeSchema
   message: VaeLocaleMessage
   messageParams?: Record<string, any>
-  path?: VaeBaseSchemaPath
+  path?: VaeSchemaPath
   tag?: string
 }
 
-export type VaeBaseSchemaTransformPayload<T> = (value: T) => T
+export type VaeSchemaTransformPayload<T> = (value: T) => T
 
-export type VaeBaseSchemaParseResult<T> =
+export type VaeSchemaParseResult<T> =
   | {
       success: true
       data: T
@@ -39,8 +39,8 @@ export type VaeBaseSchemaParseResult<T> =
       issues: VaeIssue[]
     }
 
-export abstract class VaeBaseSchema<T extends any = any> {
-  constructor(private _options: VaeBaseSchemaOptions) {}
+export abstract class VaeSchema<T extends any = any> {
+  constructor(private _options: VaeSchemaOptions) {}
 
   private _label: string | undefined
 
@@ -50,15 +50,15 @@ export abstract class VaeBaseSchema<T extends any = any> {
   private _requiredMessage: VaeLocaleMessage | undefined
 
   private _processors: Array<
-    VaeBaseSchemaCheckPayload<T> | VaeBaseSchemaTransformPayload<T>
+    VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>
   > = []
 
-  check(payload: VaeBaseSchemaCheckPayload<T>) {
+  check(payload: VaeSchemaCheckPayload<T>) {
     this._processors.push(payload)
     return this
   }
 
-  transform(payload: VaeBaseSchemaTransformPayload<T>) {
+  transform(payload: VaeSchemaTransformPayload<T>) {
     this._processors.push(payload)
     return this
   }
@@ -79,7 +79,7 @@ export abstract class VaeBaseSchema<T extends any = any> {
     return this
   }
 
-  parse(data: T, ctx?: VaeContext): VaeBaseSchemaParseResult<T> {
+  parse(data: T, ctx?: VaeContext): VaeSchemaParseResult<T> {
     // 默认值
     if (this._default != null && data == null) {
       data =
@@ -123,7 +123,7 @@ export abstract class VaeBaseSchema<T extends any = any> {
       if (typeof processor === 'object') {
         const { fn, message, messageParams, path = [], tag } = processor
         const fullPath = [...ctx.path, ...path]
-        if (fn instanceof VaeBaseSchema) {
+        if (fn instanceof VaeSchema) {
           const pathData = path.length ? get(data, path) : data
           if (this._options.type === 'array' && tag === 'element') {
             if (pathData) {

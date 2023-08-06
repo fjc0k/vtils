@@ -1,12 +1,12 @@
-import { VaeBaseSchemaPath } from './VaeBaseSchema'
 import { VaeIssue } from './VaeIssue'
+import { VaeSchemaPath } from './VaeSchema'
 
 export class VaeContext {
-  path: VaeBaseSchemaPath = []
+  path: VaeSchemaPath = []
 
   issues: VaeIssue[] = []
 
-  withPath(path: VaeBaseSchemaPath, cb: () => any) {
+  withPath(path: VaeSchemaPath, cb: () => any) {
     const oldPath = this.getPathSnapshot()
     this.path = path
     cb()

@@ -8,12 +8,10 @@ import {
   isUrl,
   startsWith,
 } from '../utils'
-import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
+import { VaeSchema } from './VaeSchema'
 
-export class VaeStringSchema<
-  T extends string = string,
-> extends VaeBaseSchema<T> {
+export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
   constructor(message: VaeLocaleMessage = VaeLocale.string.type) {
     super({
       type: 'string',

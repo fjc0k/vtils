@@ -1,9 +1,9 @@
 import { formatDate } from '../date'
-import { VaeBaseSchemaPath } from './VaeBaseSchema'
+import { VaeSchemaPath } from './VaeSchema'
 
 export type VaeLocaleMessagePayload = {
   label?: string
-  path: VaeBaseSchemaPath
+  path: VaeSchemaPath
   value: any
   params: Record<string, any>
 }

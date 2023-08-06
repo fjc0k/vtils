@@ -1,10 +1,10 @@
 import { isPlainObject } from '../utils'
-import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
+import { VaeSchema } from './VaeSchema'
 
 export class VaeObjectSchema<
   T extends Record<any, any> = Record<any, any>,
-> extends VaeBaseSchema<T> {
+> extends VaeSchema<T> {
   constructor(schema?: any, message: VaeLocaleMessage = VaeLocale.object.type) {
     super({
       type: 'object',

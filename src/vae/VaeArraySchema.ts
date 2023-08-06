@@ -1,8 +1,8 @@
 import { isArray } from '../utils'
-import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
+import { VaeSchema } from './VaeSchema'
 
-export class VaeArraySchema<T extends any[] = any[]> extends VaeBaseSchema<T> {
+export class VaeArraySchema<T extends any[] = any[]> extends VaeSchema<T> {
   constructor(schema?: any, message: VaeLocaleMessage = VaeLocale.array.type) {
     super({
       type: 'array',

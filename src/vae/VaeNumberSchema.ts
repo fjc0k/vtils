@@ -1,10 +1,8 @@
 import { isInteger, isNumeric, toNumber } from '../utils'
-import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
+import { VaeSchema } from './VaeSchema'
 
-export class VaeNumberSchema<
-  T extends number = number,
-> extends VaeBaseSchema<T> {
+export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
   constructor(message: VaeLocaleMessage = VaeLocale.number.type) {
     super({
       type: 'number',

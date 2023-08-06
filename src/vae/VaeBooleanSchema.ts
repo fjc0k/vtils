@@ -1,10 +1,10 @@
 import { isBoolean } from '../utils'
-import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
+import { VaeSchema } from './VaeSchema'
 
 export class VaeBooleanSchema<
   T extends boolean = boolean,
-> extends VaeBaseSchema<T> {
+> extends VaeSchema<T> {
   constructor(message: VaeLocaleMessage = VaeLocale.boolean.type) {
     super({
       type: 'boolean',

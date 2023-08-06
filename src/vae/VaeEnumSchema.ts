@@ -1,8 +1,8 @@
 import { includes, isArray, values } from '../utils'
-import { VaeBaseSchema } from './VaeBaseSchema'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
+import { VaeSchema } from './VaeSchema'
 
-export class VaeEnumSchema<T extends any = any> extends VaeBaseSchema<T> {
+export class VaeEnumSchema<T extends any = any> extends VaeSchema<T> {
   constructor(
     value: T[] | Record<any, T>,
     message: VaeLocaleMessage = VaeLocale.enum.type,

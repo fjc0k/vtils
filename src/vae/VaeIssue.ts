@@ -1,6 +1,6 @@
-import { VaeBaseSchemaPath } from './VaeBaseSchema'
+import { VaeSchemaPath } from './VaeSchema'
 
 export type VaeIssue = {
-  path: VaeBaseSchemaPath
+  path: VaeSchemaPath
   message: string
 }
