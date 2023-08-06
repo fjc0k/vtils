@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.89.0](https://github.com/fjc0k/vtils/compare/v4.88.0...v4.89.0) (2023-08-06)
+
+### Features
+
+- **vae:** string emptyable ([83c1035](https://github.com/fjc0k/vtils/commit/83c1035dc2302d518eb884e14548aa208072990a))
+
 ## [4.88.0](https://github.com/fjc0k/vtils/compare/v4.87.0...v4.88.0) (2023-08-06)
 
 ### Features
