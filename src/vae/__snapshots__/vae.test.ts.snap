@@ -171,6 +171,52 @@ Object {
 }
 `;
 
+exports[`vae case: pass1-pass2 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "密码2应等于密码1",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae case: pass1-pass2 2`] = `
+Object {
+  "data": Object {
+    "password": "123",
+    "password2": "123",
+  },
+  "success": true,
+}
+`;
+
+exports[`vae case: pass1-pass2 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "密码2应等于密码1",
+      "path": Array [
+        "password2",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae case: pass1-pass2 4`] = `
+Object {
+  "data": Object {
+    "password": "123",
+    "password2": "123",
+  },
+  "success": true,
+}
+`;
+
 exports[`vae date 1`] = `
 Object {
   "data": undefined,

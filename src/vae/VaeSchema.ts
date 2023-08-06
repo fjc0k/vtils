@@ -1,4 +1,4 @@
-import { RequiredDeep } from '../types'
+import { DotPath, RequiredDeep } from '../types'
 import {
   get,
   includes,
@@ -146,6 +146,15 @@ export abstract class VaeSchema<T extends any = any> {
         enum: enumValues,
       },
     })
+  }
+
+  custom(
+    fn: (value: T) => boolean,
+    message: VaeLocaleMessage,
+    dotPath?: DotPath<T>,
+  ) {
+    const path = dotPath?.split('.')
+    return this.check({ fn, message, path })
   }
 
   parse(data: T, options?: VaeSchemaParseOptions): VaeSchemaParseResult<T> {

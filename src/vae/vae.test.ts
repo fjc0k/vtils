@@ -436,4 +436,61 @@ describe('vae', () => {
       ),
     ).toMatchSnapshot()
   })
+
+  test('case: pass1-pass2', () => {
+    const schema = v
+      .object<{
+        password: string
+        password2: string
+      }>({
+        password: v.string().required(),
+        password2: v.string().required(),
+      })
+      .custom(
+        ({ password, password2 }) => password === password2,
+        '密码2应等于密码1',
+      )
+
+    expect(
+      schema.parse({
+        password: '123',
+        password2: '456',
+      }),
+    ).toMatchSnapshot()
+
+    expect(
+      schema.parse({
+        password: '123',
+        password2: '123',
+      }),
+    ).toMatchSnapshot()
+
+    const schema2 = v
+      .object<{
+        password: string
+        password2: string
+      }>({
+        password: v.string().required(),
+        password2: v.string().required(),
+      })
+      .custom(
+        ({ password, password2 }) => password === password2,
+        '密码2应等于密码1',
+        'password2',
+      )
+
+    expect(
+      schema2.parse({
+        password: '123',
+        password2: '456',
+      }),
+    ).toMatchSnapshot()
+
+    expect(
+      schema2.parse({
+        password: '123',
+        password2: '123',
+      }),
+    ).toMatchSnapshot()
+  })
 })
