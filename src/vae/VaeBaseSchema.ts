@@ -1,5 +1,6 @@
 import { get, moveToBottom, set } from '../utils'
 import { VaeContext } from './VaeContext'
+import { VaeError } from './VaeError'
 import { VaeIssue } from './VaeIssue'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
@@ -28,7 +29,7 @@ export type VaeBaseSchemaCheckPayload<T> = {
 
 export type VaeBaseSchemaTransformPayload<T> = (value: T) => T
 
-export type VaeBaseSchemaSafeParseResult<T> =
+export type VaeBaseSchemaParseResult<T> =
   | {
       success: true
       data: T
@@ -78,7 +79,7 @@ export abstract class VaeBaseSchema<T extends any = any> {
     return this
   }
 
-  safeParse(data: T, ctx?: VaeContext): VaeBaseSchemaSafeParseResult<T> {
+  parse(data: T, ctx?: VaeContext): VaeBaseSchemaParseResult<T> {
     // 默认值
     if (this._default != null && data == null) {
       data =
@@ -128,7 +129,7 @@ export abstract class VaeBaseSchema<T extends any = any> {
             if (this._options.type === 'array' && tag === 'element') {
               ;(pathData as any[]).forEach((item, index) => {
                 ctx!.withPath([...fullPath, index], () => {
-                  const res = fn.safeParse(item, ctx)
+                  const res = fn.parse(item, ctx)
                   if (res.success) {
                     set(data as any, [...path, index], res.data)
                   }
@@ -136,7 +137,7 @@ export abstract class VaeBaseSchema<T extends any = any> {
               })
             } else {
               ctx.withPath(fullPath, () => {
-                const res = fn.safeParse(pathData, ctx)
+                const res = fn.parse(pathData, ctx)
                 if (res.success) {
                   if (path.length) {
                     set(data as any, path, res.data)
@@ -176,5 +177,13 @@ export abstract class VaeBaseSchema<T extends any = any> {
       success: true,
       data: data,
     }
+  }
+
+  parseOrThrow(data: T) {
+    const res = this.parse(data)
+    if (res.success) {
+      return res.data
+    }
+    throw new VaeError(res.issues)
   }
 }
