@@ -22,14 +22,6 @@ export class VaeStringSchema<
     })
   }
 
-  required(message: VaeLocaleMessage = VaeLocale.base.required) {
-    return this.check({
-      fn: v => v != null && v !== '',
-      message: message,
-      tag: 'required',
-    })
-  }
-
   min(value: number, message: VaeLocaleMessage = VaeLocale.string.min) {
     return this.check({
       fn: v => v.length >= value,

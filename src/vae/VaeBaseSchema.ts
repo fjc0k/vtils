@@ -3,6 +3,7 @@ import { VaeArraySchema } from './VaeArraySchema'
 import { VaeContext } from './VaeContext'
 import { VaeError } from './VaeError'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
+import { VaeStringSchema } from './VaeStringSchema'
 
 export type VaeBaseSchemaPath = Array<string | number>
 
@@ -16,7 +17,7 @@ export type VaeBaseSchemaCheckPayload<T> = {
 
 export type VaeBaseSchemaTransformPayload<T> = (value: T) => T
 
-export abstract class VaeBaseSchema<T = any> {
+export abstract class VaeBaseSchema<T extends any = any> {
   private _label: string | undefined
 
   private _processors: Array<
@@ -40,10 +41,25 @@ export abstract class VaeBaseSchema<T = any> {
 
   required(message: VaeLocaleMessage = VaeLocale.base.required) {
     return this.check({
-      fn: v => v != null,
+      fn: v =>
+        v != null &&
+        // string 时空字符串也视为必填
+        (this instanceof VaeStringSchema ? v !== '' : true),
       message: message,
       tag: 'required',
     })
+  }
+
+  default(value: T | (() => T)) {
+    return this.transform(v =>
+      v == null ||
+      // string 时空字符串也视为必填
+      (this instanceof VaeStringSchema && v === '')
+        ? typeof value === 'function'
+          ? (value as any)()
+          : value
+        : v,
+    )
   }
 
   isRequired() {
@@ -132,6 +148,6 @@ export abstract class VaeBaseSchema<T = any> {
         data: data,
       }
     }
-    return {} as any
+    return undefined as any
   }
 }
