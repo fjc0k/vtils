@@ -217,6 +217,37 @@ Object {
 }
 `;
 
+exports[`vae clone 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae clone 2`] = `
+Object {
+  "data": "",
+  "success": true,
+}
+`;
+
+exports[`vae clone 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
 exports[`vae date 1`] = `
 Object {
   "data": undefined,

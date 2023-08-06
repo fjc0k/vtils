@@ -496,6 +496,14 @@ describe('vae', () => {
     const schema = v.string().required()
     expect(schema.parse('')).toMatchSnapshot()
     expect(schema.optional().parse('')).toMatchSnapshot()
+    // 没有 clone 被 optional 影响了
+    expect(schema.parse('')).toMatchSnapshot()
+  })
+
+  test('clone', () => {
+    const schema = v.string().required()
+    expect(schema.parse('')).toMatchSnapshot()
+    expect(schema.clone().optional().parse('')).toMatchSnapshot()
     expect(schema.parse('')).toMatchSnapshot()
   })
 })

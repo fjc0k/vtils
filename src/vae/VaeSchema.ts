@@ -1,5 +1,7 @@
 import { DotPath, RequiredBy, RequiredDeep } from '../types'
 import {
+  assign,
+  cloneDeepFast,
   get,
   includes,
   isArray,
@@ -165,7 +167,23 @@ export abstract class VaeSchema<T extends any = any> {
     return this.check({ fn, message, path })
   }
 
-  // clone() {}
+  clone() {
+    // https://stackoverflow.com/a/44782052
+    const newSchema: this = assign(
+      Object.create(Object.getPrototypeOf(this)),
+      this,
+    )
+    newSchema._options = cloneDeepFast(
+      newSchema._options,
+      v => v instanceof VaeSchema,
+    )
+    newSchema._options.processors.forEach(item => {
+      if (typeof item === 'object' && item.fn instanceof VaeSchema) {
+        item.fn = item.fn.clone()
+      }
+    })
+    return newSchema
+  }
 
   parse(data: T, options?: VaeSchemaParseOptions): VaeSchemaParseResult<T> {
     // 字符串 trim
