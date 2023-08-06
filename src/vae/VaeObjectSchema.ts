@@ -1,4 +1,4 @@
-import { isPlainObject } from '../utils'
+import { difference, intersection, isPlainObject } from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema, VaeSchemaOf } from './VaeSchema'
 
@@ -35,8 +35,32 @@ export class VaeObjectSchema<
         fn: shape[key],
         path: [key],
         message: '',
+        tag: 'field',
       })
     })
     return this
+  }
+
+  pick<K extends keyof T>(keys: K[]): VaeObjectSchema<Pick<T, K>> {
+    this._options.processors = this._options.processors.filter(item =>
+      typeof item === 'object' && item.tag === 'field'
+        ? (keys as any).includes(item.path![0])
+        : true,
+    )
+    this._options.objectKeys = intersection(
+      this._options.objectKeys,
+      keys as any,
+    )
+    return this as any
+  }
+
+  omit<K extends keyof T>(keys: K[]): VaeObjectSchema<Omit<T, K>> {
+    this._options.processors = this._options.processors.filter(item =>
+      typeof item === 'object' && item.tag === 'field'
+        ? !(keys as any).includes(item.path![0])
+        : true,
+    )
+    this._options.objectKeys = difference(this._options.objectKeys, keys as any)
+    return this as any
   }
 }

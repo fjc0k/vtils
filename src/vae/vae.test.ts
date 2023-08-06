@@ -506,4 +506,41 @@ describe('vae', () => {
     expect(schema.clone().optional().parse('')).toMatchSnapshot()
     expect(schema.parse('')).toMatchSnapshot()
   })
+
+  test('pick', () => {
+    const schema = v.object({
+      id: v.number().required(),
+      name: v.string().required(),
+    })
+    expect(
+      schema.parse({
+        id: 0,
+        name: 'jack',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().pick(['id']).parse({
+        id: 0,
+        // @ts-expect-error
+        name: 'jack',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().omit(['id']).parse({
+        // @ts-expect-error
+        id: 0,
+        name: 'jack',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().pick(['id']).parse({
+        id: 0,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().omit(['id']).parse({
+        name: 'jack',
+      }),
+    ).toMatchSnapshot()
+  })
 })

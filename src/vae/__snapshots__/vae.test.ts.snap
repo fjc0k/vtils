@@ -799,6 +799,52 @@ Object {
 }
 `;
 
+exports[`vae pick 1`] = `
+Object {
+  "data": Object {
+    "id": 0,
+    "name": "jack",
+  },
+  "success": true,
+}
+`;
+
+exports[`vae pick 2`] = `
+Object {
+  "data": Object {
+    "id": 0,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae pick 3`] = `
+Object {
+  "data": Object {
+    "name": "jack",
+  },
+  "success": true,
+}
+`;
+
+exports[`vae pick 4`] = `
+Object {
+  "data": Object {
+    "id": 0,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae pick 5`] = `
+Object {
+  "data": Object {
+    "name": "jack",
+  },
+  "success": true,
+}
+`;
+
 exports[`vae preserveUnknownKeys 1`] = `
 Object {
   "data": Object {
