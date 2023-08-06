@@ -19,7 +19,7 @@ describe('formatDistancePlus', () => {
   })
 
   test('后', () => {
-    expect(formatDistancePlus(addDays(new Date(), 1))).toBe('1天后')
+    expect(formatDistancePlus(addDays(new Date(), 1.2))).toBe('1天后')
     expect(formatDistancePlus(addDays(new Date(), 1.5))).toBe('1天后')
     expect(formatDistancePlus(addYears(new Date(), 10))).toBe('10年后')
 
