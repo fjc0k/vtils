@@ -137,6 +137,11 @@ export abstract class VaeSchema<T extends any = any> {
     return this
   }
 
+  optional() {
+    this._required = false
+    return this
+  }
+
   enum(
     value: T[] | Record<any, T>,
     message: VaeLocaleMessage = VaeLocale.base.enum,

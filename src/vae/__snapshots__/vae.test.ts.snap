@@ -742,6 +742,25 @@ Object {
 }
 `;
 
+exports[`vae optional 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae optional 2`] = `
+Object {
+  "data": "",
+  "success": true,
+}
+`;
+
 exports[`vae preserveUnknownKeys 1`] = `
 Object {
   "data": Object {
