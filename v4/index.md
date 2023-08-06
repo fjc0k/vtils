@@ -15,6 +15,7 @@
 |  [regexp](./regexp.md) | 正则表达式收集。 |
 |  [types](./types.md) | 类型工具库。 |
 |  [utils](./utils.md) | 基础工具库。基于 [Lodash](https://lodash.com/docs/4.17.15)<!-- -->。 |
+|  [vae](./vae.md) | vae 数据验证。 |
 |  [validator](./validator.md) | 验证工具库。基于 [yup](https://github.com/jquense/yup#readme)<!-- -->。 |
 |  [x](./x.md) | 第三方工具封装库。 |
 
