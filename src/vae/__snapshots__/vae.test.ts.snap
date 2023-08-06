@@ -273,7 +273,7 @@ exports[`vae date 7`] = `
 Object {
   "issues": Array [
     Object {
-      "message": ".应大于或等于2023-09-14 11:23:28",
+      "message": "应大于等于给定日期",
       "path": Array [],
     },
   ],
@@ -285,7 +285,7 @@ exports[`vae date 8`] = `
 Object {
   "issues": Array [
     Object {
-      "message": ".应小于或等于2023-06-14 11:23:28",
+      "message": "应小于等于给定日期",
       "path": Array [],
     },
   ],

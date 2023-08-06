@@ -271,14 +271,14 @@ describe('vae', () => {
       v
         .date()
         .required()
-        .min('2023-06-14T03:23:28.926Z')
+        .min('2023-06-14T03:23:28.926Z', '应大于等于给定日期')
         .parse(new Date('2023-07-14T03:23:28.926Z')),
     ).toMatchSnapshot()
     expect(
       v
         .date()
         .required()
-        .min(new Date('2023-09-14T03:23:28.926Z'))
+        .min(new Date('2023-09-14T03:23:28.926Z'), '应大于等于给定日期')
         .parse(new Date('2023-07-14T03:23:28.926Z')),
     ).toMatchSnapshot()
 
@@ -286,14 +286,14 @@ describe('vae', () => {
       v
         .date()
         .required()
-        .max('2023-06-14T03:23:28.926Z')
+        .max('2023-06-14T03:23:28.926Z', '应小于等于给定日期')
         .parse(new Date('2023-07-14T03:23:28.926Z')),
     ).toMatchSnapshot()
     expect(
       v
         .date()
         .required()
-        .max(new Date('2023-09-14T03:23:28.926Z'))
+        .max(new Date('2023-09-14T03:23:28.926Z'), '应小于等于给定日期')
         .parse(new Date('2023-07-14T03:23:28.926Z')),
     ).toMatchSnapshot()
   })
