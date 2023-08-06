@@ -1,9 +1,16 @@
 import { isArray } from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeSchema } from './VaeSchema'
+import { VaeSchema, VaeSchemaOf } from './VaeSchema'
+
+export type VaeArraySchemaElementOf<T> = T extends Array<infer X>
+  ? VaeSchemaOf<X>
+  : never
 
 export class VaeArraySchema<T extends any[] = any[]> extends VaeSchema<T> {
-  constructor(schema?: any, message: VaeLocaleMessage = VaeLocale.array.type) {
+  constructor(
+    element?: VaeArraySchemaElementOf<T>,
+    message: VaeLocaleMessage = VaeLocale.array.type,
+  ) {
     super({
       type: 'array',
     })
@@ -13,15 +20,14 @@ export class VaeArraySchema<T extends any[] = any[]> extends VaeSchema<T> {
       message: message,
     })
 
-    if (schema) {
-      this.element(schema)
+    if (element) {
+      this.element(element)
     }
   }
 
-  // TODO
-  element(schema: any) {
+  element(element: VaeArraySchemaElementOf<T>) {
     this.check({
-      fn: schema,
+      fn: element,
       message: '',
       tag: 'element',
     })

@@ -1,4 +1,4 @@
-import { VaeArraySchema } from './VaeArraySchema'
+import { VaeArraySchema, VaeArraySchemaElementOf } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeDateSchema } from './VaeDateSchema'
 import { VaeEnumSchema } from './VaeEnumSchema'
@@ -9,7 +9,7 @@ import {
   VaeLocaleShape,
 } from './VaeLocale'
 import { VaeNumberSchema } from './VaeNumberSchema'
-import { VaeObjectSchema } from './VaeObjectSchema'
+import { VaeObjectSchema, VaeObjectSchemaShapeOf } from './VaeObjectSchema'
 import { VaeStringSchema } from './VaeStringSchema'
 
 export const v = {
@@ -18,11 +18,13 @@ export const v = {
   number: <T extends number = number>(message?: VaeLocaleMessage) =>
     new VaeNumberSchema<T>(message),
   object: <T extends Record<any, any> = Record<any, any>>(
-    schema?: any,
+    shape?: VaeObjectSchemaShapeOf<T>,
     message?: VaeLocaleMessage,
-  ) => new VaeObjectSchema<T>(schema, message),
-  array: <T extends any[] = any[]>(schema?: any, message?: VaeLocaleMessage) =>
-    new VaeArraySchema<T>(schema, message),
+  ) => new VaeObjectSchema<T>(shape, message),
+  array: <T extends any[] = any[]>(
+    element?: VaeArraySchemaElementOf<T>,
+    message?: VaeLocaleMessage,
+  ) => new VaeArraySchema<T>(element, message),
   enum: <T extends any = any>(value: any, message?: VaeLocaleMessage) =>
     new VaeEnumSchema<T>(value, message),
   date: <T extends Date = Date>(message?: VaeLocaleMessage) =>

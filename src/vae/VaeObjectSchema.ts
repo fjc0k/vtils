@@ -1,11 +1,18 @@
 import { isPlainObject } from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeSchema } from './VaeSchema'
+import { VaeSchema, VaeSchemaOf } from './VaeSchema'
+
+export type VaeObjectSchemaShapeOf<T> = {
+  [K in keyof T]: VaeSchemaOf<T[K]>
+}
 
 export class VaeObjectSchema<
   T extends Record<any, any> = Record<any, any>,
 > extends VaeSchema<T> {
-  constructor(schema?: any, message: VaeLocaleMessage = VaeLocale.object.type) {
+  constructor(
+    shape?: VaeObjectSchemaShapeOf<T>,
+    message: VaeLocaleMessage = VaeLocale.object.type,
+  ) {
     super({
       type: 'object',
     })
@@ -15,16 +22,15 @@ export class VaeObjectSchema<
       message: message,
     })
 
-    if (schema) {
-      this.shape(schema)
+    if (shape) {
+      this.shape(shape)
     }
   }
 
-  // TODO
-  shape(schema: any) {
-    Object.keys(schema).forEach(key => {
+  shape(shape: VaeObjectSchemaShapeOf<T>) {
+    Object.keys(shape).forEach(key => {
       this.check({
-        fn: schema[key],
+        fn: shape[key],
         path: [key],
         message: '',
       })

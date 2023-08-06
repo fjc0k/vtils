@@ -1,8 +1,15 @@
+import { RequiredDeep } from '../types'
 import { get, moveToBottom, set } from '../utils'
+import { VaeArraySchema } from './VaeArraySchema'
+import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeContext } from './VaeContext'
+import { VaeDateSchema } from './VaeDateSchema'
 import { VaeError } from './VaeError'
 import { VaeIssue } from './VaeIssue'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
+import { VaeNumberSchema } from './VaeNumberSchema'
+import { VaeObjectSchema } from './VaeObjectSchema'
+import { VaeStringSchema } from './VaeStringSchema'
 
 export type VaeSchemaType =
   | 'string'
@@ -38,6 +45,22 @@ export type VaeSchemaParseResult<T> =
       success: false
       issues: VaeIssue[]
     }
+
+export type VaeSchemaOf<T0, T = RequiredDeep<T0>> =
+  // 为何要加 []
+  // https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
+  [T] extends [string]
+    ? VaeStringSchema<T>
+    : [T] extends [number]
+    ? VaeNumberSchema<T>
+    : [T] extends [boolean]
+    ? VaeBooleanSchema<T>
+    : [T] extends [Date]
+    ? VaeDateSchema<T>
+    : T extends any[]
+    ? VaeArraySchema<T>
+    : // @ts-ignore
+      VaeObjectSchema<T>
 
 export abstract class VaeSchema<T extends any = any> {
   constructor(private _options: VaeSchemaOptions) {}

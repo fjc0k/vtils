@@ -343,7 +343,13 @@ describe('vae', () => {
   })
 
   test('object', () => {
-    const schema = v.object({
+    const schema = v.object<{
+      id: number
+      name: string
+      gender: 'male' | 'female'
+      images: string[]
+      isAdmin: boolean
+    }>({
       id: v.number().required().id(),
       name: v.string().required().max(10),
       gender: v.enum(['male', 'female']).required(),
