@@ -305,7 +305,7 @@ describe('vae', () => {
       name: string
       gender: 'male' | 'female'
       images: string[]
-      isAdmin: boolean
+      isAdmin?: boolean
     }>({
       id: v.number().required().id(),
       name: v.string().required().max(10),
@@ -313,10 +313,23 @@ describe('vae', () => {
       images: v.array(v.string().required().nonempty()).default([]),
       isAdmin: v.boolean().default(false),
     })
-    expect(schema.parse({ id: 1 })).toMatchSnapshot()
-    expect(schema.parse({ id: 1, name: 'jack' })).toMatchSnapshot()
     expect(
-      schema.parse({ id: 1, name: 'jack', gender: 'male' }),
+      schema.parse(
+        // @ts-expect-error
+        { id: 1 },
+      ),
+    ).toMatchSnapshot()
+    expect(
+      schema.parse(
+        // @ts-expect-error
+        { id: 1, name: 'jack' },
+      ),
+    ).toMatchSnapshot()
+    expect(
+      schema.parse(
+        // @ts-expect-error
+        { id: 1, name: 'jack', gender: 'male' },
+      ),
     ).toMatchSnapshot()
     expect(
       schema.parse({ id: 1, name: 'jack', gender: 'male', images: [''] }),
