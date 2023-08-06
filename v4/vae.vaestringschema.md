@@ -22,13 +22,13 @@ export declare class VaeStringSchema<T extends string = string> extends VaeSchem
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [email(message)](./vae.vaestringschema.email.md) |  |  |
+|  [emptyable()](./vae.vaestringschema.emptyable.md) |  |  |
 |  [endsWith(value, message)](./vae.vaestringschema.endswith.md) |  |  |
 |  [idCardNumber(message)](./vae.vaestringschema.idcardnumber.md) |  |  |
 |  [includes(value, message)](./vae.vaestringschema.includes.md) |  |  |
 |  [length(value, message)](./vae.vaestringschema.length.md) |  |  |
 |  [max(value, message)](./vae.vaestringschema.max.md) |  |  |
 |  [min(value, message)](./vae.vaestringschema.min.md) |  |  |
-|  [nonempty(message)](./vae.vaestringschema.nonempty.md) |  |  |
 |  [phoneNumber(message)](./vae.vaestringschema.phonenumber.md) |  |  |
 |  [regex(value, message)](./vae.vaestringschema.regex.md) |  |  |
 |  [startsWith(value, message)](./vae.vaestringschema.startswith.md) |  |  |

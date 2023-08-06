@@ -10,7 +10,7 @@
 VaeLocale: {
     $set: (locale: VaeLocaleShape) => void;
     base: Record<'required' | 'enum', VaeLocaleMessage>;
-    string: Record<'type' | 'nonempty' | 'min' | 'max' | 'length' | 'email' | 'url' | 'regex' | 'includes' | 'startsWith' | 'endsWith' | 'phoneNumber' | 'idCardNumber', VaeLocaleMessage>;
+    string: Record<'type' | 'min' | 'max' | 'length' | 'email' | 'url' | 'regex' | 'includes' | 'startsWith' | 'endsWith' | 'phoneNumber' | 'idCardNumber', VaeLocaleMessage>;
     object: Record<'type', VaeLocaleMessage>;
     number: Record<'type' | 'min' | 'max' | 'lessThan' | 'moreThan' | 'integer' | 'positive' | 'nonpositive' | 'negative' | 'nonnegative' | 'positiveInteger', VaeLocaleMessage>;
     boolean: Record<'type', VaeLocaleMessage>;

@@ -21,6 +21,8 @@ export declare abstract class VaeSchema<T extends any = any>
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
 |  [\_objectKeys](./vae.vaeschema._objectkeys.md) | <code>protected</code> | string\[\] \| undefined |  |
+|  [\_stringEmptyable](./vae.vaeschema._stringemptyable.md) | <code>protected</code> | boolean \| undefined |  |
+|  [\_stringTrim](./vae.vaeschema._stringtrim.md) | <code>protected</code> | boolean \| undefined |  |
 
 ## Methods
 
