@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.88.0](https://github.com/fjc0k/vtils/compare/v4.87.0...v4.88.0) (2023-08-06)
+
+### Features
+
+- 新增 vae 数据验证工具 ([#152](https://github.com/fjc0k/vtils/issues/152)) ([b28b52e](https://github.com/fjc0k/vtils/commit/b28b52e5b53b9655af839570c029d19fb2895cae))
+
 ## [4.87.0](https://github.com/fjc0k/vtils/compare/v4.86.0...v4.87.0) (2023-08-04)
 
 ### Features
