@@ -248,6 +248,13 @@ Object {
 }
 `;
 
+exports[`vae create 1`] = `
+Object {
+  "data": "1",
+  "success": true,
+}
+`;
+
 exports[`vae date 1`] = `
 Object {
   "data": undefined,
