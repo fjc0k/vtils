@@ -696,6 +696,25 @@ Object {
 }
 `;
 
+exports[`vae preserveUnknownKeys 1`] = `
+Object {
+  "data": Object {
+    "id": 1,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae preserveUnknownKeys 2`] = `
+Object {
+  "data": Object {
+    "id": 1,
+    "name": "sss",
+  },
+  "success": true,
+}
+`;
+
 exports[`vae string 1`] = `
 Object {
   "data": undefined,

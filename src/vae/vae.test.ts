@@ -398,4 +398,33 @@ describe('vae', () => {
       ),
     ).toMatchSnapshot()
   })
+
+  test('preserveUnknownKeys', () => {
+    const schema = v.object<{
+      id: number
+    }>({
+      id: v.number().required().id(),
+    })
+
+    expect(
+      schema.parse({
+        id: 1,
+        // @ts-expect-error
+        name: 'sss',
+      }),
+    ).toMatchSnapshot()
+
+    expect(
+      schema.parse(
+        {
+          id: 1,
+          // @ts-expect-error
+          name: 'sss',
+        },
+        {
+          preserveUnknownKeys: true,
+        },
+      ),
+    ).toMatchSnapshot()
+  })
 })

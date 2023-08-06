@@ -1,5 +1,13 @@
 import { RequiredDeep } from '../types'
-import { get, includes, isArray, moveToBottom, set, values } from '../utils'
+import {
+  get,
+  includes,
+  isArray,
+  moveToBottom,
+  pick,
+  set,
+  values,
+} from '../utils'
 import { VaeArraySchema } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeContext } from './VaeContext'
@@ -36,11 +44,26 @@ export type VaeSchemaCheckPayload<T> = {
 export type VaeSchemaTransformPayload<T> = (value: T) => T
 
 export type VaeSchemaParseOptions = {
-  /** 上下文，内部使用 */
+  /**
+   * 上下文，内部使用
+   *
+   * @inner
+   */
   ctx?: VaeContext
 
-  /** 是否提前终止 */
+  /**
+   * 是否提前终止
+   *
+   * @default false
+   */
   abortEarly?: boolean
+
+  /**
+   * 是否保留未知属性
+   *
+   * @default false
+   */
+  preserveUnknownKeys?: boolean
 }
 
 export type VaeSchemaParseResult<T> =
@@ -78,6 +101,8 @@ export abstract class VaeSchema<T extends any = any> {
 
   private _required: boolean | undefined
   private _requiredMessage: VaeLocaleMessage | undefined
+
+  protected _objectKeys: string[] | undefined
 
   private _processors: Array<
     VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>
@@ -242,7 +267,12 @@ export abstract class VaeSchema<T extends any = any> {
     }
     return {
       success: true,
-      data: data,
+      data:
+        !options.preserveUnknownKeys &&
+        this._options.type === 'object' &&
+        this._objectKeys?.length
+          ? (pick(data, this._objectKeys) as any)
+          : data,
     }
   }
 

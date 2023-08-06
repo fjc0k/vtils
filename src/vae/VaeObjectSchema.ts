@@ -28,7 +28,9 @@ export class VaeObjectSchema<
   }
 
   shape(shape: VaeObjectSchemaShapeOf<T>) {
-    Object.keys(shape).forEach(key => {
+    const keys = Object.keys(shape)
+    this._objectKeys = keys
+    keys.forEach(key => {
       this.check({
         fn: shape[key],
         path: [key],
