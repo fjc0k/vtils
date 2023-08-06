@@ -104,6 +104,9 @@ export abstract class VaeSchema<T extends any = any> {
 
   protected _objectKeys: string[] | undefined
 
+  protected _stringTrim: boolean | undefined
+  protected _stringEmptyable: boolean | undefined
+
   private _processors: Array<
     VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>
   > = []
@@ -158,16 +161,34 @@ export abstract class VaeSchema<T extends any = any> {
   }
 
   parse(data: T, options?: VaeSchemaParseOptions): VaeSchemaParseResult<T> {
+    // 字符串 trim
+    if (
+      this._stringTrim &&
+      this._options.type === 'string' &&
+      typeof data === 'string'
+    ) {
+      data = data.trim() as any
+    }
+
+    let dataIsNil =
+      data == null ||
+      (this._options.type === 'string' && !this._stringEmptyable && data === '')
+
     // 默认值
-    if (this._default != null && data == null) {
+    if (dataIsNil && this._default != null) {
       data =
         typeof this._default === 'function'
           ? (this._default as any)()
           : this._default
+      dataIsNil =
+        data == null ||
+        (this._options.type === 'string' &&
+          !this._stringEmptyable &&
+          data === '')
     }
 
     // 非必填
-    if (!this._required && data == null) {
+    if (dataIsNil && !this._required) {
       return {
         success: true,
         data: data,
@@ -179,7 +200,7 @@ export abstract class VaeSchema<T extends any = any> {
     // 必填规则始终前置
     if (this._required) {
       processors.unshift({
-        fn: v => v != null,
+        fn: () => !dataIsNil,
         message: this._requiredMessage!,
       })
     }

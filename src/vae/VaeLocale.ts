@@ -16,7 +16,6 @@ export type VaeLocaleShape = {
   base: Record<'required' | 'enum', VaeLocaleMessage>
   string: Record<
     | 'type'
-    | 'nonempty'
     | 'min'
     | 'max'
     | 'length'
@@ -68,7 +67,6 @@ export class VaeLocaleBuilder {
 
       string: {
         type: payload => `${options.getLabel(payload)}应是字符串类型`,
-        nonempty: payload => `${options.getLabel(payload)}应非空`,
         min: payload =>
           `${options.getLabel(payload)}应至少包含${payload.params.min}位字符`,
         max: payload =>

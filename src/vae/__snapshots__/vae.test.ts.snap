@@ -731,7 +731,7 @@ exports[`vae object 4`] = `
 Object {
   "issues": Array [
     Object {
-      "message": "images.0应非空",
+      "message": "images.0应必填",
       "path": Array [
         "images",
         0,
@@ -803,20 +803,20 @@ Object {
 
 exports[`vae string 6`] = `
 Object {
-  "data": "",
-  "success": true,
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
 }
 `;
 
 exports[`vae string 7`] = `
 Object {
-  "issues": Array [
-    Object {
-      "message": ".应非空",
-      "path": Array [],
-    },
-  ],
-  "success": false,
+  "data": "",
+  "success": true,
 }
 `;
 

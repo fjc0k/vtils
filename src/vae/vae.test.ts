@@ -27,7 +27,7 @@ describe('vae', () => {
         .parse(),
     ).toMatchSnapshot()
     expect(v.string().required().parse('')).toMatchSnapshot()
-    expect(v.string().required().nonempty().parse('')).toMatchSnapshot()
+    expect(v.string().required().emptyable().parse('')).toMatchSnapshot()
     expect(v.string().required().parse('hello')).toMatchSnapshot()
 
     expect(v.string().required().min(6).parse('hello')).toMatchSnapshot()
@@ -330,9 +330,7 @@ describe('vae', () => {
       id: v.number().required().id(),
       name: v.string().required().max(10),
       gender: v.string(s => s.required().enum(['male', 'female'])),
-      images: v.array(a =>
-        a.element(v.string().required().nonempty()).default([]),
-      ),
+      images: v.array(a => a.element(v.string().required()).default([])),
       isAdmin: v.boolean().default(false),
     })
     expect(
