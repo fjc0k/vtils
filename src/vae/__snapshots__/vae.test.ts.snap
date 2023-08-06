@@ -1,5 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`vae abortEarly 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "id应必填",
+      "path": Array [
+        "id",
+      ],
+    },
+    Object {
+      "message": "images应是数组类型",
+      "path": Array [
+        "images",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae abortEarly 2`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "id应必填",
+      "path": Array [
+        "id",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae abortEarly 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "images.1应是一个合法的网址",
+      "path": Array [
+        "images",
+        1,
+      ],
+    },
+    Object {
+      "message": "images.2应是一个合法的网址",
+      "path": Array [
+        "images",
+        2,
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae abortEarly 4`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "images.1应是一个合法的网址",
+      "path": Array [
+        "images",
+        1,
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
 exports[`vae array 1`] = `
 Object {
   "data": Array [

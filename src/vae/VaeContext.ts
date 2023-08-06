@@ -2,19 +2,19 @@ import { VaeIssue } from './VaeIssue'
 import { VaeSchemaPath } from './VaeSchema'
 
 export class VaeContext {
+  oldPath: VaeSchemaPath = []
+
   path: VaeSchemaPath = []
 
   issues: VaeIssue[] = []
 
-  withPath(path: VaeSchemaPath, cb: () => any) {
-    const oldPath = this.getPathSnapshot()
+  setPath = (path: VaeSchemaPath) => {
+    this.oldPath = this.path.slice()
     this.path = path
-    cb()
-    this.path = oldPath
   }
 
-  getPathSnapshot() {
-    return this.path.slice()
+  restorePath = () => {
+    this.path = this.oldPath
   }
 
   addIssue(issue: VaeIssue) {

@@ -35,6 +35,14 @@ export type VaeSchemaCheckPayload<T> = {
 
 export type VaeSchemaTransformPayload<T> = (value: T) => T
 
+export type VaeSchemaParseOptions = {
+  /** 上下文，内部使用 */
+  ctx?: VaeContext
+
+  /** 是否提前终止 */
+  abortEarly?: boolean
+}
+
 export type VaeSchemaParseResult<T> =
   | {
       success: true
@@ -115,7 +123,7 @@ export abstract class VaeSchema<T extends any = any> {
     })
   }
 
-  parse(data: T, ctx?: VaeContext): VaeSchemaParseResult<T> {
+  parse(data: T, options?: VaeSchemaParseOptions): VaeSchemaParseResult<T> {
     // 默认值
     if (this._default != null && data == null) {
       data =
@@ -152,7 +160,9 @@ export abstract class VaeSchema<T extends any = any> {
       )
     }
 
-    ctx ??= new VaeContext()
+    const ctx = options?.ctx || new VaeContext()
+    options = options || {}
+    options.ctx = ctx
 
     for (let i = 0; i < processors.length; i++) {
       const processor = processors[i]
@@ -163,26 +173,41 @@ export abstract class VaeSchema<T extends any = any> {
           const pathData = path.length ? get(data, path) : data
           if (this._options.type === 'array' && tag === 'element') {
             if (pathData) {
-              ;(pathData as any[]).forEach((item, index) => {
-                ctx!.withPath([...fullPath, index], () => {
-                  const res = fn.parse(item, ctx)
-                  if (res.success) {
-                    set(data as any, [...path, index], res.data)
+              for (let j = 0; j < (pathData as any[]).length; j++) {
+                const item = (pathData as any[])[j]
+                ctx.setPath([...fullPath, j])
+                const res = fn.parse(item, options)
+                if (res.success) {
+                  set(data as any, [...path, j], res.data)
+                } else {
+                  if (options.abortEarly) {
+                    return {
+                      success: false,
+                      issues: ctx.issues,
+                    }
                   }
-                })
-              })
+                }
+                ctx.restorePath()
+              }
             }
           } else {
-            ctx.withPath(fullPath, () => {
-              const res = fn.parse(pathData, ctx)
-              if (res.success) {
-                if (path.length) {
-                  set(data as any, path, res.data)
-                } else {
-                  data = res.data
+            ctx.setPath(fullPath)
+            const res = fn.parse(pathData, options)
+            if (res.success) {
+              if (path.length) {
+                set(data as any, path, res.data)
+              } else {
+                data = res.data
+              }
+            } else {
+              if (options.abortEarly) {
+                return {
+                  success: false,
+                  issues: ctx.issues,
                 }
               }
-            })
+            }
+            ctx.restorePath()
           }
         } else if (!fn(data)) {
           ctx.addIssue({
@@ -197,6 +222,12 @@ export abstract class VaeSchema<T extends any = any> {
                   })
                 : message,
           })
+          if (options.abortEarly) {
+            return {
+              success: false,
+              issues: ctx.issues,
+            }
+          }
           break
         }
       } else {
@@ -215,8 +246,8 @@ export abstract class VaeSchema<T extends any = any> {
     }
   }
 
-  parseOrThrow(data: T) {
-    const res = this.parse(data)
+  parseOrThrow(data: T, options?: VaeSchemaParseOptions) {
+    const res = this.parse(data, options)
     if (res.success) {
       return res.data
     }

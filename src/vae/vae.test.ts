@@ -348,4 +348,54 @@ describe('vae', () => {
       schema.parse({ id: 1, name: 'jack', gender: 'male', images: [''] }),
     ).toMatchSnapshot()
   })
+
+  test('abortEarly', () => {
+    const schema = v.object<{
+      id: number
+      images: string[]
+    }>({
+      id: v.number().required().id(),
+      images: v.array(a =>
+        a.required().element(v.string().required().url()).min(2),
+      ),
+    })
+
+    expect(
+      schema.parse({
+        // @ts-expect-error
+        images: 's',
+      }),
+    ).toMatchSnapshot()
+
+    expect(
+      schema.parse(
+        {
+          // @ts-expect-error
+          images: 's',
+        },
+        {
+          abortEarly: true,
+        },
+      ),
+    ).toMatchSnapshot()
+
+    expect(
+      schema.parse({
+        id: 1,
+        images: ['http://baidu.com', 'ddd', 'dddd3'],
+      }),
+    ).toMatchSnapshot()
+
+    expect(
+      schema.parse(
+        {
+          id: 1,
+          images: ['http://baidu.com', 'ddd', 'dddd3'],
+        },
+        {
+          abortEarly: true,
+        },
+      ),
+    ).toMatchSnapshot()
+  })
 })
