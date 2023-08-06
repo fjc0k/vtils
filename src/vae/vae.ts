@@ -1,7 +1,6 @@
 import { VaeArraySchema, VaeArraySchemaElementOf } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeDateSchema } from './VaeDateSchema'
-import { VaeEnumSchema } from './VaeEnumSchema'
 import {
   VaeLocale,
   VaeLocaleBuilder,
@@ -25,8 +24,6 @@ export const v = {
     element?: VaeArraySchemaElementOf<T>,
     message?: VaeLocaleMessage,
   ) => new VaeArraySchema<T>(element, message),
-  enum: <T extends any = any>(value: any, message?: VaeLocaleMessage) =>
-    new VaeEnumSchema<T>(value, message),
   date: <T extends Date = Date>(message?: VaeLocaleMessage) =>
     new VaeDateSchema<T>(message),
   boolean: <T extends boolean = boolean>(message?: VaeLocaleMessage) =>
@@ -43,7 +40,6 @@ export * from './VaeArraySchema'
 export * from './VaeBooleanSchema'
 export * from './VaeContext'
 export * from './VaeDateSchema'
-export * from './VaeEnumSchema'
 export * from './VaeError'
 export * from './VaeIssue'
 export * from './VaeLocale'

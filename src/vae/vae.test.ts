@@ -289,49 +289,6 @@ describe('vae', () => {
     ).toMatchSnapshot()
   })
 
-  test('enum', () => {
-    expect(
-      v
-        .enum(['x', 'y'])
-        // @ts-expect-error
-        .parse(),
-    ).toMatchSnapshot()
-    expect(v.enum(['x', 'y']).parse('')).toMatchSnapshot()
-    expect(
-      v
-        .enum(['x', 'y'])
-        .required()
-        // @ts-expect-error
-        .parse(),
-    ).toMatchSnapshot()
-
-    expect(v.enum(['x', 'y']).required().parse('x')).toMatchSnapshot()
-    expect(v.enum(['x', 'y']).required().parse('y')).toMatchSnapshot()
-    expect(v.enum(['x', 'y']).required().parse('z')).toMatchSnapshot()
-    expect(v.enum(['x', 'y']).required().parse(2)).toMatchSnapshot()
-    expect(v.enum(['x', 'y']).required().parse(true)).toMatchSnapshot()
-
-    enum XY {
-      x = 'x',
-      y = 'y',
-    }
-    expect(v.enum(XY).required().parse('x')).toMatchSnapshot()
-    expect(v.enum(XY).required().parse('y')).toMatchSnapshot()
-    expect(v.enum(XY).required().parse('z')).toMatchSnapshot()
-    expect(v.enum(XY).required().parse(2)).toMatchSnapshot()
-    expect(v.enum(XY).required().parse(true)).toMatchSnapshot()
-
-    const XY2 = {
-      x: 'x',
-      y: 'y',
-    }
-    expect(v.enum(XY2).required().parse('x')).toMatchSnapshot()
-    expect(v.enum(XY2).required().parse('y')).toMatchSnapshot()
-    expect(v.enum(XY2).required().parse('z')).toMatchSnapshot()
-    expect(v.enum(XY2).required().parse(2)).toMatchSnapshot()
-    expect(v.enum(XY2).required().parse(true)).toMatchSnapshot()
-  })
-
   test('array', () => {
     expect(v.array(v.string().required()).parse([1, '2'])).toMatchSnapshot()
     expect(
@@ -352,7 +309,7 @@ describe('vae', () => {
     }>({
       id: v.number().required().id(),
       name: v.string().required().max(10),
-      gender: v.enum(['male', 'female']).required(),
+      gender: v.string().required().enum(['male', 'female']),
       images: v.array(v.string().required().nonempty()).default([]),
       isAdmin: v.boolean().default(false),
     })

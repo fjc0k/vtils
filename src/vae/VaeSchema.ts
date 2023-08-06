@@ -1,5 +1,5 @@
 import { RequiredDeep } from '../types'
-import { get, moveToBottom, set } from '../utils'
+import { get, includes, isArray, moveToBottom, set, values } from '../utils'
 import { VaeArraySchema } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeContext } from './VaeContext'
@@ -15,7 +15,6 @@ export type VaeSchemaType =
   | 'string'
   | 'number'
   | 'object'
-  | 'enum'
   | 'date'
   | 'boolean'
   | 'array'
@@ -91,15 +90,29 @@ export abstract class VaeSchema<T extends any = any> {
     return this
   }
 
+  default(value: T | (() => T)) {
+    this._default = value
+    return this
+  }
+
   required(message: VaeLocaleMessage = VaeLocale.base.required) {
     this._required = true
     this._requiredMessage = message
     return this
   }
 
-  default(value: T | (() => T)) {
-    this._default = value
-    return this
+  enum(
+    value: T[] | Record<any, T>,
+    message: VaeLocaleMessage = VaeLocale.base.enum,
+  ) {
+    const enumValues = isArray(value) ? value : values(value)
+    return this.check({
+      fn: v => includes(enumValues, v),
+      message: message,
+      messageParams: {
+        enum: enumValues,
+      },
+    })
   }
 
   parse(data: T, ctx?: VaeContext): VaeSchemaParseResult<T> {
