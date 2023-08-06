@@ -28,10 +28,24 @@ export type VaeBaseSchemaCheckPayload<T> = {
 
 export type VaeBaseSchemaTransformPayload<T> = (value: T) => T
 
+export type VaeBaseSchemaSafeParseResult<T> =
+  | {
+      success: true
+      data: T
+    }
+  | {
+      success: false
+      issues: VaeIssue[]
+    }
+
 export abstract class VaeBaseSchema<T extends any = any> {
   constructor(private _options: VaeBaseSchemaOptions) {}
 
   private _label: string | undefined
+
+  private _default: T | (() => T) | undefined
+
+  private _required: boolean | undefined
 
   private _processors: Array<
     VaeBaseSchemaCheckPayload<T> | VaeBaseSchemaTransformPayload<T>
@@ -53,46 +67,36 @@ export abstract class VaeBaseSchema<T extends any = any> {
   }
 
   required(message: VaeLocaleMessage = VaeLocale.base.required) {
+    this._required = true
     return this.check({
-      fn: v =>
-        v != null &&
-        // string 时空字符串也视为必填
-        (this._options.type === 'string' ? v !== '' : true),
+      fn: v => v != null,
       message: message,
       tag: 'required',
     })
   }
 
   default(value: T | (() => T)) {
-    return this.transform(v =>
-      v == null ||
-      // string 时空字符串也视为无值
-      (this._options.type === 'string' && v === '')
-        ? typeof value === 'function'
-          ? (value as any)()
-          : value
-        : v,
-    )
+    this._default = value
+    return this
   }
 
-  isRequired() {
-    return this._processors.some(
-      item => typeof item === 'object' && item.tag === 'required',
-    )
-  }
+  safeParse(data: T, ctx?: VaeContext): VaeBaseSchemaSafeParseResult<T> {
+    // 默认值
+    if (this._default != null && data == null) {
+      data =
+        typeof this._default === 'function'
+          ? (this._default as any)()
+          : this._default
+    }
 
-  safeParse(
-    data: T,
-    ctx?: VaeContext,
-  ):
-    | {
-        success: true
-        data: T
+    // 非必填
+    if (!this._required && data == null) {
+      return {
+        success: true,
+        data: data,
       }
-    | {
-        success: false
-        issues: VaeIssue[]
-      } {
+    }
+
     ctx ??= new VaeContext()
 
     const processors = this._processors.slice()

@@ -24,6 +24,13 @@ export class VaeStringSchema<
     })
   }
 
+  nonempty(message: VaeLocaleMessage = VaeLocale.string.nonempty) {
+    return this.check({
+      fn: v => v.length > 0,
+      message: message,
+    })
+  }
+
   min(value: number, message: VaeLocaleMessage = VaeLocale.string.min) {
     return this.check({
       fn: v => v.length >= value,

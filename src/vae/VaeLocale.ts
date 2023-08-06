@@ -16,6 +16,7 @@ export type VaeLocaleShape = {
   base: Record<'required', VaeLocaleMessage>
   string: Record<
     | 'type'
+    | 'nonempty'
     | 'min'
     | 'max'
     | 'length'
@@ -45,7 +46,10 @@ export type VaeLocaleShape = {
     VaeLocaleMessage
   >
   boolean: Record<'type', VaeLocaleMessage>
-  array: Record<'type' | 'min' | 'max' | 'length', VaeLocaleMessage>
+  array: Record<
+    'type' | 'nonempty' | 'min' | 'max' | 'length',
+    VaeLocaleMessage
+  >
   enum: Record<'type', VaeLocaleMessage>
   date: Record<'type' | 'min' | 'max', VaeLocaleMessage>
 }
@@ -56,11 +60,12 @@ export class VaeLocaleBuilder {
   }): VaeLocaleShape {
     return {
       base: {
-        required: payload => `${options.getLabel(payload)}必填`,
+        required: payload => `${options.getLabel(payload)}应必填`,
       },
 
       string: {
         type: payload => `${options.getLabel(payload)}应是字符串类型`,
+        nonempty: payload => `${options.getLabel(payload)}应非空`,
         min: payload =>
           `${options.getLabel(payload)}应至少包含${payload.params.min}位字符`,
         max: payload =>
@@ -116,6 +121,7 @@ export class VaeLocaleBuilder {
 
       array: {
         type: payload => `${options.getLabel(payload)}应是数组类型`,
+        nonempty: payload => `${options.getLabel(payload)}应非空`,
         min: payload =>
           `${options.getLabel(payload)}应至少包含${payload.params.min}个元素`,
         max: payload =>

@@ -2,13 +2,8 @@
 
 exports[`vae string 1`] = `
 Object {
-  "issues": Array [
-    Object {
-      "message": ". 应是字符串类型",
-      "path": Array [],
-    },
-  ],
-  "success": false,
+  "data": undefined,
+  "success": true,
 }
 `;
 

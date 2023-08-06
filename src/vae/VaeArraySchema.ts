@@ -27,6 +27,13 @@ export class VaeArraySchema<T extends any[] = any[]> extends VaeBaseSchema<T> {
     })
   }
 
+  nonempty(message: VaeLocaleMessage = VaeLocale.array.nonempty) {
+    return this.check({
+      fn: v => v.length > 0,
+      message: message,
+    })
+  }
+
   min(value: number, message: VaeLocaleMessage = VaeLocale.array.min) {
     return this.check({
       fn: v => v.length >= value,
