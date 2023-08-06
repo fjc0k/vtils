@@ -26,7 +26,7 @@ export class VaeArraySchema<T extends any[] = any[]> extends VaeSchema<T> {
   }
 
   element(element: VaeArraySchemaElementOf<T>) {
-    this.check({
+    return this.check({
       fn: element,
       message: '',
       tag: 'element',

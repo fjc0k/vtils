@@ -35,5 +35,6 @@ export class VaeObjectSchema<
         message: '',
       })
     })
+    return this
   }
 }

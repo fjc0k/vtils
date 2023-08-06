@@ -290,12 +290,23 @@ describe('vae', () => {
   })
 
   test('array', () => {
-    expect(v.array(v.string().required()).parse([1, '2'])).toMatchSnapshot()
     expect(
-      v.array(v.string().required()).min(3).parse([1, '2']),
+      v.array<string[]>(v.string().required()).parse(
+        // @ts-expect-error
+        [1, '2'],
+      ),
     ).toMatchSnapshot()
     expect(
-      v.array(v.string().required()).max(2).parse([1, '2']),
+      v.array<string[]>(v.string().required()).min(3).parse(
+        // @ts-expect-error
+        [1, '2'],
+      ),
+    ).toMatchSnapshot()
+    expect(
+      v.array<string[]>(v.string().required()).max(2).parse(
+        // @ts-expect-error
+        [1, '2'],
+      ),
     ).toMatchSnapshot()
   })
 
@@ -309,8 +320,10 @@ describe('vae', () => {
     }>({
       id: v.number().required().id(),
       name: v.string().required().max(10),
-      gender: v.string().min(1), //.enum(['male', 'female']),
-      images: v.array(v.string().required().nonempty()), //.default([]),
+      gender: v.string(s => s.required().enum(['male', 'female'])),
+      images: v.array(a =>
+        a.element(v.string().required().nonempty()).default([]),
+      ),
       isAdmin: v.boolean().default(false),
     })
     expect(
