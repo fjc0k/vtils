@@ -1,9 +1,20 @@
-import { get } from '../utils'
-import { VaeArraySchema } from './VaeArraySchema'
+import { get, set } from '../utils'
 import { VaeContext } from './VaeContext'
-import { VaeError } from './VaeError'
+import { VaeIssue } from './VaeIssue'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeStringSchema } from './VaeStringSchema'
+
+export type VaeBaseSchemaType =
+  | 'string'
+  | 'number'
+  | 'object'
+  | 'enum'
+  | 'date'
+  | 'boolean'
+  | 'array'
+
+export type VaeBaseSchemaOptions = {
+  type: VaeBaseSchemaType
+}
 
 export type VaeBaseSchemaPath = Array<string | number>
 
@@ -18,6 +29,8 @@ export type VaeBaseSchemaCheckPayload<T> = {
 export type VaeBaseSchemaTransformPayload<T> = (value: T) => T
 
 export abstract class VaeBaseSchema<T extends any = any> {
+  constructor(private _options: VaeBaseSchemaOptions) {}
+
   private _label: string | undefined
 
   private _processors: Array<
@@ -44,7 +57,7 @@ export abstract class VaeBaseSchema<T extends any = any> {
       fn: v =>
         v != null &&
         // string 时空字符串也视为必填
-        (this instanceof VaeStringSchema ? v !== '' : true),
+        (this._options.type === 'string' ? v !== '' : true),
       message: message,
       tag: 'required',
     })
@@ -54,7 +67,7 @@ export abstract class VaeBaseSchema<T extends any = any> {
     return this.transform(v =>
       v == null ||
       // string 时空字符串也视为必填
-      (this instanceof VaeStringSchema && v === '')
+      (this._options.type === 'string' && v === '')
         ? typeof value === 'function'
           ? (value as any)()
           : value
@@ -78,14 +91,13 @@ export abstract class VaeBaseSchema<T extends any = any> {
       }
     | {
         success: false
-        error: VaeError
+        issues: VaeIssue[]
       } {
-    const isRoot = !ctx
     ctx ??= new VaeContext()
 
     const processors = this._processors.slice()
     // 对于数组，将 element 的验证移到最后
-    if (this instanceof VaeArraySchema) {
+    if (this._options.type === 'array') {
       processors.sort(
         (a, b) =>
           (typeof b === 'object' && b.fn instanceof VaeBaseSchema ? 0 : 1) -
@@ -96,28 +108,34 @@ export abstract class VaeBaseSchema<T extends any = any> {
     for (let i = 0; i < processors.length; i++) {
       const processor = processors[i]
       if (typeof processor === 'object') {
-        const { fn, message, messageParams, path, tag } = processor
+        const { fn, message, messageParams, path = [], tag } = processor
+        const fullPath = [...ctx.path, ...path]
         if (fn instanceof VaeBaseSchema) {
-          // const issueCount = ctx.issues.length
-          const pathData = path ? get(data, path) : data
+          const pathData = path.length ? get(data, path) : data
           if (pathData != null) {
-            if (this instanceof VaeArraySchema && tag === 'element') {
+            if (this._options.type === 'array' && tag === 'element') {
               ;(pathData as any[]).forEach((item, index) => {
-                ctx!.withPath([...ctx!.path, ...(path || []), index], () =>
-                  fn.safeParse(item, ctx),
-                )
+                ctx!.withPath([...fullPath, index], () => {
+                  const res = fn.safeParse(item, ctx)
+                  if (res.success) {
+                    set(data as any, [...path, index], res.data)
+                  }
+                })
               })
             } else {
-              ctx.withPath([...ctx!.path, ...(path || [])], () =>
-                fn.safeParse(pathData, ctx),
-              )
+              ctx.withPath(fullPath, () => {
+                const res = fn.safeParse(pathData, ctx)
+                if (res.success) {
+                  if (path.length) {
+                    set(data as any, path, res.data)
+                  } else {
+                    data = res.data
+                  }
+                }
+              })
             }
           }
-          // if (ctx.issues.length > issueCount) {
-          //   break
-          // }
         } else if (!fn(data)) {
-          const fullPath = [...ctx.path, ...(path || [])]
           ctx.addIssue({
             path: fullPath,
             message:
@@ -136,18 +154,15 @@ export abstract class VaeBaseSchema<T extends any = any> {
         data = processor(data)
       }
     }
-    if (isRoot) {
-      if (ctx.issues.length) {
-        return {
-          success: false,
-          error: new VaeError(ctx.issues),
-        }
-      }
+    if (ctx.issues.length) {
       return {
-        success: true,
-        data: data,
+        success: false,
+        issues: ctx.issues,
       }
     }
-    return undefined as any
+    return {
+      success: true,
+      data: data,
+    }
   }
 }

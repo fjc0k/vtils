@@ -6,7 +6,9 @@ export class VaeObjectSchema<
   T extends Record<any, any> = Record<any, any>,
 > extends VaeBaseSchema<T> {
   constructor(schema?: any, message: VaeLocaleMessage = VaeLocale.object.type) {
-    super()
+    super({
+      type: 'object',
+    })
 
     this.check({
       fn: isPlainObject,

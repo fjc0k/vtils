@@ -29,3 +29,18 @@ export const v = {
     VaeLocale.$set(locale)
   },
 }
+
+// @index('./Vae*.ts', f => `export * from '${f.path}'`)
+export * from './VaeArraySchema'
+export * from './VaeBaseSchema'
+export * from './VaeBooleanSchema'
+export * from './VaeContext'
+export * from './VaeDateSchema'
+export * from './VaeEnumSchema'
+export * from './VaeError'
+export * from './VaeIssue'
+export * from './VaeLocale'
+export * from './VaeNumberSchema'
+export * from './VaeObjectSchema'
+export * from './VaeStringSchema'
+// @endindex

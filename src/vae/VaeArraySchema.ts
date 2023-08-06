@@ -4,7 +4,9 @@ import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
 export class VaeArraySchema<T extends any[] = any[]> extends VaeBaseSchema<T> {
   constructor(schema?: any, message: VaeLocaleMessage = VaeLocale.array.type) {
-    super()
+    super({
+      type: 'array',
+    })
 
     this.check({
       fn: isArray,

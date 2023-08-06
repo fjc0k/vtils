@@ -150,7 +150,7 @@ export class VaeLocaleBuilder {
 
 export const VaeLocale = {
   ...VaeLocaleBuilder.zhCN({
-    getLabel: payload => payload.label || `${payload.path.join('.')} `,
+    getLabel: payload => payload.label || `${payload.path.join('.') || '.'} `,
   }),
   $set: (locale: VaeLocaleShape) => {
     Object.assign(VaeLocale, locale)

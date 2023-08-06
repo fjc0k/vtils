@@ -6,7 +6,9 @@ export class VaeNumberSchema<
   T extends number = number,
 > extends VaeBaseSchema<T> {
   constructor(message: VaeLocaleMessage = VaeLocale.number.type) {
-    super()
+    super({
+      type: 'number',
+    })
     this.check({
       fn: isNumeric,
       message: message,

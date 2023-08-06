@@ -7,7 +7,9 @@ export class VaeEnumSchema<T extends any = any> extends VaeBaseSchema<T> {
     value: T[] | Record<any, T>,
     message: VaeLocaleMessage = VaeLocale.enum.type,
   ) {
-    super()
+    super({
+      type: 'enum',
+    })
 
     const enumValues = isArray(value) ? value : values(value)
     this.check({

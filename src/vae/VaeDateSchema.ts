@@ -4,7 +4,9 @@ import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 
 export class VaeDateSchema<T extends Date = Date> extends VaeBaseSchema<T> {
   constructor(message: VaeLocaleMessage = VaeLocale.date.type) {
-    super()
+    super({
+      type: 'date',
+    })
     this.transform(v => anyToDate(v) as any).check({
       fn: v => isDate(v) && isValid(v),
       message: message,

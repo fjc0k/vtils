@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`vae string 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ". 应是字符串类型",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 2`] = `
+Object {
+  "data": "",
+  "success": true,
+}
+`;
+
+exports[`vae string 3`] = `
+Object {
+  "data": "hello",
+  "success": true,
+}
+`;
+
+exports[`vae string 4`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ". 应是字符串类型",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 5`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ". 必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 6`] = `
+Object {
+  "data": "hello",
+  "success": true,
+}
+`;

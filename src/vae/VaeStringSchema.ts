@@ -15,7 +15,9 @@ export class VaeStringSchema<
   T extends string = string,
 > extends VaeBaseSchema<T> {
   constructor(message: VaeLocaleMessage = VaeLocale.string.type) {
-    super()
+    super({
+      type: 'string',
+    })
     this.check({
       fn: isString,
       message: message,
