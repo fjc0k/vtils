@@ -1,5 +1,758 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`vae array 1`] = `
+Object {
+  "data": Array [
+    "1",
+    "2",
+  ],
+  "success": true,
+}
+`;
+
+exports[`vae array 2`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应至少包含3个元素",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae array 3`] = `
+Object {
+  "data": Array [
+    "1",
+    "2",
+  ],
+  "success": true,
+}
+`;
+
+exports[`vae boolean 1`] = `
+Object {
+  "data": undefined,
+  "success": true,
+}
+`;
+
+exports[`vae boolean 2`] = `
+Object {
+  "data": false,
+  "success": true,
+}
+`;
+
+exports[`vae boolean 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae boolean 4`] = `
+Object {
+  "data": false,
+  "success": true,
+}
+`;
+
+exports[`vae boolean 5`] = `
+Object {
+  "data": false,
+  "success": true,
+}
+`;
+
+exports[`vae boolean 6`] = `
+Object {
+  "data": false,
+  "success": true,
+}
+`;
+
+exports[`vae boolean 7`] = `
+Object {
+  "data": true,
+  "success": true,
+}
+`;
+
+exports[`vae boolean 8`] = `
+Object {
+  "data": true,
+  "success": true,
+}
+`;
+
+exports[`vae boolean 9`] = `
+Object {
+  "data": true,
+  "success": true,
+}
+`;
+
+exports[`vae date 1`] = `
+Object {
+  "data": undefined,
+  "success": true,
+}
+`;
+
+exports[`vae date 2`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是日期类型",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae date 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae date 4`] = `
+Object {
+  "data": 2023-07-14T03:23:28.926Z,
+  "success": true,
+}
+`;
+
+exports[`vae date 5`] = `
+Object {
+  "data": 2023-07-14T03:23:28.926Z,
+  "success": true,
+}
+`;
+
+exports[`vae date 6`] = `
+Object {
+  "data": 2023-07-14T03:23:28.926Z,
+  "success": true,
+}
+`;
+
+exports[`vae date 7`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应大于或等于2023-09-14 11:23:28",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae date 8`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应小于或等于2023-06-14 11:23:28",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae date 9`] = `
+Object {
+  "data": 2023-07-14T03:23:28.926Z,
+  "success": true,
+}
+`;
+
+exports[`vae enum 1`] = `
+Object {
+  "data": undefined,
+  "success": true,
+}
+`;
+
+exports[`vae enum 2`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 4`] = `
+Object {
+  "data": "x",
+  "success": true,
+}
+`;
+
+exports[`vae enum 5`] = `
+Object {
+  "data": "y",
+  "success": true,
+}
+`;
+
+exports[`vae enum 6`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 7`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 8`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 9`] = `
+Object {
+  "data": "x",
+  "success": true,
+}
+`;
+
+exports[`vae enum 10`] = `
+Object {
+  "data": "y",
+  "success": true,
+}
+`;
+
+exports[`vae enum 11`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 12`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 13`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 14`] = `
+Object {
+  "data": "x",
+  "success": true,
+}
+`;
+
+exports[`vae enum 15`] = `
+Object {
+  "data": "y",
+  "success": true,
+}
+`;
+
+exports[`vae enum 16`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 17`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae enum 18`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:x,y",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 1`] = `
+Object {
+  "data": undefined,
+  "success": true,
+}
+`;
+
+exports[`vae number 2`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是数值类型",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 3`] = `
+Object {
+  "data": 3,
+  "success": true,
+}
+`;
+
+exports[`vae number 4`] = `
+Object {
+  "data": 3,
+  "success": true,
+}
+`;
+
+exports[`vae number 5`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 6`] = `
+Object {
+  "data": 3,
+  "success": true,
+}
+`;
+
+exports[`vae number 7`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是数值类型",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 8`] = `
+Object {
+  "data": 3,
+  "success": true,
+}
+`;
+
+exports[`vae number 9`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应大于或等于6",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 10`] = `
+Object {
+  "data": 0,
+  "success": true,
+}
+`;
+
+exports[`vae number 11`] = `
+Object {
+  "data": 0,
+  "success": true,
+}
+`;
+
+exports[`vae number 12`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应大于2",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 13`] = `
+Object {
+  "data": 0,
+  "success": true,
+}
+`;
+
+exports[`vae number 14`] = `
+Object {
+  "data": -1,
+  "success": true,
+}
+`;
+
+exports[`vae number 15`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个整数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 16`] = `
+Object {
+  "data": 1,
+  "success": true,
+}
+`;
+
+exports[`vae number 17`] = `
+Object {
+  "data": 1,
+  "success": true,
+}
+`;
+
+exports[`vae number 18`] = `
+Object {
+  "data": 1.2,
+  "success": true,
+}
+`;
+
+exports[`vae number 19`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个正数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 20`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个正数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 21`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个非正数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 22`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个非正数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 23`] = `
+Object {
+  "data": -1,
+  "success": true,
+}
+`;
+
+exports[`vae number 24`] = `
+Object {
+  "data": 0,
+  "success": true,
+}
+`;
+
+exports[`vae number 25`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个负数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 26`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个负数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 27`] = `
+Object {
+  "data": -1,
+  "success": true,
+}
+`;
+
+exports[`vae number 28`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个负数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 29`] = `
+Object {
+  "data": 1,
+  "success": true,
+}
+`;
+
+exports[`vae number 30`] = `
+Object {
+  "data": 1.2,
+  "success": true,
+}
+`;
+
+exports[`vae number 31`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个非负数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 32`] = `
+Object {
+  "data": 0,
+  "success": true,
+}
+`;
+
+exports[`vae number 33`] = `
+Object {
+  "data": 1,
+  "success": true,
+}
+`;
+
+exports[`vae number 34`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个正整数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 35`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个正整数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 36`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个正整数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 37`] = `
+Object {
+  "data": 1,
+  "success": true,
+}
+`;
+
+exports[`vae number 38`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个正整数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 39`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个正整数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae number 40`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个正整数",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae object 1`] = `
+Object {
+  "data": Object {
+    "id": 1,
+  },
+  "success": true,
+}
+`;
+
 exports[`vae string 1`] = `
 Object {
   "data": undefined,
@@ -25,7 +778,7 @@ exports[`vae string 4`] = `
 Object {
   "issues": Array [
     Object {
-      "message": ". 应是字符串类型",
+      "message": ".应必填",
       "path": Array [],
     },
   ],
@@ -35,9 +788,23 @@ Object {
 
 exports[`vae string 5`] = `
 Object {
+  "data": "hello",
+  "success": true,
+}
+`;
+
+exports[`vae string 6`] = `
+Object {
+  "data": "",
+  "success": true,
+}
+`;
+
+exports[`vae string 7`] = `
+Object {
   "issues": Array [
     Object {
-      "message": ". 必填",
+      "message": ".应非空",
       "path": Array [],
     },
   ],
@@ -45,9 +812,197 @@ Object {
 }
 `;
 
-exports[`vae string 6`] = `
+exports[`vae string 8`] = `
 Object {
   "data": "hello",
+  "success": true,
+}
+`;
+
+exports[`vae string 9`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应至少包含6位字符",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 10`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应最多包含2位字符",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 11`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应仅包含3位字符",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 12`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个合法的邮箱",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 13`] = `
+Object {
+  "data": "hello@gmail.com",
+  "success": true,
+}
+`;
+
+exports[`vae string 14`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个合法的网址",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 15`] = `
+Object {
+  "data": "https://baidu.com",
+  "success": true,
+}
+`;
+
+exports[`vae string 16`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应满足正则表达式/^\\\\d+$/",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 17`] = `
+Object {
+  "data": "234",
+  "success": true,
+}
+`;
+
+exports[`vae string 18`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应包含字符串dd",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 19`] = `
+Object {
+  "data": "23dd4",
+  "success": true,
+}
+`;
+
+exports[`vae string 20`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应以字符串dd开头",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 21`] = `
+Object {
+  "data": "dd234",
+  "success": true,
+}
+`;
+
+exports[`vae string 22`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应以字符串dd结尾",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 23`] = `
+Object {
+  "data": "234dd",
+  "success": true,
+}
+`;
+
+exports[`vae string 24`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个合法的手机号码",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 25`] = `
+Object {
+  "data": "18080000000",
+  "success": true,
+}
+`;
+
+exports[`vae string 26`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是一个合法的身份证号码",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae string 27`] = `
+Object {
+  "data": "110101202305033210",
   "success": true,
 }
 `;

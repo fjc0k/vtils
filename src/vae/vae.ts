@@ -13,16 +13,22 @@ import { VaeObjectSchema } from './VaeObjectSchema'
 import { VaeStringSchema } from './VaeStringSchema'
 
 export const v = {
-  string: (message?: VaeLocaleMessage) => new VaeStringSchema(message),
-  number: (message?: VaeLocaleMessage) => new VaeNumberSchema(message),
-  object: (schema?: any, message?: VaeLocaleMessage) =>
-    new VaeObjectSchema(schema, message),
-  array: (schema?: any, message?: VaeLocaleMessage) =>
-    new VaeArraySchema(schema, message),
-  enum: (value: any, message?: VaeLocaleMessage) =>
-    new VaeEnumSchema(value, message),
-  date: (message?: VaeLocaleMessage) => new VaeDateSchema(message),
-  boolean: (message?: VaeLocaleMessage) => new VaeBooleanSchema(message),
+  string: <T extends string = string>(message?: VaeLocaleMessage) =>
+    new VaeStringSchema<T>(message),
+  number: <T extends number = number>(message?: VaeLocaleMessage) =>
+    new VaeNumberSchema<T>(message),
+  object: <T extends Record<any, any> = Record<any, any>>(
+    schema?: any,
+    message?: VaeLocaleMessage,
+  ) => new VaeObjectSchema<T>(schema, message),
+  array: <T extends any[] = any[]>(schema?: any, message?: VaeLocaleMessage) =>
+    new VaeArraySchema<T>(schema, message),
+  enum: <T extends any = any>(value: any, message?: VaeLocaleMessage) =>
+    new VaeEnumSchema<T>(value, message),
+  date: <T extends Date = Date>(message?: VaeLocaleMessage) =>
+    new VaeDateSchema<T>(message),
+  boolean: <T extends boolean = boolean>(message?: VaeLocaleMessage) =>
+    new VaeBooleanSchema<T>(message),
 
   localeBuilder: VaeLocaleBuilder,
   setLocale: (locale: VaeLocaleShape) => {

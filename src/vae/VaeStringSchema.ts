@@ -18,10 +18,12 @@ export class VaeStringSchema<
     super({
       type: 'string',
     })
-    this.check({
-      fn: isString,
-      message: message,
-    })
+    this.transform(v => (typeof v === 'number' ? (String(v) as any) : v)).check(
+      {
+        fn: isString,
+        message: message,
+      },
+    )
   }
 
   nonempty(message: VaeLocaleMessage = VaeLocale.string.nonempty) {

@@ -1,4 +1,4 @@
-import { get, set } from '../utils'
+import { get, moveToBottom, set } from '../utils'
 import { VaeContext } from './VaeContext'
 import { VaeIssue } from './VaeIssue'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
@@ -46,6 +46,7 @@ export abstract class VaeBaseSchema<T extends any = any> {
   private _default: T | (() => T) | undefined
 
   private _required: boolean | undefined
+  private _requiredMessage: VaeLocaleMessage | undefined
 
   private _processors: Array<
     VaeBaseSchemaCheckPayload<T> | VaeBaseSchemaTransformPayload<T>
@@ -68,11 +69,8 @@ export abstract class VaeBaseSchema<T extends any = any> {
 
   required(message: VaeLocaleMessage = VaeLocale.base.required) {
     this._required = true
-    return this.check({
-      fn: v => v != null,
-      message: message,
-      tag: 'required',
-    })
+    this._requiredMessage = message
+    return this
   }
 
   default(value: T | (() => T)) {
@@ -97,17 +95,27 @@ export abstract class VaeBaseSchema<T extends any = any> {
       }
     }
 
-    ctx ??= new VaeContext()
-
     const processors = this._processors.slice()
+
+    // 必填规则始终前置
+    if (this._required) {
+      processors.unshift({
+        fn: v => v != null,
+        message: this._requiredMessage!,
+      })
+    }
+
     // 对于数组，将 element 的验证移到最后
     if (this._options.type === 'array') {
-      processors.sort(
-        (a, b) =>
-          (typeof b === 'object' && b.fn instanceof VaeBaseSchema ? 0 : 1) -
-          (typeof a === 'object' && a.fn instanceof VaeBaseSchema ? 0 : 1),
+      moveToBottom(
+        processors,
+        processors.findIndex(
+          item => typeof item === 'object' && item.tag === 'element',
+        ),
       )
     }
+
+    ctx ??= new VaeContext()
 
     for (let i = 0; i < processors.length; i++) {
       const processor = processors[i]

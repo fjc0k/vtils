@@ -134,7 +134,7 @@ export class VaeLocaleBuilder {
         type: payload =>
           `${options.getLabel(
             payload,
-          )}应是下列值之一: ${payload.params.enum.join(',')}`,
+          )}应是下列值之一:${payload.params.enum.join(',')}`,
       },
 
       date: {
@@ -156,7 +156,7 @@ export class VaeLocaleBuilder {
 
 export const VaeLocale = {
   ...VaeLocaleBuilder.zhCN({
-    getLabel: payload => payload.label || `${payload.path.join('.') || '.'} `,
+    getLabel: payload => payload.label || payload.path.join('.') || '.',
   }),
   $set: (locale: VaeLocaleShape) => {
     Object.assign(VaeLocale, locale)

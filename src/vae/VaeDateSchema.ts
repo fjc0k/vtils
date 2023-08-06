@@ -13,22 +13,32 @@ export class VaeDateSchema<T extends Date = Date> extends VaeBaseSchema<T> {
     })
   }
 
-  min(value: Date, message: VaeLocaleMessage = VaeLocale.date.min) {
-    this.check({
-      fn: v => value.getTime() <= v.getTime(),
+  min(
+    value: Date | string | number,
+    message: VaeLocaleMessage = VaeLocale.date.min,
+  ) {
+    const minDate = anyToDate(value)
+    const minTime = minDate.getTime()
+    return this.check({
+      fn: v => minTime <= v.getTime(),
       message: message,
       messageParams: {
-        min: value,
+        min: minDate,
       },
     })
   }
 
-  max(value: Date, message: VaeLocaleMessage = VaeLocale.date.max) {
-    this.check({
-      fn: v => value.getTime() >= v.getTime(),
+  max(
+    value: Date | string | number,
+    message: VaeLocaleMessage = VaeLocale.date.max,
+  ) {
+    const maxDate = anyToDate(value)
+    const maxTime = maxDate.getTime()
+    return this.check({
+      fn: v => maxTime >= v.getTime(),
       message: message,
       messageParams: {
-        max: value,
+        max: maxDate,
       },
     })
   }
