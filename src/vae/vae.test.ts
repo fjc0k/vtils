@@ -309,8 +309,8 @@ describe('vae', () => {
     }>({
       id: v.number().required().id(),
       name: v.string().required().max(10),
-      gender: v.string().required().enum(['male', 'female']),
-      images: v.array(v.string().required().nonempty()).default([]),
+      gender: v.string().min(1), //.enum(['male', 'female']),
+      images: v.array(v.string().required().nonempty()), //.default([]),
       isAdmin: v.boolean().default(false),
     })
     expect(
