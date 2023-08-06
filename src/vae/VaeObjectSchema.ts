@@ -65,33 +65,35 @@ export class VaeObjectSchema<
     return this as any
   }
 
-  optionalFields<K extends keyof T>(
-    keys: K[],
-  ): VaeObjectSchema<PartialBy<T, K>> {
+  optionalFields<K extends keyof T>(keys: K[]): VaeObjectSchema<PartialBy<T, K>>
+  optionalFields(): VaeObjectSchema<Partial<T>>
+  optionalFields(keys?: string[]): any {
     this._options.processors.forEach(item => {
       if (
         typeof item === 'object' &&
         item.tag === 'field' &&
-        (keys as any).includes(item.path![0])
+        (keys ? (keys as any).includes(item.path![0]) : true)
       ) {
         ;(item.fn as VaeSchema).optional()
       }
     })
-    return this as any
+    return this
   }
 
   requiredFields<K extends keyof T>(
     keys: K[],
-  ): VaeObjectSchema<RequiredBy<T, K>> {
+  ): VaeObjectSchema<RequiredBy<T, K>>
+  requiredFields(): VaeObjectSchema<Required<T>>
+  requiredFields(keys?: string[]): any {
     this._options.processors.forEach(item => {
       if (
         typeof item === 'object' &&
         item.tag === 'field' &&
-        (keys as any).includes(item.path![0])
+        (keys ? (keys as any).includes(item.path![0]) : true)
       ) {
         ;(item.fn as VaeSchema).required()
       }
     })
-    return this as any
+    return this
   }
 }

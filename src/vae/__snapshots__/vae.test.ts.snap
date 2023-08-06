@@ -840,6 +840,30 @@ Object {
 }
 `;
 
+exports[`vae optionalFields, requiredFields 4`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "name应必填",
+      "path": Array [
+        "name",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae optionalFields, requiredFields 5`] = `
+Object {
+  "data": Object {
+    "id": undefined,
+    "name": undefined,
+  },
+  "success": true,
+}
+`;
+
 exports[`vae pickFields, omitFields 1`] = `
 Object {
   "data": Object {

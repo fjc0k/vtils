@@ -566,6 +566,15 @@ describe('vae', () => {
       ),
     ).toMatchSnapshot()
     expect(schema.clone().optionalFields(['id']).parse({})).toMatchSnapshot()
+    expect(
+      schema.clone().requiredFields().parse(
+        // @ts-expect-error
+        {
+          id: 0,
+        },
+      ),
+    ).toMatchSnapshot()
+    expect(schema.clone().optionalFields().parse({})).toMatchSnapshot()
   })
 
   test('create', () => {
