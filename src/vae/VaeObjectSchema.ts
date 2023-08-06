@@ -1,3 +1,4 @@
+import { PartialBy, RequiredBy } from '../types'
 import { difference, intersection, isPlainObject } from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema, VaeSchemaOf } from './VaeSchema'
@@ -41,7 +42,7 @@ export class VaeObjectSchema<
     return this
   }
 
-  pick<K extends keyof T>(keys: K[]): VaeObjectSchema<Pick<T, K>> {
+  pickFields<K extends keyof T>(keys: K[]): VaeObjectSchema<Pick<T, K>> {
     this._options.processors = this._options.processors.filter(item =>
       typeof item === 'object' && item.tag === 'field'
         ? (keys as any).includes(item.path![0])
@@ -54,13 +55,43 @@ export class VaeObjectSchema<
     return this as any
   }
 
-  omit<K extends keyof T>(keys: K[]): VaeObjectSchema<Omit<T, K>> {
+  omitFields<K extends keyof T>(keys: K[]): VaeObjectSchema<Omit<T, K>> {
     this._options.processors = this._options.processors.filter(item =>
       typeof item === 'object' && item.tag === 'field'
         ? !(keys as any).includes(item.path![0])
         : true,
     )
     this._options.objectKeys = difference(this._options.objectKeys, keys as any)
+    return this as any
+  }
+
+  optionalFields<K extends keyof T>(
+    keys: K[],
+  ): VaeObjectSchema<PartialBy<T, K>> {
+    this._options.processors.forEach(item => {
+      if (
+        typeof item === 'object' &&
+        item.tag === 'field' &&
+        (keys as any).includes(item.path![0])
+      ) {
+        ;(item.fn as VaeSchema).optional()
+      }
+    })
+    return this as any
+  }
+
+  requiredFields<K extends keyof T>(
+    keys: K[],
+  ): VaeObjectSchema<RequiredBy<T, K>> {
+    this._options.processors.forEach(item => {
+      if (
+        typeof item === 'object' &&
+        item.tag === 'field' &&
+        (keys as any).includes(item.path![0])
+      ) {
+        ;(item.fn as VaeSchema).required()
+      }
+    })
     return this as any
   }
 }

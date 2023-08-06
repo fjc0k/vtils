@@ -507,7 +507,7 @@ describe('vae', () => {
     expect(schema.parse('')).toMatchSnapshot()
   })
 
-  test('pick', () => {
+  test('pickFields, omitFields', () => {
     const schema = v.object({
       id: v.number().required(),
       name: v.string().required(),
@@ -519,28 +519,52 @@ describe('vae', () => {
       }),
     ).toMatchSnapshot()
     expect(
-      schema.clone().pick(['id']).parse({
+      schema.clone().pickFields(['id']).parse({
         id: 0,
         // @ts-expect-error
         name: 'jack',
       }),
     ).toMatchSnapshot()
     expect(
-      schema.clone().omit(['id']).parse({
+      schema.clone().omitFields(['id']).parse({
         // @ts-expect-error
         id: 0,
         name: 'jack',
       }),
     ).toMatchSnapshot()
     expect(
-      schema.clone().pick(['id']).parse({
+      schema.clone().pickFields(['id']).parse({
         id: 0,
       }),
     ).toMatchSnapshot()
     expect(
-      schema.clone().omit(['id']).parse({
+      schema.clone().omitFields(['id']).parse({
         name: 'jack',
       }),
     ).toMatchSnapshot()
+  })
+
+  test('optionalFields, requiredFields', () => {
+    const schema = v.object<{
+      id: number
+      name?: string
+    }>({
+      id: v.number().required(),
+      name: v.string(),
+    })
+    expect(
+      schema.parse({
+        id: 0,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().requiredFields(['name']).parse(
+        // @ts-expect-error
+        {
+          id: 0,
+        },
+      ),
+    ).toMatchSnapshot()
+    expect(schema.clone().optionalFields(['id']).parse({})).toMatchSnapshot()
   })
 })
