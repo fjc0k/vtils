@@ -140,4 +140,8 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
       message: message,
     })
   }
+
+  trim() {
+    return this.transform(v => v.trim() as any)
+  }
 }

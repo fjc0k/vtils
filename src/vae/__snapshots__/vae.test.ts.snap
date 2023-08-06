@@ -968,3 +968,10 @@ Object {
   "success": true,
 }
 `;
+
+exports[`vae string 28`] = `
+Object {
+  "data": "110101202305033210",
+  "success": true,
+}
+`;

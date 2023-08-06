@@ -73,6 +73,15 @@ describe('vae', () => {
     expect(
       v.string().required().idCardNumber().parse('110101202305033210'),
     ).toMatchSnapshot()
+
+    expect(
+      v
+        .string()
+        .required()
+        .trim()
+        .idCardNumber()
+        .parse('   110101202305033210'),
+    ).toMatchSnapshot()
   })
 
   test('number', () => {
