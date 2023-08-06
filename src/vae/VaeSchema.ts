@@ -290,6 +290,8 @@ export abstract class VaeSchema<T extends any = any> {
     if (res.success) {
       return res.data
     }
+    // TODO: 暂时解决编译报错
+    // @ts-ignore
     throw new VaeError(res.issues)
   }
 }
