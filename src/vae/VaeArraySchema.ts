@@ -1,0 +1,72 @@
+import { isArray } from '../utils'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
+import { VaeSchema, VaeSchemaOf } from './VaeSchema'
+
+export type VaeArraySchemaElementOf<T> = T extends Array<infer X>
+  ? VaeSchemaOf<X>
+  : never
+
+export class VaeArraySchema<T extends any[] = any[]> extends VaeSchema<T> {
+  constructor(
+    element?: VaeArraySchemaElementOf<T>,
+    message: VaeLocaleMessage = VaeLocale.array.type,
+  ) {
+    super({
+      type: 'array',
+    })
+
+    this.check({
+      fn: isArray,
+      message: message,
+    })
+
+    if (element) {
+      this.element(element)
+    }
+  }
+
+  element(element: VaeArraySchemaElementOf<T>) {
+    return this.check({
+      fn: element,
+      message: '',
+      tag: 'element',
+    })
+  }
+
+  nonempty(message: VaeLocaleMessage = VaeLocale.array.nonempty) {
+    return this.check({
+      fn: v => v.length > 0,
+      message: message,
+    })
+  }
+
+  min(value: number, message: VaeLocaleMessage = VaeLocale.array.min) {
+    return this.check({
+      fn: v => v.length >= value,
+      message: message,
+      messageParams: {
+        min: value,
+      },
+    })
+  }
+
+  max(value: number, message: VaeLocaleMessage = VaeLocale.array.max) {
+    return this.check({
+      fn: v => v.length <= value,
+      message: message,
+      messageParams: {
+        max: value,
+      },
+    })
+  }
+
+  length(value: number, message: VaeLocaleMessage = VaeLocale.array.length) {
+    return this.check({
+      fn: v => v.length === value,
+      message: message,
+      messageParams: {
+        length: value,
+      },
+    })
+  }
+}

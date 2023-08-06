@@ -71,6 +71,11 @@
       "require": "./_cjs/regexp/index.js",
       "import": "./regexp/index.js",
       "types": "./regexp/index.d.ts"
+    },
+    "./vae": {
+      "require": "./_cjs/vae/index.js",
+      "import": "./vae/index.js",
+      "types": "./vae/index.d.ts"
     }
   },
   "main": "_cjs/utils/index.js",
