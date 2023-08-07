@@ -33,7 +33,7 @@ export class VaeObjectSchema<
     this._options.objectKeys = keys
     keys.forEach(key => {
       this.check({
-        fn: shape[key],
+        fn: shape[key] as any,
         path: [key],
         message: '',
         tag: 'field',
