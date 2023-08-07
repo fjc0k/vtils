@@ -255,6 +255,15 @@ Object {
 }
 `;
 
+exports[`vae create 2`] = `
+Object {
+  "data": Object {
+    "id": 1,
+  },
+  "success": true,
+}
+`;
+
 exports[`vae date 1`] = `
 Object {
   "data": undefined,

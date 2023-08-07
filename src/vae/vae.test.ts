@@ -1,4 +1,4 @@
-import { v } from './vae'
+import { VaeSchemaOf, v } from './vae'
 
 describe('vae', () => {
   test('string', () => {
@@ -580,5 +580,18 @@ describe('vae', () => {
   test('create', () => {
     const schema = v.create(_ => _.string().required())
     expect(schema.parse('1')).toMatchSnapshot()
+
+    const schema2: VaeSchemaOf<{
+      id: number
+    }> = v.create(_ =>
+      _.object({
+        id: _.number().required(),
+      }),
+    )
+    expect(
+      schema2.parse({
+        id: 1,
+      }),
+    ).toMatchSnapshot()
   })
 })
