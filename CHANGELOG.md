@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.90.0](https://github.com/fjc0k/vtils/compare/v4.89.0...v4.90.0) (2023-08-07)
+
+### Features
+
+- **vae:** 新增 clone, pickFields, omitFields, optionalFields, requiredFields ([5fe2131](https://github.com/fjc0k/vtils/commit/5fe2131ea7d0c7d2de79333606378e7c5efdc526))
+
 ## [4.89.0](https://github.com/fjc0k/vtils/compare/v4.88.0...v4.89.0) (2023-08-06)
 
 ### Features
