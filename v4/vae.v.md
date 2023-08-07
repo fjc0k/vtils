@@ -8,13 +8,14 @@
 
 ```typescript
 v: {
+    create: <T>(cb: (_: typeof schemaBuilders) => T) => T;
+    localeBuilder: typeof VaeLocaleBuilder;
+    setLocale: (locale: VaeLocaleShape) => void;
     string: typeof string;
     number: typeof number;
     date: typeof date;
     boolean: typeof boolean;
     object: typeof object;
     array: typeof array;
-    localeBuilder: typeof VaeLocaleBuilder;
-    setLocale: (locale: VaeLocaleShape) => void;
 }
 ```

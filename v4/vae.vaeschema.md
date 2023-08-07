@@ -14,25 +14,25 @@ export declare abstract class VaeSchema<T extends any = any>
 
 |  Constructor | Modifiers | Description |
 |  --- | --- | --- |
-|  [(constructor)(\_options)](./vae.vaeschema._constructor_.md) |  | Constructs a new instance of the <code>VaeSchema</code> class |
+|  [(constructor)(options)](./vae.vaeschema._constructor_.md) |  | Constructs a new instance of the <code>VaeSchema</code> class |
 
 ## Properties
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [\_objectKeys](./vae.vaeschema._objectkeys.md) | <code>protected</code> | string\[\] \| undefined |  |
-|  [\_stringEmptyable](./vae.vaeschema._stringemptyable.md) | <code>protected</code> | boolean \| undefined |  |
-|  [\_stringTrim](./vae.vaeschema._stringtrim.md) | <code>protected</code> | boolean \| undefined |  |
+|  [\_options](./vae.vaeschema._options.md) | <code>protected</code> | RequiredBy&lt;[VaeSchemaOptions](./vae.vaeschemaoptions.md)<!-- -->&lt;T&gt;, 'processors'&gt; |  |
 
 ## Methods
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [check(payload)](./vae.vaeschema.check.md) |  |  |
+|  [clone()](./vae.vaeschema.clone.md) |  |  |
 |  [custom(fn, message, dotPath)](./vae.vaeschema.custom.md) |  |  |
 |  [default(value)](./vae.vaeschema.default.md) |  |  |
 |  [enum(value, message)](./vae.vaeschema.enum.md) |  |  |
 |  [label(label)](./vae.vaeschema.label.md) |  |  |
+|  [optional()](./vae.vaeschema.optional.md) |  |  |
 |  [parse(data, options)](./vae.vaeschema.parse.md) |  |  |
 |  [parseOrThrow(data, options)](./vae.vaeschema.parseorthrow.md) |  |  |
 |  [required(message)](./vae.vaeschema.required.md) |  |  |

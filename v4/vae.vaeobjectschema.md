@@ -21,5 +21,11 @@ export declare class VaeObjectSchema<T extends Record<any, any> = Record<any, an
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [omitFields(keys)](./vae.vaeobjectschema.omitfields.md) |  |  |
+|  [optionalFields(keys)](./vae.vaeobjectschema.optionalfields.md) |  |  |
+|  [optionalFields()](./vae.vaeobjectschema.optionalfields_1.md) |  |  |
+|  [pickFields(keys)](./vae.vaeobjectschema.pickfields.md) |  |  |
+|  [requiredFields(keys)](./vae.vaeobjectschema.requiredfields.md) |  |  |
+|  [requiredFields()](./vae.vaeobjectschema.requiredfields_1.md) |  |  |
 |  [shape(shape)](./vae.vaeobjectschema.shape.md) |  |  |
 
