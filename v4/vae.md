@@ -12,12 +12,13 @@ vae 数据验证。
 |  --- | --- |
 |  [VaeArraySchema](./vae.vaearrayschema.md) |  |
 |  [VaeBooleanSchema](./vae.vaebooleanschema.md) |  |
-|  [VaeContext](./vae.vaecontext.md) |  |
 |  [VaeDateSchema](./vae.vaedateschema.md) |  |
 |  [VaeError](./vae.vaeerror.md) |  |
 |  [VaeLocaleBuilder](./vae.vaelocalebuilder.md) |  |
 |  [VaeNumberSchema](./vae.vaenumberschema.md) |  |
 |  [VaeObjectSchema](./vae.vaeobjectschema.md) |  |
+|  [VaeSchemaParseContext](./vae.vaeschemaparsecontext.md) |  |
+|  [VaeSchemaReachContext](./vae.vaeschemareachcontext.md) |  |
 |  [VaeStringSchema](./vae.vaestringschema.md) |  |
 
 ## Abstract Classes

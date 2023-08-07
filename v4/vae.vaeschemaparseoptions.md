@@ -8,10 +8,11 @@
 
 ```typescript
 export declare type VaeSchemaParseOptions = {
-    ctx?: VaeContext;
+    ctx?: VaeSchemaParseContext;
+    curPath?: VaeSchemaPath;
     abortEarly?: boolean;
     preserveUnknownKeys?: boolean;
 };
 ```
-**References:** [VaeContext](./vae.vaecontext.md)
+**References:** [VaeSchemaParseContext](./vae.vaeschemaparsecontext.md)<!-- -->, [VaeSchemaPath](./vae.vaeschemapath.md)
 

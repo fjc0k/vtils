@@ -8,7 +8,7 @@
 
 ```typescript
 v: {
-    create: <T>(cb: (_: typeof schemaBuilders) => T) => T;
+    create: <R, F extends (_: typeof schemaBuilders) => R = (_: typeof schemaBuilders) => R>(cb: F) => R;
     localeBuilder: typeof VaeLocaleBuilder;
     setLocale: (locale: VaeLocaleShape) => void;
     string: typeof string;

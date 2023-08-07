@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-export declare type DotPathValue<T, Path extends string> = Path extends keyof T ? T[Path] : Path extends `${infer K}.${infer R}` ? K extends keyof T ? DotPathValue<T[K], R> : unknown : unknown;
+export declare type DotPathValue<T, Path extends string> = Path extends '0' ? T[0] : Path extends keyof T ? T[Path] : Path extends `${infer K}.${infer R}` ? K extends '0' ? DotPathValue<T[0], R> : K extends keyof T ? DotPathValue<T[K], R> : unknown : unknown;
 ```
 **References:** [DotPathValue](./types.dotpathvalue.md)
 

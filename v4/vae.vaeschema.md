@@ -35,6 +35,8 @@ export declare abstract class VaeSchema<T extends any = any>
 |  [optional()](./vae.vaeschema.optional.md) |  |  |
 |  [parse(data, options)](./vae.vaeschema.parse.md) |  |  |
 |  [parseOrThrow(data, options)](./vae.vaeschema.parseorthrow.md) |  |  |
+|  [reach(paths, ctx, curPath)](./vae.vaeschema.reach.md) |  |  |
+|  [reach(path, ctx, curPath)](./vae.vaeschema.reach_1.md) |  |  |
 |  [required(message)](./vae.vaeschema.required.md) |  |  |
 |  [transform(payload)](./vae.vaeschema.transform.md) |  |  |
 

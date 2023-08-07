@@ -7,5 +7,5 @@
 **Signature:**
 
 ```typescript
-export declare type DotPath<T> = object extends T ? string : T extends readonly any[] ? Extract<keyof T, `${number}`> | SubKeys<T, Extract<keyof T, `${number}`>> : T extends object ? Extract<keyof T, string> | SubKeys<T, Extract<keyof T, string>> : never;
+export declare type DotPath<T> = object extends T ? string : T extends any[] ? '0' | SubKeys<T, 0> : T extends readonly any[] ? Extract<keyof T, `${number}`> | SubKeys<T, Extract<keyof T, `${number}`>> : T extends object ? Extract<keyof T, string> | SubKeys<T, Extract<keyof T, string>> : never;
 ```
