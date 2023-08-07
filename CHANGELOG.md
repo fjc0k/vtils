@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.91.0](https://github.com/fjc0k/vtils/compare/v4.90.0...v4.91.0) (2023-08-07)
+
+### Features
+
+- **DotPath:** 支持数组 ([fffd59c](https://github.com/fjc0k/vtils/commit/fffd59cc224ad641925db4ed13dad82e4a8a662e))
+- **vae:** 新增 reach 方法 ([a12917d](https://github.com/fjc0k/vtils/commit/a12917d9e3406dbe2ee1cd559746fb925ac47ed8))
+
 ## [4.90.0](https://github.com/fjc0k/vtils/compare/v4.89.0...v4.90.0) (2023-08-07)
 
 ### Features
