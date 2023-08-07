@@ -217,6 +217,33 @@ Object {
 }
 `;
 
+exports[`vae cast 1`] = `
+Object {
+  "extra": Object {
+    "gender": undefined,
+  },
+  "id": undefined,
+  "images": Array [
+    "2",
+  ],
+  "type": 2,
+}
+`;
+
+exports[`vae cast 2`] = `
+Object {
+  "ddd": 1,
+  "extra": Object {
+    "gender": undefined,
+  },
+  "id": 1,
+  "images": Array [
+    "2",
+  ],
+  "type": 2,
+}
+`;
+
 exports[`vae clone 1`] = `
 Object {
   "issues": Array [

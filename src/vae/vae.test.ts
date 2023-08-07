@@ -631,4 +631,44 @@ describe('vae', () => {
       ),
     ).toMatchSnapshot()
   })
+
+  test('cast', () => {
+    const schema = v.object<{
+      id: number
+      images: string[]
+      extra: {
+        gender: number
+      }
+      type: number
+    }>({
+      id: v.number().required().id(),
+      images: v.array(a => a.required().element(v.string())),
+      extra: v.object({
+        gender: v.number().required().enum([0, 1]),
+      }),
+      type: v.number().enum([3, 4]),
+    })
+    expect(
+      schema.cast({
+        images: ['2'],
+        extra: {},
+        type: 2,
+        ddd: 1,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.cast(
+        {
+          id: '1',
+          images: ['2'],
+          extra: {},
+          type: 2,
+          ddd: 1,
+        },
+        {
+          preserveUnknownKeys: true,
+        },
+      ),
+    ).toMatchSnapshot()
+  })
 })

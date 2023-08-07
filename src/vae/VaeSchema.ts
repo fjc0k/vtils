@@ -15,6 +15,8 @@ import {
   moveToBottom,
   pick,
   set,
+  toArray,
+  toPlainObject,
   values,
 } from '../utils'
 import { VaeArraySchema } from './VaeArraySchema'
@@ -83,6 +85,22 @@ export type VaeSchemaParseOptions = {
    */
   abortEarly?: boolean
 
+  /**
+   * 是否保留未知属性
+   *
+   * @default false
+   */
+  preserveUnknownKeys?: boolean
+
+  /**
+   * 是否 cast 模式
+   *
+   * @default false
+   */
+  cast?: boolean
+}
+
+export type VaeSchemaCastOptions = {
   /**
    * 是否保留未知属性
    *
@@ -361,22 +379,40 @@ export abstract class VaeSchema<T extends any = any> {
             }
           }
         } else if (!fn(data)) {
-          ctx.addIssue({
-            path: fullPath,
-            message:
-              typeof message === 'function'
-                ? message({
-                    path: fullPath,
-                    params: messageParams || {},
-                    value: data,
-                    label: this._options.label,
-                  })
-                : message,
-          })
-          if (options.abortEarly) {
-            return {
-              success: false,
-              issues: ctx.issues,
+          if (options.cast) {
+            data = dataIsNil
+              ? data
+              : this._options.type === 'string'
+              ? String(data)
+              : this._options.type === 'number'
+              ? Number(data)
+              : this._options.type === 'boolean'
+              ? Boolean(data)
+              : this._options.type === 'date'
+              ? new Date(data as any)
+              : this._options.type === 'array'
+              ? toArray(data)
+              : this._options.type === 'object'
+              ? toPlainObject(data)
+              : null
+          } else {
+            ctx.addIssue({
+              path: fullPath,
+              message:
+                typeof message === 'function'
+                  ? message({
+                      path: fullPath,
+                      params: messageParams || {},
+                      value: data,
+                      label: this._options.label,
+                    })
+                  : message,
+            })
+            if (options.abortEarly) {
+              return {
+                success: false,
+                issues: ctx.issues,
+              }
             }
           }
           break
@@ -410,5 +446,14 @@ export abstract class VaeSchema<T extends any = any> {
     // TODO: 暂时解决编译报错
     // @ts-ignore
     throw new VaeError(res.issues)
+  }
+
+  cast(data: any, options?: VaeSchemaCastOptions): any {
+    const res = this.parse(data, {
+      cast: true,
+      preserveUnknownKeys: options?.preserveUnknownKeys,
+    })
+    // @ts-ignore
+    return res.data
   }
 }
