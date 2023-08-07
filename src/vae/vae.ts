@@ -102,7 +102,7 @@ function array(messageOrSchemaOrElement: any, message?: any) {
     : new VaeArraySchema(undefined, messageOrSchemaOrElement)
 }
 
-export const v = {
+const schemaBuilders = {
   string,
 
   number,
@@ -114,6 +114,12 @@ export const v = {
   object,
 
   array,
+}
+
+export const v = {
+  ...schemaBuilders,
+
+  create: <T>(cb: (_: typeof schemaBuilders) => T): T => cb(schemaBuilders),
 
   localeBuilder: VaeLocaleBuilder,
   setLocale: (locale: VaeLocaleShape) => {

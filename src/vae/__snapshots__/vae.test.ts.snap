@@ -217,6 +217,44 @@ Object {
 }
 `;
 
+exports[`vae clone 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae clone 2`] = `
+Object {
+  "data": "",
+  "success": true,
+}
+`;
+
+exports[`vae clone 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae create 1`] = `
+Object {
+  "data": "1",
+  "success": true,
+}
+`;
+
 exports[`vae date 1`] = `
 Object {
   "data": undefined,
@@ -739,6 +777,136 @@ Object {
     },
   ],
   "success": false,
+}
+`;
+
+exports[`vae optional 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae optional 2`] = `
+Object {
+  "data": "",
+  "success": true,
+}
+`;
+
+exports[`vae optional 3`] = `
+Object {
+  "data": "",
+  "success": true,
+}
+`;
+
+exports[`vae optionalFields, requiredFields 1`] = `
+Object {
+  "data": Object {
+    "id": 0,
+    "name": undefined,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae optionalFields, requiredFields 2`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "name应必填",
+      "path": Array [
+        "name",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae optionalFields, requiredFields 3`] = `
+Object {
+  "data": Object {
+    "id": undefined,
+    "name": undefined,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae optionalFields, requiredFields 4`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "name应必填",
+      "path": Array [
+        "name",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae optionalFields, requiredFields 5`] = `
+Object {
+  "data": Object {
+    "id": undefined,
+    "name": undefined,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae pickFields, omitFields 1`] = `
+Object {
+  "data": Object {
+    "id": 0,
+    "name": "jack",
+  },
+  "success": true,
+}
+`;
+
+exports[`vae pickFields, omitFields 2`] = `
+Object {
+  "data": Object {
+    "id": 0,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae pickFields, omitFields 3`] = `
+Object {
+  "data": Object {
+    "name": "jack",
+  },
+  "success": true,
+}
+`;
+
+exports[`vae pickFields, omitFields 4`] = `
+Object {
+  "data": Object {
+    "id": 0,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae pickFields, omitFields 5`] = `
+Object {
+  "data": Object {
+    "name": "jack",
+  },
+  "success": true,
 }
 `;
 

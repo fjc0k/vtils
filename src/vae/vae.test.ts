@@ -491,4 +491,94 @@ describe('vae', () => {
       }),
     ).toMatchSnapshot()
   })
+
+  test('optional', () => {
+    const schema = v.string().required()
+    expect(schema.parse('')).toMatchSnapshot()
+    expect(schema.optional().parse('')).toMatchSnapshot()
+    // 没有 clone 被 optional 影响了
+    expect(schema.parse('')).toMatchSnapshot()
+  })
+
+  test('clone', () => {
+    const schema = v.string().required()
+    expect(schema.parse('')).toMatchSnapshot()
+    expect(schema.clone().optional().parse('')).toMatchSnapshot()
+    expect(schema.parse('')).toMatchSnapshot()
+  })
+
+  test('pickFields, omitFields', () => {
+    const schema = v.object({
+      id: v.number().required(),
+      name: v.string().required(),
+    })
+    expect(
+      schema.parse({
+        id: 0,
+        name: 'jack',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().pickFields(['id']).parse({
+        id: 0,
+        // @ts-expect-error
+        name: 'jack',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().omitFields(['id']).parse({
+        // @ts-expect-error
+        id: 0,
+        name: 'jack',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().pickFields(['id']).parse({
+        id: 0,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().omitFields(['id']).parse({
+        name: 'jack',
+      }),
+    ).toMatchSnapshot()
+  })
+
+  test('optionalFields, requiredFields', () => {
+    const schema = v.object<{
+      id: number
+      name?: string
+    }>({
+      id: v.number().required(),
+      name: v.string(),
+    })
+    expect(
+      schema.parse({
+        id: 0,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.clone().requiredFields(['name']).parse(
+        // @ts-expect-error
+        {
+          id: 0,
+        },
+      ),
+    ).toMatchSnapshot()
+    expect(schema.clone().optionalFields(['id']).parse({})).toMatchSnapshot()
+    expect(
+      schema.clone().requiredFields().parse(
+        // @ts-expect-error
+        {
+          id: 0,
+        },
+      ),
+    ).toMatchSnapshot()
+    expect(schema.clone().optionalFields().parse({})).toMatchSnapshot()
+  })
+
+  test('create', () => {
+    const schema = v.create(_ => _.string().required())
+    expect(schema.parse('1')).toMatchSnapshot()
+  })
 })

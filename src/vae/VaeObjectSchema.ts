@@ -1,4 +1,5 @@
-import { isPlainObject } from '../utils'
+import { PartialBy, RequiredBy } from '../types'
+import { difference, intersection, isPlainObject } from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema, VaeSchemaOf } from './VaeSchema'
 
@@ -29,13 +30,69 @@ export class VaeObjectSchema<
 
   shape(shape: VaeObjectSchemaShapeOf<T>) {
     const keys = Object.keys(shape)
-    this._objectKeys = keys
+    this._options.objectKeys = keys
     keys.forEach(key => {
       this.check({
         fn: shape[key],
         path: [key],
         message: '',
+        tag: 'field',
       })
+    })
+    return this
+  }
+
+  pickFields<K extends keyof T>(keys: K[]): VaeObjectSchema<Pick<T, K>> {
+    this._options.processors = this._options.processors.filter(item =>
+      typeof item === 'object' && item.tag === 'field'
+        ? (keys as any).includes(item.path![0])
+        : true,
+    )
+    this._options.objectKeys = intersection(
+      this._options.objectKeys,
+      keys as any,
+    )
+    return this as any
+  }
+
+  omitFields<K extends keyof T>(keys: K[]): VaeObjectSchema<Omit<T, K>> {
+    this._options.processors = this._options.processors.filter(item =>
+      typeof item === 'object' && item.tag === 'field'
+        ? !(keys as any).includes(item.path![0])
+        : true,
+    )
+    this._options.objectKeys = difference(this._options.objectKeys, keys as any)
+    return this as any
+  }
+
+  optionalFields<K extends keyof T>(keys: K[]): VaeObjectSchema<PartialBy<T, K>>
+  optionalFields(): VaeObjectSchema<Partial<T>>
+  optionalFields(keys?: string[]): any {
+    this._options.processors.forEach(item => {
+      if (
+        typeof item === 'object' &&
+        item.tag === 'field' &&
+        (keys ? (keys as any).includes(item.path![0]) : true)
+      ) {
+        ;(item.fn as VaeSchema).optional()
+      }
+    })
+    return this
+  }
+
+  requiredFields<K extends keyof T>(
+    keys: K[],
+  ): VaeObjectSchema<RequiredBy<T, K>>
+  requiredFields(): VaeObjectSchema<Required<T>>
+  requiredFields(keys?: string[]): any {
+    this._options.processors.forEach(item => {
+      if (
+        typeof item === 'object' &&
+        item.tag === 'field' &&
+        (keys ? (keys as any).includes(item.path![0]) : true)
+      ) {
+        ;(item.fn as VaeSchema).required()
+      }
     })
     return this
   }
