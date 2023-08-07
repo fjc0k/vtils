@@ -1,5 +1,5 @@
-import { DotPath, DotPathValue } from './DotPath'
 import { expectType } from '../dev'
+import { DotPath, DotPathValue } from './DotPath'
 
 describe('DotPath', () => {
   test('表现正常', () => {
@@ -9,6 +9,14 @@ describe('DotPath', () => {
           z: [0, '1'] as const,
           哈哈: 1,
         },
+        arr: [
+          {
+            id: 1,
+          },
+          {
+            id: 2,
+          },
+        ],
       },
     }
     // eslint-disable-next-line
@@ -24,5 +32,14 @@ describe('DotPath', () => {
 
     const xyz哈哈 = get(obj, 'x.y.哈哈')
     expectType<typeof xyz哈哈, number>()
+
+    const xyzArr = get(obj, 'x.arr')
+    expectType<typeof xyzArr, Array<{ id: number }>>()
+
+    const xyzArrItem = get(obj, 'x.arr.0')
+    expectType<typeof xyzArrItem, { id: number }>()
+
+    const xyzArrItemId = get(obj, 'x.arr.0.id')
+    expectType<typeof xyzArrItemId, number>()
   })
 })
