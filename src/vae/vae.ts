@@ -119,7 +119,12 @@ const schemaBuilders = {
 export const v = {
   ...schemaBuilders,
 
-  create: <T>(cb: (_: typeof schemaBuilders) => T): T => cb(schemaBuilders),
+  create: <
+    R,
+    F extends (_: typeof schemaBuilders) => R = (_: typeof schemaBuilders) => R,
+  >(
+    cb: F,
+  ): R => cb(schemaBuilders),
 
   localeBuilder: VaeLocaleBuilder,
   setLocale: (locale: VaeLocaleShape) => {
@@ -130,7 +135,6 @@ export const v = {
 // @index('./Vae*.ts', f => `export * from '${f.path}'`)
 export * from './VaeArraySchema'
 export * from './VaeBooleanSchema'
-export * from './VaeContext'
 export * from './VaeDateSchema'
 export * from './VaeError'
 export * from './VaeIssue'
@@ -138,5 +142,7 @@ export * from './VaeLocale'
 export * from './VaeNumberSchema'
 export * from './VaeObjectSchema'
 export * from './VaeSchema'
+export * from './VaeSchemaParseContext'
+export * from './VaeSchemaReachContext'
 export * from './VaeStringSchema'
 // @endindex

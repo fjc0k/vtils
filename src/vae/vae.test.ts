@@ -578,7 +578,7 @@ describe('vae', () => {
   })
 
   test('create', () => {
-    const schema = v.create(_ => _.string().required())
+    const schema = v.create<VaeSchemaOf<string>>(_ => _.string().required())
     expect(schema.parse('1')).toMatchSnapshot()
 
     const schema2: VaeSchemaOf<{
@@ -592,6 +592,43 @@ describe('vae', () => {
       schema2.parse({
         id: 1,
       }),
+    ).toMatchSnapshot()
+  })
+
+  test('reach', () => {
+    const schema = v.object<{
+      id: number
+      images: string[]
+      extra: {
+        gender: number
+      }
+      type: number
+    }>({
+      id: v.number().required().id(),
+      images: v.array(a => a.required().element(v.string())),
+      extra: v.object({
+        gender: v.number().required().enum([0, 1]),
+      }),
+      type: v.number().enum([3, 4]),
+    })
+
+    expect(
+      schema.parse({
+        id: 0,
+        images: [],
+        extra: {
+          gender: 3,
+        },
+        type: 5,
+      }),
+    ).toMatchSnapshot()
+    expect(schema.reach('extra.gender').parse(1)).toMatchSnapshot()
+    expect(schema.reach('extra.gender').parse(2)).toMatchSnapshot()
+    expect(
+      schema.reach(['extra.gender', 'images.0'])['images.0'].parse(
+        // @ts-expect-error
+        false,
+      ),
     ).toMatchSnapshot()
   })
 })

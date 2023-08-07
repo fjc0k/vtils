@@ -1,6 +1,13 @@
-import { DotPath, RequiredBy, RequiredDeep } from '../types'
+import {
+  DotPath,
+  DotPathValue,
+  OneOrMore,
+  RequiredBy,
+  RequiredDeep,
+} from '../types'
 import {
   assign,
+  castArray,
   cloneDeepFast,
   get,
   includes,
@@ -12,13 +19,14 @@ import {
 } from '../utils'
 import { VaeArraySchema } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
-import { VaeContext } from './VaeContext'
 import { VaeDateSchema } from './VaeDateSchema'
 import { VaeError } from './VaeError'
 import { VaeIssue } from './VaeIssue'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeNumberSchema } from './VaeNumberSchema'
 import { VaeObjectSchema } from './VaeObjectSchema'
+import { VaeSchemaParseContext } from './VaeSchemaParseContext'
+import { VaeSchemaReachContext } from './VaeSchemaReachContext'
 import { VaeStringSchema } from './VaeStringSchema'
 
 export type VaeSchemaType =
@@ -59,7 +67,14 @@ export type VaeSchemaParseOptions = {
    *
    * @inner
    */
-  ctx?: VaeContext
+  ctx?: VaeSchemaParseContext
+
+  /**
+   * 当前路径，内部使用
+   *
+   * @inner
+   */
+  curPath?: VaeSchemaPath
 
   /**
    * 是否提前终止
@@ -185,6 +200,59 @@ export abstract class VaeSchema<T extends any = any> {
     return newSchema
   }
 
+  reach<P extends DotPath<T>>(
+    paths: P[],
+    ctx?: VaeSchemaReachContext,
+    curPath?: VaeSchemaPath,
+  ): {
+    [K in P]: VaeSchemaOf<DotPathValue<T, K>>
+  }
+  reach<P extends DotPath<T>>(
+    path: P,
+    ctx?: VaeSchemaReachContext,
+    curPath?: VaeSchemaPath,
+  ): VaeSchemaOf<DotPathValue<T, P>>
+  reach(
+    path: OneOrMore<string>,
+    ctx?: VaeSchemaReachContext,
+    curPath?: VaeSchemaPath,
+  ): any {
+    const paths = castArray(path)
+    const isRoot = !ctx
+    ctx = ctx ?? new VaeSchemaReachContext()
+    curPath = curPath ?? []
+
+    const currentDotPath = curPath.join('.')
+    if (paths.includes(currentDotPath)) {
+      ctx.addSchema(currentDotPath, this)
+    }
+
+    for (let i = 0; i < this._options.processors.length; i++) {
+      const processor = this._options.processors[i]
+      if (typeof processor === 'object') {
+        if (processor.fn instanceof VaeSchema) {
+          const fullPath = [...curPath, ...(processor.path || [])]
+          if (this._options.type === 'array' && processor.tag === 'element') {
+            processor.fn.reach(paths, ctx, [...fullPath, 0])
+          } else {
+            processor.fn.reach(paths, ctx, fullPath)
+          }
+        }
+      }
+    }
+
+    if (!isRoot) {
+      return
+    }
+
+    const res = ctx.schemas.reduce((res, item) => {
+      res[item.path] = item.schema
+      return res
+    }, {} as any)
+
+    return typeof path === 'string' ? res[path] : res
+  }
+
   parse(data: T, options?: VaeSchemaParseOptions): VaeSchemaParseResult<T> {
     // 字符串 trim
     if (
@@ -242,23 +310,27 @@ export abstract class VaeSchema<T extends any = any> {
       )
     }
 
-    const ctx = options?.ctx || new VaeContext()
+    const ctx = options?.ctx ?? new VaeSchemaParseContext()
+    const curPath = options?.curPath ?? []
     options = options || {}
     options.ctx = ctx
+    options.curPath = curPath
 
     for (let i = 0; i < processors.length; i++) {
       const processor = processors[i]
       if (typeof processor === 'object') {
         const { fn, message, messageParams, path = [], tag } = processor
-        const fullPath = [...ctx.path, ...path]
+        const fullPath = [...curPath, ...path]
         if (fn instanceof VaeSchema) {
           const pathData = path.length ? get(data, path) : data
           if (this._options.type === 'array' && tag === 'element') {
             if (pathData) {
               for (let j = 0; j < (pathData as any[]).length; j++) {
                 const item = (pathData as any[])[j]
-                ctx.setPath([...fullPath, j])
-                const res = fn.parse(item, options)
+                const res = fn.parse(item, {
+                  ...options,
+                  curPath: [...fullPath, j],
+                })
                 if (res.success) {
                   set(data as any, [...path, j], res.data)
                 } else {
@@ -269,12 +341,10 @@ export abstract class VaeSchema<T extends any = any> {
                     }
                   }
                 }
-                ctx.restorePath()
               }
             }
           } else {
-            ctx.setPath(fullPath)
-            const res = fn.parse(pathData, options)
+            const res = fn.parse(pathData, { ...options, curPath: fullPath })
             if (res.success) {
               if (path.length) {
                 set(data as any, path, res.data)
@@ -289,7 +359,6 @@ export abstract class VaeSchema<T extends any = any> {
                 }
               }
             }
-            ctx.restorePath()
           }
         } else if (!fn(data)) {
           ctx.addIssue({

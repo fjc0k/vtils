@@ -938,6 +938,64 @@ Object {
 }
 `;
 
+exports[`vae reach 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "id应是一个正整数",
+      "path": Array [
+        "id",
+      ],
+    },
+    Object {
+      "message": "extra.gender应是下列值之一:0,1",
+      "path": Array [
+        "extra",
+        "gender",
+      ],
+    },
+    Object {
+      "message": "type应是下列值之一:3,4",
+      "path": Array [
+        "type",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae reach 2`] = `
+Object {
+  "data": 1,
+  "success": true,
+}
+`;
+
+exports[`vae reach 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是下列值之一:0,1",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae reach 4`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应是字符串类型",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
 exports[`vae string 1`] = `
 Object {
   "data": undefined,
