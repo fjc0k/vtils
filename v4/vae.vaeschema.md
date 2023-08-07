@@ -26,6 +26,7 @@ export declare abstract class VaeSchema<T extends any = any>
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [cast(data, options)](./vae.vaeschema.cast.md) |  |  |
 |  [check(payload)](./vae.vaeschema.check.md) |  |  |
 |  [clone()](./vae.vaeschema.clone.md) |  |  |
 |  [custom(fn, message, dotPath)](./vae.vaeschema.custom.md) |  |  |

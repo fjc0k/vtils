@@ -50,6 +50,7 @@ vae 数据验证。
 |  [VaeLocaleMessagePayload](./vae.vaelocalemessagepayload.md) |  |
 |  [VaeLocaleShape](./vae.vaelocaleshape.md) |  |
 |  [VaeObjectSchemaShapeOf](./vae.vaeobjectschemashapeof.md) |  |
+|  [VaeSchemaCastOptions](./vae.vaeschemacastoptions.md) |  |
 |  [VaeSchemaCheckPayload](./vae.vaeschemacheckpayload.md) |  |
 |  [VaeSchemaOf](./vae.vaeschemaof.md) |  |
 |  [VaeSchemaOptions](./vae.vaeschemaoptions.md) |  |

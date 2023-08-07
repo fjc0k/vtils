@@ -12,6 +12,7 @@ export declare type VaeSchemaParseOptions = {
     curPath?: VaeSchemaPath;
     abortEarly?: boolean;
     preserveUnknownKeys?: boolean;
+    cast?: boolean;
 };
 ```
 **References:** [VaeSchemaParseContext](./vae.vaeschemaparsecontext.md)<!-- -->, [VaeSchemaPath](./vae.vaeschemapath.md)
