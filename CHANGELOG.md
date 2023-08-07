@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.92.0](https://github.com/fjc0k/vtils/compare/v4.91.0...v4.92.0) (2023-08-07)
+
+### Features
+
+- **vae:** 新增 cast 方法 ([ef63d25](https://github.com/fjc0k/vtils/commit/ef63d257665b74257a2780e6954e32716fdb5ed2))
+
 ## [4.91.0](https://github.com/fjc0k/vtils/compare/v4.90.0...v4.91.0) (2023-08-07)
 
 ### Features
