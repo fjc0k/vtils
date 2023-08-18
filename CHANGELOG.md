@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.94.0](https://github.com/fjc0k/vtils/compare/v4.93.1...v4.94.0) (2023-08-18)
+
+### Features
+
+- **vae:** 支持 runtime ([079c1ba](https://github.com/fjc0k/vtils/commit/079c1ba5b94e971f893a61051360c837a54ac98c))
+- **vae:** 相同 tag 的定义会被覆盖 ([583e87b](https://github.com/fjc0k/vtils/commit/583e87b4b32eb4382cb212f8b83c0e4b723f69e0))
+
 ### [4.93.1](https://github.com/fjc0k/vtils/compare/v4.93.0...v4.93.1) (2023-08-18)
 
 ## [4.93.0](https://github.com/fjc0k/vtils/compare/v4.92.0...v4.93.0) (2023-08-18)
