@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.93.0](https://github.com/fjc0k/vtils/compare/v4.92.0...v4.93.0) (2023-08-18)
+
+### Features
+
+- **vae:** custom 新增默认信息 ([0ecfcfc](https://github.com/fjc0k/vtils/commit/0ecfcfcaedf2ec5ca0dc076a2b44306a7ac9d148))
+
 ## [4.92.0](https://github.com/fjc0k/vtils/compare/v4.91.0...v4.92.0) (2023-08-07)
 
 ### Features
