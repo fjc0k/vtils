@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.69% </span>
+                <span class="strong">93.86% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>104/111</span>
+                <span class='fraction'>107/114</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.78% </span>
+                <span class="strong">86.61% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>105/121</span>
+                <span class='fraction'>110/127</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.52% </span>
+                <span class="strong">93.69% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>101/108</span>
+                <span class='fraction'>104/111</span>
             </div>
         
             
@@ -516,7 +516,19 @@
 <a name='L457'></a><a href='#L457'>457</a>
 <a name='L458'></a><a href='#L458'>458</a>
 <a name='L459'></a><a href='#L459'>459</a>
-<a name='L460'></a><a href='#L460'>460</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L460'></a><a href='#L460'>460</a>
+<a name='L461'></a><a href='#L461'>461</a>
+<a name='L462'></a><a href='#L462'>462</a>
+<a name='L463'></a><a href='#L463'>463</a>
+<a name='L464'></a><a href='#L464'>464</a>
+<a name='L465'></a><a href='#L465'>465</a>
+<a name='L466'></a><a href='#L466'>466</a>
+<a name='L467'></a><a href='#L467'>467</a>
+<a name='L468'></a><a href='#L468'>468</a>
+<a name='L469'></a><a href='#L469'>469</a>
+<a name='L470'></a><a href='#L470'>470</a>
+<a name='L471'></a><a href='#L471'>471</a>
+<a name='L472'></a><a href='#L472'>472</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -714,8 +726,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -961,8 +987,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1170,11 +1194,25 @@ export abstract class VaeSchema&lt;T extends any = any&gt; {
 &nbsp;
   custom(
     fn: (value: T) =&gt; boolean,
-    message: VaeLocaleMessage,
-    dotPath?: DotPath&lt;T&gt;,
+    messageOrOptions?:
+      | VaeLocaleMessage
+      | {
+          message?: VaeLocaleMessage
+          path?: DotPath&lt;T&gt;
+        },
   ) {
-    const path = dotPath?.split('.')
-    return this.check({ fn, message, path })
+    if (!messageOrOptions || typeof messageOrOptions !== 'object') {
+      messageOrOptions = {
+        message: messageOrOptions,
+      }
+    }
+    const message = messageOrOptions.message || <span class="branch-1 cbranch-no" title="branch not covered" >VaeLocale.base.custom</span>
+    const path = messageOrOptions.path?.split('.')
+    return this.check({
+      fn,
+      message,
+      path,
+    })
   }
 &nbsp;
   clone() {
@@ -1420,8 +1458,6 @@ export abstract class VaeSchema&lt;T extends any = any&gt; {
 <span class="cstat-no" title="statement not covered" >    if (res.success) {</span>
 <span class="cstat-no" title="statement not covered" >      return res.data</span>
     }
-    // TODO: 暂时解决编译报错
-    // @ts-ignore
 <span class="cstat-no" title="statement not covered" >    throw new VaeError(res.issues)</span>
   }
 &nbsp;
@@ -1441,7 +1477,7 @@ export abstract class VaeSchema&lt;T extends any = any&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Aug 07 2023 15:34:17 GMT+0000 (Coordinated Universal Time)
+                at Fri Aug 18 2023 19:02:21 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
