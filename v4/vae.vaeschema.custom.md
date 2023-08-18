@@ -10,6 +10,7 @@
 custom(fn: (value: T) => boolean, messageOrOptions?: VaeLocaleMessage | {
         message?: VaeLocaleMessage;
         path?: DotPath<T>;
+        tag?: string;
     }): this;
 ```
 
@@ -18,7 +19,7 @@ custom(fn: (value: T) => boolean, messageOrOptions?: VaeLocaleMessage | {
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  fn | (value: T) =&gt; boolean |  |
-|  messageOrOptions | [VaeLocaleMessage](./vae.vaelocalemessage.md) \| { message?: [VaeLocaleMessage](./vae.vaelocalemessage.md)<!-- -->; path?: DotPath&lt;T&gt;; } | _(Optional)_ |
+|  messageOrOptions | [VaeLocaleMessage](./vae.vaelocalemessage.md) \| { message?: [VaeLocaleMessage](./vae.vaelocalemessage.md)<!-- -->; path?: DotPath&lt;T&gt;; tag?: string; } | _(Optional)_ |
 
 **Returns:**
 

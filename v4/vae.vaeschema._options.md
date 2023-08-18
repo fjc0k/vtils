@@ -7,5 +7,5 @@
 **Signature:**
 
 ```typescript
-protected _options: RequiredBy<VaeSchemaOptions<T>, 'processors'>;
+protected _options: RequiredBy<VaeSchemaOptions<T, any>, 'processors'>;
 ```

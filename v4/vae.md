@@ -57,6 +57,7 @@ vae 数据验证。
 |  [VaeSchemaParseOptions](./vae.vaeschemaparseoptions.md) |  |
 |  [VaeSchemaParseResult](./vae.vaeschemaparseresult.md) |  |
 |  [VaeSchemaPath](./vae.vaeschemapath.md) |  |
+|  [VaeSchemaRuntimeFn](./vae.vaeschemaruntimefn.md) |  |
 |  [VaeSchemaTransformPayload](./vae.vaeschematransformpayload.md) |  |
 |  [VaeSchemaType](./vae.vaeschematype.md) |  |
 

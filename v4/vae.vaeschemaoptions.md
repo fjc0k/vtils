@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-export declare type VaeSchemaOptions<T> = {
+export declare type VaeSchemaOptions<T, S> = {
     type: VaeSchemaType;
     label?: string;
     default?: T | (() => T);
@@ -17,7 +17,8 @@ export declare type VaeSchemaOptions<T> = {
     stringTrim?: boolean;
     stringEmptyable?: boolean;
     processors?: Array<VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>>;
+    runtime?: VaeSchemaRuntimeFn<T, S>;
 };
 ```
-**References:** [VaeSchemaType](./vae.vaeschematype.md)<!-- -->, [VaeLocaleMessage](./vae.vaelocalemessage.md)<!-- -->, [VaeSchemaCheckPayload](./vae.vaeschemacheckpayload.md)<!-- -->, [VaeSchemaTransformPayload](./vae.vaeschematransformpayload.md)
+**References:** [VaeSchemaType](./vae.vaeschematype.md)<!-- -->, [VaeLocaleMessage](./vae.vaelocalemessage.md)<!-- -->, [VaeSchemaCheckPayload](./vae.vaeschemacheckpayload.md)<!-- -->, [VaeSchemaTransformPayload](./vae.vaeschematransformpayload.md)<!-- -->, [VaeSchemaRuntimeFn](./vae.vaeschemaruntimefn.md)
 

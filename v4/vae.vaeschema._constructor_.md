@@ -9,12 +9,12 @@ Constructs a new instance of the `VaeSchema` class
 **Signature:**
 
 ```typescript
-constructor(options: VaeSchemaOptions<T>);
+constructor(options: VaeSchemaOptions<T, any>);
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  options | [VaeSchemaOptions](./vae.vaeschemaoptions.md)<!-- -->&lt;T&gt; |  |
+|  options | [VaeSchemaOptions](./vae.vaeschemaoptions.md)<!-- -->&lt;T, any&gt; |  |
 

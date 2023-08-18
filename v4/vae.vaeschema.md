@@ -20,7 +20,7 @@ export declare abstract class VaeSchema<T extends any = any>
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [\_options](./vae.vaeschema._options.md) | <code>protected</code> | RequiredBy&lt;[VaeSchemaOptions](./vae.vaeschemaoptions.md)<!-- -->&lt;T&gt;, 'processors'&gt; |  |
+|  [\_options](./vae.vaeschema._options.md) | <code>protected</code> | RequiredBy&lt;[VaeSchemaOptions](./vae.vaeschemaoptions.md)<!-- -->&lt;T, any&gt;, 'processors'&gt; |  |
 
 ## Methods
 
@@ -39,5 +39,6 @@ export declare abstract class VaeSchema<T extends any = any>
 |  [reach(paths, ctx, curPath)](./vae.vaeschema.reach.md) |  |  |
 |  [reach(path, ctx, curPath)](./vae.vaeschema.reach_1.md) |  |  |
 |  [required(message)](./vae.vaeschema.required.md) |  |  |
+|  [runtime(fn)](./vae.vaeschema.runtime.md) |  |  |
 |  [transform(payload)](./vae.vaeschema.transform.md) |  |  |
 
