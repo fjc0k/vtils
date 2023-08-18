@@ -31,6 +31,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
       messageParams: {
         min: value,
       },
+      tag: 'min',
     })
   }
 
@@ -41,6 +42,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
       messageParams: {
         max: value,
       },
+      tag: 'max',
     })
   }
 
@@ -51,6 +53,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
       messageParams: {
         length: value,
       },
+      tag: 'length',
     })
   }
 
@@ -58,6 +61,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
     return this.check({
       fn: isEmail,
       message: message,
+      tag: 'email',
     })
   }
 
@@ -65,6 +69,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
     return this.check({
       fn: isUrl,
       message: message,
+      tag: 'url',
     })
   }
 
@@ -78,6 +83,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
       messageParams: {
         regex: value,
       },
+      tag: 'regex',
     })
   }
 
@@ -91,6 +97,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
       messageParams: {
         includes: value,
       },
+      tag: 'includes',
     })
   }
 
@@ -104,6 +111,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
       messageParams: {
         startsWith: value,
       },
+      tag: 'startsWith',
     })
   }
 
@@ -117,6 +125,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
       messageParams: {
         endsWith: value,
       },
+      tag: 'endsWith',
     })
   }
 
@@ -124,6 +133,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
     return this.check({
       fn: isPossibleChineseMobilePhoneNumber,
       message: message,
+      tag: 'phoneNumber',
     })
   }
 
@@ -131,6 +141,7 @@ export class VaeStringSchema<T extends string = string> extends VaeSchema<T> {
     return this.check({
       fn: isChineseIDCardNumber,
       message: message,
+      tag: 'idCardNumber',
     })
   }
 

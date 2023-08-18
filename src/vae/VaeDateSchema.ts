@@ -25,6 +25,7 @@ export class VaeDateSchema<T extends Date = Date> extends VaeSchema<T> {
       messageParams: {
         min: minDate,
       },
+      tag: 'min',
     })
   }
 
@@ -40,6 +41,7 @@ export class VaeDateSchema<T extends Date = Date> extends VaeSchema<T> {
       messageParams: {
         max: maxDate,
       },
+      tag: 'max',
     })
   }
 }

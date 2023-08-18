@@ -670,4 +670,12 @@ describe('vae', () => {
       ),
     ).toMatchSnapshot()
   })
+
+  test('可覆盖定义', () => {
+    expect(v.string().min(3).parse('12')).toMatchSnapshot()
+    expect(v.string().min(3).min(2).parse('12')).toMatchSnapshot()
+
+    expect(v.number().max(3).parse(4)).toMatchSnapshot()
+    expect(v.number().max(3).max(8).parse(4)).toMatchSnapshot()
+  })
 })

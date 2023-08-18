@@ -9,6 +9,7 @@ import {
   assign,
   castArray,
   cloneDeepFast,
+  findIndex,
   get,
   includes,
   isArray,
@@ -146,7 +147,17 @@ export abstract class VaeSchema<T extends any = any> {
   }
 
   check(payload: VaeSchemaCheckPayload<T>) {
-    this._options.processors.push(payload)
+    const index = payload.tag
+      ? findIndex(
+          this._options.processors,
+          item => typeof item === 'object' && item.tag === payload.tag,
+        )
+      : -1
+    if (index !== -1) {
+      this._options.processors[index] = payload
+    } else {
+      this._options.processors.push(payload)
+    }
     return this
   }
 
@@ -188,6 +199,7 @@ export abstract class VaeSchema<T extends any = any> {
       messageParams: {
         enum: enumValues,
       },
+      tag: 'enum',
     })
   }
 
@@ -198,6 +210,7 @@ export abstract class VaeSchema<T extends any = any> {
       | {
           message?: VaeLocaleMessage
           path?: DotPath<T>
+          tag?: string
         },
   ) {
     if (!messageOrOptions || typeof messageOrOptions !== 'object') {
@@ -207,10 +220,12 @@ export abstract class VaeSchema<T extends any = any> {
     }
     const message = messageOrOptions.message || VaeLocale.base.custom
     const path = messageOrOptions.path?.split('.')
+    const tag = messageOrOptions.tag && `custom_${messageOrOptions.tag}`
     return this.check({
       fn,
       message,
       path,
+      tag,
     })
   }
 

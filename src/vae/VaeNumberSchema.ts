@@ -20,6 +20,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
       messageParams: {
         min: value,
       },
+      tag: 'min',
     })
   }
 
@@ -30,6 +31,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
       messageParams: {
         max: value,
       },
+      tag: 'max',
     })
   }
 
@@ -43,6 +45,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
       messageParams: {
         lessThan: value,
       },
+      tag: 'lessThan',
     })
   }
 
@@ -56,6 +59,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
       messageParams: {
         moreThan: value,
       },
+      tag: 'moreThan',
     })
   }
 
@@ -63,6 +67,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
     return this.check({
       fn: isInteger,
       message: message,
+      tag: 'integer',
     })
   }
 
@@ -70,6 +75,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
     return this.check({
       fn: v => v > 0,
       message: message,
+      tag: 'positive',
     })
   }
 
@@ -77,6 +83,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
     return this.check({
       fn: v => v <= 0,
       message: message,
+      tag: 'nonpositive',
     })
   }
 
@@ -84,6 +91,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
     return this.check({
       fn: v => v < 0,
       message: message,
+      tag: 'negative',
     })
   }
 
@@ -91,6 +99,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
     return this.check({
       fn: v => v >= 0,
       message: message,
+      tag: 'nonnegative',
     })
   }
 
@@ -100,6 +109,7 @@ export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
     return this.check({
       fn: v => v > 0 && isInteger(v),
       message: message,
+      tag: 'positiveInteger',
     })
   }
 

@@ -1283,3 +1283,41 @@ Object {
   "success": true,
 }
 `;
+
+exports[`vae 可覆盖定义 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应至少包含3位字符",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae 可覆盖定义 2`] = `
+Object {
+  "data": "12",
+  "success": true,
+}
+`;
+
+exports[`vae 可覆盖定义 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应小于或等于3",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae 可覆盖定义 4`] = `
+Object {
+  "data": 4,
+  "success": true,
+}
+`;
