@@ -40,7 +40,7 @@ export type VaeSchemaType =
   | 'boolean'
   | 'array'
 
-export type VaeSchemaOptions<T> = {
+export type VaeSchemaOptions<T, S> = {
   type: VaeSchemaType
   label?: string
   default?: T | (() => T)
@@ -50,6 +50,7 @@ export type VaeSchemaOptions<T> = {
   stringTrim?: boolean
   stringEmptyable?: boolean
   processors?: Array<VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>>
+  runtime?: VaeSchemaRuntimeFn<T, S>
 }
 
 export type VaeSchemaPath = Array<string | number>
@@ -63,6 +64,8 @@ export type VaeSchemaCheckPayload<T> = {
 }
 
 export type VaeSchemaTransformPayload<T> = (value: T) => T
+
+export type VaeSchemaRuntimeFn<T, S> = (payload: { value: T; schema: S }) => any
 
 export type VaeSchemaParseOptions = {
   /**
@@ -137,9 +140,9 @@ export type VaeSchemaOf<T0, T = RequiredDeep<T0>> =
       VaeObjectSchema<T>
 
 export abstract class VaeSchema<T extends any = any> {
-  protected _options!: RequiredBy<VaeSchemaOptions<T>, 'processors'>
+  protected _options!: RequiredBy<VaeSchemaOptions<T, any>, 'processors'>
 
-  constructor(options: VaeSchemaOptions<T>) {
+  constructor(options: VaeSchemaOptions<T, any>) {
     this._options = {
       ...options,
       processors: options.processors || [],
@@ -227,6 +230,11 @@ export abstract class VaeSchema<T extends any = any> {
       path,
       tag,
     })
+  }
+
+  runtime(fn: VaeSchemaRuntimeFn<T, this>) {
+    this._options.runtime = fn
+    return this
   }
 
   clone() {
@@ -337,18 +345,29 @@ export abstract class VaeSchema<T extends any = any> {
       }
     }
 
-    const processors = this._options.processors.slice()
+    // 运行时
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    let schema = this
+    if (this._options.runtime) {
+      schema = this.clone()
+      this._options.runtime({
+        value: data,
+        schema: schema,
+      })
+    }
+
+    const processors = schema._options.processors.slice()
 
     // 必填规则始终前置
-    if (this._options.required) {
+    if (schema._options.required) {
       processors.unshift({
         fn: () => !dataIsNil,
-        message: this._options.requiredMessage!,
+        message: schema._options.requiredMessage!,
       })
     }
 
     // 对于数组，将 element 的验证移到最后
-    if (this._options.type === 'array') {
+    if (schema._options.type === 'array') {
       moveToBottom(
         processors,
         processors.findIndex(
@@ -370,7 +389,7 @@ export abstract class VaeSchema<T extends any = any> {
         const fullPath = [...curPath, ...path]
         if (fn instanceof VaeSchema) {
           const pathData = path.length ? get(data, path) : data
-          if (this._options.type === 'array' && tag === 'element') {
+          if (schema._options.type === 'array' && tag === 'element') {
             if (pathData) {
               for (let j = 0; j < (pathData as any[]).length; j++) {
                 const item = (pathData as any[])[j]
@@ -411,17 +430,17 @@ export abstract class VaeSchema<T extends any = any> {
           if (options.cast) {
             data = dataIsNil
               ? data
-              : this._options.type === 'string'
+              : schema._options.type === 'string'
               ? String(data)
-              : this._options.type === 'number'
+              : schema._options.type === 'number'
               ? Number(data)
-              : this._options.type === 'boolean'
+              : schema._options.type === 'boolean'
               ? Boolean(data)
-              : this._options.type === 'date'
+              : schema._options.type === 'date'
               ? new Date(data as any)
-              : this._options.type === 'array'
+              : schema._options.type === 'array'
               ? toArray(data)
-              : this._options.type === 'object'
+              : schema._options.type === 'object'
               ? toPlainObject(data)
               : null
           } else {
@@ -433,7 +452,7 @@ export abstract class VaeSchema<T extends any = any> {
                       path: fullPath,
                       params: messageParams || {},
                       value: data,
-                      label: this._options.label,
+                      label: schema._options.label,
                     })
                   : message,
             })
@@ -460,9 +479,9 @@ export abstract class VaeSchema<T extends any = any> {
       success: true,
       data:
         !options.preserveUnknownKeys &&
-        this._options.type === 'object' &&
-        this._options.objectKeys?.length
-          ? (pick(data, this._options.objectKeys) as any)
+        schema._options.type === 'object' &&
+        schema._options.objectKeys?.length
+          ? (pick(data, schema._options.objectKeys) as any)
           : data,
     }
   }

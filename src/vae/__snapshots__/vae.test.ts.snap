@@ -1023,6 +1023,50 @@ Object {
 }
 `;
 
+exports[`vae runtime 1`] = `
+Object {
+  "data": Object {
+    "name": "ffff",
+    "status": true,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae runtime 2`] = `
+Object {
+  "data": Object {
+    "name": "ffff",
+    "status": false,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae runtime 3`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "name应必填",
+      "path": Array [
+        "name",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae runtime 4`] = `
+Object {
+  "data": Object {
+    "name": undefined,
+    "status": false,
+  },
+  "success": true,
+}
+`;
+
 exports[`vae string 1`] = `
 Object {
   "data": undefined,

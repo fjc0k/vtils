@@ -678,4 +678,45 @@ describe('vae', () => {
     expect(v.number().max(3).parse(4)).toMatchSnapshot()
     expect(v.number().max(3).max(8).parse(4)).toMatchSnapshot()
   })
+
+  test('runtime', () => {
+    const schema = v
+      .object({
+        status: v.boolean().required(),
+        name: v.string().required(),
+      })
+      .runtime(({ value, schema }) => {
+        if (value.status === false) {
+          schema.reach('name').optional()
+        }
+      })
+    expect(
+      schema.parse({
+        status: true,
+        name: 'ffff',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.parse({
+        status: false,
+        name: 'ffff',
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema.parse(
+        // @ts-expect-error
+        {
+          status: true,
+        },
+      ),
+    ).toMatchSnapshot()
+    expect(
+      schema.parse(
+        // @ts-expect-error
+        {
+          status: false,
+        },
+      ),
+    ).toMatchSnapshot()
+  })
 })
