@@ -471,11 +471,10 @@ describe('vae', () => {
         password: v.string().required(),
         password2: v.string().required(),
       })
-      .custom(
-        ({ password, password2 }) => password === password2,
-        '密码2应等于密码1',
-        'password2',
-      )
+      .custom(({ password, password2 }) => password === password2, {
+        message: '密码2应等于密码1',
+        path: 'password2',
+      })
 
     expect(
       schema2.parse({

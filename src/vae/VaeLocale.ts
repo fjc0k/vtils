@@ -13,7 +13,7 @@ export type VaeLocaleMessage =
   | ((payload: VaeLocaleMessagePayload) => string)
 
 export type VaeLocaleShape = {
-  base: Record<'required' | 'enum', VaeLocaleMessage>
+  base: Record<'required' | 'enum' | 'custom', VaeLocaleMessage>
   string: Record<
     | 'type'
     | 'min'
@@ -63,6 +63,7 @@ export class VaeLocaleBuilder {
           `${options.getLabel(
             payload,
           )}应是下列值之一:${payload.params.enum.join(',')}`,
+        custom: payload => `${options.getLabel(payload)}应满足自定义规则`,
       },
 
       string: {

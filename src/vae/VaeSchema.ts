@@ -193,11 +193,25 @@ export abstract class VaeSchema<T extends any = any> {
 
   custom(
     fn: (value: T) => boolean,
-    message: VaeLocaleMessage,
-    dotPath?: DotPath<T>,
+    messageOrOptions?:
+      | VaeLocaleMessage
+      | {
+          message?: VaeLocaleMessage
+          path?: DotPath<T>
+        },
   ) {
-    const path = dotPath?.split('.')
-    return this.check({ fn, message, path })
+    if (!messageOrOptions || typeof messageOrOptions !== 'object') {
+      messageOrOptions = {
+        message: messageOrOptions,
+      }
+    }
+    const message = messageOrOptions.message || VaeLocale.base.custom
+    const path = messageOrOptions.path?.split('.')
+    return this.check({
+      fn,
+      message,
+      path,
+    })
   }
 
   clone() {
