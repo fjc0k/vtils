@@ -8,13 +8,13 @@
 
 ```typescript
 toWxOpenLaunchWeappAttrs(): {
-        username: string;
+        username: string | undefined;
         path: string;
-        envVersion: MiniProgramUrlVersion;
-        extraData: string;
+        envVersion: MiniProgramUrlVersion | undefined;
+        extraData: string | undefined;
     };
 ```
 **Returns:**
 
-{ username: string; path: string; envVersion: [MiniProgramUrlVersion](./utils.miniprogramurlversion.md)<!-- -->; extraData: string; }
+{ username: string \| undefined; path: string; envVersion: [MiniProgramUrlVersion](./utils.miniprogramurlversion.md) \| undefined; extraData: string \| undefined; }
 

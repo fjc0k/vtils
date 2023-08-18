@@ -29,7 +29,7 @@ export declare abstract class VaeSchema<T extends any = any>
 |  [cast(data, options)](./vae.vaeschema.cast.md) |  |  |
 |  [check(payload)](./vae.vaeschema.check.md) |  |  |
 |  [clone()](./vae.vaeschema.clone.md) |  |  |
-|  [custom(fn, message, dotPath)](./vae.vaeschema.custom.md) |  |  |
+|  [custom(fn, messageOrOptions)](./vae.vaeschema.custom.md) |  |  |
 |  [default(value)](./vae.vaeschema.default.md) |  |  |
 |  [enum(value, message)](./vae.vaeschema.enum.md) |  |  |
 |  [label(label)](./vae.vaeschema.label.md) |  |  |

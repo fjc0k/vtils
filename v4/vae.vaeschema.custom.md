@@ -7,7 +7,10 @@
 **Signature:**
 
 ```typescript
-custom(fn: (value: T) => boolean, message: VaeLocaleMessage, dotPath?: DotPath<T>): this;
+custom(fn: (value: T) => boolean, messageOrOptions?: VaeLocaleMessage | {
+        message?: VaeLocaleMessage;
+        path?: DotPath<T>;
+    }): this;
 ```
 
 ## Parameters
@@ -15,8 +18,7 @@ custom(fn: (value: T) => boolean, message: VaeLocaleMessage, dotPath?: DotPath<T
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  fn | (value: T) =&gt; boolean |  |
-|  message | [VaeLocaleMessage](./vae.vaelocalemessage.md) |  |
-|  dotPath | DotPath&lt;T&gt; | _(Optional)_ |
+|  messageOrOptions | [VaeLocaleMessage](./vae.vaelocalemessage.md) \| { message?: [VaeLocaleMessage](./vae.vaelocalemessage.md)<!-- -->; path?: DotPath&lt;T&gt;; } | _(Optional)_ |
 
 **Returns:**
 

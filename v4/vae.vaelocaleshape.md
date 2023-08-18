@@ -8,7 +8,7 @@
 
 ```typescript
 export declare type VaeLocaleShape = {
-    base: Record<'required' | 'enum', VaeLocaleMessage>;
+    base: Record<'required' | 'enum' | 'custom', VaeLocaleMessage>;
     string: Record<'type' | 'min' | 'max' | 'length' | 'email' | 'url' | 'regex' | 'includes' | 'startsWith' | 'endsWith' | 'phoneNumber' | 'idCardNumber', VaeLocaleMessage>;
     object: Record<'type', VaeLocaleMessage>;
     number: Record<'type' | 'min' | 'max' | 'lessThan' | 'moreThan' | 'integer' | 'positive' | 'nonpositive' | 'negative' | 'nonnegative' | 'positiveInteger', VaeLocaleMessage>;

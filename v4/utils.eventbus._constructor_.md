@@ -9,12 +9,12 @@
 **Signature:**
 
 ```typescript
-constructor(options?: EventBusOptions<TListeners>);
+constructor(options?: EventBusOptions<TListeners> | undefined);
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  options | [EventBusOptions](./utils.eventbusoptions.md)<!-- -->&lt;TListeners&gt; | _(Optional)_ |
+|  options | [EventBusOptions](./utils.eventbusoptions.md)<!-- -->&lt;TListeners&gt; \| undefined | _(Optional)_ |
 

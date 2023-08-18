@@ -8,13 +8,13 @@
 
 ```typescript
 toWxNavigateToMiniProgramParams(): {
-        appId: string;
+        appId: string | undefined;
         path: string;
-        envVersion: MiniProgramUrlVersion;
+        envVersion: MiniProgramUrlVersion | undefined;
         extraData: any;
     };
 ```
 **Returns:**
 
-{ appId: string; path: string; envVersion: [MiniProgramUrlVersion](./utils.miniprogramurlversion.md)<!-- -->; extraData: any; }
+{ appId: string \| undefined; path: string; envVersion: [MiniProgramUrlVersion](./utils.miniprogramurlversion.md) \| undefined; extraData: any; }
 
