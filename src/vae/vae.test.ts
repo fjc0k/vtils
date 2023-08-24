@@ -719,4 +719,23 @@ describe('vae', () => {
       ),
     ).toMatchSnapshot()
   })
+
+  test('parseOrThrow', () => {
+    expect(() =>
+      v.string().min(3).parseOrThrow('12'),
+    ).toThrowErrorMatchingSnapshot()
+    expect(() =>
+      v
+        .object({
+          id: v.number().required(),
+          name: v.string().min(3).regex(/^56/),
+        })
+        .parseOrThrow(
+          // @ts-expect-error
+          {
+            name: '12',
+          },
+        ),
+    ).toThrowErrorMatchingSnapshot()
+  })
 })

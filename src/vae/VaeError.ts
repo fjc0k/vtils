@@ -9,6 +9,10 @@ export class VaeError extends Error {
   name = 'VaeError'
 
   constructor(public issues: VaeIssue[]) {
-    super()
+    super(VaeError.messageFromIssues(issues))
+  }
+
+  static messageFromIssues(issues: VaeIssue[]) {
+    return issues.map(issue => issue.message).join('; ')
   }
 }

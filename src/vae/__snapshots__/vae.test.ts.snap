@@ -900,6 +900,10 @@ Object {
 }
 `;
 
+exports[`vae parseOrThrow 1`] = `".应至少包含3位字符"`;
+
+exports[`vae parseOrThrow 2`] = `"id应必填; name应至少包含3位字符"`;
+
 exports[`vae pickFields, omitFields 1`] = `
 Object {
   "data": Object {
