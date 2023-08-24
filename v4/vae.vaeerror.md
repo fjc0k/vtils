@@ -24,3 +24,9 @@ export declare class VaeError extends Error
 |  [issues](./vae.vaeerror.issues.md) |  | [VaeIssue](./vae.vaeissue.md)<!-- -->\[\] |  |
 |  [name](./vae.vaeerror.name.md) |  | string |  |
 
+## Methods
+
+|  Method | Modifiers | Description |
+|  --- | --- | --- |
+|  [messageFromIssues(issues)](./vae.vaeerror.messagefromissues.md) | <code>static</code> |  |
+
