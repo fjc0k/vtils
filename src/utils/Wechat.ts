@@ -484,6 +484,13 @@ export class Wechat {
   }
 
   /**
+   * 微信 JSSDK 是否准备好可用。
+   */
+  isReady() {
+    return this.ready
+  }
+
+  /**
    * 判断当前客户端版本是否支持指定 JS 接口。
    *
    * @param jsApiList 需要检测的 JS 接口列表
