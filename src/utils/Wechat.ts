@@ -423,64 +423,72 @@ export class Wechat {
    *
    * @param params 配置参数
    */
-  config(params: WechatConfigParams = this.configParams) {
-    this.configParams = params
+  config(params: WechatConfigParams = this.configParams): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      this.configParams = params
 
-    const config = () => {
-      const sharable =
-        typeof params.sharable === 'boolean' ? params.sharable : true
-      wx.config({
-        ...params,
-        jsApiList: [
-          ...(params.jsApiList || []),
-          ...(sharable ? shareJsApiList : []),
-        ],
-      })
-      if (!this.ready) {
-        wx.ready(() => {
-          this.ready = true
-          this.bus.emit('ready')
+      const config = () => {
+        const sharable =
+          typeof params.sharable === 'boolean' ? params.sharable : true
+        wx.config({
+          ...params,
+          jsApiList: [
+            ...(params.jsApiList || []),
+            ...(sharable ? shareJsApiList : []),
+          ],
         })
-        wx.error((err: any) => {
-          this.bus.emit('error', err)
-        })
-      }
-    }
-
-    if (typeof wx !== 'undefined') {
-      config()
-    } else {
-      const autoLoadJSSDK =
-        params.autoLoadJSSDK == null ? '1.4.0' : params.autoLoadJSSDK
-      if (autoLoadJSSDK !== false) {
-        const jssdkUrl = /^[0-9.]+$/.test(autoLoadJSSDK)
-          ? `https://res.wx.qq.com/open/js/jweixin-${autoLoadJSSDK}.js`
-          : autoLoadJSSDK
-        const alternateJssdkUrl = jssdkUrl.replace(
-          /^https:\/\/res\.wx\.qq\.com\//,
-          'https://res2.wx.qq.com/',
-        )
-        loadResource({
-          type: LoadResourceUrlType.js,
-          path: jssdkUrl,
-          alternatePath: alternateJssdkUrl,
-        })
-          .then(([scriptEl]) => {
-            scriptEl.parentNode?.removeChild(scriptEl)
-          }, noop)
-          .then(() => {
-            if (typeof wx === 'undefined') {
-              throw new Error('微信 JSSDK 加载失败')
-            }
-            config()
+        if (!this.ready) {
+          wx.ready(() => {
+            this.ready = true
+            this.bus.emit('ready')
+            resolve()
           })
-      } else {
-        if (typeof wx === 'undefined') {
-          throw new Error('请先引入微信 JSSDK')
+          wx.error((err: any) => {
+            this.bus.emit('error', err)
+            reject(err)
+          })
+        } else {
+          resolve()
         }
-        config()
       }
-    }
+
+      if (typeof wx !== 'undefined') {
+        config()
+      } else {
+        const autoLoadJSSDK =
+          params.autoLoadJSSDK == null ? '1.6.0' : params.autoLoadJSSDK
+        if (autoLoadJSSDK !== false) {
+          const jssdkUrl = /^[0-9.]+$/.test(autoLoadJSSDK)
+            ? `https://res.wx.qq.com/open/js/jweixin-${autoLoadJSSDK}.js`
+            : autoLoadJSSDK
+          const alternateJssdkUrl = jssdkUrl.replace(
+            /^https:\/\/res\.wx\.qq\.com\//,
+            'https://res2.wx.qq.com/',
+          )
+          loadResource({
+            type: LoadResourceUrlType.js,
+            path: jssdkUrl,
+            alternatePath: alternateJssdkUrl,
+          })
+            .then(([scriptEl]) => {
+              scriptEl.parentNode?.removeChild(scriptEl)
+            }, noop)
+            .then(() => {
+              if (typeof wx === 'undefined') {
+                reject('微信 JSSDK 加载失败')
+              } else {
+                config()
+              }
+            })
+        } else {
+          if (typeof wx === 'undefined') {
+            reject('请先引入微信 JSSDK')
+          } else {
+            config()
+          }
+        }
+      }
+    })
   }
 
   /**
