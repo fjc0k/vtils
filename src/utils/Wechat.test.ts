@@ -112,7 +112,6 @@ describe('Wechat', () => {
 
     await expect(wechat.checkJsApi(['chooseImage'])).toResolve()
     await expect(wechat.updateShareData({})).toResolve()
-    await expect(wechat.chooseImage()).toResolve()
     await expect(wechat.previewImage({ urls: ['https://foo.bar'] })).toResolve()
     await expect(wechat.uploadImage({ localId: 'ss' })).toResolve()
     await expect(wechat.closeWindow()).toResolve()

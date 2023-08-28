@@ -1,6 +1,6 @@
-import { EventBus, EventBusOffListener } from './EventBus'
-import { loadResource, LoadResourceUrlType } from './loadResource'
 import { mapValues, noop } from 'lodash-uni'
+import { EventBus, EventBusOffListener } from './EventBus'
+import { LoadResourceUrlType, loadResource } from './loadResource'
 
 declare const wx: any
 
@@ -47,6 +47,7 @@ export type WechatJsApi =
   | 'addCard'
   | 'chooseCard'
   | 'openCard'
+  | 'getLocalImgData'
 
 /**
  * @public
@@ -508,13 +509,41 @@ export class Wechat {
    * @param params 参数
    * @returns 选定照片的本地 ID 列表，它们可以作为 img 标签的 src 属性显示图片
    */
-  chooseImage(params?: WechatChooseImageParams): Promise<string[]> {
+  chooseImage(params?: WechatChooseImageParams): Promise<
+    Array<{
+      localId: string
+      previewUrl: string
+    }>
+  > {
     return this.invoke<
       WechatChooseImageParams,
       {
         localIds: string[]
       }
-    >('chooseImage', params).then(res => res.localIds)
+    >('chooseImage', params).then(res => {
+      // @ts-ignore
+      if (window.__wxjs_is_wkwebview) {
+        return Promise.all(
+          res.localIds.map(localId =>
+            this.invoke<
+              {
+                localId: string
+              },
+              {
+                localData: string
+              }
+            >('getLocalImgData', { localId }).then(res => ({
+              localId: localId,
+              previewUrl: res.localData,
+            })),
+          ),
+        )
+      }
+      return res.localIds.map(localId => ({
+        localId: localId,
+        previewUrl: localId,
+      }))
+    })
   }
 
   /**
