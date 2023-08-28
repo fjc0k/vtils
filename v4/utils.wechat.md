@@ -57,6 +57,7 @@ wechat.invoke('scanQRCode').then(res => {
 |  [hideAllNonBaseMenuItems()](./utils.wechat.hideallnonbasemenuitems.md) |  | 隐藏所有的非基础菜单项。 |
 |  [hideNonBaseMenuItems(menuList)](./utils.wechat.hidenonbasemenuitems.md) |  | 批量隐藏非基础菜单项。 |
 |  [invoke(jsApi, params)](./utils.wechat.invoke.md) |  | 调用 JSSDK 的 API 方法。 |
+|  [isReady()](./utils.wechat.isready.md) |  | 微信 JSSDK 是否准备好可用。 |
 |  [onError(callback)](./utils.wechat.onerror.md) |  | 错误处理。 |
 |  [openLocation(params)](./utils.wechat.openlocation.md) |  | 使用微信内置地图查看位置。 |
 |  [previewImage(params)](./utils.wechat.previewimage.md) |  | 预览图片。 |
