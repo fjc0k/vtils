@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">67.53% </span>
+                <span class="strong">69.14% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>52/77</span>
+                <span class='fraction'>56/81</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">68.57% </span>
+                <span class="strong">69.44% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>24/35</span>
+                <span class='fraction'>25/36</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">68.92% </span>
+                <span class="strong">70.51% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>51/74</span>
+                <span class='fraction'>55/78</span>
             </div>
         
             
@@ -802,7 +802,15 @@
 <a name='L743'></a><a href='#L743'>743</a>
 <a name='L744'></a><a href='#L744'>744</a>
 <a name='L745'></a><a href='#L745'>745</a>
-<a name='L746'></a><a href='#L746'>746</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L746'></a><a href='#L746'>746</a>
+<a name='L747'></a><a href='#L747'>747</a>
+<a name='L748'></a><a href='#L748'>748</a>
+<a name='L749'></a><a href='#L749'>749</a>
+<a name='L750'></a><a href='#L750'>750</a>
+<a name='L751'></a><a href='#L751'>751</a>
+<a name='L752'></a><a href='#L752'>752</a>
+<a name='L753'></a><a href='#L753'>753</a>
+<a name='L754'></a><a href='#L754'>754</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1229,10 +1237,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">33x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">33x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
 <span class="cline-any cline-yes">33x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1241,13 +1250,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1279,10 +1292,13 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1972,64 +1988,72 @@ export class Wechat {
    *
    * @param params 配置参数
    */
-  config(params: WechatConfigParams = this.configParams) {
-    this.configParams = params
+  config(params: WechatConfigParams = this.configParams): Promise&lt;void&gt; {
+    return new Promise&lt;void&gt;((resolve, reject) =&gt; {
+      this.configParams = params
 &nbsp;
-    const config = () =&gt; {
-      const sharable =
-        typeof params.sharable === 'boolean' ? params.sharable : <span class="branch-1 cbranch-no" title="branch not covered" >true</span>
-      wx.config({
-        ...params,
-        jsApiList: [
-          ...(params.jsApiList || []),
-          ...(sharable ? shareJsApiList : <span class="branch-1 cbranch-no" title="branch not covered" >[])</span>,
-        ],
-      })
-      if (!this.ready) {
-        wx.ready(() =&gt; {
-          this.ready = true
-          this.bus.emit('ready')
+      const config = () =&gt; {
+        const sharable =
+          typeof params.sharable === 'boolean' ? params.sharable : <span class="branch-1 cbranch-no" title="branch not covered" >true</span>
+        wx.config({
+          ...params,
+          jsApiList: [
+            ...(params.jsApiList || []),
+            ...(sharable ? shareJsApiList : <span class="branch-1 cbranch-no" title="branch not covered" >[])</span>,
+          ],
         })
-        wx.error((err: any) =&gt; {
-          this.bus.emit('error', err)
-        })
-      }
-    }
-&nbsp;
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof wx !== 'undefined') {
-      config()
-    } else {
-      const autoLoadJSSDK =
-<span class="cstat-no" title="statement not covered" >        params.autoLoadJSSDK == null ? '1.4.0' : params.autoLoadJSSDK</span>
-<span class="cstat-no" title="statement not covered" >      if (autoLoadJSSDK !== false) {</span>
-        const jssdkUrl = <span class="cstat-no" title="statement not covered" >/^[0-9.]+$/.test(autoLoadJSSDK)</span>
-          ? `https://res.wx.qq.com/open/js/jweixin-${autoLoadJSSDK}.js`
-          : autoLoadJSSDK
-        const alternateJssdkUrl = <span class="cstat-no" title="statement not covered" >jssdkUrl.replace(</span>
-          /^https:\/\/res\.wx\.qq\.com\//,
-          'https://res2.wx.qq.com/',
-        )
-<span class="cstat-no" title="statement not covered" >        loadResource({</span>
-          type: LoadResourceUrlType.js,
-          path: jssdkUrl,
-          alternatePath: alternateJssdkUrl,
-        })
-          .then(<span class="fstat-no" title="function not covered" >([</span>scriptEl]) =&gt; {
-<span class="cstat-no" title="statement not covered" >            scriptEl.parentNode?.removeChild(scriptEl)</span>
-          }, noop)
-          .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >            if (typeof wx === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >              throw new Error('微信 JSSDK 加载失败')</span>
-            }
-<span class="cstat-no" title="statement not covered" >            config()</span>
+        if (!this.ready) {
+          wx.ready(() =&gt; {
+            this.ready = true
+            this.bus.emit('ready')
+            resolve()
           })
-      } else {
-<span class="cstat-no" title="statement not covered" >        if (typeof wx === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >          throw new Error('请先引入微信 JSSDK')</span>
+          wx.error((err: any) =&gt; {
+            this.bus.emit('error', err)
+            reject(err)
+          })
+        } else {
+          resolve()
         }
-<span class="cstat-no" title="statement not covered" >        config()</span>
       }
-    }
+&nbsp;
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof wx !== 'undefined') {
+        config()
+      } else {
+        const autoLoadJSSDK =
+<span class="cstat-no" title="statement not covered" >          params.autoLoadJSSDK == null ? '1.6.0' : params.autoLoadJSSDK</span>
+<span class="cstat-no" title="statement not covered" >        if (autoLoadJSSDK !== false) {</span>
+          const jssdkUrl = <span class="cstat-no" title="statement not covered" >/^[0-9.]+$/.test(autoLoadJSSDK)</span>
+            ? `https://res.wx.qq.com/open/js/jweixin-${autoLoadJSSDK}.js`
+            : autoLoadJSSDK
+          const alternateJssdkUrl = <span class="cstat-no" title="statement not covered" >jssdkUrl.replace(</span>
+            /^https:\/\/res\.wx\.qq\.com\//,
+            'https://res2.wx.qq.com/',
+          )
+<span class="cstat-no" title="statement not covered" >          loadResource({</span>
+            type: LoadResourceUrlType.js,
+            path: jssdkUrl,
+            alternatePath: alternateJssdkUrl,
+          })
+            .then(<span class="fstat-no" title="function not covered" >([</span>scriptEl]) =&gt; {
+<span class="cstat-no" title="statement not covered" >              scriptEl.parentNode?.removeChild(scriptEl)</span>
+            }, noop)
+            .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >              if (typeof wx === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >                reject('微信 JSSDK 加载失败')</span>
+              } else {
+<span class="cstat-no" title="statement not covered" >                config()</span>
+              }
+            })
+        } else {
+<span class="cstat-no" title="statement not covered" >          if (typeof wx === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            reject('请先引入微信 JSSDK')</span>
+          } else {
+<span class="cstat-no" title="statement not covered" >            config()</span>
+          }
+        }
+      }
+    })
   }
 &nbsp;
   /**
@@ -2299,7 +2323,7 @@ export class Wechat {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Aug 28 2023 15:00:28 GMT+0000 (Coordinated Universal Time)
+                at Mon Aug 28 2023 17:47:14 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
