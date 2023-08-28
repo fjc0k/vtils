@@ -193,6 +193,7 @@ rich://{"url":"***","desc":"***"}
 |  [WechatRequestPaymentParams](./utils.wechatrequestpaymentparams.md) |  |
 |  [WechatUpdateShareDataParams](./utils.wechatupdatesharedataparams.md) |  |
 |  [WechatUploadImageParams](./utils.wechatuploadimageparams.md) |  |
+|  [WechatUploadImageResult](./utils.wechatuploadimageresult.md) |  |
 
 ## Namespaces
 
@@ -263,6 +264,7 @@ rich://{"url":"***","desc":"***"}
 |  [TreeDataTraverseFn](./utils.treedatatraversefn.md) |  |
 |  [ValueOfRawData](./utils.valueofrawdata.md) |  |
 |  [WechatBeforeInvokeCallback](./utils.wechatbeforeinvokecallback.md) |  |
+|  [WechatChooseImageResult](./utils.wechatchooseimageresult.md) |  |
 |  [WechatErrorCallback](./utils.wechaterrorcallback.md) |  |
 |  [WechatJsApi](./utils.wechatjsapi.md) | 微信 JSSDK 支持的 API。 |
 |  [WechatNonBaseMenuItem](./utils.wechatnonbasemenuitem.md) | 微信内网页的非基础菜单列表。 |

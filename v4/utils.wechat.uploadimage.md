@@ -2,27 +2,16 @@
 
 [Home](./index.md) &gt; [utils](./utils.md) &gt; [Wechat](./utils.wechat.md) &gt; [uploadImage](./utils.wechat.uploadimage.md)
 
-## Wechat.uploadImage() method
+## Wechat.uploadImage property
 
 上传图片。
+
+内部已作处理保证同时只能有一个图片在上传。
 
 \*\*备注：\*\* 上传图片有效期3天， 可用微信多媒体接口下载图片到自己的服务器， 此处获得的服务器端 ID 即 `media_id`<!-- -->。
 
 **Signature:**
 
 ```typescript
-uploadImage(params: WechatUploadImageParams): Promise<string>;
+uploadImage: (params: WechatUploadImageParams) => Promise<WechatUploadImageResult>;
 ```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  params | [WechatUploadImageParams](./utils.wechatuploadimageparams.md) | 参数 |
-
-**Returns:**
-
-Promise&lt;string&gt;
-
-图片的服务器端 ID
-

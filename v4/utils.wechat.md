@@ -42,6 +42,7 @@ wechat.invoke('scanQRCode').then(res => {
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
 |  [configParams](./utils.wechat.configparams.md) |  | [WechatConfigParams](./utils.wechatconfigparams.md) | 注入微信 <code>JSSDK</code> 的权限验证配置参数。 |
+|  [uploadImage](./utils.wechat.uploadimage.md) |  | (params: [WechatUploadImageParams](./utils.wechatuploadimageparams.md)<!-- -->) =&gt; Promise&lt;[WechatUploadImageResult](./utils.wechatuploadimageresult.md)<!-- -->&gt; | <p>上传图片。</p><p>内部已作处理保证同时只能有一个图片在上传。</p><p>\*\*备注：\*\* 上传图片有效期3天， 可用微信多媒体接口下载图片到自己的服务器， 此处获得的服务器端 ID 即 <code>media_id</code>。</p> |
 
 ## Methods
 
@@ -63,5 +64,4 @@ wechat.invoke('scanQRCode').then(res => {
 |  [showAllNonBaseMenuItems()](./utils.wechat.showallnonbasemenuitems.md) |  | 显示所有的非基础菜单项。 |
 |  [showNonBaseMenuItems(menuList)](./utils.wechat.shownonbasemenuitems.md) |  | 批量显示非基础菜单项。 |
 |  [updateShareData(params)](./utils.wechat.updatesharedata.md) |  | <p>设置分享数据。</p><p>\*\*注意\*\*：每次分享的数据会和上次分享的数据合并作为最终分享的数据，因此，可以设置全局的分享数据。</p> |
-|  [uploadImage(params)](./utils.wechat.uploadimage.md) |  | <p>上传图片。</p><p>\*\*备注：\*\* 上传图片有效期3天， 可用微信多媒体接口下载图片到自己的服务器， 此处获得的服务器端 ID 即 <code>media_id</code>。</p> |
 
