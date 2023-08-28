@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.97.0](https://github.com/fjc0k/vtils/compare/v4.96.1...v4.97.0) (2023-08-28)
+
+### Features
+
+- **Wechat:** add isReady ([4d46f27](https://github.com/fjc0k/vtils/commit/4d46f27298a35e4e69d547ddedd048364168e234))
+
 ### [4.96.1](https://github.com/fjc0k/vtils/compare/v4.96.0...v4.96.1) (2023-08-28)
 
 ### Bug Fixes
