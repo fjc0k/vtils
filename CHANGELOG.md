@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.98.0](https://github.com/fjc0k/vtils/compare/v4.97.0...v4.98.0) (2023-08-28)
+
+### Features
+
+- **Wechat:** config 返回 Promise ([3217457](https://github.com/fjc0k/vtils/commit/3217457ca948e0833abca5c43b52a6ee9b0bafc3))
+
 ## [4.97.0](https://github.com/fjc0k/vtils/compare/v4.96.1...v4.97.0) (2023-08-28)
 
 ### Features
