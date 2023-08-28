@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.96.0](https://github.com/fjc0k/vtils/compare/v4.95.0...v4.96.0) (2023-08-28)
+
+### Features
+
+- **Wechat:** chooseImage 返回 previewUrl ([6a7cf36](https://github.com/fjc0k/vtils/commit/6a7cf363cd84dfe27c85a9a6097cfc59c04d8276))
+
 ## [4.95.0](https://github.com/fjc0k/vtils/compare/v4.94.0...v4.95.0) (2023-08-24)
 
 ### Features
