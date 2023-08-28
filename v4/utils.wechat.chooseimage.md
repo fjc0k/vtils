@@ -9,7 +9,10 @@
 **Signature:**
 
 ```typescript
-chooseImage(params?: WechatChooseImageParams): Promise<string[]>;
+chooseImage(params?: WechatChooseImageParams): Promise<Array<{
+        localId: string;
+        previewUrl: string;
+    }>>;
 ```
 
 ## Parameters
@@ -20,7 +23,7 @@ chooseImage(params?: WechatChooseImageParams): Promise<string[]>;
 
 **Returns:**
 
-Promise&lt;string\[\]&gt;
+Promise&lt;Array&lt;{ localId: string; previewUrl: string; }&gt;&gt;
 
 选定照片的本地 ID 列表，它们可以作为 img 标签的 src 属性显示图片
 
