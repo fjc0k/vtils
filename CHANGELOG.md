@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.96.1](https://github.com/fjc0k/vtils/compare/v4.96.0...v4.96.1) (2023-08-28)
+
+### Bug Fixes
+
+- **Wechat:** uploadImage 内部作处理保证同时只能有一个图片在上传 ([3c2afa1](https://github.com/fjc0k/vtils/commit/3c2afa107a6eb8553a0eace6223afacc373f6feb))
+
 ## [4.96.0](https://github.com/fjc0k/vtils/compare/v4.95.0...v4.96.0) (2023-08-28)
 
 ### Features
