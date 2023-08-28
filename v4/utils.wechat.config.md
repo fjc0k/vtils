@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-config(params?: WechatConfigParams): void;
+config(params?: WechatConfigParams): Promise<void>;
 ```
 
 ## Parameters
@@ -20,5 +20,5 @@ config(params?: WechatConfigParams): void;
 
 **Returns:**
 
-void
+Promise&lt;void&gt;
 
