@@ -1,5 +1,6 @@
 import { mapValues, noop } from 'lodash-uni'
 import { EventBus, EventBusOffListener } from './EventBus'
+import { asyncLimit } from './asyncLimit'
 import { LoadResourceUrlType, loadResource } from './loadResource'
 
 declare const wx: any
@@ -163,6 +164,16 @@ export interface WechatChooseImageParams {
 /**
  * @public
  */
+export type WechatChooseImageResult = Array<{
+  /** 本地 ID，用于上传 */
+  localId: string
+  /** 预览链接，已兼容 iOS WKWebview */
+  previewUrl: string
+}>
+
+/**
+ * @public
+ */
 export interface WechatPreviewImageParams {
   /**
    * 当前显示图片的链接。
@@ -192,6 +203,16 @@ export interface WechatUploadImageParams {
    * @default false
    */
   isShowProgressTips?: boolean
+}
+
+/**
+ * @public
+ */
+export interface WechatUploadImageResult {
+  /**
+   * 图片的服务器 ID，即临时素材 ID。
+   */
+  serverId: string
 }
 
 /**
@@ -509,12 +530,9 @@ export class Wechat {
    * @param params 参数
    * @returns 选定照片的本地 ID 列表，它们可以作为 img 标签的 src 属性显示图片
    */
-  chooseImage(params?: WechatChooseImageParams): Promise<
-    Array<{
-      localId: string
-      previewUrl: string
-    }>
-  > {
+  chooseImage(
+    params?: WechatChooseImageParams,
+  ): Promise<WechatChooseImageResult> {
     return this.invoke<
       WechatChooseImageParams,
       {
@@ -561,27 +579,36 @@ export class Wechat {
   /**
    * 上传图片。
    *
+   * 内部已作处理保证同时只能有一个图片在上传。
+   *
    * **备注：** 上传图片有效期3天，
    * 可用微信多媒体接口下载图片到自己的服务器，
    * 此处获得的服务器端 ID 即 `media_id`。
    *
    * @param params 参数
-   * @returns 图片的服务器端 ID
    */
-  uploadImage(params: WechatUploadImageParams): Promise<string> {
-    return this.invoke<
-      {
-        localId: string
-        isShowProgressTips: 0 | 1
-      },
-      {
-        serverId: string
-      }
-    >('uploadImage', {
-      localId: params.localId,
-      isShowProgressTips: params.isShowProgressTips ? 1 : 0,
-    }).then(res => res.serverId)
-  }
+  uploadImage = asyncLimit(
+    (params: WechatUploadImageParams): Promise<WechatUploadImageResult> => {
+      return this.invoke<
+        {
+          localId: string
+          isShowProgressTips: 0 | 1
+        },
+        {
+          serverId: string
+        }
+      >('uploadImage', {
+        localId: params.localId,
+        isShowProgressTips: params.isShowProgressTips ? 1 : 0,
+      })
+    },
+    {
+      // https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html
+      // 附录5-常见错误及解决方法
+      // 9.uploadImage怎么传多图（目前只支持一次上传一张，多张图片需等前一张图片上传之后再调用该接口）
+      concurrency: 1,
+    },
+  )
 
   /**
    * 获取地理位置接口。
