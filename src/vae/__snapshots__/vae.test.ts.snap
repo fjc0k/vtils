@@ -374,6 +374,13 @@ Object {
 }
 `;
 
+exports[`vae meta 1`] = `
+Object {
+  "x": 1,
+  "y": "222",
+}
+`;
+
 exports[`vae number 1`] = `
 Object {
   "data": undefined,

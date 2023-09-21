@@ -738,4 +738,10 @@ describe('vae', () => {
         ),
     ).toThrowErrorMatchingSnapshot()
   })
+
+  test('meta', () => {
+    expect(
+      v.string().min(3).meta({ x: 1, y: '222' }).options.metadata,
+    ).toMatchSnapshot()
+  })
 })

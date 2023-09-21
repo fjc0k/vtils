@@ -40,6 +40,12 @@ export type VaeSchemaType =
   | 'boolean'
   | 'array'
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface VaeSchemaCustomMetadata {}
+export type VaeSchemaMetadata = keyof VaeSchemaCustomMetadata extends never
+  ? Record<any, any>
+  : VaeSchemaCustomMetadata
+
 export type VaeSchemaOptions<T, S> = {
   type: VaeSchemaType
   label?: string
@@ -51,6 +57,7 @@ export type VaeSchemaOptions<T, S> = {
   stringEmptyable?: boolean
   processors?: Array<VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>>
   runtime?: VaeSchemaRuntimeFn<T, S>
+  metadata?: VaeSchemaMetadata
 }
 
 export type VaeSchemaPath = Array<string | number>
@@ -151,6 +158,11 @@ export abstract class VaeSchema<T extends any = any> {
 
   get options() {
     return this._options
+  }
+
+  meta(metadata: VaeSchemaMetadata) {
+    this._options.metadata = metadata
+    return this
   }
 
   check(payload: VaeSchemaCheckPayload<T>) {
