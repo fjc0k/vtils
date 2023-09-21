@@ -149,6 +149,10 @@ export abstract class VaeSchema<T extends any = any> {
     }
   }
 
+  get options() {
+    return this._options
+  }
+
   check(payload: VaeSchemaCheckPayload<T>) {
     const index = payload.tag
       ? findIndex(
