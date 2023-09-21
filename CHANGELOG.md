@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.99.0](https://github.com/fjc0k/vtils/compare/v4.98.0...v4.99.0) (2023-09-21)
+
+### Features
+
+- **VaeSchema:** 透出 options ([ca21a6b](https://github.com/fjc0k/vtils/commit/ca21a6b401d4e93fb832ac3002b0ef5ca927d3b7))
+- **vae:** 新增 meta 方法设置一些额外的元数据 ([9f77a04](https://github.com/fjc0k/vtils/commit/9f77a04f5bfdf3786c21d5bf28273f8320ceb7ea))
+
 ## [4.98.0](https://github.com/fjc0k/vtils/compare/v4.97.0...v4.98.0) (2023-08-28)
 
 ### Features
