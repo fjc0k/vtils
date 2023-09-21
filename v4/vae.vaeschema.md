@@ -21,6 +21,7 @@ export declare abstract class VaeSchema<T extends any = any>
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
 |  [\_options](./vae.vaeschema._options.md) | <code>protected</code> | RequiredBy&lt;[VaeSchemaOptions](./vae.vaeschemaoptions.md)<!-- -->&lt;T, any&gt;, 'processors'&gt; |  |
+|  [options](./vae.vaeschema.options.md) | <code>readonly</code> | RequiredBy&lt;[VaeSchemaOptions](./vae.vaeschemaoptions.md)<!-- -->&lt;T, any&gt;, "processors"&gt; |  |
 
 ## Methods
 
@@ -33,6 +34,7 @@ export declare abstract class VaeSchema<T extends any = any>
 |  [default(value)](./vae.vaeschema.default.md) |  |  |
 |  [enum(value, message)](./vae.vaeschema.enum.md) |  |  |
 |  [label(label)](./vae.vaeschema.label.md) |  |  |
+|  [meta(metadata)](./vae.vaeschema.meta.md) |  |  |
 |  [optional()](./vae.vaeschema.optional.md) |  |  |
 |  [parse(data, options)](./vae.vaeschema.parse.md) |  |  |
 |  [parseOrThrow(data, options)](./vae.vaeschema.parseorthrow.md) |  |  |

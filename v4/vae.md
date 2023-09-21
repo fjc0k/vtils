@@ -32,6 +32,7 @@ vae 数据验证。
 |  Interface | Description |
 |  --- | --- |
 |  [VaeErrorIssue](./vae.vaeerrorissue.md) |  |
+|  [VaeSchemaCustomMetadata](./vae.vaeschemacustommetadata.md) |  |
 
 ## Variables
 
@@ -52,6 +53,7 @@ vae 数据验证。
 |  [VaeObjectSchemaShapeOf](./vae.vaeobjectschemashapeof.md) |  |
 |  [VaeSchemaCastOptions](./vae.vaeschemacastoptions.md) |  |
 |  [VaeSchemaCheckPayload](./vae.vaeschemacheckpayload.md) |  |
+|  [VaeSchemaMetadata](./vae.vaeschemametadata.md) |  |
 |  [VaeSchemaOf](./vae.vaeschemaof.md) |  |
 |  [VaeSchemaOptions](./vae.vaeschemaoptions.md) |  |
 |  [VaeSchemaParseOptions](./vae.vaeschemaparseoptions.md) |  |

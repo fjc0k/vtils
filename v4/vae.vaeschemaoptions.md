@@ -18,7 +18,8 @@ export declare type VaeSchemaOptions<T, S> = {
     stringEmptyable?: boolean;
     processors?: Array<VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>>;
     runtime?: VaeSchemaRuntimeFn<T, S>;
+    metadata?: VaeSchemaMetadata;
 };
 ```
-**References:** [VaeSchemaType](./vae.vaeschematype.md)<!-- -->, [VaeLocaleMessage](./vae.vaelocalemessage.md)<!-- -->, [VaeSchemaCheckPayload](./vae.vaeschemacheckpayload.md)<!-- -->, [VaeSchemaTransformPayload](./vae.vaeschematransformpayload.md)<!-- -->, [VaeSchemaRuntimeFn](./vae.vaeschemaruntimefn.md)
+**References:** [VaeSchemaType](./vae.vaeschematype.md)<!-- -->, [VaeLocaleMessage](./vae.vaelocalemessage.md)<!-- -->, [VaeSchemaCheckPayload](./vae.vaeschemacheckpayload.md)<!-- -->, [VaeSchemaTransformPayload](./vae.vaeschematransformpayload.md)<!-- -->, [VaeSchemaRuntimeFn](./vae.vaeschemaruntimefn.md)<!-- -->, [VaeSchemaMetadata](./vae.vaeschemametadata.md)
 
