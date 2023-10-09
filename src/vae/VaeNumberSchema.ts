@@ -2,7 +2,9 @@ import { isInteger, isNumeric, toNumber } from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema } from './VaeSchema'
 
-export class VaeNumberSchema<T extends number = number> extends VaeSchema<T> {
+export class VaeNumberSchema<
+  T0 extends number | undefined = number,
+> extends VaeSchema<T0> {
   constructor(message: VaeLocaleMessage = VaeLocale.number.type) {
     super({
       type: 'number',

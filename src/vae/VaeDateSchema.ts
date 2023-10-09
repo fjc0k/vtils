@@ -2,7 +2,9 @@ import { anyToDate, isDate, isValid } from '../date'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema } from './VaeSchema'
 
-export class VaeDateSchema<T extends Date = Date> extends VaeSchema<T> {
+export class VaeDateSchema<
+  T0 extends Date | undefined = Date,
+> extends VaeSchema<T0> {
   constructor(message: VaeLocaleMessage = VaeLocale.date.type) {
     super({
       type: 'date',

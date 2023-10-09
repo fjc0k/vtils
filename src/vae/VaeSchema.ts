@@ -1,10 +1,4 @@
-import {
-  DotPath,
-  DotPathValue,
-  OneOrMore,
-  RequiredBy,
-  RequiredDeep,
-} from '../types'
+import { DotPath, DotPathValue, OneOrMore, RequiredBy } from '../types'
 import {
   assign,
   castArray,
@@ -130,23 +124,30 @@ export type VaeSchemaParseResult<T> =
       issues: VaeIssue[]
     }
 
-export type VaeSchemaOf<T0, T = RequiredDeep<T0>> =
-  // 为何要加 []
+export type VaeSchemaOf<T0, T = NonNullable<T0>> = // 为何要加 []
   // https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
   [T] extends [string]
-    ? VaeStringSchema<T>
+    ? // @ts-ignore
+      VaeStringSchema<T0>
     : [T] extends [number]
-    ? VaeNumberSchema<T>
+    ? // @ts-ignore
+      VaeNumberSchema<T0>
     : [T] extends [boolean]
-    ? VaeBooleanSchema<T>
+    ? // @ts-ignore
+      VaeBooleanSchema<T0>
     : [T] extends [Date]
-    ? VaeDateSchema<T>
+    ? // @ts-ignore
+      VaeDateSchema<T0>
     : T extends any[]
-    ? VaeArraySchema<T>
+    ? // @ts-ignore
+      VaeArraySchema<T0>
     : // @ts-ignore
-      VaeObjectSchema<T>
+      VaeObjectSchema<T0>
 
-export abstract class VaeSchema<T extends any = any> {
+export abstract class VaeSchema<
+  T0 extends any = any,
+  T extends any = NonNullable<T0>,
+> {
   protected _options!: RequiredBy<VaeSchemaOptions<T, any>, 'processors'>
 
   constructor(options: VaeSchemaOptions<T, any>) {
@@ -324,7 +325,7 @@ export abstract class VaeSchema<T extends any = any> {
     return typeof path === 'string' ? res[path] : res
   }
 
-  parse(data: T, options?: VaeSchemaParseOptions): VaeSchemaParseResult<T> {
+  parse(data: T0, options?: VaeSchemaParseOptions): VaeSchemaParseResult<T0> {
     // 字符串 trim
     if (
       this._options.stringTrim &&
@@ -367,6 +368,7 @@ export abstract class VaeSchema<T extends any = any> {
     if (this._options.runtime) {
       schema = this.clone()
       this._options.runtime({
+        // @ts-expect-error
         value: data,
         schema: schema,
       })
@@ -442,7 +444,12 @@ export abstract class VaeSchema<T extends any = any> {
               }
             }
           }
-        } else if (!fn(data)) {
+        } else if (
+          !fn(
+            // @ts-expect-error
+            data,
+          )
+        ) {
           if (options.cast) {
             data = dataIsNil
               ? data
@@ -482,6 +489,7 @@ export abstract class VaeSchema<T extends any = any> {
           break
         }
       } else {
+        // @ts-expect-error
         data = processor(data)
       }
     }
@@ -502,7 +510,7 @@ export abstract class VaeSchema<T extends any = any> {
     }
   }
 
-  parseOrThrow(data: T, options?: VaeSchemaParseOptions) {
+  parseOrThrow(data: T0, options?: VaeSchemaParseOptions) {
     const res = this.parse(data, options)
     if (res.success) {
       return res.data

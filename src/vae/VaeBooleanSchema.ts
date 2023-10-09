@@ -3,8 +3,8 @@ import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema } from './VaeSchema'
 
 export class VaeBooleanSchema<
-  T extends boolean = boolean,
-> extends VaeSchema<T> {
+  T0 extends boolean | undefined = boolean,
+> extends VaeSchema<T0> {
   constructor(message: VaeLocaleMessage = VaeLocale.boolean.type) {
     super({
       type: 'boolean',

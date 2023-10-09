@@ -1339,6 +1339,20 @@ Object {
 }
 `;
 
+exports[`vae x | undefined 1`] = `
+Object {
+  "data": "test",
+  "success": true,
+}
+`;
+
+exports[`vae x | undefined 2`] = `
+Object {
+  "data": undefined,
+  "success": true,
+}
+`;
+
 exports[`vae 可覆盖定义 1`] = `
 Object {
   "issues": Array [
@@ -1373,6 +1387,27 @@ Object {
 exports[`vae 可覆盖定义 4`] = `
 Object {
   "data": 4,
+  "success": true,
+}
+`;
+
+exports[`vae 综合 1`] = `
+Object {
+  "data": Object {
+    "campus": undefined,
+    "class": undefined,
+    "college": undefined,
+    "companyName": undefined,
+    "gender": "male",
+    "grade": undefined,
+    "idNumber": undefined,
+    "identityId": 1,
+    "major": undefined,
+    "name": "成龙",
+    "school": undefined,
+    "studentNumber": undefined,
+    "userId": 1,
+  },
   "success": true,
 }
 `;

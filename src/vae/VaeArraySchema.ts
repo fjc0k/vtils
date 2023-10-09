@@ -6,7 +6,10 @@ export type VaeArraySchemaElementOf<T> = T extends Array<infer X>
   ? VaeSchemaOf<X>
   : never
 
-export class VaeArraySchema<T extends any[] = any[]> extends VaeSchema<T> {
+export class VaeArraySchema<
+  T0 extends any[] | undefined = any[],
+  T extends any[] = NonNullable<T0>,
+> extends VaeSchema<T0> {
   constructor(
     element?: VaeArraySchemaElementOf<T>,
     message: VaeLocaleMessage = VaeLocale.array.type,

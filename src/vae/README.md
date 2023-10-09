@@ -1,5 +1,1 @@
 # TODO
-
-clone
-pick
-omit

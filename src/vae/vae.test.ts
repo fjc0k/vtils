@@ -331,7 +331,7 @@ describe('vae', () => {
       name: v.string().required().max(10),
       gender: v.string(s => s.required().enum(['male', 'female'])),
       images: v.array(a => a.element(v.string().required()).default([])),
-      isAdmin: v.boolean().default(false),
+      isAdmin: v.boolean($ => $.default(false)),
     })
     expect(
       schema.parse(
@@ -742,6 +742,57 @@ describe('vae', () => {
   test('meta', () => {
     expect(
       v.string().min(3).meta({ x: 1, y: '222' }).options.metadata,
+    ).toMatchSnapshot()
+  })
+
+  test('x | undefined', () => {
+    type X = string | undefined
+    const schema = v.string<X>()
+    expect(schema.parse('test')).toMatchSnapshot()
+    expect(schema.parse(undefined)).toMatchSnapshot()
+  })
+
+  test('综合', () => {
+    type Data = {
+      userId: number
+      gender?: 'male' | 'female' | 'unknown'
+      name: string
+      campus?: string
+      college?: string
+      identityId: number
+      grade?: number
+      school?: string
+      major?: string
+      class?: string
+      studentNumber?: string
+      idNumber?: string
+      companyName?: string
+    }
+    const _ = v
+    const schema: VaeSchemaOf<Data> = _.object($ =>
+      $.shape({
+        userId: _.number().required().id(),
+        gender: _.string(),
+        name: _.string().required().max(20),
+        campus: _.string($ => $.max(20)),
+        college: _.string($ => $.max(20)),
+        identityId: _.number().required().id(),
+        grade: _.number($ => $.positiveInteger()),
+        school: _.string($ => $.max(20)),
+        major: _.string($ => $.max(20)),
+        class: _.string($ => $.max(20)),
+        studentNumber: _.string($ => $.max(20)),
+        idNumber: _.string($ => $.max(18).idCardNumber()),
+        companyName: _.string($ => $.max(50)),
+      }),
+    )
+    expect(
+      schema.parse({
+        name: '成龙',
+        identityId: 1,
+        userId: 1,
+        gender: 'male',
+      }),
     ).toMatchSnapshot()
   })
 })

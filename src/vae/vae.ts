@@ -12,11 +12,11 @@ import { VaeObjectSchema, VaeObjectSchemaShapeOf } from './VaeObjectSchema'
 import { VaeSchema } from './VaeSchema'
 import { VaeStringSchema } from './VaeStringSchema'
 
-function string<T extends string = string>(
+function string<T extends string | undefined = string>(
   schema: (schema: VaeStringSchema<T>) => VaeStringSchema<T>,
   message?: VaeLocaleMessage,
 ): VaeStringSchema<T>
-function string<T extends string = string>(
+function string<T extends string | undefined = string>(
   message?: VaeLocaleMessage,
 ): VaeStringSchema<T>
 function string(messageOrSchema: any, message?: any) {
@@ -25,11 +25,11 @@ function string(messageOrSchema: any, message?: any) {
     : new VaeStringSchema(messageOrSchema)
 }
 
-function number<T extends number = number>(
+function number<T extends number | undefined = number>(
   schema: (schema: VaeNumberSchema<T>) => VaeNumberSchema<T>,
   message?: VaeLocaleMessage,
 ): VaeNumberSchema<T>
-function number<T extends number = number>(
+function number<T extends number | undefined = number>(
   message?: VaeLocaleMessage,
 ): VaeNumberSchema<T>
 function number(messageOrSchema: any, message?: any) {
@@ -38,11 +38,11 @@ function number(messageOrSchema: any, message?: any) {
     : new VaeNumberSchema(messageOrSchema)
 }
 
-function date<T extends Date = Date>(
+function date<T extends Date | undefined = Date>(
   schema: (schema: VaeDateSchema<T>) => VaeDateSchema<T>,
   message?: VaeLocaleMessage,
 ): VaeDateSchema<T>
-function date<T extends Date = Date>(
+function date<T extends Date | undefined = Date>(
   message?: VaeLocaleMessage,
 ): VaeDateSchema<T>
 function date(messageOrSchema: any, message?: any) {
@@ -51,11 +51,11 @@ function date(messageOrSchema: any, message?: any) {
     : new VaeDateSchema(messageOrSchema)
 }
 
-function boolean<T extends boolean = boolean>(
+function boolean<T extends boolean | undefined = boolean>(
   schema: (schema: VaeBooleanSchema<T>) => VaeBooleanSchema<T>,
   message?: VaeLocaleMessage,
 ): VaeBooleanSchema<T>
-function boolean<T extends boolean = boolean>(
+function boolean<T extends boolean | undefined = boolean>(
   message?: VaeLocaleMessage,
 ): VaeBooleanSchema<T>
 function boolean(messageOrSchema: any, message?: any) {
@@ -64,15 +64,15 @@ function boolean(messageOrSchema: any, message?: any) {
     : new VaeBooleanSchema(messageOrSchema)
 }
 
-function object<T extends Record<any, any> = Record<any, any>>(
+function object<T extends Record<any, any> | undefined = Record<any, any>>(
   shape: VaeObjectSchemaShapeOf<T>,
   message?: VaeLocaleMessage,
 ): VaeObjectSchema<T>
-function object<T extends Record<any, any> = Record<any, any>>(
+function object<T extends Record<any, any> | undefined = Record<any, any>>(
   schema: (schema: VaeObjectSchema<T>) => VaeObjectSchema<T>,
   message?: VaeLocaleMessage,
 ): VaeObjectSchema<T>
-function object<T extends Record<any, any> = Record<any, any>>(
+function object<T extends Record<any, any> | undefined = Record<any, any>>(
   message?: VaeLocaleMessage,
 ): VaeObjectSchema<T>
 function object(messageOrSchemaOrShape: any, message?: any) {
@@ -83,15 +83,15 @@ function object(messageOrSchemaOrShape: any, message?: any) {
     : new VaeObjectSchema(undefined, messageOrSchemaOrShape)
 }
 
-function array<T extends unknown[] = unknown[]>(
+function array<T extends unknown[] | undefined = unknown[]>(
   element: VaeArraySchemaElementOf<T>,
   message?: VaeLocaleMessage,
 ): VaeArraySchema<T>
-function array<T extends unknown[] = unknown[]>(
+function array<T extends unknown[] | undefined = unknown[]>(
   schema: (schema: VaeArraySchema<T>) => VaeArraySchema<T>,
   message?: VaeLocaleMessage,
 ): VaeArraySchema<T>
-function array<T extends unknown[] = unknown[]>(
+function array<T extends unknown[] | undefined = unknown[]>(
   message?: VaeLocaleMessage,
 ): VaeArraySchema<T>
 function array(messageOrSchemaOrElement: any, message?: any) {

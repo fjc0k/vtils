@@ -8,8 +8,9 @@ export type VaeObjectSchemaShapeOf<T> = {
 }
 
 export class VaeObjectSchema<
-  T extends Record<any, any> = Record<any, any>,
-> extends VaeSchema<T> {
+  T0 extends Record<any, any> | undefined = Record<any, any>,
+  T extends Record<any, any> = NonNullable<T0>,
+> extends VaeSchema<T0> {
   constructor(
     shape?: VaeObjectSchemaShapeOf<T>,
     message: VaeLocaleMessage = VaeLocale.object.type,
@@ -33,7 +34,7 @@ export class VaeObjectSchema<
     this._options.objectKeys = keys
     keys.forEach(key => {
       this.check({
-        fn: shape[key] as any,
+        fn: (shape as any)[key],
         path: [key],
         message: '',
         tag: `field_${key}`,
