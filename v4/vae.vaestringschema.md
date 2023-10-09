@@ -7,9 +7,9 @@
 **Signature:**
 
 ```typescript
-export declare class VaeStringSchema<T extends string = string> extends VaeSchema<T> 
+export declare class VaeStringSchema<T0 extends string | undefined = string> extends VaeSchema<T0> 
 ```
-**Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T&gt;
+**Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T0&gt;
 
 ## Constructors
 

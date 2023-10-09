@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-export declare abstract class VaeSchema<T extends any = any> 
+export declare abstract class VaeSchema<T0 extends any = any, T extends any = NonNullable<T0>> 
 ```
 
 ## Constructors

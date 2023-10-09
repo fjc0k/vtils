@@ -7,9 +7,9 @@
 **Signature:**
 
 ```typescript
-export declare class VaeObjectSchema<T extends Record<any, any> = Record<any, any>> extends VaeSchema<T> 
+export declare class VaeObjectSchema<T0 extends Record<any, any> | undefined = Record<any, any>, T extends Record<any, any> = NonNullable<T0>> extends VaeSchema<T0> 
 ```
-**Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T&gt;
+**Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T0&gt;
 
 ## Constructors
 

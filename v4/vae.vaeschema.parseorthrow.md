@@ -7,17 +7,17 @@
 **Signature:**
 
 ```typescript
-parseOrThrow(data: T, options?: VaeSchemaParseOptions): T;
+parseOrThrow(data: T0, options?: VaeSchemaParseOptions): T0;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  data | T |  |
+|  data | T0 |  |
 |  options | [VaeSchemaParseOptions](./vae.vaeschemaparseoptions.md) | _(Optional)_ |
 
 **Returns:**
 
-T
+T0
 

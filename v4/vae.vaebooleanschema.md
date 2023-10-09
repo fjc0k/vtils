@@ -7,9 +7,9 @@
 **Signature:**
 
 ```typescript
-export declare class VaeBooleanSchema<T extends boolean = boolean> extends VaeSchema<T> 
+export declare class VaeBooleanSchema<T0 extends boolean | undefined = boolean> extends VaeSchema<T0> 
 ```
-**Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T&gt;
+**Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T0&gt;
 
 ## Constructors
 

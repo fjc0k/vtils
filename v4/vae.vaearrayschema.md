@@ -7,9 +7,9 @@
 **Signature:**
 
 ```typescript
-export declare class VaeArraySchema<T extends any[] = any[]> extends VaeSchema<T> 
+export declare class VaeArraySchema<T0 extends any[] | undefined = any[], T extends any[] = NonNullable<T0>> extends VaeSchema<T0> 
 ```
-**Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T&gt;
+**Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T0&gt;
 
 ## Constructors
 

@@ -7,9 +7,9 @@
 **Signature:**
 
 ```typescript
-export declare type VaeSchemaOf<T0, T = RequiredDeep<T0>> = [
+export declare type VaeSchemaOf<T0, T = NonNullable<T0>> = [
 T
-] extends [string] ? VaeStringSchema<T> : [T] extends [number] ? VaeNumberSchema<T> : [T] extends [boolean] ? VaeBooleanSchema<T> : [T] extends [Date] ? VaeDateSchema<T> : T extends any[] ? VaeArraySchema<T> : VaeObjectSchema<T>;
+] extends [string] ? VaeStringSchema<T0> : [T] extends [number] ? VaeNumberSchema<T0> : [T] extends [boolean] ? VaeBooleanSchema<T0> : [T] extends [Date] ? VaeDateSchema<T0> : T extends any[] ? VaeArraySchema<T0> : VaeObjectSchema<T0>;
 ```
 **References:** [VaeStringSchema](./vae.vaestringschema.md)<!-- -->, [VaeNumberSchema](./vae.vaenumberschema.md)<!-- -->, [VaeBooleanSchema](./vae.vaebooleanschema.md)<!-- -->, [VaeDateSchema](./vae.vaedateschema.md)<!-- -->, [VaeArraySchema](./vae.vaearrayschema.md)<!-- -->, [VaeObjectSchema](./vae.vaeobjectschema.md)
 
