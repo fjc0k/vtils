@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.5% </span>
+                <span class="strong">81.25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>10/16</span>
+                <span class='fraction'>13/16</span>
             </div>
         
             
@@ -227,7 +227,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">63x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -240,7 +240,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">55x</span>
+<span class="cline-any cline-yes">58x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -283,7 +283,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -367,11 +367,11 @@ import { VaeObjectSchema, VaeObjectSchemaShapeOf } from './VaeObjectSchema'
 import { VaeSchema } from './VaeSchema'
 import { VaeStringSchema } from './VaeStringSchema'
 &nbsp;
-function string&lt;T extends string = string&gt;(
+function string&lt;T extends string | undefined = string&gt;(
   schema: (schema: VaeStringSchema&lt;T&gt;) =&gt; VaeStringSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeStringSchema&lt;T&gt;
-function string&lt;T extends string = string&gt;(
+function string&lt;T extends string | undefined = string&gt;(
   message?: VaeLocaleMessage,
 ): VaeStringSchema&lt;T&gt;
 function string(messageOrSchema: any, message?: any) {
@@ -380,24 +380,24 @@ function string(messageOrSchema: any, message?: any) {
     : new VaeStringSchema(messageOrSchema)
 }
 &nbsp;
-function number&lt;T extends number = number&gt;(
+function number&lt;T extends number | undefined = number&gt;(
   schema: (schema: VaeNumberSchema&lt;T&gt;) =&gt; VaeNumberSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeNumberSchema&lt;T&gt;
-function number&lt;T extends number = number&gt;(
+function number&lt;T extends number | undefined = number&gt;(
   message?: VaeLocaleMessage,
 ): VaeNumberSchema&lt;T&gt;
 function number(messageOrSchema: any, message?: any) {
   return typeof messageOrSchema === 'function'
-    ? <span class="branch-0 cbranch-no" title="branch not covered" >messageOrSchema(new VaeNumberSchema(message))</span>
+    ? messageOrSchema(new VaeNumberSchema(message))
     : new VaeNumberSchema(messageOrSchema)
 }
 &nbsp;
-function date&lt;T extends Date = Date&gt;(
+function date&lt;T extends Date | undefined = Date&gt;(
   schema: (schema: VaeDateSchema&lt;T&gt;) =&gt; VaeDateSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeDateSchema&lt;T&gt;
-function date&lt;T extends Date = Date&gt;(
+function date&lt;T extends Date | undefined = Date&gt;(
   message?: VaeLocaleMessage,
 ): VaeDateSchema&lt;T&gt;
 function date(messageOrSchema: any, message?: any) {
@@ -406,47 +406,47 @@ function date(messageOrSchema: any, message?: any) {
     : new VaeDateSchema(messageOrSchema)
 }
 &nbsp;
-function boolean&lt;T extends boolean = boolean&gt;(
+function boolean&lt;T extends boolean | undefined = boolean&gt;(
   schema: (schema: VaeBooleanSchema&lt;T&gt;) =&gt; VaeBooleanSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeBooleanSchema&lt;T&gt;
-function boolean&lt;T extends boolean = boolean&gt;(
+function boolean&lt;T extends boolean | undefined = boolean&gt;(
   message?: VaeLocaleMessage,
 ): VaeBooleanSchema&lt;T&gt;
 function boolean(messageOrSchema: any, message?: any) {
   return typeof messageOrSchema === 'function'
-    ? <span class="branch-0 cbranch-no" title="branch not covered" >messageOrSchema(new VaeBooleanSchema(message))</span>
+    ? messageOrSchema(new VaeBooleanSchema(message))
     : new VaeBooleanSchema(messageOrSchema)
 }
 &nbsp;
-function object&lt;T extends Record&lt;any, any&gt; = Record&lt;any, any&gt;&gt;(
+function object&lt;T extends Record&lt;any, any&gt; | undefined = Record&lt;any, any&gt;&gt;(
   shape: VaeObjectSchemaShapeOf&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeObjectSchema&lt;T&gt;
-function object&lt;T extends Record&lt;any, any&gt; = Record&lt;any, any&gt;&gt;(
+function object&lt;T extends Record&lt;any, any&gt; | undefined = Record&lt;any, any&gt;&gt;(
   schema: (schema: VaeObjectSchema&lt;T&gt;) =&gt; VaeObjectSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeObjectSchema&lt;T&gt;
-function object&lt;T extends Record&lt;any, any&gt; = Record&lt;any, any&gt;&gt;(
+function object&lt;T extends Record&lt;any, any&gt; | undefined = Record&lt;any, any&gt;&gt;(
   message?: VaeLocaleMessage,
 ): VaeObjectSchema&lt;T&gt;
 function object(messageOrSchemaOrShape: any, message?: any) {
   return typeof messageOrSchemaOrShape === 'function'
-    ? <span class="branch-0 cbranch-no" title="branch not covered" >messageOrSchemaOrShape(new VaeObjectSchema(undefined, message))</span>
+    ? messageOrSchemaOrShape(new VaeObjectSchema(undefined, message))
     : typeof messageOrSchemaOrShape === 'object'
     ? new VaeObjectSchema(messageOrSchemaOrShape, message)
     : <span class="branch-1 cbranch-no" title="branch not covered" >new VaeObjectSchema(undefined, messageOrSchemaOrShape)</span>
 }
 &nbsp;
-function array&lt;T extends unknown[] = unknown[]&gt;(
+function array&lt;T extends unknown[] | undefined = unknown[]&gt;(
   element: VaeArraySchemaElementOf&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeArraySchema&lt;T&gt;
-function array&lt;T extends unknown[] = unknown[]&gt;(
+function array&lt;T extends unknown[] | undefined = unknown[]&gt;(
   schema: (schema: VaeArraySchema&lt;T&gt;) =&gt; VaeArraySchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeArraySchema&lt;T&gt;
-function array&lt;T extends unknown[] = unknown[]&gt;(
+function array&lt;T extends unknown[] | undefined = unknown[]&gt;(
   message?: VaeLocaleMessage,
 ): VaeArraySchema&lt;T&gt;
 function array(messageOrSchemaOrElement: any, message?: any) {
@@ -508,7 +508,7 @@ export * from './VaeStringSchema'
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Sep 21 2023 08:47:34 GMT+0000 (Coordinated Universal Time)
+                at Mon Oct 09 2023 07:18:14 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
