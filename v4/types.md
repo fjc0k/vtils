@@ -61,6 +61,7 @@
 |  [NonNegative](./types.nonnegative.md) | <p>A non-negative <code>number</code>/<code>bigint</code> (<code>0 &lt;= x &lt; ∞</code>).</p><p>Use-case: Validating and documenting parameters.</p> |
 |  [NonNegativeInteger](./types.nonnegativeinteger.md) | <p>A non-negative (<code>0 &lt;= x &lt; ∞</code>) <code>number</code> that is an integer. Equivalent to <code>NonNegative&lt;Integer&lt;T&gt;&gt;</code>.</p><p>You can't pass a <code>bigint</code> as they are already guaranteed to be integers, instead use <code>NonNegative&lt;T&gt;</code>.</p><p>Use-case: Validating and documenting parameters.</p> |
 |  [NonNullableDeep](./types.nonnullabledeep.md) | Like NonNullable but recursive |
+|  [Nullable](./types.nullable.md) |  |
 |  [NullableDeep](./types.nullabledeep.md) | Recursive nullable |
 |  [OmitBy](./types.omitby.md) | Omit all properties of given type in object type |
 |  [OmitDeep](./types.omitdeep.md) | Recursively omit deep properties |

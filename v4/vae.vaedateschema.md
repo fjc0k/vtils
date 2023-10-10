@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-export declare class VaeDateSchema<T0 extends Date | undefined = Date> extends VaeSchema<T0> 
+export declare class VaeDateSchema<T0 extends Nullable<Date> = Date> extends VaeSchema<T0> 
 ```
 **Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T0&gt;
 

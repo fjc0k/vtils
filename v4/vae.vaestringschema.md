@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-export declare class VaeStringSchema<T0 extends string | undefined = string> extends VaeSchema<T0> 
+export declare class VaeStringSchema<T0 extends Nullable<string> = string> extends VaeSchema<T0> 
 ```
 **Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T0&gt;
 

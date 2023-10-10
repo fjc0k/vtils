@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-export declare class VaeNumberSchema<T0 extends number | undefined = number> extends VaeSchema<T0> 
+export declare class VaeNumberSchema<T0 extends Nullable<number> = number> extends VaeSchema<T0> 
 ```
 **Extends:** [VaeSchema](./vae.vaeschema.md)<!-- -->&lt;T0&gt;
 
