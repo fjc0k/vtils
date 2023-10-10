@@ -1,3 +1,4 @@
+import { Nullable } from '../types'
 import {
   endsWith,
   includes,
@@ -12,7 +13,7 @@ import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema } from './VaeSchema'
 
 export class VaeStringSchema<
-  T0 extends string | undefined = string,
+  T0 extends Nullable<string> = string,
 > extends VaeSchema<T0> {
   constructor(message: VaeLocaleMessage = VaeLocale.string.type) {
     super({

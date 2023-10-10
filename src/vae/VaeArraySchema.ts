@@ -1,3 +1,4 @@
+import { Nullable } from '../types'
 import { isArray } from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema, VaeSchemaOf } from './VaeSchema'
@@ -7,7 +8,7 @@ export type VaeArraySchemaElementOf<T> = T extends Array<infer X>
   : never
 
 export class VaeArraySchema<
-  T0 extends any[] | undefined = any[],
+  T0 extends Nullable<any[]> = any[],
   T extends NonNullable<T0> = NonNullable<T0>,
 > extends VaeSchema<T0> {
   constructor(

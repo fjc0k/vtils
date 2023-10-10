@@ -1,4 +1,4 @@
-import { PartialBy, RequiredBy } from '../types'
+import { Nullable, PartialBy, RequiredBy } from '../types'
 import { difference, intersection, isPlainObject, startsWith } from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema, VaeSchemaOf } from './VaeSchema'
@@ -8,7 +8,7 @@ export type VaeObjectSchemaShapeOf<T> = {
 }
 
 export class VaeObjectSchema<
-  T0 extends Record<any, any> | undefined = Record<any, any>,
+  T0 extends Nullable<Record<any, any>> = Record<any, any>,
   T extends NonNullable<T0> = NonNullable<T0>,
 > extends VaeSchema<T0> {
   constructor(

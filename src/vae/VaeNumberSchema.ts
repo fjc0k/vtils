@@ -1,9 +1,10 @@
+import { Nullable } from '../types'
 import { isInteger, isNumeric, toNumber } from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema } from './VaeSchema'
 
 export class VaeNumberSchema<
-  T0 extends number | undefined = number,
+  T0 extends Nullable<number> = number,
 > extends VaeSchema<T0> {
   constructor(message: VaeLocaleMessage = VaeLocale.number.type) {
     super({
