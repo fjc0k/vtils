@@ -78,6 +78,7 @@ export * from './IsEmptyArray'
 export * from './IsEmptyObject'
 export * from './IsNever'
 export * from './NonEmptyArray'
+export * from './Nullable'
 export * from './OneOrMore'
 export * from './Path'
 // @endindex
