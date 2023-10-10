@@ -361,7 +361,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { IsAny } from '../types'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { IsAny, Nullable } from '../types'
 import { VaeArraySchema, VaeArraySchemaElementOf } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeDateSchema } from './VaeDateSchema'
@@ -376,11 +376,11 @@ import { VaeObjectSchema, VaeObjectSchemaShapeOf } from './VaeObjectSchema'
 import { VaeSchema } from './VaeSchema'
 import { VaeStringSchema } from './VaeStringSchema'
 &nbsp;
-function string&lt;T extends string | undefined = string&gt;(
+function string&lt;T extends Nullable&lt;string&gt; = string&gt;(
   schema: (schema: VaeStringSchema&lt;T&gt;) =&gt; VaeStringSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeStringSchema&lt;T&gt;
-function string&lt;T extends string | undefined = string&gt;(
+function string&lt;T extends Nullable&lt;string&gt; = string&gt;(
   message?: VaeLocaleMessage,
 ): VaeStringSchema&lt;T&gt;
 function string(messageOrSchema: any, message?: any) {
@@ -389,11 +389,11 @@ function string(messageOrSchema: any, message?: any) {
     : new VaeStringSchema(messageOrSchema)
 }
 &nbsp;
-function number&lt;T extends number | undefined = number&gt;(
+function number&lt;T extends Nullable&lt;number&gt; = number&gt;(
   schema: (schema: VaeNumberSchema&lt;T&gt;) =&gt; VaeNumberSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeNumberSchema&lt;T&gt;
-function number&lt;T extends number | undefined = number&gt;(
+function number&lt;T extends Nullable&lt;number&gt; = number&gt;(
   message?: VaeLocaleMessage,
 ): VaeNumberSchema&lt;T&gt;
 function number(messageOrSchema: any, message?: any) {
@@ -402,11 +402,11 @@ function number(messageOrSchema: any, message?: any) {
     : new VaeNumberSchema(messageOrSchema)
 }
 &nbsp;
-function date&lt;T extends Date | undefined = Date&gt;(
+function date&lt;T extends Nullable&lt;Date&gt; = Date&gt;(
   schema: (schema: VaeDateSchema&lt;T&gt;) =&gt; VaeDateSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeDateSchema&lt;T&gt;
-function date&lt;T extends Date | undefined = Date&gt;(
+function date&lt;T extends Nullable&lt;Date&gt; = Date&gt;(
   message?: VaeLocaleMessage,
 ): VaeDateSchema&lt;T&gt;
 function date(messageOrSchema: any, message?: any) {
@@ -415,11 +415,11 @@ function date(messageOrSchema: any, message?: any) {
     : new VaeDateSchema(messageOrSchema)
 }
 &nbsp;
-function boolean&lt;T extends boolean | undefined = boolean&gt;(
+function boolean&lt;T extends Nullable&lt;boolean&gt; = boolean&gt;(
   schema: (schema: VaeBooleanSchema&lt;T&gt;) =&gt; VaeBooleanSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeBooleanSchema&lt;T&gt;
-function boolean&lt;T extends boolean | undefined = boolean&gt;(
+function boolean&lt;T extends Nullable&lt;boolean&gt; = boolean&gt;(
   message?: VaeLocaleMessage,
 ): VaeBooleanSchema&lt;T&gt;
 function boolean(messageOrSchema: any, message?: any) {
@@ -429,17 +429,17 @@ function boolean(messageOrSchema: any, message?: any) {
 }
 &nbsp;
 function object&lt;
-  T0 extends Record&lt;any, any&gt; | undefined = Record&lt;any, any&gt;,
+  T0 extends Record&lt;any, Nullable&lt;any&gt;&gt; = Record&lt;any, any&gt;,
   T extends NonNullable&lt;T0&gt; = NonNullable&lt;T0&gt;,
 &gt;(
   shape: VaeObjectSchemaShapeOf&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeObjectSchema&lt;IsAny&lt;keyof T0&gt; extends true ? T : T0&gt;
-function object&lt;T extends Record&lt;any, any&gt; | undefined = Record&lt;any, any&gt;&gt;(
+function object&lt;T extends Nullable&lt;Record&lt;any, any&gt;&gt; = Record&lt;any, any&gt;&gt;(
   schema: (schema: VaeObjectSchema&lt;T&gt;) =&gt; VaeObjectSchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeObjectSchema&lt;T&gt;
-function object&lt;T extends Record&lt;any, any&gt; | undefined = Record&lt;any, any&gt;&gt;(
+function object&lt;T extends Nullable&lt;Record&lt;any, any&gt;&gt; = Record&lt;any, any&gt;&gt;(
   message?: VaeLocaleMessage,
 ): VaeObjectSchema&lt;T&gt;
 function object(messageOrSchemaOrShape: any, message?: any) {
@@ -450,15 +450,15 @@ function object(messageOrSchemaOrShape: any, message?: any) {
     : <span class="branch-1 cbranch-no" title="branch not covered" >new VaeObjectSchema(undefined, messageOrSchemaOrShape)</span>
 }
 &nbsp;
-function array&lt;T extends unknown[] | undefined = unknown[]&gt;(
+function array&lt;T extends Nullable&lt;unknown[]&gt; = unknown[]&gt;(
   element: VaeArraySchemaElementOf&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeArraySchema&lt;T&gt;
-function array&lt;T extends unknown[] | undefined = unknown[]&gt;(
+function array&lt;T extends Nullable&lt;unknown[]&gt; = unknown[]&gt;(
   schema: (schema: VaeArraySchema&lt;T&gt;) =&gt; VaeArraySchema&lt;T&gt;,
   message?: VaeLocaleMessage,
 ): VaeArraySchema&lt;T&gt;
-function array&lt;T extends unknown[] | undefined = unknown[]&gt;(
+function array&lt;T extends Nullable&lt;unknown[]&gt; = unknown[]&gt;(
   message?: VaeLocaleMessage,
 ): VaeArraySchema&lt;T&gt;
 function array(messageOrSchemaOrElement: any, message?: any) {
@@ -520,7 +520,7 @@ export * from './VaeStringSchema'
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Oct 10 2023 03:25:41 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 10 2023 05:10:25 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
