@@ -1411,3 +1411,24 @@ Object {
   "success": true,
 }
 `;
+
+exports[`vae 综合2 1`] = `
+Object {
+  "data": Object {
+    "campus": undefined,
+    "class": undefined,
+    "college": undefined,
+    "companyName": undefined,
+    "gender": "male",
+    "grade": undefined,
+    "idNumber": undefined,
+    "identityId": 1,
+    "major": undefined,
+    "name": "成龙",
+    "school": undefined,
+    "studentNumber": undefined,
+    "userId": 1,
+  },
+  "success": true,
+}
+`;
