@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-export declare type VaeSchemaOf<T0, T = NonNullable<T0>> = [
+export declare type VaeSchemaOf<T0, T extends NonNullable<T0> = NonNullable<T0>> = [
 T
 ] extends [string] ? VaeStringSchema<T0> : [T] extends [number] ? VaeNumberSchema<T0> : [T] extends [boolean] ? VaeBooleanSchema<T0> : [T] extends [Date] ? VaeDateSchema<T0> : T extends any[] ? VaeArraySchema<T0> : VaeObjectSchema<T0>;
 ```
