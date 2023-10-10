@@ -1,3 +1,4 @@
+import { IsAny } from '../types'
 import { VaeArraySchema, VaeArraySchemaElementOf } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeDateSchema } from './VaeDateSchema'
@@ -64,10 +65,13 @@ function boolean(messageOrSchema: any, message?: any) {
     : new VaeBooleanSchema(messageOrSchema)
 }
 
-function object<T extends Record<any, any> | undefined = Record<any, any>>(
+function object<
+  T0 extends Record<any, any> | undefined = Record<any, any>,
+  T extends NonNullable<T0> = NonNullable<T0>,
+>(
   shape: VaeObjectSchemaShapeOf<T>,
   message?: VaeLocaleMessage,
-): VaeObjectSchema<T>
+): VaeObjectSchema<IsAny<keyof T0> extends true ? T : T0>
 function object<T extends Record<any, any> | undefined = Record<any, any>>(
   schema: (schema: VaeObjectSchema<T>) => VaeObjectSchema<T>,
   message?: VaeLocaleMessage,

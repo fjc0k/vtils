@@ -124,7 +124,7 @@ export type VaeSchemaParseResult<T> =
       issues: VaeIssue[]
     }
 
-export type VaeSchemaOf<T0, T = NonNullable<T0>> = // 为何要加 []
+export type VaeSchemaOf<T0, T extends NonNullable<T0> = NonNullable<T0>> = // 为何要加 []
   // https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
   [T] extends [string]
     ? // @ts-ignore
@@ -146,7 +146,7 @@ export type VaeSchemaOf<T0, T = NonNullable<T0>> = // 为何要加 []
 
 export abstract class VaeSchema<
   T0 extends any = any,
-  T extends any = NonNullable<T0>,
+  T extends NonNullable<T0> = NonNullable<T0>,
 > {
   protected _options!: RequiredBy<VaeSchemaOptions<T, any>, 'processors'>
 
@@ -239,6 +239,7 @@ export abstract class VaeSchema<
       }
     }
     const message = messageOrOptions.message || VaeLocale.base.custom
+    // @ts-ignore
     const path = messageOrOptions.path?.split('.')
     const tag = messageOrOptions.tag && `custom_${messageOrOptions.tag}`
     return this.check({

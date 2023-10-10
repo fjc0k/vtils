@@ -9,7 +9,7 @@ export type VaeObjectSchemaShapeOf<T> = {
 
 export class VaeObjectSchema<
   T0 extends Record<any, any> | undefined = Record<any, any>,
-  T extends Record<any, any> = NonNullable<T0>,
+  T extends NonNullable<T0> = NonNullable<T0>,
 > extends VaeSchema<T0> {
   constructor(
     shape?: VaeObjectSchemaShapeOf<T>,

@@ -8,7 +8,7 @@ export type VaeArraySchemaElementOf<T> = T extends Array<infer X>
 
 export class VaeArraySchema<
   T0 extends any[] | undefined = any[],
-  T extends any[] = NonNullable<T0>,
+  T extends NonNullable<T0> = NonNullable<T0>,
 > extends VaeSchema<T0> {
   constructor(
     element?: VaeArraySchemaElementOf<T>,
