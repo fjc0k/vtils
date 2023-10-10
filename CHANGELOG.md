@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.100.0](https://github.com/fjc0k/vtils/compare/v4.99.3...v4.100.0) (2023-10-10)
+
+### Features
+
+- **types:** 新增 Nullable ([9215f84](https://github.com/fjc0k/vtils/commit/9215f84df1d711403025cc213d9fef4da590137a))
+
+### Bug Fixes
+
+- **vae:** Nullable 应包含 null ([6c95644](https://github.com/fjc0k/vtils/commit/6c95644ede6fdda80a1d7c34a99acbebfe0955ce))
+
 ### [4.99.3](https://github.com/fjc0k/vtils/compare/v4.99.2...v4.99.3) (2023-10-10)
 
 ### [4.99.2](https://github.com/fjc0k/vtils/compare/v4.99.1...v4.99.2) (2023-10-10)
