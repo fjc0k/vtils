@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.101.0](https://github.com/fjc0k/vtils/compare/v4.100.0...v4.101.0) (2023-10-27)
+
+### Features
+
+- **vae:** object 新增 shapeOfFields 方法 ([7b0a95a](https://github.com/fjc0k/vtils/commit/7b0a95a9cadae69f73d45b49bb8b30a993127d7f))
+
 ## [4.100.0](https://github.com/fjc0k/vtils/compare/v4.99.3...v4.100.0) (2023-10-10)
 
 ### Features
