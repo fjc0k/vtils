@@ -837,4 +837,72 @@ describe('vae', () => {
       }),
     ).toMatchSnapshot()
   })
+
+  test('shapeOfFields', () => {
+    type Data = {
+      userId: number
+      gender?: 'male' | 'female' | 'unknown'
+      name: string
+      campus?: string
+      college?: string
+      identityId: number
+      grade?: number
+      school?: string
+      major?: string
+      class?: string
+      studentNumber?: string
+      idNumber?: string
+      companyName?: string
+    }
+    const _ = v
+    const schema: VaeSchemaOf<Data> = _.object({
+      userId: _.number().required().id(),
+      gender: _.string(),
+      name: _.string().required().max(20),
+      campus: _.string().max(20),
+      college: _.string().max(20),
+      identityId: _.number().required().id(),
+      grade: _.number().positiveInteger(),
+      school: _.string().max(20),
+      major: _.string().max(20),
+      class: _.string().max(20),
+      studentNumber: _.string().max(20),
+      idNumber: _.string().max(18).idCardNumber(),
+      companyName: _.string().max(50),
+    })
+    expect(
+      schema.parse({
+        name: '成龙',
+        identityId: 1,
+        userId: 1,
+        gender: 'male',
+      }),
+    ).toMatchSnapshot()
+
+    const schema2: VaeSchemaOf<Pick<Data, 'name' | 'gender'> & { id: number }> =
+      _.object({
+        id: _.number().required(),
+        ...schema.shapeOfFields(['name', 'gender']),
+      })
+    expect(
+      schema2.parse({
+        id: 1,
+        name: '成龙',
+        // @ts-expect-error
+        identityId: 1,
+        userId: 1,
+        gender: 'male',
+      }),
+    ).toMatchSnapshot()
+
+    const schema3: VaeSchemaOf<Data> = _.object(schema.shapeOfFields())
+    expect(
+      schema3.parse({
+        name: '成龙',
+        identityId: 1,
+        userId: 1,
+        gender: 'male',
+      }),
+    ).toMatchSnapshot()
+  })
 })

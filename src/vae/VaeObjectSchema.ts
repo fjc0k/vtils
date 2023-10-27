@@ -1,5 +1,11 @@
 import { Nullable, PartialBy, RequiredBy } from '../types'
-import { difference, intersection, isPlainObject, startsWith } from '../utils'
+import {
+  difference,
+  includes,
+  intersection,
+  isPlainObject,
+  startsWith,
+} from '../utils'
 import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema, VaeSchemaOf } from './VaeSchema'
 
@@ -46,7 +52,7 @@ export class VaeObjectSchema<
   pickFields<K extends keyof T>(keys: K[]): VaeObjectSchema<Pick<T, K>> {
     this._options.processors = this._options.processors.filter(item =>
       typeof item === 'object' && startsWith(item.tag, 'field_')
-        ? (keys as any).includes(item.path![0])
+        ? includes(keys as any, item.path![0])
         : true,
     )
     this._options.objectKeys = intersection(
@@ -59,7 +65,7 @@ export class VaeObjectSchema<
   omitFields<K extends keyof T>(keys: K[]): VaeObjectSchema<Omit<T, K>> {
     this._options.processors = this._options.processors.filter(item =>
       typeof item === 'object' && startsWith(item.tag, 'field_')
-        ? !(keys as any).includes(item.path![0])
+        ? !includes(keys as any, item.path![0])
         : true,
     )
     this._options.objectKeys = difference(this._options.objectKeys, keys as any)
@@ -73,7 +79,7 @@ export class VaeObjectSchema<
       if (
         typeof item === 'object' &&
         startsWith(item.tag, 'field_') &&
-        (keys ? (keys as any).includes(item.path![0]) : true)
+        (keys ? includes(keys as any, item.path![0]) : true)
       ) {
         ;(item.fn as VaeSchema).optional()
       }
@@ -90,11 +96,29 @@ export class VaeObjectSchema<
       if (
         typeof item === 'object' &&
         startsWith(item.tag, 'field_') &&
-        (keys ? (keys as any).includes(item.path![0]) : true)
+        (keys ? includes(keys as any, item.path![0]) : true)
       ) {
         ;(item.fn as VaeSchema).required()
       }
     })
     return this
+  }
+
+  shapeOfFields<K extends keyof T>(
+    keys: K[],
+  ): VaeObjectSchemaShapeOf<Pick<T, K>>
+  shapeOfFields(): VaeObjectSchemaShapeOf<T>
+  shapeOfFields(keys?: string[]) {
+    const shape: Record<any, any> = {}
+    this._options.processors.forEach(item => {
+      if (
+        typeof item === 'object' &&
+        startsWith(item.tag, 'field_') &&
+        (keys ? includes(keys as any, item.path![0]) : true)
+      ) {
+        shape[item.path![0]] = item.fn
+      }
+    })
+    return shape
   }
 }

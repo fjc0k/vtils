@@ -1078,6 +1078,59 @@ Object {
 }
 `;
 
+exports[`vae shapeOfFields 1`] = `
+Object {
+  "data": Object {
+    "campus": undefined,
+    "class": undefined,
+    "college": undefined,
+    "companyName": undefined,
+    "gender": "male",
+    "grade": undefined,
+    "idNumber": undefined,
+    "identityId": 1,
+    "major": undefined,
+    "name": "成龙",
+    "school": undefined,
+    "studentNumber": undefined,
+    "userId": 1,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae shapeOfFields 2`] = `
+Object {
+  "data": Object {
+    "gender": "male",
+    "id": 1,
+    "name": "成龙",
+  },
+  "success": true,
+}
+`;
+
+exports[`vae shapeOfFields 3`] = `
+Object {
+  "data": Object {
+    "campus": undefined,
+    "class": undefined,
+    "college": undefined,
+    "companyName": undefined,
+    "gender": "male",
+    "grade": undefined,
+    "idNumber": undefined,
+    "identityId": 1,
+    "major": undefined,
+    "name": "成龙",
+    "school": undefined,
+    "studentNumber": undefined,
+    "userId": 1,
+  },
+  "success": true,
+}
+`;
+
 exports[`vae string 1`] = `
 Object {
   "data": undefined,
