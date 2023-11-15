@@ -27,6 +27,7 @@ export declare class VaeObjectSchema<T0 extends Nullable<Record<any, any>> = Rec
 |  [pickFields(keys)](./vae.vaeobjectschema.pickfields.md) |  |  |
 |  [requiredFields(keys)](./vae.vaeobjectschema.requiredfields.md) |  |  |
 |  [requiredFields()](./vae.vaeobjectschema.requiredfields_1.md) |  |  |
+|  [requiredFieldsAtLeastOne(keys, message)](./vae.vaeobjectschema.requiredfieldsatleastone.md) |  |  |
 |  [shape(shape)](./vae.vaeobjectschema.shape.md) |  |  |
 |  [shapeOfFields(keys)](./vae.vaeobjectschema.shapeoffields.md) |  |  |
 |  [shapeOfFields()](./vae.vaeobjectschema.shapeoffields_1.md) |  |  |
