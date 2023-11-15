@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.102.0](https://github.com/fjc0k/vtils/compare/v4.101.0...v4.102.0) (2023-11-15)
+
+### Features
+
+- **utils:** 新增 desensitize 文本脱敏 ([e5d056f](https://github.com/fjc0k/vtils/commit/e5d056f31dc1d274593d62616b77b703ae328a8c))
+
 ## [4.101.0](https://github.com/fjc0k/vtils/compare/v4.100.0...v4.101.0) (2023-10-27)
 
 ### Features
