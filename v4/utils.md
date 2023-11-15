@@ -29,6 +29,7 @@ rich://{"url":"***","desc":"***"}
 
 |  Enumeration | Description |
 |  --- | --- |
+|  [DesensitizeStrategy](./utils.desensitizestrategy.md) |  |
 |  [LoadResourceUrlType](./utils.loadresourceurltype.md) | 资源类型。 |
 
 ## Functions
@@ -66,6 +67,7 @@ rich://{"url":"***","desc":"***"}
 |  [dedent(text)](./utils.dedent.md) | 移除每一行的公共前导空白。 |
 |  [dedent(literals, interpolations)](./utils.dedent_1.md) | 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。 然后，移除每一行的公共前导空白。 |
 |  [defaultIndexTo(index, defaultIndex)](./utils.defaultindexto.md) | 设置默认索引。当前索引为 <code>-1</code> 或 <code>NaN</code> 时会使用默认索引。 |
+|  [desensitize(text, options)](./utils.desensitize.md) | 文本脱敏。 |
 |  [formatBytes(value)](./utils.formatbytes.md) | 格式化字节数，以 1024 作为千字节数。 |
 |  [formatNumber(value, options)](./utils.formatnumber.md) | 格式化数字。 |
 |  [getCurrentScript()](./utils.getcurrentscript.md) | <p>返回当前正在运行的脚本所属的 <code>&lt;script&gt;</code> 元素。有两点限制：</p><p>- 只在脚本被解析后首次运行时有效； - 如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，会返回 <code>null</code>。</p> |
@@ -158,6 +160,7 @@ rich://{"url":"***","desc":"***"}
 |  [CopyTextToClipboardOptions](./utils.copytexttoclipboardoptions.md) |  |
 |  [CreateSubmitOptions](./utils.createsubmitoptions.md) |  |
 |  [CreateUrlQueryStringOptions](./utils.createurlquerystringoptions.md) |  |
+|  [DesensitizeOptions](./utils.desensitizeoptions.md) |  |
 |  [EventBusListenerDescriptor](./utils.eventbuslistenerdescriptor.md) |  |
 |  [EventBusOptions](./utils.eventbusoptions.md) |  |
 |  [FormatNumberOptions](./utils.formatnumberoptions.md) | 格式化数字选项。 |
