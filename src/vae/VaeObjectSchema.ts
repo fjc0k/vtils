@@ -1,6 +1,7 @@
 import { Nullable, PartialBy, RequiredBy } from '../types'
 import {
   difference,
+  find,
   includes,
   intersection,
   isPlainObject,
@@ -120,5 +121,45 @@ export class VaeObjectSchema<
       }
     })
     return shape
+  }
+
+  requiredFieldsAtLeastOne<K extends keyof T>(
+    keys: K[],
+    message: VaeLocaleMessage = VaeLocale.object.requiredFieldsAtLeastOne,
+  ) {
+    return this.check({
+      fn: (v: any) => {
+        for (const key of keys) {
+          if (v[key] == null) {
+            continue
+          }
+          if (v[key] === '') {
+            const schema: VaeSchema | undefined = find(
+              this._options.processors,
+              item =>
+                typeof item === 'object' &&
+                startsWith(item.tag, 'field_') &&
+                item.path![0] === key,
+            ) as any
+            if (!schema) {
+              continue
+            }
+            if (
+              schema.options.type === 'string' &&
+              !schema.options.stringEmptyable
+            ) {
+              continue
+            }
+          }
+          return true
+        }
+        return false
+      },
+      message: message,
+      messageParams: {
+        keys: keys,
+      },
+      tag: 'requiredFieldsAtLeastOne',
+    })
   }
 }

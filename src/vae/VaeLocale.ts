@@ -29,7 +29,7 @@ export type VaeLocaleShape = {
     | 'idCardNumber',
     VaeLocaleMessage
   >
-  object: Record<'type', VaeLocaleMessage>
+  object: Record<'type' | 'requiredFieldsAtLeastOne', VaeLocaleMessage>
   number: Record<
     | 'type'
     | 'min'
@@ -96,6 +96,10 @@ export class VaeLocaleBuilder {
 
       object: {
         type: payload => `${options.getLabel(payload)}应是对象类型`,
+        requiredFieldsAtLeastOne: payload =>
+          `${options.getLabel(
+            payload,
+          )}中至少有一个字段必填:${payload.params.keys.join(',')}`,
       },
 
       number: {

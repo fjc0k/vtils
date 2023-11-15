@@ -1034,6 +1034,81 @@ Object {
 }
 `;
 
+exports[`vae requiredFieldsAtLeastOne 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".中至少有一个字段必填:name,studentNumber,idNumber",
+      "path": Array [],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae requiredFieldsAtLeastOne 2`] = `
+Object {
+  "data": Object {
+    "campus": undefined,
+    "class": undefined,
+    "college": undefined,
+    "companyName": undefined,
+    "gender": "male",
+    "grade": undefined,
+    "idNumber": undefined,
+    "identityId": 1,
+    "major": undefined,
+    "name": "成龙",
+    "school": undefined,
+    "studentNumber": undefined,
+    "userId": 1,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae requiredFieldsAtLeastOne 3`] = `
+Object {
+  "data": Object {
+    "campus": undefined,
+    "class": undefined,
+    "college": undefined,
+    "companyName": undefined,
+    "gender": "male",
+    "grade": undefined,
+    "idNumber": undefined,
+    "identityId": 1,
+    "major": undefined,
+    "name": undefined,
+    "school": undefined,
+    "studentNumber": "11111",
+    "userId": 1,
+  },
+  "success": true,
+}
+`;
+
+exports[`vae requiredFieldsAtLeastOne 4`] = `
+Object {
+  "data": Object {
+    "campus": undefined,
+    "class": undefined,
+    "college": undefined,
+    "companyName": undefined,
+    "gender": "male",
+    "grade": undefined,
+    "idNumber": "220281197105291353",
+    "identityId": 1,
+    "major": undefined,
+    "name": undefined,
+    "school": undefined,
+    "studentNumber": undefined,
+    "userId": 1,
+  },
+  "success": true,
+}
+`;
+
 exports[`vae runtime 1`] = `
 Object {
   "data": Object {
