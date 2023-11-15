@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.103.0](https://github.com/fjc0k/vtils/compare/v4.102.0...v4.103.0) (2023-11-15)
+
+### Features
+
+- **vae:** object 新增 requiredFieldsAtLeastOne ([42a85c3](https://github.com/fjc0k/vtils/commit/42a85c352652b7b36188eb3573e8d8aab056e8be))
+
 ## [4.102.0](https://github.com/fjc0k/vtils/compare/v4.101.0...v4.102.0) (2023-11-15)
 
 ### Features
