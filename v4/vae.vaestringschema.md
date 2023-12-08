@@ -21,6 +21,8 @@ export declare class VaeStringSchema<T0 extends Nullable<string> = string> exten
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [cuid(message)](./vae.vaestringschema.cuid.md) |  |  |
+|  [cuid2(message)](./vae.vaestringschema.cuid2.md) |  |  |
 |  [email(message)](./vae.vaestringschema.email.md) |  |  |
 |  [emptyable()](./vae.vaestringschema.emptyable.md) |  |  |
 |  [endsWith(value, message)](./vae.vaestringschema.endswith.md) |  |  |

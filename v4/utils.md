@@ -89,6 +89,8 @@ rich://{"url":"***","desc":"***"}
 |  [inWechatWebView()](./utils.inwechatwebview.md) | 检查是否在微信内置浏览器中。 |
 |  [isBlobUrl(value)](./utils.isbloburl.md) | 检测传入值是否是 Blob URL，也称 Object URL。 |
 |  [isChineseIDCardNumber(value)](./utils.ischineseidcardnumber.md) | 检测传入的值是否是合法的中国大陆居民 <code>18</code> 位身份证号码。 |
+|  [isCuid(value)](./utils.iscuid.md) | 检测传入值是否是 Cuid。 |
+|  [isCuid2(value, options)](./utils.iscuid2.md) | 检测传入值是否是 Cuid2。 |
 |  [isDataUrl(value)](./utils.isdataurl.md) | 检测传入值是否是 Data URL。 |
 |  [isElementVisible(el)](./utils.iselementvisible.md) | 检查 HTML 元素是否可见。 |
 |  [isEmail(value)](./utils.isemail.md) | 检测传入值是否是邮箱地址。 |
@@ -169,6 +171,7 @@ rich://{"url":"***","desc":"***"}
 |  [GetEmailUrlOptions](./utils.getemailurloptions.md) |  |
 |  [GetEnvironmentResult](./utils.getenvironmentresult.md) |  |
 |  [GetSmsUrlOptions](./utils.getsmsurloptions.md) |  |
+|  [IsCuid2Options](./utils.iscuid2options.md) |  |
 |  [LoadCssResult](./utils.loadcssresult.md) |  |
 |  [LoadResourceOptions](./utils.loadresourceoptions.md) |  |
 |  [LoadResourceUrl](./utils.loadresourceurl.md) | 资源地址。 |
