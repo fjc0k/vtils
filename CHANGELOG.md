@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.104.0](https://github.com/fjc0k/vtils/compare/v4.103.0...v4.104.0) (2023-12-08)
+
+### Features
+
+- **utils:** 新增 isCuid ([0241337](https://github.com/fjc0k/vtils/commit/024133745f34f60c146ccf768a661df542f8c295))
+- **utils:** 新增 isCuid2 ([8bcca66](https://github.com/fjc0k/vtils/commit/8bcca66980fe9b6cbd31ac6980d10c8dc84102a9))
+- **vae:** 添加 cuid, cuid2 ([da62ff3](https://github.com/fjc0k/vtils/commit/da62ff3f5775eafcf73ed103e13dc88206ed31f8))
+- **x:** 新增 cuid2 ([c71997a](https://github.com/fjc0k/vtils/commit/c71997af14e0ee151aefe62512ba095c88666a1d))
+
 ## [4.103.0](https://github.com/fjc0k/vtils/compare/v4.102.0...v4.103.0) (2023-11-15)
 
 ### Features
