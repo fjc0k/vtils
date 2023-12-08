@@ -291,6 +291,50 @@ Object {
 }
 `;
 
+exports[`vae cuid, cuid2 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "cuid有误",
+      "path": Array [
+        "cuid",
+      ],
+    },
+    Object {
+      "message": "cuid2有误",
+      "path": Array [
+        "cuid2",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae cuid, cuid2 2`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "cuid2有误",
+      "path": Array [
+        "cuid2",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae cuid, cuid2 3`] = `
+Object {
+  "data": Object {
+    "cuid": "clpw4etzi0000sgrl4uki28fv",
+    "cuid2": "tz4a98xxat96iws9zmbrgj3a",
+  },
+  "success": true,
+}
+`;
+
 exports[`vae date 1`] = `
 Object {
   "data": undefined,

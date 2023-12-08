@@ -26,7 +26,9 @@ export type VaeLocaleShape = {
     | 'startsWith'
     | 'endsWith'
     | 'phoneNumber'
-    | 'idCardNumber',
+    | 'idCardNumber'
+    | 'cuid'
+    | 'cuid2',
     VaeLocaleMessage
   >
   object: Record<'type' | 'requiredFieldsAtLeastOne', VaeLocaleMessage>
@@ -92,6 +94,8 @@ export class VaeLocaleBuilder {
           `${options.getLabel(payload)}应是一个合法的手机号码`,
         idCardNumber: payload =>
           `${options.getLabel(payload)}应是一个合法的身份证号码`,
+        cuid: payload => `${options.getLabel(payload)}有误`,
+        cuid2: payload => `${options.getLabel(payload)}有误`,
       },
 
       object: {

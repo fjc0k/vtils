@@ -3,6 +3,8 @@ import {
   endsWith,
   includes,
   isChineseIDCardNumber,
+  isCuid,
+  isCuid2,
   isEmail,
   isPossibleChineseMobilePhoneNumber,
   isString,
@@ -145,6 +147,22 @@ export class VaeStringSchema<
       fn: isChineseIDCardNumber,
       message: message,
       tag: 'idCardNumber',
+    })
+  }
+
+  cuid(message: VaeLocaleMessage = VaeLocale.string.cuid) {
+    return this.check({
+      fn: isCuid,
+      message: message,
+      tag: 'cuid',
+    })
+  }
+
+  cuid2(message: VaeLocaleMessage = VaeLocale.string.cuid2) {
+    return this.check({
+      fn: isCuid2,
+      message: message,
+      tag: 'cuid2',
     })
   }
 

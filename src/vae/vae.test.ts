@@ -1,5 +1,5 @@
 import { RequiredDeep } from '../types'
-import { VaeSchemaOf, v } from './vae'
+import { VaeObjectSchema, VaeSchemaOf, v } from './vae'
 
 describe('vae', () => {
   test('string', () => {
@@ -983,6 +983,28 @@ describe('vae', () => {
           gender: 'male',
         },
       ),
+    ).toMatchSnapshot()
+  })
+
+  test('cuid, cuid2', () => {
+    const schema: VaeObjectSchema<{
+      cuid: string
+      cuid2: string
+    }> = v.create(_ =>
+      _.object({
+        cuid: _.string().cuid(),
+        cuid2: _.string().cuid2(),
+      }),
+    )
+    expect(schema.parse({ cuid: '1', cuid2: 'xxxxxx' })).toMatchSnapshot()
+    expect(
+      schema.parse({ cuid: 'clpw4etzi0000sgrl4uki28fv', cuid2: 'xxxxxx' }),
+    ).toMatchSnapshot()
+    expect(
+      schema.parse({
+        cuid: 'clpw4etzi0000sgrl4uki28fv',
+        cuid2: 'tz4a98xxat96iws9zmbrgj3a',
+      }),
     ).toMatchSnapshot()
   })
 })
