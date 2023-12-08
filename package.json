@@ -125,6 +125,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.18",
+    "@paralleldrive/cuid2": "^2.2.2",
     "@types/benchmark": "^2.1.0",
     "@types/ioredis": "^4.19.4",
     "@types/tough-cookie": "^4.0.0",

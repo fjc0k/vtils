@@ -9,6 +9,7 @@
 // @index(['./**/*.ts', '!./**/*.test.*', '!**/__*'], f => `export * from '${f.path}'`)
 export * from './createXml'
 export * from './cuid'
+export * from './cuid2'
 export * from './nanoid'
 export * from './parseXml'
 export * from './RedisCookieJar'
