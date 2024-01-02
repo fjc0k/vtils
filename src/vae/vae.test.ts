@@ -1007,4 +1007,18 @@ describe('vae', () => {
       }),
     ).toMatchSnapshot()
   })
+
+  test('true, false', () => {
+    const schema: VaeObjectSchema<{
+      true: boolean
+      false: boolean
+    }> = v.create(_ =>
+      _.object({
+        true: _.boolean().true(),
+        false: _.boolean().false(),
+      }),
+    )
+    expect(schema.parse({ true: false, false: true })).toMatchSnapshot()
+    expect(schema.parse({ true: true, false: false })).toMatchSnapshot()
+  })
 })

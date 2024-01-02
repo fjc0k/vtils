@@ -1511,6 +1511,36 @@ Object {
 }
 `;
 
+exports[`vae true, false 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "true应是真值",
+      "path": Array [
+        "true",
+      ],
+    },
+    Object {
+      "message": "false应是假值",
+      "path": Array [
+        "false",
+      ],
+    },
+  ],
+  "success": false,
+}
+`;
+
+exports[`vae true, false 2`] = `
+Object {
+  "data": Object {
+    "false": false,
+    "true": true,
+  },
+  "success": true,
+}
+`;
+
 exports[`vae x | undefined 1`] = `
 Object {
   "data": "test",

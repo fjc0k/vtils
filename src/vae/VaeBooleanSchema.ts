@@ -15,4 +15,20 @@ export class VaeBooleanSchema<
       message: message,
     })
   }
+
+  true(message: VaeLocaleMessage = VaeLocale.boolean.true) {
+    return this.check({
+      fn: v => v === true,
+      message: message,
+      tag: 'true',
+    })
+  }
+
+  false(message: VaeLocaleMessage = VaeLocale.boolean.false) {
+    return this.check({
+      fn: v => v === false,
+      message: message,
+      tag: 'false',
+    })
+  }
 }

@@ -46,7 +46,7 @@ export type VaeLocaleShape = {
     | 'positiveInteger',
     VaeLocaleMessage
   >
-  boolean: Record<'type', VaeLocaleMessage>
+  boolean: Record<'type' | 'true' | 'false', VaeLocaleMessage>
   array: Record<
     'type' | 'nonempty' | 'min' | 'max' | 'length',
     VaeLocaleMessage
@@ -127,6 +127,8 @@ export class VaeLocaleBuilder {
 
       boolean: {
         type: payload => `${options.getLabel(payload)}应是布尔类型`,
+        true: payload => `${options.getLabel(payload)}应是真值`,
+        false: payload => `${options.getLabel(payload)}应是假值`,
       },
 
       array: {
