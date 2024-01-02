@@ -13,7 +13,7 @@ VaeLocale: {
     string: Record<'type' | 'min' | 'max' | 'length' | 'email' | 'url' | 'regex' | 'includes' | 'startsWith' | 'endsWith' | 'phoneNumber' | 'idCardNumber' | 'cuid' | 'cuid2', VaeLocaleMessage>;
     object: Record<'type' | 'requiredFieldsAtLeastOne', VaeLocaleMessage>;
     number: Record<'type' | 'min' | 'max' | 'lessThan' | 'moreThan' | 'integer' | 'positive' | 'nonpositive' | 'negative' | 'nonnegative' | 'positiveInteger', VaeLocaleMessage>;
-    boolean: Record<'type', VaeLocaleMessage>;
+    boolean: Record<'type' | 'true' | 'false', VaeLocaleMessage>;
     array: Record<'type' | 'nonempty' | 'min' | 'max' | 'length', VaeLocaleMessage>;
     date: Record<'type' | 'min' | 'max', VaeLocaleMessage>;
 }

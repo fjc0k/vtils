@@ -17,3 +17,10 @@ export declare class VaeBooleanSchema<T0 extends Nullable<boolean> = boolean> ex
 |  --- | --- | --- |
 |  [(constructor)(message)](./vae.vaebooleanschema._constructor_.md) |  | Constructs a new instance of the <code>VaeBooleanSchema</code> class |
 
+## Methods
+
+|  Method | Modifiers | Description |
+|  --- | --- | --- |
+|  [false(message)](./vae.vaebooleanschema.false.md) |  |  |
+|  [true(message)](./vae.vaebooleanschema.true.md) |  |  |
+
