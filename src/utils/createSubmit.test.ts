@@ -42,4 +42,24 @@ describe('createSubmit', () => {
     } catch {}
     expect(error).toBe('hello')
   })
+
+  test('直接调用 success, fail', async () => {
+    const start = jest.fn()
+    const fail = jest.fn()
+    const success = jest.fn().mockImplementation(async () => 0)
+    const complete = jest.fn()
+
+    const submit = createSubmit({
+      start,
+      fail,
+      success,
+      complete,
+    })
+
+    await submit.fail('失败', 10)
+    await submit.success('成功', 20)
+
+    expect(fail).toBeCalled().toBeCalledTimes(1).toBeCalledWith('失败', 10)
+    expect(success).toBeCalled().toBeCalledTimes(1).toBeCalledWith('成功', 20)
+  })
 })

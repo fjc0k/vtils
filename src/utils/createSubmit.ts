@@ -62,9 +62,10 @@ export interface SubmitActionPayload<T = string> {
   success(message: T, duration?: number): Promise<any>
 }
 
-export type CreateSubmitResult<T = string> = <TResult>(
+export type CreateSubmitResult<T = string> = (<TResult>(
   action: (payload: SubmitActionPayload<T>) => Promise<TResult>,
-) => Promise<TResult>
+) => Promise<TResult>) &
+  Pick<SubmitActionPayload<T>, 'fail' | 'success'>
 
 /**
  * 创建提交类行为。
@@ -105,7 +106,7 @@ export function createSubmit<T>(
       )
     },
   }
-  return action => {
+  const res: CreateSubmitResult<T> = action => {
     return action(payload)
       .then(res => {
         return run(() => options.complete()).then(() => res)
@@ -117,4 +118,7 @@ export function createSubmit<T>(
         return Promise.reject(error)
       })
   }
+  res.success = payload.success
+  res.fail = payload.fail
+  return res
 }
