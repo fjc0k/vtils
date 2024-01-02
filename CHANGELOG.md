@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.105.0](https://github.com/fjc0k/vtils/compare/v4.104.0...v4.105.0) (2024-01-02)
+
+### Features
+
+- **createSubmit:** 可直接调用 success, fail ([3e2b16a](https://github.com/fjc0k/vtils/commit/3e2b16ae7d895179e705db187eaec2ad3381cab8))
+
 ## [4.104.0](https://github.com/fjc0k/vtils/compare/v4.103.0...v4.104.0) (2023-12-08)
 
 ### Features
