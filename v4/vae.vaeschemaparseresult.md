@@ -13,6 +13,7 @@ export declare type VaeSchemaParseResult<T> = {
 } | {
     success: false;
     issues: VaeIssue[];
+    message: string;
 };
 ```
 **References:** [VaeIssue](./vae.vaeissue.md)
