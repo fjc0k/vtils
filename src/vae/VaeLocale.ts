@@ -71,11 +71,11 @@ export class VaeLocaleBuilder {
       string: {
         type: payload => `${options.getLabel(payload)}应是字符串类型`,
         min: payload =>
-          `${options.getLabel(payload)}应至少包含${payload.params.min}位字符`,
+          `${options.getLabel(payload)}的长度最少应到${payload.params.min}位`,
         max: payload =>
-          `${options.getLabel(payload)}应最多包含${payload.params.max}位字符`,
+          `${options.getLabel(payload)}的长度最多可到${payload.params.max}位`,
         length: payload =>
-          `${options.getLabel(payload)}应仅包含${payload.params.length}位字符`,
+          `${options.getLabel(payload)}的长度应为${payload.params.length}位`,
         email: payload => `${options.getLabel(payload)}应是一个合法的邮箱`,
         url: payload => `${options.getLabel(payload)}应是一个合法的网址`,
         regex: payload =>

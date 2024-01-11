@@ -951,9 +951,9 @@ Object {
 }
 `;
 
-exports[`vae parseOrThrow 1`] = `".应至少包含3位字符"`;
+exports[`vae parseOrThrow 1`] = `".的长度最少应到3位"`;
 
-exports[`vae parseOrThrow 2`] = `"id应必填; name应至少包含3位字符"`;
+exports[`vae parseOrThrow 2`] = `"id应必填; name的长度最少应到3位"`;
 
 exports[`vae pickFields, omitFields 1`] = `
 Object {
@@ -1320,7 +1320,7 @@ exports[`vae string 9`] = `
 Object {
   "issues": Array [
     Object {
-      "message": ".应至少包含6位字符",
+      "message": ".的长度最少应到6位",
       "path": Array [],
     },
   ],
@@ -1332,7 +1332,7 @@ exports[`vae string 10`] = `
 Object {
   "issues": Array [
     Object {
-      "message": ".应最多包含2位字符",
+      "message": ".的长度最多可到2位",
       "path": Array [],
     },
   ],
@@ -1344,7 +1344,7 @@ exports[`vae string 11`] = `
 Object {
   "issues": Array [
     Object {
-      "message": ".应仅包含3位字符",
+      "message": ".的长度应为3位",
       "path": Array [],
     },
   ],
@@ -1559,7 +1559,7 @@ exports[`vae 可覆盖定义 1`] = `
 Object {
   "issues": Array [
     Object {
-      "message": ".应至少包含3位字符",
+      "message": ".的长度最少应到3位",
       "path": Array [],
     },
   ],
