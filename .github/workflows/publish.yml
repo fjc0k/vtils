@@ -36,21 +36,7 @@ jobs:
             npm run publish-package
           fi
 
-          curl 'https://npm.taobao.org/sync/vtils?sync_upstream=true' \
-            -X 'PUT' \
-            -H 'authority: npm.taobao.org' \
-            -H 'content-length: 0' \
-            -H 'accept: application/json, text/javascript, */*; q=0.01' \
-            -H 'dnt: 1' \
-            -H 'x-requested-with: XMLHttpRequest' \
-            -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' \
-            -H 'origin: https://npm.taobao.org' \
-            -H 'sec-fetch-site: same-origin' \
-            -H 'sec-fetch-mode: cors' \
-            -H 'sec-fetch-dest: empty' \
-            -H 'referer: https://npm.taobao.org/sync/vtils' \
-            -H 'accept-language: zh,en-US;q=0.9,en;q=0.8,zh-TW;q=0.7,zh-CN;q=0.6' \
-            --compressed || true
+          npx --package=tbify tsync vtils
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           IS_BETA: ${{ contains(github.event.head_commit.message, 'beta') }}
