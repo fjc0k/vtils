@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.107.0](https://github.com/fjc0k/vtils/compare/v4.106.0...v4.107.0) (2024-01-11)
+
+### Features
+
+- **vae:** parse 失败时返回 message ([866901c](https://github.com/fjc0k/vtils/commit/866901c4ff46c2c14bd9b6b4a3d4f356e053e7b2))
+
+### Bug Fixes
+
+- **vae:** 优化 string.{min,max,length} 的文案 ([600c7ba](https://github.com/fjc0k/vtils/commit/600c7ba2239280c1c942499ffd80623d8a0658de))
+
 ## [4.106.0](https://github.com/fjc0k/vtils/compare/v4.105.0...v4.106.0) (2024-01-02)
 
 ### Features
