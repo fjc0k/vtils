@@ -16,6 +16,7 @@ Object {
       ],
     },
   ],
+  "message": "id应必填",
   "success": false,
 }
 `;
@@ -30,6 +31,7 @@ Object {
       ],
     },
   ],
+  "message": "id应必填",
   "success": false,
 }
 `;
@@ -52,6 +54,7 @@ Object {
       ],
     },
   ],
+  "message": "images.1应是一个合法的网址",
   "success": false,
 }
 `;
@@ -67,6 +70,7 @@ Object {
       ],
     },
   ],
+  "message": "images.1应是一个合法的网址",
   "success": false,
 }
 `;
@@ -89,6 +93,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应至少包含3个元素",
   "success": false,
 }
 `;
@@ -125,6 +130,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应必填",
   "success": false,
 }
 `;
@@ -179,6 +185,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": "密码2应等于密码1",
   "success": false,
 }
 `;
@@ -203,6 +210,7 @@ Object {
       ],
     },
   ],
+  "message": "密码2应等于密码1",
   "success": false,
 }
 `;
@@ -252,6 +260,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应必填",
   "success": false,
 }
 `;
@@ -271,6 +280,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应必填",
   "success": false,
 }
 `;
@@ -307,6 +317,7 @@ Object {
       ],
     },
   ],
+  "message": "cuid有误",
   "success": false,
 }
 `;
@@ -321,6 +332,7 @@ Object {
       ],
     },
   ],
+  "message": "cuid2有误",
   "success": false,
 }
 `;
@@ -350,6 +362,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是日期类型",
   "success": false,
 }
 `;
@@ -362,6 +375,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应必填",
   "success": false,
 }
 `;
@@ -395,6 +409,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": "应大于等于给定日期",
   "success": false,
 }
 `;
@@ -407,6 +422,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": "应小于等于给定日期",
   "success": false,
 }
 `;
@@ -440,6 +456,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是数值类型",
   "success": false,
 }
 `;
@@ -466,6 +483,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应必填",
   "success": false,
 }
 `;
@@ -485,6 +503,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是数值类型",
   "success": false,
 }
 `;
@@ -504,6 +523,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应大于或等于6",
   "success": false,
 }
 `;
@@ -530,6 +550,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应大于2",
   "success": false,
 }
 `;
@@ -556,6 +577,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个整数",
   "success": false,
 }
 `;
@@ -589,6 +611,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个正数",
   "success": false,
 }
 `;
@@ -601,6 +624,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个正数",
   "success": false,
 }
 `;
@@ -613,6 +637,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个非正数",
   "success": false,
 }
 `;
@@ -625,6 +650,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个非正数",
   "success": false,
 }
 `;
@@ -651,6 +677,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个负数",
   "success": false,
 }
 `;
@@ -663,6 +690,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个负数",
   "success": false,
 }
 `;
@@ -682,6 +710,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个负数",
   "success": false,
 }
 `;
@@ -708,6 +737,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个非负数",
   "success": false,
 }
 `;
@@ -734,6 +764,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个正整数",
   "success": false,
 }
 `;
@@ -746,6 +777,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个正整数",
   "success": false,
 }
 `;
@@ -758,6 +790,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个正整数",
   "success": false,
 }
 `;
@@ -777,6 +810,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个正整数",
   "success": false,
 }
 `;
@@ -789,6 +823,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个正整数",
   "success": false,
 }
 `;
@@ -801,6 +836,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个正整数",
   "success": false,
 }
 `;
@@ -821,6 +857,7 @@ Object {
       ],
     },
   ],
+  "message": "name应必填",
   "success": false,
 }
 `;
@@ -835,6 +872,7 @@ Object {
       ],
     },
   ],
+  "message": "gender应必填",
   "success": false,
 }
 `;
@@ -863,6 +901,7 @@ Object {
       ],
     },
   ],
+  "message": "images.0应必填",
   "success": false,
 }
 `;
@@ -875,6 +914,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应必填",
   "success": false,
 }
 `;
@@ -913,6 +953,7 @@ Object {
       ],
     },
   ],
+  "message": "name应必填",
   "success": false,
 }
 `;
@@ -937,6 +978,7 @@ Object {
       ],
     },
   ],
+  "message": "name应必填",
   "success": false,
 }
 `;
@@ -1043,6 +1085,7 @@ Object {
       ],
     },
   ],
+  "message": "id应是一个正整数",
   "success": false,
 }
 `;
@@ -1062,6 +1105,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是下列值之一:0,1",
   "success": false,
 }
 `;
@@ -1074,6 +1118,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是字符串类型",
   "success": false,
 }
 `;
@@ -1086,6 +1131,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".中至少有一个字段必填:name,studentNumber,idNumber",
   "success": false,
 }
 `;
@@ -1183,6 +1229,7 @@ Object {
       ],
     },
   ],
+  "message": "name应必填",
   "success": false,
 }
 `;
@@ -1279,6 +1326,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应必填",
   "success": false,
 }
 `;
@@ -1298,6 +1346,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应必填",
   "success": false,
 }
 `;
@@ -1324,6 +1373,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".的长度最少应到6位",
   "success": false,
 }
 `;
@@ -1336,6 +1386,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".的长度最多可到2位",
   "success": false,
 }
 `;
@@ -1348,6 +1399,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".的长度应为3位",
   "success": false,
 }
 `;
@@ -1360,6 +1412,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个合法的邮箱",
   "success": false,
 }
 `;
@@ -1379,6 +1432,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个合法的网址",
   "success": false,
 }
 `;
@@ -1398,6 +1452,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应满足正则表达式/^\\\\d+$/",
   "success": false,
 }
 `;
@@ -1417,6 +1472,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应包含字符串dd",
   "success": false,
 }
 `;
@@ -1436,6 +1492,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应以字符串dd开头",
   "success": false,
 }
 `;
@@ -1455,6 +1512,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应以字符串dd结尾",
   "success": false,
 }
 `;
@@ -1474,6 +1532,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个合法的手机号码",
   "success": false,
 }
 `;
@@ -1493,6 +1552,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应是一个合法的身份证号码",
   "success": false,
 }
 `;
@@ -1527,6 +1587,7 @@ Object {
       ],
     },
   ],
+  "message": "true应是真值",
   "success": false,
 }
 `;
@@ -1563,6 +1624,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".的长度最少应到3位",
   "success": false,
 }
 `;
@@ -1582,6 +1644,7 @@ Object {
       "path": Array [],
     },
   ],
+  "message": ".应小于或等于3",
   "success": false,
 }
 `;

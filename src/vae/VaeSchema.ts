@@ -122,6 +122,7 @@ export type VaeSchemaParseResult<T> =
   | {
       success: false
       issues: VaeIssue[]
+      message: string
     }
 
 export type VaeSchemaOf<T0, T extends NonNullable<T0> = NonNullable<T0>> = // 为何要加 []
@@ -423,6 +424,7 @@ export abstract class VaeSchema<
                     return {
                       success: false,
                       issues: ctx.issues,
+                      message: ctx.issues[0].message,
                     }
                   }
                 }
@@ -441,6 +443,7 @@ export abstract class VaeSchema<
                 return {
                   success: false,
                   issues: ctx.issues,
+                  message: ctx.issues[0].message,
                 }
               }
             }
@@ -484,6 +487,7 @@ export abstract class VaeSchema<
               return {
                 success: false,
                 issues: ctx.issues,
+                message: ctx.issues[0].message,
               }
             }
           }
@@ -498,6 +502,7 @@ export abstract class VaeSchema<
       return {
         success: false,
         issues: ctx.issues,
+        message: ctx.issues[0].message,
       }
     }
     return {
