@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.108.0](https://github.com/fjc0k/vtils/compare/v4.107.0...v4.108.0) (2024-01-18)
+
+### Features
+
+- **createSubmit:** 引入 id 唯一标识 ([93a37c0](https://github.com/fjc0k/vtils/commit/93a37c05b70981a290505b8ffb582b8cb8980e73))
+
 ## [4.107.0](https://github.com/fjc0k/vtils/compare/v4.106.0...v4.107.0) (2024-01-11)
 
 ### Features
