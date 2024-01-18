@@ -20,10 +20,27 @@ describe('createSubmit', () => {
       await _.success('成功', 20)
     })
 
-    expect(start).toBeCalled().toBeCalledTimes(1).toBeCalledWith('开始')
-    expect(fail).toBeCalled().toBeCalledTimes(1).toBeCalledWith('失败', 10)
-    expect(success).toBeCalled().toBeCalledTimes(1).toBeCalledWith('成功', 20)
-    expect(complete).toBeCalled().toBeCalledTimes(1)
+    expect(start).toBeCalled().toBeCalledTimes(1).toBeCalledWith('开始', 1)
+    expect(fail).toBeCalled().toBeCalledTimes(1).toBeCalledWith('失败', 10, 1)
+    expect(success)
+      .toBeCalled()
+      .toBeCalledTimes(1)
+      .toBeCalledWith('成功', 20, 1)
+    expect(complete).toBeCalled().toBeCalledWith(1).toBeCalledTimes(1)
+
+    await submit(async _ => {
+      await _.start('开始')
+      await _.fail('失败', 10)
+      await _.success('成功', 20)
+    })
+
+    expect(start).toBeCalled().toBeCalledTimes(2).toBeCalledWith('开始', 2)
+    expect(fail).toBeCalled().toBeCalledTimes(2).toBeCalledWith('失败', 10, 2)
+    expect(success)
+      .toBeCalled()
+      .toBeCalledTimes(2)
+      .toBeCalledWith('成功', 20, 2)
+    expect(complete).toBeCalled().toBeCalledWith(2).toBeCalledTimes(2)
   })
 
   test('异常回调', async () => {
@@ -59,7 +76,10 @@ describe('createSubmit', () => {
     await submit.fail('失败', 10)
     await submit.success('成功', 20)
 
-    expect(fail).toBeCalled().toBeCalledTimes(1).toBeCalledWith('失败', 10)
-    expect(success).toBeCalled().toBeCalledTimes(1).toBeCalledWith('成功', 20)
+    expect(fail).toBeCalled().toBeCalledTimes(1).toBeCalledWith('失败', 10, 0)
+    expect(success)
+      .toBeCalled()
+      .toBeCalledTimes(1)
+      .toBeCalledWith('成功', 20, 0)
   })
 })
