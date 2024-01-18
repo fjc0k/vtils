@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>20/20</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>14/14</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>15/15</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
@@ -181,7 +181,11 @@
 <a name='L122'></a><a href='#L122'>122</a>
 <a name='L123'></a><a href='#L123'>123</a>
 <a name='L124'></a><a href='#L124'>124</a>
-<a name='L125'></a><a href='#L125'>125</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -250,6 +254,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -271,29 +276,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -301,6 +308,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
@@ -315,7 +323,7 @@ export interface CreateSubmitOptions&lt;T = string&gt; {
    *
    * @param message 提示信息
    */
-  start(message?: T): AsyncOrSync&lt;any&gt;
+  start(message: T | undefined, id: number): AsyncOrSync&lt;any&gt;
 &nbsp;
   /**
    * 失败回调。
@@ -323,7 +331,7 @@ export interface CreateSubmitOptions&lt;T = string&gt; {
    * @param message 提示信息
    * @param duration 持续时间（毫秒）
    */
-  fail(message: T, duration: number): AsyncOrSync&lt;any&gt;
+  fail(message: T, duration: number, id: number): AsyncOrSync&lt;any&gt;
 &nbsp;
   /**
    * 成功回调。
@@ -331,17 +339,17 @@ export interface CreateSubmitOptions&lt;T = string&gt; {
    * @param message 提示信息
    * @param duration 持续时间（毫秒）
    */
-  success(message: T, duration: number): AsyncOrSync&lt;any&gt;
+  success(message: T, duration: number, id: number): AsyncOrSync&lt;any&gt;
 &nbsp;
   /**
    * 完成回调。
    */
-  complete(): AsyncOrSync&lt;any&gt;
+  complete(id: number): AsyncOrSync&lt;any&gt;
 &nbsp;
   /**
    * 异常回调。
    */
-  throw?(error: unknown): AsyncOrSync&lt;any&gt;
+  throw?(error: unknown, id: number): AsyncOrSync&lt;any&gt;
 }
 &nbsp;
 export interface SubmitActionPayload&lt;T = string&gt; {
@@ -374,6 +382,8 @@ export type CreateSubmitResult&lt;T = string&gt; = (&lt;TResult&gt;(
 ) =&gt; Promise&lt;TResult&gt;) &amp;
   Pick&lt;SubmitActionPayload&lt;T&gt;, 'fail' | 'success'&gt;
 &nbsp;
+let idCounter = 1
+&nbsp;
 /**
  * 创建提交类行为。
  *
@@ -398,35 +408,37 @@ export function createSubmit&lt;T&gt;(
 export function createSubmit&lt;T&gt;(
   options: CreateSubmitOptions&lt;T&gt;,
 ): CreateSubmitResult&lt;T&gt; {
-  const payload: SubmitActionPayload&lt;T&gt; = {
+  const getPayload = (id: number): SubmitActionPayload&lt;T&gt; =&gt; ({
     start(message) {
-      return run(() =&gt; options.start(message))
+      return run(() =&gt; options.start(message, id))
     },
     fail(message, duration = 1500) {
-      return run(() =&gt; options.fail(message, duration)).then(() =&gt;
+      return run(() =&gt; options.fail(message, duration, id)).then(() =&gt;
         wait(duration),
       )
     },
     success(message, duration = 1500) {
-      return run(() =&gt; options.success(message, duration)).then(() =&gt;
+      return run(() =&gt; options.success(message, duration, id)).then(() =&gt;
         wait(duration),
       )
     },
-  }
+  })
   const res: CreateSubmitResult&lt;T&gt; = action =&gt; {
-    return action(payload)
+    const id = idCounter++
+    return action(getPayload(id))
       .then(res =&gt; {
-        return run(() =&gt; options.complete()).then(() =&gt; res)
+        return run(() =&gt; options.complete(id)).then(() =&gt; res)
       })
       .catch((error: unknown) =&gt; {
         <span class="missing-if-branch" title="else path not taken" >E</span>if (options.throw) {
-          options.throw(error)
+          options.throw(error, id)
         }
         return Promise.reject(error)
       })
   }
-  res.success = payload.success
-  res.fail = payload.fail
+  const globalAction = getPayload(0)
+  res.success = globalAction.success
+  res.fail = globalAction.fail
   return res
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -436,7 +448,7 @@ export function createSubmit&lt;T&gt;(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jan 11 2024 05:45:20 GMT+0000 (Coordinated Universal Time)
+                at Thu Jan 18 2024 04:54:50 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
