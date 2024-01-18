@@ -9,8 +9,15 @@
 **Signature:**
 
 ```typescript
-complete(): AsyncOrSync<any>;
+complete(id: number): AsyncOrSync<any>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  id | number |  |
+
 **Returns:**
 
 AsyncOrSync&lt;any&gt;

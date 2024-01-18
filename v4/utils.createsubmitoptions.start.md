@@ -9,14 +9,15 @@
 **Signature:**
 
 ```typescript
-start(message?: T): AsyncOrSync<any>;
+start(message: T | undefined, id: number): AsyncOrSync<any>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  message | T | _(Optional)_ 提示信息 |
+|  message | T \| undefined | 提示信息 |
+|  id | number |  |
 
 **Returns:**
 

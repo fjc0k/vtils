@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-success(message: T, duration: number): AsyncOrSync<any>;
+success(message: T, duration: number, id: number): AsyncOrSync<any>;
 ```
 
 ## Parameters
@@ -18,6 +18,7 @@ success(message: T, duration: number): AsyncOrSync<any>;
 |  --- | --- | --- |
 |  message | T | 提示信息 |
 |  duration | number | 持续时间（毫秒） |
+|  id | number |  |
 
 **Returns:**
 

@@ -14,9 +14,9 @@ export declare interface CreateSubmitOptions<T = string>
 
 |  Method | Description |
 |  --- | --- |
-|  [complete()](./utils.createsubmitoptions.complete.md) | 完成回调。 |
-|  [fail(message, duration)](./utils.createsubmitoptions.fail.md) | 失败回调。 |
-|  [start(message)](./utils.createsubmitoptions.start.md) | 开始回调。 |
-|  [success(message, duration)](./utils.createsubmitoptions.success.md) | 成功回调。 |
-|  [throw(error)?](./utils.createsubmitoptions.throw.md) | _(Optional)_ 异常回调。 |
+|  [complete(id)](./utils.createsubmitoptions.complete.md) | 完成回调。 |
+|  [fail(message, duration, id)](./utils.createsubmitoptions.fail.md) | 失败回调。 |
+|  [start(message, id)](./utils.createsubmitoptions.start.md) | 开始回调。 |
+|  [success(message, duration, id)](./utils.createsubmitoptions.success.md) | 成功回调。 |
+|  [throw(error, id)?](./utils.createsubmitoptions.throw.md) | _(Optional)_ 异常回调。 |
 

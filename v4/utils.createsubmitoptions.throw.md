@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-throw?(error: unknown): AsyncOrSync<any>;
+throw?(error: unknown, id: number): AsyncOrSync<any>;
 ```
 
 ## Parameters
@@ -17,6 +17,7 @@ throw?(error: unknown): AsyncOrSync<any>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  error | unknown |  |
+|  id | number |  |
 
 **Returns:**
 
