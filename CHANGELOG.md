@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.109.0](https://github.com/fjc0k/vtils/compare/v4.108.0...v4.109.0) (2024-01-20)
+
+### Features
+
+- **utils:** 新增 inMiniProgramWebView ([d7360a0](https://github.com/fjc0k/vtils/commit/d7360a035ad5f3674f98e429353823fe5de4ad61))
+
 ## [4.108.0](https://github.com/fjc0k/vtils/compare/v4.107.0...v4.108.0) (2024-01-18)
 
 ### Features
