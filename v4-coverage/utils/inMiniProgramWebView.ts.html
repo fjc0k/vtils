@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for utils/jsonp.ts</title>
+    <title>Code coverage report for utils/inMiniProgramWebView.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> jsonp.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> inMiniProgramWebView.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/10</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
                 <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>5/5</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -81,68 +81,53 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">23x</span>
+<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { loadResource, LoadResourceUrlType } from './loadResource'
-&nbsp;
-let i = 0
-&nbsp;
-/**
- * 发起 jsonp 请求。
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * 检查是否在小程序 WebView 中。
  *
- * @param url 请求地址
- * @param keyOfCallbackName 回调函数名的键
+ * 仅支持微信、QQ、支付宝、抖音、百度。
  */
-export function jsonp&lt;T&gt;(
-  url: string,
-  keyOfCallbackName = 'callback',
-): Promise&lt;T&gt; {
-  return new Promise&lt;T&gt;((resolve, reject) =&gt; {
-    const callbackName = `__vtils_jsonp_callbacks__${i++}`
-    ;(window as any)[callbackName] = (result: T) =&gt; {
-      resolve(result)
-      delete (window as any)[callbackName]
-    }
-    const _url = new URL(url)
-    _url.searchParams.set(keyOfCallbackName, callbackName)
-    url = _url.toString()
-    loadResource({
-      path: url,
-      type: LoadResourceUrlType.js,
-    }).catch(reject)
-  })
+export function inMiniProgramWebView(): boolean {
+  const ua = navigator.userAgent.toLowerCase()
+&nbsp;
+  const res =
+    // 微信 https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html#%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3-4
+    (window as any).__wxjs_environment === 'miniprogram' ||
+    // QQ https://q.qq.com/wiki/develop/miniprogram/component/open-ability/web-view.html#%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3-4
+    (window as any).__qqjs_environment === 'miniprogram' ||
+    // 微信 https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html#%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3-5
+    // QQ https://q.qq.com/wiki/develop/miniprogram/component/open-ability/web-view.html#%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3-5
+    // 支付宝 https://opendocs.alipay.com/mini/component/web-view#%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E
+    !!~ua.indexOf('miniprogram') ||
+    // 抖音 https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/component/open-capacity/web-view#%E7%8E%AF%E5%A2%83%E5%88%A4%E6%96%AD%E7%A4%BA%E4%BE%8B
+    !!~ua.indexOf('toutiaomicroapp') ||
+    // 百度
+    !!~ua.indexOf('swan')
+&nbsp;
+  return res
 }
 &nbsp;</pre></td></tr></table></pre>
 
