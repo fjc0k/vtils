@@ -1,6 +1,7 @@
 import fs from 'fs-extra'
 import { defineBabelPlugin, getCompileConfig } from 'haoma'
 import pa from 'path'
+import { FirstParameter } from './src/types'
 
 const removeIsTypePlugin = defineBabelPlugin(t => ({
   visitor: {
@@ -29,26 +30,30 @@ const removeIsTypePlugin = defineBabelPlugin(t => ({
   },
 }))
 
-const addExtensionPlugin = defineBabelPlugin(() => ({
-  visitor: {
-    ImportDeclaration: {
-      exit(path, { filename }) {
-        const modulePath = path.node.source.value
-        if (modulePath.startsWith('.')) {
-          for (const ext of ['.ts', '/index.ts', '.js', '/index.js']) {
-            const modulePathWithExt = modulePath + ext
-            const resolvedPath = pa.join(
-              pa.dirname(filename),
-              modulePathWithExt,
-            )
-            if (fs.pathExistsSync(resolvedPath)) {
-              path.node.source.value = modulePathWithExt.replace(/\.ts$/, '.js')
-              break
-            }
+const addExtension: ReturnType<
+  FirstParameter<typeof defineBabelPlugin>
+>['visitor']['ImportDeclaration'] = {
+  exit(path, { filename }) {
+    if (path.node.source) {
+      const modulePath = path.node.source.value
+      if (modulePath.startsWith('.')) {
+        for (const ext of ['.ts', '/index.ts', '.js', '/index.js']) {
+          const modulePathWithExt = modulePath + ext
+          const resolvedPath = pa.join(pa.dirname(filename), modulePathWithExt)
+          if (fs.pathExistsSync(resolvedPath)) {
+            path.node.source.value = modulePathWithExt.replace(/\.ts$/, '.js')
+            break
           }
         }
-      },
-    },
+      }
+    }
+  },
+}
+const addExtensionPlugin = defineBabelPlugin(() => ({
+  visitor: {
+    ImportDeclaration: addExtension,
+    ExportAllDeclaration: addExtension as any,
+    ExportNamedDeclaration: addExtension as any,
   },
 }))
 
