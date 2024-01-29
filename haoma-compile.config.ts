@@ -1,4 +1,6 @@
+import fs from 'fs-extra'
 import { defineBabelPlugin, getCompileConfig } from 'haoma'
+import pa from 'path'
 
 const removeIsTypePlugin = defineBabelPlugin(t => ({
   visitor: {
@@ -27,6 +29,29 @@ const removeIsTypePlugin = defineBabelPlugin(t => ({
   },
 }))
 
+const addExtensionPlugin = defineBabelPlugin(() => ({
+  visitor: {
+    ImportDeclaration: {
+      exit(path, { filename }) {
+        const modulePath = path.node.source.value
+        if (modulePath.startsWith('.')) {
+          for (const ext of ['.ts', '/index.ts', '.js', '/index.js']) {
+            const modulePathWithExt = modulePath + ext
+            const resolvedPath = pa.join(
+              pa.dirname(filename),
+              modulePathWithExt,
+            )
+            if (fs.pathExistsSync(resolvedPath)) {
+              path.node.source.value = modulePathWithExt.replace(/\.ts$/, '.js')
+              break
+            }
+          }
+        }
+      },
+    },
+  },
+}))
+
 export default [
   getCompileConfig({
     name: 'esm',
@@ -39,7 +64,7 @@ export default [
     rollupDtsFiles: ['**/index.d.ts'],
     rollupDtsExcludeFiles: ['**/validator/**'],
     rollupDtsIncludedPackages: ['type-fest', 'ts-essentials'],
-    plugins: [removeIsTypePlugin],
+    plugins: [removeIsTypePlugin, addExtensionPlugin],
   }),
   getCompileConfig({
     name: 'cjs',
