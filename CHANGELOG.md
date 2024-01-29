@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.110.1](https://github.com/fjc0k/vtils/compare/v4.110.0...v4.110.1) (2024-01-29)
+
+### Bug Fixes
+
+- 修复 export 没加上 .js 后缀的问题 ([4137558](https://github.com/fjc0k/vtils/commit/4137558ea338bca79bc4600445c9991260ce4d85))
+
 ## [4.110.0](https://github.com/fjc0k/vtils/compare/v4.109.0...v4.110.0) (2024-01-29)
 
 ### Features
