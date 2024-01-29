@@ -6,337 +6,244 @@
 
 /* istanbul ignore file */
 
-// prettier-ignore
-export {
-  // 手动导出以解决 @microsoft/api-extractor 的问题
-  // @index(['../../node_modules/date-fns/esm/*', '!**/{_*,locale,constants,fp}'], (f, _) => `${f.name.replace(/-/g, '')},`, { onlyDirectories: true })
-  add,
-  addBusinessDays,
-  addDays,
-  addHours,
-  addISOWeekYears,
-  addMilliseconds,
-  addMinutes,
-  addMonths,
-  addQuarters,
-  addSeconds,
-  addWeeks,
-  addYears,
-  areIntervalsOverlapping,
-  clamp,
-  closestIndexTo,
-  closestTo,
-  compareAsc,
-  compareDesc,
-  daysToWeeks,
-  differenceInBusinessDays,
-  differenceInCalendarDays,
-  differenceInCalendarISOWeeks,
-  differenceInCalendarISOWeekYears,
-  differenceInCalendarMonths,
-  differenceInCalendarQuarters,
-  differenceInCalendarWeeks,
-  differenceInCalendarYears,
-  differenceInDays,
-  differenceInHours,
-  differenceInISOWeekYears,
-  differenceInMilliseconds,
-  differenceInMinutes,
-  differenceInMonths,
-  differenceInQuarters,
-  differenceInSeconds,
-  differenceInWeeks,
-  differenceInYears,
-  eachDayOfInterval,
-  eachHourOfInterval,
-  eachMinuteOfInterval,
-  eachMonthOfInterval,
-  eachQuarterOfInterval,
-  eachWeekendOfInterval,
-  eachWeekendOfMonth,
-  eachWeekendOfYear,
-  eachWeekOfInterval,
-  eachYearOfInterval,
-  endOfDay,
-  endOfDecade,
-  endOfHour,
-  endOfISOWeek,
-  endOfISOWeekYear,
-  endOfMinute,
-  endOfMonth,
-  endOfQuarter,
-  endOfSecond,
-  endOfToday,
-  endOfTomorrow,
-  endOfWeek,
-  endOfYear,
-  endOfYesterday,
-  format,
-  formatDistance,
-  formatDistanceStrict,
-  formatDistanceToNow,
-  formatDistanceToNowStrict,
-  formatDuration,
-  formatISO,
-  formatISO9075,
-  formatISODuration,
-  formatRelative,
-  formatRFC3339,
-  formatRFC7231,
-  fromUnixTime,
-  getDate,
-  getDay,
-  getDayOfYear,
-  getDaysInMonth,
-  getDaysInYear,
-  getDecade,
-  getHours,
-  getISODay,
-  getISOWeek,
-  getISOWeeksInYear,
-  getISOWeekYear,
-  getMilliseconds,
-  getMinutes,
-  getMonth,
-  getOverlappingDaysInIntervals,
-  getQuarter,
-  getSeconds,
-  getTime,
-  getUnixTime,
-  getWeek,
-  getWeekOfMonth,
-  getWeeksInMonth,
-  getWeekYear,
-  getYear,
-  hoursToMilliseconds,
-  hoursToMinutes,
-  hoursToSeconds,
-  intervalToDuration,
-  intlFormat,
-  isAfter,
-  isBefore,
-  isDate,
-  isEqual,
-  isExists,
-  isFirstDayOfMonth,
-  isFriday,
-  isFuture,
-  isLastDayOfMonth,
-  isLeapYear,
-  isMatch,
-  isMonday,
-  isPast,
-  isSameDay,
-  isSameHour,
-  isSameISOWeek,
-  isSameISOWeekYear,
-  isSameMinute,
-  isSameMonth,
-  isSameQuarter,
-  isSameSecond,
-  isSameWeek,
-  isSameYear,
-  isSaturday,
-  isSunday,
-  isThisHour,
-  isThisISOWeek,
-  isThisMinute,
-  isThisMonth,
-  isThisQuarter,
-  isThisSecond,
-  isThisWeek,
-  isThisYear,
-  isThursday,
-  isToday,
-  isTomorrow,
-  isTuesday,
-  isValid,
-  isWednesday,
-  isWeekend,
-  isWithinInterval,
-  isYesterday,
-  lastDayOfDecade,
-  lastDayOfISOWeek,
-  lastDayOfISOWeekYear,
-  lastDayOfMonth,
-  lastDayOfQuarter,
-  lastDayOfWeek,
-  lastDayOfYear,
-  lightFormat,
-  max,
-  milliseconds,
-  millisecondsToHours,
-  millisecondsToMinutes,
-  millisecondsToSeconds,
-  min,
-  minutesToHours,
-  minutesToMilliseconds,
-  minutesToSeconds,
-  monthsToQuarters,
-  monthsToYears,
-  nextDay,
-  nextFriday,
-  nextMonday,
-  nextSaturday,
-  nextSunday,
-  nextThursday,
-  nextTuesday,
-  nextWednesday,
-  parse,
-  parseISO,
-  parseJSON,
-  previousDay,
-  previousFriday,
-  previousMonday,
-  previousSaturday,
-  previousSunday,
-  previousThursday,
-  previousTuesday,
-  previousWednesday,
-  quartersToMonths,
-  quartersToYears,
-  roundToNearestMinutes,
-  secondsToHours,
-  secondsToMilliseconds,
-  secondsToMinutes,
-  set,
-  setDate,
-  setDay,
-  setDayOfYear,
-  setHours,
-  setISODay,
-  setISOWeek,
-  setISOWeekYear,
-  setMilliseconds,
-  setMinutes,
-  setMonth,
-  setQuarter,
-  setSeconds,
-  setWeek,
-  setWeekYear,
-  setYear,
-  startOfDay,
-  startOfDecade,
-  startOfHour,
-  startOfISOWeek,
-  startOfISOWeekYear,
-  startOfMinute,
-  startOfMonth,
-  startOfQuarter,
-  startOfSecond,
-  startOfToday,
-  startOfTomorrow,
-  startOfWeek,
-  startOfWeekYear,
-  startOfYear,
-  startOfYesterday,
-  sub,
-  subBusinessDays,
-  subDays,
-  subHours,
-  subISOWeekYears,
-  subMilliseconds,
-  subMinutes,
-  subMonths,
-  subQuarters,
-  subSeconds,
-  subWeeks,
-  subYears,
-  toDate,
-  weeksToDays,
-  yearsToMonths,
-  yearsToQuarters,
-  // @endindex
-} from 'date-fns/esm'
+// @index('../../node_modules/date-fns/index.mjs', /export \* from "\.\/(?!format)(.+)\.mjs"/g, m => `export * from 'date-fns/${m[1]}'`)
+export * from 'date-fns/add'
+export * from 'date-fns/addBusinessDays'
+export * from 'date-fns/addDays'
+export * from 'date-fns/addHours'
+export * from 'date-fns/addISOWeekYears'
+export * from 'date-fns/addMilliseconds'
+export * from 'date-fns/addMinutes'
+export * from 'date-fns/addMonths'
+export * from 'date-fns/addQuarters'
+export * from 'date-fns/addSeconds'
+export * from 'date-fns/addWeeks'
+export * from 'date-fns/addYears'
+export * from 'date-fns/areIntervalsOverlapping'
+export * from 'date-fns/clamp'
+export * from 'date-fns/closestIndexTo'
+export * from 'date-fns/closestTo'
+export * from 'date-fns/compareAsc'
+export * from 'date-fns/compareDesc'
+export * from 'date-fns/constructFrom'
+export * from 'date-fns/daysToWeeks'
+export * from 'date-fns/differenceInBusinessDays'
+export * from 'date-fns/differenceInCalendarDays'
+export * from 'date-fns/differenceInCalendarISOWeekYears'
+export * from 'date-fns/differenceInCalendarISOWeeks'
+export * from 'date-fns/differenceInCalendarMonths'
+export * from 'date-fns/differenceInCalendarQuarters'
+export * from 'date-fns/differenceInCalendarWeeks'
+export * from 'date-fns/differenceInCalendarYears'
+export * from 'date-fns/differenceInDays'
+export * from 'date-fns/differenceInHours'
+export * from 'date-fns/differenceInISOWeekYears'
+export * from 'date-fns/differenceInMilliseconds'
+export * from 'date-fns/differenceInMinutes'
+export * from 'date-fns/differenceInMonths'
+export * from 'date-fns/differenceInQuarters'
+export * from 'date-fns/differenceInSeconds'
+export * from 'date-fns/differenceInWeeks'
+export * from 'date-fns/differenceInYears'
+export * from 'date-fns/eachDayOfInterval'
+export * from 'date-fns/eachHourOfInterval'
+export * from 'date-fns/eachMinuteOfInterval'
+export * from 'date-fns/eachMonthOfInterval'
+export * from 'date-fns/eachQuarterOfInterval'
+export * from 'date-fns/eachWeekOfInterval'
+export * from 'date-fns/eachWeekendOfInterval'
+export * from 'date-fns/eachWeekendOfMonth'
+export * from 'date-fns/eachWeekendOfYear'
+export * from 'date-fns/eachYearOfInterval'
+export * from 'date-fns/endOfDay'
+export * from 'date-fns/endOfDecade'
+export * from 'date-fns/endOfHour'
+export * from 'date-fns/endOfISOWeek'
+export * from 'date-fns/endOfISOWeekYear'
+export * from 'date-fns/endOfMinute'
+export * from 'date-fns/endOfMonth'
+export * from 'date-fns/endOfQuarter'
+export * from 'date-fns/endOfSecond'
+export * from 'date-fns/endOfToday'
+export * from 'date-fns/endOfTomorrow'
+export * from 'date-fns/endOfWeek'
+export * from 'date-fns/endOfYear'
+export * from 'date-fns/endOfYesterday'
+export * from 'date-fns/fromUnixTime'
+export * from 'date-fns/getDate'
+export * from 'date-fns/getDay'
+export * from 'date-fns/getDayOfYear'
+export * from 'date-fns/getDaysInMonth'
+export * from 'date-fns/getDaysInYear'
+export * from 'date-fns/getDecade'
+export * from 'date-fns/getDefaultOptions'
+export * from 'date-fns/getHours'
+export * from 'date-fns/getISODay'
+export * from 'date-fns/getISOWeek'
+export * from 'date-fns/getISOWeekYear'
+export * from 'date-fns/getISOWeeksInYear'
+export * from 'date-fns/getMilliseconds'
+export * from 'date-fns/getMinutes'
+export * from 'date-fns/getMonth'
+export * from 'date-fns/getOverlappingDaysInIntervals'
+export * from 'date-fns/getQuarter'
+export * from 'date-fns/getSeconds'
+export * from 'date-fns/getTime'
+export * from 'date-fns/getUnixTime'
+export * from 'date-fns/getWeek'
+export * from 'date-fns/getWeekOfMonth'
+export * from 'date-fns/getWeekYear'
+export * from 'date-fns/getWeeksInMonth'
+export * from 'date-fns/getYear'
+export * from 'date-fns/hoursToMilliseconds'
+export * from 'date-fns/hoursToMinutes'
+export * from 'date-fns/hoursToSeconds'
+export * from 'date-fns/interval'
+export * from 'date-fns/intervalToDuration'
+export * from 'date-fns/intlFormat'
+export * from 'date-fns/intlFormatDistance'
+export * from 'date-fns/isAfter'
+export * from 'date-fns/isBefore'
+export * from 'date-fns/isDate'
+export * from 'date-fns/isEqual'
+export * from 'date-fns/isExists'
+export * from 'date-fns/isFirstDayOfMonth'
+export * from 'date-fns/isFriday'
+export * from 'date-fns/isFuture'
+export * from 'date-fns/isLastDayOfMonth'
+export * from 'date-fns/isLeapYear'
+export * from 'date-fns/isMatch'
+export * from 'date-fns/isMonday'
+export * from 'date-fns/isPast'
+export * from 'date-fns/isSameDay'
+export * from 'date-fns/isSameHour'
+export * from 'date-fns/isSameISOWeek'
+export * from 'date-fns/isSameISOWeekYear'
+export * from 'date-fns/isSameMinute'
+export * from 'date-fns/isSameMonth'
+export * from 'date-fns/isSameQuarter'
+export * from 'date-fns/isSameSecond'
+export * from 'date-fns/isSameWeek'
+export * from 'date-fns/isSameYear'
+export * from 'date-fns/isSaturday'
+export * from 'date-fns/isSunday'
+export * from 'date-fns/isThisHour'
+export * from 'date-fns/isThisISOWeek'
+export * from 'date-fns/isThisMinute'
+export * from 'date-fns/isThisMonth'
+export * from 'date-fns/isThisQuarter'
+export * from 'date-fns/isThisSecond'
+export * from 'date-fns/isThisWeek'
+export * from 'date-fns/isThisYear'
+export * from 'date-fns/isThursday'
+export * from 'date-fns/isToday'
+export * from 'date-fns/isTomorrow'
+export * from 'date-fns/isTuesday'
+export * from 'date-fns/isValid'
+export * from 'date-fns/isWednesday'
+export * from 'date-fns/isWeekend'
+export * from 'date-fns/isWithinInterval'
+export * from 'date-fns/isYesterday'
+export * from 'date-fns/lastDayOfDecade'
+export * from 'date-fns/lastDayOfISOWeek'
+export * from 'date-fns/lastDayOfISOWeekYear'
+export * from 'date-fns/lastDayOfMonth'
+export * from 'date-fns/lastDayOfQuarter'
+export * from 'date-fns/lastDayOfWeek'
+export * from 'date-fns/lastDayOfYear'
+export * from 'date-fns/lightFormat'
+export * from 'date-fns/max'
+export * from 'date-fns/milliseconds'
+export * from 'date-fns/millisecondsToHours'
+export * from 'date-fns/millisecondsToMinutes'
+export * from 'date-fns/millisecondsToSeconds'
+export * from 'date-fns/min'
+export * from 'date-fns/minutesToHours'
+export * from 'date-fns/minutesToMilliseconds'
+export * from 'date-fns/minutesToSeconds'
+export * from 'date-fns/monthsToQuarters'
+export * from 'date-fns/monthsToYears'
+export * from 'date-fns/nextDay'
+export * from 'date-fns/nextFriday'
+export * from 'date-fns/nextMonday'
+export * from 'date-fns/nextSaturday'
+export * from 'date-fns/nextSunday'
+export * from 'date-fns/nextThursday'
+export * from 'date-fns/nextTuesday'
+export * from 'date-fns/nextWednesday'
+export * from 'date-fns/parse'
+export * from 'date-fns/parseISO'
+export * from 'date-fns/parseJSON'
+export * from 'date-fns/previousDay'
+export * from 'date-fns/previousFriday'
+export * from 'date-fns/previousMonday'
+export * from 'date-fns/previousSaturday'
+export * from 'date-fns/previousSunday'
+export * from 'date-fns/previousThursday'
+export * from 'date-fns/previousTuesday'
+export * from 'date-fns/previousWednesday'
+export * from 'date-fns/quartersToMonths'
+export * from 'date-fns/quartersToYears'
+export * from 'date-fns/roundToNearestMinutes'
+export * from 'date-fns/secondsToHours'
+export * from 'date-fns/secondsToMilliseconds'
+export * from 'date-fns/secondsToMinutes'
+export * from 'date-fns/set'
+export * from 'date-fns/setDate'
+export * from 'date-fns/setDay'
+export * from 'date-fns/setDayOfYear'
+export * from 'date-fns/setDefaultOptions'
+export * from 'date-fns/setHours'
+export * from 'date-fns/setISODay'
+export * from 'date-fns/setISOWeek'
+export * from 'date-fns/setISOWeekYear'
+export * from 'date-fns/setMilliseconds'
+export * from 'date-fns/setMinutes'
+export * from 'date-fns/setMonth'
+export * from 'date-fns/setQuarter'
+export * from 'date-fns/setSeconds'
+export * from 'date-fns/setWeek'
+export * from 'date-fns/setWeekYear'
+export * from 'date-fns/setYear'
+export * from 'date-fns/startOfDay'
+export * from 'date-fns/startOfDecade'
+export * from 'date-fns/startOfHour'
+export * from 'date-fns/startOfISOWeek'
+export * from 'date-fns/startOfISOWeekYear'
+export * from 'date-fns/startOfMinute'
+export * from 'date-fns/startOfMonth'
+export * from 'date-fns/startOfQuarter'
+export * from 'date-fns/startOfSecond'
+export * from 'date-fns/startOfToday'
+export * from 'date-fns/startOfTomorrow'
+export * from 'date-fns/startOfWeek'
+export * from 'date-fns/startOfWeekYear'
+export * from 'date-fns/startOfYear'
+export * from 'date-fns/startOfYesterday'
+export * from 'date-fns/sub'
+export * from 'date-fns/subBusinessDays'
+export * from 'date-fns/subDays'
+export * from 'date-fns/subHours'
+export * from 'date-fns/subISOWeekYears'
+export * from 'date-fns/subMilliseconds'
+export * from 'date-fns/subMinutes'
+export * from 'date-fns/subMonths'
+export * from 'date-fns/subQuarters'
+export * from 'date-fns/subSeconds'
+export * from 'date-fns/subWeeks'
+export * from 'date-fns/subYears'
+export * from 'date-fns/toDate'
+export * from 'date-fns/transpose'
+export * from 'date-fns/weeksToDays'
+export * from 'date-fns/yearsToDays'
+export * from 'date-fns/yearsToMonths'
+export * from 'date-fns/yearsToQuarters'
+// @endindex
 
-// prettier-ignore
 export {
-  // 手动导出以解决 @microsoft/api-extractor 的问题
-  // ref: https://github.com/date-fns/date-fns/blob/master/scripts/_lib/listLocales.js#L13
-  // ref: https://github.com/date-fns/date-fns/blob/master/outdatedLocales.json
-  // @index(['../../node_modules/date-fns/esm/locale/*', '!**/{_*,ar,fil,fr-CH,nl-BE}'], (f, _) => `${f.name.replace(/-/g, '')} as ${f.name.replace(/-/g, '')}Locale,`, { onlyDirectories: true })
-  af as afLocale,
-  arDZ as arDZLocale,
-  arMA as arMALocale,
-  arSA as arSALocale,
-  arTN as arTNLocale,
-  az as azLocale,
-  be as beLocale,
-  bg as bgLocale,
-  bn as bnLocale,
-  bs as bsLocale,
-  ca as caLocale,
-  cs as csLocale,
-  cy as cyLocale,
-  da as daLocale,
-  de as deLocale,
-  deAT as deATLocale,
-  el as elLocale,
-  enAU as enAULocale,
-  enCA as enCALocale,
-  enGB as enGBLocale,
-  enIN as enINLocale,
-  enNZ as enNZLocale,
   enUS as enUSLocale,
-  enZA as enZALocale,
-  eo as eoLocale,
-  es as esLocale,
-  et as etLocale,
-  eu as euLocale,
-  faIR as faIRLocale,
-  fi as fiLocale,
-  fr as frLocale,
-  frCA as frCALocale,
-  gd as gdLocale,
-  gl as glLocale,
-  gu as guLocale,
-  he as heLocale,
-  hi as hiLocale,
-  hr as hrLocale,
-  ht as htLocale,
-  hu as huLocale,
-  hy as hyLocale,
-  id as idLocale,
-  is as isLocale,
-  it as itLocale,
-  ja as jaLocale,
-  ka as kaLocale,
-  kk as kkLocale,
-  kn as knLocale,
-  ko as koLocale,
-  lb as lbLocale,
-  lt as ltLocale,
-  lv as lvLocale,
-  mk as mkLocale,
-  mn as mnLocale,
-  ms as msLocale,
-  mt as mtLocale,
-  nb as nbLocale,
-  nl as nlLocale,
-  nn as nnLocale,
-  pl as plLocale,
-  pt as ptLocale,
-  ptBR as ptBRLocale,
-  ro as roLocale,
-  ru as ruLocale,
-  sk as skLocale,
-  sl as slLocale,
-  sq as sqLocale,
-  sr as srLocale,
-  srLatn as srLatnLocale,
-  sv as svLocale,
-  ta as taLocale,
-  te as teLocale,
-  th as thLocale,
-  tr as trLocale,
-  ug as ugLocale,
-  uk as ukLocale,
-  uz as uzLocale,
-  vi as viLocale,
   zhCN as zhCNLocale,
-  zhTW as zhTWLocale,
-  // @endindex
-} from 'date-fns/esm/locale'
+} from 'date-fns/locale'
 
 // @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
 export * from './anyToDate'

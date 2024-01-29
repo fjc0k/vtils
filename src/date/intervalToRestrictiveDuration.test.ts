@@ -1,4 +1,4 @@
-import { addDays, addMilliseconds, addYears } from 'date-fns/esm'
+import { addDays, addMilliseconds, addYears } from 'date-fns'
 import { intervalToRestrictiveDuration } from './intervalToRestrictiveDuration'
 
 describe('intervalToRestrictiveDuration', () => {

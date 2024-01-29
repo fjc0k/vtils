@@ -1,4 +1,3 @@
-import { anyToDate } from './anyToDate'
 import {
   compareAsc,
   differenceInDays,
@@ -10,7 +9,8 @@ import {
   differenceInYears,
   isValid,
   sub,
-} from 'date-fns/esm'
+} from 'date-fns'
+import { anyToDate } from './anyToDate'
 
 export type IntervalToRestrictiveDurationTarget =
   | 'year'

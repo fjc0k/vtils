@@ -3523,10 +3523,10 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-date-fns@^2.24.0:
-  version "2.24.0"
-  resolved "https://registry.npmmirror.com/date-fns/download/date-fns-2.24.0.tgz#7d86dc0d93c87b76b63d213b4413337cfd1c105d"
-  integrity sha1-fYbcDZPIe3a2PSE7RBMzfP0cEF0=
+date-fns@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.npmmirror.com/date-fns/-/date-fns-3.3.1.tgz#7581daca0892d139736697717a168afbb908cfed"
+  integrity sha512-y8e109LYGgoQDveiEBD3DYXKba1jWf5BA8YU1FL5Tvm0BTdEfy54WLCwnuYWZNnzzvALy/QQ4Hov+Q9RVRv+Zw==
 
 dateformat@^3.0.0:
   version "3.0.3"

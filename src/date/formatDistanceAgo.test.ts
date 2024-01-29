@@ -1,4 +1,3 @@
-import { formatDistanceAgo } from './formatDistanceAgo'
 import {
   subDays,
   subHours,
@@ -6,7 +5,8 @@ import {
   subMonths,
   subSeconds,
   subYears,
-} from 'date-fns/esm'
+} from 'date-fns'
+import { formatDistanceAgo } from './formatDistanceAgo'
 
 describe('formatDistanceAgo', () => {
   test('表现正常', () => {

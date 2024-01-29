@@ -78,9 +78,6 @@ export default [
     target: file => (/src\/(dev|x)\//.test(file) ? 'node' : 'browser'),
     outDir: 'lib/_cjs',
     emitDts: false,
-    alias: {
-      'date-fns/esm': 'date-fns',
-    },
     plugins: [removeIsTypePlugin],
   }),
 ]

@@ -1,4 +1,4 @@
-import { lightFormat } from 'date-fns/esm'
+import { lightFormat } from 'date-fns'
 
 /**
  * 日期格式化占位符。
