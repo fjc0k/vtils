@@ -1772,6 +1772,13 @@
   resolved "https://registry.npmmirror.com/@types/json-schema/-/json-schema-7.0.15.tgz#596a1747233694d50f6ad8a7869fcb6f56cf5841"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
+"@types/lodash-es@^4.17.12":
+  version "4.17.12"
+  resolved "https://registry.npmmirror.com/@types/lodash-es/-/lodash-es-4.17.12.tgz#65f6d1e5f80539aa7cfbfc962de5def0cf4f341b"
+  integrity sha512-0NgftHUcV4v34VhXm8QBSftKVXtbkBG3ViCjs6+eJ5a6y6Mi/jiFGPc1sC7QK+9BFhWrURE3EOggmWaSxL9OzQ==
+  dependencies:
+    "@types/lodash" "*"
+
 "@types/lodash-es@^4.17.3":
   version "4.17.4"
   resolved "https://registry.npmmirror.com/@types/lodash-es/download/@types/lodash-es-4.17.4.tgz?cache=0&sync_timestamp=1629708955818&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Flodash-es%2Fdownload%2F%40types%2Flodash-es-4.17.4.tgz#b2e440d2bf8a93584a9fd798452ec497986c9b97"
@@ -6512,7 +6519,7 @@ lodash-es@4.17.15:
   resolved "https://registry.npmmirror.com/lodash-es/download/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
   integrity sha1-Ib2Wg5NUQS8j16EDQOXqxu5FXXg=
 
-lodash-es@^4.17.15:
+lodash-es@^4.17.15, lodash-es@^4.17.21:
   version "4.17.21"
   resolved "https://registry.npmmirror.com/lodash-es/download/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
   integrity sha1-Q+YmxG5lkbd1C+srUBFzkMYJ4+4=
@@ -6525,6 +6532,15 @@ lodash-uni@^1.1.0:
     "@types/lodash-es" "^4.17.3"
     lodash "^4.17.20"
     lodash-es "^4.17.15"
+
+lodash-uni@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmmirror.com/lodash-uni/-/lodash-uni-1.2.0.tgz#03d855643a02b7437df11b87aa409debabc6df09"
+  integrity sha512-cd/cxPwf1I3/V+k9ZnMC9bePXXtebhFp2hiiBvSiuR/ZKPGyP3c0Xu4W94EN+weIaPg4fKQGeeJWVWRy8VvoMA==
+  dependencies:
+    "@types/lodash-es" "^4.17.12"
+    lodash "^4.17.21"
+    lodash-es "^4.17.21"
 
 lodash.camelcase@^4.3.0:
   version "4.3.0"
