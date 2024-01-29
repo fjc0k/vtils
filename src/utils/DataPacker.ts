@@ -1,7 +1,7 @@
 import { isPlainObject, mapValues, range, shuffle } from 'lodash-uni'
-import { base64UrlDecode, base64UrlEncode } from './base64'
-import { isType } from './isType'
-import { rot13 } from './rot13'
+import { base64UrlDecode, base64UrlEncode } from './base64.ts'
+import { isType } from './isType.ts'
+import { rot13 } from './rot13.ts'
 
 export type RawObjectData = Record<any, any>
 export type RawListData<TRawObjectData extends RawObjectData = RawObjectData> =

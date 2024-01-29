@@ -1,4 +1,4 @@
-import { blobUrlRegExpBuilder } from './blobUrl'
+import { blobUrlRegExpBuilder } from './blobUrl.ts'
 
 describe('blobUrlRegExpBuilder', () => {
   test('test', () => {

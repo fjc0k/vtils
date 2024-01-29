@@ -1,5 +1,5 @@
-import { ConstantCase } from '../types'
 import { snakeCase } from 'lodash-uni'
+import { ConstantCase } from '../types/index.ts'
 
 /**
  * 转换文本为大写字符串，单词之间带有下划线。

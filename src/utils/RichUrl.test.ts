@@ -1,4 +1,4 @@
-import { RichUrl } from './RichUrl'
+import { RichUrl } from './RichUrl.ts'
 
 describe('RichUrl', () => {
   describe('check', () => {

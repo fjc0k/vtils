@@ -1,4 +1,4 @@
-import { Nullable, PartialBy, RequiredBy } from '../types'
+import { Nullable, PartialBy, RequiredBy } from '../types/index.ts'
 import {
   difference,
   find,
@@ -6,9 +6,9 @@ import {
   intersection,
   isPlainObject,
   startsWith,
-} from '../utils'
-import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeSchema, VaeSchemaOf } from './VaeSchema'
+} from '../utils/index.ts'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale.ts'
+import { VaeSchema, VaeSchemaOf } from './VaeSchema.ts'
 
 export type VaeObjectSchemaShapeOf<T> = {
   [K in keyof T]: VaeSchemaOf<T[K]>

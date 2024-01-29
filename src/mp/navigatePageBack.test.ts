@@ -14,7 +14,7 @@ describe('navigatePageBack', () => {
   })
 
   test('表现正常', async () => {
-    const { navigatePageBack } = await import('./navigatePageBack')
+    const { navigatePageBack } = await import('./navigatePageBack.ts')
     await navigatePageBack()
     expect(navigateBack).toBeCalled().toBeCalledTimes(1)
   })

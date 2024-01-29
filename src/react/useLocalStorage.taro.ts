@@ -1,10 +1,10 @@
-import {
-  useLocalStorage as _useLocalStorage,
-  UseLocalStorageResult,
-} from './useLocalStorage'
 import { getStorageSync, removeStorage, setStorage } from '@tarojs/taro'
 import { useCallback, useState } from 'react'
 import { useLatest, useUpdateEffect } from 'react-use'
+import {
+  UseLocalStorageResult,
+  useLocalStorage as _useLocalStorage,
+} from './useLocalStorage.ts'
 
 export const useLocalStorage: typeof _useLocalStorage = <S>(
   key: string,

@@ -6,7 +6,7 @@ describe('getCurrentPageQuery', () => {
   })
 
   test('表现正常', async () => {
-    const { getCurrentPageQuery } = await import('./getCurrentPageQuery')
+    const { getCurrentPageQuery } = await import('./getCurrentPageQuery.ts')
     // @ts-ignore
     window.getCurrentPages = (() => [
       {

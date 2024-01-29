@@ -1,4 +1,4 @@
-import { isChineseIDCardNumber } from './isChineseIDCardNumber'
+import { isChineseIDCardNumber } from './isChineseIDCardNumber.ts'
 
 describe(isChineseIDCardNumber.name, () => {
   test('不是合法的身份证号', () => {

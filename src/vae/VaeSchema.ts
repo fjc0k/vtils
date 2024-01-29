@@ -1,4 +1,4 @@
-import { DotPath, DotPathValue, OneOrMore, RequiredBy } from '../types'
+import { DotPath, DotPathValue, OneOrMore, RequiredBy } from '../types/index.ts'
 import {
   assign,
   castArray,
@@ -13,18 +13,18 @@ import {
   toArray,
   toPlainObject,
   values,
-} from '../utils'
-import { VaeArraySchema } from './VaeArraySchema'
-import { VaeBooleanSchema } from './VaeBooleanSchema'
-import { VaeDateSchema } from './VaeDateSchema'
-import { VaeError } from './VaeError'
-import { VaeIssue } from './VaeIssue'
-import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeNumberSchema } from './VaeNumberSchema'
-import { VaeObjectSchema } from './VaeObjectSchema'
-import { VaeSchemaParseContext } from './VaeSchemaParseContext'
-import { VaeSchemaReachContext } from './VaeSchemaReachContext'
-import { VaeStringSchema } from './VaeStringSchema'
+} from '../utils/index.ts'
+import { VaeArraySchema } from './VaeArraySchema.ts'
+import { VaeBooleanSchema } from './VaeBooleanSchema.ts'
+import { VaeDateSchema } from './VaeDateSchema.ts'
+import { VaeError } from './VaeError.ts'
+import { VaeIssue } from './VaeIssue.ts'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale.ts'
+import { VaeNumberSchema } from './VaeNumberSchema.ts'
+import { VaeObjectSchema } from './VaeObjectSchema.ts'
+import { VaeSchemaParseContext } from './VaeSchemaParseContext.ts'
+import { VaeSchemaReachContext } from './VaeSchemaReachContext.ts'
+import { VaeStringSchema } from './VaeStringSchema.ts'
 
 export type VaeSchemaType =
   | 'string'

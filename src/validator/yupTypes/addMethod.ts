@@ -1,10 +1,10 @@
-import { array, ArraySchema } from './array'
-import { boolean, BooleanSchema } from './boolean'
-import { date, DateSchema } from './date'
-import { mixed, MixedSchema } from './mixed'
-import { number, NumberSchema } from './number'
-import { object, ObjectSchema } from './object'
-import { string, StringSchema } from './string'
+import { array, ArraySchema } from './array.ts'
+import { boolean, BooleanSchema } from './boolean.ts'
+import { date, DateSchema } from './date.ts'
+import { mixed, MixedSchema } from './mixed.ts'
+import { number, NumberSchema } from './number.ts'
+import { object, ObjectSchema } from './object.ts'
+import { string, StringSchema } from './string.ts'
 
 export declare function addMethod<
   TSchemaType extends

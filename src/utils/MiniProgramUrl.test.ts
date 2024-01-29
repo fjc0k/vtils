@@ -1,4 +1,4 @@
-import { MiniProgramUrl } from './MiniProgramUrl'
+import { MiniProgramUrl } from './MiniProgramUrl.ts'
 
 describe('MiniProgramUrl', () => {
   test('ok', () => {

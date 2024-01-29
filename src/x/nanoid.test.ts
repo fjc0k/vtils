@@ -1,4 +1,4 @@
-import { nanoid } from './nanoid'
+import { nanoid } from './nanoid.ts'
 
 describe('nanoid', () => {
   test('默认长度是21', () => {

@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useLocalStorage } from './useLocalStorage'
+import { useLocalStorage } from './useLocalStorage.ts'
 
 describe('useLocalStorage', () => {
   test('表现正常', async () => {

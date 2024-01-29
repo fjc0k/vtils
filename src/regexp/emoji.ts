@@ -1,4 +1,4 @@
-import { RegExpBuilder } from './RegExpBuilder'
+import { RegExpBuilder } from './RegExpBuilder.ts'
 
 // https://github.com/mathiasbynens/emoji-test-regex-pattern/blob/main/dist/emoji-15.1/javascript.txt
 const baseRegExp =

@@ -1,4 +1,4 @@
-import { indent } from './indent'
+import { indent } from './indent.ts'
 
 describe('indent', () => {
   test('空字符串正常', () => {

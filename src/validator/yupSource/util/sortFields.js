@@ -1,6 +1,6 @@
-import { has } from '../../../utils'
-import toposort from 'toposort'
 import { split } from 'property-expr'
+import toposort from 'toposort'
+import { has } from '../../../utils'
 
 import Ref from '../Reference'
 import isSchema from './isSchema'

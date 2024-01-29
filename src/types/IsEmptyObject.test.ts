@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { IsEmptyObject } from './IsEmptyObject'
+import { expectType } from '../dev/index.ts'
+import { IsEmptyObject } from './IsEmptyObject.ts'
 
 describe('IsEmptyObject', () => {
   test('不是空对象', () => {

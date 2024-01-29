@@ -1,4 +1,4 @@
-import { RegExpBuilder } from './RegExpBuilder'
+import { RegExpBuilder } from './RegExpBuilder.ts'
 
 // https://github.com/frandiox/normalize-unicode-text/blob/master/src/index.ts
 // 新增 200E, 200F

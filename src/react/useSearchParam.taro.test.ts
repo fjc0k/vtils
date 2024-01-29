@@ -1,6 +1,6 @@
 import * as Taro from '@tarojs/taro'
-import { AnyFunction } from '../types'
 import { renderHook } from '@testing-library/react-hooks'
+import { AnyFunction } from '../types/index.ts'
 
 describe('useSearchParam.taro', () => {
   const useRouter: AnyFunction = jest.fn().mockImplementation(() => {
@@ -22,7 +22,7 @@ describe('useSearchParam.taro', () => {
   })
 
   test('表现正常', async () => {
-    const { useSearchParam } = await import('./useSearchParam.taro')
+    const { useSearchParam } = await import('./useSearchParam.taro.ts')
     const { result } = renderHook(() => {
       return useSearchParam('id')
     })

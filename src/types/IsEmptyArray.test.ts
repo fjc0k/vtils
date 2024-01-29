@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { IsEmptyArray } from './IsEmptyArray'
+import { expectType } from '../dev/index.ts'
+import { IsEmptyArray } from './IsEmptyArray.ts'
 
 describe('IsEmptyArray', () => {
   test('不是空数组', () => {

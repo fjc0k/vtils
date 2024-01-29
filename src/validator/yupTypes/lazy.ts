@@ -1,4 +1,4 @@
-import { MixedSchema } from './mixed'
+import { MixedSchema } from './mixed.ts'
 
 export interface Lazy extends MixedSchema {}
 

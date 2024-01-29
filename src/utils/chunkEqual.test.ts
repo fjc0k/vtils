@@ -1,4 +1,4 @@
-import { chunkEqual } from './chunkEqual'
+import { chunkEqual } from './chunkEqual.ts'
 
 describe('chunkEqual', () => {
   test('表现正常', () => {

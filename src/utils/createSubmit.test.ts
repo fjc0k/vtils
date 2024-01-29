@@ -1,4 +1,4 @@
-import { createSubmit } from './createSubmit'
+import { createSubmit } from './createSubmit.ts'
 
 describe('createSubmit', () => {
   test('表现正常', async () => {

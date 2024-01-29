@@ -1,5 +1,5 @@
-import { createUrlQueryString } from './createUrlQueryString'
-import { parseUrlQueryString } from './parseUrlQueryString'
+import { createUrlQueryString } from './createUrlQueryString.ts'
+import { parseUrlQueryString } from './parseUrlQueryString.ts'
 
 describe('parseUrlQueryString', () => {
   test('表现正常', () => {

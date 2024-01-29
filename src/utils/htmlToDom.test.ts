@@ -1,4 +1,4 @@
-import { htmlToDocumentFragment, htmlToElement } from './htmlToDom'
+import { htmlToDocumentFragment, htmlToElement } from './htmlToDom.ts'
 
 describe('htmlToDom', () => {
   test('htmlToDocumentFragment 正常', () => {

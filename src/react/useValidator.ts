@@ -1,6 +1,6 @@
 import { DependencyList, useMemo } from 'react'
-import { AnyObject } from '../types'
-import { yup as _yup } from '../validator'
+import { AnyObject } from '../types/index.ts'
+import { yup as _yup } from '../validator/index.ts'
 
 const validateOptions: _yup.SchemaValidateOptions = {
   strict: true,

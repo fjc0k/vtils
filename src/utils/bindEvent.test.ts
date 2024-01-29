@@ -1,4 +1,4 @@
-import { bindEvent } from './bindEvent'
+import { bindEvent } from './bindEvent.ts'
 
 describe('bindEvent', () => {
   test('绑定事件正常', () => {

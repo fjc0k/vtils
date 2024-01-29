@@ -1,5 +1,5 @@
-import { LocalStoragePlus } from './LocalStoragePlus'
-import { wait } from './wait'
+import { LocalStoragePlus } from './LocalStoragePlus.ts'
+import { wait } from './wait.ts'
 
 describe('LocalStoragePlus', () => {
   test('普通正常', () => {

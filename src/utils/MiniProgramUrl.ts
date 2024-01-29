@@ -1,6 +1,6 @@
 import { assign } from 'lodash-uni'
-import { createUrlQueryString } from './createUrlQueryString'
-import { parseUrlQueryString } from './parseUrlQueryString'
+import { createUrlQueryString } from './createUrlQueryString.ts'
+import { parseUrlQueryString } from './parseUrlQueryString.ts'
 
 export type MiniProgramUrlProvider = 'wechat'
 

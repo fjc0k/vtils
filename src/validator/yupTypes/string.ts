@@ -1,6 +1,6 @@
-import { MixedLocale, StringLocale } from './Locale'
-import { MixedSchema } from './mixed'
-import { Refable } from './ref'
+import { MixedLocale, StringLocale } from './Locale.ts'
+import { MixedSchema } from './mixed.ts'
+import { Refable } from './ref.ts'
 
 export interface StringSchema<T extends string = string>
   extends MixedSchema<T> {

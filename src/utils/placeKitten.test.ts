@@ -1,4 +1,4 @@
-import { placeKitten } from './placeKitten'
+import { placeKitten } from './placeKitten.ts'
 
 describe('placeKitten', () => {
   test('表现正常', () => {

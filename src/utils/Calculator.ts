@@ -1,6 +1,6 @@
 import DecimalLight, { Config, Numeric } from 'decimal.js-light'
 import { castArray } from 'lodash-uni'
-import { OneOrMore } from '../types'
+import { OneOrMore } from '../types/index.ts'
 
 export interface CalculatorConfig extends Config {
   /** 小数位数 */

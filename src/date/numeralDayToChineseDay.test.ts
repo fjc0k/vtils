@@ -1,4 +1,4 @@
-import { numeralDayToChineseDay } from './numeralDayToChineseDay'
+import { numeralDayToChineseDay } from './numeralDayToChineseDay.ts'
 
 describe('numeralDayToChineseDay', () => {
   test('转换正常', () => {

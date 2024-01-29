@@ -1,4 +1,4 @@
-import { inMiniProgram } from '../utils'
+import { inMiniProgram } from '../utils/index.ts'
 
 let $mp: ReturnType<typeof inMiniProgram> | undefined
 

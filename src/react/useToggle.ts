@@ -30,9 +30,9 @@ export type UseToggleResult = [
  */
 export function useToggle(initialValue: boolean): UseToggleResult {
   const [value, setValue] = useState(initialValue)
-  const toggle = (useCallback(() => {
+  const toggle = useCallback(() => {
     setValue(value => !value)
-  }, []) as any) as UseToggleResult[1]
+  }, []) as any as UseToggleResult[1]
   toggle.set = useCallback(value => {
     setValue(value)
   }, [])

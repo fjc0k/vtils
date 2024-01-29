@@ -8,21 +8,21 @@ describe('inIOS', () => {
   })
 
   test('<浏览器> 不在 iOS 设备中', async () => {
-    const { inIOS } = await import('./inIOS')
+    const { inIOS } = await import('./inIOS.ts')
     // @ts-ignore
     window.navigator.platform = 'x'
     expect(inIOS()).toBeFalse()
   })
 
   test('<浏览器> 在 iOS 设备中', async () => {
-    const { inIOS } = await import('./inIOS')
+    const { inIOS } = await import('./inIOS.ts')
     // @ts-ignore
     window.navigator.platform = 'xx iPhone yy'
     expect(inIOS()).toBeTrue()
   })
 
   test('<小程序> 不在 iOS 设备中', async () => {
-    const { inIOS } = await import('./inIOS')
+    const { inIOS } = await import('./inIOS.ts')
     // @ts-ignore
     window.wx = {
       getSystemInfoSync() {
@@ -36,7 +36,7 @@ describe('inIOS', () => {
   })
 
   test('<小程序> 在 iOS 设备中', async () => {
-    const { inIOS } = await import('./inIOS')
+    const { inIOS } = await import('./inIOS.ts')
     // @ts-ignore
     window.wx = {
       getSystemInfoSync() {

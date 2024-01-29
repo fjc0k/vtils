@@ -3,7 +3,7 @@
  */
 
 import { range, sum } from 'lodash-uni'
-import { runBenchmark } from './runBenchmark'
+import { runBenchmark } from './runBenchmark.ts'
 
 describe('runBenchmark', () => {
   test('fastest 正常', () => {

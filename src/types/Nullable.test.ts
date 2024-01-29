@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { Nullable } from './Nullable'
+import { expectType } from '../dev/index.ts'
+import { Nullable } from './Nullable.ts'
 
 describe('Nullable', () => {
   test('表现正常', () => {

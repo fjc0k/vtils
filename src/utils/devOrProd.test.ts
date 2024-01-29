@@ -1,4 +1,4 @@
-import { devOrProd } from './devOrProd'
+import { devOrProd } from './devOrProd.ts'
 
 describe('devOrProd', () => {
   beforeEach(() => {

@@ -1,4 +1,4 @@
-import { getCurrentScript } from './getCurrentScript'
+import { getCurrentScript } from './getCurrentScript.ts'
 
 describe('getCurrentScript', () => {
   test('表现正常', () => {

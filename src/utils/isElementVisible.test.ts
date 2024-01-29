@@ -1,4 +1,4 @@
-import { isElementVisible } from './isElementVisible'
+import { isElementVisible } from './isElementVisible.ts'
 
 describe('isElementVisible', () => {
   test('ok', () => {

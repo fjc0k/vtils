@@ -1,5 +1,5 @@
 import { range } from 'lodash-uni'
-import { TreeData } from './TreeData'
+import { TreeData } from './TreeData.ts'
 
 describe('TreeData', () => {
   const data = range(0, 10).map(i => ({

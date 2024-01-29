@@ -1,5 +1,5 @@
-import { asyncLimit } from './asyncLimit'
-import { wait } from './wait'
+import { asyncLimit } from './asyncLimit.ts'
+import { wait } from './wait.ts'
 
 describe('asyncLimit', () => {
   test('调用正常', async () => {

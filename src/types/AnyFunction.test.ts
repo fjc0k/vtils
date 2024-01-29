@@ -1,5 +1,5 @@
-import { AnyFunction } from './AnyFunction'
-import { expectType } from '../dev'
+import { expectType } from '../dev/index.ts'
+import { AnyFunction } from './AnyFunction.ts'
 
 describe('AnyFunction', () => {
   test('不是 function', () => {

@@ -1,5 +1,5 @@
-import { MixedSchema } from './mixed'
-import { ObjectSchema } from './object'
+import { MixedSchema } from './mixed.ts'
+import { ObjectSchema } from './object.ts'
 
 export declare function reach<T extends {}>(
   schema: ObjectSchema<T>,

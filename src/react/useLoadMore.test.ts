@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useLoadMore } from './useLoadMore'
 import { useState } from 'react'
+import { useLoadMore } from './useLoadMore.ts'
 
 describe('useLoadMore', () => {
   test('仅当 deps 变化时 service 才被触发', async () => {
@@ -30,9 +30,7 @@ describe('useLoadMore', () => {
     const service: (
       offset: number,
       pageNumber: number,
-    ) => Array<
-      [number, number]
-    > = jest
+    ) => Array<[number, number]> = jest
       .fn()
       .mockImplementation((offset, pageNumber) => [[offset, pageNumber]])
 

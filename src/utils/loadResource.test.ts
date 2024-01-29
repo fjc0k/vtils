@@ -1,4 +1,4 @@
-import { loadResource, LoadResourceUrlType } from './loadResource'
+import { loadResource, LoadResourceUrlType } from './loadResource.ts'
 
 describe('loadResource', () => {
   const createElement = document.createElement.bind(document)

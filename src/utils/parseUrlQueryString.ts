@@ -1,4 +1,4 @@
-import { CreateUrlQueryStringOptions } from './createUrlQueryString'
+import { CreateUrlQueryStringOptions } from './createUrlQueryString.ts'
 
 /**
  * 解析 url 查询字符串。
@@ -14,7 +14,7 @@ import { CreateUrlQueryStringOptions } from './createUrlQueryString'
  * ```
  */
 export function parseUrlQueryString<
-  T extends Record<string, string> = Record<string, string>
+  T extends Record<string, string> = Record<string, string>,
 >(query: string, options?: CreateUrlQueryStringOptions): T {
   if (!query) return {} as any
   const pairSeparator = options?.pairSeparator ?? '='

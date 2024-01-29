@@ -7,6 +7,6 @@
 /* istanbul ignore file */
 
 // @index(['./**/*.ts', '!./**/*.test.*', '!**/__*'], f => `export * from '${f.path}'`)
-export * from './expectType'
-export * from './runBenchmark'
+export * from './expectType.ts'
+export * from './runBenchmark.ts'
 // @endindex

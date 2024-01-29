@@ -1,7 +1,7 @@
-import { anyToDate, isDate, isValid } from '../date'
-import { Nullable } from '../types'
-import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeSchema } from './VaeSchema'
+import { anyToDate, isDate, isValid } from '../date/index.ts'
+import { Nullable } from '../types/index.ts'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale.ts'
+import { VaeSchema } from './VaeSchema.ts'
 
 export class VaeDateSchema<
   T0 extends Nullable<Date> = Date,

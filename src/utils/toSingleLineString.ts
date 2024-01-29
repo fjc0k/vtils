@@ -1,5 +1,5 @@
-import { truncate } from 'lodash-uni'
 import type { TruncateOptions } from 'lodash'
+import { truncate } from 'lodash-uni'
 
 /**
  * 将多行字符串转换为单行字符串。

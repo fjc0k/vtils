@@ -1,5 +1,5 @@
-import { signal } from './signal'
-import { wait } from './wait'
+import { signal } from './signal.ts'
+import { wait } from './wait.ts'
 
 describe('signal', () => {
   test('表现正常', async () => {

@@ -1,4 +1,4 @@
-import { IsNever, Merge } from '../types'
+import { IsNever, Merge } from '../types/index.ts'
 
 export type ConditionalArrayItem<T, K extends keyof T = never> =
   | (IsNever<K> extends true

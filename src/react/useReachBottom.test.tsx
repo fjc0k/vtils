@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
 import { render } from '@testing-library/react'
 import { renderHook } from '@testing-library/react-hooks'
-import { useReachBottom } from './useReachBottom'
-import { wait } from '../utils'
+import React, { useEffect } from 'react'
+import { wait } from '../utils/index.ts'
+import { useReachBottom } from './useReachBottom.ts'
 
 Object.defineProperty(HTMLElement.prototype, 'scrollHeight', {
   configurable: true,

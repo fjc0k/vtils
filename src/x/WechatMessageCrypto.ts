@@ -1,6 +1,6 @@
 import crypto from 'crypto'
-import { parseXml } from './parseXml'
-import { sha1 } from './sha1'
+import { parseXml } from './parseXml.ts'
+import { sha1 } from './sha1.ts'
 
 export interface WechatMessageCryptoOptions {
   /** 公众号/第三方平台的 APPID */
@@ -121,9 +121,8 @@ export class WechatMessageCrypto {
    * @param encryptedMsg 加密后的消息
    */
   signEncryptedMsgAsXml(encryptedMsg: string): string {
-    const { timestamp, nonceStr, signature } = this.signEncryptedMsg(
-      encryptedMsg,
-    )
+    const { timestamp, nonceStr, signature } =
+      this.signEncryptedMsg(encryptedMsg)
     return (
       `<xml>` +
       `<Encrypt><![CDATA[${encryptedMsg}]]></Encrypt>` +

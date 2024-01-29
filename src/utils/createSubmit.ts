@@ -1,6 +1,6 @@
-import { AsyncOrSync } from '../types'
-import { run } from './run'
-import { wait } from './wait'
+import { AsyncOrSync } from '../types/index.ts'
+import { run } from './run.ts'
+import { wait } from './wait.ts'
 
 export interface CreateSubmitOptions<T = string> {
   /**

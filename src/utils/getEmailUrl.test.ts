@@ -1,4 +1,4 @@
-import { getEmailUrl } from './getEmailUrl'
+import { getEmailUrl } from './getEmailUrl.ts'
 
 describe('getEmailUrl', () => {
   test('ok', () => {

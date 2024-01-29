@@ -1,6 +1,6 @@
-import React from 'react'
-import { defineComponent } from './defineComponent'
 import { render } from '@testing-library/react'
+import React from 'react'
+import { defineComponent } from './defineComponent.ts'
 
 describe('defineComponent', () => {
   test('默认转发 ref', () => {

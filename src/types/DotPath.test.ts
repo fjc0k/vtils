@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { DotPath, DotPathValue } from './DotPath'
+import { expectType } from '../dev/index.ts'
+import { DotPath, DotPathValue } from './DotPath.ts'
 
 describe('DotPath', () => {
   test('表现正常', () => {

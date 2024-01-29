@@ -1,4 +1,4 @@
-import { Calculator } from './Calculator'
+import { Calculator } from './Calculator.ts'
 
 describe('Calculator', () => {
   describe('加', () => {

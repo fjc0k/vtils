@@ -1,5 +1,5 @@
-import { removeBlankChars } from './removeBlankChars'
-import { removeEmojiChars } from './removeEmojiChars'
+import { removeBlankChars } from './removeBlankChars.ts'
+import { removeEmojiChars } from './removeEmojiChars.ts'
 
 describe('removeEmojiChars', () => {
   test('ok', () => {

@@ -104,28 +104,28 @@ describe('base64', () => {
       prepare()
 
       test('编码正常', async () => {
-        const { base64Encode } = await import('./base64')
+        const { base64Encode } = await import('./base64.ts')
         data.forEach(([str, encodedStr]) => {
           expect(base64Encode(str)).toBe(encodedStr)
         })
       })
 
       test('解码正常', async () => {
-        const { base64Decode } = await import('./base64')
+        const { base64Decode } = await import('./base64.ts')
         data.forEach(([str, encodedStr]) => {
           expect(base64Decode(encodedStr)).toBe(str)
         })
       })
 
       test('URL 编码正常', async () => {
-        const { base64UrlEncode } = await import('./base64')
+        const { base64UrlEncode } = await import('./base64.ts')
         data.forEach(([str, , encodedUrlStr]) => {
           expect(base64UrlEncode(str)).toBe(encodedUrlStr)
         })
       })
 
       test('URL 解码正常', async () => {
-        const { base64UrlDecode } = await import('./base64')
+        const { base64UrlDecode } = await import('./base64.ts')
         data.forEach(([str, , encodedUrlStr]) => {
           expect(base64UrlDecode(encodedUrlStr)).toBe(str)
         })

@@ -1,4 +1,4 @@
-import { isEmail } from './isEmail'
+import { isEmail } from './isEmail.ts'
 
 describe('isEmail', () => {
   test('ok', () => {

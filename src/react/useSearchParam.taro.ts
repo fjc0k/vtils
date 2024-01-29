@@ -1,5 +1,5 @@
-import { useSearchParam as _useSearchParam } from 'react-use'
 import { useRouter } from '@tarojs/taro'
+import { useSearchParam as _useSearchParam } from 'react-use'
 
 export const useSearchParam: typeof _useSearchParam = param => {
   const { params } = useRouter()

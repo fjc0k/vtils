@@ -1,5 +1,5 @@
-import { onceMeanwhile } from './onceMeanwhile'
-import { wait } from './wait'
+import { onceMeanwhile } from './onceMeanwhile.ts'
+import { wait } from './wait.ts'
 
 describe('onceMeanwhile', () => {
   test('表现正常', async () => {

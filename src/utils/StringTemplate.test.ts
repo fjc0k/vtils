@@ -1,4 +1,4 @@
-import { StringTemplate } from './StringTemplate'
+import { StringTemplate } from './StringTemplate.ts'
 
 describe('StringTemplate', () => {
   test('ok', () => {

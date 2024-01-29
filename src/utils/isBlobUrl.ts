@@ -1,4 +1,4 @@
-import { blobUrlRegExpBuilder } from '../regexp'
+import { blobUrlRegExpBuilder } from '../regexp/index.ts'
 
 const regExp = blobUrlRegExpBuilder.build({ exact: true })
 

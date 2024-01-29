@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useStateWithDeps } from './useStateWithDeps'
+import { useStateWithDeps } from './useStateWithDeps.ts'
 
 describe('useStateWithDeps', () => {
   test('依赖为空时正常', () => {

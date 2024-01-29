@@ -1,4 +1,4 @@
-import { run } from './run'
+import { run } from './run.ts'
 
 describe('run', () => {
   test('同步函数正常', async () => {

@@ -1,5 +1,5 @@
-import { Defined } from './Defined'
-import { expectType } from '../dev'
+import { expectType } from '../dev/index.ts'
+import { Defined } from './Defined.ts'
 
 describe('Defined', () => {
   test('表现正常', () => {

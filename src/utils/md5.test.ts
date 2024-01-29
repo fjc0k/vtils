@@ -1,4 +1,4 @@
-import { md5 } from './md5'
+import { md5 } from './md5.ts'
 
 describe('md5', () => {
   // ref: https://github.com/blueimp/JavaScript-MD5/blob/master/test/test.js

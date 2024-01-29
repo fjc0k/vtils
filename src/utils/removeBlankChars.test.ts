@@ -1,4 +1,4 @@
-import { removeBlankChars } from './removeBlankChars'
+import { removeBlankChars } from './removeBlankChars.ts'
 
 describe('removeBlankChars', () => {
   test('半角空格', () => {

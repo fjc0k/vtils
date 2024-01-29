@@ -6,7 +6,7 @@ describe('getCurrentPagePath', () => {
   })
 
   test('表现正常', async () => {
-    const { getCurrentPagePath } = await import('./getCurrentPagePath')
+    const { getCurrentPagePath } = await import('./getCurrentPagePath.ts')
     // @ts-ignore
     window.getCurrentPages = (() => [
       {

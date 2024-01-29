@@ -1,4 +1,4 @@
-import { cuid } from './cuid'
+import { cuid } from './cuid.ts'
 
 describe('cuid', () => {
   test('表现正常', () => {

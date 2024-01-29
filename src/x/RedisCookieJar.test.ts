@@ -1,4 +1,4 @@
-import { RedisCookieJar } from './RedisCookieJar'
+import { RedisCookieJar } from './RedisCookieJar.ts'
 
 jest.mock('ioredis', () => {
   const ioredis = require('ioredis-mock')

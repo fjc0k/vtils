@@ -1,4 +1,4 @@
-import { VaeIssue } from './VaeIssue'
+import { VaeIssue } from './VaeIssue.ts'
 
 export class VaeSchemaParseContext {
   issues: VaeIssue[] = []

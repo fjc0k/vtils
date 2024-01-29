@@ -1,4 +1,4 @@
-import { pickAll } from './pickAll'
+import { pickAll } from './pickAll.ts'
 
 describe('pickAll', () => {
   test('ok', () => {

@@ -14,8 +14,8 @@ describe('submit', () => {
   })
 
   test('表现正常', async () => {
-    const { submit } = await import('./submit')
-    const { wait } = await import('../utils')
+    const { submit } = await import('./submit.ts')
+    const { wait } = await import('../utils/index.ts')
     const res = await submit(async _ => {
       await _.start('加载中...')
       await wait(10)

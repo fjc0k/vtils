@@ -1,6 +1,6 @@
-import { useTitle as _useTitle } from 'react-use'
 import { setNavigationBarTitle } from '@tarojs/taro'
 import { useEffect } from 'react'
+import { useTitle as _useTitle } from 'react-use'
 
 export const useTitle: typeof _useTitle = (
   title,

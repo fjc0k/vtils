@@ -1,4 +1,4 @@
-import { formatNumber } from './formatNumber'
+import { formatNumber } from './formatNumber.ts'
 
 describe('formatNumber', () => {
   test('默认正常', () => {

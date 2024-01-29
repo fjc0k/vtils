@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { Path, PathValue } from './Path'
+import { expectType } from '../dev/index.ts'
+import { Path, PathValue } from './Path.ts'
 
 describe('Path', () => {
   test('表现正常', () => {

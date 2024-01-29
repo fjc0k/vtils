@@ -1,8 +1,8 @@
-import { expectType } from '../dev'
-import { run } from '../utils'
-import { enUS } from './locale/enUS'
-import { zhCN } from './locale/zhCN'
-import { yup } from './yup'
+import { expectType } from '../dev/index.ts'
+import { run } from '../utils/index.ts'
+import { enUS } from './locale/enUS.ts'
+import { zhCN } from './locale/zhCN.ts'
+import { yup } from './yup.js'
 
 describe('yup', () => {
   test('默认语言为中文', async () => {

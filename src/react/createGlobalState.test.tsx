@@ -1,8 +1,11 @@
-import React, { useCallback } from 'react'
-import { act, renderHook } from '@testing-library/react-hooks'
-import { createGlobalState, CreateGlobalStateResult } from './createGlobalState'
 import { render } from '@testing-library/react'
-import { wait } from '../utils'
+import { act, renderHook } from '@testing-library/react-hooks'
+import React, { useCallback } from 'react'
+import { wait } from '../utils/index.ts'
+import {
+  CreateGlobalStateResult,
+  createGlobalState,
+} from './createGlobalState.ts'
 
 describe('createGlobalState', () => {
   describe('默认 actions', () => {

@@ -1,4 +1,4 @@
-import { DesensitizeStrategy, desensitize } from './desensitize'
+import { DesensitizeStrategy, desensitize } from './desensitize.ts'
 
 describe('desensitize', () => {
   test('CHINESE_NAME', () => {

@@ -1,4 +1,4 @@
-import { asRequiredDeep } from './asRequiredDeep'
+import { asRequiredDeep } from './asRequiredDeep.ts'
 
 describe('asRequiredDeep', () => {
   test('ok', () => {

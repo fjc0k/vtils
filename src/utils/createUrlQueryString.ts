@@ -1,4 +1,4 @@
-import { AnyObject } from '../types'
+import { AnyObject } from '../types/index.ts'
 
 export interface CreateUrlQueryStringOptions {
   /**

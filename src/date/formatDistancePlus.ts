@@ -1,5 +1,5 @@
-import { formatDistanceStrict, isBefore } from 'date-fns/esm'
-import { zhCN } from 'date-fns/esm/locale'
+import { formatDistanceStrict, isBefore } from 'date-fns'
+import { zhCN } from 'date-fns/locale'
 
 /**
  * 将时间转化为 `xxx前/后` 表示。

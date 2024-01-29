@@ -1,7 +1,7 @@
-import { isBlobUrl } from './isBlobUrl'
-import { isDataUrl } from './isDataUrl'
-import { isUrl } from './isUrl'
-import { loadResource, LoadResourceUrlType } from './loadResource'
+import { isBlobUrl } from './isBlobUrl.ts'
+import { isDataUrl } from './isDataUrl.ts'
+import { isUrl } from './isUrl.ts'
+import { loadResource, LoadResourceUrlType } from './loadResource.ts'
 
 const cache: Record<string, HTMLStyleElement> = Object.create(null)
 
@@ -28,25 +28,28 @@ export interface LoadCssResult {
  * ```
  */
 export function loadCss(urlOrContent: string): Promise<LoadCssResult> {
-  return (urlOrContent in cache
-    ? Promise.resolve(cache[urlOrContent])
-    : isUrl(urlOrContent) || isDataUrl(urlOrContent) || isBlobUrl(urlOrContent)
-    ? loadResource({
-        type: LoadResourceUrlType.css,
-        path: urlOrContent,
-      }).then<HTMLStyleElement>(res => res[0] as any)
-    : new Promise<HTMLStyleElement>(resolve => {
-        const el = document.createElement('style')
-        el.setAttribute('type', 'text/css')
-        if ('textContent' in el) {
-          el.textContent = urlOrContent
-        } else {
-          // @ts-ignore
-          el.styleSheet.cssText = urlOrContent
-        }
-        document.getElementsByTagName('head')[0].appendChild(el)
-        resolve(el)
-      })
+  return (
+    urlOrContent in cache
+      ? Promise.resolve(cache[urlOrContent])
+      : isUrl(urlOrContent) ||
+        isDataUrl(urlOrContent) ||
+        isBlobUrl(urlOrContent)
+      ? loadResource({
+          type: LoadResourceUrlType.css,
+          path: urlOrContent,
+        }).then<HTMLStyleElement>(res => res[0] as any)
+      : new Promise<HTMLStyleElement>(resolve => {
+          const el = document.createElement('style')
+          el.setAttribute('type', 'text/css')
+          if ('textContent' in el) {
+            el.textContent = urlOrContent
+          } else {
+            // @ts-ignore
+            el.styleSheet.cssText = urlOrContent
+          }
+          document.getElementsByTagName('head')[0].appendChild(el)
+          resolve(el)
+        })
   ).then<LoadCssResult>(el => {
     cache[urlOrContent] = el
     return {

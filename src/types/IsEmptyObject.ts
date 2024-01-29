@@ -1,4 +1,4 @@
-import { IsNever } from './IsNever'
+import { IsNever } from './IsNever.ts'
 
 /**
  * 判断 `T` 是否是空对象。

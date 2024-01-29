@@ -1,5 +1,5 @@
-import { inBrowser } from './inBrowser'
-import { inMiniProgram } from './inMiniProgram'
+import { inBrowser } from './inBrowser.ts'
+import { inMiniProgram } from './inMiniProgram.ts'
 
 let yes!: boolean
 

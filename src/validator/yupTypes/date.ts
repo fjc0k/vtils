@@ -1,6 +1,6 @@
-import { DateLocale } from './Locale'
-import { MixedSchema } from './mixed'
-import { Refable } from './ref'
+import { DateLocale } from './Locale.ts'
+import { MixedSchema } from './mixed.ts'
+import { Refable } from './ref.ts'
 
 export interface DateSchema<T extends Date = Date> extends MixedSchema<T> {
   min(limit: Refable<Date>, message?: DateLocale['min']): this

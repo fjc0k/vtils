@@ -1,5 +1,5 @@
-import { dedent } from '../utils'
-import { parseXml } from './parseXml'
+import { dedent } from '../utils/index.ts'
+import { parseXml } from './parseXml.ts'
 
 describe('parseXml', () => {
   test('表现正常', () => {

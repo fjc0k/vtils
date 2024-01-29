@@ -1,8 +1,8 @@
-import { AnyObject } from '../types'
-import { createUrlQueryString } from '../utils'
-import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { getCurrentPagePath } from './getCurrentPagePath'
-import { getCurrentPageQuery } from './getCurrentPageQuery'
+import { AnyObject } from '../types/index.ts'
+import { createUrlQueryString } from '../utils/index.ts'
+import { ensureInMiniProgram } from './ensureInMiniProgram.ts'
+import { getCurrentPagePath } from './getCurrentPagePath.ts'
+import { getCurrentPageQuery } from './getCurrentPageQuery.ts'
 
 /**
  * 获取当前页面的地址（包含查询参数）。

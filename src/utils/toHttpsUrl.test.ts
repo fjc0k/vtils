@@ -1,4 +1,4 @@
-import { toHttpsUrl } from './toHttpsUrl'
+import { toHttpsUrl } from './toHttpsUrl.ts'
 
 describe('toHttpsUrl', () => {
   test('ok', () => {

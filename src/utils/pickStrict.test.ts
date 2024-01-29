@@ -1,5 +1,5 @@
 import { pick } from 'lodash-uni'
-import { pickStrict } from './pickStrict'
+import { pickStrict } from './pickStrict.ts'
 
 describe(pickStrict.name, () => {
   test('就是 pick 的严格类型版', () => {

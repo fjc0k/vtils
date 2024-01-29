@@ -1,5 +1,5 @@
-import { asyncMemoize } from './asyncMemoize'
-import { wait } from './wait'
+import { asyncMemoize } from './asyncMemoize.ts'
+import { wait } from './wait.ts'
 
 describe('asyncMemoize', () => {
   test('ok', async () => {

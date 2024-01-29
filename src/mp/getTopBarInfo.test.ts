@@ -46,7 +46,7 @@ describe('getTopBarInfo', () => {
   })
 
   test('表现正常', async () => {
-    const { getTopBarInfo } = await import('./getTopBarInfo')
+    const { getTopBarInfo } = await import('./getTopBarInfo.ts')
 
     expect(getTopBarInfo()).toMatchSnapshot()
   })

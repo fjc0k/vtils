@@ -1,4 +1,4 @@
-import { formatBytes } from './formatBytes'
+import { formatBytes } from './formatBytes.ts'
 
 describe('formatBytes', () => {
   test('表现正常', () => {

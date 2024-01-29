@@ -1,4 +1,4 @@
-import { defaultIndexTo } from './defaultIndexTo'
+import { defaultIndexTo } from './defaultIndexTo.ts'
 
 describe('defaultIndexTo', () => {
   test('ok', () => {

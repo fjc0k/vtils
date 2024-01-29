@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks'
 import { useState } from 'react'
-import { useValidator } from './useValidator'
+import { useValidator } from './useValidator.ts'
 
 describe('useValidator', () => {
   describe('string', () => {

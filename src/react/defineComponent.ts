@@ -1,5 +1,5 @@
 import React from 'react'
-import { OptionalKeys } from '../types'
+import { OptionalKeys } from '../types/index.ts'
 
 /**
  * 定义组件的选项。
@@ -16,7 +16,7 @@ export type DefineComponentOptions<
   /**
    * 要转发的 ref。
    */
-  TRef extends any = never
+  TRef extends any = never,
 > = {
   /**
    * 可选属性的默认值。
@@ -57,7 +57,7 @@ export type DefineComponentOptions<
  */
 export function defineComponent<
   TProps extends Record<string, any>,
-  TRef extends any = any
+  TRef extends any = any,
 >(
   options: DefineComponentOptions<TProps, true, TRef>,
 ): React.ForwardRefExoticComponent<TProps & { ref?: React.Ref<TRef> }>
@@ -69,7 +69,8 @@ export function defineComponent<
  */
 export function defineComponent<
   TProps extends Record<string, any>,
-  TRef extends any = any
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  TRef extends any = any,
 >(options: DefineComponentOptions<TProps, false>): React.FC<TProps>
 
 export function defineComponent(

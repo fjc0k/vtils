@@ -1,4 +1,4 @@
-import { dataUrlRegExpBuilder } from '../regexp'
+import { dataUrlRegExpBuilder } from '../regexp/index.ts'
 
 const regExp = dataUrlRegExpBuilder.build({ exact: true })
 

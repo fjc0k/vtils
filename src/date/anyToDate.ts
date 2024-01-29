@@ -1,5 +1,5 @@
-import { isNumeric } from '../utils'
-import { parseISO, toDate } from 'date-fns/esm'
+import { parseISO, toDate } from 'date-fns'
+import { isNumeric } from '../utils/index.ts'
 
 /**
  * 增强版的 toDate，支持：

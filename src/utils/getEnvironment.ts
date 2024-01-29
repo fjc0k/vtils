@@ -1,11 +1,11 @@
-import { inAndroid } from './inAndroid'
-import { inBrowser } from './inBrowser'
-import { inDeno } from './inDeno'
-import { inIOS } from './inIOS'
-import { inMiniProgram } from './inMiniProgram'
-import { inNodeJS } from './inNodeJS'
-import { inTaro } from './inTaro'
-import { inWechatWebView } from './inWechatWebView'
+import { inAndroid } from './inAndroid.ts'
+import { inBrowser } from './inBrowser.ts'
+import { inDeno } from './inDeno.ts'
+import { inIOS } from './inIOS.ts'
+import { inMiniProgram } from './inMiniProgram.ts'
+import { inNodeJS } from './inNodeJS.ts'
+import { inTaro } from './inTaro.ts'
+import { inWechatWebView } from './inWechatWebView.ts'
 
 export interface GetEnvironmentResult {
   /** 浏览器 */

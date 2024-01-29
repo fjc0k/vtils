@@ -1,4 +1,4 @@
-import { ms as _ms } from '../utils'
+import { ms as _ms } from '../utils/index.ts'
 
 /**
  * @deprecated use `import { ms } from 'vtils'` instead

@@ -1,4 +1,4 @@
-import { makeConditionalArray } from './makeConditionalArray'
+import { makeConditionalArray } from './makeConditionalArray.ts'
 
 describe('makeConditionalArray', () => {
   test('ok', () => {

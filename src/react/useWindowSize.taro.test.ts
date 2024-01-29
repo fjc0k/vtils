@@ -1,6 +1,6 @@
 import * as Taro from '@tarojs/taro'
-import { AnyFunction } from '../types'
 import { renderHook } from '@testing-library/react-hooks'
+import { AnyFunction } from '../types/index.ts'
 
 describe('useWindowSize.taro', () => {
   const getSystemInfoSync: any = jest.fn().mockImplementation(() => ({
@@ -45,7 +45,7 @@ describe('useWindowSize.taro', () => {
   })
 
   test('表现正常', async () => {
-    const { useWindowSize } = await import('./useWindowSize.taro')
+    const { useWindowSize } = await import('./useWindowSize.taro.ts')
     const { result } = renderHook(() => useWindowSize())
 
     expect(getSystemInfoSync).toBeCalled().toBeCalledTimes(1)

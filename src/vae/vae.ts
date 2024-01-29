@@ -1,17 +1,17 @@
-import { IsAny, Nullable } from '../types'
-import { VaeArraySchema, VaeArraySchemaElementOf } from './VaeArraySchema'
-import { VaeBooleanSchema } from './VaeBooleanSchema'
-import { VaeDateSchema } from './VaeDateSchema'
+import { IsAny, Nullable } from '../types/index.ts'
+import { VaeArraySchema, VaeArraySchemaElementOf } from './VaeArraySchema.ts'
+import { VaeBooleanSchema } from './VaeBooleanSchema.ts'
+import { VaeDateSchema } from './VaeDateSchema.ts'
 import {
   VaeLocale,
   VaeLocaleBuilder,
   VaeLocaleMessage,
   VaeLocaleShape,
-} from './VaeLocale'
-import { VaeNumberSchema } from './VaeNumberSchema'
-import { VaeObjectSchema, VaeObjectSchemaShapeOf } from './VaeObjectSchema'
-import { VaeSchema } from './VaeSchema'
-import { VaeStringSchema } from './VaeStringSchema'
+} from './VaeLocale.ts'
+import { VaeNumberSchema } from './VaeNumberSchema.ts'
+import { VaeObjectSchema, VaeObjectSchemaShapeOf } from './VaeObjectSchema.ts'
+import { VaeSchema } from './VaeSchema.ts'
+import { VaeStringSchema } from './VaeStringSchema.ts'
 
 function string<T extends Nullable<string> = string>(
   schema: (schema: VaeStringSchema<T>) => VaeStringSchema<T>,
@@ -137,16 +137,16 @@ export const v = {
 }
 
 // @index('./Vae*.ts', f => `export * from '${f.path}'`)
-export * from './VaeArraySchema'
-export * from './VaeBooleanSchema'
-export * from './VaeDateSchema'
-export * from './VaeError'
-export * from './VaeIssue'
-export * from './VaeLocale'
-export * from './VaeNumberSchema'
-export * from './VaeObjectSchema'
-export * from './VaeSchema'
-export * from './VaeSchemaParseContext'
-export * from './VaeSchemaReachContext'
-export * from './VaeStringSchema'
+export * from './VaeArraySchema.ts'
+export * from './VaeBooleanSchema.ts'
+export * from './VaeDateSchema.ts'
+export * from './VaeError.ts'
+export * from './VaeIssue.ts'
+export * from './VaeLocale.ts'
+export * from './VaeNumberSchema.ts'
+export * from './VaeObjectSchema.ts'
+export * from './VaeSchema.ts'
+export * from './VaeSchemaParseContext.ts'
+export * from './VaeSchemaReachContext.ts'
+export * from './VaeStringSchema.ts'
 // @endindex

@@ -1,6 +1,6 @@
-import { AnyObject } from '../types'
-import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { last, mapValues } from '../utils'
+import { AnyObject } from '../types/index.ts'
+import { last, mapValues } from '../utils/index.ts'
+import { ensureInMiniProgram } from './ensureInMiniProgram.ts'
 
 /**
  * 获取当前页面的查询参数，已经对每个值执行了 decodeURIComponent。

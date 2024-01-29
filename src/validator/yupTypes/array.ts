@@ -1,6 +1,6 @@
-import { ArrayLocale, MixedLocale } from './Locale'
-import { GetSchema, MixedSchema } from './mixed'
-import { Refable } from './ref'
+import { ArrayLocale, MixedLocale } from './Locale.ts'
+import { GetSchema, MixedSchema } from './mixed.ts'
+import { Refable } from './ref.ts'
 
 export interface ArraySchema<T extends any = any> extends MixedSchema<T[]> {
   of(type: GetSchema<T>): this

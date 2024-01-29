@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { IsAny } from './IsAny'
+import { expectType } from '../dev/index.ts'
+import { IsAny } from './IsAny.ts'
 
 describe('IsAny', () => {
   test('不是 any', () => {

@@ -1,6 +1,6 @@
-import { NumberLocale } from './Locale'
-import { MixedSchema } from './mixed'
-import { Refable } from './ref'
+import { NumberLocale } from './Locale.ts'
+import { MixedSchema } from './mixed.ts'
+import { Refable } from './ref.ts'
 
 export interface NumberSchema<T extends number = number>
   extends MixedSchema<T> {

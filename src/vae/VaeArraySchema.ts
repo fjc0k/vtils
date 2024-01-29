@@ -1,7 +1,7 @@
-import { Nullable } from '../types'
-import { isArray } from '../utils'
-import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeSchema, VaeSchemaOf } from './VaeSchema'
+import { Nullable } from '../types/index.ts'
+import { isArray } from '../utils/index.ts'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale.ts'
+import { VaeSchema, VaeSchemaOf } from './VaeSchema.ts'
 
 export type VaeArraySchemaElementOf<T> = T extends Array<infer X>
   ? VaeSchemaOf<X>

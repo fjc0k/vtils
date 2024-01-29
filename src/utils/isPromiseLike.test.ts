@@ -1,4 +1,4 @@
-import { isPromiseLike } from './isPromiseLike'
+import { isPromiseLike } from './isPromiseLike.ts'
 
 describe('isPromiseLike', () => {
   test('不像 Promise', () => {

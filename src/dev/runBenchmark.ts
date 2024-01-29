@@ -1,5 +1,5 @@
-import Table from 'cli-table3'
 import { formatNumber, Options, Suite } from 'benchmark'
+import Table from 'cli-table3'
 
 export function runBenchmark(
   suites: Record<string, () => any>,

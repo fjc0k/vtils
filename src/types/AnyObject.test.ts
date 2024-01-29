@@ -1,5 +1,5 @@
-import { AnyObject } from './AnyObject'
-import { expectType } from '../dev'
+import { expectType } from '../dev/index.ts'
+import { AnyObject } from './AnyObject.ts'
 
 describe('AnyObject', () => {
   test('不是 object', () => {

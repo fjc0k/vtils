@@ -24,6 +24,7 @@
   "sideEffects": [
     "./validator/yup.js"
   ],
+  "type": "module",
   "exports": {
     ".": {
       "require": "./_cjs/utils/index.js",
@@ -132,7 +133,7 @@
     "benchmark": "^2.1.4",
     "cli-table3": "^0.6.0",
     "cuid": "^2.1.8",
-    "date-fns": "^2.24.0",
+    "date-fns": "^3.3.1",
     "decimal.js-light": "^2.5.1",
     "fast-xml-parser": "^3.18.0",
     "gcoord": "^0.3.2",
@@ -167,6 +168,7 @@
     "codecov": "3.8.3",
     "cross-env": "7.0.3",
     "eslint": "7.32.0",
+    "eslint-plugin-node": "^11.1.0",
     "execa": "5.1.1",
     "fs-extra": "10.0.0",
     "globby": "11.0.4",

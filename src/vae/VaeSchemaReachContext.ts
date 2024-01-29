@@ -1,4 +1,4 @@
-import { VaeSchema } from './VaeSchema'
+import { VaeSchema } from './VaeSchema.ts'
 
 export class VaeSchemaReachContext {
   schemas: Array<{

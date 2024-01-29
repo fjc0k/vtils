@@ -1,4 +1,4 @@
-import { NonEmptyArray } from './NonEmptyArray'
+import { NonEmptyArray } from './NonEmptyArray.ts'
 
 /**
  * 判断 `T` 是否是空数组。

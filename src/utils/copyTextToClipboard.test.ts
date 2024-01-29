@@ -1,4 +1,4 @@
-import { copyTextToClipboard } from './copyTextToClipboard'
+import { copyTextToClipboard } from './copyTextToClipboard.ts'
 
 describe('copyTextToClipboard', () => {
   document.execCommand = () => true

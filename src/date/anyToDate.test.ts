@@ -1,4 +1,4 @@
-import { anyToDate } from './anyToDate'
+import { anyToDate } from './anyToDate.ts'
 
 describe('anyToDate', () => {
   test('表现正常', () => {

@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
-import { submit } from './submit'
-import { SubmitActionPayload } from '../utils'
+import { SubmitActionPayload } from '../utils/index.ts'
+import { submit } from './submit.ts'
 
 /**
  * 对提交类行为的封装。

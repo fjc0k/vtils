@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 import { useLatest, useUpdateEffect } from 'react-use'
-import { Defined } from '../types'
+import { Defined } from '../types/index.ts'
 
 export type UseControllableValueOptions<
   TProps,

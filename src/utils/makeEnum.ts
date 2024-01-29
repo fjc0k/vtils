@@ -1,5 +1,5 @@
 import { castArray, invert } from 'lodash-uni'
-import { LiteralUnion, OneOrMore, ValueOf } from '../types'
+import { LiteralUnion, OneOrMore, ValueOf } from '../types/index.ts'
 
 export type EnumKey = string
 export type EnumValue = string | number | boolean

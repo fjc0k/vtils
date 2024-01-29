@@ -1,4 +1,4 @@
-import { loadCss } from './loadCss'
+import { loadCss } from './loadCss.ts'
 
 describe('loadCss', () => {
   const createElement = document.createElement.bind(document)

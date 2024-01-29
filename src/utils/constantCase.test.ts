@@ -1,4 +1,4 @@
-import { constantCase } from './constantCase'
+import { constantCase } from './constantCase.ts'
 
 describe('constantCase', () => {
   test('正常', () => {

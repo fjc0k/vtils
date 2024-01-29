@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useStaged } from './useStaged'
 import { useState } from 'react'
+import { useStaged } from './useStaged.ts'
 
 describe('useStaged', () => {
   test('表现正常', () => {

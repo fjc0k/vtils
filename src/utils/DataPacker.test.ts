@@ -1,4 +1,4 @@
-import { DataPacker } from './DataPacker'
+import { DataPacker } from './DataPacker.ts'
 
 describe('DataPacker', () => {
   const rawData = [

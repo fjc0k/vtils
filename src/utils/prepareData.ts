@@ -1,4 +1,4 @@
-import { isPromiseLike } from './isPromiseLike'
+import { isPromiseLike } from './isPromiseLike.ts'
 
 /**
  * 准备数据。

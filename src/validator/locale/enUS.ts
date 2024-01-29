@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { yup } from '../yup'
+import { yup } from '../yup.js'
 
 // ref: https://github.com/jquense/yup/blob/master/src/locale.js
 

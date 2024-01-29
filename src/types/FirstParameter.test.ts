@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { FirstParameter } from './FirstParameter'
+import { expectType } from '../dev/index.ts'
+import { FirstParameter } from './FirstParameter.ts'
 
 describe('FirstParameter', () => {
   test('表现正常', () => {

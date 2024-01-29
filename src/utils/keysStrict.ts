@@ -5,6 +5,6 @@ import { keys } from 'lodash-uni'
  *
  * @public
  */
-export const keysStrict = (keys as any) as <T extends Record<any, any>>(
+export const keysStrict = keys as any as <T extends Record<any, any>>(
   object: T,
 ) => Array<keyof T>

@@ -6,4 +6,4 @@
 
 /* istanbul ignore file */
 
-export * from './vae'
+export * from './vae.ts'

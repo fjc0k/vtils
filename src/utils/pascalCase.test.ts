@@ -1,4 +1,4 @@
-import { pascalCase } from './pascalCase'
+import { pascalCase } from './pascalCase.ts'
 
 describe('pascalCase', () => {
   test('正常', () => {

@@ -1,4 +1,4 @@
-import { createXml } from './createXml'
+import { createXml } from './createXml.ts'
 
 describe('createXml', () => {
   test('表现正常', () => {

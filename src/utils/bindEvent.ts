@@ -1,5 +1,5 @@
 /* eslint-disable prefer-rest-params, prefer-spread */
-import { AnyFunction } from '../types'
+import { AnyFunction } from '../types/index.ts'
 
 /**
  * 绑定事件函数。
@@ -52,7 +52,7 @@ export type BindEventFunction<T> = <
 
     // others
     : Record<string, any>,
-  K extends keyof E
+  K extends keyof E,
 >(
   type: K,
   callback: (this: T, ev: E[K]) => any,
@@ -73,7 +73,7 @@ export type BindEventFunction<T> = <
  * ```
  */
 export function bindEvent<
-  T extends Record<'addEventListener' | 'removeEventListener', AnyFunction>
+  T extends Record<'addEventListener' | 'removeEventListener', AnyFunction>,
 >(target: T): BindEventFunction<T> {
   return (type, callback, options) => {
     target.addEventListener(type, callback, options)

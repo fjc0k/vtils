@@ -1,10 +1,10 @@
-import { useWindowSize as _useWindowSize } from './useWindowSize'
 import {
   getSystemInfoSync,
   offWindowResize,
   onWindowResize,
 } from '@tarojs/taro'
 import { useEffect, useState } from 'react'
+import { useWindowSize as _useWindowSize } from './useWindowSize.ts'
 
 const getWindowSize = function (): ReturnType<typeof _useWindowSize> {
   const { windowWidth: width, windowHeight: height } = getSystemInfoSync()

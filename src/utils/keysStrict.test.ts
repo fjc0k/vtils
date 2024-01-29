@@ -1,5 +1,5 @@
 import { keys } from 'lodash-uni'
-import { keysStrict } from './keysStrict'
+import { keysStrict } from './keysStrict.ts'
 
 describe(keysStrict.name, () => {
   test('就是 keys 的严格类型版', () => {

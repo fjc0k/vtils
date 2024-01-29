@@ -1,4 +1,4 @@
-import { loopUntil, LoopUntilRetryLimitExceededError } from './loopUntil'
+import { loopUntil, LoopUntilRetryLimitExceededError } from './loopUntil.ts'
 
 describe('loopUntil', () => {
   test('同步正常', async () => {

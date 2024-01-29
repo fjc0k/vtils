@@ -1,6 +1,6 @@
 import { range } from 'lodash-uni'
-import { runBenchmark } from '../dev'
-import { TreeData } from './TreeData'
+import { runBenchmark } from '../dev/index.ts'
+import { TreeData } from './TreeData.ts'
 
 // @ts-ignore
 import treeTool from 'tree-tool'

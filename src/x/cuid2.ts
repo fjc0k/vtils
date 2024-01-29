@@ -1,5 +1,5 @@
 import { init } from '@paralleldrive/cuid2'
-import { memoize } from '../utils'
+import { memoize } from '../utils/index.ts'
 
 const createIdFactory = memoize(
   (length: number) => init({ length }),

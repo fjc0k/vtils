@@ -1,8 +1,8 @@
-import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { isPromiseLike } from '../utils'
-import { miniProgramBus } from './miniProgramBus'
 import { useEffect } from 'react'
-import { useLatest } from '../react'
+import { useLatest } from '../react/index.ts'
+import { isPromiseLike } from '../utils/index.ts'
+import { ensureInMiniProgram } from './ensureInMiniProgram.ts'
+import { miniProgramBus } from './miniProgramBus.ts'
 
 export function usePullDownRefresh(callback: () => any): void {
   const latestCallback = useLatest(callback)

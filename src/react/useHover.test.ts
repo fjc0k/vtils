@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useHover } from './useHover'
-import { wait } from '../utils'
+import { wait } from '../utils/index.ts'
+import { useHover } from './useHover.ts'
 
 describe('useHover', () => {
   test('表现正常', async () => {

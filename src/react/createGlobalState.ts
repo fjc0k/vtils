@@ -1,11 +1,11 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
-import { EventBus } from '../utils'
+import { EventBus } from '../utils/index.ts'
 
 export type CreateGlobalStateState = any
 
 export type CreateGlobalStateCustomResult<
   S extends CreateGlobalStateState | undefined,
-  R = never
+  R = never,
 > = (payload: {
   state: CreateGlobalStateResultResult<S, never>[0]
   setState: CreateGlobalStateResultResult<S, never>[1]
@@ -13,12 +13,12 @@ export type CreateGlobalStateCustomResult<
 
 export type CreateGlobalStateResultResult<
   S extends CreateGlobalStateState | undefined,
-  R = never
+  R = never,
 > = [R] extends [never] ? readonly [S, Dispatch<SetStateAction<S>>] : R
 
 export interface CreateGlobalStateResult<
   S extends CreateGlobalStateState | undefined,
-  R = never
+  R = never,
 > {
   (): CreateGlobalStateResultResult<S, R>
   getState(): S
@@ -66,18 +66,17 @@ export function createGlobalState<S extends CreateGlobalStateState, R = never>(
   }>()
   let currentGlobalState: S | undefined = initialState
   const getGlobalState: () => S | undefined = () => currentGlobalState
-  const setGlobalState: Dispatch<
-    SetStateAction<S | undefined>
-  > = nextGlobalState => {
-    if (typeof nextGlobalState === 'function') {
-      nextGlobalState = (nextGlobalState as any)(currentGlobalState)
+  const setGlobalState: Dispatch<SetStateAction<S | undefined>> =
+    nextGlobalState => {
+      if (typeof nextGlobalState === 'function') {
+        nextGlobalState = (nextGlobalState as any)(currentGlobalState)
+      }
+      if (nextGlobalState !== currentGlobalState) {
+        const prevGlobalState = currentGlobalState
+        currentGlobalState = nextGlobalState as any
+        bus.emit('setGlobalState', nextGlobalState as any, prevGlobalState)
+      }
     }
-    if (nextGlobalState !== currentGlobalState) {
-      const prevGlobalState = currentGlobalState
-      currentGlobalState = nextGlobalState as any
-      bus.emit('setGlobalState', nextGlobalState as any, prevGlobalState)
-    }
-  }
   const setGlobalStatePartial: Dispatch<
     SetStateAction<Partial<S> | undefined>
   > = nextGlobalState => {

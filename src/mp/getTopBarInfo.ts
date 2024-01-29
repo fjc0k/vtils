@@ -1,4 +1,4 @@
-import { ensureInMiniProgram } from './ensureInMiniProgram'
+import { ensureInMiniProgram } from './ensureInMiniProgram.ts'
 
 export interface GetTopBarInfoResult {
   /**

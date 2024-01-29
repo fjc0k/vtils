@@ -1,0 +1,60 @@
+diff --git a/node_modules/eslint-plugin-node/lib/rules/file-extension-in-import.js b/node_modules/eslint-plugin-node/lib/rules/file-extension-in-import.js
+index 529433a..8e57227 100644
+--- a/node_modules/eslint-plugin-node/lib/rules/file-extension-in-import.js
++++ b/node_modules/eslint-plugin-node/lib/rules/file-extension-in-import.js
+@@ -43,7 +43,7 @@ module.exports = {
+         },
+         fixable: "code",
+         messages: {
+-            requireExt: "require file extension '{{ext}}'.",
++            requireExt: "1require file extension '{{ext}}'.",
+             forbidExt: "forbid file extension '{{ext}}'.",
+         },
+         schema: [
+@@ -79,9 +79,23 @@ module.exports = {
+                 return
+             }
+ 
++            console.log({filePath, name})
++
++            if (filePath.includes('node_modules')) {
++                return
++            }
++
+             // Get extension.
+             const originalExt = path.extname(name)
+-            const resolvedExt = path.extname(filePath)
++            const resolvedExt = (
++                filePath.endsWith('/index.ts')
++                || filePath.endsWith('/index.js')
++            )
++                && !name.endsWith('index')
++                && !name.endsWith('index.ts')
++                && !name.endsWith('index.js')
++                ? '/' + path.basename(filePath)
++                : path.extname(filePath)
+             const existingExts = getExistingExtensions(filePath)
+             if (!resolvedExt && existingExts.length !== 1) {
+                 // Ignore if the file extension could not be determined one.
+@@ -97,6 +111,7 @@ module.exports = {
+                     messageId: "requireExt",
+                     data: { ext },
+                     fix(fixer) {
++                        console.log({existingExts,ext})
+                         if (existingExts.length !== 1) {
+                             return null
+                         }
+diff --git a/node_modules/eslint-plugin-node/lib/util/get-try-extensions.js b/node_modules/eslint-plugin-node/lib/util/get-try-extensions.js
+index bed5f60..d3e7982 100644
+--- a/node_modules/eslint-plugin-node/lib/util/get-try-extensions.js
++++ b/node_modules/eslint-plugin-node/lib/util/get-try-extensions.js
+@@ -40,8 +40,7 @@ module.exports = function getTryExtensions(context, optionIndex = 0) {
+ module.exports.schema = {
+     type: "array",
+     items: {
+-        type: "string",
+-        pattern: "^\\.",
++        type: "string"
+     },
+     uniqueItems: true,
+ }

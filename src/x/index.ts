@@ -7,13 +7,13 @@
 /* istanbul ignore file */
 
 // @index(['./**/*.ts', '!./**/*.test.*', '!**/__*'], f => `export * from '${f.path}'`)
-export * from './createXml'
-export * from './cuid'
-export * from './cuid2'
-export * from './nanoid'
-export * from './parseXml'
-export * from './RedisCookieJar'
-export * from './sha1'
-export * from './uuid'
-export * from './WechatMessageCrypto'
+export * from './createXml.ts'
+export * from './cuid.ts'
+export * from './cuid2.ts'
+export * from './nanoid.ts'
+export * from './parseXml.ts'
+export * from './RedisCookieJar.ts'
+export * from './sha1.ts'
+export * from './uuid.ts'
+export * from './WechatMessageCrypto.ts'
 // @endindex

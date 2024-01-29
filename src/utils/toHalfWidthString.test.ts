@@ -1,4 +1,4 @@
-import { toHalfWidthString } from './toHalfWidthString'
+import { toHalfWidthString } from './toHalfWidthString.ts'
 
 describe('toHalfWidthString', () => {
   test('ok', () => {

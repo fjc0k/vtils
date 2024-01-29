@@ -1,4 +1,4 @@
-import { getWechatPublicAccountQrcodeUrl } from './getWechatPublicAccountQrcodeUrl'
+import { getWechatPublicAccountQrcodeUrl } from './getWechatPublicAccountQrcodeUrl.ts'
 
 describe('getWechatPublicAccountQrcodeUrl', () => {
   test('表现正常', () => {

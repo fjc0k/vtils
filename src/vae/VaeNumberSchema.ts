@@ -1,7 +1,7 @@
-import { Nullable } from '../types'
-import { isInteger, isNumeric, toNumber } from '../utils'
-import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeSchema } from './VaeSchema'
+import { Nullable } from '../types/index.ts'
+import { isInteger, isNumeric, toNumber } from '../utils/index.ts'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale.ts'
+import { VaeSchema } from './VaeSchema.ts'
 
 export class VaeNumberSchema<
   T0 extends Nullable<number> = number,

@@ -1,4 +1,4 @@
-import { createUrlQueryString } from './createUrlQueryString'
+import { createUrlQueryString } from './createUrlQueryString.ts'
 
 describe('createUrlQueryString', () => {
   test('表现正常', () => {

@@ -1,7 +1,7 @@
-import { Nullable } from '../types'
-import { isBoolean } from '../utils'
-import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeSchema } from './VaeSchema'
+import { Nullable } from '../types/index.ts'
+import { isBoolean } from '../utils/index.ts'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale.ts'
+import { VaeSchema } from './VaeSchema.ts'
 
 export class VaeBooleanSchema<
   T0 extends Nullable<boolean> = boolean,

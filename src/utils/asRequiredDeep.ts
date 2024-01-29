@@ -1,4 +1,4 @@
-import { RequiredDeep } from '../types'
+import { RequiredDeep } from '../types/index.ts'
 
 /**
  * 将给定的值 `RequiredDeep` 化。

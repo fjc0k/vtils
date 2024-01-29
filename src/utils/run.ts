@@ -1,4 +1,4 @@
-import { isPromiseLike } from './isPromiseLike'
+import { isPromiseLike } from './isPromiseLike.ts'
 
 /**
  * 以数组的方式返回函数执行的结果，如果函数返回一个异步操作，将会执行该异步操作并将其结果作为函数执行的结果返回。

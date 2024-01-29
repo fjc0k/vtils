@@ -1,5 +1,5 @@
-import { AnyAsyncFunction } from './AnyAsyncFunction'
-import { expectType } from '../dev'
+import { expectType } from '../dev/index.ts'
+import { AnyAsyncFunction } from './AnyAsyncFunction.ts'
 
 describe('AnyAsyncFunction', () => {
   test('不是异步 function', () => {

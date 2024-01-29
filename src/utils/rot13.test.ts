@@ -1,4 +1,4 @@
-import { rot13 } from './rot13'
+import { rot13 } from './rot13.ts'
 
 describe('rot13', () => {
   test('表现正常', () => {

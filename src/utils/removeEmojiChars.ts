@@ -1,4 +1,4 @@
-import { emojiRegExpBuilder } from '../regexp'
+import { emojiRegExpBuilder } from '../regexp/index.ts'
 
 const regExp = emojiRegExpBuilder.build({ global: true })
 

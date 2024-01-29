@@ -23,7 +23,7 @@ describe('useLocalStorage', () => {
   })
 
   test('表现正常', async () => {
-    const { useLocalStorage } = await import('./useLocalStorage.taro')
+    const { useLocalStorage } = await import('./useLocalStorage.taro.ts')
     const { result: resx } = renderHook(() => useLocalStorage<string>('x'))
     expect(resx.current[0]).toBe(undefined)
     act(() => resx.current[1]('1'))

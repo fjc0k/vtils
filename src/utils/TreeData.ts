@@ -1,5 +1,5 @@
-import { cloneDeepFast } from './cloneDeepFast'
-import { Merge, OneOrMore } from '../types'
+import { Merge, OneOrMore } from '../types/index.ts'
+import { cloneDeepFast } from './cloneDeepFast.ts'
 
 export interface TreeDataNode extends Record<any, any> {}
 

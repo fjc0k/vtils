@@ -1,5 +1,5 @@
 import { nthArg } from 'lodash-uni'
-import { sampleBy } from './sampleBy'
+import { sampleBy } from './sampleBy.ts'
 
 describe('sampleBy', () => {
   test('ok', () => {

@@ -1,6 +1,6 @@
-import { AnyObject, Defined } from '../types'
-import { EventBus, EventBusBeforeOn, EventBusListener } from '../utils'
-import { patchMiniProgram } from './patchMiniProgram'
+import { AnyObject, Defined } from '../types/index.ts'
+import { EventBus, EventBusBeforeOn, EventBusListener } from '../utils/index.ts'
+import { patchMiniProgram } from './patchMiniProgram.ts'
 
 export interface MiniProgramBusRouteChangePageInfo {
   url: string

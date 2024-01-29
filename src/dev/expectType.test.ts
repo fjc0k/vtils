@@ -1,4 +1,4 @@
-import { expectType } from './expectType'
+import { expectType } from './expectType.ts'
 
 describe('expectType', () => {
   test('ok', () => {

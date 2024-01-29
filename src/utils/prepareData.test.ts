@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { prepareData } from './prepareData'
+import { expectType } from '../dev/index.ts'
+import { prepareData } from './prepareData.ts'
 
 describe('prepareData', () => {
   test('ok', async () => {

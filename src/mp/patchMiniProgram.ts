@@ -1,10 +1,10 @@
-import { AnyObject } from '../types'
-import { currentPageListeners, miniProgramBus } from './miniProgramBus'
-import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { getCurrentPagePath } from './getCurrentPagePath'
-import { getCurrentPageQuery } from './getCurrentPageQuery'
-import { getCurrentPageUrl } from './getCurrentPageUrl'
-import { last, MiniProgramApi } from '../utils'
+import { AnyObject } from '../types/index.ts'
+import { MiniProgramApi, last } from '../utils/index.ts'
+import { ensureInMiniProgram } from './ensureInMiniProgram.ts'
+import { getCurrentPagePath } from './getCurrentPagePath.ts'
+import { getCurrentPageQuery } from './getCurrentPageQuery.ts'
+import { getCurrentPageUrl } from './getCurrentPageUrl.ts'
+import { currentPageListeners, miniProgramBus } from './miniProgramBus.ts'
 
 let prevPagesInfo:
   | {

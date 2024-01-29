@@ -1,5 +1,5 @@
-import { getTopBarInfo, GetTopBarInfoResult } from './getTopBarInfo'
 import { useMemo } from 'react'
+import { getTopBarInfo, GetTopBarInfoResult } from './getTopBarInfo.ts'
 
 /**
  * 获取顶栏信息。

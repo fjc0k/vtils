@@ -1,4 +1,4 @@
-import { sha1 } from './sha1'
+import { sha1 } from './sha1.ts'
 
 describe('sha1', () => {
   test('表现正常', () => {

@@ -1,6 +1,6 @@
-import { dataUrlRegExpBuilder } from '../regexp'
-import { LiteralUnion } from '../types'
-import { parseUrlQueryString } from './parseUrlQueryString'
+import { dataUrlRegExpBuilder } from '../regexp/index.ts'
+import { LiteralUnion } from '../types/index.ts'
+import { parseUrlQueryString } from './parseUrlQueryString.ts'
 
 const regExp = dataUrlRegExpBuilder.build({
   exact: true,

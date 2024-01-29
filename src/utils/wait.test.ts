@@ -1,5 +1,5 @@
-import { run } from './run'
-import { wait } from './wait'
+import { run } from './run.ts'
+import { wait } from './wait.ts'
 
 describe('wait', () => {
   test('表现正常', async () => {

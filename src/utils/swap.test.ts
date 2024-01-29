@@ -1,4 +1,4 @@
-import { swap } from './swap'
+import { swap } from './swap.ts'
 
 describe('swap', () => {
   test('是原地交换且交换正常', () => {

@@ -1,4 +1,4 @@
-import { toFullWidthString } from './toFullWidthString'
+import { toFullWidthString } from './toFullWidthString.ts'
 
 describe('toFullWidthString', () => {
   test('ok', () => {

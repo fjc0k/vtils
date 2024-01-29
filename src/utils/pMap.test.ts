@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { pMap } from './pMap'
+import { expectType } from '../dev/index.ts'
+import { pMap } from './pMap.ts'
 
 describe('pMap', () => {
   test('表现正常', async () => {

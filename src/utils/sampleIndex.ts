@@ -1,5 +1,5 @@
 import { nthArg } from 'lodash-uni'
-import { sampleBy } from './sampleBy'
+import { sampleBy } from './sampleBy.ts'
 
 /**
  * 从集合中随机获得一个元素的索引（数组）或键（对象）。

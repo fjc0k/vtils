@@ -1,4 +1,4 @@
-import { ensureInMiniProgram } from './ensureInMiniProgram'
+import { ensureInMiniProgram } from './ensureInMiniProgram.ts'
 
 /**
  * 关闭当前页面，返回上一页面或多级页面。

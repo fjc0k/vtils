@@ -1,7 +1,7 @@
 import * as Taro from '@tarojs/taro'
 import { act, renderHook } from '@testing-library/react-hooks'
-import { AnyFunction } from '../types'
 import { useState } from 'react'
+import { AnyFunction } from '../types/index.ts'
 
 describe('useTitle.taro', () => {
   const setNavigationBarTitle: AnyFunction = jest.fn()
@@ -17,7 +17,7 @@ describe('useTitle.taro', () => {
   })
 
   test('表现正常', async () => {
-    const { useTitle } = await import('./useTitle.taro')
+    const { useTitle } = await import('./useTitle.taro.ts')
     const { result } = renderHook(() => {
       const [title, setTitle] = useState('')
       useTitle(title)

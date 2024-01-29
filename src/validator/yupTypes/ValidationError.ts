@@ -1,4 +1,4 @@
-import { LocaleValue, LocaleValueFnParams } from './Locale'
+import { LocaleValue, LocaleValueFnParams } from './Locale.ts'
 
 export declare class ValidationError {
   value: any

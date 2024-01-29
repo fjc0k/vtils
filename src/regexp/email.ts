@@ -1,4 +1,4 @@
-import { RegExpBuilder } from './RegExpBuilder'
+import { RegExpBuilder } from './RegExpBuilder.ts'
 
 // https://github.com/colinhacks/zod/blob/master/src/types.ts#LL560C19-L560C19
 const baseRegExp =

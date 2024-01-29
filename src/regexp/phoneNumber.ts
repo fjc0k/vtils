@@ -1,4 +1,4 @@
-import { RegExpBuilder } from './RegExpBuilder'
+import { RegExpBuilder } from './RegExpBuilder.ts'
 
 const baseRegExp = /1[3-9][0-9]{9}/
 

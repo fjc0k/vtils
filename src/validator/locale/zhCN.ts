@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { yup } from '../yup'
+import { yup } from '../yup.js'
 
 export const getZhCN = (options: {
   getLabel: (params: yup.LocaleValueFnParams) => string

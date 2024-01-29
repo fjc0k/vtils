@@ -1,4 +1,4 @@
-import { inMiniProgram } from './inMiniProgram'
+import { inMiniProgram } from './inMiniProgram.ts'
 
 const fakeMiniProgramFactory: Partial<WechatMiniprogram.Wx> = {
   getSystemInfoSync() {

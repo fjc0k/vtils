@@ -1,6 +1,6 @@
-import { bindEvent } from './bindEvent'
-import { LiteralUnion } from '../types'
 import { toArray } from 'lodash-uni'
+import { LiteralUnion } from '../types/index.ts'
+import { bindEvent } from './bindEvent.ts'
 
 /**
  * 选择文件。

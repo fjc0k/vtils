@@ -1,4 +1,4 @@
-import { codepointToCharacter } from './codepointToCharacter'
+import { codepointToCharacter } from './codepointToCharacter.ts'
 
 describe('codepointToCharacter', () => {
   test('ok', () => {

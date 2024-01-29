@@ -1,5 +1,5 @@
-import { getCurrentPageQuery } from './getCurrentPageQuery'
-import { parseUrlQueryString } from '../utils'
+import { parseUrlQueryString } from '../utils/index.ts'
+import { getCurrentPageQuery } from './getCurrentPageQuery.ts'
 
 export type GetSceneParamsParser<T> =
   | 'searchParams'

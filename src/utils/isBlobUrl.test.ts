@@ -1,4 +1,4 @@
-import { isBlobUrl } from './isBlobUrl'
+import { isBlobUrl } from './isBlobUrl.ts'
 
 describe('isBlobUrl', () => {
   test('表现正常', () => {

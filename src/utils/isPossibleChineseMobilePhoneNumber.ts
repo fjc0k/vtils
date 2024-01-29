@@ -1,4 +1,4 @@
-import { phoneNumberRegExpBuilder } from '../regexp'
+import { phoneNumberRegExpBuilder } from '../regexp/index.ts'
 
 const regExp = phoneNumberRegExpBuilder.build({ exact: true })
 

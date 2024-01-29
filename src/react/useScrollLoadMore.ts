@@ -1,10 +1,10 @@
 import { DependencyList, useEffect } from 'react'
 import {
-  useLoadMore,
   UseLoadMoreResult,
   UseLoadMoreService,
-} from './useLoadMore'
-import { useReachBottom } from './useReachBottom'
+  useLoadMore,
+} from './useLoadMore.ts'
+import { useReachBottom } from './useReachBottom.ts'
 
 /**
  * @public

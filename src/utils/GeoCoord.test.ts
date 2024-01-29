@@ -1,4 +1,4 @@
-import { GeoCoord } from './GeoCoord'
+import { GeoCoord } from './GeoCoord.ts'
 
 describe('GeoCoord', () => {
   test('ok', () => {

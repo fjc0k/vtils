@@ -8,7 +8,7 @@ module.exports = {
     },
     {
       filename: 'README.md',
-      updater: '.versionrc.README-updater.js',
+      updater: '.versionrc.README-updater.cjs',
     },
   ],
 }

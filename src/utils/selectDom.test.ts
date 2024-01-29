@@ -3,7 +3,7 @@ import {
   selectElementAll,
   selectElementExists,
   selectElementLast,
-} from './selectDom'
+} from './selectDom.ts'
 
 describe('selectDom', () => {
   beforeAll(() => {

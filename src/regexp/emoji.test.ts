@@ -1,4 +1,4 @@
-import { emojiRegExpBuilder } from './emoji'
+import { emojiRegExpBuilder } from './emoji.ts'
 
 describe('emojiRegExpBuilder', () => {
   test('test', () => {

@@ -1,6 +1,6 @@
 import React from 'react'
-import { renderComponent } from './renderComponent'
-import { wait } from '../utils'
+import { wait } from '../utils/index.ts'
+import { renderComponent } from './renderComponent.ts'
 
 describe('renderComponent', () => {
   describe('渲染正常', () => {
@@ -10,12 +10,8 @@ describe('renderComponent', () => {
       )
     }
 
-    const {
-      incrementalRerender,
-      partialRerender,
-      fullRerender,
-      destroy,
-    } = renderComponent(Test, { a: -2 })
+    const { incrementalRerender, partialRerender, fullRerender, destroy } =
+      renderComponent(Test, { a: -2 })
 
     const getSum = () => {
       const sum = document.querySelector('.test')?.innerHTML || ''
@@ -77,11 +73,8 @@ describe('renderComponent', () => {
     }
     const handleClick = jest.fn()
     const afterClick = jest.fn()
-    const {
-      incrementalRerender,
-      partialRerender,
-      fullRerender,
-    } = renderComponent(Test, { onClick: handleClick }, { onClick: afterClick })
+    const { incrementalRerender, partialRerender, fullRerender } =
+      renderComponent(Test, { onClick: handleClick }, { onClick: afterClick })
 
     test('注入回调正常', async () => {
       document.querySelector<HTMLDivElement>('.test2')?.click()

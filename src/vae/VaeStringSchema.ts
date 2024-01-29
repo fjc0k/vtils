@@ -1,4 +1,4 @@
-import { Nullable } from '../types'
+import { Nullable } from '../types/index.ts'
 import {
   endsWith,
   includes,
@@ -10,9 +10,9 @@ import {
   isString,
   isUrl,
   startsWith,
-} from '../utils'
-import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
-import { VaeSchema } from './VaeSchema'
+} from '../utils/index.ts'
+import { VaeLocale, VaeLocaleMessage } from './VaeLocale.ts'
+import { VaeSchema } from './VaeSchema.ts'
 
 export class VaeStringSchema<
   T0 extends Nullable<string> = string,

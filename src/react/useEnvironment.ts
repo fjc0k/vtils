@@ -1,5 +1,5 @@
-import { getEnvironment, GetEnvironmentResult } from '../utils'
 import { useMemo } from 'react'
+import { getEnvironment, GetEnvironmentResult } from '../utils/index.ts'
 
 /**
  * 获取运行环境信息。

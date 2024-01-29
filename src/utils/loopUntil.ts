@@ -1,6 +1,6 @@
-import { AsyncOrSync, OneOrMore } from '../types'
 import { sample } from 'lodash-uni'
-import { wait } from './wait'
+import { AsyncOrSync, OneOrMore } from '../types/index.ts'
+import { wait } from './wait.ts'
 
 export interface LoopUntilOptions {
   /**

@@ -1,4 +1,4 @@
-import { blankCharsRegExpBuilder } from '../regexp'
+import { blankCharsRegExpBuilder } from '../regexp/index.ts'
 
 const regExp = blankCharsRegExpBuilder.build({ global: true })
 

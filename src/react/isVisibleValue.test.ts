@@ -1,4 +1,4 @@
-import { isVisibleValue } from './isVisibleValue'
+import { isVisibleValue } from './isVisibleValue.ts'
 
 describe('isVisibleValue', () => {
   test('不是', () => {

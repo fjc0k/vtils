@@ -1,4 +1,4 @@
-import { isPossibleChineseMobilePhoneNumber } from './isPossibleChineseMobilePhoneNumber'
+import { isPossibleChineseMobilePhoneNumber } from './isPossibleChineseMobilePhoneNumber.ts'
 
 describe('isPossibleChineseMobilePhoneNumber', () => {
   test('不可能是中国的手机号码', () => {

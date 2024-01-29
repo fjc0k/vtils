@@ -1,4 +1,4 @@
-import { makeEnum } from './makeEnum'
+import { makeEnum } from './makeEnum.ts'
 
 describe('makeEnum', () => {
   test('支持数字', () => {

@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { OneOrMore } from './OneOrMore'
+import { expectType } from '../dev/index.ts'
+import { OneOrMore } from './OneOrMore.ts'
 
 describe('OneOrMore', () => {
   test('表现正常', () => {

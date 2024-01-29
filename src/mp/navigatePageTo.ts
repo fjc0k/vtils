@@ -1,8 +1,8 @@
-import { AnyObject } from '../types'
-import { createUrlQueryString, isUrl } from '../utils'
-import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { getMiniProgramConfig } from './miniProgramConfig'
-import { miniProgramBus } from './miniProgramBus'
+import { AnyObject } from '../types/index.ts'
+import { createUrlQueryString, isUrl } from '../utils/index.ts'
+import { ensureInMiniProgram } from './ensureInMiniProgram.ts'
+import { miniProgramBus } from './miniProgramBus.ts'
+import { getMiniProgramConfig } from './miniProgramConfig.ts'
 
 /**
  * 跳转至某个页面，跳转失败时会尝试切换到 Tab 页。
@@ -52,7 +52,7 @@ export function navigatePageTo(
       const navigateTo = () =>
         new Promise((resolve, reject) => {
           ;(redirect
-            ? ((mp.redirectTo as any) as typeof mp.navigateTo)
+            ? (mp.redirectTo as any as typeof mp.navigateTo)
             : mp.navigateTo)({
             url: url,
             success: resolve,

@@ -1,4 +1,4 @@
-import { useInterval } from './useInterval'
+import { useInterval } from './useInterval.ts'
 
 describe('useInterval', () => {
   test('ok', () => {

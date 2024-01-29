@@ -1,6 +1,6 @@
-import { AnyFunction } from '../types'
-import { wait } from './wait'
-import { Wechat } from './Wechat'
+import { AnyFunction } from '../types/index.ts'
+import { wait } from './wait.ts'
+import { Wechat } from './Wechat.ts'
 
 describe('Wechat', () => {
   beforeAll(() => {

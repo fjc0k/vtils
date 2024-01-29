@@ -1,4 +1,4 @@
-import { getSmsUrl } from './getSmsUrl'
+import { getSmsUrl } from './getSmsUrl.ts'
 
 describe('getSmsUrl', () => {
   test('ok', () => {

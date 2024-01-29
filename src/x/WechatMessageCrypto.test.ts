@@ -1,4 +1,4 @@
-import { WechatMessageCrypto } from './WechatMessageCrypto'
+import { WechatMessageCrypto } from './WechatMessageCrypto.ts'
 
 jest.mock('crypto', () => ({
   ...(jest.requireActual('crypto') as any),

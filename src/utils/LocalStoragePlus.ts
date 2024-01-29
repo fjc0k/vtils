@@ -1,4 +1,4 @@
-import { JsonValue } from '../types'
+import { JsonValue } from '../types/index.ts'
 
 export interface LocalStoragePlusOptions {
   /** 存储键 */

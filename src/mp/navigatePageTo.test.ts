@@ -45,20 +45,20 @@ describe('navigatePageTo', () => {
   })
 
   test('表现正常', async () => {
-    const { navigatePageTo } = await import('./navigatePageTo')
+    const { navigatePageTo } = await import('./navigatePageTo.ts')
     await navigatePageTo('/')
     expect(navigateTo).toBeCalled().toBeCalledTimes(1)
   })
 
   test('redirect 正常', async () => {
-    const { navigatePageTo } = await import('./navigatePageTo')
+    const { navigatePageTo } = await import('./navigatePageTo.ts')
     await navigatePageTo('/', undefined, true)
     expect(navigateTo).not.toBeCalled()
     expect(redirectTo).toBeCalled().toBeCalledTimes(1)
   })
 
   test('switchTab 兜底', async () => {
-    const { navigatePageTo } = await import('./navigatePageTo')
+    const { navigatePageTo } = await import('./navigatePageTo.ts')
     await navigatePageTo('/fail')
     expect(navigateTo).toBeCalled().toBeCalledTimes(1)
     expect(redirectTo).not.toBeCalled()
@@ -66,8 +66,8 @@ describe('navigatePageTo', () => {
   })
 
   test('支持 WEB URL', async () => {
-    const { navigatePageTo } = await import('./navigatePageTo')
-    const { setMiniProgramConfig } = await import('./miniProgramConfig')
+    const { navigatePageTo } = await import('./navigatePageTo.ts')
+    const { setMiniProgramConfig } = await import('./miniProgramConfig.ts')
     setMiniProgramConfig({
       webUrlToMiniProgramUrl: url => `/webview?url=${encodeURIComponent(url)}`,
     })
@@ -83,7 +83,7 @@ describe('navigatePageTo', () => {
   })
 
   test('无 query，支持 query', async () => {
-    const { navigatePageTo } = await import('./navigatePageTo')
+    const { navigatePageTo } = await import('./navigatePageTo.ts')
     await navigatePageTo('/detail', { id: 1 })
     expect(navigateTo)
       .toBeCalled()
@@ -96,7 +96,7 @@ describe('navigatePageTo', () => {
   })
 
   test('有 query，支持 query', async () => {
-    const { navigatePageTo } = await import('./navigatePageTo')
+    const { navigatePageTo } = await import('./navigatePageTo.ts')
     await navigatePageTo('/detail?key=2', { id: 1 })
     expect(navigateTo)
       .toBeCalled()

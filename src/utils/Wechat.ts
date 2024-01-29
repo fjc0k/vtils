@@ -1,7 +1,7 @@
 import { mapValues, noop } from 'lodash-uni'
-import { EventBus, EventBusOffListener } from './EventBus'
-import { asyncLimit } from './asyncLimit'
-import { LoadResourceUrlType, loadResource } from './loadResource'
+import { EventBus, EventBusOffListener } from './EventBus.ts'
+import { asyncLimit } from './asyncLimit.ts'
+import { LoadResourceUrlType, loadResource } from './loadResource.ts'
 
 declare const wx: any
 

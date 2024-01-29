@@ -1,12 +1,12 @@
-import { ArraySchema } from './array'
-import { BooleanSchema } from './boolean'
-import { DateSchema } from './date'
-import { LocaleValue, MixedLocale } from './Locale'
-import { NumberSchema } from './number'
-import { ObjectSchema } from './object'
-import { Refable } from './ref'
-import { StringSchema } from './string'
-import { ValidationError } from './ValidationError'
+import { ArraySchema } from './array.ts'
+import { BooleanSchema } from './boolean.ts'
+import { DateSchema } from './date.ts'
+import { LocaleValue, MixedLocale } from './Locale.ts'
+import { NumberSchema } from './number.ts'
+import { ObjectSchema } from './object.ts'
+import { Refable } from './ref.ts'
+import { StringSchema } from './string.ts'
+import { ValidationError } from './ValidationError.ts'
 
 export interface SchemaDescription {
   type: string

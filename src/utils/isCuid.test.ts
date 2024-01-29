@@ -1,4 +1,4 @@
-import { isCuid } from './isCuid'
+import { isCuid } from './isCuid.ts'
 
 describe('isCuid', () => {
   test('ok', () => {

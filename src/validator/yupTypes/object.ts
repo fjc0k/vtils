@@ -1,5 +1,5 @@
-import { ObjectLocale } from './Locale'
-import { GetObjectSchema, MixedSchema, SchemaValidateOptions } from './mixed'
+import { ObjectLocale } from './Locale.ts'
+import { GetObjectSchema, MixedSchema, SchemaValidateOptions } from './mixed.ts'
 
 export interface ObjectSchema<T extends {} = {}> extends MixedSchema<T> {
   shape(fields: GetObjectSchema<T>, noSortEdges?: Array<[string, string]>): this

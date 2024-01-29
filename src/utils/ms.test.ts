@@ -1,4 +1,4 @@
-import { ms } from './ms'
+import { ms } from './ms.ts'
 
 describe('ms', () => {
   test('纯数字正常', () => {

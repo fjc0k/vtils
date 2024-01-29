@@ -1,4 +1,4 @@
-import { chooseFile } from './chooseFile'
+import { chooseFile } from './chooseFile.ts'
 
 describe('chooseFile', () => {
   // @ts-ignore

@@ -1,4 +1,4 @@
-import { assign } from '../utils'
+import { assign } from '../utils/index.ts'
 
 export interface MiniProgramConfig {
   webUrlToMiniProgramUrl?: (url: string) => string

@@ -1,4 +1,4 @@
-import { emailRegExpBuilder } from '../regexp'
+import { emailRegExpBuilder } from '../regexp/index.ts'
 
 const regExp = emailRegExpBuilder.build({ exact: true })
 

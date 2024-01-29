@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { useLatest } from 'react-use'
-import { useStateWithDeps } from './useStateWithDeps'
+import { useStateWithDeps } from './useStateWithDeps.ts'
 
 /**
  * 暂存状态。

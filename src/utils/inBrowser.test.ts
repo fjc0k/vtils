@@ -8,14 +8,14 @@ describe('inBrowser', () => {
   })
 
   test('不在浏览器中', async () => {
-    const { inBrowser } = await import('./inBrowser')
+    const { inBrowser } = await import('./inBrowser.ts')
     // @ts-ignore
     window.document.nodeType = undefined
     expect(inBrowser()).toBeFalse()
   })
 
   test('在浏览器中', async () => {
-    const { inBrowser } = await import('./inBrowser')
+    const { inBrowser } = await import('./inBrowser.ts')
     // @ts-ignore
     window.document.nodeType = 9
     expect(inBrowser()).toBeTrue()

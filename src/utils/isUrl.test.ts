@@ -1,4 +1,4 @@
-import { isUrl } from './isUrl'
+import { isUrl } from './isUrl.ts'
 
 describe(isUrl.name, () => {
   test('不是 URL', () => {

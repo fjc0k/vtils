@@ -1,6 +1,6 @@
-import { enUS } from './locale/enUS'
-import { getZhCN, zhCN } from './locale/zhCN'
-import { yup } from './yup'
+import { enUS } from './locale/enUS.ts'
+import { getZhCN, zhCN } from './locale/zhCN.ts'
+import { yup } from './yup.js'
 
 describe('locale', () => {
   for (const [name, locale] of Object.entries({ enUS, zhCN })) {

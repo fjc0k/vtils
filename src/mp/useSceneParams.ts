@@ -1,5 +1,5 @@
-import { getSceneParams, GetSceneParamsParser } from './getSceneParams'
 import { useMemo } from 'react'
+import { getSceneParams, GetSceneParamsParser } from './getSceneParams.ts'
 
 /**
  * 获取场景参数。

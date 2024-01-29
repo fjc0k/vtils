@@ -1,4 +1,4 @@
-import { inMiniProgramWebView } from './inMiniProgramWebView'
+import { inMiniProgramWebView } from './inMiniProgramWebView.ts'
 
 const orignalUserAgent = window.navigator.userAgent
 Object.defineProperty(window.navigator, 'userAgent', {

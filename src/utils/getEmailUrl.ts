@@ -1,4 +1,4 @@
-import { createUrlQueryString } from './createUrlQueryString'
+import { createUrlQueryString } from './createUrlQueryString.ts'
 
 export interface GetEmailUrlOptions {
   /** 收件人 */

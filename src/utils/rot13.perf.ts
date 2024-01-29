@@ -1,5 +1,5 @@
-import { rot13 } from './rot13'
-import { runBenchmark } from '../dev'
+import { runBenchmark } from '../dev/index.ts'
+import { rot13 } from './rot13.ts'
 
 function rot13Arr(str: string) {
   const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'

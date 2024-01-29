@@ -1,5 +1,5 @@
 import * as lodash from 'lodash-uni'
-import * as vtils from './index'
+import * as vtils from './index.ts'
 
 describe('index', () => {
   test('应该导出 lodash-es', () => {

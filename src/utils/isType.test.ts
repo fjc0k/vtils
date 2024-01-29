@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { isType } from './isType'
+import { expectType } from '../dev/index.ts'
+import { isType } from './isType.ts'
 
 describe('isType', () => {
   test('表现正常', () => {

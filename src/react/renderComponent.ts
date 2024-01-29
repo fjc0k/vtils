@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { isPromiseLike } from '../utils'
-import { PickBy } from '../types'
 import { useUpdate } from 'react-use'
+import { PickBy } from '../types/index.ts'
+import { isPromiseLike } from '../utils/index.ts'
 
 export interface RenderComponentResult<
-  TComponent extends React.ComponentType<any>
+  TComponent extends React.ComponentType<any>,
 > {
   /**
    * 增量重渲染，新属性将与增量属性合并并成为新的增量属性。

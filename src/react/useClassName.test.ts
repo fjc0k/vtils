@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks'
-import { useClassName } from './useClassName'
+import { useClassName } from './useClassName.ts'
 
 describe('useClassName', () => {
   test('仅保留不为空的字符串类名', () => {

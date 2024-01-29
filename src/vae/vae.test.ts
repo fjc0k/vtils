@@ -1,5 +1,5 @@
-import { RequiredDeep } from '../types'
-import { VaeObjectSchema, VaeSchemaOf, v } from './vae'
+import { RequiredDeep } from '../types/index.ts'
+import { VaeObjectSchema, VaeSchemaOf, v } from './vae.ts'
 
 describe('vae', () => {
   test('string', () => {

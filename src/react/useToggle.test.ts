@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useToggle } from './useToggle'
+import { useToggle } from './useToggle.ts'
 
 describe('useToggle', () => {
   test('可设置默认值为 false', () => {

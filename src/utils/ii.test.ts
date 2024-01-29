@@ -1,4 +1,4 @@
-import { ii } from './ii'
+import { ii } from './ii.ts'
 
 describe('ii', () => {
   test('表现正常', async () => {

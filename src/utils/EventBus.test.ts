@@ -1,5 +1,5 @@
-import { EventBus } from './EventBus'
-import { wait } from './wait'
+import { EventBus } from './EventBus.ts'
+import { wait } from './wait.ts'
 
 type Events = {
   enter: () => number

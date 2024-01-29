@@ -1,5 +1,5 @@
-import { jsonp } from './jsonp'
-import type { LoadResourceUrl } from './loadResource'
+import { jsonp } from './jsonp.ts'
+import type { LoadResourceUrl } from './loadResource.ts'
 
 jest.mock(
   './loadResource',

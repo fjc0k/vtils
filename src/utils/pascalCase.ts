@@ -1,5 +1,5 @@
 import { camelCase, upperFirst } from 'lodash-uni'
-import { PascalCase } from '../types'
+import { PascalCase } from '../types/index.ts'
 
 /**
  * 转换文本为没有分隔符的大写单词字符串。

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Merge } from '../types'
+import { Merge } from '../types/index.ts'
 
 /**
  * 派生新的组件属性。
@@ -18,7 +18,7 @@ export type DeriveComponentProps<
   TRef extends any = never,
   TOverride extends Partial<
     Record<keyof React.ComponentProps<TComponent>, any>
-  > = never
+  > = never,
 > = Merge<
   Merge<
     Omit<React.ComponentProps<TComponent>, TExclude>,

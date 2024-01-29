@@ -1,6 +1,6 @@
 import * as Taro from '@tarojs/taro'
-import { AnyFunction } from '../types'
 import { renderHook } from '@testing-library/react-hooks'
+import { AnyFunction } from '../types/index.ts'
 
 describe('useReachBottom.taro', () => {
   let useReachBottomCb: AnyFunction
@@ -21,7 +21,7 @@ describe('useReachBottom.taro', () => {
   })
 
   test('表现正常', async () => {
-    const { useReachBottom } = await import('./useReachBottom.taro')
+    const { useReachBottom } = await import('./useReachBottom.taro.ts')
     const cb = jest.fn()
     renderHook(() => useReachBottom(cb))
     // 初始立即触发一次

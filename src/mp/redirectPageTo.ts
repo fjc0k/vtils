@@ -1,5 +1,5 @@
-import { AnyObject } from '../types'
-import { navigatePageTo } from './navigatePageTo'
+import { AnyObject } from '../types/index.ts'
+import { navigatePageTo } from './navigatePageTo.ts'
 
 /**
  * 关闭当前页面，跳转至某个页面，跳转失败时会尝试切换到 Tab 页。

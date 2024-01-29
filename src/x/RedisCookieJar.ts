@@ -1,6 +1,6 @@
 import Redis from 'ioredis'
 import { CookieJar } from 'tough-cookie'
-import { isPlainObject } from '../utils'
+import { isPlainObject } from '../utils/index.ts'
 
 // @ts-ignore
 import _RedisCookieStore from 'tough-cookie-redisstore'

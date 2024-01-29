@@ -1,6 +1,6 @@
 import { cloneDeep, range } from 'lodash-uni'
-import { cloneDeepFast } from './cloneDeepFast'
-import { runBenchmark } from '../dev'
+import { runBenchmark } from '../dev/index.ts'
+import { cloneDeepFast } from './cloneDeepFast.ts'
 
 const data = range(0, 100).map(i => ({
   i,

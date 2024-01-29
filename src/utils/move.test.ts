@@ -1,4 +1,4 @@
-import { move, moveDown, moveToBottom, moveToTop, moveUp } from './move'
+import { move, moveDown, moveToBottom, moveToTop, moveUp } from './move.ts'
 
 describe('move', () => {
   test('是原地移动且移动正常', () => {

@@ -1,5 +1,5 @@
-import { formatDate } from '../date'
-import { VaeSchemaPath } from './VaeSchema'
+import { formatDate } from '../date/index.ts'
+import { VaeSchemaPath } from './VaeSchema.ts'
 
 export type VaeLocaleMessagePayload = {
   label?: string

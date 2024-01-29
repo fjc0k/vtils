@@ -1,4 +1,4 @@
-import { removeNonWordChars } from './removeNonWordChars'
+import { removeNonWordChars } from './removeNonWordChars.ts'
 
 describe('removeNonWordChars', () => {
   test('ok', () => {

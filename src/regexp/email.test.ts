@@ -1,4 +1,4 @@
-import { emailRegExpBuilder } from './email'
+import { emailRegExpBuilder } from './email.ts'
 
 describe('emojiRegExpBuilder', () => {
   test('test', () => {

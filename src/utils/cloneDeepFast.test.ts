@@ -1,4 +1,4 @@
-import { cloneDeepFast } from './cloneDeepFast'
+import { cloneDeepFast } from './cloneDeepFast.ts'
 
 describe('cloneDeepFast', () => {
   test('表现正常', () => {

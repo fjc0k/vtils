@@ -1,5 +1,5 @@
 import { omit } from 'lodash-uni'
-import { omitStrict } from './omitStrict'
+import { omitStrict } from './omitStrict.ts'
 
 describe(omitStrict.name, () => {
   test('就是 omit 的严格类型版', () => {

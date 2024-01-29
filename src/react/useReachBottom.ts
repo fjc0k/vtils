@@ -1,9 +1,9 @@
 /**
  * Modified from https://github.com/karl-run/react-bottom-scroll-listener/blob/master/src/hook/index.tsx
  */
-import { bindEvent, debounce } from '../utils'
 import { MutableRefObject, useEffect, useRef } from 'react'
 import { useLatest } from 'react-use'
+import { bindEvent, debounce } from '../utils/index.ts'
 
 /**
  * 立即触发一次回调，并且每当到达页面底部时触发回调。

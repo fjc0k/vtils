@@ -1,4 +1,4 @@
-import { isNumeric } from './isNumeric'
+import { isNumeric } from './isNumeric.ts'
 
 describe('isNumeric', () => {
   test('不是数值', () => {

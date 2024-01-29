@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { cuid2 } from './cuid2'
+import { cuid2 } from './cuid2.ts'
 
 describe('cuid2', () => {
   test('ok', () => {

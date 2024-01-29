@@ -1,5 +1,5 @@
-import { dedent } from './dedent'
-import { indent } from './indent'
+import { dedent } from './dedent.ts'
+import { indent } from './indent.ts'
 
 describe('dedent', () => {
   test('空字符串正常', () => {

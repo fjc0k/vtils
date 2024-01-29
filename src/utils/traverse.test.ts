@@ -1,4 +1,4 @@
-import { traverse } from './traverse'
+import { traverse } from './traverse.ts'
 
 describe('traverse', () => {
   test('非对象或数组时不触发回调', () => {

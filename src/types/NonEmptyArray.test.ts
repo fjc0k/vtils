@@ -1,5 +1,5 @@
-import { expectType } from '../dev'
-import { NonEmptyArray } from './NonEmptyArray'
+import { expectType } from '../dev/index.ts'
+import { NonEmptyArray } from './NonEmptyArray.ts'
 
 describe('NonEmptyArray', () => {
   test('表现正常', () => {

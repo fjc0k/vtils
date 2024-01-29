@@ -1,4 +1,4 @@
-import { isDataUrl } from './isDataUrl'
+import { isDataUrl } from './isDataUrl.ts'
 
 describe('isDataUrl', () => {
   test('是', () => {

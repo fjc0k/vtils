@@ -1,4 +1,4 @@
-import { toSingleLineString } from './toSingleLineString'
+import { toSingleLineString } from './toSingleLineString.ts'
 
 describe('toSingleLineString', () => {
   test('ok', () => {

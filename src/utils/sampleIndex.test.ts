@@ -1,4 +1,4 @@
-import { sampleIndex } from './sampleIndex'
+import { sampleIndex } from './sampleIndex.ts'
 
 describe('sampleIndex', () => {
   test('ok', () => {

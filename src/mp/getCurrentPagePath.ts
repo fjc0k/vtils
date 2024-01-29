@@ -1,6 +1,6 @@
-import { AnyObject } from '../types'
-import { ensureInMiniProgram } from './ensureInMiniProgram'
-import { last } from '../utils'
+import { AnyObject } from '../types/index.ts'
+import { last } from '../utils/index.ts'
+import { ensureInMiniProgram } from './ensureInMiniProgram.ts'
 
 /**
  * 获取当前页面的路径（不含查询参数），始终以 `/` 开头。

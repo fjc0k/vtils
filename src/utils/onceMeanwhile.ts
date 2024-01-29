@@ -1,5 +1,5 @@
-import { AnyAsyncFunction } from '../types'
-import { isPromiseLike } from './isPromiseLike'
+import { AnyAsyncFunction } from '../types/index.ts'
+import { isPromiseLike } from './isPromiseLike.ts'
 
 /**
  * 同一时间对函数的调用只会触发一次运行。

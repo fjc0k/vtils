@@ -1,5 +1,5 @@
-import { createSubmit, CreateSubmitResult } from '../utils'
-import { ensureInMiniProgram } from './ensureInMiniProgram'
+import { createSubmit, CreateSubmitResult } from '../utils/index.ts'
+import { ensureInMiniProgram } from './ensureInMiniProgram.ts'
 
 /**
  * 对提交类行为的封装。

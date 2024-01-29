@@ -1,4 +1,4 @@
-import { roundTo } from './roundTo'
+import { roundTo } from './roundTo.ts'
 
 describe('roundTo', () => {
   test('表现正常', () => {

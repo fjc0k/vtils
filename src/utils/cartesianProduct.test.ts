@@ -8,7 +8,7 @@ describe('cartesianProduct', () => {
     })
 
     test('正常', async () => {
-      const { cartesianProduct } = await import('./cartesianProduct')
+      const { cartesianProduct } = await import('./cartesianProduct.ts')
 
       expect(cartesianProduct([])).toEqual([])
 
@@ -66,7 +66,7 @@ describe('cartesianProduct', () => {
     })
 
     test('报错', async () => {
-      const { cartesianProduct } = await import('./cartesianProduct')
+      const { cartesianProduct } = await import('./cartesianProduct.ts')
 
       expect(() =>
         // @ts-expect-error
@@ -115,7 +115,7 @@ describe('cartesianProduct', () => {
     })
 
     test('正常', async () => {
-      const { cartesianProduct } = await import('./cartesianProduct')
+      const { cartesianProduct } = await import('./cartesianProduct.ts')
 
       expect(cartesianProduct([])).toEqual([])
 
@@ -173,7 +173,7 @@ describe('cartesianProduct', () => {
     })
 
     test('报错', async () => {
-      const { cartesianProduct } = await import('./cartesianProduct')
+      const { cartesianProduct } = await import('./cartesianProduct.ts')
 
       expect(() =>
         // @ts-expect-error

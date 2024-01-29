@@ -1,4 +1,4 @@
-import { phoneNumberRegExpBuilder } from './phoneNumber'
+import { phoneNumberRegExpBuilder } from './phoneNumber.ts'
 
 describe('chineseMobilePhoneNumberRegExpBuilder', () => {
   test('test', () => {

@@ -1,4 +1,4 @@
-import { bytes } from './bytes'
+import { bytes } from './bytes.ts'
 
 describe('bytes', () => {
   test('ok', () => {

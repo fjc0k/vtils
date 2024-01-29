@@ -1,4 +1,4 @@
-import { inBrowser } from './inBrowser'
+import { inBrowser } from './inBrowser.ts'
 
 let yes!: boolean
 

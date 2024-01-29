@@ -1,4 +1,4 @@
-import { uuid } from './uuid'
+import { uuid } from './uuid.ts'
 
 describe('uuid', () => {
   test('表现正常', () => {

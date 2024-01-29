@@ -1,6 +1,6 @@
-import { base64Encode } from './base64'
-import { readFile } from './readFile'
 import { TextDecoder, TextEncoder } from 'util'
+import { base64Encode } from './base64.ts'
+import { readFile } from './readFile.ts'
 
 describe(readFile.name, () => {
   test('text should work', async () => {

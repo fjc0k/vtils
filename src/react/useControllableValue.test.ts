@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useControllableValue } from './useControllableValue'
 import { useSetState } from 'react-use'
+import { useControllableValue } from './useControllableValue.ts'
 
 describe('useControllableValue', () => {
   test('表现正常', () => {

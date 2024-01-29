@@ -1,4 +1,4 @@
-import { parseDataUrl } from './parseDataUrl'
+import { parseDataUrl } from './parseDataUrl.ts'
 
 describe('parseDataUrl', () => {
   test('表现正常', () => {

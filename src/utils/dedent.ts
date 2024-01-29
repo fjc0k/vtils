@@ -1,4 +1,4 @@
-import { indent } from './indent'
+import { indent } from './indent.ts'
 
 /**
  * 移除每一行的公共前导空白。

@@ -1,6 +1,6 @@
-import { useReachBottom as _useReachBottom } from './useReachBottom'
-import { useEffect, useRef } from 'react'
 import { useReachBottom as useTaroReachBottom } from '@tarojs/taro'
+import { useEffect, useRef } from 'react'
+import { useReachBottom as _useReachBottom } from './useReachBottom.ts'
 
 export const useReachBottom: typeof _useReachBottom = (
   callback,

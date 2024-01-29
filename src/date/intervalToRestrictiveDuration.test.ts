@@ -1,5 +1,5 @@
-import { addDays, addMilliseconds, addYears } from 'date-fns/esm'
-import { intervalToRestrictiveDuration } from './intervalToRestrictiveDuration'
+import { addDays, addMilliseconds, addYears } from 'date-fns'
+import { intervalToRestrictiveDuration } from './intervalToRestrictiveDuration.ts'
 
 describe('intervalToRestrictiveDuration', () => {
   const start = new Date(2020, 5 - 1, 21, 0, 0, 0, 0)

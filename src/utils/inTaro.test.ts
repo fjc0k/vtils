@@ -1,4 +1,4 @@
-import { inTaro } from './inTaro'
+import { inTaro } from './inTaro.ts'
 
 describe('inTaro', () => {
   test('表现正常', () => {
