@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.110.0](https://github.com/fjc0k/vtils/compare/v4.109.0...v4.110.0) (2024-01-29)
+
+### Features
+
+- 编译后的文件加上 .js 后缀以支持原生 ESM ([1f336aa](https://github.com/fjc0k/vtils/commit/1f336aa13e70ad0d3ab188efa2876e88019bd3c2))
+
 ## [4.109.0](https://github.com/fjc0k/vtils/compare/v4.108.0...v4.109.0) (2024-01-20)
 
 ### Features
