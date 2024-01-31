@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.110.4](https://github.com/fjc0k/vtils/compare/v4.110.3...v4.110.4) (2024-01-31)
+
+### Bug Fixes
+
+- **vae:** 对于数组，不再强制将 element 的验证移到最后 ([9650708](https://github.com/fjc0k/vtils/commit/965070826b423635cc154464b6ff27b1ba71aaeb))
+
 ### [4.110.3](https://github.com/fjc0k/vtils/compare/v4.110.2...v4.110.3) (2024-01-29)
 
 ### Bug Fixes
