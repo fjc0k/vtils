@@ -1,5 +1,6 @@
+import { camelCase, uniq } from 'lodash-uni'
 import { RequiredDeep } from '../types'
-import { VaeObjectSchema, VaeSchemaOf, v } from './vae'
+import { VaeArraySchema, VaeObjectSchema, VaeSchemaOf, v } from './vae'
 
 describe('vae', () => {
   test('string', () => {
@@ -1020,5 +1021,14 @@ describe('vae', () => {
     )
     expect(schema.parse({ true: false, false: true })).toMatchSnapshot()
     expect(schema.parse({ true: true, false: false })).toMatchSnapshot()
+  })
+
+  test('数组处理', () => {
+    const schema: VaeArraySchema<string[]> = v.array($ =>
+      $.element(v.string().transform(s => camelCase(s))).transform(a =>
+        uniq(a),
+      ),
+    )
+    expect(schema.cast(['hello', 'echo hello', 'Hello'])).toMatchSnapshot()
   })
 })

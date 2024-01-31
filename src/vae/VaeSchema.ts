@@ -7,7 +7,6 @@ import {
   get,
   includes,
   isArray,
-  moveToBottom,
   pick,
   set,
   toArray,
@@ -386,15 +385,16 @@ export abstract class VaeSchema<
       })
     }
 
+    // 2024.1.31: 自行决定位置，不再强制移到最后，以满足类似先格式化元素再去重等需求
     // 对于数组，将 element 的验证移到最后
-    if (schema._options.type === 'array') {
-      moveToBottom(
-        processors,
-        processors.findIndex(
-          item => typeof item === 'object' && item.tag === 'element',
-        ),
-      )
-    }
+    // if (schema._options.type === 'array') {
+    //   moveToBottom(
+    //     processors,
+    //     processors.findIndex(
+    //       item => typeof item === 'object' && item.tag === 'element',
+    //     ),
+    //   )
+    // }
 
     const ctx = options?.ctx ?? new VaeSchemaParseContext()
     const curPath = options?.curPath ?? []

@@ -1656,6 +1656,13 @@ Object {
 }
 `;
 
+exports[`vae 数组处理 1`] = `
+Array [
+  "hello",
+  "echoHello",
+]
+`;
+
 exports[`vae 综合 1`] = `
 Object {
   "data": Object {
