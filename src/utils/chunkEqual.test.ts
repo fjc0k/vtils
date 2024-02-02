@@ -15,4 +15,8 @@ describe('chunkEqual', () => {
     expect(chunkEqual([1, 2, 3, 4, 5, 6], 3, () => 100)).toMatchSnapshot()
     expect(chunkEqual([1, 2, 3, 4, 5, 6], 2, () => 100)).toMatchSnapshot()
   })
+
+  test('consistent', () => {
+    expect(chunkEqual([1, 2], 3, () => 100, true)).toMatchSnapshot()
+  })
 })

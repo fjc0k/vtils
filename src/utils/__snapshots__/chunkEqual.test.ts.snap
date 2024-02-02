@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`chunkEqual consistent 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    100,
+  ],
+]
+`;
+
 exports[`chunkEqual 表现正常 1`] = `Array []`;
 
 exports[`chunkEqual 表现正常 2`] = `
