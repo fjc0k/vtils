@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-export declare function chunkEqual<T>(array: T[], size: number, filler: (index: number) => T): T[][];
+export declare function chunkEqual<T>(array: T[], size: number, filler: (index: number) => T, consistent?: boolean): T[][];
 ```
 
 ## Parameters
@@ -19,6 +19,7 @@ export declare function chunkEqual<T>(array: T[], size: number, filler: (index: 
 |  array | T\[\] | 数组 |
 |  size | number | 分组大小 |
 |  filler | (index: number) =&gt; T | 填充值 |
+|  consistent | boolean | _(Optional)_ 是否保持一致性，默认 false，设为 true 则当数组长度小于分组大小时也填充数组使其长度达到分组大小 |
 
 **Returns:**
 
