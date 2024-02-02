@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.111.0](https://github.com/fjc0k/vtils/compare/v4.110.4...v4.111.0) (2024-02-02)
+
+### Features
+
+- **utils:** chunkEqual 新增 consistent 选项 ([ddeb341](https://github.com/fjc0k/vtils/commit/ddeb341a6399526dde952590af55e258f5c29447))
+
 ### [4.110.4](https://github.com/fjc0k/vtils/compare/v4.110.3...v4.110.4) (2024-01-31)
 
 ### Bug Fixes
