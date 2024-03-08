@@ -1,4 +1,5 @@
 import { JsonValue } from '../types'
+import { inMiniProgram } from './inMiniProgram'
 
 export interface LocalStoragePlusOptions {
   /** 存储键 */
@@ -29,8 +30,39 @@ interface LocalStoragePlusRawData<T> {
   t?: string | number
 }
 
+const mp = inMiniProgram()
+const storage: {
+  get: (key: string) => string | null
+  set: (key: string, value: string) => void
+  remove: (key: string) => void
+  keys: () => string[]
+} = mp
+  ? {
+      get: key => mp.getStorageSync(key),
+      set: (key, value) => mp.setStorageSync(key, value),
+      remove: key => mp.removeStorageSync(key),
+      keys: () => mp.getStorageInfoSync().keys,
+    }
+  : {
+      get: key => localStorage.getItem(key),
+      set: (key, value) => localStorage.setItem(key, value),
+      remove: key => localStorage.removeItem(key),
+      keys: () => {
+        const keys: string[] = []
+        for (let i = 0, len = localStorage.length; i < len; i++) {
+          const key = localStorage.key(i)
+          if (key != null) {
+            keys.push(key)
+          }
+        }
+        return keys
+      },
+    }
+
 /**
  * 本地存储增强。
+ *
+ * 已兼容小程序。
  */
 export class LocalStoragePlus<T extends JsonValue> {
   /**
@@ -63,7 +95,7 @@ export class LocalStoragePlus<T extends JsonValue> {
     const expiredAt = ttl && Date.now() + ttl
     const nextValue =
       typeof value === 'function' ? value(this.get<T>(key, { tag })) : value
-    localStorage.setItem(
+    storage.set(
       this.getFullKey(key),
       JSON.stringify({
         v: nextValue,
@@ -86,7 +118,7 @@ export class LocalStoragePlus<T extends JsonValue> {
     const { tag } = options || {}
 
     try {
-      const rawText = localStorage.getItem(this.getFullKey(key))
+      const rawText = storage.get(this.getFullKey(key))
       if (rawText != null) {
         const rawData = JSON.parse(rawText) as LocalStoragePlusRawData<T>
 
@@ -120,19 +152,18 @@ export class LocalStoragePlus<T extends JsonValue> {
    * @param key 键
    */
   static remove(key: string): void {
-    localStorage.removeItem(this.getFullKey(key))
+    storage.remove(this.getFullKey(key))
   }
 
   /**
    * 清空本地存储。
    */
   static clear(): void {
-    for (let i = 0, len = localStorage.length; i < len; i++) {
-      const key = localStorage.key(i)
-      if (key != null && key.indexOf(this.prefix) === 0) {
-        localStorage.removeItem(key)
+    storage.keys().forEach(key => {
+      if (key.indexOf(this.prefix) === 0) {
+        storage.remove(key)
       }
-    }
+    })
   }
 
   /**
