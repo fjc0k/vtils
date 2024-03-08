@@ -6,6 +6,8 @@
 
 本地存储增强。
 
+已兼容小程序。
+
 **Signature:**
 
 ```typescript

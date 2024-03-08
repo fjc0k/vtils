@@ -13,7 +13,7 @@
 |  [DataPacker](./utils.datapacker.md) | 数据打包器。 |
 |  [EventBus](./utils.eventbus.md) | <p>事件巴士，管理事件的发布与订阅。</p><p> TListeners 事件名称及其对应的回调描述</p> |
 |  [GeoCoord](./utils.geocoord.md) | <p>地理坐标系转换工具。</p><p>- <code>大地坐标系（WGS84 坐标系）</code>: GPS 全球卫星定位系统使用的坐标系； - <code>火星坐标系（GCJ02 坐标系）</code>: 腾讯地图、高德地图等使用的坐标系，是由中国国家测绘局制定的由 WGS84 加密后得到的坐标系； - <code>百度坐标系（BD09 坐标系）</code>: 百度地图使用的坐标系，是在 GCJ02 基础上再次加密得到的坐标系。</p> |
-|  [LocalStoragePlus](./utils.localstorageplus.md) | 本地存储增强。 |
+|  [LocalStoragePlus](./utils.localstorageplus.md) | <p>本地存储增强。</p><p>已兼容小程序。</p> |
 |  [LoopUntilRetryLimitExceededError](./utils.loopuntilretrylimitexceedederror.md) |  |
 |  [MiniProgramUrl](./utils.miniprogramurl.md) | 小程序链接。 |
 |  [RichUrl](./utils.richurl.md) | <p>富链接，同普通链接相比，富链接可包含一些描述信息。</p><p>结构描述：</p>
