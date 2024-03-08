@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.112.0](https://github.com/fjc0k/vtils/compare/v4.111.0...v4.112.0) (2024-03-08)
+
+### Features
+
+- **utils:** LocalStoragePlus 支持在小程序内使用 ([865e0b2](https://github.com/fjc0k/vtils/commit/865e0b206a5f33d4180ae164e82bed9add5865f4))
+
 ## [4.111.0](https://github.com/fjc0k/vtils/compare/v4.110.4...v4.111.0) (2024-02-02)
 
 ### Features
