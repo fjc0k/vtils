@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.113.0](https://github.com/fjc0k/vtils/compare/v4.112.0...v4.113.0) (2024-03-16)
+
+### Features
+
+- **vae:** 支持抛出错误作为 message ([0c94fb4](https://github.com/fjc0k/vtils/commit/0c94fb4f74e012afcd73a02a227190a8aa825476))
+
 ## [4.112.0](https://github.com/fjc0k/vtils/compare/v4.111.0...v4.112.0) (2024-03-08)
 
 ### Features
