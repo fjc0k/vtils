@@ -56,7 +56,7 @@ export type VaeSchemaOptions<T, S> = {
 export type VaeSchemaPath = Array<string | number>
 
 export type VaeSchemaCheckPayload<T> = {
-  fn: ((value: T) => boolean) | VaeSchema
+  fn: ((value: T) => boolean | void) | VaeSchema
   message: VaeLocaleMessage
   messageParams?: Record<string, any>
   path?: VaeSchemaPath
@@ -224,7 +224,7 @@ export abstract class VaeSchema<
   }
 
   custom(
-    fn: (value: T) => boolean,
+    fn: (value: T) => boolean | void,
     messageOrOptions?:
       | VaeLocaleMessage
       | {
@@ -405,7 +405,8 @@ export abstract class VaeSchema<
     for (let i = 0; i < processors.length; i++) {
       const processor = processors[i]
       if (typeof processor === 'object') {
-        const { fn, message, messageParams, path = [], tag } = processor
+        // eslint-disable-next-line prefer-const
+        let { fn, message, messageParams, path = [], tag } = processor
         const fullPath = [...curPath, ...path]
         if (fn instanceof VaeSchema) {
           const pathData = path.length ? get(data, path) : data
@@ -448,50 +449,64 @@ export abstract class VaeSchema<
               }
             }
           }
-        } else if (
-          !fn(
-            // @ts-expect-error
-            data,
-          )
-        ) {
-          if (options.cast) {
-            data = dataIsNil
-              ? data
-              : schema._options.type === 'string'
-              ? String(data)
-              : schema._options.type === 'number'
-              ? Number(data)
-              : schema._options.type === 'boolean'
-              ? Boolean(data)
-              : schema._options.type === 'date'
-              ? new Date(data as any)
-              : schema._options.type === 'array'
-              ? toArray(data)
-              : schema._options.type === 'object'
-              ? toPlainObject(data)
-              : null
-          } else {
-            ctx.addIssue({
-              path: fullPath,
-              message:
-                typeof message === 'function'
-                  ? message({
-                      path: fullPath,
-                      params: messageParams || {},
-                      value: data,
-                      label: schema._options.label,
-                    })
-                  : message,
-            })
-            if (options.abortEarly) {
-              return {
-                success: false,
-                issues: ctx.issues,
-                message: ctx.issues[0].message,
+        } else {
+          let fnRes: boolean | void
+          let fnErr: any
+
+          try {
+            fnRes = fn(
+              // @ts-expect-error
+              data,
+            )
+          } catch (err) {
+            fnErr = err
+          }
+
+          if (fnErr != null) {
+            fnRes = false
+            message = fnErr instanceof Error ? fnErr.message : String(fnErr)
+          }
+
+          if (fnRes === false) {
+            if (options.cast) {
+              data = dataIsNil
+                ? data
+                : schema._options.type === 'string'
+                ? String(data)
+                : schema._options.type === 'number'
+                ? Number(data)
+                : schema._options.type === 'boolean'
+                ? Boolean(data)
+                : schema._options.type === 'date'
+                ? new Date(data as any)
+                : schema._options.type === 'array'
+                ? toArray(data)
+                : schema._options.type === 'object'
+                ? toPlainObject(data)
+                : null
+            } else {
+              ctx.addIssue({
+                path: fullPath,
+                message:
+                  typeof message === 'function'
+                    ? message({
+                        path: fullPath,
+                        params: messageParams || {},
+                        value: data,
+                        label: schema._options.label,
+                      })
+                    : message,
+              })
+              if (options.abortEarly) {
+                return {
+                  success: false,
+                  issues: ctx.issues,
+                  message: ctx.issues[0].message,
+                }
               }
             }
+            break
           }
-          break
         }
       } else {
         // @ts-expect-error

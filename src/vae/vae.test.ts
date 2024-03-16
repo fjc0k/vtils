@@ -1031,4 +1031,26 @@ describe('vae', () => {
     )
     expect(schema.cast(['hello', 'echo hello', 'Hello'])).toMatchSnapshot()
   })
+
+  test('支持抛出错误作为 message', () => {
+    const schema: VaeObjectSchema<{
+      id: string
+    }> = v.create(_ =>
+      _.object({
+        id: _.string($ =>
+          $.custom(v => {
+            if (v.startsWith('x')) {
+              throw 'x err'
+            }
+            if (v.startsWith('y')) {
+              throw new Error('y err')
+            }
+          }),
+        ),
+      }),
+    )
+    expect(schema.parse({ id: 'x1' })).toMatchSnapshot()
+    expect(schema.parse({ id: 'y5555' })).toMatchSnapshot()
+    expect(schema.parse({ id: 'z00003' })).toMatchSnapshot()
+  })
 })

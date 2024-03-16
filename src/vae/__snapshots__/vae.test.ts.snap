@@ -1656,6 +1656,45 @@ Object {
 }
 `;
 
+exports[`vae 支持抛出错误作为 message 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "x err",
+      "path": Array [
+        "id",
+      ],
+    },
+  ],
+  "message": "x err",
+  "success": false,
+}
+`;
+
+exports[`vae 支持抛出错误作为 message 2`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "y err",
+      "path": Array [
+        "id",
+      ],
+    },
+  ],
+  "message": "y err",
+  "success": false,
+}
+`;
+
+exports[`vae 支持抛出错误作为 message 3`] = `
+Object {
+  "data": Object {
+    "id": "z00003",
+  },
+  "success": true,
+}
+`;
+
 exports[`vae 数组处理 1`] = `
 Array [
   "hello",
