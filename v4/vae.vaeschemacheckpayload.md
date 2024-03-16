@@ -8,7 +8,7 @@
 
 ```typescript
 export declare type VaeSchemaCheckPayload<T> = {
-    fn: ((value: T) => boolean) | VaeSchema;
+    fn: ((value: T) => boolean | void) | VaeSchema;
     message: VaeLocaleMessage;
     messageParams?: Record<string, any>;
     path?: VaeSchemaPath;
