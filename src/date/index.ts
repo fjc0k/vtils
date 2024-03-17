@@ -268,4 +268,5 @@ export * from './numeralDayToChineseDay'
 
 // date-fns 也导出了 formatDate
 // 此处将 formatDate 作为具名导出以覆盖
-export { formatDate, FormatDatePlaceholder, type FormatDateRenderer } from './formatDate'
+export { formatDate, FormatDatePlaceholder } from './formatDate'
+export type { FormatDateRenderer } from './formatDate'
