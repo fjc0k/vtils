@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.113.1](https://github.com/fjc0k/vtils/compare/v4.113.0...v4.113.1) (2024-03-17)
+
+### Bug Fixes
+
+- **date:** 具名导出 formatDate ([8c0958a](https://github.com/fjc0k/vtils/commit/8c0958ab25eebf713cc2b177a964a9d505340e44))
+
 ## [4.113.0](https://github.com/fjc0k/vtils/compare/v4.112.0...v4.113.0) (2024-03-16)
 
 ### Features
