@@ -6,7 +6,7 @@
 
 /* istanbul ignore file */
 
-// @index('../../node_modules/date-fns/index.mjs', /export \* from "\.\/(?!format)(.+)\.mjs"/g, m => `export * from 'date-fns/${m[1]}'`)
+// @index('../../node_modules/date-fns/index.mjs', /export \* from "\.\/(.+)\.mjs"/g, m => `export * from 'date-fns/${m[1]}'`)
 export * from 'date-fns/add'
 export * from 'date-fns/addBusinessDays'
 export * from 'date-fns/addDays'
@@ -69,6 +69,18 @@ export * from 'date-fns/endOfTomorrow'
 export * from 'date-fns/endOfWeek'
 export * from 'date-fns/endOfYear'
 export * from 'date-fns/endOfYesterday'
+export * from 'date-fns/format'
+export * from 'date-fns/formatDistance'
+export * from 'date-fns/formatDistanceStrict'
+export * from 'date-fns/formatDistanceToNow'
+export * from 'date-fns/formatDistanceToNowStrict'
+export * from 'date-fns/formatDuration'
+export * from 'date-fns/formatISO'
+export * from 'date-fns/formatISO9075'
+export * from 'date-fns/formatISODuration'
+export * from 'date-fns/formatRFC3339'
+export * from 'date-fns/formatRFC7231'
+export * from 'date-fns/formatRelative'
 export * from 'date-fns/fromUnixTime'
 export * from 'date-fns/getDate'
 export * from 'date-fns/getDay'
@@ -245,12 +257,15 @@ export {
   zhCN as zhCNLocale,
 } from 'date-fns/locale'
 
-// @index(['./**/*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
+// @index(['./**/(?!formatDate)*.ts', '!./**/*.test.*'], f => `export * from '${f.path}'`)
 export * from './anyToDate'
-export * from './formatDate'
 export * from './formatDistanceAgo'
 export * from './formatDistancePlus'
 export * from './intervalToRestrictiveDuration'
 export * from './ms'
 export * from './numeralDayToChineseDay'
 // @endindex
+
+// date-fns 也导出了 formatDate
+// 此处将 formatDate 作为具名导出以覆盖
+export { formatDate, FormatDatePlaceholder, FormatDateRenderer } from './formatDate'
