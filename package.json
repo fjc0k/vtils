@@ -1,6 +1,6 @@
 {
   "name": "vtils",
-  "version": "4.113.1",
+  "version": "4.113.2",
   "description": "一个面向业务的 JavaScript/TypeScript 实用程序库。",
   "keywords": [
     "util",
@@ -87,6 +87,7 @@
     "generate-index": "vgis \"./src/**/index.ts\"",
     "generate-package": "haoma run ./scripts/generatePackage.ts",
     "generate-utility": "haoma rune ./scripts/generateUtility.ts",
+    "postinstall": "patch-package",
     "publish-package": "cd ./lib && npm publish",
     "publish-package-next": "npm run publish-package -- --tag next",
     "prerelease": "npm run test",
@@ -100,8 +101,7 @@
     "test-types": "tsc --noEmit",
     "test-update-snapshot": "jest --updateSnapshot",
     "test-with-coverage": "jest --coverage",
-    "test-with-coverage-open": "jest --coverage && open-cli ./coverage/lcov-report/index.html",
-    "postinstall": "patch-package"
+    "test-with-coverage-open": "jest --coverage && open-cli ./coverage/lcov-report/index.html"
   },
   "husky": {
     "hooks": {

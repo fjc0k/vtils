@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.113.2](https://github.com/fjc0k/vtils/compare/v4.113.1...v4.113.2) (2024-03-17)
+
+### Bug Fixes
+
+- **date:** export type FormatDateRenderer ([664f033](https://github.com/fjc0k/vtils/commit/664f0338352fc5efabe3ef4159eeb788776a5e62))
+
 ### [4.113.1](https://github.com/fjc0k/vtils/compare/v4.113.0...v4.113.1) (2024-03-17)
 
 ### Bug Fixes
