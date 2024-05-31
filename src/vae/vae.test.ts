@@ -1053,4 +1053,32 @@ describe('vae', () => {
     expect(schema.parse({ id: 'y5555' })).toMatchSnapshot()
     expect(schema.parse({ id: 'z00003' })).toMatchSnapshot()
   })
+
+  test('类型测试', () => {
+    const defineHandler = <T>(options: {
+      schema: (_: typeof v) => VaeSchemaOf<T>
+    }) => {
+      return options
+    }
+    type Data = {
+      id: number
+      name: string
+      email: string
+      gender: 'male' | 'female'
+      type: 'post' | 'comment'
+    }
+    defineHandler<Data>({
+      schema: _ =>
+        _.object({
+          id: _.number().required(),
+          name: _.string().required(),
+          email: _.string().required(),
+          gender: _.string<Data['gender']>()
+            .min(1)
+            .enum(['male', 'female'])
+            .max(20),
+        }),
+    })
+    expect(1).toBe(1)
+  })
 })

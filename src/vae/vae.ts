@@ -1,4 +1,4 @@
-import { IsAny, Nullable } from '../types'
+import { DotPath, DotPathValue, IsAny, Nullable } from '../types'
 import { VaeArraySchema, VaeArraySchemaElementOf } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeDateSchema } from './VaeDateSchema'
@@ -120,6 +120,45 @@ const schemaBuilders = {
   array,
 }
 
+const makeObjectBuilders = <T extends Record<string, any>>() => ({
+  stringOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+    key: K,
+    message?: VaeLocaleMessage,
+  ) =>
+    // @ts-ignore
+    string<V>(message),
+  numberOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+    key: K,
+    message?: VaeLocaleMessage,
+  ) =>
+    // @ts-ignore
+    number<V>(message),
+  dateOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+    key: K,
+    message?: VaeLocaleMessage,
+  ) =>
+    // @ts-ignore
+    date<V>(message),
+  booleanOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+    key: K,
+    message?: VaeLocaleMessage,
+  ) =>
+    // @ts-ignore
+    boolean<V>(message),
+  objectOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+    key: K,
+    message?: VaeLocaleMessage,
+  ) =>
+    // @ts-ignore
+    object<V>(message),
+  arrayOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+    key: K,
+    message?: VaeLocaleMessage,
+  ) =>
+    // @ts-ignore
+    array<V>(message),
+})
+
 export const v = {
   ...schemaBuilders,
 
@@ -134,6 +173,8 @@ export const v = {
   setLocale: (locale: VaeLocaleShape) => {
     VaeLocale.$set(locale)
   },
+
+  makeObjectBuilders,
 }
 
 // @index('./Vae*.ts', f => `export * from '${f.path}'`)
