@@ -1,4 +1,9 @@
-import { DotPath, DotPathValue, IsAny, Nullable } from '../types'
+import {
+  DotPathWithRoot,
+  DotPathWithRootValue,
+  IsAny,
+  Nullable,
+} from '../types'
 import { VaeArraySchema, VaeArraySchemaElementOf } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
 import { VaeDateSchema } from './VaeDateSchema'
@@ -120,38 +125,111 @@ const schemaBuilders = {
   array,
 }
 
-const makeObjectBuilders = <T extends Record<string, any>>() => ({
-  stringOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+export type ObjectBuilders<T extends Record<string, any>> =
+  typeof schemaBuilders & {
+    stringOf: <
+      K extends DotPathWithRoot<T>,
+      V extends DotPathWithRootValue<T, K>,
+    >(
+      key: K,
+      message?: VaeLocaleMessage,
+    ) => // @ts-ignore
+    VaeStringSchema<V>
+
+    numberOf: <
+      K extends DotPathWithRoot<T>,
+      V extends DotPathWithRootValue<T, K>,
+    >(
+      key: K,
+      message?: VaeLocaleMessage,
+    ) => // @ts-ignore
+    VaeNumberSchema<V>
+
+    dateOf: <
+      K extends DotPathWithRoot<T>,
+      V extends DotPathWithRootValue<T, K>,
+    >(
+      key: K,
+      message?: VaeLocaleMessage,
+    ) => // @ts-ignore
+    VaeDateSchema<V>
+
+    booleanOf: <
+      K extends DotPathWithRoot<T>,
+      V extends DotPathWithRootValue<T, K>,
+    >(
+      key: K,
+      message?: VaeLocaleMessage,
+    ) => // @ts-ignore
+    VaeBooleanSchema<V>
+
+    objectOf: <
+      K extends DotPathWithRoot<T>,
+      V extends DotPathWithRootValue<T, K>,
+    >(
+      key: K,
+      message?: VaeLocaleMessage,
+    ) => // @ts-ignore
+    VaeObjectSchema<V>
+
+    arrayOf: <
+      K extends DotPathWithRoot<T>,
+      V extends DotPathWithRootValue<T, K>,
+    >(
+      key: K,
+      message?: VaeLocaleMessage,
+    ) => // @ts-ignore
+    VaeArraySchema<V>
+  }
+
+const makeObjectBuilders = <
+  T extends Record<string, any>,
+>(): ObjectBuilders<T> => ({
+  ...schemaBuilders,
+  stringOf: <
+    K extends DotPathWithRoot<T>,
+    V extends DotPathWithRootValue<T, K>,
+  >(
     key: K,
     message?: VaeLocaleMessage,
   ) =>
     // @ts-ignore
     string<V>(message),
-  numberOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+  numberOf: <
+    K extends DotPathWithRoot<T>,
+    V extends DotPathWithRootValue<T, K>,
+  >(
     key: K,
     message?: VaeLocaleMessage,
   ) =>
     // @ts-ignore
     number<V>(message),
-  dateOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+  dateOf: <K extends DotPathWithRoot<T>, V extends DotPathWithRootValue<T, K>>(
     key: K,
     message?: VaeLocaleMessage,
   ) =>
     // @ts-ignore
     date<V>(message),
-  booleanOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+  booleanOf: <
+    K extends DotPathWithRoot<T>,
+    V extends DotPathWithRootValue<T, K>,
+  >(
     key: K,
     message?: VaeLocaleMessage,
   ) =>
     // @ts-ignore
     boolean<V>(message),
-  objectOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+  // @ts-ignore
+  objectOf: <
+    K extends DotPathWithRoot<T>,
+    V extends DotPathWithRootValue<T, K>,
+  >(
     key: K,
     message?: VaeLocaleMessage,
   ) =>
     // @ts-ignore
     object<V>(message),
-  arrayOf: <K extends DotPath<T>, V extends DotPathValue<T, K>>(
+  arrayOf: <K extends DotPathWithRoot<T>, V extends DotPathWithRootValue<T, K>>(
     key: K,
     message?: VaeLocaleMessage,
   ) =>

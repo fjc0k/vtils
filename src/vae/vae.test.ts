@@ -1,6 +1,12 @@
 import { camelCase, uniq } from 'lodash-uni'
 import { RequiredDeep } from '../types'
-import { VaeArraySchema, VaeObjectSchema, VaeSchemaOf, v } from './vae'
+import {
+  ObjectBuilders,
+  VaeArraySchema,
+  VaeObjectSchema,
+  VaeSchemaOf,
+  v,
+} from './vae'
 
 describe('vae', () => {
   test('string', () => {
@@ -1055,8 +1061,8 @@ describe('vae', () => {
   })
 
   test('类型测试', () => {
-    const defineHandler = <T>(options: {
-      schema: (_: typeof v) => VaeSchemaOf<T>
+    const defineHandler = <T extends Record<string, any>>(options: {
+      schema: (_: ObjectBuilders<T>) => VaeSchemaOf<T>
     }) => {
       return options
     }
@@ -1065,19 +1071,31 @@ describe('vae', () => {
       name: string
       email: string
       gender: 'male' | 'female'
-      type: 'post' | 'comment'
+      basic: {
+        name: string
+        gender: 'male' | 'female'
+      }
     }
     defineHandler<Data>({
       schema: _ =>
-        _.object({
-          id: _.number().required(),
-          name: _.string().required(),
-          email: _.string().required(),
-          gender: _.string<Data['gender']>()
-            .min(1)
-            .enum(['male', 'female'])
-            .max(20),
-        }),
+        _.objectOf('.')
+          .shape({
+            id: _.number().required(),
+            name: _.string().required(),
+            email: _.string().required(),
+            gender: _.stringOf('gender')
+              .required()
+              .enum(['male', 'female'])
+              .max(20),
+            basic: _.objectOf('basic').shape({
+              gender: _.stringOf('gender')
+                .required()
+                .enum(['male', 'female'])
+                .max(20),
+              name: _.string().required(),
+            }),
+          })
+          .requiredFieldsAtLeastOne(['basic']),
     })
     expect(1).toBe(1)
   })
