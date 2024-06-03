@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`vae VaeSchemaBuilder 1`] = `
+Object {
+  "data": Object {
+    "basic": Object {
+      "gender": "female",
+      "name": "db",
+    },
+    "email": "dd@dd.cc",
+    "gender": "male",
+    "id": 1,
+    "name": "bd",
+  },
+  "success": true,
+}
+`;
+
+exports[`vae VaeSchemaBuilder 2`] = `
+Object {
+  "data": Object {
+    "basic": Object {
+      "gender": "female",
+      "name": "db",
+    },
+    "email": "dd@dd.cc",
+    "gender": "male",
+    "id": 1,
+    "name": "bd",
+  },
+  "success": true,
+}
+`;
+
 exports[`vae abortEarly 1`] = `
 Object {
   "issues": Array [

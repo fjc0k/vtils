@@ -1,9 +1,11 @@
 import { camelCase, uniq } from 'lodash-uni'
 import { RequiredDeep } from '../types'
 import {
-  ObjectBuilders,
   VaeArraySchema,
   VaeObjectSchema,
+  VaeObjectSchemaShapeOf,
+  VaeSchema,
+  VaeSchemaBuilder,
   VaeSchemaOf,
   v,
 } from './vae'
@@ -1060,11 +1062,17 @@ describe('vae', () => {
     expect(schema.parse({ id: 'z00003' })).toMatchSnapshot()
   })
 
-  test('类型测试', () => {
+  test('VaeSchemaBuilder', () => {
     const defineHandler = <T extends Record<string, any>>(options: {
-      schema: (_: ObjectBuilders<T>) => VaeSchemaOf<T>
+      schema: (
+        _: VaeSchemaBuilder<T>,
+      ) => VaeSchemaOf<T> | VaeObjectSchemaShapeOf<T>
     }) => {
-      return options
+      const res = options.schema(new VaeSchemaBuilder<T>())
+      if (res instanceof VaeSchema) {
+        return res
+      }
+      return new VaeObjectSchema(res)
     }
     type Data = {
       id: number
@@ -1076,7 +1084,7 @@ describe('vae', () => {
         gender: 'male' | 'female'
       }
     }
-    defineHandler<Data>({
+    const schema1 = defineHandler<Data>({
       schema: _ =>
         _.objectOf('.')
           .shape({
@@ -1095,8 +1103,49 @@ describe('vae', () => {
               name: _.string().required(),
             }),
           })
-          .requiredFieldsAtLeastOne(['basic']),
+          .requiredFieldsAtLeastOne(['basic', 'email', 'id']),
     })
-    expect(1).toBe(1)
+    expect(
+      schema1.parse({
+        id: 1,
+        name: 'bd',
+        email: 'dd@dd.cc',
+        gender: 'male',
+        basic: {
+          name: 'db',
+          gender: 'female',
+        },
+      }),
+    ).toMatchSnapshot()
+    const schema2 = defineHandler<Data>({
+      schema: _ => ({
+        id: _.number().required(),
+        name: _.string().required(),
+        email: _.string().required(),
+        gender: _.stringOf('gender')
+          .required()
+          .enum(['male', 'female'])
+          .max(20),
+        basic: _.objectOf('basic').shape({
+          gender: _.stringOf('gender')
+            .required()
+            .enum(['male', 'female'])
+            .max(20),
+          name: _.string().required(),
+        }),
+      }),
+    })
+    expect(
+      schema2.parse({
+        id: 1,
+        name: 'bd',
+        email: 'dd@dd.cc',
+        gender: 'male',
+        basic: {
+          name: 'db',
+          gender: 'female',
+        },
+      }),
+    ).toMatchSnapshot()
   })
 })

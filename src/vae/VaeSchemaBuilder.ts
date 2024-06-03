@@ -3,6 +3,7 @@ import {
   DotPathWithRootValue,
   IsAny,
   Nullable,
+  RequiredDeep,
 } from '../types'
 import { VaeArraySchema, VaeArraySchemaElementOf } from './VaeArraySchema'
 import { VaeBooleanSchema } from './VaeBooleanSchema'
@@ -10,6 +11,7 @@ import { VaeDateSchema } from './VaeDateSchema'
 import { VaeLocaleMessage } from './VaeLocale'
 import { VaeNumberSchema } from './VaeNumberSchema'
 import { VaeObjectSchema, VaeObjectSchemaShapeOf } from './VaeObjectSchema'
+import { VaeSchema } from './VaeSchema'
 import { VaeStringSchema } from './VaeStringSchema'
 
 export interface VaeStringSchemaBuilder {
@@ -134,28 +136,19 @@ export interface VaeObjectSchemaBuilder {
 }
 
 export interface VaeObjectOfSchemaBuilder<O extends Record<any, any>> {
-  <
-    K extends DotPathWithRoot<O>,
-    T extends DotPathWithRootValue<O, K> & Record<any, any>,
-  >(
+  <K extends DotPathWithRoot<O>, T extends DotPathWithRootValue<O, K> & {}>(
     key: K,
     shape: VaeObjectSchemaShapeOf<T>,
     message?: VaeLocaleMessage,
   ): VaeObjectSchema<T>
 
-  <
-    K extends DotPathWithRoot<O>,
-    T extends DotPathWithRootValue<O, K> & Record<any, any>,
-  >(
+  <K extends DotPathWithRoot<O>, T extends DotPathWithRootValue<O, K> & {}>(
     key: K,
     schema: (schema: VaeObjectSchema<T>) => VaeObjectSchema<T>,
     message?: VaeLocaleMessage,
   ): VaeObjectSchema<T>
 
-  <
-    K extends DotPathWithRoot<O>,
-    T extends DotPathWithRootValue<O, K> & Record<any, any>,
-  >(
+  <K extends DotPathWithRoot<O>, T extends DotPathWithRootValue<O, K> & {}>(
     key: K,
     message?: VaeLocaleMessage,
   ): VaeObjectSchema<T>
@@ -203,4 +196,76 @@ export interface VaeArrayOfSchemaBuilder<O extends Record<any, any>> {
     key: K,
     message?: VaeLocaleMessage,
   ): VaeArraySchema<T>
+}
+
+export class VaeSchemaBuilder<
+  X extends Nullable<Record<any, any>> = Nullable<Record<any, any>>,
+  O extends RequiredDeep<X> = RequiredDeep<X>,
+> {
+  string: VaeStringSchemaBuilder = (schema?: any, message?: any) =>
+    typeof schema === 'function'
+      ? schema(new VaeStringSchema(message))
+      : new VaeStringSchema(schema)
+
+  stringOf: VaeStringOfSchemaBuilder<O> = (
+    key: any,
+    schema?: any,
+    message?: any,
+  ) => this.string(schema, message)
+
+  number: VaeNumberSchemaBuilder = (schema?: any, message?: any) =>
+    typeof schema === 'function'
+      ? schema(new VaeNumberSchema(message))
+      : new VaeNumberSchema(schema)
+
+  numberOf: VaeNumberOfSchemaBuilder<O> = (
+    key: any,
+    schema?: any,
+    message?: any,
+  ) => this.number(schema, message)
+
+  date: VaeDateSchemaBuilder = (schema?: any, message?: any) =>
+    typeof schema === 'function'
+      ? schema(new VaeDateSchema(message))
+      : new VaeDateSchema(schema)
+
+  dateOf: VaeDateOfSchemaBuilder<O> = (key: any, schema?: any, message?: any) =>
+    this.date(schema, message)
+
+  boolean: VaeBooleanSchemaBuilder = (schema?: any, message?: any) =>
+    typeof schema === 'function'
+      ? schema(new VaeBooleanSchema(message))
+      : new VaeBooleanSchema(schema)
+
+  booleanOf: VaeBooleanOfSchemaBuilder<O> = (
+    key: any,
+    schema?: any,
+    message?: any,
+  ) => this.boolean(schema, message)
+
+  object: VaeObjectSchemaBuilder = (schema?: any, message?: any) =>
+    typeof schema === 'function'
+      ? schema(new VaeObjectSchema(undefined, message))
+      : typeof schema === 'object'
+      ? new VaeObjectSchema(schema, message)
+      : new VaeObjectSchema(undefined, schema)
+
+  objectOf: VaeObjectOfSchemaBuilder<O> = (
+    key: any,
+    schema?: any,
+    message?: any,
+  ) => this.object(schema, message)
+
+  array: VaeArraySchemaBuilder = (schema?: any, message?: any) =>
+    typeof schema === 'function'
+      ? schema(new VaeArraySchema(undefined, message))
+      : schema instanceof VaeSchema
+      ? new VaeArraySchema(schema as any, message)
+      : new VaeArraySchema(undefined, schema)
+
+  arrayOf: VaeArrayOfSchemaBuilder<O> = (
+    key: any,
+    schema?: any,
+    message?: any,
+  ) => this.array(schema, message)
 }

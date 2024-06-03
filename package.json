@@ -188,7 +188,7 @@
     "tree-tool": "1.1.8",
     "ts-essentials": "7.0.3",
     "type-fest": "2.7.0",
-    "typescript": "^5.3.3",
+    "typescript": "^5.4.5",
     "typescript-snapshots-plugin": "1.7.0",
     "vscode-generate-index-standalone": "1.5.3",
     "yargs": "17.1.1"
