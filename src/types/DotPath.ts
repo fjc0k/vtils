@@ -29,3 +29,9 @@ export type DotPathValue<T, Path extends string> = Path extends '0'
     ? DotPathValue<T[K], R>
     : unknown
   : unknown
+
+export type DotPathWithRoot<T> = DotPath<T> | '.'
+
+export type DotPathWithRootValue<T, Path extends string> = Path extends '.'
+  ? T
+  : DotPathValue<T, Path>

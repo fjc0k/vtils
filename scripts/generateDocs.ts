@@ -1,11 +1,14 @@
+import { Extractor, ExtractorConfig } from '@microsoft/api-extractor'
 import exec from 'execa'
 import fs from 'fs-extra'
 import globby from 'globby'
-import pkg from '../package.json'
 import { basename, join } from 'path'
-import { Extractor, ExtractorConfig } from '@microsoft/api-extractor'
+import pkg from '../package.json'
 
 async function main(rootDir: string) {
+  // 暂不生成文档
+  return
+
   const libDir = join(rootDir, './lib')
   const docsDir = join(rootDir, './docs')
   const docsMetaDataDir = join(docsDir, './metaData')
