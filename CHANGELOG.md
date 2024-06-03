@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.114.0](https://github.com/fjc0k/vtils/compare/v4.113.3...v4.114.0) (2024-06-03)
+
+### Features
+
+- **vae:** 新增 VaeSchemaBuilder ([#153](https://github.com/fjc0k/vtils/issues/153)) ([dc65edf](https://github.com/fjc0k/vtils/commit/dc65edf8ccc1b551f4b8dae7b45ae2cb1f4d5500))
+
 ### [4.113.3](https://github.com/fjc0k/vtils/compare/v4.113.2...v4.113.3) (2024-03-17)
 
 ### Bug Fixes
