@@ -12,6 +12,9 @@ export class VaeError extends Error {
     super(VaeError.messageFromIssues(issues))
   }
 
+  /**
+   * 从问题里导出信息
+   */
   static messageFromIssues(issues: VaeIssue[]) {
     return issues.map(issue => issue.message).join('; ')
   }

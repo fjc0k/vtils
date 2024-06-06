@@ -16,6 +16,9 @@ export class VaeBooleanSchema<
     })
   }
 
+  /**
+   * 应为 true
+   */
   true(message: VaeLocaleMessage = VaeLocale.boolean.true) {
     return this.check({
       fn: v => v === true,
@@ -24,6 +27,9 @@ export class VaeBooleanSchema<
     })
   }
 
+  /**
+   * 应为 false
+   */
   false(message: VaeLocaleMessage = VaeLocale.boolean.false) {
     return this.check({
       fn: v => v === false,

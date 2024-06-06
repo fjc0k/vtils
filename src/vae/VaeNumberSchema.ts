@@ -16,6 +16,9 @@ export class VaeNumberSchema<
     }).transform(toNumber as any)
   }
 
+  /**
+   * 最小值
+   */
   min(value: number, message: VaeLocaleMessage = VaeLocale.number.min) {
     return this.check({
       fn: v => v >= value,
@@ -27,6 +30,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * 最大值
+   */
   max(value: number, message: VaeLocaleMessage = VaeLocale.number.max) {
     return this.check({
       fn: v => v <= value,
@@ -38,6 +44,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * 小于
+   */
   lessThan(
     value: number,
     message: VaeLocaleMessage = VaeLocale.number.lessThan,
@@ -52,6 +61,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * 大于
+   */
   moreThan(
     value: number,
     message: VaeLocaleMessage = VaeLocale.number.moreThan,
@@ -66,6 +78,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * 整数，即 -100, -1, 0, 1, 2, 100, ...
+   */
   integer(message: VaeLocaleMessage = VaeLocale.number.integer) {
     return this.check({
       fn: isInteger,
@@ -74,6 +89,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * 正数，即 0.01, 0.1, 1, 2, 3, ...
+   */
   positive(message: VaeLocaleMessage = VaeLocale.number.positive) {
     return this.check({
       fn: v => v > 0,
@@ -82,6 +100,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * 非正数，即 0, -0.01, -1, -100, ...
+   */
   nonpositive(message: VaeLocaleMessage = VaeLocale.number.nonpositive) {
     return this.check({
       fn: v => v <= 0,
@@ -90,6 +111,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * 负数，即 -0.01, -1, -100, ...
+   */
   negative(message: VaeLocaleMessage = VaeLocale.number.negative) {
     return this.check({
       fn: v => v < 0,
@@ -98,6 +122,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * 非负数，即 0, 0.01, 0.1, 1, 2.1, 100, ...
+   */
   nonnegative(message: VaeLocaleMessage = VaeLocale.number.nonnegative) {
     return this.check({
       fn: v => v >= 0,
@@ -106,6 +133,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * 正整数，即 1, 2, 3, 4, 5, ...
+   */
   positiveInteger(
     message: VaeLocaleMessage = VaeLocale.number.positiveInteger,
   ) {
@@ -116,6 +146,9 @@ export class VaeNumberSchema<
     })
   }
 
+  /**
+   * ID，即正整数，即 1, 2, 3, 4, 5, ...
+   */
   id(message: VaeLocaleMessage = VaeLocale.number.positiveInteger) {
     return this.positiveInteger(message)
   }

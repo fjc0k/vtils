@@ -2,9 +2,21 @@ import { formatDate } from '../date'
 import { VaeSchemaPath } from './VaeSchema'
 
 export type VaeLocaleMessagePayload = {
+  /**
+   * 标签
+   */
   label?: string
+  /**
+   * 路径
+   */
   path: VaeSchemaPath
+  /**
+   * 值
+   */
   value: any
+  /**
+   * 参数
+   */
   params: Record<string, any>
 }
 

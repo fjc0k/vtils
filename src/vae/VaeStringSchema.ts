@@ -29,6 +29,9 @@ export class VaeStringSchema<
     )
   }
 
+  /**
+   * 最小长度
+   */
   min(value: number, message: VaeLocaleMessage = VaeLocale.string.min) {
     return this.check({
       fn: v => v.length >= value,
@@ -40,6 +43,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 最大长度
+   */
   max(value: number, message: VaeLocaleMessage = VaeLocale.string.max) {
     return this.check({
       fn: v => v.length <= value,
@@ -51,6 +57,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 固定长度
+   */
   length(value: number, message: VaeLocaleMessage = VaeLocale.string.length) {
     return this.check({
       fn: v => v.length === value,
@@ -62,6 +71,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 邮箱地址
+   */
   email(message: VaeLocaleMessage = VaeLocale.string.email) {
     return this.check({
       fn: isEmail,
@@ -70,6 +82,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 链接
+   */
   url(message: VaeLocaleMessage = VaeLocale.string.url) {
     return this.check({
       fn: isUrl,
@@ -78,6 +93,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 正则
+   */
   regex(value: RegExp, message: VaeLocaleMessage = VaeLocale.string.regex) {
     return this.check({
       fn: v => {
@@ -92,6 +110,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 包含
+   */
   includes(
     value: string,
     message: VaeLocaleMessage = VaeLocale.string.includes,
@@ -106,6 +127,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 前缀
+   */
   startsWith(
     value: string,
     message: VaeLocaleMessage = VaeLocale.string.startsWith,
@@ -120,6 +144,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 后缀
+   */
   endsWith(
     value: string,
     message: VaeLocaleMessage = VaeLocale.string.endsWith,
@@ -134,6 +161,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 手机号码
+   */
   phoneNumber(message: VaeLocaleMessage = VaeLocale.string.phoneNumber) {
     return this.check({
       fn: isPossibleChineseMobilePhoneNumber,
@@ -142,6 +172,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 身份证号码
+   */
   idCardNumber(message: VaeLocaleMessage = VaeLocale.string.idCardNumber) {
     return this.check({
       fn: isChineseIDCardNumber,
@@ -150,6 +183,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * cuid
+   */
   cuid(message: VaeLocaleMessage = VaeLocale.string.cuid) {
     return this.check({
       fn: isCuid,
@@ -158,6 +194,9 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * cuid2
+   */
   cuid2(message: VaeLocaleMessage = VaeLocale.string.cuid2) {
     return this.check({
       fn: isCuid2,
@@ -166,11 +205,17 @@ export class VaeStringSchema<
     })
   }
 
+  /**
+   * 去除两侧空字符串
+   */
   trim() {
     this._options.stringTrim = true
     return this
   }
 
+  /**
+   * 当设置了必填时，将空字符串视为已填
+   */
   emptyable() {
     this._options.stringEmptyable = true
     return this

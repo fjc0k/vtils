@@ -29,6 +29,9 @@ export class VaeArraySchema<
     }
   }
 
+  /**
+   * 数组元素定义
+   */
   element(element: VaeArraySchemaElementOf<T>) {
     return this.check({
       fn: element,
@@ -37,6 +40,9 @@ export class VaeArraySchema<
     })
   }
 
+  /**
+   * 数组非空，即长度应大于 0
+   */
   nonempty(message: VaeLocaleMessage = VaeLocale.array.nonempty) {
     return this.check({
       fn: v => v.length > 0,
@@ -45,6 +51,9 @@ export class VaeArraySchema<
     })
   }
 
+  /**
+   * 数组最小长度
+   */
   min(value: number, message: VaeLocaleMessage = VaeLocale.array.min) {
     return this.check({
       fn: v => v.length >= value,
@@ -56,6 +65,9 @@ export class VaeArraySchema<
     })
   }
 
+  /**
+   * 数组最大长度
+   */
   max(value: number, message: VaeLocaleMessage = VaeLocale.array.max) {
     return this.check({
       fn: v => v.length <= value,
@@ -67,6 +79,9 @@ export class VaeArraySchema<
     })
   }
 
+  /**
+   * 数组固定长度
+   */
   length(value: number, message: VaeLocaleMessage = VaeLocale.array.length) {
     return this.check({
       fn: v => v.length === value,

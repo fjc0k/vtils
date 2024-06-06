@@ -157,15 +157,24 @@ export abstract class VaeSchema<
     }
   }
 
+  /**
+   * 选项
+   */
   get options() {
     return this._options
   }
 
+  /**
+   * 设置元信息
+   */
   meta(metadata: VaeSchemaMetadata) {
     this._options.metadata = metadata
     return this
   }
 
+  /**
+   * 新增检测
+   */
   check(payload: VaeSchemaCheckPayload<T>) {
     const index = payload.tag
       ? findIndex(
@@ -181,33 +190,51 @@ export abstract class VaeSchema<
     return this
   }
 
+  /**
+   * 新增转换
+   */
   transform(payload: VaeSchemaTransformPayload<T>) {
     this._options.processors.push(payload)
     return this
   }
 
+  /**
+   * 设置标签
+   */
   label(label: string) {
     this._options.label = label
     return this
   }
 
+  /**
+   * 设置默认值
+   */
   default(value: T | (() => T)) {
     this._options.default = value
     return this
   }
 
+  /**
+   * 设为必填
+   */
   required(message: VaeLocaleMessage = VaeLocale.base.required) {
     this._options.required = true
     this._options.requiredMessage = message
     return this
   }
 
+  /**
+   * 设为可选
+   */
   optional() {
     this._options.required = false
     this._options.requiredMessage = undefined
     return this
   }
 
+  /**
+   * 设置枚举
+   */
   enum(
     value: T[] | Record<any, T>,
     message: VaeLocaleMessage = VaeLocale.base.enum,
@@ -223,6 +250,9 @@ export abstract class VaeSchema<
     })
   }
 
+  /**
+   * 自定义检测
+   */
   custom(
     fn: (value: T) => boolean | void,
     messageOrOptions?:
@@ -250,11 +280,17 @@ export abstract class VaeSchema<
     })
   }
 
+  /**
+   * 在运行时动态修改模式
+   */
   runtime(fn: VaeSchemaRuntimeFn<T, this>) {
     this._options.runtime = fn
     return this
   }
 
+  /**
+   * 克隆
+   */
   clone() {
     // https://stackoverflow.com/a/44782052
     const newSchema: this = assign(
@@ -273,6 +309,9 @@ export abstract class VaeSchema<
     return newSchema
   }
 
+  /**
+   * 获取给定多个路径的模式
+   */
   reach<P extends DotPath<T>>(
     paths: P[],
     ctx?: VaeSchemaReachContext,
@@ -280,6 +319,9 @@ export abstract class VaeSchema<
   ): {
     [K in P]: VaeSchemaOf<DotPathValue<T, K>>
   }
+  /**
+   * 获取给定路径的模式
+   */
   reach<P extends DotPath<T>>(
     path: P,
     ctx?: VaeSchemaReachContext,
@@ -326,6 +368,9 @@ export abstract class VaeSchema<
     return typeof path === 'string' ? res[path] : res
   }
 
+  /**
+   * 解析数据并返回解析结果
+   */
   parse(data: T0, options?: VaeSchemaParseOptions): VaeSchemaParseResult<T0> {
     // 字符串 trim
     if (
@@ -531,6 +576,9 @@ export abstract class VaeSchema<
     }
   }
 
+  /**
+   * 解析数据，当解析失败时抛出错误，当解析成功时返回结果
+   */
   parseOrThrow(data: T0, options?: VaeSchemaParseOptions) {
     const res = this.parse(data, options)
     if (res.success) {
@@ -539,6 +587,9 @@ export abstract class VaeSchema<
     throw new VaeError(res.issues)
   }
 
+  /**
+   * 根据当前模式强制转换给定数据
+   */
   cast(data: any, options?: VaeSchemaCastOptions): any {
     const res = this.parse(data, {
       cast: true,

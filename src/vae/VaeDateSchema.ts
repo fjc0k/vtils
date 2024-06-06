@@ -16,6 +16,9 @@ export class VaeDateSchema<
     })
   }
 
+  /**
+   * 最小日期
+   */
   min(
     value: Date | string | number,
     message: VaeLocaleMessage = VaeLocale.date.min,
@@ -32,6 +35,9 @@ export class VaeDateSchema<
     })
   }
 
+  /**
+   * 最大日期
+   */
   max(
     value: Date | string | number,
     message: VaeLocaleMessage = VaeLocale.date.max,

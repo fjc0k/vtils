@@ -36,6 +36,9 @@ export class VaeObjectSchema<
     }
   }
 
+  /**
+   * 对象定义
+   */
   shape(shape: VaeObjectSchemaShapeOf<T>) {
     const keys = Object.keys(shape)
     this._options.objectKeys = keys
@@ -50,6 +53,9 @@ export class VaeObjectSchema<
     return this
   }
 
+  /**
+   * 原地挑选给定字段
+   */
   pickFields<K extends keyof T>(keys: K[]): VaeObjectSchema<Pick<T, K>> {
     this._options.processors = this._options.processors.filter(item =>
       typeof item === 'object' && startsWith(item.tag, 'field_')
@@ -63,6 +69,9 @@ export class VaeObjectSchema<
     return this as any
   }
 
+  /**
+   * 原地剔除给定字段
+   */
   omitFields<K extends keyof T>(keys: K[]): VaeObjectSchema<Omit<T, K>> {
     this._options.processors = this._options.processors.filter(item =>
       typeof item === 'object' && startsWith(item.tag, 'field_')
@@ -73,7 +82,13 @@ export class VaeObjectSchema<
     return this as any
   }
 
+  /**
+   * 原地将给定字段设为可选
+   */
   optionalFields<K extends keyof T>(keys: K[]): VaeObjectSchema<PartialBy<T, K>>
+  /**
+   * 原地将所有字段设为可选
+   */
   optionalFields(): VaeObjectSchema<Partial<T>>
   optionalFields(keys?: string[]): any {
     this._options.processors.forEach(item => {
@@ -88,9 +103,15 @@ export class VaeObjectSchema<
     return this
   }
 
+  /**
+   * 原地将给定字段设为必填
+   */
   requiredFields<K extends keyof T>(
     keys: K[],
   ): VaeObjectSchema<RequiredBy<T, K>>
+  /**
+   * 原地将所有字段设为必填
+   */
   requiredFields(): VaeObjectSchema<Required<T>>
   requiredFields(keys?: string[]): any {
     this._options.processors.forEach(item => {
@@ -105,9 +126,15 @@ export class VaeObjectSchema<
     return this
   }
 
+  /**
+   * 返回给定字段的定义
+   */
   shapeOfFields<K extends keyof T>(
     keys: K[],
   ): VaeObjectSchemaShapeOf<Pick<T, K>>
+  /**
+   * 返回全部字段的定义
+   */
   shapeOfFields(): VaeObjectSchemaShapeOf<T>
   shapeOfFields(keys?: string[]) {
     const shape: Record<any, any> = {}
@@ -123,6 +150,9 @@ export class VaeObjectSchema<
     return shape
   }
 
+  /**
+   * 给定字段中至少有一个必填
+   */
   requiredFieldsAtLeastOne<K extends keyof T>(
     keys: K[],
     message: VaeLocaleMessage = VaeLocale.object.requiredFieldsAtLeastOne,
