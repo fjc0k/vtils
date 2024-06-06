@@ -137,7 +137,22 @@
 <a name='L78'></a><a href='#L78'>78</a>
 <a name='L79'></a><a href='#L79'>79</a>
 <a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -169,6 +184,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,8 +195,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -196,8 +220,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -248,6 +278,9 @@ export class VaeArraySchema&lt;
     }
   }
 &nbsp;
+  /**
+   * 数组元素定义
+   */
   element(element: VaeArraySchemaElementOf&lt;T&gt;) {
     return this.check({
       fn: element,
@@ -256,6 +289,9 @@ export class VaeArraySchema&lt;
     })
   }
 &nbsp;
+  /**
+   * 数组非空，即长度应大于 0
+   */
 <span class="fstat-no" title="function not covered" >  no</span>nempty(message: VaeLocaleMessage = <span class="branch-0 cbranch-no" title="branch not covered" >VaeLocale.array.nonempty)</span> {
 <span class="cstat-no" title="statement not covered" >    return this.check({</span>
       fn: <span class="fstat-no" title="function not covered" >v </span>=&gt; <span class="cstat-no" title="statement not covered" >v.length &gt; 0,</span>
@@ -264,6 +300,9 @@ export class VaeArraySchema&lt;
     })
   }
 &nbsp;
+  /**
+   * 数组最小长度
+   */
   min(value: number, message: VaeLocaleMessage = VaeLocale.array.min) {
     return this.check({
       fn: v =&gt; v.length &gt;= value,
@@ -275,6 +314,9 @@ export class VaeArraySchema&lt;
     })
   }
 &nbsp;
+  /**
+   * 数组最大长度
+   */
   max(value: number, message: VaeLocaleMessage = VaeLocale.array.max) {
     return this.check({
       fn: v =&gt; v.length &lt;= value,
@@ -286,6 +328,9 @@ export class VaeArraySchema&lt;
     })
   }
 &nbsp;
+  /**
+   * 数组固定长度
+   */
 <span class="fstat-no" title="function not covered" >  le</span>ngth(value: number, message: VaeLocaleMessage = <span class="branch-0 cbranch-no" title="branch not covered" >VaeLocale.array.length)</span> {
 <span class="cstat-no" title="statement not covered" >    return this.check({</span>
       fn: <span class="fstat-no" title="function not covered" >v </span>=&gt; <span class="cstat-no" title="statement not covered" >v.length === value,</span>
@@ -304,7 +349,7 @@ export class VaeArraySchema&lt;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Jun 03 2024 06:42:11 GMT+0000 (Coordinated Universal Time)
+                at Thu Jun 06 2024 06:05:59 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
