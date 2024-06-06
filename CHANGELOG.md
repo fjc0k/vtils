@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.115.0](https://github.com/fjc0k/vtils/compare/v4.114.0...v4.115.0) (2024-06-06)
+
+### Features
+
+- **vae:** 注释完善 ([e054afd](https://github.com/fjc0k/vtils/commit/e054afd99d2e04307358e45b4d366e0262fe16b7))
+
 ## [4.114.0](https://github.com/fjc0k/vtils/compare/v4.113.3...v4.114.0) (2024-06-03)
 
 ### Features
