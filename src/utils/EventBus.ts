@@ -16,6 +16,11 @@ export interface EventBusListenerDescriptor<
   name: TListenerName
   context?: any
   tag?: EventBusListenerTag
+  filter?: (
+    callback: EventBusListener,
+    index: number,
+    callbacks: EventBusListener[],
+  ) => boolean
 }
 
 export type EventBusBeforeOn<TListeners extends EventBusListeners> = {
@@ -153,10 +158,16 @@ export class EventBus<TListeners extends EventBusListeners> {
       name,
       context,
       tag,
+      filter,
     }: {
       name: TListenerName
       context?: any
       tag?: string | number
+      filter?: (
+        callback: EventBusListener,
+        index: number,
+        callbacks: EventBusListener[],
+      ) => boolean
     } =
       typeof eventName === 'object'
         ? eventName
@@ -170,6 +181,9 @@ export class EventBus<TListeners extends EventBusListeners> {
           callback.__EVENT_BUS_TAG__ != null &&
           tag === callback.__EVENT_BUS_TAG__,
       )
+    }
+    if (typeof filter === 'function') {
+      callbacks = callbacks.filter(filter)
     }
     this.options?.beforeEmit?.[name]?.call(this, context)
     return callbacks.map(callback => {

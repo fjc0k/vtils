@@ -199,4 +199,48 @@ describe('EventBus', () => {
     bus.emit('test')
     expect(fn).toBeCalled().toBeCalledTimes(2)
   })
+
+  test('支持 filter', () => {
+    const bus = new EventBus<{
+      test: () => any
+    }>()
+    const fn = jest.fn()
+    const fn1 = jest.fn()
+    const fn2 = jest.fn()
+
+    bus.on('test', fn)
+    bus.on('test', fn1)
+    bus.on('test', fn2)
+
+    bus.emit({
+      name: 'test',
+    })
+    expect(fn).toBeCalled().toBeCalledTimes(1)
+    expect(fn1).toBeCalled().toBeCalledTimes(1)
+    expect(fn2).toBeCalled().toBeCalledTimes(1)
+
+    bus.emit({
+      name: 'test',
+      filter: (_, index) => index === 0,
+    })
+    expect(fn).toBeCalled().toBeCalledTimes(2)
+    expect(fn1).toBeCalled().toBeCalledTimes(1)
+    expect(fn2).toBeCalled().toBeCalledTimes(1)
+
+    bus.emit({
+      name: 'test',
+      filter: (_, index, { length }) => index === length - 1,
+    })
+    expect(fn).toBeCalled().toBeCalledTimes(2)
+    expect(fn1).toBeCalled().toBeCalledTimes(1)
+    expect(fn2).toBeCalled().toBeCalledTimes(2)
+
+    bus.emit({
+      name: 'test',
+      filter: (_, index) => index === 0 || index === 1,
+    })
+    expect(fn).toBeCalled().toBeCalledTimes(3)
+    expect(fn1).toBeCalled().toBeCalledTimes(2)
+    expect(fn2).toBeCalled().toBeCalledTimes(2)
+  })
 })
