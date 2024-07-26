@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.117.0](https://github.com/fjc0k/vtils/compare/v4.116.0...v4.117.0) (2024-07-26)
+
+### Features
+
+- **EventBus:** 支持 filter 过滤回调 ([8290e32](https://github.com/fjc0k/vtils/commit/8290e3257f2ec3875c632461c6901b4a9f711718))
+
 ## [4.116.0](https://github.com/fjc0k/vtils/compare/v4.115.0...v4.116.0) (2024-07-08)
 
 ### Features
