@@ -88,4 +88,19 @@ describe('asyncMemoize', () => {
     expect(await fnMemoized(2)).toBe(2)
     expect(i).toBe(2)
   })
+
+  test('支持外部管理缓存', async () => {
+    const fn = jest.fn().mockImplementation(async () => 1)
+    const fnMemoized = asyncMemoize(fn)
+
+    await fnMemoized()
+    expect(fn).toBeCalled().toBeCalledTimes(1)
+
+    await fnMemoized()
+    expect(fn).toBeCalled().toBeCalledTimes(1)
+
+    fnMemoized.cache.clear()
+    await fnMemoized()
+    expect(fn).toBeCalled().toBeCalledTimes(2)
+  })
 })

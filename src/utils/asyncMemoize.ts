@@ -16,6 +16,14 @@ export interface AsyncMemoizeOptions<
   cacheTTL?: number
 }
 
+export type AsyncMemoizeCacheMap = Map<
+  string,
+  {
+    value: any
+    expiredAt: number
+  }
+>
+
 /**
  * 异步函数执行缓存。
  *
@@ -25,15 +33,11 @@ export interface AsyncMemoizeOptions<
 export function asyncMemoize<T extends (...args: any[]) => Promise<any>>(
   asyncFn: T,
   options: AsyncMemoizeOptions<T> = {},
-): T {
+): T & {
+  cache: AsyncMemoizeCacheMap
+} {
   const { cacheKey = (...args: any[]) => args[0], cacheTTL } = options
-  const cache = new Map<
-    string,
-    {
-      value: any
-      expiredAt: number
-    }
-  >()
+  const cache: AsyncMemoizeCacheMap = new Map()
 
   const call = (...args: any[]) => {
     const _cacheKey = cacheKey(...args)
@@ -53,6 +57,7 @@ export function asyncMemoize<T extends (...args: any[]) => Promise<any>>(
     })
     return cacheValueNew
   }
+  call.cache = cache
 
   return call as any
 }
