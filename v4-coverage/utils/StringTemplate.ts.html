@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -114,7 +114,19 @@
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -140,8 +152,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -158,22 +174,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export interface StringTemplateRenderOptions {
   /** 是否启用代码渲染，需环境支持 eval */
   code?: boolean
+  /** 是否仅代码渲染 */
+  onlyCode?: boolean
 }
 &nbsp;
 /**
@@ -197,35 +223,45 @@ export class StringTemplate {
     data: Record&lt;string, any&gt;,
     options?: StringTemplateRenderOptions,
   ) {
-    const enableCode = !!options?.code
+    const onlyCode = !!options?.onlyCode
+    const enableCode = onlyCode || !!options?.code
     const keys = Object.keys(data)
-    for (const key of keys) {
-      template =
-        typeof data[key] === 'function'
-          ? template.replace(
-              new RegExp(`\\{${key}(:.+?)?\\}`, 'g'),
-              (_, params: string) =&gt; {
-                return data[key].call(
-                  null,
-                  ...(params ? params.substring(1) : '').split(','),
-                )
-              },
-            )
-          : enableCode
-          ? template.replace(new RegExp(`(?&lt;!\\$)\\{${key}\\}`, 'g'), data[key])
-          : template.replaceAll(`{${key}}`, data[key])
+    if (!onlyCode) {
+      for (const key of keys) {
+        template =
+          typeof data[key] === 'function'
+            ? template.replace(
+                new RegExp(`\\{${key}(:.+?)?\\}`, 'g'),
+                (_, params: string) =&gt; {
+                  return data[key].call(
+                    null,
+                    ...(params ? params.substring(1) : '').split(','),
+                  )
+                },
+              )
+            : enableCode
+            ? template.replace(
+                new RegExp(`(?&lt;!\\$)\\{${key}\\}`, 'g'),
+                data[key],
+              )
+            : template.replaceAll(`{${key}}`, data[key])
+      }
     }
     if (enableCode) {
       template = template.replace(/\{\{(.+?)\}\}/g, (_, code) =&gt; {
-        return eval(`
-          (() =&gt; {
-            const {${keys.join(',')}} = ${JSON.stringify(data)};
-            return ${code};
-          })()
-        `)
+        // 需在 eval 里函数两边加上括号才能返回函数
+        return eval(`(function (data) {
+          ${keys.map(key =&gt; `var ${key} = data["${key}"];`).join('')}
+          return ${code};
+        })`)(data)
       })
     }
     return template
+  }
+&nbsp;
+  /** 判断是否有代码块 */
+  static hasCodeBlock(template: string): boolean {
+    return /\{\{(.+?)\}\}/.test(template)
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -235,7 +271,7 @@ export class StringTemplate {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Aug 06 2024 18:54:49 GMT+0000 (Coordinated Universal Time)
+                at Wed Aug 07 2024 03:38:35 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
