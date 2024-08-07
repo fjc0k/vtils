@@ -110,4 +110,14 @@ describe('StringTemplate', () => {
     expect(StringTemplate.hasCodeBlock('{{x }}ddd')).toBe(true)
     expect(StringTemplate.hasCodeBlock('{{   x }}ddd')).toBe(true)
   })
+
+  test('code返回null, undefined, true, false时置空', () => {
+    expect(StringTemplate.render('{{null}}', {}, { onlyCode: true })).toBe('')
+    expect(StringTemplate.render('{{undefined}}', {}, { onlyCode: true })).toBe(
+      '',
+    )
+    expect(StringTemplate.render('{{true}}', {}, { onlyCode: true })).toBe('')
+    expect(StringTemplate.render('{{false}}', {}, { onlyCode: true })).toBe('')
+    expect(StringTemplate.render('{{0}}', {}, { onlyCode: true })).toBe('0')
+  })
 })

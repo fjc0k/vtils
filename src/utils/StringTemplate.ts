@@ -53,10 +53,14 @@ export class StringTemplate {
     if (enableCode) {
       template = template.replace(/\{\{(.+?)\}\}/g, (_, code) => {
         // 需在 eval 里函数两边加上括号才能返回函数
-        return eval(`(function (data) {
+        const res = eval(`(function (data) {
           ${keys.map(key => `var ${key} = data["${key}"];`).join('')}
           return ${code};
         })`)(data)
+        if (res == null || res === true || res === false) {
+          return ''
+        }
+        return res
       })
     }
     return template
