@@ -102,4 +102,12 @@ describe('StringTemplate', () => {
       ),
     ).toBe('3爱你{么}')
   })
+
+  test('hasCodeBlock', () => {
+    expect(StringTemplate.hasCodeBlock('ddd')).toBe(false)
+    expect(StringTemplate.hasCodeBlock('{x}ddd')).toBe(false)
+    expect(StringTemplate.hasCodeBlock('{{x}}ddd')).toBe(true)
+    expect(StringTemplate.hasCodeBlock('{{x }}ddd')).toBe(true)
+    expect(StringTemplate.hasCodeBlock('{{   x }}ddd')).toBe(true)
+  })
 })

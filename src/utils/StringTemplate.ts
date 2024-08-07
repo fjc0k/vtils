@@ -61,4 +61,9 @@ export class StringTemplate {
     }
     return template
   }
+
+  /** 判断是否有代码块 */
+  static hasCodeBlock(template: string): boolean {
+    return /\{\{(.+?)\}\}/.test(template)
+  }
 }
