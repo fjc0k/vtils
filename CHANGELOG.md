@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.120.0](https://github.com/fjc0k/vtils/compare/v4.119.0...v4.120.0) (2024-08-07)
+
+### Features
+
+- **StringTemplate:** code 返回 null, undefined, true, false 时置空 ([1d7e2c1](https://github.com/fjc0k/vtils/commit/1d7e2c1a3e6380c0f31c9facf3bc6dab047b566f))
+
 ## [4.119.0](https://github.com/fjc0k/vtils/compare/v4.118.0...v4.119.0) (2024-08-07)
 
 ### Features
