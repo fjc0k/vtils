@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.119.0](https://github.com/fjc0k/vtils/compare/v4.118.0...v4.119.0) (2024-08-07)
+
+### Features
+
+- **StringTemplate:** 支持仅代码渲染 ([2c75262](https://github.com/fjc0k/vtils/commit/2c752622d83ca3ff0ec431ea457e86f8649bde0c))
+- **StringTemplate:** 支持判断是否有代码块 ([169505b](https://github.com/fjc0k/vtils/commit/169505ba1c851449ddc82d0c02c61bc90301db4a))
+
 ## [4.118.0](https://github.com/fjc0k/vtils/compare/v4.117.0...v4.118.0) (2024-08-06)
 
 ### Features
