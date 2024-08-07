@@ -61,4 +61,45 @@ describe('StringTemplate', () => {
       ),
     ).toBe('hello爱你，${用户}')
   })
+
+  test('onlyCode', () => {
+    expect(
+      StringTemplate.render(
+        '{用户}爱你',
+        {
+          用户: 'hello',
+        },
+        {
+          onlyCode: true,
+        },
+      ),
+    ).toBe('{用户}爱你')
+    expect(
+      StringTemplate.render(
+        '{{用户}}爱你',
+        {
+          用户: 'hello',
+        },
+        {
+          onlyCode: true,
+        },
+      ),
+    ).toBe('hello爱你')
+
+    expect(
+      StringTemplate.render(
+        '{{ _.sum(1, 2) }}爱你{么}',
+        {
+          _: {
+            sum(a: number, b: number) {
+              return a + b
+            },
+          },
+        },
+        {
+          onlyCode: true,
+        },
+      ),
+    ).toBe('3爱你{么}')
+  })
 })

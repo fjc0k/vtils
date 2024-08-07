@@ -1,6 +1,8 @@
 export interface StringTemplateRenderOptions {
   /** 是否启用代码渲染，需环境支持 eval */
   code?: boolean
+  /** 是否仅代码渲染 */
+  onlyCode?: boolean
 }
 
 /**
@@ -24,32 +26,37 @@ export class StringTemplate {
     data: Record<string, any>,
     options?: StringTemplateRenderOptions,
   ) {
-    const enableCode = !!options?.code
+    const onlyCode = !!options?.onlyCode
+    const enableCode = onlyCode || !!options?.code
     const keys = Object.keys(data)
-    for (const key of keys) {
-      template =
-        typeof data[key] === 'function'
-          ? template.replace(
-              new RegExp(`\\{${key}(:.+?)?\\}`, 'g'),
-              (_, params: string) => {
-                return data[key].call(
-                  null,
-                  ...(params ? params.substring(1) : '').split(','),
-                )
-              },
-            )
-          : enableCode
-          ? template.replace(new RegExp(`(?<!\\$)\\{${key}\\}`, 'g'), data[key])
-          : template.replaceAll(`{${key}}`, data[key])
+    if (!onlyCode) {
+      for (const key of keys) {
+        template =
+          typeof data[key] === 'function'
+            ? template.replace(
+                new RegExp(`\\{${key}(:.+?)?\\}`, 'g'),
+                (_, params: string) => {
+                  return data[key].call(
+                    null,
+                    ...(params ? params.substring(1) : '').split(','),
+                  )
+                },
+              )
+            : enableCode
+            ? template.replace(
+                new RegExp(`(?<!\\$)\\{${key}\\}`, 'g'),
+                data[key],
+              )
+            : template.replaceAll(`{${key}}`, data[key])
+      }
     }
     if (enableCode) {
       template = template.replace(/\{\{(.+?)\}\}/g, (_, code) => {
-        return eval(`
-          (() => {
-            const {${keys.join(',')}} = ${JSON.stringify(data)};
-            return ${code};
-          })()
-        `)
+        // 需在 eval 里函数两边加上括号才能返回函数
+        return eval(`(function (data) {
+          ${keys.map(key => `var ${key} = data["${key}"];`).join('')}
+          return ${code};
+        })`)(data)
       })
     }
     return template
