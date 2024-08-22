@@ -64,6 +64,7 @@ export type {
   WritableKeys,
   OptionalKeys,
   RequiredKeys,
+  XOR
 } from 'ts-essentials'
 
 // @index(['./**/*.ts', '!./**/*.test.*', '!**/__*'], f => `export * from '${f.path}'`)
