@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.122.0](https://github.com/fjc0k/vtils/compare/v4.121.0...v4.122.0) (2024-08-22)
+
+### Features
+
+- **Wechat:** 新增音频录制、音频播放、音频上传相关 api ([55ade1d](https://github.com/fjc0k/vtils/commit/55ade1d157af7820b5a64e4c7f03974bb8c397f9))
+
 ## [4.121.0](https://github.com/fjc0k/vtils/compare/v4.120.0...v4.121.0) (2024-08-22)
 
 ### Features
