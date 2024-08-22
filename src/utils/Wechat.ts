@@ -1,6 +1,7 @@
 import { mapValues, noop } from 'lodash-uni'
 import { EventBus, EventBusOffListener } from './EventBus'
 import { asyncLimit } from './asyncLimit'
+import { isUrl } from './isUrl'
 import { LoadResourceUrlType, loadResource } from './loadResource'
 
 declare const wx: any
@@ -393,6 +394,32 @@ export class Wechat {
      * 调用微信 JSSDK 出错时时触发。
      */
     error: WechatErrorCallback
+
+    /**
+     * 微信录音停止时触发。
+     */
+    voiceRecordEnd: (payload: { localId: string }) => any
+
+    /**
+     * 微信音频播放开始时触发。
+     */
+    voicePlayStart: (payload: { localId: string }) => any
+    /**
+     * 微信音频播放暂停时触发。
+     */
+    voicePlayPause: (payload: { localId: string }) => any
+    /**
+     * 微信音频播放停止时触发。
+     */
+    voicePlayStop: (payload: { localId: string }) => any
+    /**
+     * 微信音频播放结束时触发。
+     */
+    voicePlayEnd: (payload: { localId: string }) => any
+    /**
+     * 微信音频播放报错时触发。
+     */
+    voicePlayError: (payload: { localId: string }) => any
   }>()
 
   /**
@@ -441,6 +468,12 @@ export class Wechat {
           wx.ready(() => {
             this.ready = true
             this.bus.emit('ready')
+            wx.onVoiceRecordEnd({
+              complete: (res: any) => this.bus.emit('voiceRecordEnd', res),
+            })
+            wx.onVoicePlayEnd({
+              complete: (res: any) => this.bus.emit('voicePlayEnd', res),
+            })
             resolve()
           })
           wx.error((err: any) => {
@@ -695,6 +728,228 @@ export class Wechat {
    */
   requestPayment(params: WechatRequestPaymentParams): Promise<any> {
     return this.invoke('chooseWXPay', params)
+  }
+
+  /**
+   * 开始音频录制。
+   */
+  startVoiceRecord(): Promise<{ localId: string }> {
+    return new Promise((resolve, reject) => {
+      const offEnd = this.bus.once('voiceRecordEnd', resolve)
+      wx.startRecord({
+        fail: () => {
+          offEnd()
+          reject()
+        },
+        cancel: () => {
+          offEnd()
+          reject()
+        },
+      })
+    })
+  }
+
+  /**
+   * 停止音频录制。
+   */
+  stopVoiceRecord(): Promise<{ localId: string }> {
+    return new Promise((resolve, reject) => {
+      wx.stopRecord({
+        success: (res: any) => {
+          this.bus.emit('voiceRecordEnd', res)
+          resolve(res)
+        },
+        fail: reject,
+        cancel: reject,
+      })
+    })
+  }
+
+  private audioElMap: Record<string, HTMLAudioElement> = Object.create(null)
+
+  /**
+   * 开始音频播放。
+   */
+  startVoicePlay(params: {
+    localId: string
+    on?: (type: 'error' | 'start' | 'pause' | 'stop' | 'end') => any
+  }): Promise<void> {
+    const isAudioUrl = isUrl(params.localId)
+
+    const dispose = () => {
+      offStart()
+      offPause()
+      offStop()
+      offEnd()
+      offError()
+      if (isAudioUrl) {
+        this.audioElMap[params.localId]?.remove()
+        delete this.audioElMap[params.localId]
+      }
+    }
+    const offStart = this.bus.on('voicePlayStart', payload => {
+      if (payload.localId === params.localId) {
+        params.on?.('start')
+      }
+    })
+    const offPause = this.bus.on('voicePlayPause', payload => {
+      if (payload.localId === params.localId) {
+        dispose()
+        params.on?.('pause')
+      }
+    })
+    const offStop = this.bus.on('voicePlayStop', payload => {
+      if (payload.localId === params.localId) {
+        dispose()
+        params.on?.('stop')
+      }
+    })
+    const offEnd = this.bus.on('voicePlayEnd', payload => {
+      if (payload.localId === params.localId) {
+        dispose()
+        params.on?.('end')
+      }
+    })
+    const offError = this.bus.on('voicePlayError', payload => {
+      if (payload.localId === params.localId) {
+        dispose()
+        params.on?.('error')
+      }
+    })
+
+    if (isAudioUrl) {
+      let resolve: any
+      let reject: any
+      const promise = new Promise<void>((rs, rj) => {
+        resolve = rs
+        reject = rj
+      })
+      const audioEl = document.createElement('audio')
+      audioEl.src = params.localId
+      audioEl.onplay = () => {
+        this.bus.emit('voicePlayStart', params)
+        resolve()
+      }
+      audioEl.onended = () => {
+        this.bus.emit('voicePlayEnd', params)
+      }
+      audioEl.onerror = () => {
+        this.bus.emit('voicePlayError', params)
+        reject()
+      }
+      audioEl.play()
+      this.audioElMap[params.localId] = audioEl
+      return promise
+    }
+
+    return new Promise((resolve, reject) => {
+      wx.playVoice({
+        localId: params.localId,
+        success: () => {
+          this.bus.emit('voicePlayStart', params)
+          resolve()
+        },
+        fail: () => {
+          this.bus.emit('voicePlayError', params)
+          reject()
+        },
+        cancel: () => {
+          this.bus.emit('voicePlayError', params)
+          reject()
+        },
+      })
+    })
+  }
+
+  /**
+   * 暂停音频播放。
+   */
+  pauseVoicePlay(params: { localId: string }): Promise<void> {
+    const isAudioUrl = isUrl(params.localId)
+
+    if (isAudioUrl) {
+      const audioEl = this.audioElMap[params.localId]
+      if (audioEl) {
+        audioEl.pause()
+        this.bus.emit('voicePlayPause', params)
+        return Promise.resolve()
+      }
+      return Promise.reject()
+    }
+
+    return new Promise((resolve, reject) => {
+      wx.pauseVoice({
+        localId: params.localId,
+        success: () => {
+          this.bus.emit('voicePlayPause', params)
+          resolve()
+        },
+        fail: () => {
+          reject()
+        },
+        cancel: () => {
+          reject()
+        },
+      })
+    })
+  }
+
+  /**
+   * 停止音频播放。
+   */
+  stopVoicePlay(params: { localId: string }): Promise<void> {
+    const isAudioUrl = isUrl(params.localId)
+
+    if (isAudioUrl) {
+      const audioEl = this.audioElMap[params.localId]
+      if (audioEl) {
+        audioEl.pause()
+        audioEl.currentTime = 0
+        this.bus.emit('voicePlayStop', params)
+        return Promise.resolve()
+      }
+      return Promise.reject()
+    }
+
+    return new Promise((resolve, reject) => {
+      wx.stopVoice({
+        localId: params.localId,
+        success: () => {
+          this.bus.emit('voicePlayStop', params)
+          resolve()
+        },
+        fail: () => {
+          reject()
+        },
+        cancel: () => {
+          reject()
+        },
+      })
+    })
+  }
+
+  /**
+   * 开始音频上传。
+   *
+   * 上传语音有效期3天，可用微信多媒体接口下载语音到自己的服务器，此处获得的 serverId 即 media_id。
+   */
+  startVoiceUpload(params: {
+    localId: string
+    isShowProgressTips?: boolean
+  }): Promise<{ serverId: string }> {
+    return new Promise((resolve, reject) => {
+      wx.uploadVoice({
+        localId: params.localId,
+        isShowProgressTips: params.isShowProgressTips ? 1 : 0,
+        success: resolve,
+        fail: () => {
+          reject()
+        },
+        cancel: () => {
+          reject()
+        },
+      })
+    })
   }
 
   /**
