@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.121.0](https://github.com/fjc0k/vtils/compare/v4.120.0...v4.121.0) (2024-08-22)
+
+### Features
+
+- **types:** export XOR ([582e929](https://github.com/fjc0k/vtils/commit/582e9290f48ca456741a1ab32c33a7bf5f8deee6))
+
 ## [4.120.0](https://github.com/fjc0k/vtils/compare/v4.119.0...v4.120.0) (2024-08-07)
 
 ### Features
