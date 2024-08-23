@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.122.1](https://github.com/fjc0k/vtils/compare/v4.122.0...v4.122.1) (2024-08-23)
+
+### Bug Fixes
+
+- **Wechat:** 修复 startVoiceRecord ([82fa9f8](https://github.com/fjc0k/vtils/commit/82fa9f80bc6289a9fd63feda001e2efc618f8532))
+
 ## [4.122.0](https://github.com/fjc0k/vtils/compare/v4.121.0...v4.122.0) (2024-08-22)
 
 ### Features
