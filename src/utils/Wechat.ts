@@ -396,9 +396,21 @@ export class Wechat {
     error: WechatErrorCallback
 
     /**
+     * 微信录音开始时触发。
+     */
+    voiceRecordStart: () => any
+    /**
      * 微信录音停止时触发。
      */
+    voiceRecordStop: (payload: { localId: string }) => any
+    /**
+     * 微信录音结束时触发。
+     */
     voiceRecordEnd: (payload: { localId: string }) => any
+    /**
+     * 微信录音报错时触发。
+     */
+    voiceRecordError: () => any
 
     /**
      * 微信音频播放开始时触发。
@@ -472,7 +484,7 @@ export class Wechat {
               complete: (res: any) => this.bus.emit('voiceRecordEnd', res),
             })
             wx.onVoicePlayEnd({
-              complete: (res: any) => this.bus.emit('voicePlayEnd', res),
+              success: (res: any) => this.bus.emit('voicePlayEnd', res),
             })
             resolve()
           })
@@ -733,16 +745,44 @@ export class Wechat {
   /**
    * 开始音频录制。
    */
-  startVoiceRecord(): Promise<{ localId: string }> {
+  startVoiceRecord(params: {
+    on?: (type: 'error' | 'start' | 'stop' | 'end', localId?: string) => any
+  }): Promise<void> {
+    const dispose = () => {
+      offStart()
+      offStop()
+      offEnd()
+      offError()
+    }
+    const offStart = this.bus.on('voiceRecordStart', () => {
+      params.on?.('start')
+    })
+    const offStop = this.bus.on('voiceRecordStop', payload => {
+      dispose()
+      params.on?.('stop', payload.localId)
+      params.on?.('end', payload.localId)
+    })
+    const offEnd = this.bus.on('voiceRecordEnd', payload => {
+      dispose()
+      params.on?.('end', payload.localId)
+    })
+    const offError = this.bus.on('voiceRecordError', () => {
+      dispose()
+      params.on?.('error')
+    })
+
     return new Promise((resolve, reject) => {
-      const offEnd = this.bus.once('voiceRecordEnd', resolve)
       wx.startRecord({
+        success: () => {
+          this.bus.emit('voiceRecordStart')
+          resolve()
+        },
         fail: () => {
-          offEnd()
+          this.bus.emit('voiceRecordError')
           reject()
         },
         cancel: () => {
-          offEnd()
+          this.bus.emit('voiceRecordError')
           reject()
         },
       })
@@ -756,7 +796,7 @@ export class Wechat {
     return new Promise((resolve, reject) => {
       wx.stopRecord({
         success: (res: any) => {
-          this.bus.emit('voiceRecordEnd', res)
+          this.bus.emit('voiceRecordStop', res)
           resolve(res)
         },
         fail: reject,
