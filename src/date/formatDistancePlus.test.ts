@@ -1,6 +1,8 @@
 import { addDays, addYears, subDays, subYears } from 'date-fns'
 import { formatDistancePlus } from './formatDistancePlus'
 
+jest.useFakeTimers()
+
 describe('formatDistancePlus', () => {
   test('前', () => {
     expect(formatDistancePlus(subDays(new Date(), 1))).toBe('1天前')
