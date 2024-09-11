@@ -120,4 +120,22 @@ describe('StringTemplate', () => {
     expect(StringTemplate.render('{{false}}', {}, { onlyCode: true })).toBe('')
     expect(StringTemplate.render('{{0}}', {}, { onlyCode: true })).toBe('0')
   })
+
+  test('支持截断省略', () => {
+    expect(StringTemplate.render('{x#5}', { x: '0123456789' })).toBe('01...')
+    expect(StringTemplate.render('{x#0}', { x: '0123456789' })).toBe(
+      '0123456789',
+    )
+    expect(StringTemplate.render('{x#1}', { x: '0123456789' })).toBe('...')
+    expect(StringTemplate.render('{x#8}', { x: '0123456789' })).toBe('01234...')
+    expect(
+      StringTemplate.render(
+        '{x#8}',
+        { x: '0123456789' },
+        {
+          code: true,
+        },
+      ),
+    ).toBe('01234...')
+  })
 })

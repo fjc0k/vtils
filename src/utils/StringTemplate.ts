@@ -1,3 +1,5 @@
+import { toSingleLineString } from './toSingleLineString'
+
 export interface StringTemplateRenderOptions {
   /** 是否启用代码渲染，需环境支持 eval */
   code?: boolean
@@ -13,6 +15,7 @@ export class StringTemplate {
    * 渲染字符串模板。语法：
    *
    * - 用 `{key}` 直接替换；
+   * - 用 `{key#10}` 直接替换，取前10个字符省略；
    * - 用 `{key:param1,param2}` 执行函数替换；
    * - 用 `{{key==='test'?'hi':'hello'}}` 执行代码替换（内部使用 eval 实现，需开启选项里的 `code` 参数）。
    *
@@ -44,10 +47,15 @@ export class StringTemplate {
               )
             : enableCode
             ? template.replace(
-                new RegExp(`(?<!\\$)\\{${key}\\}`, 'g'),
-                data[key],
+                new RegExp(`(?<!\\$)\\{${key}(?:#(\\d+))?\\}`, 'g'),
+                (_, len) =>
+                  len ? toSingleLineString(String(data[key]), +len) : data[key],
               )
-            : template.replaceAll(`{${key}}`, data[key])
+            : template.replace(
+                new RegExp(`{${key}(?:#(\\d+))?\\}`, 'g'),
+                (_, len) =>
+                  len ? toSingleLineString(String(data[key]), +len) : data[key],
+              )
       }
     }
     if (enableCode) {
