@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.124.0](https://github.com/fjc0k/vtils/compare/v4.123.0...v4.124.0) (2024-09-24)
+
+### Features
+
+- **EventBus:** 支持一次性监听多个 ([9408e55](https://github.com/fjc0k/vtils/commit/9408e55d01ff033bc8027d506dc390c5f908cd18))
+
 ## [4.123.0](https://github.com/fjc0k/vtils/compare/v4.122.1...v4.123.0) (2024-09-11)
 
 ### Features
