@@ -70,7 +70,25 @@ export class EventBus<TListeners extends EventBusListeners> {
   } = Object.create(null)
 
   /**
-   * 订阅事件。
+   * 订阅多个事件。
+   *
+   * @param eventNames 事件名称
+   * @param callback 事件触发回调
+   * @returns 返回取消订阅的函数
+   */
+  on<TListenerName extends keyof TListeners>(
+    eventNames: TListenerName[],
+    callback: (
+      firstPayload: {
+        [K in TListenerName]: Parameters<TListeners[K]>[0]
+      },
+      payload: {
+        [K in TListenerName]: Parameters<TListeners[K]>
+      },
+    ) => any,
+  ): EventBusOffListener
+  /**
+   * 订阅单个事件。
    *
    * @param eventName 事件名称
    * @param callback 事件触发回调
@@ -79,17 +97,38 @@ export class EventBus<TListeners extends EventBusListeners> {
   on<TListenerName extends keyof TListeners>(
     eventName: TListenerName,
     callback: TListeners[TListenerName],
+  ): EventBusOffListener
+  on<TListenerName extends keyof TListeners>(
+    eventNames: TListenerName | TListenerName[],
+    callback: any,
   ): EventBusOffListener {
-    if (!this.callbacks[eventName]) {
-      this.callbacks[eventName] = []
+    if (Array.isArray(eventNames)) {
+      const offs: EventBusOffListener[] = []
+      for (const eventName of eventNames) {
+        offs.push(
+          // @ts-ignore
+          this.on(eventName, (...args: any[]) =>
+            callback(
+              { [eventName]: args[0] },
+              {
+                [eventName]: args,
+              },
+            ),
+          ),
+        )
+      }
+      return () => offs.forEach(off => off())
+    }
+    if (!this.callbacks[eventNames]) {
+      this.callbacks[eventNames] = []
     }
     callback =
-      this.options?.beforeOn?.[eventName]?.call(this, callback) ?? callback
-    const index = this.callbacks[eventName].indexOf(callback)
+      this.options?.beforeOn?.[eventNames]?.call(this, callback) ?? callback
+    const index = this.callbacks[eventNames].indexOf(callback)
     if (index === -1) {
-      this.callbacks[eventName].push(callback)
+      this.callbacks[eventNames].push(callback)
     }
-    return () => this.off(eventName, callback)
+    return () => this.off(eventNames, callback)
   }
 
   /**

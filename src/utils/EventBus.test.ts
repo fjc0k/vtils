@@ -243,4 +243,28 @@ describe('EventBus', () => {
     expect(fn1).toBeCalled().toBeCalledTimes(2)
     expect(fn2).toBeCalled().toBeCalledTimes(2)
   })
+
+  test('支持一次性监听多个', () => {
+    const bus = new EventBus<{
+      f1: (x: number) => any
+      f2: (y: string) => any
+      f3: () => any
+    }>()
+    let f1: any, f2: any, f3: any
+    bus.on(['f1', 'f2', 'f3'], payload => {
+      if (payload.f1) {
+        f1 = payload.f1
+      } else if (payload.f2) {
+        f2 = payload.f2
+      } else if (payload.f3) {
+        f3 = payload.f3
+      }
+    })
+    bus.emit('f1', 1)
+    bus.emit('f2', 'hhh')
+    bus.emit('f3')
+    expect(f1).toBe(1)
+    expect(f2).toBe('hhh')
+    expect(f3).toBe(undefined)
+  })
 })
