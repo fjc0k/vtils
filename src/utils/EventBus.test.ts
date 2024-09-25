@@ -267,4 +267,41 @@ describe('EventBus', () => {
     expect(f2).toBe('hhh')
     expect(f3).toBe(undefined)
   })
+
+  test('局部执行', () => {
+    const bus = new EventBus<{
+      f1: (x: number) => any
+      f2: (y: string) => any
+      f3: () => any
+    }>()
+
+    const one = jest.fn()
+    const offOne = bus.run(_ => {
+      return _.on('f1', one)
+    })
+    bus.emit('f1', 1)
+    expect(one).toBeCalled().toBeCalledTimes(1)
+    bus.emit('f1', 2)
+    expect(one).toBeCalled().toBeCalledTimes(2)
+    offOne()
+    expect(one).toBeCalled().toBeCalledTimes(2)
+
+    const two = jest.fn()
+    const three = jest.fn()
+    const offTT = bus.run(_ => {
+      return [_.on('f2', two), _.on('f3', three)]
+    })
+    bus.emit('f2', '1')
+    bus.emit('f3')
+    expect(two).toBeCalled().toBeCalledTimes(1)
+    expect(three).toBeCalled().toBeCalledTimes(1)
+    bus.emit('f2', '21')
+    expect(two).toBeCalled().toBeCalledTimes(2)
+    expect(three).toBeCalled().toBeCalledTimes(1)
+    offTT()
+    bus.emit('f2', '1333')
+    bus.emit('f3')
+    expect(two).toBeCalled().toBeCalledTimes(2)
+    expect(three).toBeCalled().toBeCalledTimes(1)
+  })
 })

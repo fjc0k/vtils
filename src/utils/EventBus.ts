@@ -1,3 +1,5 @@
+import { castArray } from 'lodash-uni'
+
 export type EventBusListenerTag = string | number
 
 export type EventBusListener<
@@ -228,6 +230,23 @@ export class EventBus<TListeners extends EventBusListeners> {
     return callbacks.map(callback => {
       return callback.call(context, ...args)
     })
+  }
+
+  /**
+   * 局部执行。
+   *
+   * @param fn 执行函数
+   * @returns 可以返回一个或多个取消订阅的函数
+   */
+  run(
+    fn: (bus: this) => void | EventBusOffListener | EventBusOffListener[],
+  ): EventBusOffListener {
+    const res = fn(this)
+    return () => {
+      if (res) {
+        castArray(res).forEach(off => off())
+      }
+    }
   }
 
   /**
