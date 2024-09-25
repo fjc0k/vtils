@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.125.0](https://github.com/fjc0k/vtils/compare/v4.124.0...v4.125.0) (2024-09-25)
+
+### Features
+
+- **EventBus:** 支持局部执行 ([456905c](https://github.com/fjc0k/vtils/commit/456905c56e47079aff29e7b6a3b588bebd0b6205))
+
 ## [4.124.0](https://github.com/fjc0k/vtils/compare/v4.123.0...v4.124.0) (2024-09-24)
 
 ### Features
