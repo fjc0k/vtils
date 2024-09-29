@@ -1,6 +1,7 @@
 import { toArray } from 'lodash-uni'
 import { LiteralUnion } from '../types'
 import { bindEvent } from './bindEvent'
+import { wait } from './wait'
 
 /**
  * 选择文件。
@@ -29,9 +30,12 @@ export function chooseFile(
     input.accept = accept === 'image' ? '.jpg,.jpeg,.png,.gif' : accept
     input.multiple = multiple
     document.body.appendChild(input)
+
     const handleChange = () => {
       unbindChange()
-      unbindBlur()
+      unbindCancel()
+      unbindFocus()
+      unbindTouchend()
       if (input) {
         const files = input.files || []
         document.body.removeChild(input)
@@ -40,7 +44,20 @@ export function chooseFile(
       }
     }
     const unbindChange = bindEvent(input)('change', handleChange)
-    const unbindBlur = bindEvent(input)('blur', handleChange)
+
+    // 标准取消监听 但有兼容问题
+    // https://caniuse.com/?search=HTMLInputElement%20cancel
+    const unbindCancel = bindEvent(input)('cancel', handleChange)
+
+    // 取消监听 hack
+    // https://stackoverflow.com/a/67603015
+    const unbindFocus = bindEvent(window)('focus', () =>
+      wait(1000).then(handleChange),
+    )
+    const unbindTouchend = bindEvent(window)('touchend', () =>
+      wait(1000).then(handleChange),
+    )
+
     input.click()
   })
 }
