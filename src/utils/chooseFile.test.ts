@@ -6,15 +6,16 @@ describe('chooseFile', () => {
     _: any,
     cb: () => any,
   ) {
-    if (!this.files) {
-      Object.defineProperty(this, 'files', {
-        value: {
-          0: new File([], `${this.accept}__${this.multiple}.txt`),
-          length: 1,
-          item: () => new File([], '1'),
-        },
-      })
-    }
+    Object.defineProperty(this, 'files', {
+      value: {
+        0: new File([], `${this.accept}__${this.multiple}.txt`),
+        length: 1,
+        item: () => new File([], '1'),
+      },
+      writable: true,
+      configurable: true,
+      enumerable: true,
+    })
     setTimeout(cb, 0)
   }
 
