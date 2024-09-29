@@ -1,6 +1,6 @@
-import { bindEvent } from './bindEvent'
-import { LiteralUnion } from '../types'
 import { toArray } from 'lodash-uni'
+import { LiteralUnion } from '../types'
+import { bindEvent } from './bindEvent'
 
 /**
  * 选择文件。
@@ -29,13 +29,16 @@ export function chooseFile(
     input.accept = accept === 'image' ? '.jpg,.jpeg,.png,.gif' : accept
     input.multiple = multiple
     document.body.appendChild(input)
-    const unbindChange = bindEvent(input)('change', () => {
-      const files = input.files!
+    const handleChange = () => {
       unbindChange()
+      unbindBlur()
+      const files = input.files || []
       document.body.removeChild(input)
       input = null as any
       resolve(Object.freeze(toArray(files)))
-    })
+    }
+    const unbindChange = bindEvent(input)('change', handleChange)
+    const unbindBlur = bindEvent(input)('blur', handleChange)
     input.click()
   })
 }
