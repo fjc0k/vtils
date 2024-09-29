@@ -32,10 +32,12 @@ export function chooseFile(
     const handleChange = () => {
       unbindChange()
       unbindBlur()
-      const files = input.files || []
-      document.body.removeChild(input)
-      input = null as any
-      resolve(Object.freeze(toArray(files)))
+      if (input) {
+        const files = input.files || []
+        document.body.removeChild(input)
+        input = null as any
+        resolve(Object.freeze(toArray(files)))
+      }
     }
     const unbindChange = bindEvent(input)('change', handleChange)
     const unbindBlur = bindEvent(input)('blur', handleChange)
