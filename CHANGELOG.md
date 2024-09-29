@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.125.2](https://github.com/fjc0k/vtils/compare/v4.125.1...v4.125.2) (2024-09-29)
+
+### Bug Fixes
+
+- **chooseFile:** 选择取消监听优化 ([3afd571](https://github.com/fjc0k/vtils/commit/3afd5710df706b9efde24d7595e4299e1a7b67c3))
+
 ### [4.125.1](https://github.com/fjc0k/vtils/compare/v4.125.0...v4.125.1) (2024-09-29)
 
 ### Bug Fixes
