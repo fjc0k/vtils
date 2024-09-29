@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.125.1](https://github.com/fjc0k/vtils/compare/v4.125.0...v4.125.1) (2024-09-29)
+
+### Bug Fixes
+
+- chooseFile ([b75bbec](https://github.com/fjc0k/vtils/commit/b75bbec60296ea6fa2d8ec80df296a4fbbe58fc8))
+- **chooseFile:** 支持取消 ([95191d6](https://github.com/fjc0k/vtils/commit/95191d61a8dad85ef14c458c37af75c340a7b58e))
+
 ## [4.125.0](https://github.com/fjc0k/vtils/compare/v4.124.0...v4.125.0) (2024-09-25)
 
 ### Features
