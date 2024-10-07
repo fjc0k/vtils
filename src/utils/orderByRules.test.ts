@@ -110,4 +110,34 @@ describe('orderByRules', () => {
       { a: 'x', b: 1 },
     ])
   })
+
+  test('数组规则正常', () => {
+    expect(orderByRules(strData, [item => item.length, 'desc'])).toEqual([
+      'hello',
+      '花间一壶酒',
+      'fjc',
+      '20',
+      '=',
+    ])
+
+    expect(orderByRules(numData, [item => item, 'asc'])).toEqual([
+      -5, 0, 1.2, 4, 20,
+    ])
+
+    expect(
+      orderByRules(arrData, [
+        {
+          iteratee: item => item.b,
+          type: 'desc',
+        },
+        [item => item.a.charCodeAt(0), 'asc'],
+      ]),
+    ).toEqual([
+      { a: 'x', b: 3 },
+      { a: 'x', b: 1 },
+      { a: 'y', b: 4 },
+      { a: 'y', b: 2 },
+      { a: 'z', b: 1 },
+    ])
+  })
 })
