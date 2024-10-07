@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.127.0](https://github.com/fjc0k/vtils/compare/v4.126.0...v4.127.0) (2024-10-07)
+
+### Features
+
+- **orderByRules:** OrderByRulesRuleArray ([8efb614](https://github.com/fjc0k/vtils/commit/8efb614fcc575cbf23e4500e679a7f7fb462f504))
+
 ## [4.126.0](https://github.com/fjc0k/vtils/compare/v4.125.2...v4.126.0) (2024-10-06)
 
 ### Features
