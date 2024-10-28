@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.128.0](https://github.com/fjc0k/vtils/compare/v4.127.0...v4.128.0) (2024-10-28)
+
+### Features
+
+- **chooseFile:** image 默认为 image/\*；支持 afterElementReady 回调 ([c1eade5](https://github.com/fjc0k/vtils/commit/c1eade5793cda41224a917dcf422697a293a7022))
+
 ## [4.127.0](https://github.com/fjc0k/vtils/compare/v4.126.0...v4.127.0) (2024-10-07)
 
 ### Features
