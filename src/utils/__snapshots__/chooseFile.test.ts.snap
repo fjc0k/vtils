@@ -2,8 +2,8 @@
 
 exports[`chooseFile 多选其他 1`] = `".doc,.docx__true.txt"`;
 
-exports[`chooseFile 多选图片 1`] = `".jpg,.jpeg,.png,.gif__true.txt"`;
+exports[`chooseFile 多选图片 1`] = `"image/*__true.txt"`;
 
 exports[`chooseFile 选择其他 1`] = `".doc,.docx__false.txt"`;
 
-exports[`chooseFile 选择图片 1`] = `".jpg,.jpeg,.png,.gif__false.txt"`;
+exports[`chooseFile 选择图片 1`] = `"image/*__false.txt"`;
