@@ -1,21 +1,23 @@
+import { babel } from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
-import dts from 'rollup-plugin-dts'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import fs from 'fs-extra'
 import globby from 'globby'
-import path from 'path'
-import yargs from 'yargs'
-import { babel } from '@rollup/plugin-babel'
 import { getBabelConfig } from 'haoma'
-import { nodeResolve } from '@rollup/plugin-node-resolve'
+import path from 'path'
 import { rollup } from 'rollup'
+import dts from 'rollup-plugin-dts'
+import yargs from 'yargs'
 
 async function main() {
   const argv: {
     modules: string
     target: string
+    moduleType: 'cjs' | 'esm'
   } = yargs.parse(process.argv) as any
 
   const modules = argv.modules.split(',')
+  const moduleType = argv.moduleType
   const globModules = modules.filter(mod => !mod.startsWith('@'))
   const specificModules = modules
     .filter(mod => mod.startsWith('@'))
@@ -43,6 +45,18 @@ async function main() {
   `
   await fs.outputFile(indexFile, indexContent)
 
+  const babelConfig = getBabelConfig({
+    module: 'esm',
+    target: moduleType === 'cjs' ? 'browser' : 'node',
+    typescript: true,
+  })
+  if (moduleType === 'esm') {
+    // @ts-ignore
+    babelConfig.presets[0][1].targets = {
+      node: '20',
+    }
+  }
+
   const bundle = await rollup({
     input: indexFile,
     plugins: [
@@ -51,11 +65,7 @@ async function main() {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.es6', '.es', '.mjs'],
       }),
       babel({
-        ...(getBabelConfig({
-          module: 'esm',
-          target: 'browser',
-          typescript: true,
-        }) as any),
+        ...(babelConfig as any),
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.es6', '.es', '.mjs'],
         babelHelpers: 'runtime',
       }),
@@ -63,7 +73,7 @@ async function main() {
   })
   await bundle.write({
     file: `dist/${argv.target}/${argv.target}.js`,
-    format: 'cjs',
+    format: moduleType === 'cjs' ? 'cjs' : 'esm',
   })
   await bundle.close()
 

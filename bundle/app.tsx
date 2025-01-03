@@ -1,8 +1,8 @@
-import 'antd/dist/antd.css'
-import * as libs from './libs'
-import React, { useCallback, useState } from 'react'
-import { Button, Input, message, TreeSelect } from 'antd'
 import { css } from '@emotion/css'
+import { Button, Input, Radio, TreeSelect, message } from 'antd'
+import 'antd/dist/antd.css'
+import React, { useCallback, useState } from 'react'
+import * as libs from './libs'
 
 const modules = Object.keys(libs).map(lib => ({
   title: lib,
@@ -16,6 +16,7 @@ const modules = Object.keys(libs).map(lib => ({
 export function App() {
   const [importModules, setImportModules] = useState<string>('')
   const [selectedModules, setSelectedModules] = useState<string[]>([])
+  const [moduleType, setModuleType] = useState<'cjs' | 'esm'>('esm')
   const [js, setJs] = useState('')
   const [dts, setDts] = useState('')
 
@@ -41,12 +42,12 @@ export function App() {
       `${
         // @ts-ignore
         import.meta.env.DEV ? 'http://localhost:9099' : location.origin
-      }/?modules=${selectedModules.join(',')}`,
+      }/?modules=${selectedModules.join(',')}&type=${moduleType}`,
     ).then(res => res.json())
     setJs(js)
     setDts(dts)
     hideLoading()
-  }, [selectedModules])
+  }, [selectedModules, moduleType])
 
   const handleCopyJsClick = useCallback(() => {
     libs.utils.copyTextToClipboard(libs.utils.dedent`
@@ -68,7 +69,8 @@ export function App() {
         width: 500px;
         margin: 0 auto;
         padding-top: 20px;
-      `}>
+      `}
+    >
       <h1>导入模块</h1>
       <Input
         placeholder='请输入'
@@ -80,13 +82,15 @@ export function App() {
         className={css`
           margin-top: 20px;
         `}
-        onClick={handleImportClick}>
+        onClick={handleImportClick}
+      >
         确定导入
       </Button>
       <h1
         className={css`
           margin-top: 20px;
-        `}>
+        `}
+      >
         选择模块
       </h1>
       <TreeSelect
@@ -100,18 +104,32 @@ export function App() {
         value={selectedModules}
         onChange={setSelectedModules}
       />
-      <Button
-        type='primary'
+      <Radio.Group
         className={css`
           margin-top: 20px;
         `}
-        onClick={handleBundleClick}>
-        开始打包
-      </Button>
+        value={moduleType}
+        onChange={e => setModuleType(e.target.value)}
+      >
+        <Radio.Button value='cjs'>CommonJS</Radio.Button>
+        <Radio.Button value='esm'>ESModule</Radio.Button>
+      </Radio.Group>
+      <div>
+        <Button
+          type='primary'
+          className={css`
+            margin-top: 20px;
+          `}
+          onClick={handleBundleClick}
+        >
+          开始打包
+        </Button>
+      </div>
       <div
         className={css`
           margin-top: 20px;
-        `}>
+        `}
+      >
         {js && (
           <Button type='primary' onClick={handleCopyJsClick}>
             复制 JS
@@ -123,7 +141,8 @@ export function App() {
             className={css`
               margin-left: 20px;
             `}
-            onClick={handleCopyDtsClick}>
+            onClick={handleCopyDtsClick}
+          >
             复制 DTS
           </Button>
         )}

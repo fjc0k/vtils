@@ -11,6 +11,7 @@ http
     if (req.url) {
       const url = new URL(req.url, 'http://localhost/')
       const modulesStr = url.searchParams.get('modules')
+      const moduleType = url.searchParams.get('type')!
       if (modulesStr) {
         const modules = modulesStr
           .split(',')
@@ -26,6 +27,8 @@ http
             modules,
             '--target',
             'web-gen',
+            '--moduleType',
+            moduleType,
           ],
           {
             cwd: path.join(__dirname, '..'),
