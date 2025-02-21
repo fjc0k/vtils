@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.129.1](https://github.com/fjc0k/vtils/compare/v4.129.0...v4.129.1) (2025-02-21)
+
+### Bug Fixes
+
+- 解决半角全角转换会错误转换换行等控制字符的问题 ([e7630e1](https://github.com/fjc0k/vtils/commit/e7630e1bd82c099ec100a5fccb1b086dcdd671db))
+
 ## [4.129.0](https://github.com/fjc0k/vtils/compare/v4.128.0...v4.129.0) (2025-02-21)
 
 ### Features
