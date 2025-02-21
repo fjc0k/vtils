@@ -10,4 +10,8 @@ describe('toFullWidthString', () => {
     expect(toFullWidthString(',@!#&()%{}')).toBe('，＠！＃＆（）％｛｝')
     expect(toFullWidthString('[]"".$*')).not.toBe('【】“”。￥×')
   })
+
+  test('正确处理换行、tab等', () => {
+    expect(toFullWidthString('我1\r\n\t')).toBe('我１\r\n\t')
+  })
 })

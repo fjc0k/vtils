@@ -8,12 +8,12 @@ export function toFullWidthString(value: string): string {
   let result = ''
   for (let i = 0; i < value.length; i++) {
     const charCode = value.charCodeAt(i)
-    if (charCode === 32) {
-      result += String.fromCharCode(12288)
-    } else if (charCode < 127) {
-      result += String.fromCharCode(value.charCodeAt(i) + 65248)
+    if (0x0020 < charCode && charCode < 0x007f) {
+      result += String.fromCharCode(charCode + 0xfee0)
+    } else if (0x0020 === charCode) {
+      result += String.fromCharCode(0x3000)
     } else {
-      result += String.fromCharCode(value.charCodeAt(i))
+      result += value[i]
     }
   }
   return result

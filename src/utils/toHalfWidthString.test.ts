@@ -10,4 +10,8 @@ describe('toHalfWidthString', () => {
     expect(toHalfWidthString('，＠！＃＆（）％｛｝')).toBe(',@!#&()%{}')
     expect(toHalfWidthString('【】“”。￥×')).not.toBe('[]"".$*')
   })
+
+  test('正确处理换行、tab等', () => {
+    expect(toHalfWidthString('我１\r\n\t')).toBe('我1\r\n\t')
+  })
 })
