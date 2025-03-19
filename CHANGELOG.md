@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.129.1](https://github.com/fjc0k/vtils/compare/v4.129.0...v4.129.1) (2025-02-21)
+
+### Bug Fixes
+
+- 解决半角全角转换会错误转换换行等控制字符的问题 ([e7630e1](https://github.com/fjc0k/vtils/commit/e7630e1bd82c099ec100a5fccb1b086dcdd671db))
+
+## [4.129.0](https://github.com/fjc0k/vtils/compare/v4.128.0...v4.129.0) (2025-02-21)
+
+### Features
+
+- bundle 支持 esm ([3cd7312](https://github.com/fjc0k/vtils/commit/3cd73128be8a4fc5405fe05276796b23e0543854))
+- **types:** add UnionToTuple, PartialDeepBy, RequiredDeepBy ([6b7b9d2](https://github.com/fjc0k/vtils/commit/6b7b9d2c46da6ab297bf914f960346d159739dc2))
+
 ## [4.128.0](https://github.com/fjc0k/vtils/compare/v4.127.0...v4.128.0) (2024-10-28)
 
 ### Features

@@ -24,6 +24,7 @@ export type {
   Class,
   Asyncify,
   UnionToIntersection,
+  UnionToTuple,
   Integer,
   NegativeInteger,
   NonNegativeInteger,
@@ -36,6 +37,7 @@ export type {
   RequireAtLeastOne,
   RequireExactlyOne,
   RequireAllOrNone,
+  SetRequiredDeep as RequiredDeepBy,
 } from 'type-fest'
 
 export type {
@@ -81,5 +83,6 @@ export * from './IsNever'
 export * from './NonEmptyArray'
 export * from './Nullable'
 export * from './OneOrMore'
+export * from './PartialDeepBy'
 export * from './Path'
 // @endindex

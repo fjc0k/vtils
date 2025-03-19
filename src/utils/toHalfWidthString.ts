@@ -8,12 +8,12 @@ export function toHalfWidthString(value: string): string {
   let result = ''
   for (let i = 0; i < value.length; i++) {
     const charCode = value.charCodeAt(i)
-    if (charCode === 12288) {
-      result += String.fromCharCode(32)
-    } else if (charCode > 65280 && charCode < 65375) {
-      result += String.fromCharCode(charCode - 65248)
+    if (charCode >= 0xff01 && charCode <= 0xff5e) {
+      result += String.fromCharCode(charCode - 0xfee0)
+    } else if (0x3000 === charCode) {
+      result += String.fromCharCode(0x0020)
     } else {
-      result += String.fromCharCode(charCode)
+      result += value[i]
     }
   }
   return result
