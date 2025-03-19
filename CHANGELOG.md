@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.130.0](https://github.com/fjc0k/vtils/compare/v4.129.1...v4.130.0) (2025-03-19)
+
+### Features
+
+- **StringTemplate:** 增加替换前操作功能 ([9ee0185](https://github.com/fjc0k/vtils/commit/9ee0185bec6133d98a7346b60799517a7f5be418))
+
 ### [4.129.1](https://github.com/fjc0k/vtils/compare/v4.129.0...v4.129.1) (2025-02-21)
 
 ### Bug Fixes
