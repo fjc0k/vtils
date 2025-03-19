@@ -5,6 +5,8 @@ export interface StringTemplateRenderOptions {
   code?: boolean
   /** 是否仅代码渲染 */
   onlyCode?: boolean
+  /** 替换前操作 */
+  beforeReplace?: (value: string, key: string) => string
 }
 
 /**
@@ -31,6 +33,7 @@ export class StringTemplate {
   ) {
     const onlyCode = !!options?.onlyCode
     const enableCode = onlyCode || !!options?.code
+    const beforeReplace = options?.beforeReplace || ((v: string) => v)
     const keys = Object.keys(data)
     if (!onlyCode) {
       for (const key of keys) {
@@ -39,9 +42,12 @@ export class StringTemplate {
             ? template.replace(
                 new RegExp(`\\{${key}(:.+?)?\\}`, 'g'),
                 (_, params: string) => {
-                  return data[key].call(
-                    null,
-                    ...(params ? params.substring(1) : '').split(','),
+                  return beforeReplace(
+                    data[key].call(
+                      null,
+                      ...(params ? params.substring(1) : '').split(','),
+                    ),
+                    key,
                   )
                 },
               )
@@ -49,12 +55,22 @@ export class StringTemplate {
             ? template.replace(
                 new RegExp(`(?<!\\$)\\{${key}(?:#(\\d+))?\\}`, 'g'),
                 (_, len) =>
-                  len ? toSingleLineString(String(data[key]), +len) : data[key],
+                  beforeReplace(
+                    len
+                      ? toSingleLineString(String(data[key]), +len)
+                      : data[key],
+                    key,
+                  ),
               )
             : template.replace(
                 new RegExp(`{${key}(?:#(\\d+))?\\}`, 'g'),
                 (_, len) =>
-                  len ? toSingleLineString(String(data[key]), +len) : data[key],
+                  beforeReplace(
+                    len
+                      ? toSingleLineString(String(data[key]), +len)
+                      : data[key],
+                    key,
+                  ),
               )
       }
     }
@@ -66,9 +82,9 @@ export class StringTemplate {
           return ${code};
         })`)(data)
         if (res == null || res === true || res === false) {
-          return ''
+          return beforeReplace('', '')
         }
-        return res
+        return beforeReplace(res, '')
       })
     }
     return template

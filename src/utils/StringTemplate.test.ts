@@ -138,4 +138,16 @@ describe('StringTemplate', () => {
       ),
     ).toBe('01234...')
   })
+
+  test('替换前操作', () => {
+    expect(
+      StringTemplate.render(
+        '{x}-{y}',
+        { x: '4354', y: '+' },
+        {
+          beforeReplace: value => `${value}---`,
+        },
+      ),
+    ).toBe('4354----+---')
+  })
 })
