@@ -123,9 +123,7 @@ describe('StringTemplate', () => {
 
   test('支持截断省略', () => {
     expect(StringTemplate.render('{x#5}', { x: '0123456789' })).toBe('01...')
-    expect(StringTemplate.render('{x#0}', { x: '0123456789' })).toBe(
-      '0123456789',
-    )
+    expect(StringTemplate.render('{x#0}', { x: '0123456789' })).toBe('...')
     expect(StringTemplate.render('{x#1}', { x: '0123456789' })).toBe('...')
     expect(StringTemplate.render('{x#8}', { x: '0123456789' })).toBe('01234...')
     expect(
@@ -137,6 +135,22 @@ describe('StringTemplate', () => {
         },
       ),
     ).toBe('01234...')
+  })
+
+  test('支持截断空白', () => {
+    expect(StringTemplate.render('{x@5}', { x: '0123456789' })).toBe('01234')
+    expect(StringTemplate.render('{x@0}', { x: '0123456789' })).toBe('')
+    expect(StringTemplate.render('{x@1}', { x: '0123456789' })).toBe('0')
+    expect(StringTemplate.render('{x@8}', { x: '0123456789' })).toBe('01234567')
+    expect(
+      StringTemplate.render(
+        '{x@8}',
+        { x: '0123456789' },
+        {
+          code: true,
+        },
+      ),
+    ).toBe('01234567')
   })
 
   test('替换前操作', () => {

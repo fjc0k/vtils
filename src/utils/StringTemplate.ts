@@ -53,21 +53,27 @@ export class StringTemplate {
               )
             : enableCode
             ? template.replace(
-                new RegExp(`(?<!\\$)\\{${key}(?:#(\\d+))?\\}`, 'g'),
-                (_, len) =>
+                new RegExp(`(?<!\\$)\\{${key}(?:(#|@)(\\d+))?\\}`, 'g'),
+                (_, decorator: '#' | '@', len) =>
                   beforeReplace(
                     len
-                      ? toSingleLineString(String(data[key]), +len)
+                      ? toSingleLineString(String(data[key]), {
+                          length: +len,
+                          omission: decorator === '@' ? '' : '...',
+                        })
                       : data[key],
                     key,
                   ),
               )
             : template.replace(
-                new RegExp(`{${key}(?:#(\\d+))?\\}`, 'g'),
-                (_, len) =>
+                new RegExp(`{${key}(?:(#|@)(\\d+))?\\}`, 'g'),
+                (_, decorator: '#' | '@', len) =>
                   beforeReplace(
                     len
-                      ? toSingleLineString(String(data[key]), +len)
+                      ? toSingleLineString(String(data[key]), {
+                          length: +len,
+                          omission: decorator === '@' ? '' : '...',
+                        })
                       : data[key],
                     key,
                   ),
