@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.131.0](https://github.com/fjc0k/vtils/compare/v4.130.1...v4.131.0) (2025-05-16)
+
+### Features
+
+- **StringTemplate:** 支持截断空白 ([c154cc6](https://github.com/fjc0k/vtils/commit/c154cc61689d78a46c7b6b54c591e989bd609837))
+
 ### [4.130.1](https://github.com/fjc0k/vtils/compare/v4.130.0...v4.130.1) (2025-03-19)
 
 ## [4.130.0](https://github.com/fjc0k/vtils/compare/v4.129.1...v4.130.0) (2025-03-19)
