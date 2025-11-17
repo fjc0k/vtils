@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.132.0](https://github.com/fjc0k/vtils/compare/v4.131.0...v4.132.0) (2025-11-17)
+
+### Features
+
+- **VaeSchema:** 支持在设置标签时同时设置元信息 ([3336355](https://github.com/fjc0k/vtils/commit/3336355379b270744ffbee78391f246efa7cfc22))
+
 ## [4.131.0](https://github.com/fjc0k/vtils/compare/v4.130.1...v4.131.0) (2025-05-16)
 
 ### Features
