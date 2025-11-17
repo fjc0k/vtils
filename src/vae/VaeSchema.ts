@@ -199,10 +199,13 @@ export abstract class VaeSchema<
   }
 
   /**
-   * 设置标签
+   * 设置标签，可以同时设置元信息
    */
-  label(label: string) {
+  label(label: string, metadata?: VaeSchemaMetadata) {
     this._options.label = label
+    if (metadata) {
+      this.meta(metadata)
+    }
     return this
   }
 
