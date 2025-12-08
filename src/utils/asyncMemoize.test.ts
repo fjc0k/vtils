@@ -103,4 +103,37 @@ describe('asyncMemoize', () => {
     await fnMemoized()
     expect(fn).toBeCalled().toBeCalledTimes(2)
   })
+
+  test('支持 cacheTTL 函数', async () => {
+    let i = 0
+    const fn = async (id: number) => {
+      i++
+      return id
+    }
+    const fnMemoized = asyncMemoize(fn, {
+      cacheTTL: result => {
+        if (result === 2) {
+          return 30
+        }
+        return -1
+      },
+    })
+
+    expect(await fnMemoized(2)).toBe(2)
+    expect(i).toBe(1)
+
+    expect(await fnMemoized(2)).toBe(2)
+    expect(i).toBe(1)
+
+    await wait(50)
+
+    expect(await fnMemoized(2)).toBe(2)
+    expect(i).toBe(2)
+
+    expect(await fnMemoized(3)).toBe(3)
+    expect(i).toBe(3)
+
+    expect(await fnMemoized(3)).toBe(3)
+    expect(i).toBe(4)
+  })
 })

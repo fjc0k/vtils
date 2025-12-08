@@ -13,7 +13,12 @@ export interface AsyncMemoizeOptions<
    *
    * @default 0
    */
-  cacheTTL?: number
+  cacheTTL?:
+    | number
+    | ((
+        result: Awaited<ReturnType<T>>,
+        ...args: Parameters<T>
+      ) => number | void)
 }
 
 export type AsyncMemoizeCacheMap = Map<
@@ -45,16 +50,27 @@ export function asyncMemoize<T extends (...args: any[]) => Promise<any>>(
     const currentMs = Date.now()
     if (
       cacheValue &&
-      (cacheValue.expiredAt ? currentMs < cacheValue.expiredAt : true)
+      (cacheValue.expiredAt === 0 || currentMs < cacheValue.expiredAt)
     ) {
       return cacheValue.value
     }
     const cacheValueNew = asyncFn(...args)
     cacheValueNew.catch(() => cache.delete(_cacheKey))
+    const cacheTTLIsFunction = typeof cacheTTL === 'function'
     cache.set(_cacheKey, {
       value: cacheValueNew,
-      expiredAt: cacheTTL ? currentMs + cacheTTL : 0,
+      expiredAt: cacheTTLIsFunction ? 0 : cacheTTL ? currentMs + cacheTTL : 0,
     })
+    if (cacheTTLIsFunction) {
+      cacheValueNew.then(result => {
+        const ttl = cacheTTL(result, ...(args as any))
+        const expiredAt = ttl ? Date.now() + ttl : 0
+        const cached = cache.get(_cacheKey)
+        if (cached) {
+          cached.expiredAt = expiredAt
+        }
+      })
+    }
     return cacheValueNew
   }
   call.cache = cache
