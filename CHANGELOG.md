@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.133.0](https://github.com/fjc0k/vtils/compare/v4.132.0...v4.133.0) (2025-12-08)
+
+### Features
+
+- **asyncMemoize:** 支持 cacheTTL 函数以动态设置缓存过期时间 ([5673292](https://github.com/fjc0k/vtils/commit/56732929892c11884eb29716c65063ba78e6d986))
+
 ## [4.132.0](https://github.com/fjc0k/vtils/compare/v4.131.0...v4.132.0) (2025-11-17)
 
 ### Features
