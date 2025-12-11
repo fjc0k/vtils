@@ -41,7 +41,7 @@ export type VaeSchemaMetadata = keyof VaeSchemaCustomMetadata extends never
 
 export type VaeSchemaOptions<T, S> = {
   type: VaeSchemaType
-  label?: string
+  label?: string | (() => string)
   default?: T | (() => T)
   required?: boolean
   requiredMessage?: VaeLocaleMessage
@@ -201,7 +201,7 @@ export abstract class VaeSchema<
   /**
    * 设置标签，可以同时设置元信息
    */
-  label(label: string, metadata?: VaeSchemaMetadata) {
+  label(label: string | (() => string), metadata?: VaeSchemaMetadata) {
     this._options.label = label
     if (metadata) {
       this.meta(metadata)

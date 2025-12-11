@@ -5,7 +5,7 @@ export type VaeLocaleMessagePayload = {
   /**
    * 标签
    */
-  label?: string
+  label?: string | (() => string)
   /**
    * 路径
    */
@@ -173,7 +173,10 @@ export class VaeLocaleBuilder {
 
 export const VaeLocale = {
   ...VaeLocaleBuilder.zhCN({
-    getLabel: payload => payload.label || payload.path.join('.') || '.',
+    getLabel: payload =>
+      (typeof payload.label === 'function' ? payload.label() : payload.label) ||
+      payload.path.join('.') ||
+      '.',
   }),
   $set: (locale: VaeLocaleShape) => {
     Object.assign(VaeLocale, locale)
