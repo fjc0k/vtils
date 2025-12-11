@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.134.0](https://github.com/fjc0k/vtils/compare/v4.133.0...v4.134.0) (2025-12-11)
+
+### Features
+
+- **VaeSchema:** 支持 label 属性为函数类型以动态生成标签 ([9b2b2b7](https://github.com/fjc0k/vtils/commit/9b2b2b79050458cd43f413fb87f6d0acdc30d3cb))
+
 ## [4.133.0](https://github.com/fjc0k/vtils/compare/v4.132.0...v4.133.0) (2025-12-08)
 
 ### Features
