@@ -250,6 +250,7 @@ export class VaeSchemaBuilder<
       ? new VaeObjectSchema(schema, message)
       : new VaeObjectSchema(undefined, schema)
 
+  // @ts-expect-error: 1
   objectOf: VaeObjectOfSchemaBuilder<O> = (
     key: any,
     schema?: any,
