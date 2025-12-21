@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.134.1](https://github.com/fjc0k/vtils/compare/v4.134.0...v4.134.1) (2025-12-21)
+
+### Bug Fixes
+
+- **VaeObjectSchema:** 修复 VaeObjectSchemaShapeOf 类型定义，确保属性为必填 ([61d9909](https://github.com/fjc0k/vtils/commit/61d9909c21321dd3c20a96ef1faa038b595dc3a4))
+
 ## [4.134.0](https://github.com/fjc0k/vtils/compare/v4.133.0...v4.134.0) (2025-12-11)
 
 ### Features
