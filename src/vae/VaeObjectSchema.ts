@@ -11,7 +11,7 @@ import { VaeLocale, VaeLocaleMessage } from './VaeLocale'
 import { VaeSchema, VaeSchemaOf } from './VaeSchema'
 
 export type VaeObjectSchemaShapeOf<T> = {
-  [K in keyof T]: VaeSchemaOf<T[K]>
+  [K in keyof T]-?: VaeSchemaOf<T[K]>
 }
 
 export class VaeObjectSchema<
