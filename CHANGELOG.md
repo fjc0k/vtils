@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.135.0](https://github.com/fjc0k/vtils/compare/v4.134.2...v4.135.0) (2025-12-22)
+
+### Features
+
+- vae array ([9fea723](https://github.com/fjc0k/vtils/commit/9fea723d1b83e4e945202fc26745912465a371ae))
+
 ### [4.134.2](https://github.com/fjc0k/vtils/compare/v4.134.1...v4.134.2) (2025-12-22)
 
 ### Bug Fixes
