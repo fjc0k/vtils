@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.134.2](https://github.com/fjc0k/vtils/compare/v4.134.1...v4.134.2) (2025-12-22)
+
+### Bug Fixes
+
+- **VaeObjectSchema:** 更新 optionalFields 和 requiredFields 方法的返回类型为 this ([033b5d1](https://github.com/fjc0k/vtils/commit/033b5d1fb19cf39e427e9bcb5c685c33ceef6728))
+
 ### [4.134.1](https://github.com/fjc0k/vtils/compare/v4.134.0...v4.134.1) (2025-12-21)
 
 ### Bug Fixes
