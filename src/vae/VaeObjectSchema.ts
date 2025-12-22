@@ -1,4 +1,4 @@
-import { Nullable, PartialBy, RequiredBy } from '../types'
+import { Nullable } from '../types'
 import {
   difference,
   find,
@@ -85,11 +85,11 @@ export class VaeObjectSchema<
   /**
    * 原地将给定字段设为可选
    */
-  optionalFields<K extends keyof T>(keys: K[]): VaeObjectSchema<PartialBy<T, K>>
+  optionalFields<K extends keyof T>(keys: K[]): this
   /**
    * 原地将所有字段设为可选
    */
-  optionalFields(): VaeObjectSchema<Partial<T>>
+  optionalFields(): this
   optionalFields(keys?: string[]): any {
     this._options.processors.forEach(item => {
       if (
@@ -106,13 +106,11 @@ export class VaeObjectSchema<
   /**
    * 原地将给定字段设为必填
    */
-  requiredFields<K extends keyof T>(
-    keys: K[],
-  ): VaeObjectSchema<RequiredBy<T, K>>
+  requiredFields<K extends keyof T>(keys: K[]): this
   /**
    * 原地将所有字段设为必填
    */
-  requiredFields(): VaeObjectSchema<Required<T>>
+  requiredFields(): this
   requiredFields(keys?: string[]): any {
     this._options.processors.forEach(item => {
       if (

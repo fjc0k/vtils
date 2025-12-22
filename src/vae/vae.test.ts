@@ -567,23 +567,27 @@ describe('vae', () => {
       }),
     ).toMatchSnapshot()
     expect(
-      schema.clone().requiredFields(['name']).parse(
-        // @ts-expect-error
-        {
-          id: 0,
-        },
-      ),
+      schema.clone().requiredFields(['name']).parse({
+        id: 0,
+      }),
     ).toMatchSnapshot()
-    expect(schema.clone().optionalFields(['id']).parse({})).toMatchSnapshot()
     expect(
-      schema.clone().requiredFields().parse(
-        // @ts-expect-error
-        {
-          id: 0,
-        },
-      ),
+      schema
+        .clone()
+        .optionalFields(['id'])
+        .parse({} as any),
     ).toMatchSnapshot()
-    expect(schema.clone().optionalFields().parse({})).toMatchSnapshot()
+    expect(
+      schema.clone().requiredFields().parse({
+        id: 0,
+      }),
+    ).toMatchSnapshot()
+    expect(
+      schema
+        .clone()
+        .optionalFields()
+        .parse({} as any),
+    ).toMatchSnapshot()
   })
 
   test('create', () => {
