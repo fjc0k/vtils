@@ -48,6 +48,7 @@ export type VaeSchemaOptions<T, S> = {
   objectKeys?: string[]
   stringTrim?: boolean
   stringEmptyable?: boolean
+  arrayEmptyable?: boolean
   processors?: Array<VaeSchemaCheckPayload<T> | VaeSchemaTransformPayload<T>>
   runtime?: VaeSchemaRuntimeFn<T, S>
   metadata?: VaeSchemaMetadata
@@ -388,7 +389,11 @@ export abstract class VaeSchema<
       data == null ||
       (this._options.type === 'string' &&
         !this._options.stringEmptyable &&
-        data === '')
+        data === '') ||
+      (this._options.type === 'array' &&
+        !this._options.arrayEmptyable &&
+        isArray(data) &&
+        data.length === 0)
 
     // 默认值
     if (dataIsNil && this._options.default != null) {
@@ -400,7 +405,11 @@ export abstract class VaeSchema<
         data == null ||
         (this._options.type === 'string' &&
           !this._options.stringEmptyable &&
-          data === '')
+          data === '') ||
+        (this._options.type === 'array' &&
+          !this._options.arrayEmptyable &&
+          isArray(data) &&
+          data.length === 0)
     }
 
     // 非必填

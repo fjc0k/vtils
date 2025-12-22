@@ -1104,6 +1104,12 @@ Object {
       ],
     },
     Object {
+      "message": "images应必填",
+      "path": Array [
+        "images",
+      ],
+    },
+    Object {
       "message": "extra.gender应是下列值之一:0,1",
       "path": Array [
         "extra",

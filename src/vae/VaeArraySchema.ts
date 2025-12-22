@@ -92,4 +92,12 @@ export class VaeArraySchema<
       tag: 'length',
     })
   }
+
+  /**
+   * 当设置了必填时，将空数组视为已填
+   */
+  emptyable() {
+    this._options.arrayEmptyable = true
+    return this
+  }
 }
