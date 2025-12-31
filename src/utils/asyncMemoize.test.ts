@@ -136,4 +136,37 @@ describe('asyncMemoize', () => {
     expect(await fnMemoized(3)).toBe(3)
     expect(i).toBe(4)
   })
+
+  test('支持 while-pending', async () => {
+    let i = 0
+    const fn = async (id: number) => {
+      i++
+      await wait(50)
+      return id
+    }
+    const fnMemoized = asyncMemoize(fn, {
+      cacheTTL: 'while-pending',
+    })
+
+    const p1 = fnMemoized(2)
+    const p2 = fnMemoized(2)
+    expect(p1).toBe(p2)
+    expect(i).toBe(1)
+
+    const r1 = await p1
+    const r2 = await p2
+    expect(i).toBe(1)
+    expect(r1).toBe(2)
+    expect(r2).toBe(2)
+
+    await wait(60)
+
+    const p3 = fnMemoized(2)
+    expect(p3).not.toBe(p1)
+    expect(i).toBe(2)
+
+    const r3 = await p3
+    expect(i).toBe(2)
+    expect(r3).toBe(2)
+  })
 })
