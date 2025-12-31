@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.136.0](https://github.com/fjc0k/vtils/compare/v4.135.0...v4.136.0) (2025-12-31)
+
+### Features
+
+- **asyncMemoize:** 添加支持 while-pending 的缓存时效选项 ([c6ab736](https://github.com/fjc0k/vtils/commit/c6ab7368b10f7f59a4c5e6596bd609f6218e0922))
+
 ## [4.135.0](https://github.com/fjc0k/vtils/compare/v4.134.2...v4.135.0) (2025-12-22)
 
 ### Features
