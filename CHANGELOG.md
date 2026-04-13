@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.137.0](https://github.com/fjc0k/vtils/compare/v4.136.0...v4.137.0) (2026-04-13)
+
+### Features
+
+- **required:** 支持 isRequired 参数以控制必填选项 ([4653b81](https://github.com/fjc0k/vtils/commit/4653b818ba91ea817f61a299390edee4bdc6073b))
+
 ## [4.136.0](https://github.com/fjc0k/vtils/compare/v4.135.0...v4.136.0) (2025-12-31)
 
 ### Features
