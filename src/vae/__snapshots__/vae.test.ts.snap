@@ -1161,6 +1161,80 @@ Object {
 }
 `;
 
+exports[`vae required 支持 isRequired 参数 1`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": ".应必填",
+      "path": Array [],
+    },
+  ],
+  "message": ".应必填",
+  "success": false,
+}
+`;
+
+exports[`vae required 支持 isRequired 参数 2`] = `
+Object {
+  "data": "hello",
+  "success": true,
+}
+`;
+
+exports[`vae required 支持 isRequired 参数 3`] = `
+Object {
+  "data": "",
+  "success": true,
+}
+`;
+
+exports[`vae required 支持 isRequired 参数 4`] = `
+Object {
+  "data": "hello",
+  "success": true,
+}
+`;
+
+exports[`vae required 支持 isRequired 参数 5`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "---必填---",
+      "path": Array [],
+    },
+  ],
+  "message": "---必填---",
+  "success": false,
+}
+`;
+
+exports[`vae required 支持 isRequired 参数 6`] = `
+Object {
+  "data": "hello",
+  "success": true,
+}
+`;
+
+exports[`vae required 支持 isRequired 参数 7`] = `
+Object {
+  "issues": Array [
+    Object {
+      "message": "---默认必填---",
+      "path": Array [],
+    },
+  ],
+  "message": "---默认必填---",
+  "success": false,
+}
+`;
+
+exports[`vae required 支持 isRequired 参数 8`] = `
+Object {
+  "data": "hello",
+  "success": true,
+}
+`;
+
 exports[`vae requiredFieldsAtLeastOne 1`] = `
 Object {
   "issues": Array [

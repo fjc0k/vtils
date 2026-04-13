@@ -221,8 +221,26 @@ export abstract class VaeSchema<
   /**
    * 设为必填
    */
-  required(message: VaeLocaleMessage = VaeLocale.base.required) {
-    this._options.required = true
+  required(message?: VaeLocaleMessage): this
+  /**
+   * 设为必填
+   */
+  required(isRequired: boolean, message?: VaeLocaleMessage): this
+  required(isRequired?: any, message?: any) {
+    if (isRequired != null) {
+      if (typeof isRequired !== 'boolean') {
+        message = isRequired
+        isRequired = true
+      }
+    } else {
+      isRequired = true
+    }
+    message = isRequired
+      ? message == null
+        ? VaeLocale.base.required
+        : message
+      : undefined
+    this._options.required = isRequired
     this._options.requiredMessage = message
     return this
   }

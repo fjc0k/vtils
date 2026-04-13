@@ -1152,4 +1152,22 @@ describe('vae', () => {
       }),
     ).toMatchSnapshot()
   })
+
+  test('required 支持 isRequired 参数', () => {
+    const schema = v.string().required(true)
+    expect(schema.parse('')).toMatchSnapshot()
+    expect(schema.parse('hello')).toMatchSnapshot()
+
+    const schema2 = v.string().required(false)
+    expect(schema2.parse('')).toMatchSnapshot()
+    expect(schema2.parse('hello')).toMatchSnapshot()
+
+    const schema3 = v.string().required(true, '---必填---')
+    expect(schema3.parse('')).toMatchSnapshot()
+    expect(schema3.parse('hello')).toMatchSnapshot()
+
+    const schema4 = v.string().required('---默认必填---')
+    expect(schema4.parse('')).toMatchSnapshot()
+    expect(schema4.parse('hello')).toMatchSnapshot()
+  })
 })
