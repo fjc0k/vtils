@@ -99,4 +99,39 @@ describe('asyncLimit', () => {
     expect(id3).toBe(3)
     expect(id4).toBe(4)
   })
+
+  test('按分组并行执行', async () => {
+    const doneOrder: string[] = []
+    const getId = async (group: string, id: number) => {
+      await wait(500)
+      doneOrder.push(`${group}-${id}`)
+      return id
+    }
+
+    const getIdLimit = asyncLimit(getId, {
+      concurrency: 1,
+      groupBy: group => group,
+    })
+
+    const pa = Promise.all([
+      getIdLimit('a', 1),
+      getIdLimit('a', 2),
+      getIdLimit('b', 1),
+      getIdLimit('b', 2),
+    ])
+
+    await wait(550)
+    expect(doneOrder).toHaveLength(2)
+    expect(doneOrder).toContain('a-1')
+    expect(doneOrder).toContain('b-1')
+    expect(doneOrder).not.toContain('a-2')
+    expect(doneOrder).not.toContain('b-2')
+
+    await wait(550)
+    expect(doneOrder).toHaveLength(4)
+    expect(doneOrder).toContain('a-2')
+    expect(doneOrder).toContain('b-2')
+
+    await pa
+  })
 })
