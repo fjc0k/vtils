@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.138.0](https://github.com/fjc0k/vtils/compare/v4.137.0...v4.138.0) (2026-04-14)
+
+### Features
+
+- **asyncLimit:** 添加按分组并行执行的功能 ([dbdf1e1](https://github.com/fjc0k/vtils/commit/dbdf1e1b82aa795d376ebfadbd3fbd6285085e46))
+
 ## [4.137.0](https://github.com/fjc0k/vtils/compare/v4.136.0...v4.137.0) (2026-04-13)
 
 ### Features
