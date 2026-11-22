@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.139.0](https://github.com/fjc0k/vtils/compare/v4.138.0...v4.139.0) (2026-11-22)
+
+### Features
+
+- **asyncLimit:** 添加 qps 限制功能及相关测试 ([426fea7](https://github.com/fjc0k/vtils/commit/426fea722e30f3b3f22cfa8e1ff18f0f5d552679))
+
 ## [4.138.0](https://github.com/fjc0k/vtils/compare/v4.137.0...v4.138.0) (2026-04-14)
 
 ### Features
