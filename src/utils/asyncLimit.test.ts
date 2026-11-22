@@ -134,4 +134,74 @@ describe('asyncLimit', () => {
 
     await pa
   })
+
+  test('qps 限流正常', async () => {
+    const getId = async (id: number) => id
+    const getIdLimit = asyncLimit(getId, { qps: 2 })
+    const done: number[] = []
+
+    const pa = Promise.all(
+      [1, 2, 3, 4, 5].map(id => getIdLimit(id).then(() => done.push(id))),
+    )
+
+    // 第一秒内最多执行 2 次
+    await wait(300)
+    expect(done).toHaveLength(2)
+
+    // 1 秒后放行剩下的
+    await wait(800)
+    expect(done).toHaveLength(4)
+
+    await pa
+    expect(done).toHaveLength(5)
+  })
+
+  test('qps 限流不受调用结束时间影响', async () => {
+    const getId = async (id: number) => {
+      await wait(10)
+      return id
+    }
+    const getIdLimit = asyncLimit(getId, { qps: 1 })
+    const done: number[] = []
+
+    const pa = Promise.all(
+      [1, 2, 3].map(id => getIdLimit(id).then(() => done.push(id))),
+    )
+
+    // 任务 10ms 就结束了，但 1 秒内仍只能启动 1 次
+    await wait(300)
+    expect(done).toHaveLength(1)
+
+    await pa
+    expect(done).toHaveLength(3)
+  })
+
+  test('qps 按分组限流', async () => {
+    const doneOrder: string[] = []
+    const getId = async (group: string, id: number) => {
+      doneOrder.push(`${group}-${id}`)
+      return id
+    }
+
+    const getIdLimit = asyncLimit(getId, {
+      qps: 1,
+      groupBy: group => group,
+    })
+
+    const pa = Promise.all([getIdLimit('a', 1), getIdLimit('b', 1)])
+
+    await wait(300)
+    expect(doneOrder).toHaveLength(2)
+    expect(doneOrder).toContain('a-1')
+    expect(doneOrder).toContain('b-1')
+
+    await pa
+  })
+
+  test('concurrency 和 qps 不能同时传入', () => {
+    const getId = async (id: number) => id
+    expect(() => asyncLimit(getId, { concurrency: 1, qps: 1 })).toThrowError(
+      TypeError,
+    )
+  })
 })
