@@ -198,6 +198,27 @@ describe('asyncLimit', () => {
     await pa
   })
 
+  test('qpsWindow 加长限流窗口', async () => {
+    const getId = async (id: number) => id
+    const getIdLimit = asyncLimit(getId, { qps: 2, qpsWindow: 1200 })
+    const done: number[] = []
+
+    const pa = Promise.all(
+      [1, 2, 3, 4].map(id => getIdLimit(id).then(() => done.push(id))),
+    )
+
+    // 第一秒内最多执行 2 次
+    await wait(1100)
+    expect(done).toHaveLength(2)
+
+    // 1.2 秒后放行剩下的
+    await wait(200)
+    expect(done).toHaveLength(4)
+
+    await pa
+    expect(done).toHaveLength(4)
+  })
+
   test('concurrency 和 qps 不能同时传入', () => {
     const getId = async (id: number) => id
     expect(() => asyncLimit(getId, { concurrency: 1, qps: 1 })).toThrowError(

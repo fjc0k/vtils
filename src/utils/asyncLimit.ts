@@ -14,6 +14,15 @@ export interface AsyncLimitOptions<T extends (...args: any[]) => Promise<any>> {
   qps?: number
 
   /**
+   * 限流滑动窗口长度，仅在传入 `qps` 时生效。
+   *
+   * 加长窗口可降低实际调用频率、提高容错率，比如设置 `qps: 10, qpsWindow: 1200` 表示 1.2 秒内最多调用 10 次。
+   *
+   * @default 1000
+   */
+  qpsWindow?: number
+
+  /**
    * 按参数分组，分组之间并行执行，组内按顺序执行。
    *
    * @default 不分组
@@ -29,7 +38,7 @@ interface QueueItem {
 interface GroupState {
   queue: QueueItem[]
   activeCount: number
-  /** 最近 1 秒内的启动时间戳，仅 qps 模式使用。 */
+  /** 滑动窗口内的启动时间戳，仅 qps 模式使用。 */
   startTimes: number[]
   /** 等待限流窗口放行时的定时器，仅 qps 模式使用。 */
   timer: any | null
@@ -51,7 +60,7 @@ export function asyncLimit<T extends (...args: any[]) => Promise<any>>(
     throw new TypeError('只能同时传入 concurrency 和 qps 其中一个')
   }
 
-  const { concurrency = 1, qps, groupBy } = options
+  const { concurrency = 1, qps, qpsWindow = 1000, groupBy } = options
   const limit = qps != null ? Infinity : concurrency
 
   const groups = new Map<string, GroupState>()
@@ -90,14 +99,14 @@ export function asyncLimit<T extends (...args: any[]) => Promise<any>>(
       const now = Date.now()
       while (
         groupState.startTimes.length &&
-        now - groupState.startTimes[0] >= 1000
+        now - groupState.startTimes[0] >= qpsWindow
       ) {
         groupState.startTimes.shift()
       }
 
       if (groupState.startTimes.length >= qps) {
         if (!groupState.timer) {
-          const delay = 1000 - (now - groupState.startTimes[0]) + 1
+          const delay = qpsWindow - (now - groupState.startTimes[0]) + 1
           groupState.timer = setTimeout(() => {
             groupState.timer = null
             run(groupKey)
