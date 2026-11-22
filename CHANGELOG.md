@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.140.0](https://github.com/fjc0k/vtils/compare/v4.139.0...v4.140.0) (2026-11-22)
+
+### Features
+
+- **asyncLimit:** 添加 qpsWindow 选项以支持限流窗口长度 ([203037a](https://github.com/fjc0k/vtils/commit/203037a65d80c407956ccc7097b68bd1584498dc))
+
 ## [4.139.0](https://github.com/fjc0k/vtils/compare/v4.138.0...v4.139.0) (2026-11-22)
 
 ### Features
